@@ -1,0 +1,85 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #808191;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 20vh 50vh 30vh;
+    grid-template-areas: "h h"
+                         "m a"
+                         "c c";
+}
+
+header {
+    background-color: #E5E5E5;
+    color: #fff;
+    grid-area: h;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    grid-area: m;
+    margin-top: 20px;
+} 
+
+aside {
+    grid-area: a;
+    margin-top: 20px;
+}
+
+.cards {
+    grid-area: c;  
+}
+
+#stats1, #stats2{
+    width: 440px;
+    height: 130px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+#slide {
+    height: 280px;
+    width: 400px;
+    margin-left: 100px;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#search {
+    height: 30px;
+    margin-right: 50px;
+    align-self: center;
+}
+
+
+h1 {
+    font-size: 60px;
+    margin-left: 40px;
+}
+
+#search {
+    width: 220px;
+    height: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#card1, #card2, #card3, #card4 {
+    width: 150px;
+    height: 150px;
+    margin-left: 60px;
+    background-color: white;
+}
