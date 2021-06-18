@@ -1,0 +1,21 @@
+* body {
+    margin: 0px;
+    padding: 0px;
+}
+.menu ul {
+    background-color: lightblue;
+    list-style: none; /*tira os marcadores*/
+    padding: 15px 8%;
+    text-align: center;
+    margin-top: 0px;
+}
+.menu ul li {
+   display: inline;
+   margin-left: 20px;
+}
+.menu ul li a:hover {
+    color: black;
+}
+.menu ul li a {
+    text-decoration: none; /*Tirar o sublinhado da referência*/
+}
