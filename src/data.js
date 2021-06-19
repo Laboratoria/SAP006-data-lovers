@@ -5,64 +5,74 @@ export const filterData = (data, prop, name)=> {
 };
 
 export const sortData = (data, sortBy, sortOrder) => {
-  const compareAlphabet = (a,b) =>{
-    if (a.title < b.title)
-       return -1
-    if (a.title > b.title)
-      return 1
-    return 0
+  const compare = (a,b) =>{
+    if(parseInt(a[sortBy]!== NaN)){
+      if (parseInt(a[sortBy]) < parseInt(b[sortBy]))
+        return -1
+      if (parseInt(a[sortBy])> parseInt(b[sortBy]))
+        return 1
+      return 0
+
+    }else{
+      if (a[sortBy] < b[sortBy])
+           return -1
+      if (a[sortBy] > b[sortBy])
+          return 1
+      return 0
+
+    } 
   }
 
-  const compareReleaseDate = (a,b) => {
-    if (a.release_date < b.release_date)
-       return -1
-    if (a.release_date > b.release_date)
-      return 1
-    return 0
-  }
-
-
-  if(sortBy==="Alfabeth"){
+  if(sortBy==="title"){
     if(sortOrder==="Ascending"){
       let ascTitles = [...data]
-      ascTitles.sort(compareAlphabet)
+      ascTitles.sort(compare)
       return ascTitles
       
     } else {
       let descTitles = [...data]
-      descTitles.sort(compareAlphabet)
+      descTitles.sort(compare)
       descTitles.reverse()
       return descTitles
     }
   }
-  else if(sortBy==="Release") {
+  else if(sortBy==="release_date") {
     if(sortOrder==="Ascending"){
       let ascRelease = [...data]
-      ascRelease.sort(compareReleaseDate)
+      ascRelease.sort(compare)
       return ascRelease
 
     }else{
       let descRelease = [...data]
-      descRelease.sort(compareReleaseDate)
+      descRelease.sort(compare)
       descRelease.reverse()
       return descRelease
+    }
+  }
+  else if(sortBy==="rt_score") {
+    if(sortOrder==="Ascending"){
+      let ascScore= [...data]
+      ascScore.sort(compare)
+      return ascScore
+
+    }else{
+      let descScore = [...data]
+      descScore.sort(compare)
+      descScore.reverse()
+      return descScore
     }
   }
 };
 
 
-
-
-
-
-
-
-
-
-
-export const computeStats = (data) => {
-  return 'OMG';
+export const numberFemale = (data) => {
+  return data.lenght;
 };
+
+
+export const average= (data) => {
+  return data.reduce((sum, score) => sum += score, 0) / data.length;
+}
 
 
 
