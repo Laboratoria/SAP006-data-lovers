@@ -1,6 +1,6 @@
 
-export const filterData = (data, condition)=> {
-  const filter = data.films.filter(condition => condition==="true")
+export const filterData = (data, prop, name)=> {
+  const filter = data.filter(films=> films[prop]===name)
   return filter;
 };
 
@@ -48,11 +48,6 @@ export const sortData = (data, sortBy, sortOrder) => {
       return descRelease
     }
   }
-
-
-
-
-
 };
 
 
