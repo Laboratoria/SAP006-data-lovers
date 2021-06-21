@@ -3,83 +3,88 @@ html, body{
     padding: 0;
     background-color: #808191;
     box-sizing: border-box;
+    height: 100vh;
 }
 
-body {
-    display: grid;
-    grid-template-rows: 20vh 50vh 30vh;
-    grid-template-areas: "h h"
-                         "m a"
-                         "c c";
-}
 
 header {
     background-color: #E5E5E5;
-    color: #fff;
-    grid-area: h;
     display: flex;
     justify-content: space-between;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    margin-left: 40px
+}
+
+input {
+    height: 30px;
+    margin: auto;
 }
 
 main {
-    grid-area: m;
-    margin-top: 20px;
-} 
-
-aside {
-    grid-area: a;
-    margin-top: 20px;
+    margin: 15px;
 }
 
-.cards {
-    grid-area: c;  
-}
-
-#stats1, #stats2{
-    width: 440px;
-    height: 130px;
-    background-color: white;
-    margin-top: 20px;
-}
-
-#slide {
-    height: 280px;
-    width: 400px;
-    margin-left: 100px;
-    border-radius: 5px;
-    background-color: white;
-    margin-top: 20px;
-    border-radius: 20px;
-}
-
-#search {
-    height: 30px;
-    margin-right: 50px;
-    align-self: center;
-}
-
-
-h1 {
-    font-size: 60px;
-    margin-left: 40px;
-}
-
-#search {
-    width: 220px;
-    height: 30px;
-}
-
-.cards {
+.container, .cards {
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: auto;
-    justify-content: space-between;
-    align-content: center;
 }
 
-#card1, #card2, #card3, #card4 {
-    width: 150px;
+.statistic {
+    flex-direction: column;
+}
+
+.slide {
+    background-color: #C4C4C4;
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+    height: 400px;
+    margin: 18px;
+    border-radius: 5px;
+    min-width: 500px;
+}
+
+.static {
+    margin: 18px;
+    background-color: #C4C4C4;
+    position: relative;
+    flex: 1;
+    height: 160px;
+    min-width: 400px;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: #C4C4C4;
+    position: relative;
+    flex: 1;
+    max-width: 150px;
+    min-width: 150px;
     height: 150px;
-    margin-left: 60px;
-    background-color: white;
+    margin: 18px;
+    border-radius: 5px;
+}
+
+@media (max-width:800px) {
+    .static{
+        flex: 100%;
+        max-width: 600px;
+    }
+
+    .card{
+        flex: 100%;
+        max-width: 150px;
+    }
+    .slide{
+        flex: 100%;
+        max-width: 600px;
+    }
+
 }

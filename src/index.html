@@ -3,31 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Rick e Morty</title>
+  <title>RICK E MORTY</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-      <h1>RICK E MORTY</h1>
-      <input type="text" placeholder="Pesquisar" id="search">
-    </header>
+  <header>
+    <h1>RICK E MORTY</h1>
+    <input type="text" placeholder="Pesquisar" id="search">
+  </header>
   <main>
-    <div id="slide"></div> 
+    <div class="container">
+      <div class="slide"></div>
+      <select name="FILTRAR" id="filtro">
+        <option value="HUMANO">HUMANO</option>
+        <option value="HUMANOIDE">HUMANOIDE</option>
+        <option value="MONSTRO">MONSTRO</option>
+      </select>
+      <div class="statistic">
+        <div class="static"></div>
+        <div class="static"></div>
+      </div>
+
+
+      <section class="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </section>
+      <script src="main.js" type="module"></script>
+    </div>
   </main>
-
-  <aside>
-    <div id="stats1"></div>
-    <div id="stats2"></div>
-  </aside>
-
-  <section class="cards">
-    <div id="card1"></div>
-    <div id="card2"></div>
-    <div id="card3"></div>
-    <div id="card4"></div>
-  </section>
-  <script src="main.js" type="module"></script>
 </body>
 
 </html>
