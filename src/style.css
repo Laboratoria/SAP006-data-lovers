@@ -19,7 +19,7 @@ h1 {
     margin-left: 40px
 }
 
-input {
+input, select {
     height: 30px;
     margin: auto;
 }
