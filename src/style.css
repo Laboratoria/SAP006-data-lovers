@@ -1,0 +1,25 @@
+*{
+    margin: auto;
+}
+
+body {
+    background-color: #051521;
+}
+
+.logo{
+    background-color: #084d6e;
+    
+}
+
+.imgLogo{
+    height: 100px;
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+.rodape{
+    background-color: #084d6e;
+    text-align: center;
+    color: white;
+}
