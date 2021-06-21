@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body{
+  font-family: 'Lato', sans-serif;
+  margin:0;
+  padding:0;
+  font-size: 16px;
+
+}
+
+.header2{
+  background-image: url('./img/header1.png');
+  margin-top:-20px;
+  padding:0;
+  background-size: cover;
+  width:100vw;
+  height: 80vh;
+  z-index: -1;
+  position:absolute;
+  top:0;
+  
+}
+
+.header-effect{
+  width:100%;
+  height:100%;
+  background-color:rgba(36, 9, 39, 0.753);
+  position:absolute;
+  top:0;
+  text-align: center;
+  
+
+}
+
+.container-title-header2{
+  border-top: solid 7px white;
+  border-bottom: solid 7px white;
+  display:inline-block;
+  padding:0;
+  margin-top: 20vh;
+
+
+}
+
+.title-header2{
+  color:white;
+  font-size:5em;
+  font-weight: 400;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
+}
+
+.subtitle-header2{
+  color:white;
+  font-size:2.5em;
+  margin-top: 1%;
+  margin-bottom: 6%;
+
+}
+
+.border-header2{
+  margin:3% 2%;
+  border:solid 7px white;
+
+}
+
+.nav-header2{
+  display: inline-block;
+  position:absolute;
+  margin-top: 2%;
+  left: 4%;
+  
+}
+
+.nav-button{
+  width:60%;
+}
+
+
