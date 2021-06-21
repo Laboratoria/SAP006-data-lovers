@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt"> <!--Entender a linguagem-->
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"> <!--Entender caracteres-->
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/> <!--link com CSS-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/> <!--Ícone do site-->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--referência para-->
   </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <body>
+      <header>
+        <section class="logo">
+          <img class="imgLogo" src="img/Rick-and-Morty-Text_light.png" alt="Logo cabeçalho" title="Rick and Morty"> <!--logo no cabeçalho-->
+        </section>
+      </header>
+      <section class="btn-filtro">
+        <select> <!--SELECT faz a opção de botão de menu-->
+          <option value="gender">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="unknown">Indefinido</option>
+        </select>
+        <select> <!--SELECT faz a opção de botão de menu-->
+          <option value="gender">Espécie</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+          <option value="humano">Humano</option>
+          <option value="Humanóide">Humanóide</option>
+          <option value="alien">Alien</option>
+          <option value="animal">Animal</option>
+        </select>
+      <script src="main.js" type="module"></script> <!--link com JS-->
+    </body>
+      <section class="rodape">
+        <footer> Desenvolvido por 
+          <a style="color:aqua" href="https://github.com/biancacristinaalves" target="_blank">Bianca Alves</a> e 
+          <a style="color:aqua" href="https://github.com/ThalitaNeves95" target="_blank">Thalita Neves</a>
+        </footer>
+      </section>
 </html>
