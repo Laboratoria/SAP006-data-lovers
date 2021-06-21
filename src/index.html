@@ -20,6 +20,18 @@
       <input id="campoFiltrar" type="text" placeholder="Filtrar por ">
     </div>
 
+
+    <div id="ordemAlfabetica">
+      <label for="ordenar">Ordenar:</label>
+
+      <select id="ordenar">
+        <option  value="crescente">A a Z</option>
+        <option  value="decrescente">Z a A</option>
+      </select>
+    </div>
+
+
+
     <nav>
       <ul>
         <li><a href="#">Todos</a></li>
@@ -32,23 +44,7 @@
       </ul>
     </nav>
 
-    <section>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-      <div class="cardsTodos"></div>
-    </section>
-
-
-
-
-
+    <section id="container"></section>
 
   </div>
   <script src="main.js" type="module"></script>

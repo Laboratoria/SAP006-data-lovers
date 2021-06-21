@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -60,17 +62,65 @@ input::placeholder {
     justify-content: space-around;
 }
     
-
-section {
+#container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+} 
+
+#ordemAlfabetica {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}  
+    
+ 
+#ordemAlfabetica label {
+      
+    color:beige;
+    font-size: 20px;
+    margin-right: 20px;
+    
 }
 
-.cardsTodos {
+.card {
     border: 3px solid rgb(255, 0, 221);
     width: 250px;
     height: 250px;
     margin: 15px;
-  
+    color:rgb(233, 233, 233);
+    font-size: 20px;
+  }  
+
+  .card img {
+    width: 100%;
+  }
+
+  .card div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* background-color: #0c1618; */
+    font-family: 'Carter One', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #faf4d3; 
+}
+
+.btnFechar {
+    display: block;
+}
+
+ 
+.card button {
+    display: none;
+}
+
+.cartaoAberto {
+width: 500px;
+height: 500px;
+}
+
+.cartaoAberto button{
+    display: block;
 }
