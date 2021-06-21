@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta http-equiv="X-UA-Compatible" content="I=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends - Find Your Champion</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div id="root"></div>
 
@@ -12,7 +16,31 @@
       <img src="./img/lol-header-img.png" alt="Campeã do LoL">
     </header>
 
-    <section id="card-area" class="container">
+    <main class="container">
+
+      <header class="nav">
+
+        <input type="search" name="search" class="search" id="search" placeholder="BUSCAR">
+
+        <ul class="categorias">
+          <li><a href="#">TODOS</a></li>
+          <li><a href="#">ASSASSINOS</a></li>
+          <li><a href="#">SUPORTE</a></li>
+          <li><a href="#">MAGOS</a></li>
+          <li><a href="#">ATIRADORES</a></li>
+          <li><a href="#">TANQUE</a></li>
+          <li><a href="#">LUTADORES</a></li>
+        </ul>
+        
+        <div class="dropdown">
+          <select name="dificuldade" class="dropbtn"></select>          
+          <div class="dropdown-content">
+            FÁCIL
+          </div>
+        </div>
+
+      </header>
+
       <div id="card" class="card">
         CARD 01
       </div>
@@ -45,7 +73,7 @@
         CARD 08
       </div>
 
-    </section>
+    </main>
 
     <footer>
     </footer>
