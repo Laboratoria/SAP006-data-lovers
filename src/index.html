@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>RICK E MORTY</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>RICK E MORTY</h1>
+    <input type="text" placeholder="Pesquisar" id="search">
+  </header>
+  <main>
+    <div class="container">
+      <div class="slide"></div>
+      <select name="FILTRAR" id="filtro">
+        <option value="HUMANO">HUMANO</option>
+        <option value="HUMANOIDE">HUMANOIDE</option>
+        <option value="MONSTRO">MONSTRO</option>
+      </select>
+      <div class="statistic">
+        <div class="static"></div>
+        <div class="static"></div>
+      </div>
+
+
+      <section class="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </section>
+      <script src="main.js" type="module"></script>
+    </div>
+  </main>
+</body>
+
 </html>
