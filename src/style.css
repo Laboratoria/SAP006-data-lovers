@@ -6,7 +6,7 @@
     background-color: lightblue;
     list-style: none; /*tira os marcadores*/
     padding: 15px 8%;
-    text-align: center;
+    text-align: left;
     margin-top: 0px;
 }
 .menu ul li {
