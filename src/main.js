@@ -52,7 +52,7 @@ function cards() {
   for (i = 0; i < champs.length; i++) {
     champImg = champs[i].splash;
     champName = champs[i].name;
-    funcaoPersonagem = champs[i].tags;
+    // funcaoPersonagem = champs[i].tags;
 
 
     // CRIADO OS CARDS
@@ -70,7 +70,7 @@ function cards() {
     // COLOCANDO NOME E FUNÇÃO DOS PERSONAGENS
     nomePersonagem = document.createElement("div");
     nomePersonagem.setAttribute("class", "nomeEFuncao");
-    nomePersonagem.innerHTML = champName + "<br>" + "Função: " + funcaoPersonagem;
+    nomePersonagem.innerHTML = champName + "<br>" 
     card.appendChild(nomePersonagem)
 
     // CRIADO O BOTAO E ADD EVENTO DE FECHAR
@@ -110,7 +110,7 @@ function normalCard(x) {
 
 
 
-
+// + "Função: " + funcaoPersonagem;
 
 
 
