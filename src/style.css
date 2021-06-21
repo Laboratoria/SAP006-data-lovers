@@ -1,0 +1,44 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+#cards-conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f4a261;
+}
+
+.card{
+    background-color: #004643;
+    border: 1px solid rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    margin: 5px;
+}
+
+
+.image{
+    background-color: aqua;
+    border: 3px solid #d1ac00;
+    width: 225px;
+    height: 272px;
+    object-fit:cover;
+    
+} 
+
+.nameConteiner{
+    background-color: #0c1618;
+    font-family: 'Carter One', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: #faf4d3; 
+}
+
+.cardSideB{
+    background-color:midnightblue;
+    
+}
