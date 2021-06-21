@@ -4,25 +4,40 @@
 
 body {
     background-color: #051521;
-}
-
-.logo{
-    background-color: #084d6e;
     
 }
 
+
 .imgLogo{
-    height: 100px;
-    width: 500px;
+    height: 200px;
+    width: 600px;
     margin: 0 auto;
+    display: block;
+    border-radius: 50px;
+}
+
+.btn-filtro{
+    background-color: #97ce4c;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fundo-direita{
+    opacity: 40%;
+    float:right;
     display: block;
 }
 
-
-
-
-
-
+.fundo-esquerda{
+    opacity: 40%;
+    float:left;
+    display: block;
+}
 
 .rodape{
     background-color: #084d6e;
