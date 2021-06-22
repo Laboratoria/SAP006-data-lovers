@@ -5,6 +5,7 @@ export const filterData = (data, prop, name)=> {
 };
 
 export const sortData = (data, sortBy, sortOrder) => {
+  
   const compare = (a,b) =>{
     if(parseInt(a[sortBy]!== NaN)){
       if (parseInt(a[sortBy]) < parseInt(b[sortBy]))
