@@ -32,142 +32,141 @@
 }
 
 .border {
-    margin-inline: auto;
-    margin-top: 10px;
-    background-color: rgb(255, 255, 255);
-    width: 60px;
-    height: 60px;
-    border: 4px solid #292929;
-    border-radius: 50%;
-  }
-  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  margin-inline: auto;
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 60px;
+  height: 60px;
+  border: 4px solid #292929;
+  border-radius: 50%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-  * {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .wrapper {
-    background-color: aqua;
-    height: 400px;
-    width: 1200px;
-    margin-inline: auto;
-    position: relative;
-    margin-top: -300px;
-    margin-right: 80px;
-    overflow: hidden;
-  }
-  
-  .button-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel {
-    background-color: blueviolet;
-    display: flex;
-    list-style: none;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-  }
-  
-  .card {
-    --color1: rgb(0, 231, 255);
-    --color2: rgb(255, 0, 231);
-    box-shadow: -13px -13px 13px -15px var(--color1),
-      13px 13px 13px -15px var(--color2), 0 0 4px 2px rgba(255, 255, 255, 0.5),
-      0 35px 25px -15px rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-    border: 10px solid gold;
-    width: 280;
-    height: 400;
-    background: linear-gradient(
-      to bottom right,
-      #ffffa4,
-      #fff870,
-      #fff200,
-      #fff870,
-      #ffffa4,
-      #fff870
-    );
-    width: 280px;
-    background-color: rgb(71, 60, 45);
-    height: 400px;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  
-  h3 {
-  }
-  
-  p {
-  }
-  
-  img {
-    display: flex;
-    position: absolute;
-    margin-inline: auto;
-    background-color: rgb(230, 33, 33);
-    width: 240px;
-    height: 170px;
-    box-shadow: 3px 3px 10px #000;
-    border: 5px yellow outset;
-    margin-top: 20px;
-    margin-left: 8px;
-  }
-  
-  .descricao {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 250px;
-    padding: 2px;
-    margin-inline: auto;
-    background: linear-gradient(to right, goldenrod, yellow, goldenrod);
-    font-size: 10px;
-    font-style: italic;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 220px;
-  }
-  
-  .infos {
-    margin-inline: auto;
-    margin-top: 5px;
-    width: 250px;
-    height: 90px;
-    border: 1px black solid;
-  }
-  
-  h3 {
-    margin-left: 12px;
-    font-size: 10px;
-  }
-  
-  .infos ul li {
-    font-size: 12px;
-    justify-content: space-between;
-    display: inline-block;
-    list-style: none;
-  }
-  
-  .weaknesses {
-    margin-left: 120px;
-  }
-  
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
 
-  .lateral {
-      display: flex;
-      width: 15px;
-     
-     
-      background-color: rgba(0, 0, 0, 0.3);
-  }
+.wrapper {
+  background-color: aqua;
+  height: 400px;
+  width: 1200px;
+  margin-inline: auto;
+  position: relative;
+  margin-top: -300px;
+  margin-right: 80px;
+  overflow: hidden;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  background-color: blueviolet;
+  display: flex;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.card {
+  --color1: rgb(0, 231, 255);
+  --color2: rgb(255, 0, 231);
+  box-shadow: -13px -13px 13px -15px var(--color1),
+    13px 13px 13px -15px var(--color2), 0 0 4px 2px rgba(255, 255, 255, 0.5),
+    0 35px 25px -15px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  border: 10px solid gold;
+  width: 280;
+  height: 400;
+  background: linear-gradient(
+    to bottom right,
+    #ffffa4,
+    #fff870,
+    #fff200,
+    #fff870,
+    #ffffa4,
+    #fff870
+  );
+  width: 280px;
+  background-color: rgb(71, 60, 45);
+  height: 400px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+h3 {
+}
+
+p {
+}
+
+img {
+  display: flex;
+  position: absolute;
+  margin-inline: auto;
+  background-color: rgb(230, 33, 33);
+  width: 240px;
+  height: 170px;
+  box-shadow: 3px 3px 10px #000;
+  border: 5px yellow outset;
+  margin-top: 20px;
+  margin-left: 8px;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 250px;
+  padding: 2px;
+  margin-inline: auto;
+  background: linear-gradient(to right, goldenrod, yellow, goldenrod);
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 220px;
+}
+
+.infos {
+  margin-inline: auto;
+  margin-top: 5px;
+  width: 250px;
+  height: 90px;
+  border: 1px black solid;
+}
+
+h3 {
+  margin-left: 12px;
+  font-size: 10px;
+}
+
+.infos ul li {
+  font-size: 12px;
+  justify-content: space-between;
+  display: inline-block;
+  list-style: none;
+}
+
+.weaknesses {
+  margin-left: 120px;
+}
+
+.lateral {
+  display: flex;
+  display: flex;
+  width: 15px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
