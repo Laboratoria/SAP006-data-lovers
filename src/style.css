@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
+
+body{
+    background-image: url(img/background1.jpg);
+    background-size: 100%;
+    margin: 50px 50px;
+    box-sizing: border-box;
+    
+}
+div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 50%
+}
+.cards{
+    display: block;
+    background-image: url(img/background.png);
+    width: 25%;
+    height: 420px;
+    margin: 25px;
+    padding: 15px 5px;
+    border-radius: 3px;
+    border: rgba(89, 99, 94, 0.521) 1px solid; 
+}
+
+h1{
+    font-size: 29px;
+    margin: 10px;
+    color: #ffffff;
+    background-color: #24534f93;
+    border-radius: 5px;
+    font-family: Nova Cut;
+}
+h2{
+    color: #d6d6d6;
+    font-size: 17px;
+    font-weight: bold;    
+    font-style: italic;
+    background-color: #0e0e0ec0;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: Nova Flat;
+    
+}
+p{
+    font-size: 13px;
+    line-height: 18px;
+    text-align: justify;
+    padding: 0px 8px;
+    color: #d6d6d6;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+img{
+    width: 100%;
+}

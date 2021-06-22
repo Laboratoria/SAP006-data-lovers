@@ -222,7 +222,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg",
       blurb:
-        "''Solitude can be lonelier than death.''<br><br>A lonely and melancholy soul from ancient Shurima, Amumu roams the world in search of a friend. Cursed by an ancient spell, he is doomed to remain alone forever, as his touch is death and his affection ...",
+        "''Solitude can be lonelier than death.''A lonely and melancholy soul from ancient Shurima, Amumu roams the world in search of a friend. Cursed by an ancient spell, he is doomed to remain alone forever, as his touch is death and his affection ...",
       info: {
         attack: 2,
         defense: 6,
@@ -482,7 +482,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg",
       blurb:
-        "''Shurima was once the glory of Runeterra. I will make it so again.''<br><br>Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his ...",
+        "''Shurima was once the glory of Runeterra. I will make it so again.'' Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his ...",
       info: {
         attack: 6,
         defense: 3,
@@ -690,7 +690,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg",
       blurb:
-        "''Would you like a bedtime story?''<br><br>''Grandma, I'm too old for that.''<br><br>''You're never too old to be told a story.''<br><br>The girl reluctantly crawls into bed and waits, knowing she won't win this battle. A bitter wind howls outside, ...",
+        "''Would you like a bedtime story?''<br>''Grandma, I'm too old for that.''<br>''You're never too old to be told a story.''<br>The girl reluctantly crawls into bed and waits, knowing she won't win this battle. A bitter wind howls outside, ...",
       info: {
         attack: 3,
         defense: 9,
@@ -742,7 +742,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
       blurb:
-        "''Go ahead, run. I'll give you a five minute head start.''<br><br>One of the reasons Piltover is known as the City of Progress is because it has an extraordinarily low crime rate. This hasn't always been the case; brigands and thieves of all sorts ...",
+        "''Go ahead, run. I'll give you a five minute head start.''<br>One of the reasons Piltover is known as the City of Progress is because it has an extraordinarily low crime rate. This hasn't always been the case; brigands and thieves of all sorts ...",
       info: {
         attack: 8,
         defense: 2,
@@ -1054,7 +1054,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Diana_0.jpg",
       blurb:
-        "''I am the light coursing in the soul of the moon.''<br><br>Bearing her crescent moonblade, Diana fights as a warrior of the Lunari, a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, ...",
+        "''I am the light coursing in the soul of the moon.''<br>Bearing her crescent moonblade, Diana fights as a warrior of the Lunari, a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, ...",
       info: {
         attack: 7,
         defense: 6,
@@ -1158,7 +1158,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_0.jpg",
       blurb:
-        "''Beware the Madman of Zaun. In his eyes, you are already dead''<br><br>It is said that the man now known as Dr. Mundo was born without any sort of conscience. Instead, he had an unquenchable desire to inflict pain through experimentation. By the time ...",
+        "''Beware the Madman of Zaun. In his eyes, you are already dead''<br>It is said that the man now known as Dr. Mundo was born without any sort of conscience. Instead, he had an unquenchable desire to inflict pain through experimentation. By the time ...",
       info: {
         attack: 5,
         defense: 7,
@@ -1262,7 +1262,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Elise_0.jpg",
       blurb:
-        "''Beauty is power too, and can strike swifter than any sword.''<br><br>Elise is a deadly predator who dwells in a shuttered, lightless palace, deep in the Immortal Bastion of Noxus. Once she was mortal, the mistress of a once-powerful house, but the ...",
+        "''Beauty is power too, and can strike swifter than any sword.''<br>Elise is a deadly predator who dwells in a shuttered, lightless palace, deep in the Immortal Bastion of Noxus. Once she was mortal, the mistress of a once-powerful house, but the ...",
       info: {
         attack: 6,
         defense: 5,
@@ -1574,7 +1574,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_0.jpg",
       blurb:
-        "''There is no such thing as redemption. Only penance.''<br><br>Long before the regulation of magic, mages experimented with the creation of artificial life. Now forbidden, instilling golems with reason was once not so uncommon a practice amongst the ...",
+        "''There is no such thing as redemption. Only penance.''<br>Long before the regulation of magic, mages experimented with the creation of artificial life. Now forbidden, instilling golems with reason was once not so uncommon a practice amongst the ...",
       info: {
         attack: 3,
         defense: 7,
@@ -1626,7 +1626,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gangplank_0.jpg",
       blurb:
-        "''I was cutting throats and sinking Noxian war galleys when you were still pissing your britches, boy. You don't want to take me on.''<br><br>As unpredictable as he is brutal, the dethroned reaver king known as Gangplank is feared far and wide. Where ...",
+        "''I was cutting throats and sinking Noxian war galleys when you were still pissing your britches, boy. You don't want to take me on.''<br>As unpredictable as he is brutal, the dethroned reaver king known as Gangplank is feared far and wide. Where ...",
       info: {
         attack: 7,
         defense: 6,
@@ -1730,7 +1730,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gnar_0.jpg",
       blurb:
-        "The jungle does not forgive blindness. Every broken branch tells a story.<br><br>I've hunted every creature this jungle has to offer. I was certain there were no challenges left here, but now there is something new. Each track is the size of a ...",
+        "The jungle does not forgive blindness. Every broken branch tells a story.<br>I've hunted every creature this jungle has to offer. I was certain there were no challenges left here, but now there is something new. Each track is the size of a ...",
       info: {
         attack: 6,
         defense: 5,
@@ -1887,7 +1887,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_0.jpg",
       blurb:
-        "''Break their ranks and ride them down without mercy. Crush the living and feast on their terror.''<br><br>Hecarim is an armored colossus who charges from the Shadow Isles at the head of a deathly host of spectral horsemen to hunt the living. A ...",
+        "''Break their ranks and ride them down without mercy. Crush the living and feast on their terror.''<br>Hecarim is an armored colossus who charges from the Shadow Isles at the head of a deathly host of spectral horsemen to hunt the living. A ...",
       info: {
         attack: 8,
         defense: 6,
@@ -1939,7 +1939,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_0.jpg",
       blurb:
-        "From the Journal of Professor Cecil B. Heimerdinger<br><br>10.14<br><br>09:15<br><br>Current meteorological conditions in Bandle City seem optimal. Atmospheric pressure is ideal for today's experiments!<br><br>Running a fifth trial for my ...",
+        "From the Journal of Professor Cecil B. Heimerdinger<br>10.14<br>09:15<br>Current meteorological conditions in Bandle City seem optimal. Atmospheric pressure is ideal for today's experiments!<br>Running a fifth trial for my ...",
       info: {
         attack: 2,
         defense: 6,
@@ -2043,7 +2043,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg",
       blurb:
-        "''The sword flourishes, as though painting with blood.''<br><br>The Ionians have developed some of the most breathtaking and deadly martial arts in all of Runeterra - just one manifestation of their pursuit of enlightenment. The most remarkable blade ...",
+        "''The sword flourishes, as though painting with blood.''<br>The Ionians have developed some of the most breathtaking and deadly martial arts in all of Runeterra - just one manifestation of their pursuit of enlightenment. The most remarkable blade ...",
       info: {
         attack: 7,
         defense: 4,
@@ -2199,7 +2199,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/JarvanIV_0.jpg",
       blurb:
-        "''There is only one truth, and you will find it at the point of my lance.''<br><br>As the royal family of Demacia for centuries, members of the Lightshield line have spent their lives waging war against any who opposed Demacian ethics. It is said that ...",
+        "''There is only one truth, and you will find it at the point of my lance.''<br>As the royal family of Demacia for centuries, members of the Lightshield line have spent their lives waging war against any who opposed Demacian ethics. It is said that ...",
       info: {
         attack: 6,
         defense: 8,
@@ -2355,7 +2355,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_0.jpg",
       blurb:
-        "''Art requires a certain...cruelty.''<br><br>Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's ...",
+        "''Art requires a certain...cruelty.''<br>Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's ...",
       info: {
         attack: 10,
         defense: 2,
@@ -2459,7 +2459,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg",
       blurb:
-        "''When wronged, we seek justice. When hurt, we strike back. When betrayed, the Spear of Vengeance strikes!''<br><br>A specter of wrath and retribution, Kalista is the undying spirit of vengeance, an armored nightmare summoned from the Shadow Isles to ...",
+        "''When wronged, we seek justice. When hurt, we strike back. When betrayed, the Spear of Vengeance strikes!''<br>A specter of wrath and retribution, Kalista is the undying spirit of vengeance, an armored nightmare summoned from the Shadow Isles to ...",
       info: {
         attack: 8,
         defense: 2,
@@ -2563,7 +2563,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_0.jpg",
       blurb:
-        "''Death is not the end of the journey, it is just the beginning...''<br><br>The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath,...",
+        "''Death is not the end of the journey, it is just the beginning...''<br>The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath,...",
       info: {
         attack: 2,
         defense: 2,
@@ -2667,7 +2667,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg",
       blurb:
-        "Driven by an intense killer instinct, Katarina uses her talents as an assassin for the glory of Noxus, and the continued elevation of her family. While her fervor drives her to ever-greater feats, it can sometimes lead her astray.<br><br>From ...",
+        "Driven by an intense killer instinct, Katarina uses her talents as an assassin for the glory of Noxus, and the continued elevation of her family. While her fervor drives her to ever-greater feats, it can sometimes lead her astray.<br>From ...",
       info: {
         attack: 4,
         defense: 3,
@@ -2927,7 +2927,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kled_0.jpg",
       blurb:
-        "''A sane man would run . . . but I ain't the runnin' kind!''<br><br>A warrior as fearless as he is ornery, Kled is a popular folk hero in Noxus. Embodying the furious bravado of his nation, he is an icon beloved by the empire's soldiers, distrusted by ...",
+        "''A sane man would run . . . but I ain't the runnin' kind!''<br>A warrior as fearless as he is ornery, Kled is a popular folk hero in Noxus. Embodying the furious bravado of his nation, he is an icon beloved by the empire's soldiers, distrusted by ...",
       info: {
         attack: 8,
         defense: 2,
@@ -2979,7 +2979,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/KogMaw_0.jpg",
       blurb:
-        "''If that's just hungry, I don't want to see angry.''<br><br>When the prophet Malzahar was reborn in Icathia, he was led there by an ominous voice which thereafter anchored itself to his psyche. From within, this voice bestowed upon him terrible ...",
+        "''If that's just hungry, I don't want to see angry.''<br>When the prophet Malzahar was reborn in Icathia, he was led there by an ominous voice which thereafter anchored itself to his psyche. From within, this voice bestowed upon him terrible ...",
       info: {
         attack: 8,
         defense: 2,
@@ -3135,7 +3135,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg",
       blurb:
-        "''If you would shine like a sun, first you must burn like one.''<br><br>Imbued with the fire of the sun, Leona is a warrior templar of the Solari who defends Mount Targon with her Zenith Blade and Shield of Daybreak. Her skin shimmers with starfire ...",
+        "''If you would shine like a sun, first you must burn like one.''<br>Imbued with the fire of the sun, Leona is a warrior templar of the Solari who defends Mount Targon with her Zenith Blade and Shield of Daybreak. Her skin shimmers with starfire ...",
       info: {
         attack: 4,
         defense: 8,
@@ -3499,7 +3499,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg",
       blurb:
-        "''All around me are empty husks, soulless and unafraid... but I will bring them fear.''<br><br>Maokai is a rageful, towering treant who fights the unnatural horrors of the Shadow Isles. He was twisted into a force of vengeance after a magical ...",
+        "''All around me are empty husks, soulless and unafraid... but I will bring them fear.''<br>Maokai is a rageful, towering treant who fights the unnatural horrors of the Shadow Isles. He was twisted into a force of vengeance after a magical ...",
       info: {
         attack: 3,
         defense: 8,
@@ -3603,7 +3603,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MissFortune_0.jpg",
       blurb:
-        "''The bigger the risk, the bigger the bounty.''<br><br>Beauty and danger: There are few who can match Miss Fortune in either. One of Bilgewater's most infamous bounty hunters, she built her legend upon a swathe of bullet-riddled corpses and captured ...",
+        "''The bigger the risk, the bigger the bounty.''<br>Beauty and danger: There are few who can match Miss Fortune in either. One of Bilgewater's most infamous bounty hunters, she built her legend upon a swathe of bullet-riddled corpses and captured ...",
       info: {
         attack: 8,
         defense: 2,
@@ -3707,7 +3707,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_0.jpg",
       blurb:
-        "''All things must die... and yet I live on.''<br><br>The baleful revenant Mordekaiser is among the most terrifying and hateful spirits haunting the Shadow Isles. He has existed for countless centuries, shielded from true death by necromantic sorcery ...",
+        "''All things must die... and yet I live on.''<br>The baleful revenant Mordekaiser is among the most terrifying and hateful spirits haunting the Shadow Isles. He has existed for countless centuries, shielded from true death by necromantic sorcery ...",
       info: {
         attack: 4,
         defense: 6,
@@ -3863,7 +3863,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nasus_0.jpg",
       blurb:
-        "''What was fallen will be great again.''<br><br>Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and ...",
+        "''What was fallen will be great again.''<br>Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and ...",
       info: {
         attack: 7,
         defense: 5,
@@ -4227,7 +4227,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_0.jpg",
       blurb:
-        "''Bring forth one true champion, or a hundred more like you, and then we shall have a battle that will be spoken of until the end of time.''<br><br>The peerless warrior known as Pantheon is a nigh-unstoppable paragon of battle. He was born among the ...",
+        "''Bring forth one true champion, or a hundred more like you, and then we shall have a battle that will be spoken of until the end of time.''<br>The peerless warrior known as Pantheon is a nigh-unstoppable paragon of battle. He was born among the ...",
       info: {
         attack: 9,
         defense: 4,
@@ -4279,7 +4279,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg",
       blurb:
-        "''I'm no hero. Just a yordle with a hammer.''<br><br>Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing a hammer twice the length of her body, this determined yordle has spent untold years searching for the ...",
+        "''I'm no hero. Just a yordle with a hammer.''<br>Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing a hammer twice the length of her body, this determined yordle has spent untold years searching for the ...",
       info: {
         attack: 6,
         defense: 7,
@@ -4383,7 +4383,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rammus_0.jpg",
       blurb:
-        "''OK.''<br><br>Idolized by many, dismissed by some, mystifying to all, the curious being, Rammus, is an enigma. Protected by a spiked shell, Rammus inspires increasingly disparate theories on his origin wherever he goes - from demigod, to sacred ...",
+        "''OK.''<br>Idolized by many, dismissed by some, mystifying to all, the curious being, Rammus, is an enigma. Protected by a spiked shell, Rammus inspires increasingly disparate theories on his origin wherever he goes - from demigod, to sacred ...",
       info: {
         attack: 4,
         defense: 10,
@@ -4487,7 +4487,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renekton_0.jpg",
       blurb:
-        "''Blood and vengeance.''<br><br>Renekton is a terrifying, rage-fueled Ascended being from the scorched deserts of Shurima. Once, he was his empire's most esteemed warrior, leading the armies of Shurima to countless victories. However, after the ...",
+        "''Blood and vengeance.''<br>Renekton is a terrifying, rage-fueled Ascended being from the scorched deserts of Shurima. Once, he was his empire's most esteemed warrior, leading the armies of Shurima to countless victories. However, after the ...",
       info: {
         attack: 8,
         defense: 5,
@@ -4591,7 +4591,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Riven_0.jpg",
       blurb:
-        "''There is a place between war and murder in which our demons lurk.''<br><br>In Noxus, any citizen may rise to power regardless of race, gender, or social standing - strength is all that matters. It was with committed faith in this ideal that Riven ...",
+        "''There is a place between war and murder in which our demons lurk.''<br>In Noxus, any citizen may rise to power regardless of race, gender, or social standing - strength is all that matters. It was with committed faith in this ideal that Riven ...",
       info: {
         attack: 8,
         defense: 5,
@@ -4643,7 +4643,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rumble_0.jpg",
       blurb:
-        "''Ugh, it's gonna take forever to scrape your face off my suit!''<br><br>Even amongst yordles, Rumble was always the runt of the litter. As such, he was used to being bullied. In order to survive, he had to be scrappier and more resourceful than his ...",
+        "''Ugh, it's gonna take forever to scrape your face off my suit!''<br>Even amongst yordles, Rumble was always the runt of the litter. As such, he was used to being bullied. In order to survive, he had to be scrappier and more resourceful than his ...",
       info: {
         attack: 3,
         defense: 6,
@@ -4695,7 +4695,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ryze_0.jpg",
       blurb:
-        "''Take care with this world. What is made can be unmade.''<br><br>Widely considered one of the most adept sorcerers on Runeterra, Ryze is an ancient, hard-bitten archmage with an impossibly heavy burden to bear. Armed with a boundless constitution and ...",
+        "''Take care with this world. What is made can be unmade.''<br>Widely considered one of the most adept sorcerers on Runeterra, Ryze is an ancient, hard-bitten archmage with an impossibly heavy burden to bear. Armed with a boundless constitution and ...",
       info: {
         attack: 2,
         defense: 2,
@@ -4851,7 +4851,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_0.jpg",
       blurb:
-        "''The Eye is blind to fear, to hate, to love - to all things that would sway equilibrium.''<br><br>Leader of a secret clan of mystic warriors, Shen serves as the Eye of Twilight, entrusted to enforce equilibrium in the world. Longing to remain free ...",
+        "''The Eye is blind to fear, to hate, to love - to all things that would sway equilibrium.''<br>Leader of a secret clan of mystic warriors, Shen serves as the Eye of Twilight, entrusted to enforce equilibrium in the world. Longing to remain free ...",
       info: {
         attack: 3,
         defense: 9,
@@ -5007,7 +5007,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sion_0.jpg",
       blurb:
-        "BLOOD.<br><br>SMELL IT.<br><br>WANT. ACHING. NEED!<br><br>CLOSE NOW. THEY COME.<br><br>NO CHAINS? FREE! KILL!<br><br>IN REACH. YES! DIE! DIE!<br><br>Gone. Too quick. No fight. More. I want... more.<br><br>A voice? Unfamiliar. I see him. The Grand ...",
+        "BLOOD.<br>SMELL IT.<br>WANT. ACHING. NEED!<br>CLOSE NOW. THEY COME.<br>NO CHAINS? FREE! KILL!<br>IN REACH. YES! DIE! DIE!<br>Gone. Too quick. No fight. More. I want... more.<br>A voice? Unfamiliar. I see him. The Grand ...",
       info: {
         attack: 5,
         defense: 9,
@@ -5059,7 +5059,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sivir_0.jpg",
       blurb:
-        "''I don't care what face is on your coin, as long as it pays.''<br><br>Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won ...",
+        "''I don't care what face is on your coin, as long as it pays.''<br>Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won ...",
       info: {
         attack: 9,
         defense: 3,
@@ -5111,7 +5111,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_0.jpg",
       blurb:
-        "''We are one. We cannot be shattered.''<br><br>Skarner is an immense crystalline scorpion from a hidden valley in Shurima. Part of the ancient Brackern race, Skarner and his kin are known for their great wisdom and deep connection to the land, as ...",
+        "''We are one. We cannot be shattered.''<br>Skarner is an immense crystalline scorpion from a hidden valley in Shurima. Part of the ancient Brackern race, Skarner and his kin are known for their great wisdom and deep connection to the land, as ...",
       info: {
         attack: 7,
         defense: 6,
@@ -5475,7 +5475,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_0.jpg",
       blurb:
-        "''The three deadliest blademasters in all of Valoran are bound to the house of Du Couteau: my father, myself, and Talon. Challenge us, if you dare.''<br>-- Katarina Du Couteau<br><br>Talon's earliest memories are the darkness of Noxus' underground ...",
+        "''The three deadliest blademasters in all of Valoran are bound to the house of Du Couteau: my father, myself, and Talon. Challenge us, if you dare.''<br>-- Katarina Du Couteau<br>Talon's earliest memories are the darkness of Noxus' underground ...",
       info: {
         attack: 9,
         defense: 3,
@@ -5527,7 +5527,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taric_0.jpg",
       blurb:
-        "''The best weapons are beautiful.''<br><br>Taric is the Aspect of the Protector, wielding incredible power as Runeterra's guardian of life, love, and beauty. Shamed by a dereliction of duty and exiled from his homeland Demacia, Taric ascended Mount ...",
+        "''The best weapons are beautiful.''<br>Taric is the Aspect of the Protector, wielding incredible power as Runeterra's guardian of life, love, and beauty. Shamed by a dereliction of duty and exiled from his homeland Demacia, Taric ascended Mount ...",
       info: {
         attack: 4,
         defense: 8,
@@ -5631,7 +5631,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg",
       blurb:
-        "''The mind is a wondrous thing to tear apart.''<br><br>Sadistic and cunning, Thresh is a restless spirit who prides himself on tormenting mortals and breaking them with slow, excruciating inventiveness. His victims suffer far beyond the point of death,...",
+        "''The mind is a wondrous thing to tear apart.''<br>Sadistic and cunning, Thresh is a restless spirit who prides himself on tormenting mortals and breaking them with slow, excruciating inventiveness. His victims suffer far beyond the point of death,...",
       info: {
         attack: 5,
         defense: 6,
@@ -6047,7 +6047,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_0.jpg",
       blurb:
-        "''The life of an arrow is fleeting, built of nothing but direction and intent.''<br><br>For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to ...",
+        "''The life of an arrow is fleeting, built of nothing but direction and intent.''<br>For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to ...",
       info: {
         attack: 7,
         defense: 3,
@@ -6099,7 +6099,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vayne_0.jpg",
       blurb:
-        "The world is not always as civilized as people might think. There are still those who would follow the blackest paths of magic and become corrupted by the darker powers that flow through Runeterra. Shauna Vayne knows this fact well.<br><br>As a young ...",
+        "The world is not always as civilized as people might think. There are still those who would follow the blackest paths of magic and become corrupted by the darker powers that flow through Runeterra. Shauna Vayne knows this fact well.<br>As a young ...",
       info: {
         attack: 10,
         defense: 1,
@@ -6203,7 +6203,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Velkoz_0.jpg",
       blurb:
-        "I pass into the sudden glare. Blink. Blink, blink, blink. My eyes adjust and evaluate the landscape before me.<br><br>There's a scurrying. I look down to find a small, white creature standing on its hind legs, sniffing at my body. It intrigues me....",
+        "I pass into the sudden glare. Blink. Blink, blink, blink. My eyes adjust and evaluate the landscape before me.<br>There's a scurrying. I look down to find a small, white creature standing on its hind legs, sniffing at my body. It intrigues me....",
       info: {
         attack: 2,
         defense: 2,
@@ -6514,7 +6514,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Xerath_0.jpg",
       blurb:
-        "''A lifetime as a slave has prepared me for eternity as your master.''<br><br>Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the ...",
+        "''A lifetime as a slave has prepared me for eternity as your master.''<br>Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the ...",
       info: {
         attack: 1,
         defense: 3,
@@ -6566,7 +6566,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/XinZhao_0.jpg",
       blurb:
-        "''Death is inevitable, one can only avoid defeat.''<br><br>Whenever Jarvan III, the king of Demacia, delivers one of his rallying speeches from the glinting marble balcony atop the Royal Palace, Xin Zhao is at his side. Coined the Seneschal of Demacia,...",
+        "''Death is inevitable, one can only avoid defeat.''<br>Whenever Jarvan III, the king of Demacia, delivers one of his rallying speeches from the glinting marble balcony atop the Royal Palace, Xin Zhao is at his side. Coined the Seneschal of Demacia,...",
       info: {
         attack: 8,
         defense: 6,
