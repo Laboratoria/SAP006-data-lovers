@@ -108,13 +108,17 @@ body{
   display:flex;
 }
 
+.movie.details{
+  margin-left:10px;
+}
+
 .movie-poster{
   width:40%;
   margin-left:0;
 }
 
 .poster{
-  width:100%;
+  width:340px;
   margin-left:0;
   padding:0;
 }
