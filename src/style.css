@@ -7,7 +7,6 @@ body {
     
 }
 
-
 .imgLogo{
     height: 200px;
     width: 600px;
@@ -16,7 +15,7 @@ body {
     border-radius: 50px;
 }
 
-.btn-filtro {
+section select {
     background-color: #97ce4c;
     border-radius: 50px;
     display: flex;
@@ -24,7 +23,10 @@ body {
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;    
+    display: inline-block;
+    margin-bottom: 50px;
+    border: none;
 }
 
 .fundo-direita{
@@ -43,4 +45,7 @@ body {
     background-color: #084d6e;
     text-align: center;
     color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
