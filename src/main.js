@@ -1,0 +1,161 @@
+/*
+
+import { example } from './data.js';
+// import data from './data/lol/lol.js';
+import data from './data/pokemon/pokemon.js';
+// import data from './data/rickandmorty/rickandmorty.js';
+
+*/
+
+
+
+
+const api = "./data/pokemon/pokemon.json"
+
+async function getJson() {
+  const response = await fetch(api);
+
+  const data = await response.json();
+  //console.log(data);
+  let allPokemons = data.pokemon;
+  //console.log(allPokemons[12].weaknesses[3]);
+  document.querySelector("#teste").innerText = allPokemons[2].name
+  document.querySelector("#infos").innerText = allPokemons[2].about
+
+  let img = querySelector("#img")
+  img.setAttribute("src", allPokemons.innerText)
+
+
+}
+
+getJson()
+
+class MeuCarousel {
+  constructor(config) {
+    this.config = config;
+    this.init();
+  }
+  init() {
+
+
+    const carousel = document.querySelector("[data-target='" + this.config.selector + "']");
+    const card = carousel.querySelector("[data-target='card']");
+    const leftButton = document.querySelector("[data-action='slideLeft']");
+    const rightButton = document.querySelector("[data-action='slideRight']");
+    let interval = '';
+    let activePage = 1;
+    let timeToNext = this.config.timePerPage;
+    let stopSlide = false;
+
+
+    const carouselWidth = carousel.offsetWidth;
+    const cardStyle = card.currentStyle || window.getComputedStyle(card)
+    const cardMarginRight = this.config.spaceBetween;
+
+    const cardSize = this.config.slidesPerView > 1 ? (carouselWidth / this.config.slidesPerView) - cardMarginRight : (carouselWidth / this.config.slidesPerView);
+    const allItens = carousel.querySelectorAll("[data-target='card']");
+    allItens.forEach((item) => {
+      item.style.width = `${card}px`;
+
+
+      if (this.config.slidesPerView > 1) {
+        item.style.marginRight = `${cardMarginRight/2}px`;
+        item.style.marginLeft = `${cardMarginRight/2}px`
+      }
+
+
+    })
+
+    const cardCount = carousel.querySelectorAll("[data-target='card']").length;
+    const totalPage = Math.ceil(cardCount / this.config.slidesPerView);
+
+    let offset = 0;
+    const maxX = -((cardCount / totalPage) * carouselWidth +
+      (cardMarginRight * (cardCount / totalPage)) -
+      carouselWidth - cardMarginRight);
+
+    let prev = () => {
+      if (offset !== 0 && offset !== 20 && activePage > 1 && stopSlide == false) {
+        activePage -= 1;
+        offset += (carouselWidth + cardMarginRight) - 20;
+        carousel.removeAttribute('style');
+        carousel.style.transform = `translateX(${offset}px)`;
+      }
+    }
+
+    let next = () => {
+      if ((offset !== maxX && activePage < totalPage && stopSlide == false)) {
+        activePage += 1;
+        offset -= (carouselWidth + cardMarginRight) - 20;
+        carousel.style.transition = 'all 1s ease';
+        carousel.style.transform = `translateX(${offset}px)`;
+
+
+      } else if ((this.config.slidesPerView == 1 && activePage < totalPage && stopSlide == false)) {
+        activePage += 1;
+        offset -= carouselWidth;
+        carousel.style.transform = `translateX(${offset}px)`;
+      } else if (activePage == totalPage && stopSlide == false) {
+        clearInterval(interval);
+        timeToNext = (this.config.timePerPage / 2);
+        infinite();
+
+        carousel.querySelectorAll("[data-target='card']").forEach((item, index) => {
+
+          if (index < this.config.slidesPerView) {
+            carousel.append(item);
+          }
+
+
+        })
+        prev();
+
+
+
+      }
+    }
+
+    carousel.addEventListener("mouseout", () => {
+      stopSlide = false;
+    })
+
+
+
+    rightButton.addEventListener('click', () => {
+      activePage = true
+
+    })
+
+
+    leftButton.addEventListener('click', () => {
+      activePage = false
+
+    })
+
+
+
+
+
+    let infinite = () => {
+      if (this.config.loop) {
+        interval = setInterval(() => {
+          next();
+        }, timeToNext);
+      }
+
+    }
+
+    infinite();
+
+
+  }
+}
+
+let teste = new MeuCarousel({
+  selector: 'carousel',
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  timePerPage: 2000,
+  stopOnMouseHover: true
+})
