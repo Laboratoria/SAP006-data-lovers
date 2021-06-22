@@ -16,7 +16,7 @@ body {
     border-radius: 50px;
 }
 
-.btn-filtro{
+.btn-filtro {
     background-color: #97ce4c;
     border-radius: 50px;
     display: flex;
@@ -39,7 +39,7 @@ body {
     display: block;
 }
 
-.rodape{
+.footer{
     background-color: #084d6e;
     text-align: center;
     color: white;
