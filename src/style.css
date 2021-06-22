@@ -1,5 +1,29 @@
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+body { 
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+   text-align: center;
+   color: rgba(194, 116, 15, 0.952);
+}
+form {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+label {
+    color: rgba(194, 116, 15, 0.952);
+    font-size: 20px;
+  }
+
+select {
+   border: 1px solid rgba(194, 116, 15, 0.952);
+   border-radius: 10px; 
+   height: 20px;
+   width: 60px;
+   font-size: 18px;
 }
