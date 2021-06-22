@@ -1,16 +1,9 @@
-// estas funciones son de ejemplo
 
-//export const example = () => {
-  //return 'example';
-//};
+export const filtrar = function (seletorTipos, data) {
+  const pokemon_filtrados = data.pokemon.filter(
+    function(pokemon) {
+      return pokemon.type.includes(seletorTipos)
+    });
+  return pokemon_filtrados;  
+}
 
-//export const anotherExample = () => {
-  //return 'OMG';
-//};
-
-export filtrar from './main.js';
-
-function filtrar (item) {
-  const pokemon_filtrados = data.pokemon.filter(function(item) {
-  return item.type.includes("water")
-});
