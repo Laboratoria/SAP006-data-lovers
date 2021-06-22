@@ -23,9 +23,12 @@ button{
     align-items: center;
     padding: 5px;
 }
+
 section{
     width: 50%;
     margin: auto;
     text-align: center;
-
+}
+.front-poster{
+    float: left;
 }
