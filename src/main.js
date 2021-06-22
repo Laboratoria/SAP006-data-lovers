@@ -1,6 +1,8 @@
 import { filtrar } from './data.js';
+import { sortData } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
+
 
 
 for (let pokemon of data.pokemon) {
@@ -11,21 +13,21 @@ for (let pokemon of data.pokemon) {
 
 let seletorTipos = document.getElementById('tipos');
 
-seletorTipos.addEventListener("change", function(){
-  if (seletorTipos.value !== ""){
+seletorTipos.addEventListener("change", function () {
+  if (seletorTipos.value !== "") {
     exibir(filtrar(seletorTipos.value, data));
   }
   else {
     exibir(data.pokemon)
   }
-  
+
 });
 
-function exibir (pokemons_filtrados){
+function exibir(pokemons_filtrados) {
   document.getElementById("listaPokemon").innerHTML = "";
-  for(let pokemon of pokemons_filtrados){
+  for (let pokemon of pokemons_filtrados) {
     let imagem = document.createElement("img");
     imagem.src = pokemon.img
     document.getElementById("listaPokemon").appendChild(imagem)
-}
+  }
 }
