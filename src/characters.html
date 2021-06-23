@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <title>The Studio Ghibli Collection - Home</title>
+    <title>The Studio Ghibli Collection - Personagens </title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -18,24 +18,17 @@
       </ul>
     </nav>
     <header>
-      <h1>The Studio Ghibli Collection</h1>
-      <img class="chihiroInitial" src="img/chihiro-initial.png" alt="Chihiro">
-    </header>
-    <main> 
-      <h2>Números</h2>
-      <div class="numbers">
-        <p>Total de animações</p>
-        <p>Total de personagens</p>
-        <div class="box"></div>
-        <hr width="3" size="350">
-        <div class="box"></div>
+      <h1>Personagens</h1>
+      <div class="filter">
+      <img src="img/icon-filter.svg" alt="filter">
+      <select name="select">
+        <option value="Filters" selected>Filtros</option>
+        <option value="Nome">Nome (A - Z)</option>
+        <option value="Espécie">Humanos</option>
+      </select>
       </div>
-    </main>
-    <footer>
-      <img class="totoroInitial" src="img/totoro-initial.png" alt="Totoro">
-      <hr width="860" size="7">
-      <p class="made">Feito por Juliana Monteiro e Mariana Marcondes</p>
-    </footer>
+    </header>
+    <div class="chars"></div>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
