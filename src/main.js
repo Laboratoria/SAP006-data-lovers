@@ -13,7 +13,7 @@ for(let i = 0; i < objects.length; i++){
 
     let divCard = document.createElement("div");
     divCard.classList.add('cards');
-    divCard.setAttribute('id', 'characters'+i)
+    divCard.setAttribute('id', 'characters')
     divContainer.appendChild(divCard);
 
     const name = objects[i].name;
@@ -23,5 +23,4 @@ for(let i = 0; i < objects.length; i++){
 
     divCard.innerHTML = `<h1>${name}</h1><h2>${title}</h2><img src="${splash}"><p>${blurb}</p>`;
 }
-
-console.log(example, data);
+console.log(example, data); 
