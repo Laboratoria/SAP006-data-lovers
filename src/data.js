@@ -6,32 +6,22 @@ export const filtrar = function (data, seletorTipos) {
     });
   return pokemon_filtrados;
 }
-// filterData(data, condition): esta função receberia os dados e nos retornaria os que cumprem com a condição.
 
-
+// data ==== tds os dados dos pokemon
+// sortBy === qual desses dada usar para ordenar
+//sortOrder === crescente ou decrescente
 
 export const sortData = (data, sortBy, sortOrder) => {
-  // let someData = 
+  const orderGeracao = Object.keys(sortBy).sort((a, b) => (a[generation].Number > b[generation].Number));
+  const ordenarZA = (a, b) => (a["name"]).localeCompare(b["name"]);
 
-  //  switch (sortData) {
-  //    case data:
-  //      return POKEMONS
-       
-  //    case sortBy:
-  //      return someData
-  //   case sortOrder:
-    
-    
-  //  }
+    switch (sortOrder) {
+      case "allpokemons":
+        return data.pokemon
+      case "stats":
+        return orderGeracao
+      case "reverse":
+        return ordenarZA.reverse()
+    }
+} 
 
-  
-}
-
-//sortData(data, sortBy, sortOrder): esta função recebe três parâmetros.O primeiro, data,
- //nos entrega os dados.O segundo, sortBy, diz respeito a qual das informações quer usar para ordenar.O terceiro, 
-//sortOrder, indica se quer ordenar de maneira crescente ou decrescente.
-
-//  .sort(a.generation < b.generation ? 1 : -1)
-// data.sort((a, b) => (a.pokemon > b.pokemon) && (a.pokemon < b.pokemon) ? 1 : -1);
-// sortBy.sort((a, b) => (a.generation > b.generation) ? 1 : -1);
-// sortOrder = sortBy.reverse();

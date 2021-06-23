@@ -4,7 +4,7 @@ import data from './data/pokemon/pokemon.js';
 
 
 let POKEMONS = data.pokemon;
-
+let generation = POKEMONS.find((generation) => generation);
 
 let seletorTipos = document.getElementById('tipos');
 
@@ -23,11 +23,9 @@ let order = document.getElementById('order');
 
 order.addEventListener("change", function (e) {
   e.preventDefault();
-  // if (order.value !== "") {
-  (sortData(POKEMONS, order.value));
-   //  let sortBy = POKEMONS
-   //   orderPokemons = Object.value(sortBy)
-  //}
+     // if (orderPokemons.value === generation) {
+      (sortData(POKEMONS, order.value));  
+  //  }
 })
 
 function exibir(itens) {
