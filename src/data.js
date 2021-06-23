@@ -1,25 +1,28 @@
 
-export const filtrar = function (seletorTipos, data) {
-  const pokemon_filtrados = data.pokemon.filter(
+export const filtrar = function (data, seletorTipos) {
+  const pokemon_filtrados = data.filter(
     function (pokemon) {
       return pokemon.type.includes(seletorTipos)
     });
   return pokemon_filtrados;
 }
 
-export const sortData = (data, sortBy, sortOrder) => {
-  // const orderDatas = sortData.sort(a.pokemon < a.pokemon < b.pokemon ? 1 : -1);
-  // 
-  switch (filtrar) {
-    case data:
-      return pokemon_filtrados.sort(a.generation < b.generation ? 1 : -1)
-    case sortBy:
-      return pokemon_filtrados.sort(a.seletorTipos < b.seletorTipos ? 1 : -1)
-    case sortOrder:
-      return sortData.reverse();
-  }
-}
+// data ==== tds os dados dos pokemon
+// sortBy === qual desses dada usar para ordenar
+//sortOrder === crescente ou decrescente
 
-// data.sort((a, b) => (a.pokemon > b.pokemon) && (a.pokemon < b.pokemon) ? 1 : -1);
-// sortBy.sort((a, b) => (a.generation > b.generation) ? 1 : -1);
-// sortOrder = sortBy.reverse();
+export const sortData = (data, sortBy, sortOrder) => {
+  const orderGeracao = Object.keys(sortBy).sort((a, b) => (a[generation].Number > b[generation].Number));
+  const ordenarZA = (a, b) => sort(a, b)
+  const ordenarAz = (a, b)
+
+    switch (sortOrder) {
+      case "allpokemons":
+        return data.pokemon
+      case "stats":
+        return orderGeracao
+      case "reverse":
+        return ordenarZA.reverse()
+    }
+} 
+
