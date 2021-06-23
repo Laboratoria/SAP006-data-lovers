@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
 
 body{
     background-image: url(img/background1.jpg);
@@ -30,24 +32,29 @@ body{
     transform-style: preserve-3d;
 }
 .frontcard, .backcard {
-    background-image: url(img/background.png);
     position: absolute;
     width: 95%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    padding: 20px 5px;
     border-radius: 5px;
-    border: rgba(89, 99, 94, 0.521) 1px solid; 
+    border: rgba(89, 99, 94, 0.521) 1px solid;
 }
 .frontcard{
-    transform: rotateY(0)
+    padding: 20px 5px;
+    background-image: url(img/backgroundfront.png);
 }
 .backcard {
+    background-image: url(img/backgroundback.png);
     transform: rotateY(180deg);
+    padding: 20px 0px;
+    width: 100%;
+}
+#imageCharacters{
+    width: 100%
 }
 img{
-    width: 100%;
+    width: 40%;
 }
 h1{
     font-size: 25px;
@@ -62,7 +69,7 @@ h2{
     font-size: 15px;
     font-weight: bold;    
     font-style: italic;
-    background-color: #0e0e0ec0;
+    background-color: rgba(14, 14, 14, 0.753);
     border-radius: 5px;
     margin: 5px;
     padding: 0px;
@@ -73,6 +80,61 @@ p{
     font-size: 12px;
     text-align: justify;
     padding: 12px 5px 0px 0px;
-    color: #d6d6d6;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;   
+}
+h3{
+    font-size: 25px;
+    margin: 10px 20px;
+    padding: 0px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-family: Nova Cut;
+}
+h4{
+    margin: 0px 0px;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: Merienda One;
+    font-weight: 100;
+}
+#attack{
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    color: #d6d6d6;
+    background-color: rgba(3, 3, 3, 0.430);
+    font-family: Changa;
+    font-size: 15px;
+    font-style:oblique;
+}
+#defense{
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    color: #d6d6d6;
+    background-color: rgba(3, 3, 3, 0.530);
+    font-family: Changa;
+    font-size: 15px;
+    font-style:oblique;
+}
+#magic{
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    color: #d6d6d6;
+    background-color: rgba(3, 3, 3, 0.630);
+    font-family: Changa;
+    font-size: 15px;
+    font-style:oblique;
+}
+#difficulty{
+    text-align: center;
+    margin: auto;
+    padding: 6px;
+    color: #d6d6d6;
+    background-color: rgba(3, 3, 3, 0.730);
+    font-family: Changa;
+    font-size: 15px;
+    font-style:oblique;
 }
