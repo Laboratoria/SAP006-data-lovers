@@ -13,7 +13,7 @@
           <img class="imgLogo" src="img/logo.png" alt="Logo cabeçalho" title="Rick and Morty"> <!--logo no cabeçalho-->
         </section>
       </header>
-         
+    <main>
       <section class="btn-filtro">
         <select> <!--SELECT faz a opção de botão de menu-->
           <option value="genero">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
@@ -40,22 +40,25 @@
           <option value="Z-A">Z-A</option>
           <option value="principal">Principais</option>
         </select>
-        <input class="pesquisar" id="text-search" type="search" placeholder="Search...">  <!--campo para pesquisas-->
-        <button id="btn-limpar" class="limpar" type="reset">Limpar</button> <!--TYPE="RESET" ele limpa o conteúdo-->
+        <button class="limpar" id="btn-limpar" type="reset">Limpar</button> <!--TYPE="RESET" ele limpa o conteúdo-->
+        <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
       </section>
+      
       <section>
         <!--criar os cards aqui-->
 
 
       </section>
 
-      <img class="fundo-direita" src="img/direita.png">
-      <img class="fundo-esquerda" src="img/esquerda.png">
-
-      <script src="main.js" type="module"></script> <!--link com JS-->
-    </body>
+      <img class="fundo-direita" src="img/direita.png"> <!--imagem fundo Morty-->
+      <img class="fundo-esquerda" src="img/esquerda.png"> <!--imagem fundo Rick-->
+    </main>
+    
     <footer class="footer"> Desenvolvido por 
       <p> <a style="color:aqua" href="https://github.com/biancacristinaalves" target="_blank">Bianca Alves</a> e 
       <a style="color:aqua" href="https://github.com/ThalitaNeves95" target="_blank">Thalita Neves</a> </p>
     </footer>
+
+    <script src="main.js" type="module"></script> <!--link com JS-->
+  </body>
 </html>
