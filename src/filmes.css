@@ -84,13 +84,9 @@ body{
   width:60%;
 }
 
-.container-movies{
+.movies-page{
   position:absolute;
   top:80vh;
- 
-}
-
-.container-movies{
   width: 100%;
   padding-left: 8%;
   padding-right: 8%;
