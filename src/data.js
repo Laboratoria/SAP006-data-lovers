@@ -7,7 +7,7 @@ export const filterData = (data, prop, name)=> {
 export const sortData = (data, sortBy, sortOrder) => {
   
   const compare = (a,b) =>{
-    if(parseInt(a[sortBy]!== NaN)){
+    if(isNaN(a[sortBy])==false){
       if (parseInt(a[sortBy]) < parseInt(b[sortBy]))
         return -1
       if (parseInt(a[sortBy])> parseInt(b[sortBy]))
@@ -25,7 +25,7 @@ export const sortData = (data, sortBy, sortOrder) => {
   }
 
   if(sortBy==="title"){
-    if(sortOrder==="Ascending"){
+    if(sortOrder==="ascending"){
       let ascTitles = [...data]
       ascTitles.sort(compare)
       return ascTitles
@@ -38,7 +38,7 @@ export const sortData = (data, sortBy, sortOrder) => {
     }
   }
   else if(sortBy==="release_date") {
-    if(sortOrder==="Ascending"){
+    if(sortOrder==="ascending"){
       let ascRelease = [...data]
       ascRelease.sort(compare)
       return ascRelease
@@ -51,7 +51,7 @@ export const sortData = (data, sortBy, sortOrder) => {
     }
   }
   else if(sortBy==="rt_score") {
-    if(sortOrder==="Ascending"){
+    if(sortOrder==="ascending"){
       let ascScore= [...data]
       ascScore.sort(compare)
       return ascScore
