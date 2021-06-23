@@ -27,7 +27,7 @@ div{
 }
 h1{
     font-size: 25px;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     color: #ffffff;
     background-color: #24534f93;
     border-radius: 5px;
@@ -55,5 +55,6 @@ p{
     font-family: Arial, Helvetica, sans-serif;   
 }
 img{
-    width: 100%;
+    /* width: 100%; */
+    width: 94%;
 }
