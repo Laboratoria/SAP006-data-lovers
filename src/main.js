@@ -4,23 +4,29 @@ import data from './data/lol/lol.js';
 const elements = data.data;
 const objects = Object.values(elements);
 
-    let app = document.getElementById("root");   
-    let divContainer = document.createElement("div")
-    divContainer.setAttribute('id', 'container');
-    app.appendChild(divContainer); 
+const divContainer = document.getElementById("root");   
 
 for(let i = 0; i < objects.length; i++){
-
     let divCard = document.createElement("div");
-    divCard.classList.add('cards');
-    divCard.setAttribute('id', 'characters')
+    divCard.setAttribute("class", "cards");
+    divCard.setAttribute("id", "card"+i);
     divContainer.appendChild(divCard);
+    
+    let name = document.createElement("h1");
+    name.innerHTML = objects[i].name;
+    divCard.appendChild(name);
+    
+    let title = document.createElement("h2");
+    title.innerHTML = objects[i].title;
+    divCard.appendChild(title);
+   
+    let splash = document.createElement("img");
+    splash.setAttribute("class", "splash");
+    splash.setAttribute("src", objects[i].splash);
+    divCard.appendChild(splash)
 
-    const name = objects[i].name;
-    const title = objects[i].title;
-    const splash = objects[i].splash;
-    const blurb = objects[i].blurb;
-
-    divCard.innerHTML = `<h1>${name}</h1><h2>${title}</h2><img src="${splash}"><p>${blurb}</p>`;
+    let blurb = document.createElement("p");
+    blurb.innerText = objects[i].blurb;
+    divCard.appendChild(blurb);   
 }
 console.log(example, data); 
