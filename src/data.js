@@ -13,7 +13,8 @@ export const filtrar = function (data, seletorTipos) {
 
 export const sortData = (data, sortBy, sortOrder) => {
   const orderGeracao = Object.keys(sortBy).sort((a, b) => (a[generation].Number > b[generation].Number));
-  const ordenarZA = (a, b) => (a["name"]).localeCompare(b["name"]);
+  const ordenarZA = (a, b) => sort(a, b)
+  const ordenarAz = (a, b)
 
     switch (sortOrder) {
       case "allpokemons":
