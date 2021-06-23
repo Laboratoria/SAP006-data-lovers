@@ -10,34 +10,31 @@
 <body>
   <header>
     <h1>RICK E MORTY</h1>
-    <input type="text" placeholder="Pesquisar" id="search">
-    <select name="FILTRAR" id="filtro">
-      <option value="Alive">Alive</option>
-      <option value="Dead">Dead</option>
-      <option value="Unknown">Unknown</option>
-    </select>
-    <select name="FILTRAR" id="filtro2">
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      <option value="Unknown">Unknown</option>
-    </select>
+    <form class="menu-filter">
+      <input type="text" placeholder="Pesquisar" id="search">
+      <select name="filter" id="status-filter">
+        <!--<option class="STATUS"value="" selected disabled;>STATUS</option>-->
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </select>
+      <select name="filter" id="gender-filter">
+        <!--<option class="STATUS"value="" selected disabled;>GÊNERO</option>-->
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="unknown">Unknown</option>
+      </select>
+      <button class="filter" type="submit">FILTRAR</button>
+    </form>
   </header>
   <main>
     <div class="container">
-      <div class="slide"></div>
-      
       <div class="statistic">
         <div class="static"></div>
         <div class="static"></div>
       </div>
 
-
       <section class="cards">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
       </section>
       <script src="main.js" type="module"></script>
     </div>

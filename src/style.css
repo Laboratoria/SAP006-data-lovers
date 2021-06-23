@@ -1,14 +1,14 @@
 html, body{
     margin: 0;
     padding: 0;
-    background-color: #808191;
+    background-color: #362C33;
     box-sizing: border-box;
     height: 100vh;
 }
 
 
 header {
-    background-color: #E5E5E5;
+    background-color: #362C33;
     display: flex;
     justify-content: space-between;
 }
@@ -19,28 +19,51 @@ h1 {
     margin-left: 40px
 }
 
-input, select {
-    height: 30px;
+.menu-filter{
+    display: flex;
+    width: 40%;
+    margin-right: 154px;
+}
+
+input, select, button {
+    height: 35px;
     margin: auto;
+    background: #51FB4B;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+input{
+    width: 150px;
+}
+
+.STATUS{
+    display: none;
+  }
+
+select, button {
+    width: 100px;
 }
 
 main {
     margin: 15px;
 }
 
-.container, .cards {
+.container, .cards, .statistic  {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.statistic {
-    flex-direction: column;
+.slide, .static {
+    background-color: #E3DDE0;
 }
 
 .slide {
-    background-color: #C4C4C4;
     position: relative;
     flex: 1;
     max-width: 500px;
@@ -52,7 +75,6 @@ main {
 
 .static {
     margin: 18px;
-    background-color: #C4C4C4;
     position: relative;
     flex: 1;
     height: 160px;
@@ -62,7 +84,6 @@ main {
 }
 
 .card {
-    background-color: #C4C4C4;
     position: relative;
     flex: 1;
     max-width: 150px;
