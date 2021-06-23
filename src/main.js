@@ -26,7 +26,7 @@ for(let i = 0; i < objects.length; i++){
     divCard.appendChild(splash)
 
     let blurb = document.createElement("p");
-    blurb.innerText = objects[i].blurb;
+    blurb.innerHTML = objects[i].blurb;
     divCard.appendChild(blurb);   
 }
 console.log(example, data); 
