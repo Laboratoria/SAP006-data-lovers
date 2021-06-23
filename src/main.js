@@ -2,13 +2,15 @@
 import data from './data/pokemon/pokemon.js';
 
 import { 
-  filtrarPelaGeração
+  filtrarPelaGeração, ordenarPorNum
 
 } from './data.js';
 
 
 
  ///console.log(filtrarPelaGeração);
+
+ console.log(ordenarPorNum);
 
 
  const pokemonList = data.pokemon;
@@ -45,6 +47,17 @@ import {
 
 
  
+let ordernarPorNumeros;
+const ordenar = document.getElementById("maxcp");
+ordenar.addEventListener('click', () => {
+  const getpokes = document.getElementById('teste-card');
+  getpokes.innerHTML = '';
+  ordernarPorNumeros = ordenar;
+
+  ordenarPorNum(pokemonList, ordernarPorNumeros);
+  displayPokes(pokemonList);
+
+});
 
 
 
@@ -113,6 +126,8 @@ getJson()
 
 */
 
+
+/*
 class MeuCarousel {
   constructor(config) {
     this.config = config;
@@ -242,3 +257,4 @@ let teste = new MeuCarousel({
   timePerPage: 2000,
   stopOnMouseHover: true
 })
+  */
