@@ -30,7 +30,8 @@ import {
      <div id="back" class=" back">
         <div class="infCardAbout">${elem.about}</div> 
         <div class="infCardAbout"<br>G<br>${elem.generation.name}</div> 
-        
+        <div class="infCardAbout">Tipo<br>${elem.egg}</div>
+        <div class="infCardAbout infCard">Resistencia<br>${elem.resistant.join(', ')}</div>
      </div>
    </div>
  </div>
