@@ -6,24 +6,28 @@
     <link rel="stylesheet" href="filmes.css"/>
   </head>
   <body>
-    <header class="header2">
-      <div class = "header-effect">
-        <div class="border-header2">
-          <nav class="nav-header2">
-            <img class="nav-button"src="img/botao-menu.png" alt="">
-          </nav>
-          
-          <div class="container-title-header2">
-            <h2 class="title-header2">STUDIO GHIBLI</h2>
-          </div>
-          <h4 class="subtitle-header2">PARA MULHERES</h4>
 
-        </div>
+    <header class="header">
+      <div class="title-container">
+        <h1 class="title">STUDIO GHIBLI</h1>
+        <h3 class="subtitle">PARA MULHERES</h3>
       </div>
+      
+      <nav class="navbar">
+        <ul class="list">
+          <li><a class="links" href="./index.html">Início</a></li>
+          <li><a class="links" href="./filmes.html">Filmes</a></li>
+          <li><a class="links" href="">Personagens</a></li>
+          <li><a class="links" href="">Dados</a></li>
+        </ul>
+      </nav>
     </header>
+    
     <main class="movies-page" id="movies-page">
       <h2 class="page-title">Filmes</h2>
+      
       <form class="filters">
+
         <label for="order">Ordenação</label>
         <select name="order" id="order">
           <option selected disable>Selecione</option>
@@ -98,8 +102,6 @@
       </section> -->
 
     </main>
-
-
 
     <script src="main.js" type="module"></script>
     

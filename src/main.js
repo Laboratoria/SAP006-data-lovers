@@ -12,53 +12,51 @@ const printMovieList = (movieList) => {
   movieList.forEach(film =>{
     containerMovies.innerHTML +=`  
     <section class="movie">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <section class="movie">
+      
       <figure class="movie-poster">
-        <img class="poster" src=${film.poster} alt="">
-        
-      </figure>
-  
-      <section class="movie-details" id="movie-details">
-        <div class="movie-headline" id="movie-headline">
-          <div class="container-title">
-            <h3 class="movie-title" id="movie-title">${film.title}</h3>
-            <h5 class="release-date" id="release-date">${film.release_date}</h5>
+          <img class="poster" src=${film.poster} alt="">
+          
+        </figure>
+    
+        <section class="movie-details" id="movie-details">
+          <div class="movie-headline" id="movie-headline">
+            <div class="container-title">
+              <h3 class="movie-title" id="movie-title">${film.title}</h3>
+              <h5 class="release-date" id="release-date">${film.release_date}</h5>
+            </div>
+    
+            <figure class="score">
+              <img class="star" src="img/star.png" alt="">
+              <span class="rt-score">${film.rt_score}</span>
+            </figure>
           </div>
-  
-          <figure class="score">
-            <img class="star" src="img/star.png" alt="">
-            <span class="rt-score">${film.rt_score}</span>
-          </figure>
-        </div>
-  
-        <div class="details" id="characters">
-          <h4 class="detail-title">Personagens</h4>
-          <div class="images">
-            <img src=${film.people[0].img} alt="" class="character-picture">
-            <img src=${film.people[1].img} alt="" class="character-picture">
-            <img src=${film.people[2].img} alt="" class="character-picture">
-            <img src=${film.people[3].img} alt="" class="character-picture">
-            <button class="more-characters">Ver mais</button>
+    
+          <div class="details" id="characters">
+            <h4 class="detail-title">Personagens</h4>
+            <div class="images">
+              <img src=${film.people[0].img} alt="" class="character-picture">
+              <img src=${film.people[1].img} alt="" class="character-picture">
+              <img src=${film.people[2].img} alt="" class="character-picture">
+              <img src=${film.people[3].img} alt="" class="character-picture">
+              <button class="more-characters">Ver mais</button>
+            </div>
           </div>
-        </div>
-  
-        <div class="details" id="synopsis">
-          <h4 class="detail-title" id="synopsis-title">Sinopse</h4>
-          <p class="detail-text">${film.description}</p>
-        </div>
-  
-        <div class="details" id="director">
-          <h4 class="detail-title">Diretor</h4>
-          <p class="detail-text">${film.director}</p>
-        </div>
-  
-        <div class="details" id="producer">
-          <h4 class="detail-title">Produtor</h4>
-          <p class="detail-text">${film.producer}</p>
-        </div>
-        
-  
-        
-      </section>
+    
+          <div class="details" id="synopsis">
+            <h4 class="detail-title" id="synopsis-title">Sinopse</h4>
+            <p class="detail-text">${film.description}</p>
+          </div>
+    
+          <div class="details" id="director">
+            <h4 class="detail-title">Diretor</h4>
+            <p class="detail-text">${film.director}</p>
+          </div>
+    
+          <div class="details" id="producer">
+            <h4 class="detail-title">Produtor</h4>
+            <p class="detail-text">${film.producer}</p>
+          </div>
+        </section>
   
     </section>
   `
