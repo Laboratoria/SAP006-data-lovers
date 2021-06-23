@@ -29,9 +29,8 @@ import {
      </div>
      <div id="back" class=" back">
         <div class="infCardAbout">${elem.about}</div> 
-        <div class="infCardAbout"<br>Generación<br>${elem.generation.name}</div> 
-        <div class="infCardAbout">Tipo de Huevo<br>${elem.egg}</div>
-        <div class="infCardAbout infCard">Fortalezas<br>${elem.resistant.join(', ')}</div>
+        <div class="infCardAbout"<br>G<br>${elem.generation.name}</div> 
+        
      </div>
    </div>
  </div>
