@@ -8,7 +8,7 @@ import {
 
 
 
- console.log(filtrarPelaGeração);
+ ///console.log(filtrarPelaGeração);
 
 
  const pokemonList = data.pokemon;
