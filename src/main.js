@@ -2,7 +2,7 @@
 import data from './data/pokemon/pokemon.js';
 
 import { 
-  filtrarPelaGeração, ordenarPorNum, sortData, filterData
+  filtrarPelaGeração, ordenarPorNum, sortData,
 } from './data.js';
 
 //console.log(sortData);

@@ -1,4 +1,4 @@
-import pokemon from "./data/pokemon/pokemon"
+//import pokemon from "./data/pokemon/pokemon"
 import data from './data/pokemon/pokemon.js';
 
 const filtrarPelaGeração = (data, valor) => {
@@ -9,9 +9,6 @@ const filtrarPelaGeração = (data, valor) => {
   return filtrarPokemonPelaGeracao;
 };
 
-export {
-  filtrarPelaGeração, ordenarPorNum
-};
 
 const ordenarPorNum = (data, valor) => {
   if (valor === '0-9') {
@@ -61,8 +58,12 @@ function numericOrder(a, b){
   return a - b
 }
 
+
+
+/*
 let typeFilter = []
 let typeSearcher = []
+
 
 function filterData(data, condition){
     for (let j=0; j <= data.length; j++){
@@ -74,6 +75,7 @@ function filterData(data, condition){
   return typeFilter
 }
 
+*/
 export {
-  filtrarPelaGeração, ordenarPorNum, sortData, filterData
+  filtrarPelaGeração, ordenarPorNum, sortData, 
 };
