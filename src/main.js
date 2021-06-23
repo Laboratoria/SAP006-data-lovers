@@ -1,14 +1,95 @@
-/*
 
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-*/
+import { 
+  filtrarPelaGeração
+
+} from './data.js';
 
 
 
+ console.log(filtrarPelaGeração);
+
+
+ const pokemonList = data.pokemon;
+
+ const displayPokes = (pokemonData) => {
+   
+ const pokeCard = document.getElementById('teste-card');
+ 
+ pokemonData.forEach((elem) => {
+   pokeCard.innerHTML += `
+    
+   <div class="card-container">
+   <div id="card" class="card">
+     <div id="front" class="front"> 
+        <div class="title"> ${elem.name.toUpperCase()}</div>
+        <div class="numberTitle">#${elem.num}</div>
+        <img class="picture" src=" ${elem.img}"></img>
+     </div>
+     <div id="back" class=" back">
+        <div class="infCardAbout">${elem.about}</div> 
+        <div class="infCardAbout"<br>Generación<br>${elem.generation.name}</div> 
+        <div class="infCardAbout">Tipo de Huevo<br>${elem.egg}</div>
+        <div class="infCardAbout infCard">Fortalezas<br>${elem.resistant.join(', ')}</div>
+     </div>
+   </div>
+ </div>
+`;
+ });
+
+
+ };
+
+ displayPokes(pokemonList);
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 const api = "./data/pokemon/pokemon.json"
 
@@ -29,6 +110,8 @@ async function getJson() {
 }
 
 getJson()
+
+*/
 
 class MeuCarousel {
   constructor(config) {
