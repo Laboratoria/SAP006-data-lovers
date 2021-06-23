@@ -1,44 +1,137 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
-#cards-conteiner {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 2, 53);
+}
+
+h1 {
+    color:rgb(255, 255, 0);
+    font-size: 40px;
+    margin: 30px;
+    text-align: center;
+}
+
+button {
+    color:rgb(189, 189, 189);
+    font-size: 25px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+        
+}
+
+ul {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #f4a261;
-}
-
-.card{
-    background-color: #004643;
-    border: 1px solid rgb(255, 255, 255);
-    display: block;
-    position: relative;
-    margin: 5px;
-}
-
-
-.image{
-    background-color: aqua;
-    border: 3px solid #d1ac00;
-    width: 225px;
-    height: 272px;
-    object-fit:cover;
+    justify-content:space-evenly;
+    list-style-type: none;
+    margin-top: 50px; 
     
+}
+
+#campoPesquisar {
+    background-color: rgb(30, 31, 92);
+    border-radius: 15px;
+    margin: 50px;
+    height: 40px;
+    width: 250px;
+    border: 3px rgb(25, 0, 255) solid;
+    
+}
+
+input::placeholder {
+    color: rgb(236, 236, 236);
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #campoFiltrar {
+    background-color: rgb(94, 34, 91);
+    border-radius: 15px;
+    margin: 50px;
+    height: 40px;
+    width: 250px;
+    border: 3px rgb(255, 0, 255) solid;
+}
+
+#inputs {
+    display: flex;
+    justify-content: space-around;
+}
+    
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 } 
 
-.nameConteiner{
-    background-color: #0c1618;
+#ordemAlfabetica {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}  
+    
+ 
+#ordemAlfabetica label {
+      
+    color:beige;
+    font-size: 20px;
+    margin-right: 20px;
+    
+}
+
+.card {
+    border: 3px solid rgb(255, 0, 221);
+    width: 250px;
+    
+    margin: 15px;
+    color:rgb(233, 233, 233);
+    font-size: 20px;
+    background-color:black;
+  }  
+
+  .card img {
+    width: 100%;
+    display: block;
+  }
+
+  .card span {
+    width: 100%;
+    text-align: center;
+    background-color: #0c1618; 
     font-family: 'Carter One', cursive;
     font-weight: bold;
     font-size: 2rem;
-    text-align: center;
-    color: #faf4d3; 
+    color: #faf4d3;
+    display:block;
 }
 
-.cardSideB{
-    background-color:midnightblue;
-    
+.btnFechar {
+    display: block;
+}
+
+ 
+.card button {
+    display: none;
+}
+
+.cartaoAberto {
+width: 500px;
+height: 500px;
+}
+
+.cartaoAberto button{
+    display: block;
+}
+
+
+
+.card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
