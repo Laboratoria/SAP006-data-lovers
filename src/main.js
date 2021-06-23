@@ -2,15 +2,14 @@
 import data from './data/pokemon/pokemon.js';
 
 import { 
-  filtrarPelaGeração, ordenarPorNum
-
+  filtrarPelaGeração, ordenarPorNum, sortData, filterData
 } from './data.js';
 
+//console.log(sortData);
 
+//console.log(filtrarPelaGeração);
 
- ///console.log(filtrarPelaGeração);
-
- console.log(ordenarPorNum);
+//console.log(ordenarPorNum);
 
 
  const pokemonList = data.pokemon;
