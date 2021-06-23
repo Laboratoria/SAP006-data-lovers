@@ -27,7 +27,7 @@ function showPosterFilms() {
     document.getElementById("poster-cards").innerHTML = photo;
 }
 showPosterFilms();
-/*function showPosterFilms() {
+function showPosterFilms() {
     let photo = "";
     for(let item of animations) {
         photo += `
@@ -43,18 +43,26 @@ showPosterFilms();
             </div>
         </div>`
     }
-}*/
+}
 
 
-/*const oldestFilms = (evento) => {
+const oldestFilms = (evento) => {
 
     evento.preventDefault();
+console.log(example, data);
+
+
+
+const oldestFilms = (evento) => {
+
+    evento.preventDefault(); 
     //chamar a funçao sort(com filmes mais antigos)
 };
 
 const newestFilms = (evento) => {
 
-    evento.preventDefault();
+    
+    evento.preventDefault();{
     //chamar a funçao sort( com filmes mais recentes)
 };
 
@@ -72,4 +80,3 @@ const filmesNovos = document.querySelector('[data-films-newest]');
 melhoresFilmes = document.querySelector('click', bestScore);
 filmesAntigos.addEventListener('click', oldestFilms);
 filmesNovos.addEventListener('click', newestFilms);
-*/
