@@ -28,7 +28,7 @@
     justify-content: space-around;
     flex-direction: column;
   }
-  
+ 
   
   .title-container {
     display: flex;
@@ -49,6 +49,7 @@
     font-weight: 400;
     border-top: 5px solid white;
     border-bottom: 5px solid white;
+    padding: 20px;
   
     margin-bottom: 20px;
   }
