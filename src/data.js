@@ -12,6 +12,27 @@ export const director = animations.sort((a,b) => (a.director > a.director) ? 1 :
 /*
 
 
+const totalFilmes = data.films.lenght
+console.log(totalFilmes)
+*/
+
+export function filtraScore(a, c) {
+  
+  const rt_score = a.films.filter(films => (films.rt_score >= c));
+  //organizar scores do maior(100 pontos) para o menor
+
+  return rt_score;
+};
+
+export function ordenaFilmes(a, b){
+
+  const releaseYear = releaseYear.sort((a.release_date > b.release_date) ? 1 : -1); 
+  //ordena por ano de lançamento.
+  
+  return releaseYear
+};
+
+/*
 Filmes por ordem alfabética
 const crescentAlphabet = animations.sort((a, b) => {
     if (a.title > b.title) {
@@ -34,8 +55,9 @@ const releaseYear = animations.sort((a, b) => {
 export const characters = data.films.people 
 //Ordem alfabética Z-A (personagens)
 //const zaName = azName.reverse();
-
 */
+
+
 //export const example = () => {
   //return 'example';
 //};

@@ -38,13 +38,17 @@ const newestFilms = (evento) => {
 
     
     evento.preventDefault();
-    //chamar a funçao sort( com filmes mais recentes)
+    //chamar a funçao ordenaFilmes filmes mais antigos usando reverse
 };
 
 const bestScore = (evento) => {
 
     evento.preventDefault();
+
+    const bestFilmes = filtraScore(data, 90);
+
     //chamar a funçao filter( como as melhores notas)
+    return console.log(bestFilmes)
 };
 
 const melhoresFilmes = document.querySelector('[data-best-score]');
