@@ -170,11 +170,17 @@ body{
     border-radius: 5px;
 }
 
-.card{
+.cards{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3px; 
+    }
+   /* display: flex;
+   argin-right: auto;
+    justify-content: space-between;
     flex: 1 1 300px;
-    margin: 10px;
+    margin: 10px; */
 }
 
 
