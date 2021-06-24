@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    text-align: center;
+    font-family: monospace;
+}
+
+
+
+h1{
+    font: normal 60px monospace;
+    
+}
+
+body {
+    background-color: rgb(0, 187, 255);
+    background-image: url(Fundopage1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar-container{
+    background-color: rgb(24, 23, 23);
+    width: 100%;
+    padding: 5px;
+}
+
+.none{
+    color: black;
+}
+
+.Logo{
+    height: 500px;
+    width: 1500px;
+
+} 
+
+.rodape{
+    background-color: #050505;
+    color: rgb(8, 114, 146);
+    font: normal 14px;
+}
