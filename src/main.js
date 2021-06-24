@@ -1,4 +1,4 @@
-import { dataLovers } from './data.js';
+import { dadosLol } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/lol/lol.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -24,8 +24,10 @@ function ordenar(event) {
       } else {
         return 1;
       }
+
     });
   }
+  cards();
 }
 
 document.getElementById("ordenar").addEventListener("change", ordenar);
@@ -77,28 +79,56 @@ cards();
 
 const botoes = [document.querySelectorAll(".btn")];
 
-//ABA ASSASSINOS
-function abaAssassinos() {
-
-  const funcaoAssassino = ["Assassin"];
-
+//FUNÇÃO DAS ABAS EM GERAL EXCETO ABA TODOS
+function abas(funcaoDoCampeao) {
   function tag(funcao) {
-    return funcaoAssassino.includes(funcao);
+    return funcaoDoCampeao.includes(funcao);
   }
 
-  function assassin(champ) {
+  function funcaoPersonagem(champ) {
     return champ.tags.some(tag);
   }
 
-  const cartoes = dataLovers.filterData(champs, assassin);
+  const cartoes = dadosLol.filterData(champs, funcaoPersonagem);
   cards(cartoes);
 }
 
 
 function mostrarAbaAtual(id) {
   switch (id) {
-    case "btn-assassinos": abaAssassinos();
+    case "btn-todos":
+      cards();
+      break;
 
+    case "btn-atiradores":
+      const funcaoAtirador = "Marksman";
+      abas(funcaoAtirador);
+      break;
+
+    case "btn-assassinos":
+      const funcaoAssassino = "Assassin";
+      abas(funcaoAssassino);
+      break;
+
+    case "btn-lutadores":
+      const funcaoLutador = "Fighter";
+      abas(funcaoLutador);
+      break;
+
+    case "btn-magos":
+      const funcaoMago = "Mage";
+      abas(funcaoMago);
+      break;
+     
+    case "btn-suportes":
+      const funcaoSuporte = "Support";
+      abas(funcaoSuporte);
+      break;
+    
+    case "btn-tanques":
+      const funcaoTanque = "Tank";
+      abas(funcaoTanque);
+      break;
   }
 }
 
@@ -112,10 +142,6 @@ botoes.forEach(aba => {
     aba[i].addEventListener("click", selecionarAba);
   }
 });
-
-
-
-
 
 
 function pesquisar() {
@@ -145,7 +171,6 @@ function pesquisar() {
 }
 
 document.getElementById('botaoPesquisar').addEventListener('click', pesquisar)
-
 
 
 function voltarCard() {

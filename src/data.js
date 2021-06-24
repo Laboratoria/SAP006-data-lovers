@@ -10,7 +10,7 @@ export const anotherExample = () => {
 
 
 
-export const dataLovers = {
+export const dadosLol = {
   filterData:
     function (data, condition) {
       return data.filter(condition);
