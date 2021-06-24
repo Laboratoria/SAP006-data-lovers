@@ -9,47 +9,64 @@
 
     <header class="header">
       <div class="title-container">
-        <h1 class="title">STUDIO GHIBLI</h1>
+        <h1 class="site-title">STUDIO GHIBLI</h1>
         <h3 class="subtitle">PARA MULHERES</h3>
       </div>
       
       <nav class="navbar">
-        <ul class="list">
-          <li><a class="links" href="./index.html">Início</a></li>
-          <li><a class="links" href="./filmes.html">Filmes</a></li>
-          <li><a class="links" href="">Personagens</a></li>
-          <li><a class="links" href="">Dados</a></li>
-        </ul>
-      </nav>
+      <ul class="list">
+        <li><a class="links" href="./index.html">Início</a></li>
+        <li><a class="links" href="./filmes.html">Filmes</a></li>
+        <li><a class="links" href="./personagens.html">Personagens</a></li>
+        <li><a class="links" href="./dados.html">Dados</a></li>
+      </ul>
+    </nav>
     </header>
     
     <main class="movies-page" id="movies-page">
       <h2 class="page-title">Filmes</h2>
-      
-      <form class="filters">
 
-        <label for="order">Ordenação</label>
-        <select name="order" id="order">
-          <option selected disable>Selecione</option>
-          <option value="title">Alfabética</option>
-          <option value="release_date">Lançamento</option>
-          <option value="rt_score">Nota de avaliação</option>
-        </select>
+      <section class="sort-filter">  
+        <form class="sort">
 
-        <select name="direction" id="direction">
-          <option selected disable>Selecione</option>
-          <option value="ascending">Crescente</option>
-          <option value="descending">Decrescente</option>
+          <label for="order" class="labelForm"><button id="orderSelect">Ordenar</button></label>
+          <select name="order" id="order">
+            <option selected disable>Selecione</option>
+            <optgroup label="ALFABÉTICO">
+              <option value="ascending" class="title">A &#8594 Z</option>
+              <option value="descending" class="title">Z &#8594 A</option>
+            </optgroup>
+
+            <optgroup label="DATA DE LANÇAMENTO">
+              <option value="ascending" class="release_date">Mais antigos</option>
+              <option value="descending" class="release_date">Mais recentes</option>
+            </optgroup>
+
+            <optgroup label="NOTA DE AVALIAÇÃO">
+              <option value="ascending" class="rt_score">Menor nota &#8594 Maior nota</option>
+              <option value="descending" class="rt_score">Maior nota &#8594 Menor nota</option>
+            </optgroup>
+          </select>
+
         
-        </select>
+        </form>
 
-        <button id="order-btn">Ordenar</button>
+        <form class="filter">
 
-        <section class="container-movies" id="container-movies"></section>
+          <label for="filter-choice" class="labelForm"><button id="filterSelect">Filtrar</button></label>
+          <select name="filter-choice" id="filter">
+            <option selected disable>Selecione</option>
+            <optgroup label="DIRETOR" id="director-list">
+            </optgroup>
+            <optgroup label="PRODUTOR" id="producer-list">
+            </optgroup>
+          </select>
+        </form>
+      </section>
 
-      </form>
+      <section class="container-movies" id="container-movies"></section> 
+
       
-
       <!-- <section class="movie">
         <figure class="movie-poster">
           <img class="poster" src="img/Castle_in_the_Sky.jpg" alt="">
