@@ -21,48 +21,23 @@ function showPosterFilms() {
           <p><strong>Avaliação: ${item.rt_score}</p></strong>
           </div>
           </div>
-        </div>
-        `
+        </div> `
     }
     document.getElementById("poster-cards").innerHTML = photo;
 }
-showPosterFilms();
-function showPosterFilms() {
-    let photo = "";
-    for(let item of animations) {
-        photo += `
-        <div class="flip-card">
-         <div class="flip-card-front>
-            <p class="title-of-film"><strong>${item.title}</strong></p>
-            <img src="${item.poster}"class="poster-card"><p><br></p>
-        </div>
-        <div class="flip-card-back">
-            <p class="info"> Diretor: ${item.director}</p>
-            <p class="info"> Lançamento: ${item.release_date}</p>
-            <p class="info"> Avaliação: ${item.rt_score}</p></div>
-            </div>
-        </div>`
-    }
-}
 
+showPosterFilms();
 
 const oldestFilms = (evento) => {
 
     evento.preventDefault();
-console.log(example, data);
-
-
-
-const oldestFilms = (evento) => {
-
-    evento.preventDefault(); 
     //chamar a funçao sort(com filmes mais antigos)
 };
 
 const newestFilms = (evento) => {
 
     
-    evento.preventDefault();{
+    evento.preventDefault();
     //chamar a funçao sort( com filmes mais recentes)
 };
 
@@ -77,6 +52,6 @@ const filmesAntigos = document.querySelector('[data-film-olders]');
 const filmesNovos = document.querySelector('[data-films-newest]');
 
 
-melhoresFilmes = document.querySelector('click', bestScore);
+melhoresFilmes.addEventListener('click', bestScore);
 filmesAntigos.addEventListener('click', oldestFilms);
 filmesNovos.addEventListener('click', newestFilms);
