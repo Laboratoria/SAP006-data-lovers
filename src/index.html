@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <header>
+    <h1>STUDIO GHIBLI</h1>
+  </header>
+  <menu id="menu">
+    <h3>
+      HOME
+      INFOS
+      ABOUT US
+    </h3>
+  </menu>
+    
+  <main>
+    <section class="filters">
+      <select class="select" id="director">
+        <option selected disabled value="">Director</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+        <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
+      </select>
+
+      <select class="select" id="producer">
+        <option selected disabled value="">Producer</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Toru Hara">Toru Hara</option>
+        <option value="Toshio Suzuki">Toshio Suzuki</option>      
+      </select>
+    </section>
+
+    
+
+  </main>
+  
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
