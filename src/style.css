@@ -197,3 +197,12 @@ ul {
   padding: 20px;
 
 }
+
+
+.seletores {
+  display: flex;
+  position: absolute;
+  margin-inline: auto;
+  margin-bottom: 500px;
+  margin-left: 700px;
+}
