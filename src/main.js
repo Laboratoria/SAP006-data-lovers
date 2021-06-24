@@ -10,7 +10,7 @@ for (let i = 0; i < objects.length; i++) {
     divContainer.setAttribute("class", "container");
 
     let divCards = document.createElement("div");
-    divCards.setAttribute("class", "cards");
+    divCards.setAttribute("class", "cards")
     divContainer.appendChild(divCards);
 
     let divFrontCard = document.createElement("div");

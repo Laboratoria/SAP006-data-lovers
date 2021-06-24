@@ -6,36 +6,35 @@
 body{
     background-image: url(img/background1.jpg);
     background-size: 100%;
-    margin: 30px 20px;
+    margin: 50px 0px;
     box-sizing: border-box;
 }
 .container{
-    width: 100%;
-    height: 250px;
-    perspective: 700px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    perspective: 6000px;
 }
 .cards{
     position: relative;
-    margin: 40px 20px;
+    margin: 30px 25px 100px 25px;
     width: 18%;
-    height: 135%;
+    height: 330px;
     text-align: center;
+    cursor: pointer;    
 }
 .cards:hover{
-    transition: transform 1s;
+    transition: 0.5s;
     transform: rotateY(180deg);
     transform-style: preserve-3d;
 }
 .frontcard, .backcard {
     position: absolute;
     width: 95%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
+    height: 110%;
+    -webkit-backface-visibility: hidden;;
     backface-visibility: hidden;
     border-radius: 5px;
     border: rgba(89, 99, 94, 0.521) 1px solid;
@@ -48,33 +47,12 @@ body{
     background-image: url(img/backgroundback.png);
     transform: rotateY(180deg);
     padding: 20px 0px;
-    width: 100%;
 }
 #imageCharacters{
     width: 100%
 }
 img{
     width: 40%;
-    margin: 40px 0px;
-    box-sizing: border-box;    
-}
-div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-.cards{
-    display: inline-block;
-    background-image: url(img/background.png);
-    width: 18%;
-    height: 300px;
-    margin: 20px;
-    padding: 15px 5px 20px 5px;
-    border-radius: 3px;
-    border: rgba(89, 99, 94, 0.521) 1px solid; 
 }
 h1{
     font-size: 25px;
@@ -97,11 +75,12 @@ h2{
 }
 p{
     margin: 5px;
-    font-size: 12px;
+    font-size: 13px;
     text-align: justify;
     padding: 12px 5px 0px 0px;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;   
+    
 }
 h3{
     font-size: 25px;
@@ -157,19 +136,4 @@ h4{
     font-family: Changa;
     font-size: 15px;
     font-style:oblique;
-}
-p{
-    margin: auto;
-    height: auto;
-    width: auto;
-    display:inline-block;
-    font-size: 11px;
-    text-align: justify;
-    padding: 12px 5px 0px 5px;
-    color: #d6d6d6;
-    font-family: Arial, Helvetica, sans-serif;   
-}
-img{
-    /* width: 100%; */
-    width: 94%;
 }
