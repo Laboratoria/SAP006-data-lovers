@@ -1,4 +1,4 @@
-import { atiradores } from './data.js';
+import { dataLovers } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/lol/lol.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -7,17 +7,14 @@ import data from './data/lol/lol.js';
 const champs = Object.values(data.data);
 
 function ordenar(event) {
-
   if (event.target.value == "decrescente") {
-
     champs.sort(function (a, b) {
       if (a.name < b.name) {
         return 1;
       } else {
         return -1;
       }
-    }
-    );
+    });
   }
   else {
     champs.sort(function (a, b) {
@@ -27,183 +24,132 @@ function ordenar(event) {
       } else {
         return 1;
       }
-    }
-    );
+    });
   }
-
-
-
 }
 
 document.getElementById("ordenar").addEventListener("change", ordenar);
 
+function cards(cartoesFiltrados) {
+  let cartoes;
+  if (cartoesFiltrados != null) {
+    cartoes = cartoesFiltrados
+  } else {
+    cartoes = champs
+  }
 
-let i;
-let champName;
-let champImg;
-let card;
-let funcaoPersonagem;
-let botaoFechar;
-let imagem;
-let nomePersonagem;
+  let i;
+  let champName;
+  let champImg;
+  let card;
+  let imagem;
+  let nomePersonagem;
 
-document.getElementById("container").innerHTML = "";
+  document.getElementById("container").innerHTML = "";
 
-for (i = 0; i < champs.length; i++) {
-  champImg = champs[i].splash;
-  champName = champs[i].name;
-  // funcaoPersonagem = champs[i].tags;
-
-
-  // CRIADO OS CARDS
-  card = document.createElement("div");
-  //card.setAttribute("id", champName)
-  card.setAttribute("class", "card")
-  //card.addEventListener("click", aumentarCard);
-
-  document.getElementById("container").appendChild(card);
-
-  //COLOCANDO IMAGEM DOS PERSONAGENS NO CARD
-  imagem = document.createElement("img");
-  imagem.setAttribute("src", champImg)
-  card.appendChild(imagem)
-
-  // COLOCANDO NOME E FUNÇÃO DOS PERSONAGENS
-  nomePersonagem = document.createElement("SPAN");
-  nomePersonagem.setAttribute("class", "nomeEFuncao");
-  nomePersonagem.innerHTML = champName; // + "<br>" 
-  card.appendChild(nomePersonagem);
-
-  // CRIADO O BOTAO E ADD EVENTO DE FECHAR
-  // botaoFechar = document.createElement("button")
-  // botaoFechar.setAttribute("class", "btnFechar")
-  // botaoFechar.addEventListener("click", normalCard)
-  // botaoFechar.innerHTML = "Fechar"
-  // card.appendChild(botaoFechar)
-
-  // nomePersonagem.appendChild(botaoFechar);
-
-  // ADICIONAR O EVENTO "CLICK" AS CARTAS
-  // card.addEventListener("click", function (e){
-  //   if (e.target.nodeName == "SPAN" || e.target.nodeName == "IMG"){
-  //     console.log("Anchor element clicked!"); 
-  //     e.target.parentNode.innerHTML = "Anchor element clicked!";
-  //   }
-  // })
+  for (i = 0; i < cartoes.length; i++) {
+    champImg = cartoes[i].splash;
+    champName = cartoes[i].name;
+    // funcaoPersonagem = champs[i].tags;
 
 
+    // CRIADO OS CARDS
+    card = document.createElement("div");
+    card.setAttribute("class", "card")
+
+    document.getElementById("container").appendChild(card);
+
+    //COLOCANDO IMAGEM DOS PERSONAGENS NO CARD
+    imagem = document.createElement("img");
+    imagem.setAttribute("src", champImg);
+    card.appendChild(imagem)
+
+    // COLOCANDO NOME E FUNÇÃO DOS PERSONAGENS
+    nomePersonagem = document.createElement("SPAN");
+    nomePersonagem.setAttribute("class", "nomeEFuncao");
+    nomePersonagem.innerHTML = champName; // + "<br>" 
+    card.appendChild(nomePersonagem);
+
+  }
 }
+cards();
 
 
 const botoes = [document.querySelectorAll(".btn")];
 
+//ABA ASSASSINOS
+function abaAssassinos() {
 
-console.log(botoes);
+  const funcaoAssassino = ["Assassin"];
 
-const assassino = "funcao para filtrar assassino e gerar a carta (?)";
-
-
-
-
-
-function mostrarAbaAtual(id){
-  if (id === "btn-assassinos"){
-    assassino.style.display = "block";
+  function tag(funcao) {
+    return funcaoAssassino.includes(funcao);
   }
 
+  function assassin(champ) {
+    return champ.tags.some(tag);
+  }
+
+  const cartoes = dataLovers.filterData(champs, assassin);
+  cards(cartoes);
 }
 
-function selecionarAba(e){
-  const abaId = e.target.id;
-  mostrarAbaAtual (abaId);
 
+function mostrarAbaAtual(id) {
+  switch (id) {
+    case "btn-assassinos": abaAssassinos();
+
+  }
 }
 
+function selecionarAba(event) {
+  const abaId = event.target.id;
+  mostrarAbaAtual(abaId);
+}
 
-  function aba(botao){
-    for (let i = 0; i < botao.length; i++) {
-      botao[i].addEventListener("click", selecionarAba);
-    
+botoes.forEach(aba => {
+  for (let i = 0; i < aba.length; i++) {
+    aba[i].addEventListener("click", selecionarAba);
+  }
+});
+
+
+
+
+
+
+function pesquisar() {
+
+  let textoDigitado = document.getElementById("campoPesquisar").value.toUpperCase();
+  let dadosFiltrados = [];
+
+  dadosFiltrados = champs.filter(function (cartaoAtual) {
+    if (cartaoAtual.name.toUpperCase().includes(textoDigitado)) {
+      return true;
     }
-  }
-  botoes.forEach(aba);
+    else {
+      return false;
+    }
+  })
+
+  cards(dadosFiltrados);
+
+  // CRIADO BOTÃO VOLTAR (APARECER SÓ QUANDO FILTRAR)
+  let botaoVoltar = document.createElement('button')
+  botaoVoltar.setAttribute('class', 'btnVoltar')
+  botaoVoltar.addEventListener("click", voltarCard)
+  botaoVoltar.innerHTML = "Voltar"
+  document.getElementById('container').appendChild(botaoVoltar)
+  console.log(botaoVoltar)
+
+}
+
+document.getElementById('botaoPesquisar').addEventListener('click', pesquisar)
 
 
 
+function voltarCard() {
+  cards()
+}
 
-
-
-
-
-
-// function objToArray(){
-//   let champFuncao = [];
-//   for (champ of champs){
-//     for (funcao of champ.tags){
-//       champFuncao.push(funcao);
-//     }
-//     console.log(champFuncao);
-//   }
-
-// }
-// objToArray();
-
-
-
-
-
-
-// function funcaoAssassino() {
-//   for (let champ of champs) {
-//     for (let funcao of champ.tags) {
-//       funcao.filter(checkAssassin);
-//       function checkAssassin(){
-//         if (funcao[i] == "Assassin");
-
-
-
-//         document.getElementById("container").innerHTML = x;
-
-//       }
-
-      
-//     }
-
-//   }
-//   console.log("------")
-
-// }
-
-// document.getElementById("btn-assassinos").addEventListener("click", funcaoAssassino);
-
-
-
-
-  //atiradores(champs, champs.tag == "atirador");
-
-//}
-
-
-
-
-
-
-
-
-// for(let champ of champs){
-//   for (let funcao of champ.tags){
-//     console.log(funcao);
-
-//   }
-//   console.log("------")
-
-// }
-
-
-
-
-
-
-
-
-//filterData(data, condition): esta função receberia os dados e nos retornaria os que cumprem com a condição. data champs? e condition tag==assassino
+voltarCard()
