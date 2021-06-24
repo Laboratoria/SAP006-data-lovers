@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>RICK E MORTY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,18 +16,18 @@
     <form class="menu-filter">
       <input type="text" placeholder="Pesquisar" id="search">
       <select name="filter" id="status-filter">
-        <!--<option class="STATUS"value="" selected disabled;>STATUS</option>-->
+        <!--<option class="status" value="" selected disabled;>STATUS</option>-->
         <option value="Alive">Alive</option>
         <option value="Dead">Dead</option>
         <option value="unknown">Unknown</option>
       </select>
       <select name="filter" id="gender-filter">
-        <!--<option class="STATUS"value="" selected disabled;>GÊNERO</option>-->
+        <!--<option class="gender" value="" selected disabled;>GÊNERO</option>-->
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="unknown">Unknown</option>
       </select>
-      <button class="filter" type="submit">FILTRAR</button>
+      <button id="btn" class="filter" type="submit">FILTRAR</button>
     </form>
   </header>
   <main>
@@ -35,8 +38,8 @@
       </div>
 
       <section class="cards">
-      </section>
-      <script src="main.js" type="module"></script>
+    </section>
+    <script src="main.js" type="module"></script>
     </div>
   </main>
 </body>

@@ -22,7 +22,7 @@ h1 {
 .menu-filter{
     display: flex;
     width: 40%;
-    margin-right: 154px;
+    margin-right: 157px;
 }
 
 input, select, button {
@@ -36,14 +36,6 @@ input, select, button {
     font-size: 16px;
 }
 
-input{
-    width: 150px;
-}
-
-.STATUS{
-    display: none;
-  }
-
 select, button {
     width: 100px;
 }
@@ -52,6 +44,14 @@ main {
     margin: 15px;
 }
 
+input {
+    width: 150px;
+}
+
+.status, .gender {
+    display: none;
+  }
+
 .container, .cards, .statistic  {
     width: 100%;
     display: flex;
@@ -59,18 +59,66 @@ main {
     flex-wrap: wrap;
 }
 
-.slide, .static {
+
+.cards_container {
+    display: flex;
+    flex-direction: row;
+    margin: 18px;
+    position: relative;
+    flex: 1;
+    height: 200px;
+    min-width: 400px;
+    max-width: 400px;
+    max-height: 100%;
+    border-radius: 10px;
     background-color: #E3DDE0;
 }
 
-.slide {
-    position: relative;
-    flex: 1;
-    max-width: 500px;
-    height: 400px;
-    margin: 18px;
-    border-radius: 5px;
-    min-width: 500px;
+img, .character_img {
+    height: 200px;
+    width: 200px;
+    max-height:100%;
+    max-width:100%;
+    border-radius: 10px;
+
+}
+
+img {
+    border-radius: 10px 0 0 10px;
+}
+
+.character_info {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+#character_name, #character_status, #character_gender, #episodes, p {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+}
+
+#episodes {
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.character_info{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .static {
@@ -81,29 +129,16 @@ main {
     min-width: 400px;
     max-width: 400px;
     border-radius: 5px;
-}
-
-.card {
-    position: relative;
-    flex: 1;
-    max-width: 150px;
-    min-width: 150px;
-    height: 150px;
-    margin: 18px;
-    border-radius: 5px;
+    background-color: #E3DDE0;
 }
 
 @media (max-width:800px) {
-    .static{
+    .static {
         flex: 100%;
         max-width: 600px;
     }
 
-    .card{
-        flex: 100%;
-        max-width: 150px;
-    }
-    .slide{
+    .cards_container {
         flex: 100%;
         max-width: 600px;
     }
