@@ -1,9 +1,8 @@
-
 import data from './data/pokemon/pokemon.js';
-
 import { 
-  filtrarPelaGeração, ordenarPorNum, sortData,
+  filtrarPelaGeração, ordenarPorNum, sortData, filterType
 } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 
 //console.log(sortData);
 
@@ -12,7 +11,7 @@ import {
 //console.log(ordenarPorNum);
 
 
- const pokemonList = data.pokemon;
+ const pokemonList = data.pokemon.slice(0,9);
 
  const displayPokes = (pokemonData) => {
    
@@ -46,7 +45,7 @@ import {
 
 
  
-let ordernarPorNumeros;
+/*let ordernarPorNumeros;
 const ordenar = document.getElementById("maxcp");
 ordenar.addEventListener('click', () => {
   const getpokes = document.getElementById('teste-card');
@@ -56,9 +55,25 @@ ordenar.addEventListener('click', () => {
   ordenarPorNum(pokemonList, ordernarPorNumeros);
   displayPokes(pokemonList);
 
-});
+});*/
+
+/*document.getElementById("type").addEventListener("click", pickType)
+
+function pickType(e){
+  e.preventDefault()
+  let select = document.getElementById("tipoPokemon");
+  let type = select.options[select.selectedIndex].text;
+  let condition = new String(type)
+  let result = methods.filter(data, condition)
+  
+  console.log(condition);
 
 
+
+}
+
+
+filterData(pokemonList, "electric")*/
 
 
 
@@ -126,7 +141,7 @@ getJson()
 */
 
 
-/*
+
 class MeuCarousel {
   constructor(config) {
     this.config = config;
@@ -256,4 +271,3 @@ let teste = new MeuCarousel({
   timePerPage: 2000,
   stopOnMouseHover: true
 })
-  */

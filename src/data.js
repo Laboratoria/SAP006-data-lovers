@@ -60,22 +60,19 @@ function numericOrder(a, b){
 
 
 
-/*
-let typeFilter = []
-let typeSearcher = []
-
-
-function filterData(data, condition){
-    for (let j=0; j <= data.length; j++){
-      typeSearcher = data[j]["type"]
-      if(typeSearcher.includes(condition)){
-      typeFilter = data[j]["name"]
-      }
+const filterType = (data, condition) => {
+  let typeSearcher = []
+  let typeList = []
+  for (let j=0; j <= data.length; j++){
+    typeSearcher = data[j]["type"]
+    if(typeSearcher.includes(condition)){
+      typeList = data[j]["name"]
     }
-  return typeFilter
+  }
+  return filterType
 }
 
-*/
+
 export {
-  filtrarPelaGeração, ordenarPorNum, sortData, 
+  filtrarPelaGeração, ordenarPorNum, sortData, filterType
 };

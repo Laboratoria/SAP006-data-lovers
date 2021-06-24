@@ -1,7 +1,8 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .line {
@@ -18,8 +19,7 @@
   height: 100px;
   border-radius: 50%;
   background-color: #292929;
-  margin-top: -480px;
-  margin-left: 60px;
+  margin-left: -180px;
 }
 
 .white-circle {
@@ -42,21 +42,15 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-* {
-  margin: 0;
-  box-sizing: border-box;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
+
 
 .wrapper {
+  display: flex;
   background-color: aqua;
-  height: 400px;
-  width: 1200px;
-  margin-inline: auto;
+  margin-left: 0px;
+  height: 350px;
+  width: 900px;
   position: relative;
-  margin-top: -300px;
-  margin-right: 80px;
   overflow: hidden;
 }
 
@@ -176,3 +170,12 @@ h3 {
  button {
    width: 50px;
  }
+
+#telaPrincipal{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}

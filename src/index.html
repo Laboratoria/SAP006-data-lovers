@@ -1,68 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
 
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <div>
-
-      <container class="container">
-        <label for="maxcp">Ordenar por CP máximo</label>
-        <button type="submit" id="maxcp">Ordenar</button>
-        <li id="listaMaxCp"></li>
-      </container>
-      <container class="flex-container">
-        <label for="tipoPokemon">Escolher tipo do Pokemon</label>
-        <select id="tipoPokemon">
-          <option id="fire">fire</option>
-          <option id="water">water</option>
-          <option id="normal">normal</option>
-          <option id="grass">grass</option>
-          <option id="ground">ground</option>
-          <option id="dragon">dragon</option>
-          <option id="dark">dark</option>
-          <option id="steel">steel</option>
-          <option id="flying">flying</option>
-          <option id="electric">electric</option>
-          <option id="ice">ice</option>
-          <option id="rock">rock</option>
-          <option id="poison">poison</option>
-        </select>
-        <button type="submit" id="type">Escolher</button>
-        <div id="pok"></div>
-
-    </div>
-   
-    
-      <div id="pok"></div>
-    </container>
-    
-    <div id="root"></div>
-
-    <div class="dash">
-
-      <div class="line">
-
+<body>
+  <container id="telaPrincipal">
+    <div class="line"></div>
+    <div class="circle">
+      <div class="white-circle">
+        <div class="border"></div>
       </div>
-
-
-      <div class="circle">
-        <div class="white-circle">
-          <div class="border"></div>
-        </div>
-       
-        
-      </div>
-
-
-     
     </div>
 
-    
   <div class="wrapper">
     <ul class="carousel" data-target="carousel">
       <li class="card" data-target="card">
@@ -119,9 +72,10 @@
 
 
   </div>
- 
+</container>
 
-    <div class="teste" id="teste-card"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+  <div class="teste" id="teste-card"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
