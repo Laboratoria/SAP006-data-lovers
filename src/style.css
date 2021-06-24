@@ -11,19 +11,6 @@
     src: url(http://fonts.googleapis.com/css?family=Lato:400,700);
 }
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url(http://fonts.googleapis.com/css?family=Lato:400,700);
-}
-
 body{
     background-image: url(./img/background-img.jpg);
     width: 100%;
@@ -43,7 +30,7 @@ body{
 }
 
 .container{
-    background-color: rgba(23, 24, 32, 0.199);
+    background-color: rgba(23, 24, 32, 0.80);
     backdrop-filter: blur(50px);
     margin: 0 auto;
     padding: 10px;
