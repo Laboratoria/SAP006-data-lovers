@@ -100,7 +100,7 @@
   flex-shrink: 0;
 }
 
-img {
+.img {
   display: flex;
   position: absolute;
   margin-inline: auto;
@@ -179,4 +179,21 @@ h3 {
     flex-flow: nowrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.info_icon {
+  size: 25px;
+  display: flex;
+  position: absolute;
+  margin-top: calc(50% - 20vh);
+  
+ 
+
+}
+
+ul {
+  margin-inline: auto;
+  list-style: none;
+  padding: 20px;
+
 }
