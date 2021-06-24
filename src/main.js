@@ -3,9 +3,9 @@ import data from './data/lol/lol.js';
 // Campeão aparece na tela
 let dataLol = data.data1
 
-ListingCards(dataLol)
+listingCards(dataLol)
 
-function ListingCards(itens) {
+function listingCards(itens) {
   let cardPack = document.querySelector("ul.cards")
   //cardPack.innerHTML = ""  -- novas funções precisarão disso para limpar a tela  
 
