@@ -1,5 +1,5 @@
 // estas funciones son de ejemplo
-
+/*
 export const animations = data.films
 
 export const crescentAlphabet = () => animations.sort((a, b) => (a.title > b.title) ? 1 : -1);//filmes por ordem alfabetica crescente.
@@ -8,6 +8,26 @@ export const releaseYear = animations.sort((a, b) => (a.release_date > b.release
 export const rattingScore = animations.sort((a, b) => (a.rt_score > b.rt_score) ? 1 : -1); //por avaliação.
 export const director = animations.sort((a,b) => (a.director > a.director) ? 1 : -1);//alfabetica diretores.
 
+
+const totalFilmes = data.films.lenght
+console.log(totalFilmes)
+*/
+
+export function filtraScore(a, c) {
+  
+  const rt_score = a.films.filter(films => (films.rt_score >= c));
+  //organizar scores do maior(100 pontos) para o menor
+
+  return rt_score;
+};
+
+export function ordenaFilmes(a, b){
+
+  const releaseYear = releaseYear.sort((a.release_date > b.release_date) ? 1 : -1); 
+  //ordena por ano de lançamento.
+  
+  return releaseYear
+};
 
 /*
 Filmes por ordem alfabética
@@ -32,12 +52,12 @@ const releaseYear = animations.sort((a, b) => {
 export const characters = data.films.people 
 //Ordem alfabética Z-A (personagens)
 //const zaName = azName.reverse();
+*/
 
-
-export const crescentAlphabet = () => {
+export const example = () => {
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
-};*/
+};
