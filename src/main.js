@@ -45,7 +45,7 @@ import pokemon from './data/pokemon/pokemon.js';
 
 
  
-/*let ordernarPorNumeros;
+let ordernarPorNumeros;
 const ordenar = document.getElementById("maxcp");
 ordenar.addEventListener('click', () => {
   const getpokes = document.getElementById('teste-card');
@@ -55,7 +55,7 @@ ordenar.addEventListener('click', () => {
   ordenarPorNum(pokemonList, ordernarPorNumeros);
   displayPokes(pokemonList);
 
-});*/
+});
 
 /*document.getElementById("type").addEventListener("click", pickType)
 

@@ -42,6 +42,8 @@ const ordenarPorNum = (data, valor) => {
 }
 };
 
+
+
 let maxCp = []
 
 function sortData(dados, sortBy, sortOrder){
