@@ -4,15 +4,19 @@ export const example = () => {
   return 'example';
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// export const filterData = (data, condition) => {
+//   return data.filter(condition);
+// };
 
 
 
-export const dadosLol = {
+export const dataLol = {
   filterData:
     function (data, condition) {
       return data.filter(condition);
-    }
+    },
+
+  //sortData(data, sortBy, sortOrder)
 }
+
+ 

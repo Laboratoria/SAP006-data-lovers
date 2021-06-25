@@ -1,4 +1,4 @@
-import { dadosLol } from './data.js';
+import { dataLol } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/lol/lol.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -74,10 +74,10 @@ function cards(cartoesFiltrados) {
 
   }
 }
-cards();
 
 
-const botoes = [document.querySelectorAll(".btn")];
+
+const botoes = [document.querySelectorAll("nav button")];
 
 //FUNÇÃO DAS ABAS EM GERAL EXCETO ABA TODOS
 function abas(funcaoDoCampeao) {
@@ -89,7 +89,7 @@ function abas(funcaoDoCampeao) {
     return champ.tags.some(tag);
   }
 
-  const cartoes = dadosLol.filterData(champs, funcaoPersonagem);
+  const cartoes = dataLol.filterData(champs, funcaoPersonagem);
   cards(cartoes);
 }
 
@@ -119,12 +119,12 @@ function mostrarAbaAtual(id) {
       const funcaoMago = "Mage";
       abas(funcaoMago);
       break;
-     
+
     case "btn-suportes":
       const funcaoSuporte = "Support";
       abas(funcaoSuporte);
       break;
-    
+
     case "btn-tanques":
       const funcaoTanque = "Tank";
       abas(funcaoTanque);
@@ -132,11 +132,23 @@ function mostrarAbaAtual(id) {
   }
 }
 
-function selecionarAba(event) {
-  const abaId = event.target.id;
-  mostrarAbaAtual(abaId);
+function removerClasseAtiva() {
+  const abaAtiva = document.querySelectorAll("nav button");
+  abaAtiva.forEach(aba => {
+    aba.className = aba.className.replace(" ativo", "");
+  })
 }
 
+
+function selecionarAba(event) {
+  removerClasseAtiva();
+  const abaId = event.target;
+  mostrarAbaAtual(abaId.id);
+
+  abaId.className = " ativo";
+}
+
+//ADICIONA EVENTO "CLICK" A CADA BOTÃO
 botoes.forEach(aba => {
   for (let i = 0; i < aba.length; i++) {
     aba[i].addEventListener("click", selecionarAba);
@@ -177,4 +189,10 @@ function voltarCard() {
   cards()
 }
 
-voltarCard()
+
+
+
+function iniciar(){
+  document.getElementById("btn-todos").click();
+}
+iniciar();

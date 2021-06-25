@@ -17,13 +17,47 @@ h1 {
     text-align: center;
 }
 
+nav{
+    width: 85%;
+    margin: auto;
+}
+
 button {
-    color:rgb(189, 189, 189);
-    font-size: 25px;
+    color:rgb(255, 255, 255);
+    font-size: 23px;
     text-decoration: none;
     background-color: transparent;
     border: none;
-        
+    text-transform: uppercase;
+    position: relative;
+    opacity: 0.5;
+    padding: 15px;
+}
+
+button:hover{
+    opacity:1;
+    cursor: pointer;
+}
+
+button::after{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: rgb(3, 7, 238);
+    transition: 0.3s;
+}
+
+.ativo {
+    opacity:1;
+}
+
+button:hover::after,
+.ativo::after {
+    width: 100%;
+    opacity:1;
 }
 
 ul {
@@ -68,12 +102,14 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 2rem auto auto auto;
+    width: 90%;
 } 
 
 #ordemAlfabetica {
     display: flex;
     justify-content: flex-end;
-    margin-right: 50px;
+    margin-right: 10%;
 }  
     
  
