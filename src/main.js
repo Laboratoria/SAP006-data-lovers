@@ -3,6 +3,7 @@ import data from './data/ghibli/ghibli.js';
 
 const selectFilterDirector = document.querySelector("#director");
 const selectFilterProducer = document.querySelector("#producer");
+const selectFilterRating = document.querySelector("#rating");
 
 showingCards(data.ghibli);
 
