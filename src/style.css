@@ -49,7 +49,7 @@ body{
     padding: 20px 0px;
     margin-left: 5px;
 }
-#imageCharacters{
+.imageCharacters{
     width: 94%
 }
 img{
