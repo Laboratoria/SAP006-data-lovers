@@ -18,18 +18,15 @@ type.addEventListener("change", function () {
   exibir(POKEMONS)
 });
 
-
 const order = document.getElementById('order');
 
 order.addEventListener("change", function (e) {
   e.preventDefault();
-  const orderValues = order.value.split("-");
-  console.log(orderValues)
-     // if (orderPokemons.value === generation) {
-      sortData(POKEMONS, orderValues[0], orderValues[1]);  
-     const sort =  sortData(POKEMONS, orderValues[0], orderValues[1]);  
-      exibir(sort);
-  //  }
+
+  const orderValues = order.value.split("/");
+  const sortResults = sortData(POKEMONS, orderValues[0], orderValues[1]);
+
+  exibir(sortResults);
 })
 
 function exibir(itens) {
