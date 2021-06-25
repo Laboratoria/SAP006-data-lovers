@@ -97,22 +97,57 @@ body {
 .page-title{
   align-self: flex-start;
   margin: 20px;
-  font-size: 2rem;
-  color:#b954b9;
+  font-size: 3rem;
+  font-weight: 900;
+  color:rgb(250, 190, 26);
   margin: 20px 0 20px 0;
+  padding: 20px;
 }
 
 /* formulario ordenar e filtrar */
 
 .sort-filter{
   display:flex;
-  
+  margin: 20px 20px 80px 20px;
 }
 
 .labelForm{
   display:block;
-
 }
+
+.button-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  border: 1px solid white;
+  background-color: rgba(66, 18, 34, 0.73);
+  padding: 10px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.button-menu:hover {
+  color: hsl(44, 96%, 54%);
+  background-color: rgba(97, 26, 50, 0.729);
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  width: 200px;
+  padding: 5px;
+
+  outline: none;
+  border: white;
+  background-color: rgba(66, 18, 34, 0.73);
+
+  color: white;
+}
+
+
 
 #order{
   display: none;
@@ -120,6 +155,7 @@ body {
 
 #order-btn{
   display:none;
+
 }
 
 #filter{
@@ -138,7 +174,7 @@ body {
 
 .container-movies {
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
 
   display: flex;
   flex-direction: column;
@@ -151,52 +187,34 @@ body {
   background-color: white;
   margin: 20px;
   box-shadow: 0px 0px 14px 4px rgba(100,100,100,0.7); 
- 
 }
-
-
 
 .poster{
   width:300px;
-  margin: 5px;
+  margin: 10px auto;
   padding:5px;
-   /* margin: 0 auto; */
-  /* width: 70%; */
 }
 
 .movie.details{
   display: flex;
-  /* flex: 20%; */
  }
 
 .movie-headline{
   display:flex;
-  height: ;
-  
 }
 
 .movie-title{
+  position: relative;
   color:rgb(250, 190, 26);
-  margin: 5px;
   font-size: 1.7em;
-  font-weight:900;
+  font-weight:800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   margin-bottom:1%;
 } 
 
-.release-date{
-  margin-top:0;
-  margin-bottom:0;
-  font-size:1em;
-  
-}
-
 .score{
   width:7em;
-  position:absolute;
-  right: 260px;
-  margin-top: -30px;
   text-align:center;
   display:flex;
   align-items:center;
@@ -204,6 +222,7 @@ body {
 }
 
 .star {
+  
   width: 70px;
   position:absolute; 
 }
@@ -212,13 +231,18 @@ body {
   font-size: 1.5em;
   color:white;
   font-weight: bold;
-  z-index: 1;
+  z-index: 10;
 } 
+
+.release-date{
+  margin: 10px 0 10px 0;
+  font-size:1em;
+}
+
 
 .detail-title{
   color:#b954b9;
   margin-bottom:0em;
-  padding:0;
 }
 
 #synopsis-title{
@@ -228,7 +252,9 @@ body {
 .detail-text{
   font-size: 0.9em;
   margin-top:0.5em;
+  margin-right: 0.6em;
   padding:0;
+  text-align: justify;
 }
 
 .images{
