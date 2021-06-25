@@ -4,13 +4,13 @@ import data from './data/pokemon/pokemon.js';
 
 
 let POKEMONS = data.pokemon;
-let generation = POKEMONS.find((generation) => generation);
 
-let seletorTipos = document.getElementById('tipos');
 
-seletorTipos.addEventListener("change", function () {
-  if (seletorTipos.value !== "") {
-    POKEMONS = filtrar(data.pokemon, seletorTipos.value)
+const type = document.getElementById('type');
+
+type.addEventListener("change", function () {
+  if (type.value !== "") {
+    POKEMONS = filtrar(data.pokemon, type.value)
   }
   else {
     POKEMONS = data.pokemon;
@@ -19,12 +19,16 @@ seletorTipos.addEventListener("change", function () {
 });
 
 
-let order = document.getElementById('order');
+const order = document.getElementById('order');
 
 order.addEventListener("change", function (e) {
   e.preventDefault();
+  const orderValues = order.value.split("-");
+  console.log(orderValues)
      // if (orderPokemons.value === generation) {
-      (sortData(POKEMONS, order.value));  
+      sortData(POKEMONS, orderValues[0], orderValues[1]);  
+     const sort =  sortData(POKEMONS, orderValues[0], orderValues[1]);  
+      exibir(sort);
   //  }
 })
 

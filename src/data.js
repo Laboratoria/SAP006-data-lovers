@@ -8,21 +8,47 @@ export const filtrar = function (data, seletorTipos) {
 }
 
 // data ==== tds os dados dos pokemon
-// sortBy === qual desses dada usar para ordenar
+// sortBy === desses dados usar para ordenar = tamanho. 
 //sortOrder === crescente ou decrescente
 
 export const sortData = (data, sortBy, sortOrder) => {
-  const orderGeracao = Object.keys(sortBy).sort((a, b) => (a[generation].Number > b[generation].Number));
-  const ordenarZA = (a, b) => sort(a, b)
-  const ordenarAz = (a, b)
+  const allpokemons = data;
+console.log(sortBy, sortOrder);
+  if (sortOrder === 'asc') {
+    allpokemons.sort(
+      function (a, b) {
+        if (a[sortBy] < b[sortBy])
+          return -1;
+        if (a[sortBy] > b[sortBy])
+          return 1;
+      } 
+    )
+    //no else só trocar os valores
+    // -1, 1, serve para ordenação (compara se um for maior que o outro)
+  } else {
+    allpokemons.sort(
+      function (a, b) {
+        if (a[sortBy] > b[sortBy])
+          return -1;
+        if (a[sortBy] < b[sortBy])
+          return 1;
+      }
+    )
+  }
+  return allpokemons;
+}
+ 
 
-    switch (sortOrder) {
-      case "allpokemons":
-        return data.pokemon
-      case "stats":
-        return orderGeracao
-      case "reverse":
-        return ordenarZA.reverse()
-    }
-} 
+
+
+
+
+
+
+
+
+
+
+
+
 
