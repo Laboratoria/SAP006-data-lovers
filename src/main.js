@@ -27,19 +27,6 @@ cardsTela(data.results);
 
 
 
-/* #1
-function cardsTela (data) {
-    document.getElementById('info-cards').innerHTML = data.map((item) => `
-        <ul class="lista-card">
-          <li>Nome: <strong>${item.name}</strong></li>
-          <li>Status: <strong>${item.status}</strong></li>
-          <li>Espécie: <strong>${item.species}</strong></li>
-          <li>Gênero: <strong>${item.gender}</strong></li>      
-          <li>Localização: <strong>${item.location.name}</strong></li>
-        </ul>
-  `)
-  }
-  cardsTela(data.results);*/
 
 /* #2
 const addPosts = async () => {
