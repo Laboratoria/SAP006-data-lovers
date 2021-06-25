@@ -1,0 +1,21 @@
+body {
+    background-color: lightskyblue;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+        display: inline-block;
+        background-color: rgb(238, 146, 146);
+        margin: 10px;
+        border: 2px solid rgb(79, 185, 227);
+        padding: 50px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
