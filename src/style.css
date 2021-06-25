@@ -28,9 +28,9 @@ section select {
     border: none;
 }
 
-/*faz o botão ficar de outra cor quando passa o cursor*/
-button:hover{ 
-    color: green
+/*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
+section select:hover{
+    color:green;
 }
 
 /*estilização do botão limpar*/
@@ -41,25 +41,31 @@ button:hover{
     margin-bottom: 50px;
 }
 
+/*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
+button:hover{ 
+    color: green;
+}
+
 /*estilização do campo de pesquisas*/
 .pesquisar{
     background-color: #FFEBCD;
     border-radius: 20px;
+    padding: 10px
 }
 
 /*imagem de fundo do morty*/
-.fundo-direita{
+/*.fundo-direita{
     opacity: 40%;
     float:right;
     display: block;
-}
+}*/
 
 /*imagem de fundo do rick*/
-.fundo-esquerda{
+/*.fundo-esquerda{
     opacity: 40%;
     float:left;
     display: block;
-}
+}*/
 
 /*estilização do rodapé*/
 .footer{
