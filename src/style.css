@@ -1,0 +1,12 @@
+img {
+    width: 250px;
+    height: 250px;
+}
+ 
+
+.container {
+    border: solid 1px black;
+    width: 300px;
+    height: 100%;
+    display: flexbox;
+}
