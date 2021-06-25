@@ -1,6 +1,6 @@
-import {filterData} from './data.js'
-import {sortData} from './data.js';
-import {average} from './data.js';
+import { filterData } from './data.js'
+import { sortData } from './data.js';
+import { average } from './data.js';
 
 import data from './data/ghibli/ghibli.js'
 
@@ -9,131 +9,197 @@ const films = data.films
 const containerMovies = document.getElementById("container-movies")
 
 const printMovieList = (movieList) => {
-  movieList.forEach(film =>{
-    containerMovies.innerHTML +=`  
-    <section class="movie">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <section class="movie">
+  movieList.forEach(film => {
+    containerMovies.innerHTML += `  
+    <section class="movie">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
       
       <figure class="movie-poster">
-          <img class="poster" src=${film.poster} alt="">
+        <img class="poster" src=${film.poster} alt="">
           
-        </figure>
+      </figure>
     
-        <section class="movie-details" id="movie-details">
-          <div class="movie-headline" id="movie-headline">
-            <div class="container-title">
-              <h3 class="movie-title" id="movie-title">${film.title}</h3>
-              <h5 class="release-date" id="release-date">${film.release_date}</h5>
-            </div>
-    
-            <figure class="score">
-              <img class="star" src="img/star.png" alt="">
-              <span class="rt-score">${film.rt_score}</span>
-            </figure>
+      <section class="movie-details" id="movie-details">
+        <div class="movie-headline" id="movie-headline">
+          <div class="container-title">
+            <h3 class="movie-title" id="movie-title">${film.title}</h3>
+            <h5 class="release-date" id="release-date">${film.release_date}</h5>
           </div>
     
-          <div class="details" id="characters">
-            <h4 class="detail-title">Personagens</h4>
-            <div class="images">
-              <img src=${film.people[0].img} alt="" class="character-picture">
-              <img src=${film.people[1].img} alt="" class="character-picture">
-              <img src=${film.people[2].img} alt="" class="character-picture">
-              <img src=${film.people[3].img} alt="" class="character-picture">
-              <button class="more-characters">Ver mais</button>
-            </div>
-          </div>
+          <figure class="score">
+            <img class="star" src="img/star.png" alt="">
+            <span class="rt-score">${film.rt_score}</span>
+          </figure>
+         </div>
     
-          <div class="details" id="synopsis">
-            <h4 class="detail-title" id="synopsis-title">Sinopse</h4>
-            <p class="detail-text">${film.description}</p>
+        <div class="details" id="characters">
+          <h4 class="detail-title">Personagens</h4>
+          <div class="images">
+            <img src=${film.people[0].img} alt="" class="character-picture">
+            <img src=${film.people[1].img} alt="" class="character-picture">
+            <img src=${film.people[2].img} alt="" class="character-picture">
+            <img src=${film.people[3].img} alt="" class="character-picture">
+            <button class="more-characters">Ver mais</button>
           </div>
-    
-          <div class="details" id="director">
-            <h4 class="detail-title">Diretor</h4>
-            <p class="detail-text">${film.director}</p>
-          </div>
-    
-          <div class="details" id="producer">
-            <h4 class="detail-title">Produtor</h4>
-            <p class="detail-text">${film.producer}</p>
-          </div>
-        </section>
+        </div>
   
+        <div class="details" id="synopsis">
+          <h4 class="detail-title" id="synopsis-title">Sinopse</h4>
+          <p class="detail-text">${film.description}</p>
+        </div>
+  
+        <div class="details" id="director">
+          <h4 class="detail-title">Diretor</h4>
+          <p class="detail-text">${film.director}</p>
+        </div>
+  
+        <div class="details" id="producer">
+          <h4 class="detail-title">Produtor</h4>
+          <p class="detail-text">${film.producer}</p>
+        </div>
+      </section>
     </section>
   `
-  })                                        
+  })
 
 }
 
+
 printMovieList(films)
 
+
+const orderSelect =document.getElementById("orderSelect")
 const order = document.getElementById("order")
-const direction = document.getElementById("direction")
 const orderBtn = document.getElementById("order-btn")
 
-orderBtn.addEventListener("click", (event) => {
-  containerMovies.innerHTML=""
-  const sortedList =  sortData (films, order.value, direction.value)
-  console.log(sortedList)
+const filterSelect= document.getElementById("filterSelect")
+const filter = document.getElementById("filter")
+const filterBtn = document.getElementById("filter-btn")
+
+//Revelando caixa select ordenação
+orderSelect.addEventListener("click",(event)=>{
+  order.style.display="inline-block"
+  filter.style.display="none"
+  event.preventDefault()
+
+})
+
+
+//revelando caixa select filtro
+filterSelect.addEventListener("click",(event)=>{
+  filter.style.display="inline-block"
+  order.style.display="none"
+  event.preventDefault()
+
+})
+
+//IMPRIMINDO LISTA ORDENADA
+
+order.addEventListener("change", (event) => {
+  containerMovies.innerHTML = ""
+  const optionSelected = order.options[order.selectedIndex]
+  const optionValue = optionSelected.value
+  const optionClass = optionSelected.getAttribute("class")
+  const sortedList = sortData(films, optionClass, optionValue)
+  console.log(optionClass)
+  console.log(optionValue)
   printMovieList(sortedList)
   event.preventDefault()
 
 })
 
-console.log(sortData(films,"rt_score","descending"))
+
+//IMPRIMINDO LISTA FILTRADA
+
+
+//lista só de diretores
+const directorsList = () => {
+  let directors = []
+  for (let film of films) {
+    let director = film.director
+    directors.push(director)
+  }
+  return directors
+}
+
+const setDirectors = [...new Set(directorsList())]
+const arrayDirectors = Array.from(setDirectors)
+
+const directorFilter = document.getElementById("director-list")
+
+console.log(arrayDirectors)
+
+arrayDirectors.forEach(director => {
+  directorFilter.innerHTML += `<option value=${director} class="director">${director}</option>`
+})
+
+
+//lista só de produtores
+
+const producersList = () => {
+  let producers = []
+  for (let film of films) {
+    let producer = film.producer
+    producers.push(producer)
+  }
+  return producers
+}
+
+const setproducers = [...new Set(producersList())]
+const arrayProducers = Array.from(setproducers)
+console.log(arrayProducers)
+
+const producerFilter = document.getElementById("producer-list")
+arrayProducers.forEach(producer => {
+  producerFilter.innerHTML += `<option value=${producer} class="producer">${producer}</option>`
+})
+
+//Impressão com filtros
+
+
+
+filter.addEventListener("change", (event) => {
+  containerMovies.innerHTML = ""
+  const optionSelected = filter.options[filter.selectedIndex]
+  const optionText = optionSelected.text
+  const optionClass = optionSelected.getAttribute("class")
+  console.log(optionText, optionClass )
+  const filteredList = filterData(films, optionClass, optionText)
+  console.log(filteredList)
+  printMovieList(filteredList)
+
+  event.preventDefault()
+
+})
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//console.log(sortData(films, "Release", "Descending"))
-//console.log(sortData(films, "title", "Ascending"))
-//console.log(films[0]['director'])
-
-
-//console.log(filterData(films, "director","Hayao Miyazaki"))
-
-//console.log(filterData(films, "producer","Toshio Suzuki"))
 
 
 //lista de todas as personagens femininas
-const femaleTotal = ()=>{
+const femaleTotal = () => {
   let female = []
-  let peopleList 
-  for(let film of films ){
+  let peopleList
+  for (let film of films) {
     peopleList = film.people
-    for(let people of peopleList){
-      if(people.gender=="Female"){
-          female.push(people)
+    for (let people of peopleList) {
+      if (people.gender == "Female") {
+        female.push(people)
       }
-    }  
+    }
   }
   return female
 }
 
 //lista de personagens feminias por filme
-const femalePerFilm = ()=>{
+const femalePerFilm = () => {
   let femaleList = []
-  for(let film of films ){
+  for (let film of films) {
     let thisFilm = []
     let peopleList = film.people
-    for(let people of peopleList){
-      if(people.gender=="Female"){
-          thisFilm.push(people)
+    for (let people of peopleList) {
+      if (people.gender == "Female") {
+        thisFilm.push(people)
       }
     }
     femaleList.push(thisFilm)
@@ -144,22 +210,22 @@ const femalePerFilm = ()=>{
 
 const scores = (dataFilms) => {
   let scoreFilms = []
-  for (let film of dataFilms){
+  for (let film of dataFilms) {
     let scoreNumber = parseInt(film["rt_score"])
     scoreFilms.push(scoreNumber)
   }
   return scoreFilms
 }
 
-console.log(scores(films))
+//console.log(scores(films))
 //console.log(average(scores(films)))
- 
+
 //console.log(femalePerFilm())
-  
+
 
 //films.filter(value => value['people']['gender']=='female')
 // console.log(femalePeople()
 
 
 
-                                                                                                                                                                                  
+

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,9 +10,6 @@
   font-size: 100%;
 }
 
-body {
-  /* background-color: rgb(190, 190, 190); */
-}
 
 /* Header */
 
@@ -44,13 +41,12 @@ body {
 
 }
 
-.title {
+.site-title {
   font-size: 5rem;
   font-weight: 400;
   border-top: 5px solid white;
   border-bottom: 5px solid white;
   padding: 20px;
-
   margin-bottom: 20px;
 }
 
@@ -89,24 +85,6 @@ body {
 
 /* Main */
 
-.movie{
-  display:flex;
-
-  background-color: white;
-  margin: 20px;
-  /* box-shadow: 0px 0px 14px 4px rgba(100,100,100,0.7); */
-  border: 5px solid black;
-}
-
-.container-movies {
-  margin: 0 auto;
-  width: 70%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .movies-page{
   position:absolute;
   top:80vh;
@@ -118,21 +96,63 @@ body {
 
 .page-title{
   align-self: flex-start;
-  
   margin: 20px;
   font-size: 2rem;
   color:#b954b9;
   margin: 20px 0 20px 0;
 }
 
-.movie-cards {
+/* formulario ordenar e filtrar */
+
+.sort-filter{
+  display:flex;
+  
+}
+
+.labelForm{
+  display:block;
 
 }
 
-.movie-poster{
-  /* width:30%; */
-  /* box-shadow: 0px 0px 14px 4px rgba(100,100,100,0.7); */
- }
+#order{
+  display: none;
+}
+
+#order-btn{
+  display:none;
+}
+
+#filter{
+  display: none;
+}
+
+#filter-btn{
+  display:none;
+}
+
+
+
+
+/* Posters Filmes */
+
+
+.container-movies {
+  margin: 0 auto;
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie{
+  display:flex;
+
+  background-color: white;
+  margin: 20px;
+  box-shadow: 0px 0px 14px 4px rgba(100,100,100,0.7); 
+ 
+}
 
 
 
@@ -185,7 +205,7 @@ body {
 
 .star {
   width: 70px;
-  position:absolute;
+  position:absolute; 
 }
 
 .rt-score{
