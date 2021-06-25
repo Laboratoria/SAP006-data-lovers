@@ -1,11 +1,14 @@
+/*estilização que se utiliza em todos os elementos do documento (que nao forem estilizados)*/
 *{
     margin: auto;
 }
 
-body {
+/*cor do fundo do body*/
+body { 
     background-color: #051521; 
 }
 
+/*estilização apenas do LOGO, imagem cabeçalho*/
 .imgLogo{
     height: 200px;
     width: 600px;
@@ -14,6 +17,8 @@ body {
     border-radius: 50px;
 }
 
+/*estilização dos botões de filtro, estão no section (pai) e aplica para o select (filho), 
+os option são filhos do select, por isso coloca section select*/
 section select {
     background-color: #97ce4c;
     border-radius: 50px;
@@ -23,29 +28,40 @@ section select {
     border: none;
 }
 
+/*faz o botão ficar de outra cor quando passa o cursor*/
+button:hover{ 
+    color: green
+}
+
+/*estilização do botão limpar*/
 .limpar{
     background-color: #97ce4c;
     border-radius: 50px;
     padding: 15px;    
     margin-bottom: 50px;
 }
+
+/*estilização do campo de pesquisas*/
 .pesquisar{
     background-color: #FFEBCD;
     border-radius: 20px;
 }
 
+/*imagem de fundo do morty*/
 .fundo-direita{
     opacity: 40%;
     float:right;
     display: block;
 }
 
+/*imagem de fundo do rick*/
 .fundo-esquerda{
     opacity: 40%;
     float:left;
     display: block;
 }
 
+/*estilização do rodapé*/
 .footer{
     background-color: #084d6e;
     text-align: center;
