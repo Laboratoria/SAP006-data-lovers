@@ -1,12 +1,15 @@
 import { filtrar } from './data.js';
 import { sortData } from './data.js';
 import data from './data/pokemon/pokemon.js';
-
+import { media } from './data.js';
 
 let POKEMONS = data.pokemon;
-let generation = POKEMONS.find((generation) => generation);
 
 let seletorTipos = document.getElementById('tipos');
+
+exibir(POKEMONS)
+
+media(POKEMONS)
 
 seletorTipos.addEventListener("change", function () {
   if (seletorTipos.value !== "") {
@@ -19,13 +22,15 @@ seletorTipos.addEventListener("change", function () {
 });
 
 
-let order = document.getElementById('order');
+const order = document.getElementById('order');
 
 order.addEventListener("change", function (e) {
   e.preventDefault();
-     // if (orderPokemons.value === generation) {
-      (sortData(POKEMONS, order.value));  
-  //  }
+
+  const orderValues = order.value.split("-");
+  // sortData(POKEMONS, orderValues[0], orderValues[1]);
+  const sort = sortData(POKEMONS, orderValues[0], orderValues[1]);
+  exibir(sort);
 })
 
 function exibir(itens) {
@@ -37,7 +42,7 @@ function exibir(itens) {
   }
 }
 
-exibir(POKEMONS)
+
 
 
 
