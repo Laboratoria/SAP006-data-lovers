@@ -22,7 +22,7 @@ for (let i = 0; i < objects.length; i++) {
     divCards.appendChild(divBackCard);
 
     let imageCharacters = document.createElement("img");
-    imageCharacters.setAttribute("id", "imageCharacters");
+    imageCharacters.setAttribute("class", "imageCharacters");
 
     const name = objects[i].name;
     const title = objects[i].title;
@@ -40,7 +40,7 @@ for (let i = 0; i < objects.length; i++) {
     const difficulty = objects[i].info.magic;
 
     divBackCard.innerHTML = `<h3>${name}</h3><img src="${img}"><h4>${tags}</h4><h4>${partype}</h4>
-    <br><p id="attack">Attack: ${attack}</p><p id="defense">Defense: ${defense}</p><p id="magic">Magic: ${magic}</p>
+    <p id="attack">Attack: ${attack}</p><p id="defense">Defense: ${defense}</p><p id="magic">Magic: ${magic}</p>
     <p id="difficulty">Difficulty: ${difficulty}</p>"`
     
 }

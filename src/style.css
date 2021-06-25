@@ -15,15 +15,15 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    perspective: 6000px;
 }
 .cards{
     position: relative;
     margin: 30px 25px 100px 25px;
     width: 18%;
-    height: 330px;
+    height: 305px;
     text-align: center;
-    cursor: pointer;    
+    cursor: pointer;
+    perspective: 6000px;    
 }
 .cards:hover{
     transition: 0.5s;
@@ -47,16 +47,17 @@ body{
     background-image: url(img/backgroundback.png);
     transform: rotateY(180deg);
     padding: 20px 0px;
+    margin-left: 5px;
 }
 #imageCharacters{
-    width: 100%
+    width: 94%
 }
 img{
     width: 40%;
 }
 h1{
     font-size: 25px;
-    margin: 10px;
+    margin: 0px 5px 10px 5px;
     color: #ffffff;
     background-color: #24534f93;
     border-radius: 5px;
@@ -84,18 +85,19 @@ p{
 }
 h3{
     font-size: 25px;
-    margin: 10px 20px;
+    margin: 0px 20px 10px 20px;
     padding: 0px 10px;
     color: #ffffff;
     border-radius: 5px;
     font-family: Nova Cut;
 }
 h4{
-    margin: 0px 0px;
+    margin: 0px 0px 5px 0px;
     color: #ffffff;
     font-size: 12px;
     font-family: Merienda One;
     font-weight: 100;
+
 }
 #attack{
     text-align: center;
