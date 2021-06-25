@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Personagens</title>
+    <link rel="stylesheet" href="./characters.css" />
+  </head>
+
+<body>
+
+  <header class="header">
+    <div class="title-container">
+      <h1 class="site-title">STUDIO GHIBLI</h1>
+      <h3 class="subtitle">PARA MULHERES</h3>
+    </div>
+    
+    <nav class="navbar">
+      <ul class="list">
+        <li><a class="links" href="./index.html">Início</a></li>
+        <li><a class="links" href="./movies.html">Filmes</a></li>
+        <li><a class="links" href="./characters.html">Personagens</a></li>
+        <li><a class="links" href="./statistics.html">Dados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="characters-page">
+    <h2 class="page-title">Personagens</h2>
+    <form class="filter">
+
+      <label for="filter-choice" class="labelForm"><button class="button-menu" id="filterSelect">Filtrar</button></label>
+      <select class="dropdown-menu" name="filter-choice" id="filter">
+        <option selected disable>Gênero</option>
+        <option value="Female">Feminino</option>
+        <option value="Male">Masculino</option>
+        
+      </select>
+    </form>
+    <section class="gallery" id="gallery" >
+      
+    </section>
+
+  </main>
+  
+
+
+  <script src="characters.js" type="module"></script>
+</body>
+</html>
