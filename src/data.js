@@ -7,24 +7,44 @@ export const filtrar = function (data, seletorTipos) {
   return pokemon_filtrados;
 }
 
-// data ==== tds os dados dos pokemon
-// sortBy === qual desses dada usar para ordenar
-//sortOrder === crescente ou decrescente
-
 export const sortData = (data, sortBy, sortOrder) => {
-  const orderGeracao = Object.keys(sortBy).sort((a, b) => (a[generation].Number > b[generation].Number));
-  const ordenarZA = (a, b) => sort(a, b)
-  const ordenarAz = (a, b)
+  const allpokemons = data;
 
-    switch (sortOrder) {
-      case "allpokemons":
-        return data.pokemon
-      case "stats":
-        return orderGeracao
-      case "reverse":
-        return ordenarZA.reverse()
-    }
-} 
+  if (sortOrder === 'asc') {
+    allpokemons.sort(
+      function (a, b) {
+        if (a[sortBy] < b[sortBy])
+          return -1;
+        if (a[sortBy] > b[sortBy])
+          return 1;
+      }
+    )
+  } else {
+    allpokemons.sort(
+      function (a, b) {
+        if (a[sortBy] > b[sortBy])
+          return -1;
+        if (a[sortBy] < b[sortBy])
+          return 1;
+      }
+    )
+  }
+  return allpokemons;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const media = function(data) {
   data.map(function(item){
