@@ -29,7 +29,7 @@ for (let i = 0; i < objects.length; i++) {
     const splash = objects[i].splash;
     const blurb = objects[i].blurb;
     
-    divFrontCard.innerHTML = `<h1>${name}</h1><h2>${title}</h2><img class="imageCharacters" src="${splash}"><p>${blurb}</p>`;
+    divFrontCard.innerHTML = `<h1>${name}</h1><h2>${title}</h2><img class="imageCharacters"src="${splash}"><p>${blurb}</p>`;
 
     const img = objects[i].img;
     const partype = objects[i].partype;
