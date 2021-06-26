@@ -42,69 +42,107 @@ for (let film of films) {
   printPeople(peopleList, film.title)
 }
 
+const filterBtn = document.getElementById("filter-btn")
+const filter = document.getElementById("filter")
+
+filterBtn.addEventListener("click",(event)=>{
+  filter.style.display="inline-block"
+
+  event.preventDefault()
+})
 
 
-//lista de todas as personagens femininas
+//filtro por gênero
 const genderFilter = (film,gender) => {
   let peopleList= film.people
   let list = filterData(peopleList,"gender", gender)
   return list
 }
 
-const filter=document.getElementById("filter")
+const filterGender=document.getElementById("filter-gender")
+const filterMovie = document.getElementById("filter-movie")
 
-filter.addEventListener("change", (event)=>{
+filterGender.addEventListener("change", (event)=>{
   gallery.innerHTML=""
-  const optionSelected = filter.options[filter.selectedIndex]
-  const optionValue = optionSelected.value
-  films.forEach(film=>{
-    if(optionValue=="Male"){
-      printPeople(genderFilter(film, "Male"),film.title)
+  const genderSelected = filterGender.options[filterGender.selectedIndex]
+  const genderValue = genderSelected.value
+
+  const movieSelected = filterMovie.options[filterMovie.selectedIndex]
+  const movieText = movieSelected.text
+  const movie = films.find(value=> value.title == movieText)
+  
+
+  if(movie !== undefined){
+    if(genderValue!="All"){
+      printPeople(genderFilter(movie, genderValue),movie.title)
+    } else{
+      const people = movie.people
+      printPeople(people, movie.title)
+    }
+  }else{
+    if(genderValue!=="All"){
+      films.forEach(film => {
+        printPeople(genderFilter(film, genderValue),film.title)
+      })
+    }else{
+      films.forEach(film => {
+        const peopleList = film.people
+        printPeople(peopleList,film.title)
+      })
+    }
+  }
+  event.preventDefault()
+})
+
+//filtro por filme
+
+//imprimindo filmes nas opções do select
+
+const arrayTitles = (filmList) => {
+  let titles = []
+  for (let film of filmList) {
+    let title = film.title
+    titles.push(title)
+  }
+  return titles
+}
+
+arrayTitles(films).forEach(title => {
+  filterMovie.innerHTML += `<option class="movie-title">${title}</option>`
+})
+
+filterMovie.addEventListener("change", ()=>{
+  gallery.innerHTML=""
+  const movieSelected = filterMovie.options[filterMovie.selectedIndex]
+  const movieText = movieSelected.text
+  const movie = films.find(value=> value.title == movieText)
+  
+  const genderSelected = filterGender.options[filterGender.selectedIndex]
+  const genderValue = genderSelected.value
+
+  if(genderValue !== "All"){
+    if(movie !== undefined){
+      printPeople(genderFilter(movie, genderValue),movie.title)
+    }else{
+      films.forEach(film => {
+        printPeople(genderFilter(film, genderValue),film.title)
+      })
+    }
+  } else{
+    if(movie !== undefined){
+      const people = movie.people
+      printPeople(people, movie.title)
     }
     else{
-      printPeople(genderFilter(film,"Female"),film.title)
+      films.forEach(film => {
+        const peopleList = film.people
+        printPeople(peopleList,film.title)
+      })
     }
-
-  })
-  event.preventDefault()
+  }  
 })
 
 
 
-
-//lista de personagens feminias por filme
-const femalePerFilm = () => {
-  let femaleList = []
-  for (let film of films) {
-    let thisFilm = []
-    let peopleList = film.people
-    for (let people of peopleList) {
-      if (people.gender == "Female") {
-        thisFilm.push(people)
-      }
-    }
-    femaleList.push(thisFilm)
-  }
-  return femaleList
-}
-
-
-const scores = (dataFilms) => {
-  let scoreFilms = []
-  for (let film of dataFilms) {
-    let scoreNumber = parseInt(film["rt_score"])
-    scoreFilms.push(scoreNumber)
-  }
-  return scoreFilms
-}
-
-//console.log(scores(films))
-//console.log(average(scores(films)))
-
-//console.log(femalePerFilm())
-
-
-//films.filter(value => value['people']['gender']=='female')
-// console.log(femalePeople()
 
 

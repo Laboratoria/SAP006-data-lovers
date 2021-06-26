@@ -26,16 +26,23 @@
 
   <main class="characters-page">
     <h2 class="page-title">Personagens</h2>
-    <form class="filter">
-
-      <label for="filter-choice" class="labelForm"><button class="button-menu" id="filterSelect">Filtrar</button></label>
-      <select class="dropdown-menu" name="filter-choice" id="filter">
-        <option selected disable>Gênero</option>
+    <button class="button-menu" id="filter-btn">Filtrar</button>
+    <form class="filter" id="filter">
+      <label for="filter-gender">Gênero</label>
+      <select class="dropdown-menu" name="filter-choice" id="filter-gender">
+        <option value="All">Todos</option>
         <option value="Female">Feminino</option>
         <option value="Male">Masculino</option>
         
       </select>
+
+      <label for="filter-movie">Filme</label>
+      <select class="dropdown-menu" name="filter-choice" id="filter-movie">
+        <option value="All">Todos</option>
+        
+      </select>
     </form>
+
     <section class="gallery" id="gallery" >
       
     </section>

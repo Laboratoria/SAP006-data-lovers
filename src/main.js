@@ -112,21 +112,20 @@ order.addEventListener("change", (event) => {
 
 
 //lista só de diretores
-const directorsList = () => {
+const directorsList = (filmsList) => {
   let directors = []
-  for (let film of films) {
+  for (let film of filmsList) {
     let director = film.director
     directors.push(director)
   }
   return directors
 }
 
-const setDirectors = [...new Set(directorsList())]
+const setDirectors = [...new Set(directorsList(films))]
 const arrayDirectors = Array.from(setDirectors)
 
 const directorFilter = document.getElementById("director-list")
 
-console.log(arrayDirectors)
 
 arrayDirectors.forEach(director => {
   directorFilter.innerHTML += `<option value=${director} class="director">${director}</option>`
@@ -135,16 +134,16 @@ arrayDirectors.forEach(director => {
 
 //lista só de produtores
 
-const producersList = () => {
+const producersList = (filmsList) => {
   let producers = []
-  for (let film of films) {
+  for (let film of filmsList) {
     let producer = film.producer
     producers.push(producer)
   }
   return producers
 }
 
-const setproducers = [...new Set(producersList())]
+const setproducers = [...new Set(producersList(films))]
 const arrayProducers = Array.from(setproducers)
 console.log(arrayProducers)
 
