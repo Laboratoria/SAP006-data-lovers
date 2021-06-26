@@ -1,11 +1,11 @@
-import { example } from './data.js';
+import { filterDirectorSelected} from './data.js';
 import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const animations = data.films
 
 //console.log(animations.sort((a,b)=>(a.rt_score > b.rt_score? 1:-1)))
 
-function showPosterFilms() {
+function showPosterFilms(animations) {
     let photo = "";
     for (let item of animations) {
         photo += `
@@ -26,7 +26,7 @@ function showPosterFilms() {
     document.getElementById("poster-cards").innerHTML = photo;
 }
 
-showPosterFilms();
+showPosterFilms(animations);
 
 const oldestFilms = (evento) => {
 
@@ -59,3 +59,24 @@ const filmesNovos = document.querySelector('[data-films-newest]');
 melhoresFilmes.addEventListener('click', bestScore);
 filmesAntigos.addEventListener('click', oldestFilms);
 filmesNovos.addEventListener('click', newestFilms);
+
+/* Dia 25/06
+function filterDirector() {
+    const directorSelected = directorSelect.value
+    const selectedDirector = selectDirector(animations, directorSelected)
+    showPosterFilms(selectedDirector);
+}
+/*function showFemale () {
+const especieSelecionada = people.filter(personagem => personagem.gender == "Female");
+especieSelecionada.forEach(personagem => {showPoster});
+
+} */ 
+const selectDirector = document.getElementById("director");
+selectDirector.addEventListener("click", filterDirector);
+
+function filterDirector(){
+    const valueSelected = selectDirector.value
+    const selectedMovies = filterDirectorSelected(animations,valueSelected);
+    showPosterFilms(selectedMovies);
+}
+
