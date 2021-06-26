@@ -3,27 +3,32 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 
 
-function cardsTela (data) {
+function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
-      <ul class="lista-card">
-        <li>Nome: <strong>${item.name}</strong></li>
-        <li>Gênero: <strong>${item.gender}</strong></li>      
-        <li>Status: <strong>${item.status}</strong></li>
-        <li>Espécie: <strong>${item.species}</strong></li>
-        <li>Origem: <strong>${item.origin.name}</strong></li>
-        <li>Localização: <strong>${item.location.name}</strong></li>
+  <div class="texto-cards">
+      <ul class="cards">
+        <img src="${item.image}">
+        <li><strong>Nome:</strong>${item.name}</li>
+        <li><strong>Gênero:</strong>${item.gender}</li>      
+        <li><strong>Status:</strong>${item.status}</li>
+        <li><strong>Espécie:</strong>${item.species}</li>
+        <li><strong>Origem:</strong>${item.origin.name}</li>
+        <li><strong>Localização:</strong>${item.location.name}</li>
       </ul>
+  </div>
 `)
 }
-cardsTela(data.results);
+infoCardsTela(data.results);
+
+
+
+
+
+//<img src="${item.image}"> = faz com que importe as imagens
 
 
 
 //console.log(data.results)
-
-
-
-
 
 
 

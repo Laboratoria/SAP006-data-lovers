@@ -11,6 +11,13 @@ export const anotherExample = () => {
 
 
 
+
+
+
+
+
+
+
 /*
 O coração deste projeto é a manipulação de dados através de arrays e objetos.
 

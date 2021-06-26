@@ -1,6 +1,10 @@
 /*estilização que se utiliza em todos os elementos do documento (que nao forem estilizados)*/
 *{
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
 }
 
 /*cor do fundo do body*/
@@ -15,6 +19,10 @@ body {
     margin: 0 auto;
     display: block;
     border-radius: 50px;
+}
+
+.curiosidades{
+    display: block;
 }
 
 /*estilização dos botões de filtro, estão no section (pai) e aplica para o select (filho), 
@@ -33,12 +41,13 @@ section select:hover{
     color:green;
 }
 
-/*estilização do botão limpar*/
-.limpar{
+/*estilização dos botões curiosidades e limpar*/
+.btn{
     background-color: #97ce4c;
     border-radius: 50px;
     padding: 15px;    
     margin-bottom: 50px;
+    align-items: center;
 }
 
 /*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
@@ -77,3 +86,17 @@ button:hover{
     width: 100%;
 }
 
+.texto-cards{ /*fazer a estilização dos CARDS*/
+    list-style: none;
+    
+}
+
+.cards{ /*fazer a estilização das info dos cards*/
+    background-color: #97ce4c;
+    border-radius: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+}
