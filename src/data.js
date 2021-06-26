@@ -1,10 +1,27 @@
-// estas funciones son de ejemplo
 
+export const filterDirectorSelected = (animations, valueSelected) =>
+animations.filter(item => item.director === valueSelected);
+
+//export function filterDirectorSelected(animations, valueSelected) {
+//animations.filter(animations => animations.director === valueSelected);
+//} 
+//Perguntar pq quando tento function retorna "animations is not interable"
+
+//import data from './data/ghibli/ghibli.js';
+//const animations = data.films
+//valueSelected = selectDirector.value;
+
+
+/*function showFemale () {
+const especieSelecionada = people.filter(personagem => personagem.gender == "Female");
+especieSelecionada.forEach(personagem => {showPoster});
+}
 export const example = () => {
   //return 'example';
 };
-/*
-export const crescentAlphabet = animations.sort((a, b) => (a.title > b.title) ? 1 : -1);//filmes por ordem alfabetica crescente.
+
+
+/*export const crescentAlphabet = animations.sort((a, b) => (a.title > b.title) ? 1 : -1);//filmes por ordem alfabetica crescente.
 export const descendingAlphabet = crescentAlphabet.reverse(); //filmes por ordem alfabetica decrescente.
 export const releaseYear = animations.sort((a, b) => (a.release_date > b.release_date) ? 1 : -1); //ordem de lançamento.
 export const rattingScore = animations.sort((a, b) => (a.rt_score > b.rt_score) ? 1 : -1); //por avaliação.
