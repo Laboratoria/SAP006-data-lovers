@@ -1,15 +1,15 @@
-import {filtroGenero, calcularPorcentagem} from './data.js';
+import filtragem from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
 //console.log(data.filtrarGenero); 
 
-
-
 function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
-  <div class="texto-cards">
-      <ul class="cards">
-        <img src="${item.image}">
+  <div>
+    <div class="card-img">
+      <img src="${item.image}">
+    </div> 
+      <ul class="info-cards">
         <li><strong>Nome:</strong>${item.name}</li>
         <li><strong>Gênero:</strong>${item.gender}</li>      
         <li><strong>Status:</strong>${item.status}</li>
@@ -23,6 +23,22 @@ function infoCardsTela (data) {
 infoCardsTela(data.results);
 
 
+
+filtragem.filtroGenero
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 /*function infoCardsTela (data) {                                         //função que vem do data
   document.getElementById('info-cards').innerHTML = data.map((item) => `  //vai no html e "joga" as info aonde foi colocado uma div = mapeia o data e pega por item
   <div class="texto-cards">                                               //classe para estilizar os cards
@@ -45,7 +61,8 @@ infoCardsTela(data.results); */                                           //impr
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-/* #Tentativa 2
+/* 
+#Tentativa 2
 const addPosts = async () => {
   const posts = await getposts()
   const postTemplate = posts.map(({id, title, body}) => `
@@ -64,6 +81,4 @@ postContainer.innerHTML += postTemplate
 /*Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver com a exibição dos dados na tela.**
 Com isto nos referimos basicamente à interação com o DOM. Operações como criação de nós, registro de manejadores de eventos 
 (*event listeners* ou *event handlers*) e etc.
-Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e pastas, sempre e quando a estrutura estiver clara para suas colegas.*/
-
-//--------------------------------------------------------------------------------------------------------------------------------
+Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e pastas, sempre e quando a estrutura estiver clara para suas colegas*/

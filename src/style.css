@@ -13,7 +13,7 @@ body {
 }
 
 /*estilização apenas do LOGO, imagem cabeçalho*/
-.imgLogo{
+.img-logo{
     height: 200px;
     width: 600px;
     margin: 0 auto;
@@ -86,12 +86,18 @@ button:hover{
     width: 100%;
 }
 
-.texto-cards{ /*fazer a estilização dos CARDS*/
-    list-style: none;
-    
+.card-img{ /*fazer a estilização dos CARDS*/
+    border: #FFF874;
+    border-style: solid;
+    margin-left: 20px;
+    background-color: #FFF874;
+    border-radius: 10px;
+    width: 40%;
 }
 
-.cards{ /*fazer a estilização das info dos cards*/
+.info-cards{ /*fazer a estilização das info dos cards*/
+    margin-left: 20px;
+    list-style: none;
     background-color: #97ce4c;
     border-radius: 10px;
     flex-direction: column;
