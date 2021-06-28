@@ -16,13 +16,15 @@ header {
 h1 {
     font-size: 50px;
     color: white;
-    margin-left: 40px
+    margin-left: 40px;
+    margin-right: 20px;
 }
 
 .menu-filter{
     display: flex;
     width: 40%;
     margin-right: 157px;
+    flex-wrap: wrap;
 }
 
 input, select, button {
@@ -38,6 +40,10 @@ input, select, button {
 
 select, button {
     width: 100px;
+}
+
+button:hover {
+    background: #05F2AF;
 }
 
 main {
@@ -66,21 +72,20 @@ input {
     margin: 18px;
     position: relative;
     flex: 1;
-    height: 200px;
+    height: 243px;
     min-width: 400px;
-    max-width: 400px;
+    max-width: 480px;
     max-height: 100%;
     border-radius: 10px;
     background-color: #E3DDE0;
 }
 
 img, .character_img {
-    height: 200px;
-    width: 200px;
     max-height:100%;
     max-width:100%;
     border-radius: 10px;
-
+    height: 245px;
+    width: -moz-fit-content;
 }
 
 img {
@@ -88,6 +93,7 @@ img {
 }
 
 .character_info {
+    margin-left: 10px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -107,18 +113,13 @@ h3 {
 
 p {
     margin: 0;
+    font-size: 16px;
 }
 
 #episodes {
     margin-top: 10px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-}
-
-.character_info{
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
 }
 
 .static {
@@ -133,14 +134,38 @@ p {
 }
 
 @media (max-width:800px) {
-    .static {
+    .static, .cards_container {
         flex: 100%;
-        max-width: 600px;
+        height: 490px;
+        display: flex;
+        flex-direction: column;
+        max-width: 280px;
+        min-width: 280px;
     }
 
-    .cards_container {
-        flex: 100%;
-        max-width: 600px;
+    img {
+        height: 260px;
+        width: 280px;
+        border-radius: 10px 10px 0 0;
     }
 
+    h1 {
+        font-size: 40px;
+    }
+    
+    .menu-filter{
+        margin-top: 10px;
+    }
+
+    #search, #status-filter, #gender-filter, #btn {
+        margin-bottom: 2px;
+    }
+
+    input {
+        width: 130px;
+    }
+
+    button:hover {
+        background: #05F2AF;
+    }
 }
