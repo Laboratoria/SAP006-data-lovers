@@ -1,10 +1,9 @@
-import { example } from './data.js';
-import {  } from './data.js';
+import { filterDirectorSelected, releaseYear} from './data.js';
+import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const animations = data.films
 const characters = data.films.people
 
-//console.log(animations.sort((a,b)=>(a.rt_score > b.rt_score? 1:-1)))
 
 function showPosterFilms(animations) {
     let photo = "";
@@ -49,20 +48,34 @@ function showCharacters(a) {
         </div> `
     }
     document.getElementById("poster-people").innerHTML = people;
+};
+
+const personagensFemininos = document.querySelector('[data-female-character]');    
+const melhoresFilmes = document.querySelector('[data-best-score]');
+const filmesAntigos = document.querySelector('[data-film-olders]');
+const filmesNovos = document.querySelector('[data-films-newest]');
+const selectDirector = document.getElementById("director");
+
+function filterDirector(){
+    const valueSelected = selectDirector.value
+    const selectedMovies = filterDirectorSelected(animations,valueSelected);
+    showPosterFilms(selectedMovies);
 }
 
 const oldestFilms = (evento) => {
 
     evento.preventDefault();
-    //chamar a funçao sort(com filmes mais antigos)
+        const valueSelected = filmesAntigos.value;
+        const filmesVelhosSelecionados = releaseYear(animations, valueSelected);
+        showPosterFilms(filmesVelhosSelecionados);
 };
 
 const newestFilms = (evento) => {
 
-
     evento.preventDefault();
-    
-    //chamar a funçao ordenaFilmes filmes mais antigos usando reverse
+        const valueSelected = filmesNovos.value;
+        const filmesNovosSelecionados = releaseYear(animations,valueSelected).reverse();
+        showPosterFilms(filmesNovosSelecionados);
 };
 
 const bestScore = (evento) => {
@@ -117,13 +130,42 @@ const selectDirector = () => {
 };
 */
 
-const personagensFemininos = document.querySelector('[data-female-character]')
-const melhoresFilmes = document.querySelector('[data-best-score]');
-const filmesAntigos = document.querySelector('[data-film-olders]');
-const filmesNovos = document.querySelector('[data-films-newest]');
-
-
-personagensFemininos.addEventListener('click', femaleCharacters);
 melhoresFilmes.addEventListener('click', bestScore);
 filmesAntigos.addEventListener('click', oldestFilms);
 filmesNovos.addEventListener('click', newestFilms);
+selectDirector.addEventListener("click", filterDirector);
+
+
+
+
+
+/*Aqui tentando dia 27/06:
+function filmesCrescent(animations, valueSelected){
+    if(valueSelected =filmesAntigos.value) {
+        const filmesVelhosSelecionados = releaseYear(animations, valueSelected);
+         return showPosterFilms(filmesVelhosSelecionados);
+    } else if(valueSelected =filmesNovos.value ) {
+        const filmesNovosSelecionados = releaseYear(animations, valueSelected).reverse();
+        return showPosterFilms(filmesNovosSelecionados);
+    }
+}
+
+ Dia 25/06
+function filterDirector() {
+    const directorSelected = directorSelect.value
+    const selectedDirector = selectDirector(animations, directorSelected)
+    showPosterFilms(selectedDirector);
+}
+
+//testar para gênero :
+function showFemale () {
+const especieSelecionada = people.filter(personagem => personagem.gender == "Female");
+especieSelecionada.forEach(personagem => {showPoster});
+
+} 
+
+console.log(animations.sort((a,b)=>(a.rt_score > b.rt_score ? 1:-1)))
+
+animations.forEach(function(date){
+  console.log(date.release_date);
+}); */ 
