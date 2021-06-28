@@ -22,7 +22,7 @@ import pokemon from './data/pokemon/pokemon.js';
     
    
    <div id="card" class="card">
-     <div class="card-container"> 
+     <div class="card-container" data-target="card"> 
         <div class="top-info id="top-info">
           <div class="title"> ${elem.name.toUpperCase()}</div>
           <div class="numberTitle">#${elem.num}</div>
