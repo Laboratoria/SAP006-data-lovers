@@ -13,7 +13,7 @@ function listingCards(itens) {
     const info = dataLol[champion]
 
     let imageCard = document.createElement("img");
-    imageCard = new Image(250, 200); // preciso fazer isso no css? 
+    //imageCard = new Image(250, 200); // preciso fazer isso no css? 
     imageCard.src = info.splash
 
 
