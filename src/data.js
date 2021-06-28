@@ -1,29 +1,25 @@
-export const filterData = (data, condicao, condicao2) => {
+export const filterData = (data, condition, condition2) => {
+
+  let filterResults = "";
   
-  
-  if(condicao !== "" && condicao2 !== ""){
-    const filterResults = data.results.filter(results => results.status === condicao && results.gender === condicao2);
+  if(condition === "" && condition2 === ""){
+    throw TypeError(alert("Valores dos filtros vazio"));
+  } 
+
+  else if(condition !== "" && condition2 !== ""){
+    filterResults = data.results.filter(results => results.status === condition && results.gender === condition2);
     return filterResults;
     }
   
-  else if(condicao2 !== ""){
-    const filterResults = data.results.filter(results => results.gender === condicao2);
+  else if(condition2 !== ""){
+    filterResults = data.results.filter(results => results.gender === condition2);
     return filterResults;
   }
   
-  else if(condicao !== ""){
-    const filterResults = data.results.filter(results => results.status === condicao);
+  else if(condition !== ""){
+    filterResults = data.results.filter(results => results.status === condition);
     return filterResults;
   }
-  
-  
-  //console.log(filterResults);
-  /*if (filterResults == "") {
-    throw TypeError("Valor de filtro vazio")
-  }
-  else {
-    return filterResults;
-  }*/
 };
 
 
