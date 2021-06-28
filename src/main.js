@@ -46,9 +46,8 @@ function listingCards(itens) {
       </div>
       <div class="introduction">${info.blurb}</div>
       <div class"tags">${info.tags}</div>
-      `;
-      }
-      showChampionInfo();
+      `
+      } showChampionInfo();
     });
 
     // FECHAR POP-UP //
