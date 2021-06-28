@@ -1,7 +1,9 @@
-import {filtroGenero} from './data.js';
+import {filtroGenero, calcularPorcentagem} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
 //console.log(data.filtrarGenero); 
+
+
 
 function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
@@ -23,23 +25,6 @@ function infoCardsTela (data) {
 infoCardsTela(data.results);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
 /*function infoCardsTela (data) {                                         //função que vem do data
   document.getElementById('info-cards').innerHTML = data.map((item) => `  //vai no html e "joga" as info aonde foi colocado uma div = mapeia o data e pega por item
   <div class="texto-cards">                                               //classe para estilizar os cards
@@ -62,8 +47,7 @@ infoCardsTela(data.results); */                                           //impr
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-/* 
-#Tentativa 2
+/* #Tentativa 2
 const addPosts = async () => {
   const posts = await getposts()
   const postTemplate = posts.map(({id, title, body}) => `
