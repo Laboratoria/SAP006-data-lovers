@@ -1,8 +1,9 @@
-import {filtroGenero, calcularPorcentagem} from './data.js';
+import {filtroGenero,} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
-//console.log(data.filtrarGenero); 
 
+
+//FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA
 function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
   <div>
@@ -23,20 +24,43 @@ function infoCardsTela (data) {
 infoCardsTela(data.results);
 
 
-
-
+//FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
 const selecaoGenero = document.querySelector(".selecao-genero");
-function printGenderFiltered(e) {
+function imprimirFiltroGenero(e) {
   return infoCardsTela(filtroGenero(data.results, e.target.value));
   }
-
-selecaoGenero.addEventListener("change", printGenderFiltered);
-
+selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 
 
-//------------------------------
+//FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
+const selecaoEspecie = document.querySelector(".selecao-especie");
+function imprimirFiltroEspecie(e) {
+  return infoCardsTela(filtroEspecie(data.results, e.target.value));
+  }
+selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
+
+
+//FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
+const selecaoStatus = document.querySelector(".selecao-status");
+function imprimirFiltroStatus(e) {
+  return infoCardsTela(filtroStatus(data.results, e.target.value));
+  }
+selecaoStatus.addEventListener("change", imprimirFiltroStatus);
+
+
+//FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
+const selecaoOrdem = document.querySelector(".selecao-ordem");
+function imprimirFiltroOrdem(e) {
+  return infoCardsTela(filtroStatus(data.results, e.target.value));
+  }
+selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------
         
-/*function infoCardsTela (data) {                                         //função que vem do data
+/*FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA!!
+function infoCardsTela (data) {                                         //função que vem do data
   document.getElementById('info-cards').innerHTML = data.map((item) => `  //vai no html e "joga" as info aonde foi colocado uma div = mapeia o data e pega por item
   <div class="texto-cards">                                               //classe para estilizar os cards
       <ul class="cards">                                                  //lista para importar as informações
@@ -51,7 +75,7 @@ selecaoGenero.addEventListener("change", printGenderFiltered);
   </div>                                                                  //fecha a div
 `)                                                                        
 }                                                   
-infoCardsTela(data.results); */                                           //imprimi na tela as informações
+infoCardsTela(data.results); */                                           //imprimir na tela as informações
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //console.log(data.results)

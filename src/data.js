@@ -1,4 +1,3 @@
-// Função de filtro cpm base no genero, utilizando reduce/arrow function
 
 export const  filtroGenero = (dataBase, condition) => {
   const resultado = dataBase.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
