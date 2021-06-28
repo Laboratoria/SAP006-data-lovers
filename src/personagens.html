@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataLovers</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="filmes.html">FILMES</a></li>
+            <li><a href="personagens.html">PERSONAGENS</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div>
+            <button class="button" data-female-character> Personagens femininos </button>
+            <button class="button" data-male-character>Personagens masculinos</button>
+            <button class="button" data-films-vehicles>Veículos</button>
+
+            <select name="select-specie" id="specie" class="button" data-film-specie>
+                <option value="specie" selected disabled> Espécies </option>
+                <option value="Human"> Humanos </option>
+                <option value="Totoro"> Totoros </option>
+                <option value="Cat"> Gatos </option>
+                <option value="Witch"> Bruxas </option>
+                <option value="Raccoon Dog"> Racoon dog </option>
+                <option value="Red elk"> Red Elk </option>
+                <option value="Spirit"> Espiritos </option>
+                <option value="Wolf"> Lobos </option>
+                <option value="Deity, Dragon"> Dragao </option>
+                <option value="Spirit of The White Fox"> Espirito da raposa branca </option>
+                <option value="Bird"> Pássaros </option>
+                <option value="Wizard"> Bruxos </option>
+                <option value="Witch/Human">Bruxa/humana</option>
+                <option value="Demon"> Demonios </option>
+                <option value="Human/Scarecrow">Espantalho/humano</option>
+                <option value="Arch-mage/Human"> Arch-mage </option>
+                <option value="Fish/Human">Peixe/humano</option>
+                <option value="Deity">Deity</option>
+                <option value="Borrower">Borrower</option>
+            </select>
+
+        </div>
+    </section>
+    <main class="poster-people" id="poster-people"></main>
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

@@ -11,19 +11,49 @@ const releaseYear = animations.sort((a, b) => {
     } return -1;
 });*/
 
-export function filtraScore(a, c) {
-  
-  const rt_score = a.films.filter(films => (films.rt_score >= c));
-  //organizar scores do maior(100 pontos) para o menor
+//export const rattingScore = animations.sort((a, b) => (a.rt_score > b.rt_score) ? 1 : -1); //por avaliação.
+//export const avaliacao = films.filter(films => (films.rt_score > 70));
 
-  return rt_score;
+
+/*
+const equal = (one, other) => films.filter(one) === JSON.stringify(other);
+
+const bestsScores = films.filter(film => (film.rt_score > "70"));
+
+export const filtraScore = () => {
+  
+  for (let a in films)
+    console.log(a.rt_score);
+
+  const rt_score = a.filter(a => (a.rt_score));
+  //const bola = a.filter(rt_score >= 70);
+  //if( a.rt_score >= 70);
+
+  
+
+  
+  //const rtScore = a.rt_score > b.rt_score ? 1: -1
+  //const rt_score = a.filter(a => (a.rt_score >= c));
+  //organizar scores do maior(100 pontos) para o menor
+  /*
+  const bestScore = rt_score.sort((a, b) => {
+    const highest = a.passed - a.year;
+    const lowest = b.passed - b.year;
+    return last > next ? -1 : 1;
+  });
+  
+  return rtScore
+ 
 };
+ */
 
 export function ordenaFilmes(a, b){
 
-  const releaseYear = releaseYear.sort((a.release_date > b.release_date) ? 1 : -1); 
+  const releaseYear = (animations) => animations.sort((a.release_date > b.release_date) ? 1 : -1); 
   //ordena por ano de lançamento.
   
+  //(animations.sort((a,b)=>(a.rt_score > b.rt_score? 1:-1)))
+
   return releaseYear
 };
 
