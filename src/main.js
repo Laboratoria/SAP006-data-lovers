@@ -1,6 +1,6 @@
 import data from './data/pokemon/pokemon.js';
 import { 
-  filtrarPelaGeração, ordenarPorNum, sortData, filterType
+  /*filtrarPelaGeração, */ordenarPorNum/*, sortData, filterType*/
 } from './data.js';
 import pokemon from './data/pokemon/pokemon.js';
 
@@ -15,26 +15,31 @@ import pokemon from './data/pokemon/pokemon.js';
 
  const displayPokes = (pokemonData) => {
    
- const pokeCard = document.getElementById('teste-card');
+ const pokeCard = document.getElementById('carousel');
  
  pokemonData.forEach((elem) => {
    pokeCard.innerHTML += `
     
-   <div class="card-container">
+   
    <div id="card" class="card">
-     <div id="front" class="front"> 
-        <div class="title"> ${elem.name.toUpperCase()}</div>
-        <div class="numberTitle">#${elem.num}</div>
-        <img class="picture" src=" ${elem.img}"></img>
-     </div>
-     <div id="back" class=" back">
+     <div class="card-container" data-target="card"> 
+        <div class="top-info id="top-info">
+          <div class="title"> ${elem.name.toUpperCase()}</div>
+          <div class="numberTitle">#${elem.num}</div>
+          <div class="maxHp">${elem.stats["max-hp"]}HP</div>
+        </div>
+        <div class="backgroundImg" id=""backgroundImg">
+          <img class="picture" src=" ${elem.img}"></img>
+        </div>
+        </div>
+        <div id="back" class=" back">
         <div class="infCardAbout">${elem.about}</div> 
         <div class="infCardAbout"<br>G<br>${elem.generation.name}</div> 
         <div class="infCardAbout">Tipo<br>${elem.egg}</div>
         <div class="infCardAbout infCard">Resistencia<br>${elem.resistant.join(', ')}</div>
+        </div>
      </div>
    </div>
- </div>
 `;
  });
 
@@ -48,7 +53,7 @@ import pokemon from './data/pokemon/pokemon.js';
 let ordernarPorNumeros;
 const ordenar = document.getElementById("maxcp");
 ordenar.addEventListener('click', () => {
-  const getpokes = document.getElementById('teste-card');
+  const getpokes = document.getElementById('carousel');
   getpokes.innerHTML = '';
   ordernarPorNumeros = ordenar;
 
@@ -56,24 +61,6 @@ ordenar.addEventListener('click', () => {
   displayPokes(pokemonList);
 
 });
-
-/*document.getElementById("type").addEventListener("click", pickType)
-
-function pickType(e){
-  e.preventDefault()
-  let select = document.getElementById("tipoPokemon");
-  let type = select.options[select.selectedIndex].text;
-  let condition = new String(type)
-  let result = methods.filter(data, condition)
-  
-  console.log(condition);
-
-
-
-}
-
-
-filterData(pokemonList, "electric")*/
 
 
 
@@ -117,27 +104,19 @@ filterData(pokemonList, "electric")*/
 
 
 /*
-
 const api = "./data/pokemon/pokemon.json"
-
 async function getJson() {
   const response = await fetch(api);
-
   const data = await response.json();
   //console.log(data);
   let allPokemons = data.pokemon;
   //console.log(allPokemons[12].weaknesses[3]);
   document.querySelector("#teste").innerText = allPokemons[2].name
   document.querySelector("#infos").innerText = allPokemons[2].about
-
   let img = querySelector("#img")
   img.setAttribute("src", allPokemons.innerText)
-
-
 }
-
 getJson()
-
 */
 
 

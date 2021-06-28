@@ -1,13 +1,13 @@
 //import pokemon from "./data/pokemon/pokemon"
 import data from './data/pokemon/pokemon.js';
 
-const filtrarPelaGeração = (data, valor) => {
+/*const filtrarPelaGeração = (data, valor) => {
   const filtrarPokemonPelaGeracao = data.filter(
     pokemon => pokemon.generation.name === valor,
 
   );
   return filtrarPokemonPelaGeracao;
-};
+};*/
 
 
 const ordenarPorNum = (data, valor) => {
@@ -44,7 +44,7 @@ const ordenarPorNum = (data, valor) => {
 
 
 
-let maxCp = []
+/*let maxCp = []
 
 function sortData(dados, sortBy, sortOrder){
   for(let i=0; i <= data.length; i++){   
@@ -54,27 +54,26 @@ function sortData(dados, sortBy, sortOrder){
   }
   
 }
-/*sortData(data.pokemon, "MaxCP", "decrescente")*/
+sortData(data.pokemon, "MaxCP", "decrescente")
 
 function numericOrder(a, b){
   return a - b
-}
+}*/
 
 
 
-const filterType = (data, condition) => {
-  let typeSearcher = []
-  let typeList = []
-  for (let j=0; j <= data.length; j++){
-    typeSearcher = data[j]["type"]
-    if(typeSearcher.includes(condition)){
-      typeList = data[j]["name"]
+/*const filterType = (data, condition) => {
+  data.forEach((data) =>{
+    let result = data["type"].includes(condition)
+    if(result === true){
+      console.log(data["name"])
     }
-  }
-  return filterType
-}
+  })
+}    
+
+filterType(pokemonList, "fairy")*/
 
 
 export {
-  filtrarPelaGeração, ordenarPorNum, sortData, filterType
+  /*filtrarPelaGeração, */ordenarPorNum/*, sortData, filterType*/
 };
