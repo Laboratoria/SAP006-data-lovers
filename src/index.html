@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="I=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="I=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>League of Legends - Find Your Champion</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div id="root"></div>
-
     <header class="header-img">
-      <img src="./img/lol-header-img.png" alt="Campeã do LoL">
+      <img src="./img/lol-header-img.png" alt="Campeã do LoL" />
     </header>
 
     <main class="container">
-
       <header class="nav">
-        <input type="search" name="search" class="search" id="search" placeholder="BUSCAR">
+      <input type="search" name="search" class="search" id="search" placeholder="BUSCAR">
 
         <ul class="categorias">
           <li><a href="#">TODOS</a></li>
@@ -36,19 +33,28 @@
           <div class="dropdown-content">
             FÁCIL
           </div>
-        
         </div>
 
       </header>
 
-      <ul style="list-style: none;" class="cards">
-      </ul>
+    <ul class="cards"></ul>
+
+    <div class="popup-wrapper">
+      <div class="popup">
+        <div class="popup-close">x</div>
+        <div class="popup-content">
+          <h2 class="champion-name">Nome do Champion</h2>
+          <h3 class="champion-title">Frase de Titulo do Campeão</h3>
+          <p class="champion-data">Dados do Campeão</p>
+        </div>
+      </div>
+    </div>
+
 
     </main>
 
-    <footer>
-    </footer>
-    
+    <footer></footer>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
