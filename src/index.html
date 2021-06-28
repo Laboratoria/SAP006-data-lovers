@@ -13,49 +13,52 @@
           <img class="imgLogo" src="img/logo.png" alt="Logo cabeçalho" title="Rick and Morty"> <!--logo no cabeçalho-->
         </section>
       </header>
-         
-      <section class="btn-filtro">
-        <select> <!--SELECT faz a opção de botão de menu-->
-          <option value="genero">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>
-          <option value="unknown">Indefinido</option>
-        </select>
-        <select > <!--SELECT faz a opção de botão de menu-->
-          <option value="especie">Espécie</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-          <option value="alien">Alien</option>
-          <option value="animal">Animal</option>
-          <option value="humano">Humano</option>
-          <option value="Humanóide">Humanóide</option>
-        </select>
-        <select> <!--SELECT faz a opção de botão de menu-->
-          <option value="status">Status</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-          <option value="vivo">Vivo</option>
-          <option value="morto">Morto</option>
-          <option value="indefinido">Indefinido</option>
-        </select>
-        <select> <!--SELECT faz a opção de botão de menu-->
-          <option value="ordem">Ordem</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-          <option value="A-Z">A-Z</option>
-          <option value="Z-A">Z-A</option>
-          <option value="principal">Principais</option>
-        </select>
-        <input class="pesquisar" id="text-search" type="search" placeholder="Search...">  <!--campo para pesquisas-->
-        <button id="btn-limpar" class="limpar" type="reset">Limpar</button> <!--TYPE="RESET" ele limpa o conteúdo-->
-      </section>
-      <section>
-        <!--criar os cards aqui-->
+      <main>  
+        <section class="btn-filtro">
+          <select> <!--SELECT faz a opção de botão de menu-->
+            <option value="genero">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="unknown">Indefinido</option>
+          </select>
+          <select > <!--SELECT faz a opção de botão de menu-->
+            <option value="especie">Espécie</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="alien">Alien</option>
+            <option value="animal">Animal</option>
+            <option value="humano">Humano</option>
+            <option value="Humanóide">Humanóide</option>
+          </select>
+          <select> <!--SELECT faz a opção de botão de menu-->
+            <option value="status">Status</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="vivo">Vivo</option>
+            <option value="morto">Morto</option>
+            <option value="indefinido">Indefinido</option>
+          </select>
+          <select> <!--SELECT faz a opção de botão de menu-->
+            <option value="ordem">Ordem</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+            <option value="principal">Principais</option>
+          </select>
+          <input class="pesquisar" id="text-search" type="search" placeholder="Search...">  <!--campo para pesquisas-->
+          <button id="btn-limpar" class="limpar" type="reset">Limpar</button> <!--TYPE="RESET" ele limpa o conteúdo-->
+        </section>
+        <section id="imprime-porcentagem"></section>
+        <section id="cards-impressos">
+          <!--criar os cards aqui-->
 
-
-      </section>
+        </section>   
+      </main>
 
       <img class="fundo-direita" src="img/direita.png">
       <img class="fundo-esquerda" src="img/esquerda.png">
 
+      <footer class="footer"> Desenvolvido por 
+        <p> <a style="color:aqua" href="https://github.com/biancacristinaalves" target="_blank">Bianca Alves</a> e 
+        <a style="color:aqua" href="https://github.com/ThalitaNeves95" target="_blank">Thalita Neves</a> </p>
+      </footer>
+
       <script src="main.js" type="module"></script> <!--link com JS-->
     </body>
-    <footer class="footer"> Desenvolvido por 
-      <p> <a style="color:aqua" href="https://github.com/biancacristinaalves" target="_blank">Bianca Alves</a> e 
-      <a style="color:aqua" href="https://github.com/ThalitaNeves95" target="_blank">Thalita Neves</a> </p>
-    </footer>
+    
 </html>

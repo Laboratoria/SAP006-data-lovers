@@ -1,9 +1,18 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
+// Função de filtro cpm base no genero, utilizando reduce/arrow function
+export const  filtroGenero = (dataBase, condition) => {
+  const resultado = dataBase.filter((inicial) => inicial.gender === condition);
+  return resultado;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+export const calcularPorcentagem = (data, dataBase, condition) => data.reduce((inicial, total) => {
+  return inicial + (total[dataBase] === condition);
+},0)
+
+
+
+
+
+
+
+
