@@ -1,48 +1,23 @@
 // Função de filtro com base no genero, especie, status, ordem - utilizando filter()
 export const  filtroGenero = (dataBase, condition) => {
-  const resultadoGenero = dataBase.filter((personagem) => personagem.gender === condition);
+  const resultadoGenero = dataBase.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
   return resultadoGenero;
 };
 
 export const  filtroEspecie = (dataBase, condition) => {
-  const resultadoEspecie = dataBase.filter((personagem) => personagem.species === condition);
+  const resultadoEspecie = dataBase.filter((personagem) => personagem.species.toLowerCase() === condition.toLowerCase());
   return resultadoEspecie;
 };
 
 export const  filtroStatus = (dataBase, condition) => {
-  const resultadoStatus = dataBase.filter((personagem) => personagem.status === condition);
+  const resultadoStatus = dataBase.filter((personagem) => personagem.status.toLowerCase() === condition.toLowerCase());
   return resultadoStatus;
 };
 
-/*export const statisticData = (dataBase, data) => {
-  const percentage = Math.round((data.length * 100) / dataBase.length);
-  return percentage;
+export const calculoDePorcentagem = (dataBase, data) => {
+  const porcentagem = Math.round((data.length * 100) / dataBase.length);
+  return porcentagem;
 };
-
-const filtragem = {
-  filtragemGenero:function (dataBase, condition){
-    const resultadoGenero = dataBase.filter((inicial) => inicial.gender === condition);
-  return resultadoGenero;
-  },
-  filtragemEspecie:function (dataBase, condition){
-    const resultadoEspecie = dataBase.filter((inicial) => inicial.species === condition);
-  return resultadoEspecie;
-  },
-  filtragemPorStatus:function (dataBase, condition) {
-    const resultadoResult = dataBase.filter((item) => item.status === condition);
-    return filterResult;
-}
-
-export default filtragem;*/
-
-
-
-
-
-
-
-
-
 
 
 
