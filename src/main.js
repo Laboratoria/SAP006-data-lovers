@@ -2,7 +2,13 @@ import { filterDirectorSelected, releaseYear} from './data.js';
 import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const animations = data.films
-const characters = data.films.people
+const characters = data.films.reduce(function(chars, film){ 
+            
+    // [...chars, ...film.people]
+    return chars.concat(film.people)
+
+}, [])
+console.log(characters)
 
 
 function showPosterFilms(animations) {
@@ -26,11 +32,12 @@ function showPosterFilms(animations) {
     document.getElementById("poster-cards").innerHTML = photo;
 }
 
-showPosterFilms(animations);
+//showPosterFilms(animations);
 
 function showCharacters(a) {
     let people = "";
     for (let item of a) {
+
         people += `
         <div class="flip-card">
         <div class="flip-card-inner">
@@ -49,6 +56,7 @@ function showCharacters(a) {
     }
     document.getElementById("poster-people").innerHTML = people;
 };
+showCharacters(characters);
 
 const personagensFemininos = document.querySelector('[data-female-character]');    
 const melhoresFilmes = document.querySelector('[data-best-score]');
@@ -90,7 +98,7 @@ const bestScore = (evento) => {
 
 const femaleCharacters = () => {
 
-    showCharacters(characters);
+    
 }
 
 /*
