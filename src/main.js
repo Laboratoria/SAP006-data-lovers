@@ -9,15 +9,15 @@ function listingCards(itens) {
   const cardPack = document.querySelector("ul.cards");
   cardPack.innerHTML = "";
 
-  for (let type in itens) {
-    // const cardList = dataLol[type];
+  for (let champion in itens) {
+    const info = dataLol[champion]
 
     let imageCard = document.createElement("img");
     imageCard = new Image(180, 250); // preciso fazer isso no css?
-    imageCard.src = dataLol[type].splash;
+    imageCard.src = info.splash;
 
     let textCard = document.createElement("h3"); // textCard.class = "t"
-    textCard.textContent = `${type}`;
+    textCard.textContent = `${champion}`;
 
     const card = document.createElement("li");
     card.appendChild(imageCard);
@@ -26,11 +26,11 @@ function listingCards(itens) {
     cardPack.appendChild(card);
 
     // POP-UP //
+    const popup = document.querySelector(".popup-wrapper");
+
     card.addEventListener("click", () => {
       popup.style.display = "block";
     });
-
-    const popup = document.querySelector(".popup-wrapper");
 
     popup.addEventListener("click", (event) => {
       const classNameOfClickedElement = event.target.classList[0];
