@@ -43,6 +43,19 @@ const ordenarPorNum = (data, valor) => {
 };
 
 
+const ordenarPorNome = (data, valor) => {
+  if (valor === 'A-Z') {
+    data.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
+    data.sort((a, b) => b.name.localeCompare(a.name));
+  }
+ 
+};
+
+
+
+
+
 
 /*let maxCp = []
 
@@ -75,5 +88,5 @@ filterType(pokemonList, "fairy")*/
 
 
 export {
-  /*filtrarPelaGeração, */ordenarPorNum/*, sortData, filterType*/
+  /*filtrarPelaGeração, */ordenarPorNum,/*, sortData, filterType*/ordenarPorNome
 };

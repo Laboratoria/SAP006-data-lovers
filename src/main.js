@@ -1,6 +1,7 @@
 import data from './data/pokemon/pokemon.js';
+
 import { 
-  /*filtrarPelaGeração, */ordenarPorNum/*, sortData, filterType*/
+  /*filtrarPelaGeração, */ordenarPorNum, ordenarPorNome/*, sortData, filterType*/
 } from './data.js';
 import pokemon from './data/pokemon/pokemon.js';
 
@@ -55,7 +56,7 @@ const ordenar = document.getElementById("maxcp");
 ordenar.addEventListener('click', () => {
   const getpokes = document.getElementById('carousel');
   getpokes.innerHTML = '';
-  ordernarPorNumeros = ordenar;
+  ordernarPorNumeros = ordenar.value;
 
   ordenarPorNum(pokemonList, ordernarPorNumeros);
   displayPokes(pokemonList);
@@ -64,7 +65,17 @@ ordenar.addEventListener('click', () => {
 
 
 
+let ordenarPorNomes;
+const ordenarNomes = document.getElementById("name");
+ordenarNomes.addEventListener('click', () => {
+  const getpokes = document.getElementById('carousel');
+  getpokes.innerHTML = '';
+  ordenarPorNomes = ordenarNomes.value;
 
+  ordenarPorNome(pokemonList, ordenarPorNomes);
+  displayPokes(pokemonList);
+
+});
 
 
 
@@ -246,7 +257,7 @@ let teste = new MeuCarousel({
   selector: 'carousel',
   slidesPerView: 4,
   spaceBetween: 20,
-  loop: true,
+ // loop: true,
   timePerPage: 2000,
   stopOnMouseHover: true
 })
