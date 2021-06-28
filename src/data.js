@@ -1,15 +1,9 @@
 // Função de filtro cpm base no genero, utilizando reduce/arrow function
 
-const filtragem = {
-  filtragemGenero:function (dataBase, condition){
-    const resultado = dataBase.filter((inicial) => inicial.gender === condition);
+export const  filtroGenero = (dataBase, condition) => {
+  const resultado = dataBase.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
   return resultado;
-  },
-  //outra função
-}
-
-export default filtragem;
-
+};
 
 export const calcularPorcentagem = (data, dataBase, condition) => data.reduce((inicial, total) => {
   return inicial + (total[dataBase] === condition);
@@ -17,9 +11,9 @@ export const calcularPorcentagem = (data, dataBase, condition) => data.reduce((i
 
 
 
-
-
-
+//(data.length / database.length) * 100 - calculo de % de um grupo de elementos
+//hora de exibir na tela, colocar a %
+//quantidade de personagem que vai filtrar / por quantidade total de personagens do filtro = % da quantidade *100
 
 
 

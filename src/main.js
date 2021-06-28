@@ -1,4 +1,4 @@
-import filtragem from './data.js';
+import {filtroGenero, calcularPorcentagem} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
 //console.log(data.filtrarGenero); 
@@ -24,20 +24,17 @@ infoCardsTela(data.results);
 
 
 
-filtragem.filtroGenero
+
+const selecaoGenero = document.querySelector(".selecao-genero");
+function printGenderFiltered(e) {
+  return infoCardsTela(filtroGenero(data.results, e.target.value));
+  }
+
+selecaoGenero.addEventListener("change", printGenderFiltered);
 
 
 
-
-
-
-
-
-
-
-
-
-
+//------------------------------
         
 /*function infoCardsTela (data) {                                         //função que vem do data
   document.getElementById('info-cards').innerHTML = data.map((item) => `  //vai no html e "joga" as info aonde foi colocado uma div = mapeia o data e pega por item
@@ -58,24 +55,6 @@ infoCardsTela(data.results); */                                           //impr
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //console.log(data.results)
-
-//--------------------------------------------------------------------------------------------------------------------------------
-
-/* 
-#Tentativa 2
-const addPosts = async () => {
-  const posts = await getposts()
-  const postTemplate = posts.map(({id, title, body}) => `
-  <div class="post">
-  <div class="number>${id}</div>
-  <div class="post-info">
-  <h2 class="post-title>${title}</h2>
-  <p class="post-body">${body}</p>
-  </div>
-  </div>
-` ).join('') //tira a virgula na divisão das info
-postContainer.innerHTML += postTemplate  
-} */
 
 //--------------------------------------------------------------------------------------------------------------------------------
 /*Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver com a exibição dos dados na tela.**
