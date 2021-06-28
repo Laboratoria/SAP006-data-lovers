@@ -21,12 +21,12 @@ import pokemon from './data/pokemon/pokemon.js';
    pokeCard.innerHTML += `
     
    
-   <div id="card" class="card" data-target="card">
+   <div id="card" class="card">
      <div class="card-container"> 
-        <div class="flex-info id="flex-info">
+        <div class="top-info id="top-info">
           <div class="title"> ${elem.name.toUpperCase()}</div>
           <div class="numberTitle">#${elem.num}</div>
-          <div class="maxHp">MAX HP:${elem.stats["max-hp"]}</div>
+          <div class="maxHp">${elem.stats["max-hp"]}HP</div>
         </div>
         <div class="backgroundImg" id=""backgroundImg">
           <img class="picture" src=" ${elem.img}"></img>

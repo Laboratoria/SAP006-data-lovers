@@ -98,15 +98,15 @@
   flex-shrink: 0;
 }
 
-#flex-info{
-  display: inline-block;
+#top-info{
+  display: flex;
 }
 
-.title, .numberTitle, .maxHp{
-  font-size: 5px;
+.maxHP{
+  text-align: right;
 }
 
-.img {
+/*.img {
   display: flex;
   position: absolute;
   margin-inline: auto;
@@ -117,7 +117,7 @@
   border: 5px yellow outset;
   margin-top: 20px;
   margin-left: 8px;
-}
+}*/
 
 /*.descricao {
   display: flex;
