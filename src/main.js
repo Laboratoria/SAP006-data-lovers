@@ -10,7 +10,7 @@ function listingCards(itens) {
   cardPack.innerHTML = "";
 
   for (let champion in itens) {
-    const info = dataLol[champion]
+    const info = dataLol[champion];
 
     let imageCard = document.createElement("img");
     imageCard = new Image(180, 250); // preciso fazer isso no css?
@@ -22,7 +22,6 @@ function listingCards(itens) {
     const card = document.createElement("li");
     card.appendChild(imageCard);
     card.appendChild(textCard);
-    // console.log(card);
     cardPack.appendChild(card);
 
     // POP-UP //
@@ -32,11 +31,33 @@ function listingCards(itens) {
       popup.style.display = "block";
     });
 
+    // CONTEUDO DO POP-UP //
+    const popUpContent = document.querySelector(".popup-content");
+
+    card.addEventListener("click", () => {
+      function showChampionInfo() {
+        popUpContent.innerHTML += `
+      <img src"${info.img}">
+      <h2 class="champion-name">${info.id}</h2>
+      <h3 class="champion-title">${info.title}</h3>
+      <div class="champion-info">
+      Attack: ${info.info.attack} | Defense: ${info.info.defense} | 
+      Magic: ${info.info.magic} | Difficulty: ${info.info.difficulty}
+      </div>
+      <div class="introduction">${info.blurb}</div>
+      <div class"tags">${info.tags}</div>
+      `
+      } showChampionInfo();
+    });
+
+    // FECHAR POP-UP //
+
     popup.addEventListener("click", (event) => {
       const classNameOfClickedElement = event.target.classList[0];
-      const classNames = ["popup-close", "popup-wrapper", "popup-link"];
+      const classNames = ["popup-close", "popup-wrapper"];
       const shoudlClosePopUp = classNames.some(
-        (classNames) => classNames === classNameOfClickedElement);
+        (classNames) => classNames === classNameOfClickedElement
+      );
       if (shoudlClosePopUp) {
         popup.style.display = "none";
       }
@@ -44,16 +65,17 @@ function listingCards(itens) {
   }
 }
 
+// // INFORMAÇÕES DENTRO DO POP-UP //
 
-// INFORMAÇÕES DENTRO DO POP-UP //
+// const popUpContent = document.getElementsByClassName("popup-content");
 
-// const popUpName = document.getElementsByClassName("champion-name");
-//   function showChampionName () {
-//     popUpName.innerHTML += `
-//     <h2 class="champion-name">${dataLol[type].name}</h2>
+//   function showChampionInfo () {
+//     popUpContent.innerHTML += `
+//     <img src="${info.splash}">
+//     <h2 class="champion-name">${info.id}</h2>
+//     <h3 class="champion-title">${info.title}</h3>
+//     <p class="champion-data">${info.info}</p>
+//     <div class="introduction">${info.blurb}</div>
+//     <div class"tags">${info.tags}</div>
 //     `
-//   } console.log(showChampionName);
-
-// const popUpTitle = document.getElementsByClassName("champion-title");
-
-// const popUpData = document.getElementsByClassName("champion-data");
+//   } console.log(showChampionInfo);
