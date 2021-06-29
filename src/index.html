@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img src="./img/logo.jpg" alt="studio ghibli logo">
+  </header>
+  <aside>
+    <h3>Curiosidades</h3>
+    <ul>
+      <li>
+        <span class="icon"></span>
+        <span class="title">Veículo</span>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <span class="title">Lugares</span>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <span class="title">Trilha Sonora</span>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <span class="title">Assista</span>
+      </li>
+    </ul>
+  </aside>
+  <main>
+    <header>
+      <nav>
+        <label for="film">Filmes:</label>
+        <select name="films" id="film" class="select-films">
+          <option value="">--Selecione uma opção--</option>
+          <option class="select-films" value="todos">Todos</option>
+          <option class="select-films" value="score">Nota</option>
+          <option class="select-films" value="date">Lançamento</option>
+        </select>
+
+        <label for="character">Personagens:</label>
+        <select name="characters" id="character" class="select-character">
+          <option value="">--Selecione uma opção--</option>
+          <option class="select-character" value="todos">Todos</option>
+          <option class="select-character" value="female">Feminino</option>
+          <option class="select-character" value="male">Masculino</option>
+          <option class="select-character" value="specie">Especie</option>
+        </select>
+
+        <label for="director">Diretores:</label>
+        <select name="directors" id="director" class="select-director">
+          <option value="">--Selecione uma opção--</option>          
+          <option class="select-director" value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option class="select-director" value="Isao Takahata">Isao Takahata</option>
+          <option class="select-director" value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+          <option class="select-director" value="Hiroyuki Morita">Hiroyuki Morita</option>
+          <option class="select-director" value="Gorō Miyazaki">Gorō Miyazaki</option>
+          <option class="select-director" value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+        </select>
+
+        <label for="producer">Produtores:</label>
+        <select name="producers" id="producer" class="select-producer">
+          <option value="">--Selecione uma opção--</option>          
+          <option class="select-producer" value="Isao Takahata">Isao Takahata</option>
+          <option class="select-producer" value="Toshio Suzuki">Toshio Suzuki</option>
+          <option class="select-producer" value="Hayao Miyazaki">Hayao Miyazaki</option>
+        </select>
+      </nav>
+    </header>
+    <section>
+
+    </section>
+
+  </main>
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
