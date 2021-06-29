@@ -33,7 +33,7 @@ selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
-const selecaoEspecie = document.querySelector(".selecao-especie");
+const selecaoEspecie = document.querySelector(".selecao-especies");
 function imprimirFiltroEspecie(e) {
   return infoCardsTela(filtroEspecie(data.results, e.target.value));
   }
