@@ -1,4 +1,4 @@
-import { filterDirectorSelected, releaseYear} from './data.js';
+import { filterDirectorSelected, releaseYear, order} from './data.js';
 import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const animations = data.films
@@ -8,9 +8,39 @@ const characters = data.films.reduce(function(chars, film){
     return chars.concat(film.people)
 
 }, [])
-console.log(characters)
+
+//console.log(characters)
+const alphabeticOrderAz = document.querySelector('[data-az-order]');
+const alphabeticOrderZa = document.querySelector('[data-za-order]');
+
+const orderAz = (evento) => {
+    evento.preventDefault();
+    const valueSelected = alphabeticOrderAz.value;
+    const azSelected = order(characters, valueSelected);
+    console.log(azSelected);//aqui no lugar de console.log chamar showCharacters;
+}
+
+const orderZa = (evento) => {
+    evento.preventDefault();
+    const valueSelected = alphabeticOrderZa.value;
+    const zaSelected = order(characters, valueSelected).reverse();
+    console.log(zaSelected);
+    
+}
+alphabeticOrderAz.addEventListener("click", orderAz);
+alphabeticOrderZa.addEventListener("click", orderZa); 
+
+const newestFilms = (evento) => {
+
+    evento.preventDefault();
+        const valueSelected = filmesNovos.value;
+        const filmesNovosSelecionados = releaseYear(animations,valueSelected).reverse();
+        showPosterFilms(filmesNovosSelecionados);
+};
 
 
+
+/*
 function showPosterFilms(animations) {
     let photo = "";
     for (let item of animations) {
@@ -32,7 +62,7 @@ function showPosterFilms(animations) {
     document.getElementById("poster-cards").innerHTML = photo;
 }
 
-//showPosterFilms(animations);
+showPosterFilms(animations);
 
 function showCharacters(a) {
     let people = "";
@@ -56,8 +86,9 @@ function showCharacters(a) {
     }
     document.getElementById("poster-people").innerHTML = people;
 };
-showCharacters(characters);
+//showCharacters(characters);
 
+const alphabeticOrder = document.querySelector('[menu-order]');
 const personagensFemininos = document.querySelector('[data-female-character]');    
 const melhoresFilmes = document.querySelector('[data-best-score]');
 const filmesAntigos = document.querySelector('[data-film-olders]');
@@ -136,7 +167,7 @@ const selectDirector = () => {
  const selecionaDiretor = document.querySelector('[data-director]');
  selecionaDiretor.addEventListener('click', selectDirector);
 };
-*/
+
 
 melhoresFilmes.addEventListener('click', bestScore);
 filmesAntigos.addEventListener('click', oldestFilms);
@@ -147,7 +178,7 @@ selectDirector.addEventListener("click", filterDirector);
 
 
 
-/*Aqui tentando dia 27/06:
+Aqui tentando dia 27/06:
 function filmesCrescent(animations, valueSelected){
     if(valueSelected =filmesAntigos.value) {
         const filmesVelhosSelecionados = releaseYear(animations, valueSelected);
