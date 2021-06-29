@@ -1,9 +1,8 @@
-import { filtrar, sortData, media } from './data.js';
+import { filterData, sortData} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
 let POKEMONS = data.pokemon;
-
 
 function exibir(itens) {
   document.getElementById("listaPokemon").innerHTML = "";
@@ -20,7 +19,7 @@ const type = document.getElementById('type');
 
 type.addEventListener("change", function () {
   if (type.value !== "") {
-    POKEMONS = filtrar(data.pokemon, type.value)
+    POKEMONS = filterData(data.pokemon, type.value)
   }
   else {
     POKEMONS = data.pokemon;
@@ -37,10 +36,5 @@ order.addEventListener("change", function (e) {
   const orderValues = order.value.split("/");
   const sortnames = sortData(POKEMONS, orderValues[0], orderValues[1]);
   exibir(sortnames);
-  
-})
-
-
-
-
+});
 
