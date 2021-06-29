@@ -1,5 +1,6 @@
 import { filterData, sortData} from './data.js';
 import data from './data/pokemon/pokemon.js';
+//import { media } from './data.js';
 
 
 let POKEMONS = data.pokemon;

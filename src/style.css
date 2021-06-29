@@ -27,3 +27,25 @@ select {
    width: 60px;
    font-size: 18px;
 }
+.card {
+  box-sizing: border-box;
+  width: 300px;
+  height: 400;
+  background-color: rgb(241, 241, 66);
+  border-radius: 10px;
+  border:10px solid rgba(184,135,11,0.455);
+  display: 
+}
+.titulos, .indices, .tipos {
+  margin:10px;
+  display: flex;
+  justify-content: space-between;
+}
+.card img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+.card p:last-child {
+  text-align: center;
+}
