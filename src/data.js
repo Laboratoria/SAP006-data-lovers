@@ -32,20 +32,6 @@ export const sortData = (data, sortBy, sortOrder) => {
   return allpokemons;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const media = function(data) {
   data.map(function(item){
    let medCal = (parseInt(item.stats["base-attack"])) + parseInt(item.stats["base-defense"]) + parseInt(item.stats["base-stamina"])/3
