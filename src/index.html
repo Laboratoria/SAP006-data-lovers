@@ -7,11 +7,42 @@
   </head>
   <body>
 
-    <section>
+
+     <section>
+      <input type="text" id="characters">
+     </section>
+
+     <section>
+
+       <button id = "ordenar">Ordenar A-Z</button>
+       <button id = "desordenar">Ordenar Z-A</button>
+    
+    <div class = status>
+      <select name="status">
+        <option id = "status" class = "status" value="Status">Status</option>
+        <option id = "alive" class = "alive" value="Alive">Alive</option>
+        <option id = "dead" value="Dead">Dead</option>
+        <option id = "unknow" value="Unknown">Unknown</option>
+
+      </select>
+    </div>
+
+     <select name="especie">
+
+       <option value="especie">Especie</option>
+       <option value="human">Human</option>
+       <option value="humanoid">Humanoid</option>
+       <option value="alien">Alien</option>
+       <option value="animal">animal</option>
+      
+     </select>
 
     </section>
     
     <div id="root"></div>
+
     <script src="main.js" type="module"></script>
+    <script src="./data.js" type="module"></script>
+
   </body>
 </html>

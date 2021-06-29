@@ -1,9 +1,46 @@
-// estas funciones son de ejemplo
+export const filterData = (data, condition) => {
+  
+  const statusMorto= data.results.filter(results => results.status === condition)
+    if(statusMorto == ""){
+      throw TypeError ("Selecione um filtro") 
+    }  
+    else{
+      return statusMorto;
+    }
+    
+      
+};
 
-export const example = () => {
+console.log(filterData(status, "Dead")); 
+  
+
+
+
+
+
+
+
+
+
+    
+     
+
+  
+
+  
+
+ 
+ 
+
+
+
+
+
+/*export const example = () => {
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
-};
+};*/
+
