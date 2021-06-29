@@ -5,11 +5,17 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   
-    
+    <header>
+      <div class="links">
+        <a href="./index.html">HOME</a>
+        <a href="https://pt.wikipedia.org/wiki/Rick_and_Morty" target="_blank">SOBRE A SÉRIE</a>
+      </div>
+    </header>
   </head>
   <body>
 
-    <section>
+    <main>
+
       <section>
         <input type="text" id="characters">
       </section>
@@ -19,7 +25,8 @@
         <button id = "ordenar">Ordenar A-Z</button>
         <button id = "desordenar">Ordenar Z-A</button>
       
-      
+      <div class = status>
+
         <select   id= "status" name="status">
           <option id = "statusOption" class = "status" value="Status">Status</option>
           <option id = "alive" class = "alive" value="Alive">Alive</option>
@@ -27,7 +34,7 @@
           <option id = "unknow" value="unknown">Unknown</option>
 
         </select>
-    
+      </div>
 
       <select id = "especie" name="especie">
 
@@ -39,9 +46,16 @@
         
       </select>
 
-    </section>
+      </section>
 
       
+      <div id="get-cards"></div>
+   
+    <footer>
+      <p>
+        @Bruna Calixto e Carmen Gozza- 2021
+      </p>
+    </footer>
 
     <script src="main.js" type="module"></script>
     <script src="./data.js" type="module"></script>
