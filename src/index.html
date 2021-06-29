@@ -18,27 +18,32 @@
           <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
           <button class="btn" type="reset">Limpar</button><br> <!--TYPE="RESET" ele limpa o conteúdo-->
 
-          <select id="gender"> <!--SELECT faz a opção de botão de menu-->
-            <option value="genero">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-            <option class="selecao-genero" value="masculino">Masculino</option>
-            <option class="selecao-genero" value="feminino">Feminino</option>
-            <option class="selecao-genero" value="unknown">Indefinido</option>
+          <select class="selecao-genero"> <!--SELECT faz a opção de botão de menu, classe para-->
+            <option value="">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <option value="unknown">Indefinido</option>
           </select>
-          <select > <!--SELECT faz a opção de botão de menu-->
-            <option value="especie">Espécie</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-            <option class="selecao-especie" value="alien">Alien</option>
-            <option class="selecao-especie" value="animal">Animal</option>
-            <option class="selecao-especie" value="humano">Humano</option>
-            <option class="selecao-especie" value="humanoide">Humanóide</option>
+          
+          <select class="selecao-especies"> <!--SELECT faz a opção de botão de menu-->
+            <option value="">Espécie</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="alien">Alien</option>
+            <option value="animal">Animal</option>
+            <option value="human">Humano</option>
+            <option value="humanoid">Humanóide</option>
+            <option value="mytholog">Mytholog</option>
+            <option value="unknown">Indefinido</option>
           </select>
-          <select> <!--SELECT faz a opção de botão de menu-->
-            <option value="status">Status</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-            <option class="selecao-status" value="vivo">Vivo</option>
-            <option class="selecao-status" value="morto">Morto</option>
-            <option class="selecao-status" value="indefinido">Indefinido</option>
+
+          <select class="selecao-status"> <!--SELECT faz a opção de botão de menu-->
+            <option value="">Status</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="alive">Vivo</option>
+            <option value="dead">Morto</option>
+            <option value="unknown">Indefinido</option>
           </select>
-          <select> <!--SELECT faz a opção de botão de menu-->
-            <option value="ordem">Ordem</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+
+          <select class="selecao-ordem"> <!--SELECT faz a opção de botão de menu-->
+            <option value="">Ordem</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
             <option value="AZ">A-Z</option>
             <option value="ZA">Z-A</option>
             <option value="principal">Principais</option>

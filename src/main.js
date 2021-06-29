@@ -1,10 +1,9 @@
-import {filtroGenero, calcularPorcentagem} from './data.js';
+import {filtroGenero, filtroEspecie, filtroStatus} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
-//console.log(data.filtrarGenero); 
 
 
-
+//FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA
 function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
   <div>
@@ -25,7 +24,43 @@ function infoCardsTela (data) {
 infoCardsTela(data.results);
 
 
-/*function infoCardsTela (data) {                                         //função que vem do data
+//FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
+const selecaoGenero = document.querySelector(".selecao-genero");
+function imprimirFiltroGenero(e) {
+  return infoCardsTela(filtroGenero(data.results, e.target.value));
+  }
+selecaoGenero.addEventListener("change", imprimirFiltroGenero);
+
+
+//FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
+const selecaoEspecie = document.querySelector(".selecao-especie");
+function imprimirFiltroEspecie(e) {
+  return infoCardsTela(filtroEspecie(data.results, e.target.value));
+  }
+selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
+
+
+//FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
+const selecaoStatus = document.querySelector(".selecao-status");
+function imprimirFiltroStatus(e) {
+  return infoCardsTela(filtroStatus(data.results, e.target.value));
+  }
+selecaoStatus.addEventListener("change", imprimirFiltroStatus);
+
+
+//FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
+const selecaoOrdem = document.querySelector(".selecao-ordem");
+function imprimirFiltroOrdem(e) {
+  return infoCardsTela(filtroStatus(data.results, e.target.value));
+  }
+selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------
+        
+/*FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA!!
+function infoCardsTela (data) {                                         //função que vem do data
   document.getElementById('info-cards').innerHTML = data.map((item) => `  //vai no html e "joga" as info aonde foi colocado uma div = mapeia o data e pega por item
   <div class="texto-cards">                                               //classe para estilizar os cards
       <ul class="cards">                                                  //lista para importar as informações
@@ -40,30 +75,13 @@ infoCardsTela(data.results);
   </div>                                                                  //fecha a div
 `)                                                                        
 }                                                   
-infoCardsTela(data.results); */                                           //imprimi na tela as informações
+infoCardsTela(data.results); */                                           //imprimir na tela as informações
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //console.log(data.results)
 
 //--------------------------------------------------------------------------------------------------------------------------------
-
-/* #Tentativa 2
-const addPosts = async () => {
-  const posts = await getposts()
-  const postTemplate = posts.map(({id, title, body}) => `
-  <div class="post">
-  <div class="number>${id}</div>
-  <div class="post-info">
-  <h2 class="post-title>${title}</h2>
-  <p class="post-body">${body}</p>
-  </div>
-  </div>
-` ).join('') //tira a virgula na divisão das info
-postContainer.innerHTML += postTemplate  
-} */
-
-//--------------------------------------------------------------------------------------------------------------------------------
-/*Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver com a exibição dos dados na tela.**
+/*Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver com a exibição dos dados na tela.**
 Com isto nos referimos basicamente à interação com o DOM. Operações como criação de nós, registro de manejadores de eventos 
-(*event listeners* ou *event handlers*) e etc.
+(*event listeners* ou *event handlers*) e etc.
 Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e pastas, sempre e quando a estrutura estiver clara para suas colegas*/

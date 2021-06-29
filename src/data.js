@@ -14,10 +14,14 @@ export const  filtroStatus = (dataBase, condition) => {
   return resultadoStatus;
 };
 
-export const calculoDePorcentagem = (dataBase, data) => {
+/*export const calculoDePorcentagem = (dataBase, data) => {
   const porcentagem = Math.round((data.length * 100) / dataBase.length);
   return porcentagem;
-};
+}; */
+
+//(data.length / database.length) * 100 - calculo de % de um grupo de elementos
+//hora de exibir na tela, colocar a %
+//quantidade de personagem que vai filtrar / por quantidade total de personagens do filtro = % da quantidade *100
 
 
 
