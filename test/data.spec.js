@@ -1,23 +1,24 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortData } from '../src/data.js';
+
+const namesPokemon =
+  [{ name: "bulbasaur", type: "gram" },
+  { name: "pikachu", type: "rock" },
+  { name: "ivisuor", type: "eletric" }];
 
 
-describe('example', () => {
+describe('sortData', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof sortData).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns ``', () => {
+    expect(sortData(namesPokemon, "name", "asc")).toEqual([
+     {name: "bulbasaur", type: "grama"},
+     { name: "ivisuor", type: "eletrico" },
+     { name: "pikachu", type: "eletrico" },]);
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+
