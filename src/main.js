@@ -2,26 +2,28 @@ import { filterData } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
-const statusAlive= document.getElementById("alive").value;
-const statusDead= document.getElementById("dead").value;
-const statusUnknow= document.getElementById("unknow").value;
 
 
-function statusVivo{
+const status = document.getElementById("status");
+const species= document.getElementById("especie");
+function getStatus(statusSelected) {
+
+    var test = data.results;
+    test = test.filter(character => character.status === statusSelected);
 
 
+showCards(test);
 }
-statusAlive.addEventListener("click", statusVivo);
+
+status.addEventListener("change", ()=>{getStatus(status.value)} );
 
 
-function statusMorto{
+function getSpecies(specieSelected){
+    console.log(specieSelected);
+   var showSpecies = data.results;
+   showSpecies = showSpecies.filter(character => character.species === specieSelected)
 
+showCards(showSpecies);
 }
-statusDead.addEventListener("click", statusMorto);
+species.addEventListener("change", ()=>{getSpecies(species.value)} );
 
-
-
-function statusIndefinido{
-
-}
-statusUnknow.addEventListener("click", statusIndefinido);
