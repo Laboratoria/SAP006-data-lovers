@@ -26,39 +26,38 @@ body{
     perspective: 6000px;    
 }
 .cards:hover{
-    transition: 0.5s;
+    transition: 0.8s;
     transform: rotateY(180deg);
     transform-style: preserve-3d;
 }
-.frontcard, .backcard {
+.front-card, .back-card {
     position: absolute;
-    width: 95%;
+    width: 96%;
     height: 110%;
     -webkit-backface-visibility: hidden;;
     backface-visibility: hidden;
     border-radius: 5px;
     border: rgba(89, 99, 94, 0.521) 1px solid;
 }
-.frontcard{
-    padding: 20px 5px;
+.front-card{
+    padding: 20px 0px;
     background-image: url(img/backgroundfront.png);
 }
-.backcard {
+.back-card {
     background-image: url(img/backgroundback.png);
     transform: rotateY(180deg);
     padding: 20px 0px;
     margin-left: 5px;
 }
-.imageCharacters{
-    width: 94%
-    
+.image-characters{
+    width: 95%;    
 }
-img{
+.profile-characters{
     width: 40%;
 }
 h1{
     font-size: 25px;
-    margin: 0px 5px 10px 5px;
+    margin: 0px 15px 10px 15px;
     color: #ffffff;
     background-color: #24534f93;
     border-radius: 5px;
@@ -76,7 +75,7 @@ h2{
     font-family: Nova Flat;
 }
 p{
-    margin: 5px;
+    margin: 0px 10px;
     font-size: 13px;
     text-align: justify;
     padding: 12px 5px 0px 0px;
@@ -93,16 +92,15 @@ h3{
     font-family: Nova Cut;
 }
 h4{
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
     color: #ffffff;
     font-size: 12px;
     font-family: Merienda One;
     font-weight: 100;
-
 }
 #attack{
     text-align: center;
-    margin: auto;
+    margin: 25px 0px 0px 0px;
     padding: 5px;
     color: #d6d6d6;
     background-color: rgba(3, 3, 3, 0.430);
@@ -139,4 +137,21 @@ h4{
     font-family: Changa;
     font-size: 15px;
     font-style:oblique;
+}
+#input-search{
+    display: flex;
+    margin: 0px 50px;
+    padding: 5px 15px;
+    width: 250px;
+    height: 27px;
+    outline: none;
+    font-family: 'Marcellus SC', serif;
+    font-size: 15px;
+    font-weight: bold;
+    background: #1e2328;
+    color: #cdbe91;
+    box-shadow: inset 0 0 2px #000000;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
 }
