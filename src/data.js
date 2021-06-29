@@ -1,9 +1,3 @@
-// estas funciones son de ejemplo
+//Funções para ordenar;
 
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
