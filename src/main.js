@@ -4,57 +4,45 @@ import data from './data/lol/lol.js';
 const elements = data.data;
 const objects = Object.values(elements);
 
-const index = document.getElementById("index");
-const inputSearch = document.createElement("input");
-inputSearch.setAttribute("id", "input-search");
-inputSearch.setAttribute("placeholder", "Digite o nome do personagem...");
-index.appendChild(inputSearch);
+for (let i = 0; i < objects.length; i++) {
 
-function showCharacters(characters) {
     const divContainer = document.getElementById("root");
     divContainer.setAttribute("class", "container");
-    divContainer.innerHTML = ``;
 
-    for (let i = 0; i < characters.length; i++) {
-        let divCards = document.createElement("div");
-        divCards.setAttribute("class", "cards")
-        divContainer.appendChild(divCards);
+    let divCards = document.createElement("div");
+    divCards.setAttribute("class", "cards")
+    divContainer.appendChild(divCards);
 
-        let divFrontCard = document.createElement("div");
-        divFrontCard.setAttribute("class", "front-card");
-        divCards.appendChild(divFrontCard);
+    let divFrontCard = document.createElement("div");
+    divFrontCard.setAttribute("class", "frontcard");
+    divCards.appendChild(divFrontCard);
 
-        let divBackCard = document.createElement("div");
-        divBackCard.setAttribute("class", "back-card");
-        divCards.appendChild(divBackCard);
+    let divBackCard = document.createElement("div");
+    divBackCard.setAttribute("class", "backcard");
+    divCards.appendChild(divBackCard);
 
-        let imageCharacters = document.createElement("img");
-        imageCharacters.setAttribute("class", "imageCharacters");
+    let imageCharacters = document.createElement("img");
+    imageCharacters.setAttribute("class", "imageCharacters");
 
-        const name = characters[i].name;
-        const title = characters[i].title;
-        const splash = characters[i].splash;
-        const blurb = characters[i].blurb;
+    const name = objects[i].name;
+    const title = objects[i].title;
+    const splash = objects[i].splash;
+    const blurb = objects[i].blurb;
+    
+    divFrontCard.innerHTML = `<h1>${name}</h1><h2>${title}</h2><img class="imageCharacters"src="${splash}"><p>${blurb}</p>`;
 
-        divFrontCard.innerHTML = `<h1>${name}</h1><h2>${title}</h2><img class="image-characters"src="${splash}"><p>${blurb}</p>`;
+    const img = objects[i].img;
+    const partype = objects[i].partype;
+    const tags = objects[i].tags;
+    const attack = objects[i].info.attack;
+    const defense = objects[i].info.defense;
+    const magic = objects[i].info.magic;
+    const difficulty = objects[i].info.magic;
 
-        const img = characters[i].img;
-        const partype = characters[i].partype;
-        const tags = characters[i].tags;
-        const attack = characters[i].info.attack;
-        const defense = characters[i].info.defense;
-        const magic = characters[i].info.magic;
-        const difficulty = characters[i].info.difficulty;
-
-        divBackCard.innerHTML = `<h3>${name}</h3><img class="profile-characters" src="${img}"><h4>${tags}</h4><h4>${partype}</h4>
-        <p id="attack">Attack: ${attack}</p><p id="defense">Defense: ${defense}</p><p id="magic">Magic: ${magic}</p>
-        <p id="difficulty">Difficulty: ${difficulty}</p>"`
-    }
+    divBackCard.innerHTML = `<h3>${name}</h3><img src="${img}"><h4>${tags}</h4><h4>${partype}</h4>
+    <p id="attack">Attack: ${attack}</p><p id="defense">Defense: ${defense}</p><p id="magic">Magic: ${magic}</p>
+    <p id="difficulty">Difficulty: ${difficulty}</p>"`
+    
 }
-    showCharacters(objects);
 
-document.getElementById("input-search").addEventListener("keyup", function () {
-    const textName = document.getElementById("input-search").value.toLowerCase();
-    const champions = objects.filter(item => item.name.toLowerCase().includes(textName));
-    showCharacters(champions);
-})
+// console.log(example, data); 
