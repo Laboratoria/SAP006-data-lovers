@@ -1,8 +1,10 @@
+import data from "./data/ghibli/ghibli.js";
+export const films = data.films; 
+export const people = films.reduce((total, film)=> total.concat(film.people), []);
 
-export const filterChars = (chars) => {
-  let dataChars = chars.filter((people) => people.name = "string")
-    return dataChars;
-};
+export const filtered = (arr, key, value) => arr.filter((item) => item[key] === value);
+
+
 // filterData(data, condition): esta função receberia os dados e nos retornaria os que cumprem com a condição.
 
 // sortData(data, sortBy, sortOrder): esta função recebe três parâmetros.

@@ -33,12 +33,15 @@
         <img src="img/icon-filter.svg" alt="filter" />
         <select name="select">
           <option value="Filters" selected>Filtros</option>
-          <option value="Nome">A-Z</option>
-          <option value="Espécie">Humanos</option>
+          <option value="Male" id="male">Male</option>
+          <option value="Female" id="female">Female</option>
+          <option value="Human" id="human">Humanos</option>
         </select>
       </div>
     </header>
-    <div id="allChars" class="allChars"></div>
+    <section class="allChars">
+      <div id="cardsCharacters" class="cardsCharacters"></div>
+    </section>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>

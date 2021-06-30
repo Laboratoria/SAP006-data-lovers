@@ -113,13 +113,6 @@ footer hr {
   font-size: 18px;
   font-weight: bold;
 }
-.allChars{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-content: space-evenly, center;
-  place-items: center;
-  perspective: 1000px;}
-
 /*page transition - fadeIn */
 @-webkit-keyframes fadeIn {
   0% { opacity: 0; }

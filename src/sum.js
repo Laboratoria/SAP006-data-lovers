@@ -1,6 +1,4 @@
-import data from "./data/ghibli/ghibli.js";
-const films = data.films; 
-const people = films.reduce((total, film)=> total.concat(film.people), []);
+import {people, films} from "./data.js";
 
 function sumTotalChars (people) {
 document.getElementById("boxChars").innerHTML = people.length;}
