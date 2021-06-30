@@ -12,6 +12,7 @@ header{
 	margin:-7px -10px; 
 }
 
+/*
 .barrinha{
 	width: 100%;
 	height: 25px;
@@ -20,7 +21,7 @@ header{
 
 	background-color: #19251C;
 	filter: blur(4px);
-}
+}*/
 
 .movies{
 	height: 900px;
