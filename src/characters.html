@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <title>The Studio Ghibli Collection - Personagens </title>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+      name="viewport"
+    />
+    <title>The Studio Ghibli Collection - Personagens</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <nav> 
+  <body class="fade">
+    <nav>
       <ul>
-       <li><a href="https://studioghibli.com.br/" target="_blank"><img src="img/link-ghibli.png" alt="Studio Ghibli - link"></a></li>
-       <li><a href="./index.html">HOME</a></li>
-       <li><a href="#">ANIMAÇÕES</a></li>
-       <li><a href="./characters.html">PERSONAGENS</a></li>
+        <li>
+          <a href="https://studioghibli.com.br/" target="_blank"
+            ><img src="img/link-ghibli.png" alt="Studio Ghibli - link"
+          /></a>
+        </li>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="#">ANIMAÇÕES</a></li>
+        <li><a href="./characters.html">PERSONAGENS</a></li>
       </ul>
     </nav>
     <header>
       <h1>Personagens</h1>
       <div class="filter">
-      <img src="img/icon-filter.svg" alt="filter">
-      <select name="select">
-        <option value="Filters" selected>Filtros</option>
-        <option value="Nome">Nome (A - Z)</option>
-        <option value="Espécie">Humanos</option>
-      </select>
+        <img src="img/icon-filter.svg" alt="filter" />
+        <select name="select">
+          <option value="Filters" selected>Filtros</option>
+          <option value="Nome">A-Z</option>
+          <option value="Espécie">Humanos</option>
+        </select>
       </div>
     </header>
-    <div class="chars"></div>
+    <div id="allChars" class="allChars"></div>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
-  
 </html>

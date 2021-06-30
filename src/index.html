@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+      name="viewport"
+    />
     <title>The Studio Ghibli Collection - Home</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <nav> 
+  <body class="fade">
+    <nav>
       <ul>
-       <li><a href="https://studioghibli.com.br/" target="_blank"><img src="img/link-ghibli.png" alt="Studio Ghibli - link"></a></li>
-       <li><a href="./index.html">HOME</a></li>
-       <li><a href="#">ANIMAÇÕES</a></li>
-       <li><a href="./characters.html">PERSONAGENS</a></li>
+        <li>
+          <a href="https://studioghibli.com.br/" target="_blank"
+            ><img class="imageIcon" src="img/link-ghibli.png" alt="Studio Ghibli - link"
+          /></a>
+        </li>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="#">ANIMAÇÕES</a></li>
+        <li><a href="./characters.html">PERSONAGENS</a></li>
       </ul>
     </nav>
     <header>
       <h1>The Studio Ghibli Collection</h1>
-      <img class="chihiroInitial" src="img/chihiro-initial.png" alt="Chihiro">
+      <img class="chihiroInitial" src="img/chihiro-initial.png" alt="Chihiro" />
     </header>
-    <main> 
+    <main>
       <h2>Números</h2>
       <div class="numbers">
         <p>Total de animações</p>
         <p>Total de personagens</p>
-        <div class="box"></div>
-        <hr width="3" size="350">
-        <div class="box"></div>
+        <div id="boxMovies" class="box"></div>
+        <hr width="3" size="350" />
+        <div id="boxChars" class="box"></div>
       </div>
     </main>
     <footer>
-      <img class="totoroInitial" src="img/totoro-initial.png" alt="Totoro">
-      <hr width="860" size="7">
+      <img class="totoroInitial" src="img/totoro-initial.png" alt="Totoro" />
+      <hr width="860" size="7" />
       <p class="made">Feito por Juliana Monteiro e Mariana Marcondes</p>
     </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
+    <script src="sum.js" type="module"></script>
   </body>
-  
 </html>
