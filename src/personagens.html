@@ -17,15 +17,17 @@
             <li><a href="personagens.html">PERSONAGENS</a></li>
         </ul>
     </nav>
-    <section>
-        <div class="options">
+    <section class="open-menu">
+        <div class="buttons">
             <button class="button" data-az-order>Ordem A-Z</button>
             <button class="button" data-za-order>Ordem Z-A</button>
             <button class="button" data-female-character> Personagens femininos </button>
             <button class="button" data-male-character>Personagens masculinos</button>
            <!-- <button class="button" data-films-vehicles>Veículos</button>-->
-            
-            <select name="select-specie" id="specie" class="button" data-film-specie>
+        </div>
+        <div class="menu-select">
+        <!--select name="select-specie" id="specie" class="button" data-film-specie>-->
+               <select> 
                 <option value="specie" selected disabled> Espécies </option>
                 <option value="Human"> Humanos </option>
                 <option value="Totoro"> Totoros </option>
@@ -46,7 +48,7 @@
                 <option value="Fish/Human">Peixe/humano</option>
                 <option value="Deity">Deity</option>
                 <option value="Borrower">Borrower</option>
-            </select>
+                </select>
         </div>
     </section>
     <main class="poster-people" id="poster-people"></main>

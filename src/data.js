@@ -10,10 +10,11 @@ const releaseYear = animations.sort((a, b) => {
         return 1;
     } return -1;
 });*/
+export const rattingScore = (animations) => animations.sort((a, b) => (a.rt_score < b.rt_score? 1 : -1)); //por avaliação.
 
 export const order = (characters) => 
 characters.sort((a, b)=> (a.name > b.name ? 1 : -1));
-//export const rattingScore = animations.sort((a, b) => (a.rt_score > b.rt_score) ? 1 : -1); //por avaliação.
+
 //export const avaliacao = films.filter(films => (films.rt_score > 70));
 
 

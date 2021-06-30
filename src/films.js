@@ -1,4 +1,4 @@
-import { filterDirectorSelected, releaseYear} from './data.js';
+import { filterDirectorSelected, releaseYear, rattingScore} from './data.js';
 import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const animations = data.films
@@ -14,9 +14,9 @@ function showPosterFilms(animations) {
           <img src="${item.poster}"class="poster-card"><p><br></p>
          </div>
         <div class="flip-card-back">
-          <p class="info"><strong>Diretor: ${item.director}</p></strong>
-          <p><strong>Lançamento: ${item.release_date}</p></strong>
-          <p><strong>Avaliação: ${item.rt_score}</p></strong>
+          <p class="info1"><strong>Diretor: ${item.director}</p></strong>
+          <p class="info2"><strong>Lançamento: ${item.release_date}</p></strong>
+          <p class="info2"><strong>Avaliação: ${item.rt_score}</p></strong>
           </div>
           </div>
         </div> `
@@ -55,11 +55,9 @@ const newestFilms = (evento) => {
 const bestScore = (evento) => {
 
     evento.preventDefault();
-
-    //const bestFilmes = filtraScore(data, 90);
-
-    //chamar a funçao filter( como as melhores notas)
-    //return console.log(bestFilmes)
+    const valueSelected = melhoresFilmes.value;
+    const melhoresFilmesSelecionados = rattingScore(animations, valueSelected);
+    showPosterFilms(melhoresFilmesSelecionados);
 };
 
 melhoresFilmes.addEventListener('click', bestScore);
