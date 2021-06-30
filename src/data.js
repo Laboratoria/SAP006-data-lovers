@@ -14,6 +14,15 @@ export const  filtroStatus = (dataBase, condition) => {
   return resultadoStatus;
 };
 
+// Ordenação alfabética utilizando sort
+export const ordenarAlfabeticaAZ = (data) => {
+  const resultadoAZ = data.sort((a, z) => a.name > z.name ? 0 : -1)
+	return resultadoAZ;
+};
+
+
+ 
+
 /*export const calculoDePorcentagem = (dataBase, data) => {
   const porcentagem = Math.round((data.length * 100) / dataBase.length);
   return porcentagem;
