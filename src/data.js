@@ -16,7 +16,8 @@ characters.sort((a, b)=> (a.name > b.name ? 1 : -1));
 //export const rattingScore = animations.sort((a, b) => (a.rt_score > b.rt_score) ? 1 : -1); //por avaliação.
 //export const avaliacao = films.filter(films => (films.rt_score > 70));
 
-
+export const filterSpeciesSelected = (characters, valueSelected) =>
+characters.filter(item => item.specie === valueSelected);
 /*
 const equal = (one, other) => films.filter(one) === JSON.stringify(other);
 
