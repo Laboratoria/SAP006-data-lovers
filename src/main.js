@@ -12,11 +12,11 @@ import pokemon from './data/pokemon/pokemon.js';
 //console.log(ordenarPorNum);
 
 
- const pokemonList = data.pokemon.slice(0,9);
+ const pokemonList = data.pokemon.slice(0,4);
 
  const displayPokes = (pokemonData) => {
    
- const pokeCard = document.getElementById('carousel');
+ const pokeCard = document.getElementById('cards-sem-carosel');
  
  pokemonData.forEach((elem) => {
    pokeCard.innerHTML += `
@@ -46,15 +46,53 @@ import pokemon from './data/pokemon/pokemon.js';
 
 
  };
+ 
 
  displayPokes(pokemonList);
+
+
+
+
+
+ const pokemonListGeneratio = data.pokemon.slice(14,30); 
+ const displayPokesGeneration = (pokemonData) => { 
+
+
+ 
+   
+ const pokeCardGeneration = document.getElementById('carousel');
+ 
+ pokemonData.forEach((elem) => {
+  pokeCardGeneration.innerHTML += `
+   
+        <div class="backgroundImg" id=""backgroundImg">
+          <img class="picture" src=" ${elem.img}"></img>
+        </div>
+        </div>
+        <div class="infCardAbout">${elem.generation.name}</div> 
+      
+        </div>
+     </div>
+   </div>
+`;
+ });
+
+
+ };
+ 
+
+
+
+ displayPokesGeneration(pokemonListGeneratio);
+
+
 
 
  
 let ordernarPorNumeros;
 const ordenar = document.getElementById("maxcp");
 ordenar.addEventListener('click', () => {
-  const getpokes = document.getElementById('carousel');
+  const getpokes = document.getElementById('cards-sem-carosel');
   getpokes.innerHTML = '';
   ordernarPorNumeros = ordenar.value;
 
@@ -68,7 +106,7 @@ ordenar.addEventListener('click', () => {
 let ordenarPorNomes;
 const ordenarNomes = document.getElementById("name");
 ordenarNomes.addEventListener('click', () => {
-  const getpokes = document.getElementById('carousel');
+  const getpokes = document.getElementById('cards-sem-carosel');
   getpokes.innerHTML = '';
   ordenarPorNomes = ordenarNomes.value;
 
