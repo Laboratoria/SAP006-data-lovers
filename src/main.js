@@ -49,11 +49,14 @@ selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
-const selecaoOrdem = document.querySelector(".selecao-ordem");
+/*const selecaoOrdem = document.querySelector(".selecao-ordem");
 function imprimirFiltroOrdem(e) {
   return infoCardsTela(filtroStatus(data.results, e.target.value));
   }
-selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
+selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);*/
+
+
+
 
 
 

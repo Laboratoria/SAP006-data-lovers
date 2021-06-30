@@ -14,7 +14,14 @@
         </section>
       </header>
          <section>
-          <button class="btn" type="button"><a href="https://blog.saraiva.com.br/rick-and-morty/" target="_blank">Curiosidades</a></button> <!--Botão de curiosidades-->
+          <select name="MenuBug" onchange="location = this.value;"> <!--SELECT faz a opção de botão de menu-->
+            <option value="">Curiosidades</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="https://blog.saraiva.com.br/rick-and-morty/">Saraiva</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+            <option value="https://shmakov.github.io/Rick-and-Morty-Characters/">Aparição por Episódio</option>
+            <option value="https://super.abril.com.br/mundo-estranho/17-detalhes-fantasticos-que-te-farao-amar-rick-e-morty-ainda-mais/">Super Interessante</option>
+            <option value="https://play.google.com/store/apps/details?id=com.turner.pocketmorties&hl=pt_BR&gl=US">Morty Pocket Jogo</option>
+          </select>
+          <!--<button class="btn" type="button"><a href="https://blog.saraiva.com.br/rick-and-morty/" target="_blank">Curiosidades</a></button>--><!--Botão de curiosidades-->
           <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
           <button class="btn" type="reset">Limpar</button><br> <!--TYPE="RESET" ele limpa o conteúdo-->
 
@@ -52,7 +59,7 @@
         </section>
       <main>
         <section>
-          <div id="info-cards"></div> <!--Informações dos Cards do JS-->
+          <div id="info-cards"></div> <!--Informações dos Cards no JS-->
            <!--<img class="fundo-direita" src="img/direita.png">--> <!--imagem fundo Morty-->
           <!--<img class="fundo-esquerda" src="img/esquerda.png">-->  <!--imagem fundo Rick-->
         </section>
