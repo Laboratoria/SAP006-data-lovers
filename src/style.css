@@ -1,11 +1,12 @@
+*{
+	background: black;
+}
+
 .flexBox{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-}
-body{
-	background: black;
 }
 
 header{
@@ -25,4 +26,6 @@ header{
 
 .movies{
 	height: 900px;
+	border: 2px solid red;
+	margin-top: 15px;
 }
