@@ -1,3 +1,4 @@
+
 export const filters = (data, condition) => {
   
   filterDirector: function directors (name) {

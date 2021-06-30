@@ -1,5 +1,6 @@
 import { filterDirector } from './src/data.js';
 import data from './data/ghibli/ghibli.js';
+
 const films = data.films;
 // console.log(films);
 
