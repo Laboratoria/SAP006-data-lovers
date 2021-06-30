@@ -22,8 +22,5 @@ export const filterData = (data, condition, condition2) => {
   }
 };
 
+export const sortData = (data) => data.results.sort( (a,b) => b.episode.length - a.episode.length);
 
-
-export const anotherExample = () => {
-  return 'OMG';
-};
