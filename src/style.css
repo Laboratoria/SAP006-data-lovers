@@ -1,0 +1,97 @@
+@font-face{
+    font-family: Ghibli;
+    src: url(./fonts/Eyad\ Al-Samman\ -\ Ghibli.otf) format(otf),
+    url(./fonts/Eyad\ Al-Samman\ -\ Ghibli-Bold.otf) format(otf);
+    }
+    
+*{margin: 0; padding: 0;}
+
+
+body{
+font-family: Ghibli; 
+font-size: 12px;
+background-color: #38527B;
+animation: banner 40s infinite;
+animation-direction: alternate;
+}
+
+@keyframes banner {
+0%, 20% {
+background-image: url(./images/Castle_InTheSky.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+25%, 40% {
+background-image: url(./images/Kikis_Delivery.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+45%, 60% {
+background-image: url(./images/Neighbor_Totoro.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+65%, 80% {
+background-image: url(./images/Memorias-de-Ontem.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+85%, 100% {
+background-image: url(./images/chihiro.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+}
+
+.menu{
+list-style: none;
+float: left;
+background-color: #38527B;
+width: 100%;
+position: fixed;
+
+}
+
+.menu li{
+position: relative;
+float: left;
+margin-right: 50px;
+}
+
+.menu li a{
+color: #E7E7DE; 
+text-decoration: none; 
+padding: 5px 10px; 
+display: block;
+line-height: 2;
+
+}
+
+.menu li a:hover{
+background: #008891;
+color: white;
+font-weight: bolder;
+text-shadow: 0px 0px 5px #fff;
+}
+
+
+
+/* .menu li ul{
+position:absolute;
+top:25px;
+left:0;
+background-color:rgb(221, 190, 190);
+display:none;
+}
+.menu li:hover ul, .menu li.over ul
+{display:block;}
+
+.menu li ul li{
+border:1px solid #fff;
+display:block;
+width:150px;
+} */
