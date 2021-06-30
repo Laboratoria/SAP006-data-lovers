@@ -2,57 +2,63 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #cce0e2;
 }
+/*Menu navegação*/
 .menu ul {
-    background-color: lightblue;
+    /*background-color: #a0a2b0;#c1cfda;*/
+    background-image: url(https://d17lbu6bbzbdc8.cloudfront.net/wp-content/uploads/2020/01/10220507/studio_ghibli.jpg);
+   
     list-style: none; /*tira os marcadores*/
     padding: 15px 8%;
     text-align: left;
     margin-top: 0px;
+    height: 200px;
+    color: blueviolet;
 }
 .menu ul li {
    display: inline;
    margin-left: 20px;
 }
 .menu ul li a:hover {
-    color: black;
+    color: white;
 }
 .menu ul li a {
     text-decoration: none; /*Tirar o sublinhado da referência*/
 }
-button{
-    align-items: center;
-    padding: 5px;
-    margin-right: 10px;
-}
-.menu-order, .director {
-  margin-left: 10px;
-}
-.options{
-  width: 850px;
-}
-
 section{
-    width: 50%;
     margin: auto;
     text-align: center;
 }
+.open-menu{
+  position:relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
 .poster-cards{
     width: 80%;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-left: 14%;
 }
 .poster-card{
     width: 220px;
 }
-.info{
-    margin-top: 50px;
+
+/*flipcards*/
+.info1{
+  margin-top: 50px;
 }
+
+.info1, .info2{
+text-align: left;
+margin-left: 15%;
+}
+
 .flip-card {
-    background-color: white;
+    background-color: #cce0e2;
     width: 280px;
     height: 400px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
     margin-top: 30px;
     margin-left: 35px;
@@ -81,13 +87,42 @@ section{
   }
   
   .flip-card-front {
-    background-color: lightblue;
+    background-color: #a0b8a4;
     color: black;
   }
 
   .flip-card-back {
-    background-color: lightblue;
+    background-color: #a0b8a4;
     color:black;
     transform: rotateY(180deg);
   }
- 
+
+  .select-bar{
+    width: 90%;
+  }
+/*Arrumando botões e seletores*/
+.button {
+  background-color:#a0b8a4;
+  border: none;
+  color:blueviolet;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  height: 38px;
+}
+
+select {
+  height: 20px;
+  font-size: 16px;
+  color:blueviolet;
+  background-color:#a0b8a4;
+  height: 38px;
+  margin-left: 10px;
+  text-align: center;
+}
+.title-of-film, .info1, .info2{
+  color:blueviolet;
+}

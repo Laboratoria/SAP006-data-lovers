@@ -1,0 +1,24 @@
+* body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #cce0e2;
+}
+.menu ul {
+    /*background-color: #a0a2b0;#c1cfda;*/
+    list-style: none; /*tira os marcadores*/
+    padding: 15px 8%;
+    text-align: left;
+    margin-top: 0px;
+    height: 200px;
+}
+.menu ul li {
+   display: inline;
+   margin-left: 20px;
+}
+.menu ul li a:hover {
+    color: black;
+}
+.menu ul li a {
+    text-decoration: none; /*Tirar o sublinhado da referência*/
+}
