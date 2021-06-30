@@ -1,4 +1,4 @@
-import {filtroGenero, filtroEspecie, filtroStatus} from './data.js';
+import {filtroGenero, filtroEspecie, filtroStatus, ordenarAlfabeticaAZ} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
 
@@ -51,9 +51,13 @@ selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
 const selecaoOrdem = document.querySelector(".selecao-ordem");
 function imprimirFiltroOrdem(e) {
-  return infoCardsTela(filtroStatus(data.results, e.target.value));
+  return infoCardsTela(ordenarAlfabeticaAZ(data.results, e.target.value));
   }
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
+
+
+
+
 
 
 
