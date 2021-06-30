@@ -1,0 +1,108 @@
+/*estilização que se utiliza em todos os elementos do documento (que nao forem estilizados)*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/*cor do fundo do body*/
+body { 
+    background-color: #051521; 
+}
+
+/*estilização apenas do LOGO, imagem cabeçalho*/
+.img-logo{
+    height: 200px;
+    width: 600px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50px;
+}
+
+.curiosidades{
+    display: block;
+}
+
+/*estilização dos botões de filtro, estão no section (pai) e aplica para o select (filho), 
+os option são filhos do select, por isso coloca section select*/
+section select {
+    background-color: #97ce4c;
+    border-radius: 50px;
+    padding: 15px;    
+    display: inline-block;
+    margin-bottom: 50px;
+    border: none;
+}
+
+/*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
+section select:hover{
+    color:green;
+}
+
+/*estilização dos botões curiosidades e limpar*/
+.btn{
+    background-color: #97ce4c;
+    border-radius: 50px;
+    padding: 15px;    
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+/*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
+button:hover{ 
+    color: green;
+}
+
+/*estilização do campo de pesquisas*/
+.pesquisar{
+    background-color: #FFEBCD;
+    border-radius: 20px;
+    padding: 10px
+}
+
+/*imagem de fundo do morty*/
+/*.fundo-direita{
+    opacity: 40%;
+    float:right;
+    display: block;
+}*/
+
+/*imagem de fundo do rick*/
+/*.fundo-esquerda{
+    opacity: 40%;
+    float:left;
+    display: block;
+}*/
+
+/*estilização do rodapé*/
+.footer{
+    background-color: #084d6e;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.card-img{ /*fazer a estilização dos CARDS*/
+    border: #FFF874;
+    border-style: solid;
+    margin-left: 20px;
+    background-color: #FFF874;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.info-cards{ /*fazer a estilização das info dos cards*/
+    margin-left: 20px;
+    list-style: none;
+    background-color: #97ce4c;
+    border-radius: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+}
