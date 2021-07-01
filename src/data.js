@@ -9,5 +9,8 @@
 
 export function showFilms(film) {
   film.map((name) => console.log(name.title))
+}
 
+export function showDescripton(sinopse) {
+  sinopse.map((name) => console.log(name.description))
 }

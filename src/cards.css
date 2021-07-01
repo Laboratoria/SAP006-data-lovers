@@ -1,0 +1,46 @@
+@font-face{
+    font-family: Ghibli;
+    src: url(./fonts/Eyad\ Al-Samman\ -\ Ghibli.otf) format(otf),
+    url(./fonts/Eyad\ Al-Samman\ -\ Ghibli-Bold.otf) format(otf);
+    }
+        
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: Ghibli;}
+    
+    
+body{
+    font-size: 12px;
+    background-color: #38527B;
+    animation: banner 40s infinite;
+    animation-direction: alternate;
+    }
+
+.menu{
+list-style: none;
+float: left;
+background-color: #38527B;
+width: 100%;
+position: fixed;
+overflow: hidden;
+}
+
+.menu li{
+position: relative;
+float: left;
+margin-right: 50px;
+}
+
+.menu li a{
+color: #E7E7DE; 
+text-decoration: none; 
+padding: 5px 10px; 
+display: block;
+line-height: 2;
+float: left;
+}
+
+.menu li a:hover{
+background: #008891;
+color: #E7E7DE;
+font-weight: bolder;
+text-shadow: 0px 0px 5px #fff;
+}
