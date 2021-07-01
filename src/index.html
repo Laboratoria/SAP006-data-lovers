@@ -23,7 +23,6 @@
           </select>
           <!--<button class="btn" type="button"><a href="https://blog.saraiva.com.br/rick-and-morty/" target="_blank">Curiosidades</a></button>--><!--Botão de curiosidades-->
           <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
-          <button class="btn" type="reset">Limpar</button><br> <!--TYPE="RESET" ele limpa o conteúdo-->
 
           <select class="selecao-genero"> <!--SELECT faz a opção de botão de menu, classe para-->
             <option value="">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
@@ -49,16 +48,17 @@
             <option value="unknown">Indefinido</option>
           </select>
 
-          <select class="selecao-ordem"> <!--SELECT faz a opção de botão de menu-->
+          <select id="order" class="selecao-ordem"> <!--SELECT faz a opção de botão de menu-->
             <option value="">Ordem</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
             <option value="AZ">A-Z</option>
             <option value="ZA">Z-A</option>
             <option value="principal">Principais</option>
           </select>
-            <div class="calculo" id= "cálculo-agregado"></div> <!--Onde vai aparecer o cálculo-->
+            <div class="calculo" id= "cálculo-agregado" style="display:flex"></div> <!--Onde vai aparecer o cálculo-->
         </section>
       <main>
         <section>
+          <button class="btn" onClick="window.location.reload();">Limpar</button><br> <!--botão de refresh na pagina-->
           <div id="info-cards"></div> <!--Informações dos Cards no JS-->
            <!--<img class="fundo-direita" src="img/direita.png">--> <!--imagem fundo Morty-->
           <!--<img class="fundo-esquerda" src="img/esquerda.png">-->  <!--imagem fundo Rick-->

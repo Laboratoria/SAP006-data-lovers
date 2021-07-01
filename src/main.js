@@ -1,7 +1,6 @@
-import {filtroGenero, filtroEspecie, filtroStatus, ordenarAlfabeticaAZ} from './data.js';
+import {filtroGenero, filtroEspecie, filtroStatus, ordenarAlfabeticaAZ, ordenarAlfabeticaZA, calculoDePorcentagem} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
-
 
 //FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA
 function infoCardsTela (data) {
@@ -49,19 +48,37 @@ selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
-/*const selecaoOrdem = document.querySelector(".selecao-ordem");
+const selecaoOrdem = document.querySelector(".selecao-ordem");
 function imprimirFiltroOrdem(e) {
   return infoCardsTela(ordenarAlfabeticaAZ(data.results, e.target.value));
   }
-selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);*/
+  console.log(selecaoOrdem)
+selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
+
+
+//FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM INVERSO
+const selecaoOrdemInverso = document.querySelector(".selecao-ordem");
+console.log (selecaoOrdemInverso)
+
+function imprimirFiltroOrdemInverso(e) {
+  return infoCardsTela(ordenarAlfabeticaZA(data.results, e.target.value));
+  }
+selecaoOrdemInverso.addEventListener("change", imprimirFiltroOrdemInverso);
 
 
 
 
 
 
-
-
+//--------------------------------------------------------------------------------------------------------------------------------
+/*if (a[sortBy] < b[sortBy] ){
+  return -1;
+}
+if (a[sortBy] > b[sortBy] ){
+  return 1;
+}
+return 0;
+}*/
 
 
 //--------------------------------------------------------------------------------------------------------------------------------
