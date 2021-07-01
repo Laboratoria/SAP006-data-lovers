@@ -2,26 +2,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
-
-body{
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background-image: url(img/background1.jpg);
+    border-image: linear-gradient(to bottom, #bea87b, #7a5c29);
+    border-image-slice: 1;
+    border-bottom: 1px solid;
+    box-shadow: rgb(10, 7, 3) 1px 2px 55px;
+    z-index: 1;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    align-items: center;
+    text-align: center;
+}
+#img-logo{
+    width: 8%;
+}
+#index{
     background-image: url(img/background1.jpg);
     background-size: 100%;
-    margin: 50px 0px;
-    box-sizing: border-box;
+}
+#menu{
+    background-image: url(img/background.jpg);
+    background-size: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+}
+#div-filters{
+    margin: 70px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    background-color: #16171a;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#input-search{
+    padding: 5px 15px;
+    width: 20%;
+    height: 25px;
+    outline: none;
+    font-family: 'Marcellus SC', serif;
+    font-size: 15px;
+    font-weight: bold;
+    background: #1e2328;
+    color: #cdbe91;
+    box-shadow: inset 0 0 2px #000000;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+.icons{
+    cursor: pointer;
+    width: 8%;
+    padding: 10px;
+}
+select{
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    width: 15%;
+    background: #1e2328;
+    font-family: 'Marcellus SC', serif;
+    font-size: 15px;
+    color: #cdbe91;
+    box-shadow: inset 0 0 2px #000000;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
 }
 .container{
+    background-image: url(img/background1.jpg);
+    background-size: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    padding: 0px 0px 30px 0px;
 }
 .cards{
     position: relative;
-    margin: 30px 25px 100px 25px;
+    margin: 15px 25px 120px 25px;
     width: 18%;
     height: 305px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     perspective: 6000px;    
 }
@@ -33,11 +108,11 @@ body{
 .front-card, .back-card {
     position: absolute;
     width: 96%;
-    height: 110%;
+    height: 115%;
     -webkit-backface-visibility: hidden;;
     backface-visibility: hidden;
     border-radius: 5px;
-    border: rgba(89, 99, 94, 0.521) 1px solid;
+    border: #cdbe919d 1px solid;
 }
 .front-card{
     padding: 20px 0px;
@@ -71,7 +146,7 @@ h2{
     background-color: rgba(14, 14, 14, 0.753);
     border-radius: 5px;
     margin: 5px;
-    padding: 0px;
+    padding: 5px;
     font-family: Nova Flat;
 }
 p{
@@ -100,7 +175,7 @@ h4{
 }
 #attack{
     text-align: center;
-    margin: 25px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     padding: 5px;
     color: #d6d6d6;
     background-color: rgba(3, 3, 3, 0.430);
@@ -138,20 +213,55 @@ h4{
     font-size: 15px;
     font-style:oblique;
 }
-#input-search{
-    display: flex;
-    margin: 0px 50px;
-    padding: 5px 15px;
-    width: 250px;
-    height: 27px;
-    outline: none;
-    font-family: 'Marcellus SC', serif;
-    font-size: 15px;
-    font-weight: bold;
-    background: #1e2328;
-    color: #cdbe91;
-    box-shadow: inset 0 0 2px #000000;
-    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
-    border-image-slice: 1;
-    border-width: 2px;
+#paginated{
+    background-image: url(img/background1.jpg);
+    background-size: 100%;
+    background-position: bottom;
+    color: rgb(185, 185, 185);
+    font-size: 20px;
+    padding: 5px;
 }
+#paginated .pagination{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#pagination-link{
+    cursor: pointer;
+    color: #6e787e;
+    text-decoration: none;
+    padding: 15px;
+}
+.pagination-link13{
+    display: none;
+}
+#pagination-link:hover{
+    color: #a18f57;   
+}
+#pagination-link:active{
+    color: rgb(9, 63, 63);   
+}
+footer{
+    background: #16171a;
+    color: white;
+    border-image: linear-gradient(to bottom, #94763a, #775f35);
+    border-image-slice: 1;
+    border-top: #cdbe91 1px solid;
+    box-shadow: rgb(10, 7, 3) 1px 2px 55px;
+ }
+ #p-footer{
+     text-align: center;
+     font-size: 14px;
+     padding: 10px 0px 0px;
+     font-weight: none;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ footer a{
+     text-decoration: none;
+     color: rgb(212, 212, 212);
+ }
+ footer a:hover{
+     text-decoration: none;
+     color: white;
+ }
+ 
