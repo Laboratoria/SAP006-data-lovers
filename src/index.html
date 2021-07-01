@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="logo">
+        <img src="./assets/img.poke/logo3.png" alt="">
+      </div>
+      <div class="cabeçalho"></div>
+    </header>
+
+    <nav class="menunavegação">
+
+       <li>
+       <a>Home</a>
+       </li>
+
+       <li>
+        <a>Pokémons</a>
+       </li>
+
+       <li>
+        <a>Dicas</a>
+        </li>
+
+    </nav>
+<div class="column">
+  <img src="./assets/img.poke/pngegg.png">
+</div>
+
+
+
+    <main>
+      <select name="select" id="type" class="filtroTipos">
+        <option value="filtrar" selected>Tipos</option>
+        <option value="grass">Planta</option>
+        <option value="fire">Fogo</option>
+        <option value="water">Água</option>
+        <option value="poison">Venenoso</option>
+        <option value="bug">Inseto</option>
+        <option value="eletric">Elétrico</option>
+        <option value="ground">Terra</option>
+        <option value="fighting">Lutador</option>
+        <option value="psychic">Psíquico</option>
+        <option value="normal">Normal</option>
+        <option value="rock">Pedra</option>
+        <option value="flying">Voador</option>
+        <option value="ghost">Fantasma</option>
+        <option value="ice">Gelo</option>
+        <option value="dragon">Dragão</option>
+        <option value="steel">Metálico</option>
+        <option value="dark">Noturno</option>
+        <option value="fairy">Fada</option>
+      </select>
+
+      <button id="btnFiltrar" value="botaoFiltrar" class="botãoFiltrar">Filtrar</button>
+      <div id="result"></div>
+    </main>
+
+   <!-- <footer>&copy Giuliana e Liziane</footer> -->
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
