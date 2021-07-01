@@ -91,7 +91,7 @@ btnClear.addEventListener("click", clearFilters);
  function clearFilters(e){
     e.preventDefault()
     const cards = document.querySelector(".cards");
-    const staticCards = data.results.map(({ name, status, gender, image, episode}) =>
+    const originalCards = data.results.map(({ name, status, gender, image, episode}) =>
     `<div class="cards_container">
         <div class="character_img">
           <img src="${image}">
@@ -107,7 +107,7 @@ btnClear.addEventListener("click", clearFilters);
      </div>`).join("");
 
 cards.innerHTML = "";     
-cards.innerHTML += staticCards;
+cards.innerHTML += originalCards;
 const statusFilter = document.getElementById("status-filter");
 statusFilter.options[statusFilter.selectedIndex = 0];
 const genderFilter = document.getElementById("gender-filter");

@@ -21,18 +21,15 @@ h1 {
 }
 
 .menu-filter{
-    display: flex;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
     width: 40%;
-    margin-right: 30px;
-    flex-wrap: wrap;
-    float: right;
+    margin-right: 52px;
     align-content: center;
 }
 
 input, select, button {
-    height: 35px;
     margin: 10px;
-    background: #51FB4B;
     outline: none;
     border: none;
     border-radius: 5px;
@@ -40,11 +37,33 @@ input, select, button {
     font-size: 16px;
 }
 
-select, button {
-    width: 100px;
+
+input, #sort-btn{
+    grid-row: 1;
 }
 
-button:hover {
+input{
+    position: relative;
+    left: 59px;
+}
+
+#sort-btn{
+    grid-column: 3;
+}
+
+select, button {
+    width: 91px;
+    height: 25px;
+    background: #87F583;
+}
+
+input, #sort-btn {
+    width: 130px;
+    height: 40px;
+    background: #51FB4B;
+}
+
+#sort-btn:hover, button:hover {
     background: #05F2AF;
 }
 
@@ -52,13 +71,12 @@ main {
     margin: 15px;
 }
 
-input, #sort-btn {
-    width: 150px;
+select, #btn, #btn-clearFilters {
+    grid-row: 2;
 }
 
-#sort-btn {
-    margin-right: 80px;
-    margin-left: 30px;
+#btn-clearFilters{
+    grid-row: 2;
 }
 
 
@@ -143,7 +161,7 @@ p {
     background-color: #E3DDE0;
 }
 
-@media (max-width:800px) {
+@media (max-width:901px) {
     .static, .cards_container {
         flex: 100%;
         height: 490px;
@@ -153,29 +171,63 @@ p {
         min-width: 280px;
     }
 
+    .character_info{
+        margin-left: 37px;
+    }
+    
     img {
         height: 260px;
         width: 280px;
         border-radius: 10px 10px 0 0;
     }
 
+    header {
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
     h1 {
-        font-size: 40px;
+        font-size: 70px;
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
     }
     
     .menu-filter{
         margin-top: 10px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
 
-    #search, #status-filter, #gender-filter, #btn {
-        margin-bottom: 2px;
+    #search, #status-filter, #gender-filter, button {
+        margin-bottom: 0;
+
     }
 
     input {
         width: 130px;
+        position: relative;
+        left: 0px;
     }
-
+    
+    
     button:hover {
         background: #05F2AF;
+    }
+}   
+
+@media (max-width:299px) {
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    .menu-filter {
+        width: 87%;
     }
 }
