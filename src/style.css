@@ -1,0 +1,58 @@
+@font-face {
+  font-family: font-pokemon;
+  src: url(./assets/fonts/Pokemon\ Solid.ttf);
+}
+
+.logo {
+  position: absolute;
+  width: 504px;
+  height: 161px;
+  left: 60px;
+  top: 30px;
+}
+
+.cabeçalho {
+  width: 1440px;
+  height: 210px;
+  left: 0px;
+  top: 0px;
+  background: #577590;
+}
+.menunavegação {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  color: #fde57a;
+  width: 103px;
+  list-style-type: none;
+  height: 47px;
+  left: 770px;
+  top: 86px;
+  font-family: font-pokemon;
+  font-size: 35px;
+}
+
+.filtroTipos {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  left: 380px;
+  top: 230px;
+  border-radius: 40px;
+}
+
+.botãoFiltrar {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  left: 486px;
+  top: 230px;
+}
+
+.column {
+  width: 152px;
+  height: 889px;
+  left: 0px;
+  top: 145px;
+}
