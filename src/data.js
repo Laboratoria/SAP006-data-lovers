@@ -41,6 +41,9 @@ export const calculoDePorcentagem = (dataBase, data) => {
 
 
 
+
+
+//--------------------------------------------------------------------------------------------------------------------------------
 /*function sortBy (tipo) {
 data.sort((a, b) => {
   var nameA = a.name.toUpperCase();
@@ -64,16 +67,12 @@ data.sort((a, b) => {
 };*/
 
 
-
-
-
+//--------------------------------------------------------------------------------------------------------------------------------
 //(data.length / database.length) * 100 - calculo de % de um grupo de elementos
 //hora de exibir na tela, colocar a %
 //quantidade de personagem que vai filtrar / por quantidade total de personagens do filtro = % da quantidade *100
 
-
-
-
+//--------------------------------------------------------------------------------------------------------------------------------
 /*O coração deste projeto é a manipulação de dados através de arrays e objetos.
 
 Recomendamos que este arquivo contenha toda a funcionalidade que corresponda a obter, processar e manipular dados (suas funções):

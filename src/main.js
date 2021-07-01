@@ -18,7 +18,7 @@ function infoCardsTela (data) {
         <li><strong>Localização:</strong>${item.location.name}</li>
       </ul>
   </div>
-`)
+`).join('')
 }
 infoCardsTela(data.results);
 
