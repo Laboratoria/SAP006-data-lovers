@@ -54,6 +54,7 @@ background-color: #38527B;
 width: 100%;
 position: fixed;
 overflow: hidden;
+/* position: relative; */
 }
 
 .menu li{
