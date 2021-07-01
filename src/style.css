@@ -1,0 +1,32 @@
+* {
+  padding: 0px;
+  /*/ tirar espaçamento padrão que já vem /*/
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#root {
+  /*/responsivo/*/
+  background-color: #dbbe32;
+  position: fixed;
+  width: 400px;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.logo {
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 260px;
+  height: 100px;
+  margin: 0 auto;
+  background-position: 0px 20px;
+}
+
+.paragrafo {
+  margin-top: 250px;
+  padding: 0px 50px;
+  text-align: center;
+
+}
