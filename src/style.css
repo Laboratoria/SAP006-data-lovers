@@ -4,8 +4,11 @@ src: url(./fonts/Eyad\ Al-Samman\ -\ Ghibli.otf) format(otf),
 url(./fonts/Eyad\ Al-Samman\ -\ Ghibli-Bold.otf) format(otf);
 }
     
-*{margin: 0; padding: 0;}
-
+*{
+margin: 0; 
+padding: 0;
+box-sizing: border-box;
+}
 
 body{
 font-family: Ghibli; 
@@ -52,7 +55,7 @@ list-style: none;
 float: left;
 background-color: #38527B;
 width: 100%;
-position: fixed;
+position: relative;
 }
 
 .menu li{
