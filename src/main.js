@@ -1,4 +1,4 @@
-import {filtroGenero, filtroEspecie, filtroStatus, ordenarAlfabeticaAZ} from './data.js';
+import {filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica, calculoDePorcentagem} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
 
@@ -51,9 +51,23 @@ selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
 const selecaoOrdem = document.querySelector(".selecao-ordem");
 function imprimirFiltroOrdem(e) {
-  return infoCardsTela(ordenarAlfabeticaAZ(data.results, e.target.value));
+  const order = ordemAlfabetica(data.results, e.target.value)
+  return infoCardsTela(order);
   }
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
+
+const calcularPorcentagem = document.querySelector(".calculo-agregado");
+function calculoGenero(e) {
+  const estatistica = calculoDePorcentagem(data.results, e.target.value)
+  return calculo(estatistica);
+  }
+calcularPorcentagem.addEventListener("change", calculoGenero);
+
+
+
+
+
+
 
 
 
