@@ -3,7 +3,7 @@ export const films = data.films;
 export const people = films.reduce((total, film)=> total.concat(film.people), []);
 
 export const filtered = (arr, key, value) => arr.filter((item) => item[key] === value);
-
+// export const filtered = (arr, value) => arr.filter((item) => item.gender === value);
 
 // filterData(data, condition): esta função receberia os dados e nos retornaria os que cumprem com a condição.
 

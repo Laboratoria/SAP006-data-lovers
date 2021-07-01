@@ -29,15 +29,41 @@
     </nav>
     <header>
       <h1>Personagens</h1>
-      <div class="filter">
-        <img src="img/icon-filter.svg" alt="filter" />
-        <select name="select">
-          <option value="Filters" selected>Filtros</option>
-          <option value="Male" id="male">Male</option>
-          <option value="Female" id="female">Female</option>
-          <option value="Human" id="human">Humanos</option>
+      <section class="selections">
+      <div class="order">
+        <img src="img/order-icon.svg" alt="Order" />
+        <select name="select" id="order">
+          <option value="Order" selected>Ordenar</option>
+          <option value="">A-Z</option>
+          <option value="">Idade (crescente)</option>
         </select>
       </div>
+      <div class="filter">
+        <img src="img/icon-filter.svg" alt="Filter" />
+        <select name="select" id="filter">
+          <option value="Filters" selected>Filtros</option>
+          <option value="Male">Homem</option>
+          <option value="Female">Mulher</option>
+          <option value="Arch-mage/Human">Arquimago</option>
+          <option value="Witch">Bruxa</option>
+          <option value="Dog">Cão</option>
+          <option value="Demon">Demônio</option>
+          <option value="unknown">Desconhecido</option>
+          <option value="Deity">Divindade</option>
+          <option value="Scarecrow">Espantalho</option>
+          <option value="Spirit">Espírito</option>
+          <option value="Cat">Gato</option>
+          <option value="Raccoon Dog">Guaxinim</option>
+          <option value="Human">Humano</option>
+          <option value="Wolf">Lobo</option>
+          <option value="Wizard">Mago</option>
+          <option value="Borrower">Mutante</option>
+          <option value="Bird">Pássaro</option>
+          <option value="Fish/Human">Peixe</option>
+          <option value="Totoro">Totoro</option>
+        </select>
+      </div>
+    </section>
     </header>
     <section class="allChars">
       <div id="cardsCharacters" class="cardsCharacters"></div>

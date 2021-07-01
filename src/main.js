@@ -1,9 +1,11 @@
 //import data from "./data/ghibli/ghibli.js";
-import {people, filtered} from "./data.js";
+import { people, filtered } from "./data.js";
 
 function showChars(chars) {
-  document.getElementById("cardsCharacters").innerHTML = chars.map((char) =>
-    `<div class="cards">
+  document.getElementById("cardsCharacters").innerHTML = chars
+    .map(
+      (char) =>
+        `<div class="cards">
      <div class="cardFront"> 
      <img src="${char.img}" class="cardCharImg" alt="Imagem da personagem">
      </div>
@@ -12,25 +14,25 @@ function showChars(chars) {
       <p>${char.specie}</p>
      </div>
      </div> `
-  ).join("")
+    )
+    .join("");
 }
 showChars(people);
 
-const optionMale = document.getElementById("male");
-  function filterMale () { return showChars(filtered(people, "gender", "Male"));}
-optionMale.addEventListener("change", filterMale);
-
-const optionFemale = document.getElementById("female");
-  function filterFemale () { return showChars(filtered(people, "gender", "Female"));}
-optionFemale.addEventListener("change", filterFemale);
+function filterCharacter(e) {
+  const value = e.target.value;
+  if (value === "Male" || value === "Female") {
+    showChars(filtered(people, "gender", value));
+  } else if (value === "Filters") {
+    showChars(people);
+  } else {
+    showChars(filtered(people, "specie", value));
+  }
+}
+document.getElementById("filter").addEventListener("change", filterCharacter);
 
 //console.log(filterFemale);
 
-// filtrar 
-// gender 
-// specie
-
-// ordenar 
-// name a-z 
-// age crescente e decrescente 
-
+// ordenar
+// name a-z
+// age crescente e decrescente

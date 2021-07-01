@@ -32,9 +32,9 @@ nav ul li a {
 nav ul li a:hover {
   background: #97b4ee;
   color: #f2f2f2;
-  box-shadow: inset 3px 2px 3px rgb(190, 203, 247), 3px 2px 3px rgb(190, 203, 247);
+  box-shadow: inset 3px 2px 3px rgb(190, 203, 247),
+    3px 2px 3px rgb(190, 203, 247);
 }
-
 h1 {
   padding-top: 90px;
 }
@@ -92,19 +92,22 @@ footer hr {
   margin-top: 50px;
   font-size: 24px;
 }
-.filter {
+/* page characters */
+.selections{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 30px;
   margin-right: 150px;
   position: relative;
   bottom: 90px;
 }
-.filter img {
+.selections img {
+  width: 40px;
+  height: 40px;
   padding-right: 10px;
 }
-.filter select {
+.selections select {
   border: none;
   border-radius: 10px;
   text-align: center;
@@ -112,27 +115,44 @@ footer hr {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: bold;
-}
+} 
+
 /*page transition - fadeIn */
 @-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; } 
+  0% {
+    opacity: 0;
   }
-  @-moz-keyframes fadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1; }
+  100% {
+    opacity: 1;
   }
-  @-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  100% {
+    opacity: 1;
   }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .fade {
   -webkit-animation: fadeIn 2s ease-in;
   -moz-animation: fadeIn 2s ease-in;
   -o-animation: fadeIn 2s ease-in;
-  animation: fadeIn 2s ease-in;}
-	
+  animation: fadeIn 2s ease-in;
+}
