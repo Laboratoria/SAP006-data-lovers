@@ -8,8 +8,17 @@
     height: 22px;
     text-align: center;
 }
+
 #pesquisa {
     width: 500px;
+}
+
+#cabecalho {
+    border: 1px solid green;
+    height: 150px;
+    background-image: url(cropped-header1.png);
+    background-size: cover;
+    text-align: center;
 }
 
 #nave {
@@ -24,16 +33,13 @@
     margin: 10px 40px;
 }
 
-#cabecalho {
-    border: 1px solid green;
-    height: 150px;
-    background-color: aqua;
-}
-
 #filters {
     border: 1px solid black;
+    text-align: center;
 }
 
 #filtro1, #filtro2, #filtro3 {
     border: 1px solid greenyellow;
+    text-align: center;
+    border-radius: 30%;
 }
