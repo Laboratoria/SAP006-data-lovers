@@ -10,7 +10,8 @@ function exibir(itens) {
   for (let pokemon of itens) {
     let imagem = document.createElement("img");
     imagem.src = pokemon.img
-    document.getElementById("listaPokemon").appendChild(imagem)
+
+    document.getElementById("listaPokemon").inn(imagem)
   }
 }
 exibir(POKEMONS)
@@ -39,3 +40,5 @@ order.addEventListener("change", function (e) {
   exibir(sortnames);
 });
 
+
+const card = '<section class="card"> <div class="titulos"> <p id="namePok">Pikachu</p> <p id="num">001</p> </div> <img id="img"> <div class="tipos"> <p>Eletrico</p> </div> <div class="indices"> <p>Ataque</p> <p>Defesa</p> <p>Stamina</p> </div> <p>Media</p> </section>'
