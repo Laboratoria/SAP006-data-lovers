@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Rick and Morty</title>
   </head>
-  <body>
-    <div id="header">
-			<div class="site-container">
-				<div id="logo-container">
-					<div id="logo-imgs-container">
-						<img src="cropped-header1.png" alt="Rick and Morty" id="logo">
-					</div>
-				</div>
-			</div>
-		</div>
-  </div>
+
+  <body> 
+    <div id="topoPagina">
+      <input type="submit" value="botao1">
+      <input id="pesquisa" type="text" name="pesquisar">
+      <input type="submit" value="botao2">
+    </div>
+
+    <header id="cabecalho"> Rick and Morty
+    </header>
+
+    <nav id="nave">
+      <a href="">Home</a>
+      <a href="">News</a>
+      <a href="">Coiso1</a>
+      <a href="">Coiso2</a>
+      <a href="">Coiso3</a>
+    </nav>
+
+    <div id="filters">
+      <select name="filtro1" id="filtro1">
+        <option>FILTRO</option>
+        <option value="reality">Realidade originária</option>
+        <option value="home">Lugar onde vive</option>
+        <option value="planet">Planeta</option>
+        <option value="gender">Gênero</option>
+        <option value="species">Espécie</option>
+      </select>
+
+      <select name="filtro2" id="filtro2">
+        <option>FILTRO</option>
+        <option value="reality">Realidade originária</option>
+        <option value="home">Lugar onde vive</option>
+        <option value="planet">Planeta</option>
+        <option value="gender">Gênero</option>
+        <option value="species">Espécie</option>
+      </select>
+
+      <select name="filtro3" id="filtro3">
+        <option>FILTRO</option>
+        <option value="reality">Realidade originária</option>
+        <option value="home">Lugar onde vive</option>
+        <option value="planet">Planeta</option>
+        <option value="gender">Gênero</option>
+        <option value="species">Espécie</option>
+      </select>
+
+    </div>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>

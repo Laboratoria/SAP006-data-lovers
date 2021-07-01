@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#topoPagina {
+    border: 1px solid black;
+    height: 22px;
+    text-align: center;
+}
+#pesquisa {
+    width: 500px;
+}
+
+#nave {
+    text-align: center;
+    height: 30px;
+}
+
+#nave a {
+    background-color: green;
+    border-radius: 30%;
+    padding: 0px 10px;
+    margin: 10px 40px;
+}
+
+#cabecalho {
+    border: 1px solid green;
+    height: 150px;
+    background-color: aqua;
+}
+
+#filters {
+    border: 1px solid black;
+}
+
+#filtro1, #filtro2, #filtro3 {
+    border: 1px solid greenyellow;
+}
