@@ -13,39 +13,46 @@
     <nav class="menu" id="menu">
         <ul>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="filmes.html">FILMES</a></li>
-            <li><a href="personagens.html">PERSONAGENS</a></li>
+            <li><a href="filmes.html">FILMS</a></li>
+            <li><a href="personagens.html">CHARACTERS</a></li>
         </ul>
     </nav>
     <section class="open-menu">
         <div class="buttons">
             <button class="button" data-az-order>Ordem A-Z</button>
             <button class="button" data-za-order>Ordem Z-A</button>
-            <button class="button" data-female-character> Personagens femininos </button>
-            <button class="button" data-male-character>Personagens masculinos</button>
            <!-- <button class="button" data-films-vehicles>Veículos</button>-->
         </div>
+
+        <div class="menu-select">
+            <select id="select-gender">
+                <option value="gender" selected disabled> Gender </option>
+                <option value="Female"> Female </option>
+                <option value="Male"> Male </option>
+            </select>
+        </div>
+
         <div class="menu-select">
         <!--select name="select-specie" id="specie" class="button" data-film-specie>-->
-               <select> 
-                <option value="specie" selected disabled> Espécies </option>
-                <option value="Human"> Humanos </option>
-                <option value="Totoro"> Totoros </option>
-                <option value="Cat"> Gatos </option>
-                <option value="Witch"> Bruxas </option>
+               <select id="select-species"> 
+                <option value="specie" selected disabled> Species </option>
+                <option value="Human"> Human </option>
+                <option value="Totoro"> Totoro </option>
+                <option value="Cat"> Cat </option>
+                <option value="Witch"> Witch </option>
                 <option value="Raccoon Dog"> Racoon dog </option>
                 <option value="Red elk"> Red Elk </option>
-                <option value="Spirit"> Espiritos </option>
+                <option value="Spirit"> Spirit </option>
                 <option value="Wolf"> Lobos </option>
-                <option value="Deity, Dragon"> Dragao </option>
-                <option value="Spirit of The White Fox"> Espirito da raposa branca </option>
-                <option value="Bird"> Pássaros </option>
-                <option value="Wizard"> Bruxos </option>
-                <option value="Witch/Human">Bruxa/humana</option>
-                <option value="Demon"> Demonios </option>
-                <option value="Human/Scarecrow">Espantalho/humano</option>
+                <option value="Deity, Dragon"> Dragon </option>
+                <option value="Spirit of The White Fox"> Spirit of The White Fox </option>
+                <option value="Bird"> Bird </option>
+                <option value="Wizard"> Wizard </option>
+                <option value="Witch/Human"> Wicth/Human</option>
+                <option value="Demon"> Demon </option>
+                <option value="Human/Scarecrow">Human/Scarecrow</option>
                 <option value="Arch-mage/Human"> Arch-mage </option>
-                <option value="Fish/Human">Peixe/humano</option>
+                <option value="Fish/Human">Fish/Human</option>
                 <option value="Deity">Deity</option>
                 <option value="Borrower">Borrower</option>
                 </select>

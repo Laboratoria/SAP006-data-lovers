@@ -1,7 +1,7 @@
-import { filterSpeciesSelected, order} from './data.js';
+import { filterSpeciesSelected, filterGender, order} from './data.js';
 import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
-const animations = data.films
+//const animations = data.films
 const characters = data.films.reduce(function(chars, film){ 
             
     // [...chars, ...film.people]
@@ -22,10 +22,12 @@ function showCharacters(a) {
           <img src="${item.img}"class="poster-card"><p><br></p>
          </div>
         <div class="flip-card-back">
-          <p class="title-of-film"><strong>Nome:${item.name}</strong></p>
-          <p class="info"><strong>Idade: ${item.age}</p></strong>
-          <p><strong>Gênero: ${item.gender}</p></strong>
-          <p><strong>Espécie: ${item.specie}</p></strong>
+          <p class="title-of-film"><strong> Name: ${item.name}</strong></p>
+          <p class="info"><strong> Age: ${item.age}</p></strong>
+          <p><strong> Gender: ${item.gender}</p></strong>
+          <p><strong>Specie: ${item.specie}</p></strong>
+          <p><strong> Hair color: ${item.hair_color}</p></strong>
+          <p><strong> Eye color: ${item.eye_color}</p></strong>
           </div>
           </div>
         </div> `
@@ -33,24 +35,26 @@ function showCharacters(a) {
     document.getElementById("poster-people").innerHTML = people;
 };
 
-showCharacters(characters)
+//showCharacters(characters)
 
-function filterSpecies(){
+const filterSpecies = (evento) => {
+    evento.preventDefault();
+
     const valueSelected = selectSpecies.value
     const selectedSpecies= filterSpeciesSelected(characters,valueSelected);
     showCharacters(selectedSpecies);
 }
 
-const femaleCharacters = () => {
+//seleciona personagens por genero
+const selectGender = (evento) => {
+     evento.preventDefault();
 
-    
+    const valueSelected = selectedGender.value
+    const gender = filterGender(characters, valueSelected);
+    showCharacters(gender);
 }
 
-const maleCharacters = () =>{
-
-}
-
-
+//ordena personagens por ordem alfabética
 const orderAZ = () => {
 
 }
@@ -63,13 +67,11 @@ const orderZA =() => {
 
 const ordenaAZ = document.querySelector('[data-az-order]')
 const ordenaZA = document.querySelector('[data-za-order]');
-const personagensFem = document.querySelector('[data-female-character]');
-const personagensMasc = document.querySelector('[data-male-character]');
-const selectSpecies = document.getElementById("specie");
+const selectedGender = document.getElementById('select-gender');
+const selectSpecies = document.getElementById('select-species');
 
 
 ordenaAZ.addEventListener('cllick', orderAZ);
 ordenaZA.addEventListener('click', orderZA);
-personagensFem.addEventListener('click', femaleCharacters);
-personagensMasc.addEventListener('click', maleCharacters);
-selectSpecies.addEventListener('click', filterSpecies(specie));
+selectedGender.addEventListener('click', selectGender);
+selectSpecies.addEventListener('click', filterSpecies);
