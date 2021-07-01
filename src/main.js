@@ -1,28 +1,40 @@
-import { director, producer } from './data.js';
+import { filterDirector } from './src/data.js';
 import data from './data/ghibli/ghibli.js';
 
-const selectFilterDirector = document.querySelector("#director");
-const selectFilterProducer = document.querySelector("#producer");
-const selectFilterRating = document.querySelector("#rating");
+const films = data.films;
+// console.log(films);
 
-showingCards(data.ghibli);
+const cards = document.querySelector(".mainCards");
 
-function showingCards(ghibliCards) {
-    let showCards = document.querySelector("#main-cards");
-    let card = "";
-    for () {
-        let director = "";
-        if () {
-
-        }
-    }
-
+for (const film of films) {
+    const title = film.title;
+    const poster = film.poster;
+    const elementTitle = `
+    <div class="film">
+        <img src="${poster}" />
+        <p class="title">${title}</p>
+    </div>`;
+    // console.log(elementTitle);
+    cards.innerHTML += elementTitle;
 }
 
+const selectDirector = document.getElementById("director");
+selectDirector.addEventListener("change", (event) => {
+    const selectedDirector = event.target.value;
+    console.log(selectedDirector);
+    cards.innerHTML = "";
+});
 
+/*
+films.map(function(filmeAtual, indice, array) {
+    // console.log("filmeAtual:", filmeAtual)
+    // console.log("indice:", indice)
+    // console.log("array:", array)
+})
 
-
-
-console.log(example, data);
-
+for (let i = 0; i < films.length; i++) {
+    const element = films[i];
+    console.log(i, element)
+}
+*/
 
