@@ -19,6 +19,11 @@ characters.sort((a, b)=> (a.name > b.name ? 1 : -1));
 
 export const filterSpeciesSelected = (characters, valueSelected) =>
 characters.filter(item => item.specie === valueSelected);
+
+export const filterGender = (characters, valueSelected) =>
+characters.filter(item => item.gender === valueSelected);
+
+
 /*
 const equal = (one, other) => films.filter(one) === JSON.stringify(other);
 
