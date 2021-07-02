@@ -27,37 +27,14 @@ export const ordemAlfabetica = (data, order) => {
   } return data
 };
 
-// export const calculoDePorcentagem = (total, portion) => {
-//   const porcentagem = Math.round((portion * 100) / total);
-//   return porcentagem;
-// }; 
+export const calculoDePorcentagem = (total, portion) => {
+  const porcentagem = Math.round((portion * 100) / total);
+  return porcentagem;
+ }; 
 
 
 
-
-//--------------------------------------------------------------------------------------------------------------------------------
-/*function sortBy (tipo) {
-data.sort((a, b) => {
-  var nameA = a.name.toUpperCase();
-  var nameB = b.name.toUpperCase();
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
-      else {
-        if (nameA > nameB) {
-          return -1;
-        }
-        if (nameA < nameB) {
-          return 1;
-        }
-      }
-      return 0;
-})
-};*/
-
+ 
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //(data.length / database.length) * 100 - calculo de % de um grupo de elementos

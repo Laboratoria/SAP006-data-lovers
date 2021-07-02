@@ -9,7 +9,7 @@ function infoCardsTela (data) {
     <div class="card-img">
       <img src="${item.image}">
     </div> 
-      <ul class="info-cards">
+      <ul class="cards">
         <li><strong>Nome:</strong>${item.name}</li>
         <li><strong>Gênero:</strong>${item.gender}</li>      
         <li><strong>Status:</strong>${item.status}</li>
@@ -24,7 +24,7 @@ infoCardsTela(data.results);
 
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
-const selecaoGenero = document.querySelector(".selecao-genero");
+const selecaoGenero = document.querySelector("#selecao-genero");
 function imprimirFiltroGenero(e) {
   return infoCardsTela(filtroGenero(data.results, e.target.value));
   }
@@ -32,7 +32,7 @@ selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
-const selecaoEspecie = document.querySelector(".selecao-especies");
+const selecaoEspecie = document.querySelector("#selecao-especies");
 function imprimirFiltroEspecie(e) {
   return infoCardsTela(filtroEspecie(data.results, e.target.value));
   }
@@ -40,7 +40,7 @@ selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
 
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
-const selecaoStatus = document.querySelector(".selecao-status");
+const selecaoStatus = document.querySelector("#selecao-status");
 function imprimirFiltroStatus(e) {
   return infoCardsTela(filtroStatus(data.results, e.target.value));
   }
@@ -48,7 +48,7 @@ selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
-const selecaoOrdem = document.querySelector(".selecao-ordem");
+const selecaoOrdem = document.querySelector("#selecao-ordem");
 function imprimirFiltroOrdem(e) {
   const order = ordemAlfabetica(data.results, e.target.value)
   return infoCardsTela(order);
@@ -56,29 +56,12 @@ function imprimirFiltroOrdem(e) {
   console.log(selecaoOrdem)
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
 
-// const calcularPorcentagem = document.querySelector(".calculo-agregado");
-// function calculoGenero(e) {
-//   const estatistica = calculoDePorcentagem(data.results, e.target.value)
-//   return calculo(estatistica);
-//   }
-// calcularPorcentagem.addEventListener("change", calculoGenero);
-
-
-
-
-
-
-
-
-//FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM INVERSO
-const selecaoOrdemInverso = document.querySelector(".selecao-ordem");
-console.log (selecaoOrdemInverso)
-
-function imprimirFiltroOrdemInverso(e) {
-  return infoCardsTela(ordenarAlfabeticaZA(data.results, e.target.value));
-  }
-selecaoOrdemInverso.addEventListener("change", imprimirFiltroOrdemInverso);
-
+const calcularPorcentagem = document.querySelector("#calculo-agregado");
+  function calculoGenero(e) {
+    const estatistica = calculoDePorcentagem(data.results, e.target.value)
+    return calculo(estatistica);
+}
+calcularPorcentagem.addEventListener("change", calculoGenero);
 
 
 

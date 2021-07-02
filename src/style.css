@@ -12,6 +12,13 @@ body {
     background-color: #051521; 
 }
 
+/*estilização do campo de pesquisas*/
+.pesquisar{
+    background-color: #FFEBCD;
+    border-radius: 20px;
+    padding: 10px
+}
+
 /*estilização apenas do LOGO, imagem cabeçalho*/
 .img-logo{
     height: 200px;
@@ -21,45 +28,65 @@ body {
     border-radius: 50px;
 }
 
-.curiosidades{
-    display: block;
-}
-
-/*estilização dos botões de filtro, estão no section (pai) e aplica para o select (filho), 
-os option são filhos do select, por isso coloca section select*/
-section select {
+/*estilização dos botões de filtro*/
+.menus {
     background-color: #97ce4c;
     border-radius: 50px;
     padding: 15px;    
     display: inline-block;
     margin-bottom: 50px;
-    border: none;
+    text-align: center;
+    font-family: fantasy;
+    box-sizing: border-box;
+}
+
+option{
+    background: #FFEBCD;
 }
 
 /*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
-section select:hover{
-    color:green;
+.menus:hover, button:hover{
+    color:rgb(3, 97, 3);
 }
 
-/*estilização dos botões curiosidades e limpar*/
-.btn{
+.calculo{
+    margin: 18px;
+    border-radius: 15px;
+    background-color: #FFF874;
+}
+
+/*fazer a estilização das info dos cards*/
+.cards{
+    margin-left: 20px;
+    list-style: none;
     background-color: #97ce4c;
+    border-radius: 10px;
+    border-style: solid;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+}
+
+/*fazer a estilização dos CARDS*/
+.card-img{
+    margin-left: 20px;
+    width: 40%;
+}
+
+img{
     border-radius: 50px;
-    padding: 15px;    
-    margin-bottom: 50px;
-    align-items: center;
 }
 
-/*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
-button:hover{ 
-    color: green;
-}
-
-/*estilização do campo de pesquisas*/
-.pesquisar{
-    background-color: #FFEBCD;
-    border-radius: 20px;
-    padding: 10px
+/*estilização do rodapé*/
+.footer{
+    background-color: #084d6e;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 
 /*imagem de fundo do morty*/
@@ -75,34 +102,3 @@ button:hover{
     float:left;
     display: block;
 }*/
-
-/*estilização do rodapé*/
-.footer{
-    background-color: #084d6e;
-    text-align: center;
-    color: white;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-}
-
-.card-img{ /*fazer a estilização dos CARDS*/
-    border: #FFF874;
-    border-style: solid;
-    margin-left: 20px;
-    background-color: #FFF874;
-    border-radius: 10px;
-    width: 40%;
-}
-
-.info-cards{ /*fazer a estilização das info dos cards*/
-    margin-left: 20px;
-    list-style: none;
-    background-color: #97ce4c;
-    border-radius: 10px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    width: 40%;
-}
