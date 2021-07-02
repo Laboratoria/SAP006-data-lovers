@@ -35,14 +35,18 @@ header {
 
     display: flex ;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b98e043b13ee4d90c35a8e35c8a2e855a51522dd
 #get-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 20vh;
 }
 
-footer {
+.rodape{
+    
     width: 100%;
     height: 50px;
     position: fixed;
