@@ -1,6 +1,7 @@
-import { example } from './data.js';
+// import { example } from './data.js';
 import data from './data/lol/lol.js';
 
+// TODOS ELEMENTOS HTML
 const elements = data.data;
 const objects = Object.values(elements);
 
@@ -41,12 +42,12 @@ imgSearch.setAttribute("id", "img-search");
 divFilters.appendChild(imgSearch)
 const inputSearch = document.createElement("input");
 inputSearch.setAttribute("id", "input-search");
-inputSearch.setAttribute("placeholder", "Digite o nome do personagem...");
+inputSearch.setAttribute("placeholder", "Digite o nome do campeão...");
 divFilters.appendChild(inputSearch);
+
 const divCategories = document.createElement("div");
 divCategories.setAttribute("id", "categories");
 divFilters.appendChild(divCategories);
-
 const imgController = document.createElement("img");
 imgController.setAttribute("class", "icons");
 imgController.setAttribute("src", "img/controller.png");
@@ -92,6 +93,20 @@ difficultyValue3.setAttribute("value", "hard");
 difficultyValue3.innerHTML = "Díficil"
 selectDifficulty.appendChild(difficultyValue3);
 
+const orderSelector = document.createElement("select");
+orderSelector.setAttribute("id", "orders");
+divFilters.appendChild(orderSelector);
+const ordenarAtoZ = document.createElement("option");
+ordenarAtoZ.setAttribute("value", "A-Z");
+ordenarAtoZ.setAttribute("id", "A-Z");
+ordenarAtoZ.innerHTML = "A-Z"
+orderSelector.appendChild(ordenarAtoZ);
+const ordenarZtoA = document.createElement("option");
+ordenarZtoA.setAttribute("value", "Z-A");
+ordenarZtoA.setAttribute("id", "Z-A");
+ordenarZtoA.innerHTML = "Z-A"
+orderSelector.appendChild(ordenarZtoA);
+
 const sectionPagination = document.createElement("section");
 sectionPagination.setAttribute("id", "paginated");
 index.appendChild(sectionPagination);
@@ -109,6 +124,7 @@ target="blank">Larissa Siqueira</a> e <a href="https://github.com/larissavilelas
 target="new">Larissa Vilela</a></p>`
 footer.appendChild(pFooter);
 
+// PAGINAÇÃO
 function pagination(page, total, limit) {
     let pageSize = Math.ceil(total / limit);
 
@@ -149,6 +165,7 @@ let total = objects.length;
 let items = objects.slice(offset, offset + limit);
 let paginationResult = pagination(page, total, limit)
 
+// FUNÇÃO QUE MOSTRA PERSONAGENS NA TELA
 function showCharacters(items) {
     const divContainer = document.getElementById("root");
     divContainer.setAttribute("class", "container");
@@ -192,12 +209,14 @@ function showCharacters(items) {
     }
 }
 showCharacters(items);
-document.getElementById("input-search").addEventListener("keyup", function () {
-    const textName = document.getElementById("input-search").value.toLowerCase();
-    const champions = objects.filter(item => item.name.toLowerCase().includes(textName));
-    showCharacters(champions);
-})
 
+// FUNÇÃO DE BUSCAR PERSONAGEM POR NOME
+    document.getElementById("input-search").addEventListener("input", function () {
+        const textName = document.getElementById("input-search").value.toLowerCase();
+        const champions = items.filter(items => items.name.toLowerCase().includes(textName));
+        showCharacters(champions)
+})
+// CRIAÇÃO DAS PAGINAS DA PAGINAÇÃO
 if(pageQuery > paginationResult.pages){
     const divContainer = document.getElementById("root");
     divContainer.setAttribute("class", "container");
@@ -212,8 +231,6 @@ if(pageQuery > paginationResult.pages){
 let paginationItems = "";
 for (let i = 0; i <= paginationResult.pages; i++) {
     let paginaAtiva = i+1
-    paginationItems += `<a class="pagination-link`+paginaAtiva+`" id="pagination-link" href="index.html?pagina=`+paginaAtiva+`">`+paginaAtiva+`</a>`
+    paginationItems += `<a class="pagination-link`+paginaAtiva+`" id="pagination-link" href="?pagina=`+paginaAtiva+`">`+paginaAtiva+`</a>`
 }
-
 document.getElementById("pagination").innerHTML = paginationItems
-console.log(pagination(page, total, limit))
