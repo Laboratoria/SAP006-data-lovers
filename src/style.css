@@ -1,51 +1,79 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body { 
-    font-family: 'Inter', sans-serif;
+body {
+  font-family: 'Inter', sans-serif;
 }
 
-h1 {
-   text-align: center;
-   color: rgba(194, 116, 15, 0.952);
+.titulo {
+  text-align: center;
+  width: 100%;
 }
+
+.titulo img {
+  width: 50%;
+}
+
 form {
   margin-bottom: 30px;
   text-align: center;
 }
 
 label {
-    color: rgba(194, 116, 15, 0.952);
-    font-size: 20px;
-  }
+  color: rgba(194, 116, 15, 0.952);
+  font-size: 20px;
+}
 
 select {
-   border: 1px solid rgba(194, 116, 15, 0.952);
-   border-radius: 10px; 
-   height: 20px;
-   width: 60px;
-   font-size: 18px;
+  border: 1px solid rgba(194, 116, 15, 0.952);
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  font-size: 18px;
+  margin-right: 10px;
 }
+
+#listaPokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .card {
   box-sizing: border-box;
   width: 300px;
   height: 400;
   background-color: rgb(241, 241, 66);
   border-radius: 10px;
-  border:10px solid rgba(184,135,11,0.455);
-  display: 
+  border: 10px solid rgba(184, 135, 11, 0.455);
+  margin: 30px 10px;
 }
+
 .titulos, .indices, .tipos {
-  margin:10px;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
 }
+
+.titulos {
+  font-size: larger;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 .card img {
   display: block;
   width: 50%;
   margin: 0 auto;
 }
+
 .card p:last-child {
   text-align: center;
+}
+
+.tipos {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
 }
