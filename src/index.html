@@ -17,26 +17,25 @@
     <main>
 
       <section>
-        <input type="text" id="characters">
+
+        <input  id="characters" type="text" class = "botao">
+        <button id = "ordenar" class = "botao">Ordenar A-Z</button>
+        <button id = "desordenar" class = "botao">Ordenar Z-A</button>
+
       </section>
+     
 
-      <section>
+      <select   id= "status" name="status" class = "status">
 
-        <button id = "ordenar">Ordenar A-Z</button>
-        <button id = "desordenar">Ordenar Z-A</button>
-      
-      <div class = status>
+        <option id = "statusOption" class = "status" value="Status">Status</option>
+        <option id = "alive" class = "alive" value="Alive">Alive</option>
+        <option id = "dead" value="Dead">Dead</option>
+        <option id = "unknow" value="unknown">Unknown</option>
 
-        <select   id= "status" name="status">
-          <option id = "statusOption" class = "status" value="Status">Status</option>
-          <option id = "alive" class = "alive" value="Alive">Alive</option>
-          <option id = "dead" value="Dead">Dead</option>
-          <option id = "unknow" value="unknown">Unknown</option>
+      </select>
+     
 
-        </select>
-      </div>
-
-      <select id = "especie" name="especie">
+      <select id = "especie" name="especie" class = "species">
 
         <option value="especieOption">Especie</option>
         <option value="Human">Human</option>
@@ -49,7 +48,7 @@
       </section>
 
       
-      <div id="get-cards"></div>
+      <div id="get-cards" ></div>
    
     <footer>
       <p>

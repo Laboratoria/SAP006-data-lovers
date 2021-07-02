@@ -1,10 +1,6 @@
-import { filterData } from './data.js';
+import { getStatus, getSpecies, getOrder, getDisorder } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
-
-var initialData = data.results;
-
-var filteredData = data.results;
 
 
 function showCards(data) {
@@ -26,29 +22,36 @@ function showCards(data) {
 showCards(data.results);
 
 
-
-
 const status = document.getElementById("status");
 const species= document.getElementById("especie");
-
-function getStatus(statusSelected) {
-
-    var test = data.results;
-    test = test.filter(character => character.status === statusSelected);
+const order = document.getElementById("ordenar");
+const disorder = document.getElementById("desordenar");
 
 
-showCards(test);
+function getStatusData() {
+    
+    showCards(getStatus(status.value));
 }
+status.addEventListener("change", () => {getStatusData()} );
 
-status.addEventListener("change", ()=>{getStatus(status.value)} );
 
+function getSpeciesData(){
 
-function getSpecies(specieSelected){
-    console.log(specieSelected);
-   var showSpecies = data.results;
-   showSpecies = showSpecies.filter(character => character.species === specieSelected)
-
-showCards(showSpecies);
+    showCards(getSpecies(species.value));
 }
-species.addEventListener("change", ()=>{getSpecies(species.value)} );
+species.addEventListener("change", () => {getSpeciesData()} );
+
+
+function getOrderData(){
+
+    showCards(getOrder(order.value));
+}
+order.addEventListener("click", () => {getOrderData()} );
+
+
+function getDisorderData() {
+
+    showCards(getDisorder(disorder.value));
+}
+disorder.addEventListener("click", () => {getDisorderData()} );
 
