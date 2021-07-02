@@ -56,12 +56,12 @@ function imprimirFiltroOrdem(e) {
   }
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
 
-const calcularPorcentagem = document.querySelector(".calculo-agregado");
-function calculoGenero(e) {
-  const estatistica = calculoDePorcentagem(data.results, e.target.value)
-  return calculo(estatistica);
-  }
-calcularPorcentagem.addEventListener("change", calculoGenero);
+// const calcularPorcentagem = document.querySelector(".calculo-agregado");
+// function calculoGenero(e) {
+//   const estatistica = calculoDePorcentagem(data.results, e.target.value)
+//   return calculo(estatistica);
+//   }
+// calcularPorcentagem.addEventListener("change", calculoGenero);
 
 
 
