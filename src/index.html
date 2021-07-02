@@ -8,33 +8,30 @@
   <body>
     <header>
       <div class="logo">
-        <img src="./assets/img.poke/logo3.png" alt="">
+        <img src="./assets/img.poke/logo3.png" alt="" />
       </div>
       <div class="cabeçalho"></div>
     </header>
 
     <nav class="menunavegação">
+      <li>
+        <a>Home</a>
+      </li>
 
-       <li>
-       <a>Home</a>
-       </li>
-
-       <li>
+      <li>
         <a>Pokémons</a>
-       </li>
+      </li>
 
-       <li>
+      <li>
         <a>Dicas</a>
-        </li>
-
+      </li>
     </nav>
-<div class="column">
-  <img src="./assets/img.poke/pngegg.png">
-</div>
-
-
+    <div class="column">
+      <!-- <img src="./assets/img.poke/pngegg.png" />-->
+    </div>
 
     <main>
+      <!--
       <select name="select" id="type" class="filtroTipos">
         <option value="filtrar" selected>Tipos</option>
         <option value="grass">Planta</option>
@@ -55,13 +52,25 @@
         <option value="steel">Metálico</option>
         <option value="dark">Noturno</option>
         <option value="fairy">Fada</option>
-      </select>
+      </select>-->
 
-      <button id="btnFiltrar" value="botaoFiltrar" class="botãoFiltrar">Filtrar</button>
-      <div id="result"></div>
+      <input
+        type="pokemonsearch"
+        name="pokemonsearch"
+        id="pokemonsearch"
+        placeholder="Digite o nome do Pokémon"
+      />
+      <input
+        type="button"
+        id="btnFiltrar"
+        type="submit"
+        value="Filtrar"
+        class="botaoFiltrar"
+      />
+      <div class="content" id="cards"></div>
     </main>
 
-   <!-- <footer>&copy Giuliana e Liziane</footer> -->
+    <!-- <footer>&copy Giuliana e Liziane</footer> -->
 
     <script src="main.js" type="module"></script>
   </body>
