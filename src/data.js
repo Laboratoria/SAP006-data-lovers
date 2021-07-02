@@ -23,23 +23,17 @@ export const ordemAlfabetica = (data, order) => {
   } return data
 };
 
-export const calculoDePorcentagem = (total, portion) => {
-  const porcentagem = Math.round((portion * 100) / total);
-  return porcentagem;
-}; 
+// export const calculoDePorcentagem = (total, portion) => {
+//   const porcentagem = Math.round((portion * 100) / total);
+//   return porcentagem;
+// }; 
 
 //----------------------------------------------------------
 
 
 
 
-//export const ordenarAlfabeticaZA = (data) => ordenarAlfabeticaAZ(data).reverse()
 
-/*export const alphabeticOrder = (data) => data.sort((a,z) => a.name > z.name ? 1 : -1);
-
-export const sortByAZ = (data) => alphabeticOrder(data).slice(0, 494);
-
-export const sortByZA = (data) => sortByAZ(data).reverse();
 
  
 
