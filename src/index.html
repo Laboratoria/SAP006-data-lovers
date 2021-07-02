@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  
+    <header>
+      <div class="links">
+        <a href="./index.html">HOME</a>
+        <a href="https://pt.wikipedia.org/wiki/Rick_and_Morty" target="_blank">SOBRE A SÉRIE</a>
+      </div>
+    </header>
+  </head>
+  <body>
 
-<head>
-  <meta charset="utf-8">
-  <title>Rick and Morty</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <main>
 
-<body>
+      <section>
 
-  <header>
-    <div class="links">
-      <a href="./index.html">HOME</a>
-      <a href="https://pt.wikipedia.org/wiki/Rick_and_Morty" target="_blank">SOBRE A SÉRIE</a>
-    </div>
-  </header>
+        <input  id="characters" type="text" class = "botao">
+        <button id = "ordenar" class = "botao">Ordenar A-Z</button>
+        <button id = "desordenar" class = "botao">Ordenar Z-A</button>
 
-  <main>
-    <div id="get-cards"></div>
-  </main>
+      </section>
+     
 
-  <footer>
-    <p>
-      @Bruna Calixto e Carmen Gozza- 2021
-    </p>
-  </footer>
-  <script src="./main.js" type="module"></script>
-  <script src="./data.js" type="module"></script>
-</body>
+      <select   id= "status" name="status" class = "status">
 
+        <option id = "statusOption" class = "status" value="Status">Status</option>
+        <option id = "alive" class = "alive" value="Alive">Alive</option>
+        <option id = "dead" value="Dead">Dead</option>
+        <option id = "unknow" value="unknown">Unknown</option>
+
+      </select>
+     
+
+      <select id = "especie" name="especie" class = "species">
+
+        <option value="especieOption">Especie</option>
+        <option value="Human">Human</option>
+        <option value="Humanoid">Humanoid</option>
+        <option value="Alien">Alien</option>
+        <option value="Animal">animal</option>
+        
+      </select>
+
+      </section>
+
+      
+      <div id="get-cards" ></div>
+   
+    <footer>
+      <p>
+        @Bruna Calixto e Carmen Gozza- 2021
+      </p>
+    </footer>
+
+    <script src="main.js" type="module"></script>
+    <script src="./data.js" type="module"></script>
+
+  </body>
 </html>

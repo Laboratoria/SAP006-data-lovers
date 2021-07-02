@@ -1,4 +1,5 @@
-import { filterData } from './data.js';
+import { getStatus, getSpecies, getOrder, getDisorder } from './data.js';
+
 import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -19,3 +20,38 @@ function showCards(data) {
         `)
 }
 showCards(data.results);
+
+
+const status = document.getElementById("status");
+const species= document.getElementById("especie");
+const order = document.getElementById("ordenar");
+const disorder = document.getElementById("desordenar");
+
+
+function getStatusData() {
+    
+    showCards(getStatus(status.value));
+}
+status.addEventListener("change", () => {getStatusData()} );
+
+
+function getSpeciesData(){
+
+    showCards(getSpecies(species.value));
+}
+species.addEventListener("change", () => {getSpeciesData()} );
+
+
+function getOrderData(){
+
+    showCards(getOrder(order.value));
+}
+order.addEventListener("click", () => {getOrderData()} );
+
+
+function getDisorderData() {
+
+    showCards(getDisorder(disorder.value));
+}
+disorder.addEventListener("click", () => {getDisorderData()} );
+
