@@ -1,18 +1,18 @@
 @font-face{
-    font-family: Ghibli;
-    src: url(./fonts/Eyad\ Al-Samman\ -\ Ghibli.otf) format(otf),
-    url(./fonts/Eyad\ Al-Samman\ -\ Ghibli-Bold.otf) format(otf);
-    }
+font-family: 'Ghibli';
+src: url('./fonts/Ghibli.otf') format(otf),
+url('./fonts/Ghibli_Bold.otf') format(otf);
+}
         
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: Ghibli;}
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Ghibli';}
     
     
 body{
-    font-size: 12px;
-    background-color: #38527B;
-    animation: banner 40s infinite;
-    animation-direction: alternate;
-    }
+font-size: 12px;
+background-color: #38527B;
+animation: banner 40s infinite;
+animation-direction: alternate;
+}
 
 .menu{
 list-style: none;
@@ -43,4 +43,20 @@ background: #008891;
 color: #E7E7DE;
 font-weight: bolder;
 text-shadow: 0px 0px 5px #fff;
+}
+
+.container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+padding: 0px 50px 12px; 
+}
+
+.cartaoFilme{
+position: relatuve;
+width: 280px;
+height: 400px;
+margin: 30px;
+box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }

@@ -1,10 +1,10 @@
 @font-face{
-font-family: Ghibli;
-src: url(./fonts/Eyad\ Al-Samman\ -\ Ghibli.otf) format(otf),
-url(./fonts/Eyad\ Al-Samman\ -\ Ghibli-Bold.otf) format(otf);
+font-family: 'Ghibli';
+src: url(./fonts/Ghibli.otf) format(otf),
+url(./fonts/Ghibli_Bold.otf) format(otf);
 }
-    
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: Ghibli;}
+            
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Ghibli';}
 
 
 body{
