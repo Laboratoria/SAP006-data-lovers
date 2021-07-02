@@ -1,5 +1,12 @@
+ feature/MudandoparaIngles
 import { filterSpeciesSelected, filterGender, order} from './data.js';
 import data from './data/ghibli/ghibli.js';
+
+import { filterSpeciesSelected, order} from './data.js';
+import { } from './data.js';
+import data from './data/ghibli/ghibli.js';
+const animations = data.films
+ main
 const characters = data.films.reduce(function(chars, film){ 
             
     // [...chars, ...film.people]
@@ -53,9 +60,6 @@ const orderAZ = () => {
 
 }
 
-const orderZA =() => {
-
-}
 
 
 
