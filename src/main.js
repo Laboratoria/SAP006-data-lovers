@@ -12,7 +12,7 @@ import pokemon from './data/pokemon/pokemon.js';
 //console.log(ordenarPorNum);
 
 
- const pokemonList = data.pokemon.slice(0,4);
+ const pokemonList = data.pokemon.slice(0,15);
 
  const displayPokes = (pokemonData) => {
    
@@ -21,28 +21,31 @@ import pokemon from './data/pokemon/pokemon.js';
  pokemonData.forEach((elem) => {
    pokeCard.innerHTML += `
     
-   
    <div id="card" class="card">
-     <div class="card-container" data-target="card"> 
-        <div class="top-info id="top-info">
+      <div class="gridContainerUp" id="gridContainerUp"> 
           <div class="title"> ${elem.name.toUpperCase()}</div>
-          <div class="numberTitle">#${elem.num}</div>
+          <div class="number">#${elem.num}</div>
           <div class="maxHp">${elem.stats["max-hp"]}HP</div>
-        </div>
-        <div class="backgroundImg" id=""backgroundImg">
-          <img class="picture" src=" ${elem.img}"></img>
-        </div>
-        </div>
-        <div id="back" class=" back">
-        <div class="infCardAbout">${elem.about}</div> 
-        <div class="infCardAbout"<br>G<br>${elem.generation.name}</div> 
-        <div class="infCardAbout">Tipo<br>${elem.egg}</div>
-        <div class="infCardAbout infCard">Resistencia<br>${elem.resistant.join(', ')}</div>
-        </div>
-     </div>
-   </div>
+          <div class="backgroundImg" id=""backgroundImg">
+            <img class="picture" src=" ${elem.img}"></img>
+          </div>
+          <div class="downInfo" id="downInfo">
+            <div class="weight" id="weight">Weight:${elem.size.weight}</div>
+            <div class="height" id="height">Height:${elem.size.height}</div>
+          </div>
+      </div>
+      <div class="gridContainerDown" id="gridContainerDown">
+        <div class="attackList" id="attackList">7</div>
+        <div class="typeList" id="typeList">8</div>
+        <div class="weakList" id="weakList">9</div>
+        <div class="resistList" id="resistList">10</div>
+      </div>
+  </div>
 `;
- });
+   
+
+
+});
 
 
  };
