@@ -1,23 +1,27 @@
-import { filtrar } from "./data.js";
-/*import { ordenar } from "./data.js";*/
 import data from "./data/pokemon/pokemon.js";
+import { showPokemons, filterByName } from "./data.js";
 
-let AllPokemons = data.pokemon;
-const filtroTipos = document.getElementById("type");
-const botaoParaFiltrar = document.getElementById("btnFiltrar");
+const printPokemons = (pokemonsList) => {
+  const cardsElement = document.getElementById("cards");
+  cardsElement.innerHTML = "";
 
-botaoParaFiltrar.addEventListener("click", apertandoBotao);
+  pokemonsList.forEach((pokemon) => {
+    cardsElement.innerHTML += `<div class="card">
+      <h2 class="title">${pokemon.name}</h2>
+      <span class="secondText">
+      <b>Número:</b> ${pokemon.num}
+      <b>Tipo:</b> ${pokemon.type}
+      <b>Evolução:</b> ${pokemon["next-evolution"]} </span>
+  </div>`;
+  });
+};
+const pokemonsList = showPokemons(data.pokemon);
+printPokemons(pokemonsList);
 
-function apertandoBotao() {
-  if (filtroTipos.value !== "") {
-    AllPokemons = filtrar(data.pokemon, filtroTipos.value);
-  } else {
-    AllPokemons = data.pokemon;
-  }
-  return AllPokemons;
-}
+const btnSearchPokemon = document.getElementById("btnFiltrar");
+const pokemonsName = document.getElementById("pokemonsearch");
 
-for (let pokemon of AllPokemons) {
-  document.getElementById("type").innerHTML += `${pokemon.name}
-`;
-}
+btnSearchPokemon.addEventListener("click", () => {
+  const searchPokemonByName = filterByName(data.pokemon, pokemonsName.value);
+  printPokemons(searchPokemonByName);
+});
