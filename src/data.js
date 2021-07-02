@@ -1,13 +1,5 @@
+import data from "./data/ghibli/ghibli.js";
+const films = data.films;
 
-export const filters = (data, condition) => {
-  
-  filterDirector: function directors (name) {
-  if (condition !== ""){
-    let filterResult = "";
-    for (let i = 0; i < name.length; i++){
-      let 
-    }
-    filterDirector += filterResult;
-  } 
-}
-
+export const filters = (array, key, condition) =>
+  array.filter((item) => item[key] === condition);

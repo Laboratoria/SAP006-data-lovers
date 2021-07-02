@@ -1,30 +1,39 @@
-import { filterDirector } from './src/data.js';
+import { filters } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
-// console.log(films);
+//console.log(films);
 
 const cards = document.querySelector(".mainCards");
 
-for (const film of films) {
-    const title = film.title;
-    const poster = film.poster;
-    const elementTitle = `
-    <div class="film">
+function showingCards(itens) {
+    cards.innerHTML = "";
+    for (const film of itens) {
+        const title = film.title;
+        const poster = film.poster;
+        const elementTitle = `
+    <div class="film"></div>
         <img src="${poster}" />
         <p class="title">${title}</p>
     </div>`;
-    // console.log(elementTitle);
-    cards.innerHTML += elementTitle;
+        // console.log(elementTitle);
+        cards.innerHTML += elementTitle;
+    }
 }
 
-const selectDirector = document.getElementById("director");
-selectDirector.addEventListener("change", (event) => {
+showingCards(films);
+
+director.addEventListener("change", (event) => {
     const selectedDirector = event.target.value;
-    console.log(selectedDirector);
-    cards.innerHTML = "";
+    const filtered = filters(films, "director", selectedDirector);
+    showingCards(filtered);
+
+    //console.log(selectedDirector);
+    //cards.innerHTML = "";
 });
 
+
+//
 /*
 films.map(function(filmeAtual, indice, array) {
     // console.log("filmeAtual:", filmeAtual)
