@@ -6,9 +6,9 @@ import data from './data/rickandmorty/rickandmorty.js';
 function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
   <div class="cards">
-      <div class="front-card">
-        <img class="img-card" src="${item.image}">
-      </div>
+    <div class="front-img">
+      <img class="card-img" src="${item.image}">
+    </div>
 
       <div class="front-text">
         <ul class="front-text-card">
@@ -20,8 +20,6 @@ function infoCardsTela (data) {
           <li><strong>Localização:</strong>${item.location.name}</li>
         </ul>
       </div> 
-
-
 
   </div>
 `).join('')
@@ -71,17 +69,6 @@ calcularPorcentagem.addEventListener("change", calculoGenero);
 
 
 
-
-/* <aside class="back-card">
-        <ul class="text-card">
-          <li><strong>Nome:</strong>${item.name}</li>
-          <li><strong>Gênero:</strong>${item.gender}</li>      
-          <li><strong>Status:</strong>${item.status}</li>
-          <li><strong>Espécie:</strong>${item.species}</li>
-          <li><strong>Origem:</strong>${item.origin.name}</li>
-          <li><strong>Localização:</strong>${item.location.name}</li>
-        </ul>
-      </aside> */
 
 
 

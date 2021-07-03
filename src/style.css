@@ -10,10 +10,22 @@ body {
     background-color: #051521; 
 }
 
+
+#logo{
+    padding-top: 10px;
+    height: 200px;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 50px;
+}
+
+
 /*estilização do campo de pesquisas*/
 #container-search{
     position: relative;
-    margin-top: 5px;
+    margin-top: 40px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -21,33 +33,17 @@ body {
 }
 
 .pesquisar{
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
     width: 400px;
     background-color: #FFEBCD;
     border-radius: 20px;
     padding: 10px
 }
 
-/*estilização apenas do LOGO, imagem cabeçalho*/
-.img-logo{
-    height: 200px;
-    width: 600px;
-    margin: 0 auto;
-    display: block;
-    border-radius: 50px;
-}
-
-
-#container-principal{
+#container-principal section{
     position: relative;
     margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    align-content: center;
-}
-
-.menu-align{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -62,8 +58,9 @@ body {
     padding: 15px;    
     margin-bottom: 50px;
     text-align: center;
-    font-family: fantasy;
     box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
 }
 
 option{
@@ -87,7 +84,7 @@ option{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: #FFF874;
+    background-color: #FFEBCD;
     box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
     
 }
@@ -115,14 +112,14 @@ option{
     background-color: #97ce4c;
 }
   
-.front-card {
+.front-img {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
   
-.img-card{
+.card-img{
     margin: auto;
     position: relative;
     width: 220px;
@@ -130,8 +127,6 @@ option{
     border-radius: 25px;
     box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
 }
-
-
 
 .front-text{
     width: 200px;
@@ -157,11 +152,6 @@ option{
     flex-wrap: wrap;
 }
   
-
-
-
-
-
 /*estilização do rodapé*/
 .footer{
     background-color: #084d6e;
@@ -171,10 +161,6 @@ option{
     position: fixed;
     width: 100%;
 }
-
-
-
-
 
 /*imagem de fundo do morty*/
 /*.fundo-direita{
@@ -189,3 +175,16 @@ option{
     float:left;
     display: block;
 }*/
+
+
+@media(min-width: 660px) and (max-width: 880px){
+
+
+
+}
+
+@media(min-width: 330px) and (max-width: 660px){
+
+
+
+}
