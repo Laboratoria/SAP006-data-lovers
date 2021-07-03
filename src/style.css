@@ -98,14 +98,22 @@ footer hr {
   flex-direction: row;
   justify-content: space-between;
   height: 30px;
-  margin-right: 150px;
+  margin: 0 150px 0 150px;
   position: relative;
   bottom: 90px;
 }
+.order{
+  display: flex;
+  align-items: center;
+}
+.filter{
+  display: flex;
+  align-items: center;
+}
 .selections img {
-  width: 40px;
-  height: 40px;
-  padding-right: 10px;
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
 }
 .selections select {
   border: none;
@@ -116,7 +124,19 @@ footer hr {
   font-size: 18px;
   font-weight: bold;
 } 
-
+.cardsCharacters{
+  display: flex;
+  flex-flow: row wrap;
+  perspective: 1000px;
+}
+.cards{
+  padding: 10px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.cardsCharacters .cards:hover{
+  transform: rotateY(180deg);
+}
 /*page transition - fadeIn */
 @-webkit-keyframes fadeIn {
   0% {
