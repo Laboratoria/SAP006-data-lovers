@@ -150,9 +150,9 @@ option{
 
 .front-text-card{
     margin-left: 10px;
-    text-align: center;
+    text-align: left;
     list-style: none;
-    font-size: 30px;
+    font-size: 15px;
     font-family: monospace ;
     flex-wrap: wrap;
 }
@@ -188,45 +188,4 @@ option{
     opacity: 40%;
     float:left;
     display: block;
-}*/
-
-
-
-
-
-/*fazer a estilização das info dos cards*/
-/*.cards{
-    position: relative;
-    height: 320px;
-    width: 400px;
-    margin: 10px;
-    padding: 10px;
-    perspective: 1000px;
-    background-color: #97ce4c;
-    border-radius: 20px;
-}
-
-.flip{
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-}
-
-.flip:hover{
-    transform: rotateY(180deg);
-}
-
-.front-card .back-card .name-front{
-    position: absolute;
-    backface-visibility: hidden;
-}*/
-
-/*fazer a estilização dos CARDS*/
-/*.img-card{
-    width: 250px;
-    height: 250px;
-    border-radius: 25px;
-    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
-}
-.name-front{
-    font-family: fantasy;
 }*/

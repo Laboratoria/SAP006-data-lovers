@@ -12,11 +12,16 @@ function infoCardsTela (data) {
 
       <div class="front-text">
         <ul class="front-text-card">
-          <li><strong>${item.name}</strong></li>
+          <li><strong>Nome:</strong>${item.name}</li>
+          <li><strong>Gênero:</strong>${item.gender}</li>      
+          <li><strong>Status:</strong>${item.status}</li>
+          <li><strong>Espécie:</strong>${item.species}</li>
+          <li><strong>Origem:</strong>${item.origin.name}</li>
+          <li><strong>Localização:</strong>${item.location.name}</li>
         </ul>
       </div> 
 
-      
+
 
   </div>
 `).join('')
