@@ -1,4 +1,4 @@
-import { filterData, sortData } from "./data.js";
+import { computeStats, filterData, sortData } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const cards = document.querySelector(".cards");
@@ -113,3 +113,24 @@ statusFilter.options[statusFilter.selectedIndex = 0];
 const genderFilter = document.getElementById("gender-filter");
 genderFilter.options[genderFilter.selectedIndex = 0];
 }
+
+//Cálculos estatísticos:
+
+const totalCharacters = sortData(data).length;
+
+const printTotalCharacters = document.getElementById("totalCharacters");
+printTotalCharacters.innerHTML = `<p class="totalCharacter">O total de personagens da série é:</p>
+                                  <p class="totalCharacter">${totalCharacters}</p>`
+
+
+const maleAverage = computeStats.gender(data, "Male")+ "%";
+const femaleAverage = computeStats.gender(data, "Female")+ "%";
+const genderlessAverage = computeStats.gender(data, "Genderless")+ "%";
+const unknownAverage = computeStats.gender(data, "unknown")+ "%";
+
+const printGenderAverage = document.getElementById("genderAverage");
+printGenderAverage.innerHTML = `<p class="genderAverage">Média de gêneros: </p>
+                              <p class="genderAverage">Masculinos: ${maleAverage}</p>
+                              <p class="genderAverage">Femininos: ${femaleAverage}</p>
+                              <p class="genderAverage">Desconhecidos: ${unknownAverage}</p>
+                              <p class="genderAverage">Sem gênero: ${genderlessAverage}</p>`
