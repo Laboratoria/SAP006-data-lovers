@@ -23,10 +23,10 @@ export const ordemAlfabetica = (data, order) => {
   } return data
 };
 
-// export const calculoDePorcentagem = (total, portion) => {
-//   const porcentagem = Math.round((portion * 100) / total);
-//   return porcentagem;
-// }; 
+export const calculoDePorcentagem = (total, portion) => {
+  const porcentagem = Math.round((portion * 100) / total);
+  return porcentagem;
+}; 
 
 //----------------------------------------------------------
 
