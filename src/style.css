@@ -73,6 +73,7 @@ nav ul li{
     width: 8%;
 }
 .orders{
+    cursor: pointer;
     width: 70%;
     padding: 3px;
     background: #1e2328;
@@ -104,6 +105,9 @@ nav ul li{
     text-shadow: 0 0 5px #ffffff80;
     background: #1e2328 linear-gradient(to bottom, #474747b7, #1b1a178c);
     transition: 0.1s;
+}
+button{
+    outline: none;
 }
 #Z-A{
     position: absolute;
