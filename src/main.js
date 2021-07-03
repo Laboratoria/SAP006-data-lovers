@@ -1,6 +1,6 @@
-import { example } from './data.js';
+import allFilters from './data.js';
 import data from './data/lol/lol.js';
-
+// TODOS ELEMENTOS HTML
 const elements = data.data;
 const objects = Object.values(elements);
 
@@ -41,12 +41,12 @@ imgSearch.setAttribute("id", "img-search");
 divFilters.appendChild(imgSearch)
 const inputSearch = document.createElement("input");
 inputSearch.setAttribute("id", "input-search");
-inputSearch.setAttribute("placeholder", "Digite o nome do personagem...");
+inputSearch.setAttribute("placeholder", "Digite o nome do campeão...");
 divFilters.appendChild(inputSearch);
+
 const divCategories = document.createElement("div");
 divCategories.setAttribute("id", "categories");
 divFilters.appendChild(divCategories);
-
 const imgController = document.createElement("img");
 imgController.setAttribute("class", "icons");
 imgController.setAttribute("src", "img/controller.png");
@@ -72,25 +72,136 @@ imgFighter.setAttribute("class", "icons");
 imgFighter.setAttribute("src", "img/fighter.png");
 divCategories.appendChild(imgFighter);
 
-const selectDifficulty = document.createElement("select");
+const divDifficulty = document.createElement("div");
+divDifficulty.setAttribute("id", "div-difficulty");
+divFilters.appendChild(divDifficulty)
+const selectDifficulty = document.createElement("button");
 selectDifficulty.setAttribute("id", "difficulties");
-divFilters.appendChild(selectDifficulty);
-const difficultyValue = document.createElement("option");
-difficultyValue.setAttribute("value", "all");
-difficultyValue.innerHTML = "Todas as dificuldades"
-selectDifficulty.appendChild(difficultyValue);
-const difficultyValue1 = document.createElement("option");
-difficultyValue1.setAttribute("value", "easy");
-difficultyValue1.innerHTML = "Fácil"
-selectDifficulty.appendChild(difficultyValue1);
-const difficultyValue2 = document.createElement("option");
-difficultyValue2.setAttribute("value", "medium");
-difficultyValue2.innerHTML = "Médio"
-selectDifficulty.appendChild(difficultyValue2);
-const difficultyValue3 = document.createElement("option");
-difficultyValue3.setAttribute("value", "hard");
-difficultyValue3.innerHTML = "Díficil"
-selectDifficulty.appendChild(difficultyValue3);
+selectDifficulty.innerHTML = `Dificuldades <img id="img-select" src="img/select.png"/>`
+divDifficulty.appendChild(selectDifficulty);
+const difficultyAll = document.createElement("button");
+difficultyAll.setAttribute("id", "all");
+difficultyAll.style.display = "none"
+difficultyAll.setAttribute("class", "difficulties");
+difficultyAll.innerHTML = "Todas as Dificuldades"
+divDifficulty.appendChild(difficultyAll);
+const difficultyEasy = document.createElement("button");
+difficultyEasy.setAttribute("id", "easy");
+difficultyEasy.style.display = "none"
+difficultyEasy.setAttribute("class", "difficulties");
+difficultyEasy.innerHTML = `<img id="easy-img" src="img/easy.png"/>`
+divDifficulty.appendChild(difficultyEasy);
+const difficultyMedium = document.createElement("button");
+difficultyMedium.setAttribute("id", "medium");
+difficultyMedium.style.display = "none"
+difficultyMedium.setAttribute("class", "difficulties");
+difficultyMedium.innerHTML = `<img id="medium-img" src="img/medium.png"/>`
+divDifficulty.appendChild(difficultyMedium);
+const difficultyHard = document.createElement("button");
+difficultyHard.setAttribute("id", "hard");
+difficultyHard.style.display = "none"
+difficultyHard.setAttribute("class", "difficulties");
+difficultyHard.innerHTML = `<img id="hard-img" src="img/hard.png"/>`
+divDifficulty.appendChild(difficultyHard);
+
+document.getElementById("difficulties").addEventListener("click", function(){
+    if(document.getElementById("all").style.display == "none"){
+            document.getElementById("all").style.display = "flex";
+            document.getElementById("img-select").style.display = "none";
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-select" src="img/up.png"/>`
+ 
+    }else{
+            document.getElementById("all").style.display = "none"
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-select" src="img/select.png"/>`
+    }
+ })
+ document.getElementById("difficulties").addEventListener("click", function(){
+    if(document.getElementById("easy").style.display == "none"){
+            document.getElementById("easy").style.display = "flex";
+            document.getElementById("img-select").style.display = "none";
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-select" src="img/up.png"/>`
+ 
+    }else{
+            document.getElementById("easy").style.display = "none"
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-select" src="img/select.png"/>`
+    }
+ })
+ document.getElementById("difficulties").addEventListener("click", function(){
+    if(document.getElementById("medium").style.display == "none"){
+            document.getElementById("medium").style.display = "flex";
+            document.getElementById("img-select").style.display = "none";
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-select" src="img/up.png"/>`
+ 
+    }else{
+            document.getElementById("medium").style.display = "none"
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-select" src="img/select.png"/>`
+    }
+ })
+ document.getElementById("difficulties").addEventListener("click", function(){
+    if(document.getElementById("hard").style.display == "none"){
+            document.getElementById("hard").style.display = "flex";
+            document.getElementById("img-select").style.display = "none";
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-up" src="img/up.png"/>`
+ 
+    }else{
+            document.getElementById("hard").style.display = "none"
+            document.getElementById("difficulties").innerHTML = `Dificuldades <img id="img-select" src="img/select.png"/>`
+    }
+ })
+
+
+const orderSelector = document.createElement("div");
+orderSelector.setAttribute("id", "order-selector");
+divFilters.appendChild(orderSelector);
+const ordenar = document.createElement("button");
+ordenar.setAttribute("id", "ordenar");
+ordenar.setAttribute("class", "order");
+ordenar.innerHTML = `A-Z <img id="img-select1" src="img/select.png"/>`
+orderSelector.appendChild(ordenar);
+const ordenarAtoZ = document.createElement("button");
+ordenarAtoZ.setAttribute("id", "A-Z");
+ordenarAtoZ.setAttribute("class", "orders");
+ordenarAtoZ.innerHTML = `A-Z`
+ordenarAtoZ.style.display = "none"
+orderSelector.appendChild(ordenarAtoZ);
+const ordenarZtoA = document.createElement("button");
+ordenarZtoA.setAttribute("id", "Z-A");
+ordenarZtoA.setAttribute("class", "orders");
+ordenarZtoA.style.display = "none"
+ordenarZtoA.innerHTML = `Z-A`
+orderSelector.appendChild(ordenarZtoA);
+
+document.getElementById("ordenar").addEventListener("click", function(){
+    ordenarZtoA.innerHTML = `Z-A`
+    if(document.getElementById("A-Z").style.display == "none"){
+        document.getElementById("ordenar").style.display = "none"
+        document.getElementById("A-Z").style.display = "flex"
+        document.getElementById("A-Z").style.justifyContent = "center"
+    } else{
+        document.getElementById("A-Z").style.display = "none"
+    }
+    if(document.getElementById("Z-A").style.display == "none"){
+        document.getElementById("Z-A").style.display = "flex"
+    } else{
+        document.getElementById("Z-A").style.display = "none"
+    }
+})
+document.getElementById("A-Z").addEventListener("click", function(){
+    document.getElementById("ordenar").style.display = "flex"
+    document.getElementById("ordenar").innerHTML = `A-Z <img id="img-select1" src="img/select.png"/>`
+    document.getElementById("ordenar").style.padding = "2px 0px 0px 6px"
+    document.getElementById("img-select1").style.padding = "3px 7px"
+    document.getElementById("A-Z").style.display = "none"
+    document.getElementById("Z-A").style.display = "none"
+})
+document.getElementById("Z-A").addEventListener("click", function(){
+    document.getElementById("ordenar").style.display = "flex"
+    document.getElementById("ordenar").innerHTML = `Z-A <img id="img-select1" src="img/select.png"/>`
+    document.getElementById("ordenar").style.padding = "2px 0px 0px 6px"
+    document.getElementById("img-select1").style.padding = "3px 7px"
+    document.getElementById("A-Z").style.display = "none"
+    document.getElementById("Z-A").style.display = "none"
+})
 
 const sectionPagination = document.createElement("section");
 sectionPagination.setAttribute("id", "paginated");
@@ -109,6 +220,7 @@ target="blank">Larissa Siqueira</a> e <a href="https://github.com/larissavilelas
 target="new">Larissa Vilela</a></p>`
 footer.appendChild(pFooter);
 
+// PAGINAÇÃO
 function pagination(page, total, limit) {
     let pageSize = Math.ceil(total / limit);
 
@@ -149,6 +261,7 @@ let total = objects.length;
 let items = objects.slice(offset, offset + limit);
 let paginationResult = pagination(page, total, limit)
 
+// FUNÇÃO QUE MOSTRA PERSONAGENS NA TELA
 function showCharacters(items) {
     const divContainer = document.getElementById("root");
     divContainer.setAttribute("class", "container");
@@ -192,12 +305,14 @@ function showCharacters(items) {
     }
 }
 showCharacters(items);
-document.getElementById("input-search").addEventListener("keyup", function () {
-    const textName = document.getElementById("input-search").value.toLowerCase();
-    const champions = objects.filter(item => item.name.toLowerCase().includes(textName));
-    showCharacters(champions);
-})
 
+// FUNÇÃO DE BUSCAR PERSONAGEM POR NOME
+    document.getElementById("input-search").addEventListener("input", function () {
+        const textName = document.getElementById("input-search").value.toLowerCase();
+        const champions = items.filter(items => items.name.toLowerCase().includes(textName));
+        showCharacters(champions)
+})
+// CRIAÇÃO DAS PAGINAS DA PAGINAÇÃO
 if(pageQuery > paginationResult.pages){
     const divContainer = document.getElementById("root");
     divContainer.setAttribute("class", "container");
@@ -212,8 +327,56 @@ if(pageQuery > paginationResult.pages){
 let paginationItems = "";
 for (let i = 0; i <= paginationResult.pages; i++) {
     let paginaAtiva = i+1
-    paginationItems += `<a class="pagination-link`+paginaAtiva+`" id="pagination-link" href="index.html?pagina=`+paginaAtiva+`">`+paginaAtiva+`</a>`
+    paginationItems += `<a class="pagination-link`+paginaAtiva+`" id="pagination-link" href="?pagina=`+paginaAtiva+`">`+paginaAtiva+`</a>`
 }
+document.getElementById("pagination").innerHTML = paginationItems;
 
-document.getElementById("pagination").innerHTML = paginationItems
-console.log(pagination(page, total, limit))
+// FUNÇÃO PRA MUDAR DIFICULDADES
+document.getElementById("all").addEventListener("click", function(){
+    document.getElementById("difficulties").innerHTML = `Todas as Dificuldades <img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("difficulties").style.fontSize = "14px"
+    document.getElementById("difficulties").style.padding = "0px"
+    document.getElementById("img-select").style.padding = "0px"
+    showCharacters(items);
+})
+
+document.getElementById("easy").addEventListener("click", function(){
+    document.getElementById("difficulties").innerHTML = `<img id="easy-img" src="img/easy.png"/><img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("easy-img").style.width = "60%";
+    document.getElementById("easy-img").style.float = "left"
+    document.getElementById("easy-img").style.padding = "0px 0px 0px 20px"
+    document.getElementById("img-select").style.padding = "5px 0px"
+    document.getElementById("root").innerHTML = ""
+})
+document.getElementById("medium").addEventListener("click", function(){
+    document.getElementById("difficulties").innerHTML = `<img id="medium-img" src="img/medium.png"/><img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("medium-img").style.width = "60%";
+    document.getElementById("medium-img").style.float = "left"
+    document.getElementById("medium-img").style.padding = "0px 0px 0px 20px"
+    document.getElementById("img-select").style.padding = "5px 0px"
+    document.getElementById("root").innerHTML = ""
+})
+document.getElementById("hard").addEventListener("click", function(){
+    document.getElementById("difficulties").innerHTML = `<img id="hard-img" src="img/hard.png"/><img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("hard-img").style.width = "60%";
+    document.getElementById("hard-img").style.float = "left"
+    document.getElementById("hard-img").style.padding = "0px 0px 0px 20px"
+    document.getElementById("img-select").style.padding = "5px 0px"
+    document.getElementById("root").innerHTML = ""
+})

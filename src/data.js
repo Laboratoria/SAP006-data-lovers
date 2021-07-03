@@ -1,9 +1,6 @@
-// estas funciones son de ejemplo
+export const allFilters = (data) => {
+    const resultadoAZ = data.sort((a, z) => a.name > z.name ? 1 : -1)
+    return resultadoAZ;
+  };
 
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+export default allFilters
