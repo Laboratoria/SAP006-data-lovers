@@ -24,3 +24,22 @@ export const filterData = (data, condition, condition2) => {
 
 export const sortData = (data) => data.results.sort( (a,b) => b.episode.length - a.episode.length);
 
+
+export const computeStats = {
+  
+  characters: (data) => {data.results.filter(r => r.id !== "").length 
+},
+
+  gender: (data, genderParameter) => {
+  
+  let total = [];
+  let average = [];
+  for (let gender of data.results){
+    if (gender.gender == genderParameter){
+      total.push(gender.gender);
+      average = ((total.length/data.results.length) * 100).toFixed(2)
+    }
+  }
+  return average;
+}
+}
