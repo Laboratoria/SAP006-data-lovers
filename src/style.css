@@ -1,9 +1,7 @@
 /*estilização que se utiliza em todos os elementos do documento (que nao forem estilizados)*/
 *{
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -13,7 +11,17 @@ body {
 }
 
 /*estilização do campo de pesquisas*/
+#container-search{
+    position: relative;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .pesquisar{
+    width: 400px;
     background-color: #FFEBCD;
     border-radius: 20px;
     padding: 10px
@@ -28,12 +36,30 @@ body {
     border-radius: 50px;
 }
 
+
+#container-principal{
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.menu-align{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
 /*estilização dos botões de filtro*/
 .menus {
     background-color: #97ce4c;
     border-radius: 50px;
     padding: 15px;    
-    display: inline-block;
     margin-bottom: 50px;
     text-align: center;
     font-family: fantasy;
@@ -41,7 +67,7 @@ body {
 }
 
 option{
-    background: #FFEBCD;
+    background: #FFEBCD;    
 }
 
 /*faz o botão ficar de outra cor quando passar o cursor (pseudo-seletor: :hover)*/
@@ -49,35 +75,92 @@ option{
     color:rgb(3, 97, 3);
 }
 
-.calculo{
-    margin: 18px;
-    border-radius: 15px;
-    background-color: #FFF874;
-}
-
-/*fazer a estilização das info dos cards*/
-.cards{
-    margin-left: 20px;
-    list-style: none;
-    background-color: #97ce4c;
-    border-radius: 10px;
-    border-style: solid;
-    flex-direction: initial;
-    flex-wrap: wrap;
-    justify-content: center;
+#container-calculo{
+    margin-top: 2px;
+    margin-left: 37%;
     position: relative;
-    width: 40%;
+    width: 400px;
+    height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: monospace;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #FFF874;
+    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
+    
 }
 
-/*fazer a estilização dos CARDS*/
-.card-img{
-    margin-left: 20px;
-    width: 40%;
+.calculo{
+    border-radius: 20px;
+    text-align: center;
 }
 
-img{
-    border-radius: 50px;
+.container-card{
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
+.cards{
+    width: 500px;
+    height: 240px;
+    margin: 10px;
+    display: inline-flex;
+    border-radius: 20px;
+    background-color: #97ce4c;
+}
+  
+.front-card {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.img-card{
+    margin: auto;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 25px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
+}
+
+
+
+.front-text{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #FFF874;
+    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
+}
+  
+
+.front-text-card{
+    margin-left: 10px;
+    text-align: center;
+    list-style: none;
+    font-size: 30px;
+    font-family: monospace ;
+    flex-wrap: wrap;
+}
+  
+
+
+
+
 
 /*estilização do rodapé*/
 .footer{
@@ -88,6 +171,10 @@ img{
     position: fixed;
     width: 100%;
 }
+
+
+
+
 
 /*imagem de fundo do morty*/
 /*.fundo-direita{
@@ -101,4 +188,45 @@ img{
     opacity: 40%;
     float:left;
     display: block;
+}*/
+
+
+
+
+
+/*fazer a estilização das info dos cards*/
+/*.cards{
+    position: relative;
+    height: 320px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    perspective: 1000px;
+    background-color: #97ce4c;
+    border-radius: 20px;
+}
+
+.flip{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flip:hover{
+    transform: rotateY(180deg);
+}
+
+.front-card .back-card .name-front{
+    position: absolute;
+    backface-visibility: hidden;
+}*/
+
+/*fazer a estilização dos CARDS*/
+/*.img-card{
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
+}
+.name-front{
+    font-family: fantasy;
 }*/

@@ -11,12 +11,15 @@
     <body>
       <header>
         <section>
-          <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
           <img class="img-logo" src="img/logo.png" alt="Logo cabeçalho" title="Tudo Tranquileba?"> <!--logo no cabeçalho-->
         </section>
       </header>
+        <div id="container-search">
+          <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
+        </div>
 
-         <section>
+        <div id="container-principal">
+         <section class="menu-align">
           <select class="menus">
             <option value="">Curiosidades</option>
             <option value="https://blog.saraiva.com.br/rick-and-morty/">Saraiva</option>
@@ -54,22 +57,23 @@
             <option value="AZ">A-Z</option>
             <option value="ZA">Z-A</option>      
           </select>
-
           <button class="menus" onClick="window.location.reload();">Limpar</button>
-          <p>
-            <span class="calculo" id="calculo-agregado"></span> % de personagens dessa categoria <!--Onde vai aparecer o cálculo-->
-          </p>
+        </div>
+
+          <div id="container-calculo">
+            <p><span class="calculo" id="calculo-agregado"></span> % de personagens dessa categoria <!--Onde vai aparecer o cálculo--></p>
+          </div>
         </section>
 
       <main>
         <section>
-          <div id="info-cards"></div> <!--Informações dos Cards importados no JS-->
+          <div class="container-card" id="info-cards"></div> <!--Informações dos Cards importados no JS-->
         </section>
       </main>
         
       <div>
-          <!--<img class="fundo-direita" src="img/direita.png">--> <!--imagem fundo Morty-->
-          <!--<img class="fundo-esquerda" src="img/esquerda.png">-->  <!--imagem fundo Rick-->
+        <!--<img class="fundo-direita" src="img/direita.png">--><!--imagem fundo Morty-->
+        <!--<img class="fundo-esquerda" src="img/esquerda.png">--><!--imagem fundo Rick-->
       </div>
 
       <footer class="footer"> Desenvolvido por 

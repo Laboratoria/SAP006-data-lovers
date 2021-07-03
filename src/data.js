@@ -1,20 +1,20 @@
 // Função de filtro com base no genero, especie, status, ordem - utilizando filter()
 
 //FUNÇÃO DE FILTRAGEM GÊNERO
-export const  filtroGenero = (dataBase, condition) => {
-  const resultadoGenero = dataBase.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
+export const  filtroGenero = (data, condition) => {
+  const resultadoGenero = data.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
   return resultadoGenero;
 };
 
 //FUNÇÃO DE FILTRAGEM ESPÉCIE
-export const  filtroEspecie = (dataBase, condition) => {
-  const resultadoEspecie = dataBase.filter((personagem) => personagem.species.toLowerCase() === condition.toLowerCase());
+export const  filtroEspecie = (data, condition) => {
+  const resultadoEspecie = data.filter((personagem) => personagem.species.toLowerCase() === condition.toLowerCase());
   return resultadoEspecie;
 };
 
 //FUNÇÃO DE FILTRAGEM STATUS
-export const  filtroStatus = (dataBase, condition) => {
-  const resultadoStatus = dataBase.filter((personagem) => personagem.status.toLowerCase() === condition.toLowerCase());
+export const  filtroStatus = (data, condition) => {
+  const resultadoStatus = data.filter((personagem) => personagem.status.toLowerCase() === condition.toLowerCase());
   return resultadoStatus;
 };
 
@@ -34,7 +34,7 @@ export const calculoDePorcentagem = (total, portion) => {
 
 
 
- 
+
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //(data.length / database.length) * 100 - calculo de % de um grupo de elementos

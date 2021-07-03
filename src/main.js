@@ -5,18 +5,19 @@ import data from './data/rickandmorty/rickandmorty.js';
 //FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA
 function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
-  <div>
-    <div class="card-img">
-      <img src="${item.image}">
-    </div> 
-      <ul class="cards">
-        <li><strong>Nome:</strong>${item.name}</li>
-        <li><strong>Gênero:</strong>${item.gender}</li>      
-        <li><strong>Status:</strong>${item.status}</li>
-        <li><strong>Espécie:</strong>${item.species}</li>
-        <li><strong>Origem:</strong>${item.origin.name}</li>
-        <li><strong>Localização:</strong>${item.location.name}</li>
-      </ul>
+  <div class="cards">
+      <div class="front-card">
+        <img class="img-card" src="${item.image}">
+      </div>
+
+      <div class="front-text">
+        <ul class="front-text-card">
+          <li><strong>${item.name}</strong></li>
+        </ul>
+      </div> 
+
+      
+
   </div>
 `).join('')
 }
@@ -66,16 +67,17 @@ calcularPorcentagem.addEventListener("change", calculoGenero);
 
 
 
+/* <aside class="back-card">
+        <ul class="text-card">
+          <li><strong>Nome:</strong>${item.name}</li>
+          <li><strong>Gênero:</strong>${item.gender}</li>      
+          <li><strong>Status:</strong>${item.status}</li>
+          <li><strong>Espécie:</strong>${item.species}</li>
+          <li><strong>Origem:</strong>${item.origin.name}</li>
+          <li><strong>Localização:</strong>${item.location.name}</li>
+        </ul>
+      </aside> */
 
-//--------------------------------------------------------------------------------------------------------------------------------
-/*if (a[sortBy] < b[sortBy] ){
-  return -1;
-}
-if (a[sortBy] > b[sortBy] ){
-  return 1;
-}
-return 0;
-}*/
 
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -97,12 +99,3 @@ function infoCardsTela (data) {                                         //funç�
 `)                                                                        
 }                                                   
 infoCardsTela(data.results); */                                           //imprimir na tela as informações
-
-//--------------------------------------------------------------------------------------------------------------------------------
-//console.log(data.results)
-
-//--------------------------------------------------------------------------------------------------------------------------------
-/*Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver com a exibição dos dados na tela.**
-Com isto nos referimos basicamente à interação com o DOM. Operações como criação de nós, registro de manejadores de eventos 
-(*event listeners* ou *event handlers*) e etc.
-Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e pastas, sempre e quando a estrutura estiver clara para suas colegas*/
