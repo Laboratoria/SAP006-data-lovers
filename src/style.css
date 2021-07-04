@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
   margin: 0;
@@ -12,16 +12,16 @@
   height: 100vh;
   display: flex;
   width: 120px;
-  border-right: 20px solid #292929;
+  border-right: 10px solid #292929;
 }
 
 .circle {
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #292929;
-  margin-left: 60px;
+  margin-left: 70px;
   position: absolute;
 }
 
@@ -29,31 +29,28 @@
   margin-inline: auto;
   margin-top: 10px;
   background-color: white;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
 .border {
   margin-inline: auto;
-  margin-top: 10px;
-  background-color: rgb(255, 255, 255);
-  width: 60px;
-  height: 60px;
+  margin-top: 6px;
+  background-color: rgb(233, 233, 233);
+  width: 48px;
+  height: 48px;
   border: 4px solid #292929;
   border-radius: 50%;
 }
 
-
-
-
-.wrapper {
-  display: flex;
-  background-color: aqua;
-  margin-left: 400px;
-  margin-bottom: 600px;
-  height: 150px;
-  width: 900px;
+.wrap {
+  margin: 0 auto;
+  /*/ background-color: aqua;/*/
+  margin-left: 200px;
+  margin-bottom: 500px;
+  height: 180px;
+  width: 80%;
   position: absolute;
   overflow: hidden;
 }
@@ -62,20 +59,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
+  margin-top: -30px;
 }
 
 .carousel {
-  background-color: blueviolet;
+  background-color: transparent;
   display: flex;
+  left: -100%;
   list-style: none;
   height: 100%;
   width: 100%;
   position: absolute;
-  margin-top:0,
- 
+  margin-top: 25px;
+  transform: translateX(100%);
+}
+
+.pictures {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #070707;
+  background: linear-gradient(
+    195deg,
+    #ad2c46 0%,
+    #d12547 44%,
+    #262122 41%,
+    #262122 50%,
+    #fff 46%,
+    #fff 100%
+  );
 }
 
 .card {
@@ -102,11 +118,11 @@
   flex-shrink: 0;
 }
 
-#top-info{
+#top-info {
   display: flex;
 }
 
-.maxHP{
+.maxHP {
   text-align: right;
 }
 
@@ -181,18 +197,13 @@ h3 {
 }*/
 
 
-
- button {
-   width: 50px;
- }
-
-#telaPrincipal{
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-flow: nowrap;
-    justify-content: space-between;
-    align-items: center;
+#telaPrincipal {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .info_icon {
@@ -200,18 +211,13 @@ h3 {
   display: flex;
   position: absolute;
   margin-top: calc(50% - 20vh);
-  
- 
-
 }
 
 ul {
   margin-inline: auto;
   list-style: none;
   padding: 20px;
-
 }
-
 
 .seletores {
   width: 40px;
@@ -226,7 +232,7 @@ ul {
 
 .seletor {
   border-radius: 15px;
-  background-color: #de9400 ;
+  background-color: #de9400;
   cursor: pointer;
   border-radius: 100%;
   margin-right: 40px;
@@ -240,7 +246,6 @@ ul {
   display: flex;
   margin-top: -500px;
   margin-left: 450px;
-
 }
 
 .picture {

@@ -1,9 +1,14 @@
 import data from './data/pokemon/pokemon.js';
 
 import { 
-  /*filtrarPelaGeração, */ordenarPorNum, ordenarPorNome/*, sortData, filterType*/
+  filtrarPelaGeração, 
+  ordenarPorNum, 
+  ordenarPorNome
+  /*, sortData, filterType*/
 } from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
+
+
+//import pokemon from './data/pokemon/pokemon.js';
 
 //console.log(sortData);
 
@@ -54,37 +59,6 @@ import pokemon from './data/pokemon/pokemon.js';
 
 
 
- const pokemonListGeneratio = data.pokemon.slice(14,30); 
- const displayPokesGeneration = (pokemonData) => { 
-
-
- 
-   
- const pokeCardGeneration = document.getElementById('carousel');
- 
- pokemonData.forEach((elem) => {
-  pokeCardGeneration.innerHTML += `
-   
-        <div class="backgroundImg" id=""backgroundImg">
-          <img class="picture" src=" ${elem.img}"></img>
-        </div>
-        </div>
-        <div class="infCardAbout">${elem.generation.name}</div> 
-      
-        </div>
-     </div>
-   </div>
-`;
- });
-
-
- };
- 
-
-
-
- displayPokesGeneration(pokemonListGeneratio);
-
 
 
 
@@ -118,10 +92,50 @@ ordenarNomes.addEventListener('click', () => {
 
 
 
+const pokemonListGeneration = data.pokemon; 
+const displayPokesGeneration = (pokemonData) => { 
+
+  
+const pokeCardGeneration = document.getElementById('carousel');
+
+pokemonData.forEach((elem) => {
+ pokeCardGeneration.innerHTML += `
+  
+       <div class="backgroundImg">
+         <img class="pictures" src=" ${elem.img}"></img>
+       </div>
+       </div>
+       <div class="infCardAbout">${elem.generation.num}
+       <div class="name" id="names">${elem.generation.name}
+       
+       </div> 
+
+       </div> 
+    
+     
+       </div>
+    </div>
+  </div>
+`;
+});
 
 
+};
 
 
+displayPokesGeneration(pokemonListGeneration);
+
+
+let ordernarPorGeracao;
+const ordenarGeracao = document.getElementById("ordem_geracao");
+ordenarGeracao.addEventListener('change', () => {
+  const getpokess = document.getElementById('carousel');
+  getpokess.innerHTML = '';
+  ordernarPorGeracao = ordenarGeracao.value;
+
+  displayPokesGeneration(filtrarPelaGeração(pokemonListGeneration, ordernarPorGeracao));
+
+});
 
 
 
@@ -169,7 +183,7 @@ getJson()
 */
 
 
-
+/*
 class MeuCarousel {
   constructor(config) {
     this.config = config;
@@ -295,7 +309,12 @@ let teste = new MeuCarousel({
   selector: 'carousel',
   slidesPerView: 4,
   spaceBetween: 20,
- // loop: true,
+  //loop: true,
   timePerPage: 2000,
   stopOnMouseHover: true
 })
+
+*/
+
+
+

@@ -9,11 +9,24 @@
 
 <body>
   <container id="telaPrincipal">
+    
   
     <div class="line">
       <div class="icone_pokemon">
         
         <img src="./data/assets/logo.png" alt="">
+
+        
+        <select id="ordem_geracao">
+       
+    
+          <option value="all">Todas</option>
+           <option value="Johto">Johto</option>
+           <option value="Kanto">Kanto</option>
+    
+    
+        
+      </select>
         <ul>
           <li class="info_icon"><i data-feather="info"></i>
           
@@ -36,21 +49,23 @@
       </div>
     </div>
 
+    
 
 
-
-  <div class="wrapper">
-
-    <ul class="carousel" id="carousel" data-target="carousel"></ul>
+ 
+  <div class="wrap">
+    <div class="carousel" id="carousel">
       
 
+    </div>
+    
+      
+
+ 
     <div class="button-wrapper">
 
-      <button data-action="slideLeft">L</button>
-      <button data-action="slideRight">R</button>
-
-
-
+      <button class='toggle_1' data-toggle='prev'> <i data-feather="arrow-left"></i></button>
+      <button class='toggle' data-toggle='next'><i data-feather="arrow-right"></i></button>
 
     </div>
 
@@ -61,6 +76,7 @@
 
 
   </div>
+ 
 
   
 </container>
@@ -69,6 +85,7 @@
 
 
 </div>
+
 
 
   <script src="https://unpkg.com/feather-icons"></script>

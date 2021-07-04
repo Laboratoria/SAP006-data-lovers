@@ -1,13 +1,18 @@
 //import pokemon from "./data/pokemon/pokemon"
-import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js';
 
-/*const filtrarPelaGeração = (data, valor) => {
+
+
+
+
+
+const filtrarPelaGeração = (data, valor) => {
   const filtrarPokemonPelaGeracao = data.filter(
     pokemon => pokemon.generation.name === valor,
 
   );
   return filtrarPokemonPelaGeracao;
-};*/
+};
 
 
 const ordenarPorNum = (data, valor) => {
@@ -88,5 +93,9 @@ filterType(pokemonList, "fairy")*/
 
 
 export {
-  /*filtrarPelaGeração, */ordenarPorNum,/*, sortData, filterType*/ordenarPorNome
+  filtrarPelaGeração,
+   ordenarPorNum,
+   //sortData, 
+   //filterType
+   ordenarPorNome
 };
