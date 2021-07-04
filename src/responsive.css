@@ -116,9 +116,10 @@ h3{
     font-size: 45px;
 }
 h4{
-    font-size: 23px;
+    font-size: 22px;
 }
 #attack{
+    margin: 7px 0px 0px 0px;
     font-size: 25px;
 }
 #defense{
