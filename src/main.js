@@ -1,7 +1,6 @@
-import {filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica, calculoDePorcentagem} from './data.js';
+import {filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica, buscarNome, calcularPorcentagem} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
-
 
 //FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA
 function infoCardsTela (data) {
@@ -10,7 +9,7 @@ function infoCardsTela (data) {
     <div class="card-img">
       <img src="${item.image}">
     </div> 
-      <ul class="info-cards">
+      <ul class="cards">
         <li><strong>Nome:</strong>${item.name}</li>
         <li><strong>Gênero:</strong>${item.gender}</li>      
         <li><strong>Status:</strong>${item.status}</li>
@@ -19,49 +18,59 @@ function infoCardsTela (data) {
         <li><strong>Localização:</strong>${item.location.name}</li>
       </ul>
   </div>
-`)
+`).join('')
 }
 infoCardsTela(data.results);
 
+const selecaoGenero = document.querySelector("#selecao-genero");
+const selecaoEspecie = document.querySelector("#selecao-especies");
+const selecaoStatus = document.querySelector("#selecao-status");
+const selecaoOrdem = document.querySelector("#selecao-ordem");
+
+const buscaNomePersonagem = document.getElementById("text-search")
+const botaoBusca = document.getElementById("botao-buscar")
+const texto = document.getElementById("porcentagem-filtro")
+
+function mostrarPorcentagem(data) {
+  texto.innerHTML = `A porcentagem dessa categoria é de ${data}`
+}
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
-const selecaoGenero = document.querySelector(".selecao-genero");
 function imprimirFiltroGenero(e) {
-  return infoCardsTela(filtroGenero(data.results, e.target.value));
+  const resultado = filtroGenero(data.results, e.target.value)
+  const porcentagemText = `${calcularPorcentagem(data.results.length, resultado.length)}%`
+  mostrarPorcentagem(porcentagemText)
+  return infoCardsTela(resultado);
   }
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 
-
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
-const selecaoEspecie = document.querySelector(".selecao-especies");
 function imprimirFiltroEspecie(e) {
+
   return infoCardsTela(filtroEspecie(data.results, e.target.value));
   }
 selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
 
-
 //FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
-const selecaoStatus = document.querySelector(".selecao-status");
 function imprimirFiltroStatus(e) {
   return infoCardsTela(filtroStatus(data.results, e.target.value));
   }
 selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 
-
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
-const selecaoOrdem = document.querySelector(".selecao-ordem");
 function imprimirFiltroOrdem(e) {
   const order = ordemAlfabetica(data.results, e.target.value)
   return infoCardsTela(order);
   }
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
 
-const calcularPorcentagem = document.querySelector(".calculo-agregado");
-function calculoGenero(e) {
-   const estatistica = calculoDePorcentagem(data.results, e.target.value)
-   return calculo(estatistica);
-   }
- calcularPorcentagem.addEventListener("change", calculoGenero);
+//Buscar nomes
+function buscarNomePersonagens(e) {
+  const nomePersonagens = buscarNome(data.results, e.target.value)
+  return infoCardsTela(nomePersonagens)
+}
+buscaNomePersonagem.addEventListener("change", buscarNomePersonagens)
+botaoBusca.addEventListener("click", buscarNomePersonagens)
 
 
 
@@ -71,8 +80,15 @@ function calculoGenero(e) {
 
 
 
-
-
+//--------------------------------------------------------------------------------------------------------------------------------
+/*if (a[sortBy] < b[sortBy] ){
+  return -1;
+}
+if (a[sortBy] > b[sortBy] ){
+  return 1;
+}
+return 0;
+}*/
 
 
 //--------------------------------------------------------------------------------------------------------------------------------
