@@ -1,53 +1,156 @@
-/* @media (min-width: 350px) and (max-width: 700px) {
-
-    body{
-        margin: 0px auto;
-    }
-    #root{
-        align-items: center;
-        text-align: center;
-    }
-    #container{
-        width: 100%;
-        padding: 50px;
-    }
-    h1{
-        line-height: normal;
-        font-size: 50px;
-    }
-    h2{
-        line-height: normal;
-        font-size: 40px;
-    }
-    p{
-        padding: 25px 0px;
-    }  
-
+@media (max-width: 1000px){
+header{
+    width: 100%;
+    height: 8%;
+    z-index: 2;
+    border-image:none;
+    box-shadow: rgb(10, 7, 3) 1px 2px 55px;
+    border-bottom: rgb(168, 134, 69) 1px solid;
+}
+#img-logo{
+    padding: 10px 0px;
+    width: 30%;
+}
+#menu{
+    background-image: url(img/background.jpg);
+    background-size: 250%;
+    background-position: center;
+    height: 1400px;
+    background-repeat: no-repeat;
+}
+#div-filters{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 50px 0px 0px;
+    height: 150px;
+}
+#img-search{
+    margin: 0px 0px 0px 0px;
+    width: 8%;
+}
+#input-search{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 100px 0px 0px;
+    padding: 11px 30px;
+    width: 30%;
+    font-size: 24px;
+}
+.icons{
+    margin: 10px;
+    display: none;
+}
+#difficulties{
+    font-size: 24px;
+    padding: 5px 5px;
+    width: 130%;
+    height: 100%;
+    margin: 0px 0px 0px 20px;
+}
+.difficulties{
+    font-size: 18px;
+    height: 40px;
+    width: 18.4%;
+}
+#all{
+    margin: 0px 20px;
+    z-index: 1;
+    padding: 5px;
+}
+#easy{
+    margin: 40px 20px;
+    z-index: 1;
+}
+#medium{
+    margin: 80px 20px;
+    z-index: 1;
+}
+#hard{
+    margin: 120px 20px;
+    z-index: 1;
+}
+.order{
+    margin: 0px 50px;
+    padding: 3px 0px 3px 5px;
+    width: 90%;
+    font-size: 20px;
+}
+.orders{
+    margin: 0px 50px;
+    width: 90%;
+    padding: 3px;
+    font-size: 20px;
+}
+#Z-A{
+    margin: 30px 50px;
+    width: 6.9%;
+}
+.icons-responsivo{
+    display: flex;
+    width: 100%;
+    margin: 50px;
+}
+.container{
+    padding: 70px 0px 0px 0px;
+}
+.cards{
+    margin: 50px 30px 150px 30px;
+    width: 40%;
+    height: 440px;
+}
+h1{
+    font-size: 45px;
+    margin: 0px 15px 10px 15px;
+}
+h2{
+    font-size: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+p{
+    margin: 0px 10px;
+    font-size: 18px;
+    padding: 30px 10px 0px; 
+}
+h3{
+    font-size: 45px;
+}
+h4{
+    font-size: 23px;
+}
+#attack{
+    font-size: 25px;
+}
+#defense{
+    font-size: 25px;
+}
+#magic{
+    font-size: 25px;
+}
+#difficulty{
+    font-size: 25px;
 }
 
-@media (min-width: 700px) and (max-width: 1024px){
+#paginated{
+    font-size: 40px;
+    padding: 40px 0px 0px 0px;
+}
+#div-img-responsive{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #16171a;
+    padding-bottom: 30px;
+}
+.icons-responsivo{
+    width: 8%;
+    margin: 0px 35px;
+    padding: 0px 7px;
 
-    body{
-        margin: 175px 30px auto;
-    }
-    #root{
-        align-items: center;
-        text-align: center;
-    }
-    #container{
-        width: 100%;
-        padding: 50px;
-    }
-    h1{
-        line-height: normal;
-        font-size: 50px;
-    }
-    h2{
-        line-height: normal;
-        font-size: 35px;
-    }
-    p{
-        padding: 25px 0px;
-    }  
-
-} */
+}
+footer{
+    border-image:none;
+    box-shadow: rgb(10, 7, 3) 1px 2px 55px;
+    border-bottom: rgb(168, 134, 69) 1px solid;
+ }
+}

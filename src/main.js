@@ -1,8 +1,9 @@
-import allFilters from './data.js';
+// import orderAZ from './data.js';
 import data from './data/lol/lol.js';
+
 // TODOS ELEMENTOS HTML
 const elements = data.data;
-const objects = Object.values(elements);
+let objects = Object.values(elements);
 
 const index = document.getElementById("index");
 
@@ -170,7 +171,6 @@ ordenarZtoA.setAttribute("class", "orders");
 ordenarZtoA.style.display = "none"
 ordenarZtoA.innerHTML = `Z-A`
 orderSelector.appendChild(ordenarZtoA);
-
 document.getElementById("ordenar").addEventListener("click", function(){
     ordenarZtoA.innerHTML = `Z-A`
     if(document.getElementById("A-Z").style.display == "none"){
@@ -186,22 +186,34 @@ document.getElementById("ordenar").addEventListener("click", function(){
         document.getElementById("Z-A").style.display = "none"
     }
 })
-document.getElementById("A-Z").addEventListener("click", function(){
-    document.getElementById("ordenar").style.display = "flex"
-    document.getElementById("ordenar").innerHTML = `A-Z <img id="img-select1" src="img/select.png"/>`
-    document.getElementById("ordenar").style.padding = "2px 0px 0px 6px"
-    document.getElementById("img-select1").style.padding = "3px 7px"
-    document.getElementById("A-Z").style.display = "none"
-    document.getElementById("Z-A").style.display = "none"
-})
-document.getElementById("Z-A").addEventListener("click", function(){
-    document.getElementById("ordenar").style.display = "flex"
-    document.getElementById("ordenar").innerHTML = `Z-A <img id="img-select1" src="img/select.png"/>`
-    document.getElementById("ordenar").style.padding = "2px 0px 0px 6px"
-    document.getElementById("img-select1").style.padding = "3px 7px"
-    document.getElementById("A-Z").style.display = "none"
-    document.getElementById("Z-A").style.display = "none"
-})
+
+const divImgResponsive = document.createElement("div");
+divImgResponsive.setAttribute("id", "div-img-responsive");
+index.appendChild(divImgResponsive);
+const imgController1 = document.createElement("img");
+imgController1.setAttribute("class", "icons-responsivo");
+imgController1.setAttribute("src", "img/controller.png");
+divImgResponsive.appendChild(imgController1);
+const imgSlayer1 = document.createElement("img");
+imgSlayer1.setAttribute("class", "icons-responsivo");
+imgSlayer1.setAttribute("src", "img/slayer.png");
+divImgResponsive.appendChild(imgSlayer1);
+const imgTank1 = document.createElement("img");
+imgTank1.setAttribute("class", "icons-responsivo");
+imgTank1.setAttribute("src", "img/tank.png");
+divImgResponsive.appendChild(imgTank1);
+const imgMarksman1 = document.createElement("img");
+imgMarksman1.setAttribute("class", "icons-responsivo");
+imgMarksman1.setAttribute("src", "img/marksman.png");
+divImgResponsive.appendChild(imgMarksman1);
+const imgMage1 = document.createElement("img");
+imgMage1.setAttribute("class", "icons-responsivo");
+imgMage1.setAttribute("src", "img/mage.png");
+divImgResponsive.appendChild(imgMage1);
+const imgFighter1 = document.createElement("img");
+imgFighter1.setAttribute("class", "icons-responsivo");
+imgFighter1.setAttribute("src", "img/fighter.png");
+divImgResponsive.appendChild(imgFighter1)
 
 const sectionPagination = document.createElement("section");
 sectionPagination.setAttribute("id", "paginated");
@@ -255,7 +267,7 @@ function getUrlVars() {
 }
 let pageQuery = getUrlVars()["pagina"];
 let page = parseInt(pageQuery) || 1;
-let limit = 12;
+let limit = 16;
 let offset = (page - 1) * limit;
 let total = objects.length;
 let items = objects.slice(offset, offset + limit);
@@ -266,7 +278,6 @@ function showCharacters(items) {
     const divContainer = document.getElementById("root");
     divContainer.setAttribute("class", "container");
     divContainer.innerHTML = ``;
-
 
     for (let i = 0; i < items.length; i++) {
         let divCards = document.createElement("div");
@@ -301,17 +312,11 @@ function showCharacters(items) {
 
         divBackCard.innerHTML = `<h3>${name}</h3><img class="profile-characters" src="${img}"><h4>${tags}</h4><h4>${partype}</h4>
         <p id="attack">Attack: ${attack}</p><p id="defense">Defense: ${defense}</p><p id="magic">Magic: ${magic}</p>
-        <p id="difficulty">Difficulty: ${difficulty}</p>"`
+        <p id="difficulty">Difficulty: ${difficulty}</p>`
     }
 }
 showCharacters(items);
 
-// FUNÇÃO DE BUSCAR PERSONAGEM POR NOME
-    document.getElementById("input-search").addEventListener("input", function () {
-        const textName = document.getElementById("input-search").value.toLowerCase();
-        const champions = items.filter(items => items.name.toLowerCase().includes(textName));
-        showCharacters(champions)
-})
 // CRIAÇÃO DAS PAGINAS DA PAGINAÇÃO
 if(pageQuery > paginationResult.pages){
     const divContainer = document.getElementById("root");
@@ -331,19 +336,25 @@ for (let i = 0; i <= paginationResult.pages; i++) {
 }
 document.getElementById("pagination").innerHTML = paginationItems;
 
+// FUNÇÃO DE BUSCAR PERSONAGEM POR NOME
+document.getElementById("input-search").addEventListener("input", function () {
+    const textName = document.getElementById("input-search").value.toLowerCase();
+    const champions = items.filter(item => item.name.toLowerCase().includes(textName));
+    showCharacters(champions)
+})
 // FUNÇÃO PRA MUDAR DIFICULDADES
-document.getElementById("all").addEventListener("click", function(){
+
+document.getElementById("all").addEventListener("click", function (){
     document.getElementById("difficulties").innerHTML = `Todas as Dificuldades <img id="img-select" src="img/select.png"/>`
     document.getElementById("all").style.display = "none";
     document.getElementById("easy").style.display = "none";
     document.getElementById("medium").style.display = "none";
     document.getElementById("hard").style.display = "none";
-    document.getElementById("difficulties").style.fontSize = "14px"
+    document.getElementById("difficulties").style.fontSize = "15px"
     document.getElementById("difficulties").style.padding = "0px"
     document.getElementById("img-select").style.padding = "0px"
     showCharacters(items);
 })
-
 document.getElementById("easy").addEventListener("click", function(){
     document.getElementById("difficulties").innerHTML = `<img id="easy-img" src="img/easy.png"/><img id="img-select" src="img/select.png"/>`
     document.getElementById("all").style.display = "none";
@@ -354,7 +365,7 @@ document.getElementById("easy").addEventListener("click", function(){
     document.getElementById("easy-img").style.float = "left"
     document.getElementById("easy-img").style.padding = "0px 0px 0px 20px"
     document.getElementById("img-select").style.padding = "5px 0px"
-    document.getElementById("root").innerHTML = ""
+    document.getElementById("root").innerHTML = "";
 })
 document.getElementById("medium").addEventListener("click", function(){
     document.getElementById("difficulties").innerHTML = `<img id="medium-img" src="img/medium.png"/><img id="img-select" src="img/select.png"/>`
@@ -379,4 +390,31 @@ document.getElementById("hard").addEventListener("click", function(){
     document.getElementById("hard-img").style.padding = "0px 0px 0px 20px"
     document.getElementById("img-select").style.padding = "5px 0px"
     document.getElementById("root").innerHTML = ""
+})
+
+// FUNÇÃO PRA ORDENAR ALFABETICAMENTE
+document.getElementById("A-Z").addEventListener("click", function(){
+    document.getElementById("ordenar").style.display = "flex"
+    document.getElementById("ordenar").innerHTML = `A-Z <img id="img-select1" src="img/select.png"/>`
+    document.getElementById("ordenar").style.padding = "2px 0px 0px 6px"
+    document.getElementById("img-select1").style.padding = "3px 7px"
+    document.getElementById("A-Z").style.display = "none"
+    document.getElementById("Z-A").style.display = "none"
+
+    //FILTRO DE ORDENAR A-Z        
+        const resultsAZ = objects.sort((a, z) => a.name > z.name ? 1 : -1)
+    showCharacters(resultsAZ)
+})
+
+document.getElementById("Z-A").addEventListener("click", function(){
+    document.getElementById("ordenar").style.display = "flex"
+    document.getElementById("ordenar").innerHTML = `Z-A <img id="img-select1" src="img/select.png"/>`
+    document.getElementById("ordenar").style.padding = "2px 0px 0px 6px"
+    document.getElementById("img-select1").style.padding = "3px 7px"
+    document.getElementById("A-Z").style.display = "none"
+    document.getElementById("Z-A").style.display = "none"
+
+    //FILTRO DE ORDENAR Z-A
+        const resultsZA = objects.sort((a, z) => a.name < z.name ? 1 : -1)
+    showCharacters(resultsZA)
 })
