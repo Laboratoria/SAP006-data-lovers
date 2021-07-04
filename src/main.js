@@ -18,6 +18,8 @@ function infoCardsTela (data) {
           <li><strong>Espécie:</strong>${item.species}</li>
           <li><strong>Origem:</strong>${item.origin.name}</li>
           <li><strong>Localização:</strong>${item.location.name}</li>
+            <h4> Aparece em: </h4>
+            <p>${item.episode.length} episódios</p>
         </ul>
       </div> 
 
@@ -60,12 +62,15 @@ function imprimirFiltroOrdem(e) {
   console.log(selecaoOrdem)
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
 
+
 const calcularPorcentagem = document.querySelector("#calculo-agregado");
   function calculoGenero(e) {
     const estatistica = calculoDePorcentagem(data.results, e.target.value)
     return calculo(estatistica);
 }
 calcularPorcentagem.addEventListener("change", calculoGenero);
+
+
 
 
 

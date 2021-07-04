@@ -14,60 +14,65 @@
     <body>
       <header>
         <section id="logo">
-          <img src="img/logo.png" alt="Logo cabeçalho" title="Tudo Tranquileba?"> <!--logo no cabeçalho-->
+          <img class="logo-rick" src="img/rick and morty.png" alt="Logo cabeçalho" title="Rick and Morty">
+          <img class="logo-familia" src="img/familia.png" alt="Logo cabeçalho" title="Summer, Beth and Jerry Smith">
+          <img class="logo-nome"src="img/logo.png" alt="Logo cabeçalho" title="Tudo Tranquileba?"> <!--logo no cabeçalho-->
         </section>
       </header>
 
         <div id="container-search">
           <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
         </div>
-
+        <div>
+          <!--<img class="fundo-direita" src="img/direita.png">--><!--imagem fundo Morty-->
+          <!--<img class="fundo-esquerda" src="img/esquerda.png">--><!--imagem fundo Rick-->
+        </div>
         <div id="container-principal">
-         <section>
-          <select class="menus">
-            <option value="">Curiosidades</option>
-            <option value="https://blog.saraiva.com.br/rick-and-morty/">Saraiva</option>
-            <option value="https://shmakov.github.io/Rick-and-Morty-Characters/">Aparição por Episódio</option>
-            <option value="https://super.abril.com.br/mundo-estranho/17-detalhes-fantasticos-que-te-farao-amar-rick-e-morty-ainda-mais/">Super Interessante</option>
-            <option value="https://play.google.com/store/apps/details?id=com.turner.pocketmorties&hl=pt_BR&gl=US">Morty Pocket Jogo</option>
-          </select>
+          <section>
+            <select class="menus">
+              <option value="">Curiosidades</option>
+              <option value="https://blog.saraiva.com.br/rick-and-morty/">Saraiva</option>
+              <option value="https://shmakov.github.io/Rick-and-Morty-Characters/">Aparição por Episódio</option>
+              <option value="https://super.abril.com.br/mundo-estranho/17-detalhes-fantasticos-que-te-farao-amar-rick-e-morty-ainda-mais/">Super Interessante</option>
+              <option value="https://play.google.com/store/apps/details?id=com.turner.pocketmorties&hl=pt_BR&gl=US">Morty Pocket Jogo</option>
+            </select>
 
-          <select class="menus" id="selecao-genero"> <!--SELECT faz a opção de botão de menu, classe para-->
-            <option value="">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-            <option value="male">Masculino</option>
-            <option value="female">Feminino</option>
-            <option value="unknown">Indefinido</option>
-          </select>
+            <select class="menus" id="selecao-genero"> <!--SELECT faz a opção de botão de menu, classe para-->
+              <option value="">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
+              <option value="male">&#128102;&#127995;Masculino</option>
+              <option value="female">&#128103;&#127997;Feminino</option>
+              <option value="unknown">&#128100;Indefinido</option>
+            </select>
           
-          <select class="menus" id="selecao-especies">
-            <option value="">Espécie</option>
-            <option value="alien">Alien</option>
-            <option value="animal">Animal</option>
-            <option value="human">Humano</option>
-            <option value="humanoid">Humanóide</option>
-            <option value="mytholog">Mytholog</option>
-            <option value="unknown">Indefinido</option>
-          </select>
+            <select class="menus" id="selecao-especies">
+              <option value="">Espécie</option>
+              <option value="alien">&#128125;Alien</option>
+              <option value="animal">&#128054;Animal</option>
+              <option value="human">&#129491;&#127996;Humano</option>
+              <option value="humanoid">&#129302;Humanóide</option>
+              <option value="mytholog">&#127993;Mytholog</option>
+              <option value="unknown">&#128100;Indefinido</option>
+            </select>
 
-          <select class="menus" id="selecao-status">
-            <option value="">Status</option>
-            <option value="alive">Vivo</option>
-            <option value="dead">Morto</option>
-            <option value="unknown">Indefinido</option>
-          </select>
+            <select class="menus" id="selecao-status">
+              <option value="">Status</option>
+              <option value="alive">&#128147;Vivo</option>
+              <option value="dead">&#128128;Morto</option>
+              <option value="unknown">&#128100;Indefinido</option>
+            </select>
 
-          <select class="menus" id="selecao-ordem">
-            <option value="">Ordem</option>
-            <option value="AZ">A-Z</option>
-            <option value="ZA">Z-A</option>      
-          </select>
-          <button class="menus" onClick="window.location.reload();">Limpar</button>
+            <select class="menus" id="selecao-ordem">
+              <option value="">Ordem</option>
+              <option value="AZ">&#8635;A-Z</option>
+              <option value="ZA">&#8634;Z-A</option>      
+            </select>
+              <button class="menus" type=""onClick="window.location.reload();">Limpar</button>
         </div>
 
           <div id="container-calculo">
             <p><span class="calculo" id="calculo-agregado"></span> % de personagens dessa categoria <!--Onde vai aparecer o cálculo--></p>
           </div>
-        </section>
+          </section>
 
       <main>
         <section>
@@ -75,11 +80,6 @@
         </section>
       </main>
         
-      <div>
-        <!--<img class="fundo-direita" src="img/direita.png">--><!--imagem fundo Morty-->
-        <!--<img class="fundo-esquerda" src="img/esquerda.png">--><!--imagem fundo Rick-->
-      </div>
-
       <footer class="footer"> Desenvolvido por 
         <p><a style="color:aqua" href="https://github.com/biancacristinaalves" target="_blank">Bianca Alves</a> e 
         <a style="color:aqua" href="https://github.com/ThalitaNeves95" target="_blank">Thalita Neves</a></p>
