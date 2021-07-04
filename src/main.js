@@ -22,6 +22,7 @@ function infoCardsTela (data) {
 }
 infoCardsTela(data.results);
 
+
 const selecaoGenero = document.querySelector("#selecao-genero");
 const selecaoEspecie = document.querySelector("#selecao-especies");
 const selecaoStatus = document.querySelector("#selecao-status");
@@ -31,44 +32,53 @@ const buscaNomePersonagem = document.getElementById("text-search")
 const botaoBusca = document.getElementById("botao-buscar")
 const texto = document.getElementById("porcentagem-filtro")
 
+//Função exibir calculo de porcentagem
 function mostrarPorcentagem(data) {
   texto.innerHTML = `A porcentagem dessa categoria é de ${data}`
 }
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
 function imprimirFiltroGenero(e) {
-  const resultado = filtroGenero(data.results, e.target.value)
-  const porcentagemText = `${calcularPorcentagem(data.results.length, resultado.length)}%`
+  const resultadoGenero = filtroGenero(data.results, e.target.value)
+  const porcentagemText = `${calcularPorcentagem(data.results.length, resultadoGenero.length)}%`
   mostrarPorcentagem(porcentagemText)
-  return infoCardsTela(resultado);
+  return infoCardsTela(resultadoGenero);
   }
-selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
 function imprimirFiltroEspecie(e) {
-
-  return infoCardsTela(filtroEspecie(data.results, e.target.value));
+  const resultadoEspecie = filtroEspecie(data.results, e.target.value)
+  const porcentagemTextEspecie = `${calcularPorcentagem(data.results.length, resultadoEspecie.length)}%`
+  mostrarPorcentagem(porcentagemTextEspecie)
+  return infoCardsTela(resultadoEspecie);
   }
-selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
 function imprimirFiltroStatus(e) {
-  return infoCardsTela(filtroStatus(data.results, e.target.value));
+  const resultadoStatus = filtroStatus(data.results, e.target.value)
+  const porcentagemStatus = `${calcularPorcentagem(data.results.length, resultadoStatus.length)}%`
+  mostrarPorcentagem(porcentagemStatus)
+  return infoCardsTela(resultadoStatus);
   }
-selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
 function imprimirFiltroOrdem(e) {
   const order = ordemAlfabetica(data.results, e.target.value)
   return infoCardsTela(order);
   }
-selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
 
 //Buscar nomes
 function buscarNomePersonagens(e) {
   const nomePersonagens = buscarNome(data.results, e.target.value)
   return infoCardsTela(nomePersonagens)
 }
+
+//Adição de Eventos
+selecaoGenero.addEventListener("change", imprimirFiltroGenero);
+selecaoGenero.addEventListener("change", imprimirFiltroGenero);
+selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
+selecaoStatus.addEventListener("change", imprimirFiltroStatus);
+selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
 buscaNomePersonagem.addEventListener("change", buscarNomePersonagens)
 botaoBusca.addEventListener("click", buscarNomePersonagens)
 
@@ -79,16 +89,6 @@ botaoBusca.addEventListener("click", buscarNomePersonagens)
 
 
 
-
-//--------------------------------------------------------------------------------------------------------------------------------
-/*if (a[sortBy] < b[sortBy] ){
-  return -1;
-}
-if (a[sortBy] > b[sortBy] ){
-  return 1;
-}
-return 0;
-}*/
 
 
 //--------------------------------------------------------------------------------------------------------------------------------
