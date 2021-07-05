@@ -1,7 +1,7 @@
 import data from './data/pokemon/pokemon.js';
 
 import { 
-  /*filtrarPelaGeração, */ordenarPorNum, ordenarPorNome/*, sortData, filterType*/
+  /*filtrarPelaGeração, */ordenarPorNum, ordenarPorNome, /*sortData, */filterType
 } from './data.js';
 import pokemon from './data/pokemon/pokemon.js';
 
@@ -11,53 +11,70 @@ import pokemon from './data/pokemon/pokemon.js';
 
 //console.log(ordenarPorNum);
 
-
- const pokemonList = data.pokemon.slice(0,15);
-
+ const pokemonList = data.pokemon.slice(0, 50);
+ let pokeCard = document.getElementById('cards-sem-carosel');
+ 
  const displayPokes = (pokemonData) => {
-   
- const pokeCard = document.getElementById('cards-sem-carosel');
  
  pokemonData.forEach((elem) => {
-   pokeCard.innerHTML += `
-    
-   <div id="card" class="card">
-      <div class="gridContainerUp" id="gridContainerUp"> 
+  
+  let props = elem["special-attack"]
+  
+  let attName = props.map(function(specialAttack){
+   return specialAttack["name"]
+     
+  })
+
+  let attType = props.map(function(typeAttack){
+    return typeAttack["type"]
+
+  })
+  
+      pokeCard.innerHTML += `<div class="card" id="card">
+      <div id="typeCard">
+        <div class="gridContainerUp" id="gridContainerUp"> 
           <div class="title"> ${elem.name.toUpperCase()}</div>
           <div class="number">#${elem.num}</div>
-          <div class="maxHp">${elem.stats["max-hp"]}HP</div>
+          <div class="sideInfo">
+            <div class="maxHp">${elem.stats["max-hp"]}HP</div>
+            <div class="maxCp">${elem.stats["max-cp"]}CP</div>
+          </div>
+          <hr class="upLine">
           <div class="backgroundImg" id=""backgroundImg">
             <img class="picture" src=" ${elem.img}"></img>
           </div>
           <div class="downInfo" id="downInfo">
-            <div class="weight" id="weight">Weight:${elem.size.weight}</div>
-            <div class="height" id="height">Height:${elem.size.height}</div>
+            <div class="weight" id="weight">WEIGHT: ${elem.size.weight.toUpperCase()}</div>
+            <div class="height" id="height">HEIGHT: ${elem.size.height.toUpperCase()}</div>
+          </div>
+        </div>
+        <div class="gridContainerDown" id="gridContainerDown">
+          <div class="attackList" id="attackList">SPECIAL ATTACKS
+            <div class="attacks" id="attacks">${attName.join("<br>").toUpperCase()}</div>
+          </div>
+          <div class="typeList" id="typeList">TYPE
+            <div class="type" id="type">${attType.join("<br>").toUpperCase()}</div>
+          </div>  
+          <hr class="downLine"> 
+          <div class="weakList" id="weakList">WEAKNESSES
+            <div class="weak" id="weak">${elem.weaknesses.join("<br>").toUpperCase()}</br></div>
+          </div>
+          <div class="resistList" id="resistList">RESISTANT
+            <div class="resistant" id="resistant">${elem.resistant.join("<br>").toUpperCase()}</div>
           </div>
       </div>
-      <div class="gridContainerDown" id="gridContainerDown">
-        <div class="attackList" id="attackList">7</div>
-        <div class="typeList" id="typeList">8</div>
-        <div class="weakList" id="weakList">9</div>
-        <div class="resistList" id="resistList">10</div>
-      </div>
-  </div>
+    </div>
 `;
-   
-
-
 });
-
-
- };
- 
-
- displayPokes(pokemonList);
+};
+displayPokes(pokemonList);
+  
 
 
 
 
 
- const pokemonListGeneratio = data.pokemon.slice(14,30); 
+ /*const pokemonListGeneratio = data.pokemon.slice(14,30); 
  const displayPokesGeneration = (pokemonData) => { 
 
 
@@ -86,14 +103,33 @@ import pokemon from './data/pokemon/pokemon.js';
 
 
 
- displayPokesGeneration(pokemonListGeneratio);
+ displayPokesGeneration(pokemonListGeneratio);*/
 
+let selecionarPorTipo;
+const filtrar = document.getElementById("tipoPokemon");
+filtrar.addEventListener('change', () => {
+  const getpokes = document.getElementById('cards-sem-carosel');
+  getpokes.innerHTML = '';
+  selecionarPorTipo = filtrar.value;
+  
+  displayPokes(filterType(pokemonList, selecionarPorTipo));
 
+});
 
+/*let arrayCp = []
+const ordenarPorCP = document.getElementById("maxcp");
 
+ordenarPorCP.addEventListener('click', () => {
+  const orderpokes = document.getElementById('cards-sem-carosel')
+  orderpokes.innerHTML = '';
+  ordenarMaxCp = ordenarPorCP.value;
+
+  sortCp(pokemonList, ordenarMaxCp)
+  displayPokes(pokemonList)
+})*/
  
 let ordernarPorNumeros;
-const ordenar = document.getElementById("maxcp");
+const ordenar = document.getElementById("num");
 ordenar.addEventListener('click', () => {
   const getpokes = document.getElementById('cards-sem-carosel');
   getpokes.innerHTML = '';
@@ -173,7 +209,7 @@ getJson()
 
 
 
-class MeuCarousel {
+/*class MeuCarousel {
   constructor(config) {
     this.config = config;
     this.init();
@@ -301,4 +337,4 @@ let teste = new MeuCarousel({
  // loop: true,
   timePerPage: 2000,
   stopOnMouseHover: true
-})
+})*/
