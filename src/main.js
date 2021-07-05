@@ -17,7 +17,8 @@ function infoCardsTela (data) {
           <li><strong>Status:</strong>${item.status}</li>
           <li><strong>Espécie:</strong>${item.species}</li>
           <li><strong>Origem:</strong>${item.origin.name}</li>
-          <li><strong>Localização:</strong>${item.location.name}</li>
+          <li><strong>Localização:</strong></li>
+            <p>${item.location.name}</p>
             <h4> Aparece em: </h4>
             <p>${item.episode.length} episódios</p>
         </ul>
@@ -29,20 +30,19 @@ function infoCardsTela (data) {
 infoCardsTela(data.results);
 
 
-const selecaoGenero = document.querySelector("#selecao-genero");
+const selecaoGenero = document.querySelector("#selecao-genero"); 
 const selecaoEspecie = document.querySelector("#selecao-especies");
 const selecaoStatus = document.querySelector("#selecao-status");
 const selecaoOrdem = document.querySelector("#selecao-ordem");
 
-const buscaNomePersonagem = document.getElementById("text-search")
-const botaoBusca = document.getElementById("botao-buscar")
-const texto = document.getElementById("porcentagem-filtro")
+const buscaNomePersonagem = document.getElementById("text-search");
+const texto = document.getElementById("porcentagem-filtro");
 
 
 //Função exibir calculo de porcentagem
 function mostrarPorcentagem(data) {
-  texto.innerHTML = `A porcentagem dessa categoria é de ${data}`
-}
+  texto.innerHTML = `Essa categoria representa ${data} dos personagens`
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
 function imprimirFiltroGenero(e) {
@@ -50,7 +50,7 @@ function imprimirFiltroGenero(e) {
   const porcentagemText = `${calcularPorcentagem(data.results.length, resultadoGenero.length)}%`
   mostrarPorcentagem(porcentagemText)
   return infoCardsTela(resultadoGenero);
-  }
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
 function imprimirFiltroEspecie(e) {
@@ -58,7 +58,7 @@ function imprimirFiltroEspecie(e) {
   const porcentagemTextEspecie = `${calcularPorcentagem(data.results.length, resultadoEspecie.length)}%`
   mostrarPorcentagem(porcentagemTextEspecie)
   return infoCardsTela(resultadoEspecie);
-  }
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
 function imprimirFiltroStatus(e) {
@@ -66,19 +66,19 @@ function imprimirFiltroStatus(e) {
   const porcentagemStatus = `${calcularPorcentagem(data.results.length, resultadoStatus.length)}%`
   mostrarPorcentagem(porcentagemStatus)
   return infoCardsTela(resultadoStatus);
-  }
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
 function imprimirFiltroOrdem(e) {
   const order = ordemAlfabetica(data.results, e.target.value)
   return infoCardsTela(order);
-  }
+};
 
 //Buscar nomes SEARCH
 function buscarNomePersonagens(e) {
   const nomePersonagens = buscarNome(data.results, e.target.value)
-  return infoCardsTela(nomePersonagens)
-}
+  return infoCardsTela(nomePersonagens);
+};
 
 //Adição de Eventos
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
@@ -86,8 +86,7 @@ selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
 selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
-buscaNomePersonagem.addEventListener("change", buscarNomePersonagens);
-botaoBusca.addEventListener("click", buscarNomePersonagens);
+buscaNomePersonagem.addEventListener("keyup", buscarNomePersonagens);
 
 
 
