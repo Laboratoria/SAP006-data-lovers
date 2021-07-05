@@ -18,7 +18,7 @@ function infoCardsTela (data) {
           <li><strong>Espécie:</strong>${item.species}</li>
           <li><strong>Origem:</strong>${item.origin.name}</li>
           <li><strong>Localização:</strong></li>
-            <p>${item.location.name}</p>
+            <p> ${item.location.name} </p>
             <h4> Aparece em: </h4>
             <p>${item.episode.length} episódios</p>
         </ul>
@@ -35,19 +35,19 @@ const selecaoEspecie = document.querySelector("#selecao-especies");
 const selecaoStatus = document.querySelector("#selecao-status");
 const selecaoOrdem = document.querySelector("#selecao-ordem");
 
-const buscaNomePersonagem = document.getElementById("text-search");
-const texto = document.getElementById("porcentagem-filtro");
+const buscaNomePersonagem = document.getElementById("text-search")
+const texto = document.getElementById("porcentagem-filtro")
 
 
 //Função exibir calculo de porcentagem
 function mostrarPorcentagem(data) {
-  texto.innerHTML = `Essa categoria representa ${data} dos personagens`
-};
+  texto.innerHTML = `Essa categoria representa ${data}`
+}
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
 function imprimirFiltroGenero(e) {
   const resultadoGenero = filtroGenero(data.results, e.target.value)
-  const porcentagemText = `${calcularPorcentagem(data.results.length, resultadoGenero.length)}%`
+  const porcentagemText = `${calcularPorcentagem(data.results.length, resultadoGenero.length)}% dos personagens`
   mostrarPorcentagem(porcentagemText)
   return infoCardsTela(resultadoGenero);
 };
@@ -55,7 +55,7 @@ function imprimirFiltroGenero(e) {
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
 function imprimirFiltroEspecie(e) {
   const resultadoEspecie = filtroEspecie(data.results, e.target.value)
-  const porcentagemTextEspecie = `${calcularPorcentagem(data.results.length, resultadoEspecie.length)}%`
+  const porcentagemTextEspecie = `${calcularPorcentagem(data.results.length, resultadoEspecie.length)}% dos personagens`
   mostrarPorcentagem(porcentagemTextEspecie)
   return infoCardsTela(resultadoEspecie);
 };
@@ -63,7 +63,7 @@ function imprimirFiltroEspecie(e) {
 //FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
 function imprimirFiltroStatus(e) {
   const resultadoStatus = filtroStatus(data.results, e.target.value)
-  const porcentagemStatus = `${calcularPorcentagem(data.results.length, resultadoStatus.length)}%`
+  const porcentagemStatus = `${calcularPorcentagem(data.results.length, resultadoStatus.length)}% dos personagens`
   mostrarPorcentagem(porcentagemStatus)
   return infoCardsTela(resultadoStatus);
 };
