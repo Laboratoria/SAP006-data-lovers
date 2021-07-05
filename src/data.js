@@ -13,9 +13,7 @@ export const ordered = (arr, order) => {
     return arr.sort((a, z) => (a.name > z.name ? 1 : -1));
   } else if (order === "Z-A") {
     return arr.sort((a, z) => (a.name > z.name ? -1 : 1));
-  } else if (order === "age") {
-    return arr.sort((a, z) => a.age - z.age);
-  }
+  } 
   return arr;
 };
 

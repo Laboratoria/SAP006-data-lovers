@@ -11,8 +11,8 @@ function showChars(chars) {
      </div>
      <div class="cardBack">
       <h3>${char.name}</h3>
-      <p>${char.specie}</p>
-      <p>${char.age}</p>
+      <p>Espécie: ${char.specie}</p>
+      <p>Idade: ${char.age}</p>
      </div>
      </div> `
     )
@@ -42,8 +42,6 @@ function orderCharacter(o) {
   }
 }
 document.getElementById("order").addEventListener("change", orderCharacter);
+
 //console.log(filterFemale);
 
-// ordenar
-// name a-z
-// age crescente e decrescente
