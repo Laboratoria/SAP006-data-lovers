@@ -25,28 +25,36 @@ function listingCards(itens) {
 
     // POP-UP //
     const popup = document.querySelector(".popup-wrapper");
+    // CONTEUDO DO POP-UP //
+    const popUpContent = document.querySelector(".popup-content");
+    // const splash = info.splash;
 
     card.addEventListener("click", () => {
       popup.style.display = "block";
-    });
 
-    // CONTEUDO DO POP-UP //
-    const popUpContent = document.querySelector(".popup-content");
-
-    card.addEventListener("click", () => {
-      function showChampionInfo() {
-        popUpContent.innerHTML += `
-      <img src"${info.img}">
-      <h2 class="champion-name">${info.id}</h2>
-      <h3 class="champion-title">${info.title}</h3>
-      <div class="champion-info">
-      Attack: ${info.info.attack} | Defense: ${info.info.defense} | 
-      Magic: ${info.info.magic} | Difficulty: ${info.info.difficulty}
+      popUpContent.innerHTML = `
+      <div class="image-splash">
+        <img src="${info.splash}" class="img-bg" alt="Imagem do Campeão"/>
       </div>
-      <div class="introduction">${info.blurb}</div>
-      <div class"tags">${info.tags}</div>
-      `
-      } showChampionInfo();
+
+        <h2 class="champion-name">${info.id}</h2>
+        <h3 class="champion-title">${info.title}</h3>
+        <div class="champion-data">
+          <div class="champion-info">
+            <p>Ataque: ${info.info.attack}
+
+            Defesa: ${info.info.defense}
+
+            Magia: ${info.info.magic}
+
+            Dificuldade: ${info.info.difficulty}
+
+            </p>
+          </div>
+      
+        <div class="introduction">${info.blurb}</div>
+      </div>
+      `;
     });
 
     // FECHAR POP-UP //
