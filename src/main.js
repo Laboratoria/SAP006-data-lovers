@@ -1,24 +1,14 @@
 import { filterData } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-
+const movies = data.films
+const selectMovies = document.querySelector(".select-films")
+const selectCharacter = document.querySelector(".select-character")
 const selectProducer = document.querySelector(".select-producer")
 const selectDirector = document.querySelector(".select-director")
-const selectCharacter = document.querySelector(".select-character")
 
-const movies = data.films
 
-function getPeople() {
-  let people = [];
-  for (let film of movies) {
-    for (let char of film.people) {
-      people.push(char);
-    }
-  }
-  return people;
-}
-
-function displayCards(movies){
+function displayCards(movies) {
     document.querySelector(".container").innerHTML = movies.map((film) => `     
         <h3>Título: ${film.title}</h3>
         <p>Produtor: ${film.producer}</p>
@@ -26,27 +16,41 @@ function displayCards(movies){
     `).join('')
 }
 
-function displayCardsChar(character){
+function getPeople() {
+    let people = [];
+    for (let film of movies) {
+        for (let char of film.people) {
+            people.push(char);
+        }
+    }
+    return people;
+}
+
+
+function displayCardsChar(character) {
     document.querySelector(".container").innerHTML = character.map((char) => `
         <h3>Título: ${char.name}</h3>
         <p>Produtor: ${char.gender}</p>
         <p>Diretor: ${char.specie}</p>     
-    `).join('')  
+    `).join('')
 }
 
-
-function printProducer(){
-    return displayCards(filterData(movies, "producer",selectProducer.value))
+function printMovies() {
+    return displayCards(movies)
 }
-
-function printDirector(){
-    return displayCards(filterData(movies, "director", selectDirector.value))
-}
-
-function printCharacter(){
+function printCharacter() {
     return displayCardsChar(filterData(getPeople(), "gender", selectCharacter.value))
 }
 
-selectProducer.addEventListener("change", printProducer)
+function printDirector() {
+    return displayCards(filterData(movies, "director", selectDirector.value))
+}
+
+function printProducer() {
+    return displayCards(filterData(movies, "producer", selectProducer.value))
+}
+
+selectMovies.addEventListener("change", printMovies)
+selectCharacter.addEventListener("change", printCharacter)
 selectDirector.addEventListener("change", printDirector)
-selectCharacter.addEventListener("change", printCharacter)  
+selectProducer.addEventListener("change", printProducer)
