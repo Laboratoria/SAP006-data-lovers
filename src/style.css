@@ -216,9 +216,10 @@ ul  {
 }
 
 #ordemGeracao {
-  width: 100px;
-  height: 20px;
+  width: 150px;
+  height: 30px;
   margin-bottom: 20px;
+  border-radius: 15px;
 }
 
 .name-geracao {
