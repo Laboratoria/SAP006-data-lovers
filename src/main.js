@@ -38,6 +38,7 @@ const buscaNomePersonagem = document.getElementById("text-search")
 const botaoBusca = document.getElementById("botao-buscar")
 const texto = document.getElementById("porcentagem-filtro")
 
+
 //Função exibir calculo de porcentagem
 function mostrarPorcentagem(data) {
   texto.innerHTML = `A porcentagem dessa categoria é de ${data}`
@@ -85,8 +86,8 @@ selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
 selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
-buscaNomePersonagem.addEventListener("change", buscarNomePersonagens)
-botaoBusca.addEventListener("click", buscarNomePersonagens)
+buscaNomePersonagem.addEventListener("change", buscarNomePersonagens);
+botaoBusca.addEventListener("click", buscarNomePersonagens);
 
 
 
