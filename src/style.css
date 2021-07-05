@@ -1,6 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
-  font-family: font-pokemon;
+  font-family: font-pokemonsolid;
   src: url(./assets/fonts/Pokemon\ Solid.ttf);
+}
+
+@font-face {
+  font-family: font-pokemonhollow;
+  src: url(./assets/fonts/Pokemon\ Hollow.ttf);
+}
+
+:root {
+  --base-color: #2c3e50;
+  --base-color-bck: #bdc3c7;
+  /*fonts*/
+  --title-font: Roboto, "Segoe UI", Tahoma, sans-serif;
 }
 
 .logo {
@@ -19,17 +37,40 @@
   background: #577590;
 }
 .menunavegação {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  color: #fde57a;
-  width: 103px;
   list-style-type: none;
-  height: 47px;
-  left: 770px;
-  top: 86px;
-  font-family: font-pokemon;
+  color: #fde57a;
+  font-family: font-pokemonsolid;
   font-size: 35px;
+}
+
+.home {
+  position: absolute;
+  width: 103px;
+  height: 47px;
+  left: 796px;
+  top: 55px;
+}
+
+.pokemons {
+  position: absolute;
+  width: 189px;
+  height: 45px;
+  left: 938px;
+  top: 55px;
+}
+
+.dicas {
+  position: absolute;
+  width: 102px;
+  height: 42px;
+  left: 1166px;
+  top: 55px;
+}
+
+.home:hover,
+.pokemons:hover,
+.dicas:hover {
+  color: #43aa8b;
 }
 
 .filtroTipos {
@@ -38,18 +79,186 @@
   width: 100px;
   height: 30px;
   left: 380px;
-  top: 230px;
+  top: 220px;
   border-radius: 40px;
+  background-color: var(--base-color-bck);
+  color: var(--base-color);
+  font-size: 14px;
 }
 
-.botãoFiltrar {
+.pokemonsearch {
+  position: absolute;
+  width: 180px;
+  height: 25px;
+  left: 50px;
+  top: 220px;
+  background-color: var(--base-color-bck);
+  color: var(--base-color);
+  font-size: 14px;
+  text-align: center;
+}
+
+.botaoFiltrar {
   position: absolute;
   width: 80px;
   height: 30px;
-  left: 486px;
-  top: 230px;
+  left: 250px;
+  top: 220px;
+  background-color: var(--base-color-bck);
+  color: var(--base-color);
+  font-size: 14px;
+  border-radius: 40px;
 }
 
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+
+.cards {
+  margin-top: 30px;
+  list-style: none;
+  color: var(--base-color);
+  text-align: center;
+  border-radius: 60px;
+  position: relative;
+}
+
+.cards::after {
+  content: "";
+  display: block;
+  opacity: 0.7;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+.steel {
+  background-color: #f4f4f4;
+}
+
+.fire {
+  background-color: #ffdac1;
+}
+
+.grass {
+  background-color: #b5ead7;
+}
+
+.electric {
+  background-color: #fff2a7;
+}
+
+.water,
+.ice {
+  background-color: #def3fd;
+}
+
+.ground {
+  background-color: #f4d5c0;
+}
+
+.rock {
+  background-color: #b2bec3;
+}
+
+.fairy {
+  background-color: #fecfd9;
+}
+
+.poison {
+  background-color: #c7ceea;
+}
+
+.bug {
+  background-color: #e2f0cb;
+}
+
+.dragon {
+  background-color: #97b3e6;
+}
+
+.psychic {
+  background-color: #a0e0ca;
+}
+
+.flying {
+  background-color: #f5f5f5;
+}
+
+.fighting {
+  background-color: #e6e0d4;
+}
+
+.normal {
+  background-color: #f5f5f5;
+}
+
+.ghost {
+  background-color: #d4f0f0;
+}
+
+.dark {
+  background-color: #bdc3c7;
+}
+
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+
+.card-title {
+  font-family: font-pokemonsolid;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+}
+
+.card-subtitle {
+  text-transform: capitalize;
+  color: var(--base-color);
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: var(--title-font);
+}
+
+.card-subtitle2 {
+  color: var(--base-color);
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-family: font-pokemonsolid;
+}
+
+.card-image {
+  height: 180px;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /*
 .column {
   width: 152px;
