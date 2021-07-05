@@ -9,6 +9,7 @@
 
 <body>
   <container id="telaPrincipal">
+    
   
     <div class="line">
       <div class="perfil">
@@ -17,7 +18,7 @@
       
         <ul>
           <li class="info_icon"><i data-feather="info"></i>
-          
+          <li class="info_icon">  <a href="contatos.html"></a></li>
         </li>
         </ul>
       
@@ -53,31 +54,42 @@
       </div>
     </div>
 
+    
 
 
+ 
+  <div class="wrap">
 
-  <div class="wrapper">
+    
+    <select id="ordemGeracao"> 
+     
+       
+    
+      <option value="">Selecione a geração</option>
+       <option value="johto">I</option>
+       <option value="kanto">II</option>
 
-    <ul class="carousel" id="carousel" data-target="carousel"></ul>
+   
+  </select>
+    <div class="container-carousel">
+     
+      <span id="previous"><i data-feather="chevron-left"></i></span>
+      <span id="next"><i data-feather="chevron-right"></i></span>
+      <div id="slider" class="slider">
+        <div class="name-geracao"></div>
+    
+      </div>
       
-
-    <div class="button-wrapper">
-
-      <button data-action="slideLeft">L</button>
-      <button data-action="slideRight">R</button>
-
-
-
-
+    
     </div>
-
-
+   
 
 
 
 
 
   </div>
+ 
 
   
 </container>
@@ -86,6 +98,13 @@
 
 </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 00a97fd4dba89203c45bb71891784b9477618e81
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
       feather.replace()

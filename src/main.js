@@ -1,15 +1,12 @@
 import data from './data/pokemon/pokemon.js';
 
-import { 
-  /*filtrarPelaGeração, */ordenarPorNum, ordenarPorNome, /*sortData, */filterType
+
+import {
+  filtrarPelaGeracao,
+  ordenarPorNum,
+  ordenarPorNome,
+  filterType
 } from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
-
-//console.log(sortData);
-
-//console.log(filtrarPelaGeração);
-
-//console.log(ordenarPorNum);
 
  const pokemonList = data.pokemon.slice(0, 50);
  let pokeCard = document.getElementById('cards-sem-carosel');
@@ -31,7 +28,6 @@ import pokemon from './data/pokemon/pokemon.js';
   })
   
       pokeCard.innerHTML += `<div class="card" id="card">
-      <div id="typeCard">
         <div class="gridContainerUp" id="gridContainerUp"> 
           <div class="title"> ${elem.name.toUpperCase()}</div>
           <div class="number">#${elem.num}</div>
@@ -70,41 +66,6 @@ import pokemon from './data/pokemon/pokemon.js';
 displayPokes(pokemonList);
   
 
-
-
-
-
- /*const pokemonListGeneratio = data.pokemon.slice(14,30); 
- const displayPokesGeneration = (pokemonData) => { 
-
-
- 
-   
- const pokeCardGeneration = document.getElementById('carousel');
- 
- pokemonData.forEach((elem) => {
-  pokeCardGeneration.innerHTML += `
-   
-        <div class="backgroundImg" id=""backgroundImg">
-          <img class="picture" src=" ${elem.img}"></img>
-        </div>
-        </div>
-        <div class="infCardAbout">${elem.generation.name}</div> 
-      
-        </div>
-     </div>
-   </div>
-`;
- });
-
-
- };
- 
-
-
-
- displayPokesGeneration(pokemonListGeneratio);*/
-
 let selecionarPorTipo;
 const filtrar = document.getElementById("tipoPokemon");
 filtrar.addEventListener('change', () => {
@@ -123,7 +84,6 @@ ordenarPorCP.addEventListener('click', () => {
   const orderpokes = document.getElementById('cards-sem-carosel')
   orderpokes.innerHTML = '';
   ordenarMaxCp = ordenarPorCP.value;
-
   sortCp(pokemonList, ordenarMaxCp)
   displayPokes(pokemonList)
 })*/
@@ -140,8 +100,6 @@ ordenar.addEventListener('click', () => {
 
 });
 
-
-
 let ordenarPorNomes;
 const ordenarNomes = document.getElementById("name");
 ordenarNomes.addEventListener('click', () => {
@@ -154,187 +112,62 @@ ordenarNomes.addEventListener('click', () => {
 
 });
 
+const pokemonListGeneration = data.pokemon;
+const displayPokesGeneration = (pokemonData) => {
 
 
+  const pokeCardGeneration = document.getElementById('slider');
 
+  pokemonData.forEach((elem) => {
+    pokeCardGeneration.innerHTML += `
+  
+       <div>
+         <img class="pictures" src=" ${elem.img}"></img>
+       </div>
 
+       <div class="name-geracao">${elem.generation.num}
 
 
+       </div> 
+      `;
+});
 
 
+};
 
+displayPokesGeneration(pokemonListGeneration);
 
 
+let ordernarPorGeracao;
+const ordenarGeracao = document.getElementById('ordemGeracao');
+ordenarGeracao.addEventListener('change', () => {
+  const getpokes = document.getElementById('slider');
+  getpokes.innerHTML = '';
+  ordernarPorGeracao = ordenarGeracao.value;
 
 
+  displayPokesGeneration(filtrarPelaGeracao(pokemonListGeneration, ordernarPorGeracao));
 
+});
 
 
+const nextEl = document.getElementById('next');
+const previousEl = document.getElementById('previous');
+const sliderEl = document.getElementById('slider')
 
 
 
 
+function onNextClick() {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-const api = "./data/pokemon/pokemon.json"
-async function getJson() {
-  const response = await fetch(api);
-  const data = await response.json();
-  //console.log(data);
-  let allPokemons = data.pokemon;
-  //console.log(allPokemons[12].weaknesses[3]);
-  document.querySelector("#teste").innerText = allPokemons[2].name
-  document.querySelector("#infos").innerText = allPokemons[2].about
-  let img = querySelector("#img")
-  img.setAttribute("src", allPokemons.innerText)
-}
-getJson()
-*/
-
-
-
-/*class MeuCarousel {
-  constructor(config) {
-    this.config = config;
-    this.init();
-  }
-  init() {
-
-
-    const carousel = document.querySelector("[data-target='" + this.config.selector + "']");
-    const card = carousel.querySelector("[data-target='card']");
-    const leftButton = document.querySelector("[data-action='slideLeft']");
-    const rightButton = document.querySelector("[data-action='slideRight']");
-    let interval = '';
-    let activePage = 1;
-    let timeToNext = this.config.timePerPage;
-    let stopSlide = false;
-
-
-    const carouselWidth = carousel.offsetWidth;
-    const cardStyle = card.currentStyle || window.getComputedStyle(card)
-    const cardMarginRight = this.config.spaceBetween;
-
-    const cardSize = this.config.slidesPerView > 1 ? (carouselWidth / this.config.slidesPerView) - cardMarginRight : (carouselWidth / this.config.slidesPerView);
-    const allItens = carousel.querySelectorAll("[data-target='card']");
-    allItens.forEach((item) => {
-      item.style.width = `${card}px`;
-
-
-      if (this.config.slidesPerView > 1) {
-        item.style.marginRight = `${cardMarginRight/2}px`;
-        item.style.marginLeft = `${cardMarginRight/2}px`
-      }
-
-
-    })
-
-    const cardCount = carousel.querySelectorAll("[data-target='card']").length;
-    const totalPage = Math.ceil(cardCount / this.config.slidesPerView);
-
-    let offset = 0;
-    const maxX = -((cardCount / totalPage) * carouselWidth +
-      (cardMarginRight * (cardCount / totalPage)) -
-      carouselWidth - cardMarginRight);
-
-    let prev = () => {
-      if (offset !== 0 && offset !== 20 && activePage > 1 && stopSlide == false) {
-        activePage -= 1;
-        offset += (carouselWidth + cardMarginRight) - 20;
-        carousel.removeAttribute('style');
-        carousel.style.transform = `translateX(${offset}px)`;
-      }
-    }
-
-    let next = () => {
-      if ((offset !== maxX && activePage < totalPage && stopSlide == false)) {
-        activePage += 1;
-        offset -= (carouselWidth + cardMarginRight) - 20;
-        carousel.style.transition = 'all 1s ease';
-        carousel.style.transform = `translateX(${offset}px)`;
-
-
-      } else if ((this.config.slidesPerView == 1 && activePage < totalPage && stopSlide == false)) {
-        activePage += 1;
-        offset -= carouselWidth;
-        carousel.style.transform = `translateX(${offset}px)`;
-      } else if (activePage == totalPage && stopSlide == false) {
-        clearInterval(interval);
-        timeToNext = (this.config.timePerPage / 2);
-        infinite();
-
-        carousel.querySelectorAll("[data-target='card']").forEach((item, index) => {
-
-          if (index < this.config.slidesPerView) {
-            carousel.append(item);
-          }
-
-
-        })
-        prev();
-
-
-
-      }
-    }
-
-    carousel.addEventListener("mouseout", () => {
-      stopSlide = false;
-    })
-
-
-
-    rightButton.addEventListener('click', () => {
-      activePage = true
-
-    })
-
-
-    leftButton.addEventListener('click', () => {
-      activePage = false
-
-    })
-
-
-
-
-
-    let infinite = () => {
-      if (this.config.loop) {
-        interval = setInterval(() => {
-          next();
-        }, timeToNext);
-      }
-
-    }
-
-    infinite();
-
-
-  }
+  const imgWidth = sliderEl.offsetWidth;
+  sliderEl.scrollLeft += imgWidth;
 }
 
-let teste = new MeuCarousel({
-  selector: 'carousel',
-  slidesPerView: 4,
-  spaceBetween: 20,
- // loop: true,
-  timePerPage: 2000,
-  stopOnMouseHover: true
-})*/
+function onPreviousClick() {
+  const imgWidth = sliderEl.offsetWidth;
+  sliderEl.scrollLeft -= imgWidth;
+}
+
+nextEl.addEventListener('click', onNextClick);
+previousEl.addEventListener('click', onPreviousClick);
