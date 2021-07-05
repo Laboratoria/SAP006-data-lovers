@@ -224,12 +224,12 @@ ul  {
 .name-geracao {
   font-size: 15px;
   display: flex;
-  background-color: #da7590;
+  background-color: transparent;
   margin-top: 102px;
-  width: 100px;
-  height: 40px;
+  width: 200px;
+  height: 20px;
   margin-left: -80px;
-  padding-left: 10px;
-  border: #000000 solid 1px;
-  border-radius: 10px;
+  padding-left: 40px;
+  color: transparent;
 }
+

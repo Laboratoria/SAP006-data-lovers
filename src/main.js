@@ -107,6 +107,11 @@ const displayPokesGeneration = (pokemonData) => {
        <div>
          <img class="pictures" src=" ${elem.img}"></img>
        </div>
+
+       <div class="name-geracao">>${elem.generation.num}
+
+
+       </div> 
       
        
  
