@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="style.css" />
+  <header>
+    <div class="links">
+      <a href="./index.html">HOME</a>
+      <a href="https://pt.wikipedia.org/wiki/Rick_and_Morty" target="_blank">SOBRE A SÉRIE</a>
+    </div>
+  </header>
+</head>
+
+<body>
+
+  <main>
+
+    <form id="form" class="search-characters">
+      <input type="text" id="characters" placeholder="Pesquise por personagem">
+      <button id="button-search">Buscar personagem</button>
+    </form>
+
+    <section class="-search-filters">
+
+      <button class="btn-search" id="ordenar">Ordenar A-Z</button>
+      <button class="btn-search" id="desordenar">Ordenar Z-A</button>
+
+      <div class="status">
+        <select id="status" name="status">
+          <option id="statusOption" class="status" value="Status">Status</option>
+          <option id="alive" class="alive" value="Alive">Alive</option>
+          <option id="dead" value="Dead">Dead</option>
+          <option id="unknow" value="unknown">Unknown</option>
+        </select>
+      </div>
+
+      <div class="specie">
+        <select id="especie" name="especie" class="species">
+          <option value="especieOption">Especie</option>
+          <option value="Human">Human</option>
+          <option value="Humanoid">Humanoid</option>
+          <option value="Alien">Alien</option>
+          <option value="Animal">animal</option>
+          <option value="Poopybutthole">Poopybutthole</option>
+          <option value="Mytholog">Mytholog</option>
+          <option value="Vampire">Vampire</option>
+          <option value="Robot">Robot</option>
+          <option value="Cronenberg">Cronenberg</option>
+          <option value="Disease">Disease</option>
+          <option value="Parasite">Parasite</option>
+        </select>
+        </select>
+      </div>
+    </section>
+
+    <div id="get-cards"></div>
+
+  </main>
+
+  <footer>
+    <p>
+      @Bruna Calixto e Carmen Gozza- 2021
+    </p>
+  </footer>
+
+  <script src="./main.js" type="module"></script>
+  <script src="./data.js" type="module"></script>
+
+</body>
+
+</html>

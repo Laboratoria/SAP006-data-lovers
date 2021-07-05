@@ -6,96 +6,55 @@
 }
 
 body {
-    background-color: #0AA689;
+    background-color: rgb(17, 41, 63);
 }
 
-header {
-    background-color: #F27F3D;
-    width: 100%;
-    height: 75px;
-    text-align: center;
+@font-face {
+    font-family: "RickM";
+    src: url("../get-schwifty/get_schwifty.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
-    
+
 .links {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    position: relative;
+    top: 30px;   
+    
 }
 
-.links a {
-    padding: 30px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #0A5DA6;
-    font-weight: bold;
-}
-
-.search-characters {
-    margin-top: 25px;
-} 
-
-.status{
-    display: flex ;
-}
-
-
-#get-cards {
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: space-around;
-   align-content: center;
-}
-
-.info-cards {
-    margin: 30px;
-    background-color: #9ABF4B;
-    width: 40vh;
-    height: 53vh;
-    border-style: solid;
-    border-radius: 9px;
-    border-color: #9ddb17; 
-    box-shadow: 50px;
-    font-weight: bold;
-    box-shadow: 10px 10px 10px #81b316cb;
-}
-
-
-.card-front img {
-    padding: 5%;
-    width: 30vh;
-    border-radius: 50% 50%;
-    margin-left: 4vh;
-}
-
-.list {
-    margin-left: 5px;
-}
-
-.list li {
-    padding: 5px;
-    list-style-type: none;
-    font-size: 23px;
+.sobre-serie{
     font-family: 'Amatic SC', cursive;
-    text-align: justify;
+    font-size: 20pt;
+    text-decoration: none;
+    color: #88D962;
+    margin-left: 20px;
 }
 
-#name {
-    color: darkblue;
-    font-weight: bold;
-}
-
-footer {
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #F27F3D;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-    color: #11283b;
+.text-inicial{
     text-align: center;
-    font-weight: bolder;
-}    
+    font-family: "RickM", Times, serif; ;
+    font-size: 30pt;
+    color: #88D962;
+}
+
+.seta{
+    padding-top: 40px;
+    margin: auto;
+}
+
+
+.paginaInicial{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    max-height: 700px;
+    width: auto;
+    height: auto;
+}
