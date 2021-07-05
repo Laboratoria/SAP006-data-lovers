@@ -4,6 +4,7 @@ import data from './data/ghibli/ghibli.js';
 const movies = data.films
 const selectMovies = document.querySelector(".select-films")
 const selectCharacter = document.querySelector(".select-character")
+const selectSpecie = document.querySelector(".select-specie")
 const selectProducer = document.querySelector(".select-producer")
 const selectDirector = document.querySelector(".select-director")
 
@@ -42,6 +43,10 @@ function printCharacter() {
     return displayCardsChar(filterData(getPeople(), "gender", selectCharacter.value))
 }
 
+function printSpecie(){
+    return displayCardsChar(filterData(getPeople(), "specie", selectSpecie.value))
+}
+
 function printDirector() {
     return displayCards(filterData(movies, "director", selectDirector.value))
 }
@@ -54,3 +59,4 @@ selectMovies.addEventListener("change", printMovies)
 selectCharacter.addEventListener("change", printCharacter)
 selectDirector.addEventListener("change", printDirector)
 selectProducer.addEventListener("change", printProducer)
+selectSpecie.addEventListener("change", printSpecie)
