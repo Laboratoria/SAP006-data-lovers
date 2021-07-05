@@ -35,14 +35,14 @@ const selecaoEspecie = document.querySelector("#selecao-especies");
 const selecaoStatus = document.querySelector("#selecao-status");
 const selecaoOrdem = document.querySelector("#selecao-ordem");
 
-const buscaNomePersonagem = document.getElementById("text-search")
-const texto = document.getElementById("porcentagem-filtro")
+const buscaNomePersonagem = document.getElementById("text-search");
+const texto = document.getElementById("porcentagem-filtro");
 
 
 //Função exibir calculo de porcentagem
 function mostrarPorcentagem(data) {
   texto.innerHTML = `Essa categoria representa ${data}`
-}
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
 function imprimirFiltroGenero(e) {

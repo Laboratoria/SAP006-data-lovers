@@ -35,4 +35,5 @@ export const  buscarNome = (data, condition) => {
 export const calcularPorcentagem = (total, portion) => {
   const porcentagem = Math.round((portion * 100) / total);
   return porcentagem;
-}; 
+};
+
