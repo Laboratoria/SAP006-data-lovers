@@ -11,7 +11,8 @@
 <body>
   <div id="root"></div>
   <header>
-    <h1>STUDIO GHIBLI</h1>
+    <!--<h1>STUDIO GHIBLI</h1>-->
+    <img id="headerImg" src="./header cover.png" alt="header">
   </header>
   <menu id="menu">
     <h3>
@@ -20,6 +21,38 @@
       ABOUT US
     </h3>
   </menu>
+
+  <div class="filters" id="filterSort">
+    <select class="select" id="SortAZ">
+      <option selected disabled value="">Sort by</option>
+      <option value="A-Z">A-Z</option>
+      <option value="Z-A">Z-A</option>
+    </select>
+  </div>
+
+  <div class="filters" id="filterDate">
+    <select class="select" id="releaseDate">
+      <option selected disabled value="">Release Date</option>
+      <option value="1986">1986</option>
+      <option value="1988">1988</option>
+      <option value="1989">1989</option>
+      <option value="1991">1991</option>
+      <option value="1992">1992</option>
+      <option value="1994">1994</option>
+      <option value="1995">1995</option>
+      <option value="1997">1997</option>
+      <option value="1999">1999</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+      <option value="2004">2004</option>
+      <option value="2006">2006</option>
+      <option value="2008">2008</option>
+      <option value="2010">2010</option>
+      <option value="2011">2011</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+    </select>
+  </div>
 
   <div class="filters" id="filterDirector">
     <select class="select" id="director">
@@ -34,15 +67,22 @@
     </select>
   </div>
 
-  <!--- <div class="filters" id="filterProducer">
-    <select class="select" id="producer">
-      <option selected disabled value="">Producer</option>
-      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-      <option value="Isao Takahata">Isao Takahata</option>
-      <option value="Toru Hara">Toru Hara</option>
-      <option value="Toshio Suzuki">Toshio Suzuki</option>
+  <div class="filters" id="filterTerrain">
+    <select class="select" id="terrain">
+      <option selected disabled value="">Terrain</option>
+      <option value="City">City</option>
+      <option value="Earthsea">Earthsea</option>
+      <option value="Forest">Forest</option>
+      <option value="Hill">Hill</option>
+      <option value="Marsh">Marsh</option>
+      <option value="Mountain">Mountain</option>
+      <option value="Ocean">Ocean</option>
+      <option value="Plain">Plain</option>
+      <option value="River">River</option>
+      <option value="TODO">TODO</option>
+      <option value="[]">--Undefined--</option>
     </select>
-    -->
+  </div>
 
   <nav class="principal">
     <ul>
@@ -54,7 +94,7 @@
 
   <main id="cards" class="mainCards">
 
-    
+
   </main>
 
   <script src="main.js" type="module"></script>
