@@ -40,6 +40,7 @@ export const calcularPorcentagem = (total, portion) => {
 
 
 
+
 //--------------------------------------------------------------------------------------------------------------------------------
 /*O coração deste projeto é a manipulação de dados através de arrays e objetos.
 Recomendamos que este arquivo contenha toda a funcionalidade que corresponda a obter, processar e manipular dados (suas funções):
