@@ -1,4 +1,4 @@
-// import orderAZ from './data.js';
+import ordersAbc from './data.js';
 import data from './data/lol/lol.js';
 
 // TODOS ELEMENTOS HTML
@@ -360,66 +360,18 @@ if(pageQuery > paginationResult.pages){
     document.getElementById("pagination").style.display = "none"
 }
 let paginationItems = "";
-for (let i = 0; i <= paginationResult.pages; i++) {
-    let paginaAtiva = i+1
-    paginationItems += `<a class="pagination-link`+paginaAtiva+`" id="pagination-link" href="?pagina=`+paginaAtiva+`">`+paginaAtiva+`</a>`
-}
+    for (let i = 0; i <= paginationResult.pages; i++) {
+        let paginaAtiva = i+1
+        paginationItems += `<a class="pagination-link`+paginaAtiva+`" id="pagination-link" href="?pagina=`+paginaAtiva+`">`+paginaAtiva+`</a>`
+    }
 document.getElementById("pagination").innerHTML = paginationItems;
 
 // FUNÇÃO DE BUSCAR PERSONAGEM POR NOME
 document.getElementById("input-search").addEventListener("input", function () {
     const textName = document.getElementById("input-search").value.toLowerCase();
-    const champions = items.filter(item => item.name.toLowerCase().includes(textName));
-    showCharacters(champions)
-})
-// FUNÇÃO PRA MUDAR DIFICULDADES
-
-document.getElementById("all").addEventListener("click", function (){
-    document.getElementById("difficulties").innerHTML = `Todas as Dificuldades <img id="img-select" src="img/select.png"/>`
-    document.getElementById("all").style.display = "none";
-    document.getElementById("easy").style.display = "none";
-    document.getElementById("medium").style.display = "none";
-    document.getElementById("hard").style.display = "none";
-    document.getElementById("difficulties").style.fontSize = "15px"
-    document.getElementById("difficulties").style.padding = "0px"
-    document.getElementById("img-select").style.padding = "0px"
-    showCharacters(items);
-})
-document.getElementById("easy").addEventListener("click", function(){
-    document.getElementById("difficulties").innerHTML = `<img id="easy-img" src="img/easy.png"/><img id="img-select" src="img/select.png"/>`
-    document.getElementById("all").style.display = "none";
-    document.getElementById("easy").style.display = "none";
-    document.getElementById("medium").style.display = "none";
-    document.getElementById("hard").style.display = "none";
-    document.getElementById("easy-img").style.width = "60%";
-    document.getElementById("easy-img").style.float = "left"
-    document.getElementById("easy-img").style.padding = "0px 0px 0px 20px"
-    document.getElementById("img-select").style.padding = "5px 0px"
-    document.getElementById("root").innerHTML = "";
-})
-document.getElementById("medium").addEventListener("click", function(){
-    document.getElementById("difficulties").innerHTML = `<img id="medium-img" src="img/medium.png"/><img id="img-select" src="img/select.png"/>`
-    document.getElementById("all").style.display = "none";
-    document.getElementById("easy").style.display = "none";
-    document.getElementById("medium").style.display = "none";
-    document.getElementById("hard").style.display = "none";
-    document.getElementById("medium-img").style.width = "60%";
-    document.getElementById("medium-img").style.float = "left"
-    document.getElementById("medium-img").style.padding = "0px 0px 0px 20px"
-    document.getElementById("img-select").style.padding = "5px 0px"
-    document.getElementById("root").innerHTML = ""
-})
-document.getElementById("hard").addEventListener("click", function(){
-    document.getElementById("difficulties").innerHTML = `<img id="hard-img" src="img/hard.png"/><img id="img-select" src="img/select.png"/>`
-    document.getElementById("all").style.display = "none";
-    document.getElementById("easy").style.display = "none";
-    document.getElementById("medium").style.display = "none";
-    document.getElementById("hard").style.display = "none";
-    document.getElementById("hard-img").style.width = "60%";
-    document.getElementById("hard-img").style.float = "left"
-    document.getElementById("hard-img").style.padding = "0px 0px 0px 20px"
-    document.getElementById("img-select").style.padding = "5px 0px"
-    document.getElementById("root").innerHTML = ""
+    const champions = objects.filter(item => item.name.toLowerCase().includes(textName));
+    const championsCards = champions.slice(offset, offset + limit);
+    showCharacters(championsCards)
 })
 
 // FUNÇÃO PRA ORDENAR ALFABETICAMENTE
@@ -431,11 +383,11 @@ document.getElementById("A-Z").addEventListener("click", function(){
     document.getElementById("A-Z").style.display = "none"
     document.getElementById("Z-A").style.display = "none"
 
-    //FILTRO DE ORDENAR A-Z        
-        const resultsAZ = objects.sort((a, z) => a.name > z.name ? 1 : -1)
-    showCharacters(resultsAZ)
-})
+    let championsAZ = ordersAbc.orderAZ(objects); 
+    let orderChampionsAZ = championsAZ.slice(offset, offset + limit)
 
+    showCharacters(orderChampionsAZ)
+})
 document.getElementById("Z-A").addEventListener("click", function(){
     document.getElementById("ordenar").style.display = "flex"
     document.getElementById("ordenar").innerHTML = `Z-A <img id="img-select1" src="img/select.png"/>`
@@ -444,7 +396,66 @@ document.getElementById("Z-A").addEventListener("click", function(){
     document.getElementById("A-Z").style.display = "none"
     document.getElementById("Z-A").style.display = "none"
 
-    //FILTRO DE ORDENAR Z-A
-        const resultsZA = objects.sort((a, z) => a.name < z.name ? 1 : -1)
-    showCharacters(resultsZA)
+    let championsZA = ordersAbc.orderZA(objects); 
+    let orderChampionsZA = championsZA.slice(offset, offset + limit);
+    showCharacters(orderChampionsZA)
+})
+
+// FUNÇÃO PRA MUDAR DIFICULDADES
+document.getElementById("all").addEventListener("click", function (){
+    document.getElementById("difficulties").innerHTML = `Todas as Dificuldades <img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("difficulties").style.fontSize = "15px"
+    document.getElementById("difficulties").style.padding = "0px"
+    document.getElementById("img-select").style.padding = "0px"
+    showCharacters(items);
+})
+
+document.getElementById("easy").addEventListener("click", function(){
+    document.getElementById("difficulties").innerHTML = `<img id="easy-img" src="img/easy.png"/><img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("easy-img").style.width = "60%";
+    document.getElementById("easy-img").style.float = "left"
+    document.getElementById("easy-img").style.padding = "0px 0px 0px 20px"
+    document.getElementById("img-select").style.padding = "5px 0px"
+
+    const showEasyCharacterCards = ordersAbc.filterDifficultyMenor(objects, 3)
+    const showEasyCharacters = showEasyCharacterCards.slice(offset, offset + limit);
+    showCharacters(showEasyCharacters) 
+})
+document.getElementById("medium").addEventListener("click", function(){
+    document.getElementById("difficulties").innerHTML = `<img id="medium-img" src="img/medium.png"/><img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("medium-img").style.width = "60%";
+    document.getElementById("medium-img").style.float = "left"
+    document.getElementById("medium-img").style.padding = "0px 0px 0px 20px"
+    document.getElementById("img-select").style.padding = "5px 0px"
+
+    const showMediumCharacterCards = ordersAbc.filterDifficultyMenor(objects, 7)
+    const showMediumCharacters = showMediumCharacterCards.slice(offset, offset + limit);
+    showCharacters(showMediumCharacters)
+})
+document.getElementById("hard").addEventListener("click", function(){
+    document.getElementById("difficulties").innerHTML = `<img id="hard-img" src="img/hard.png"/><img id="img-select" src="img/select.png"/>`
+    document.getElementById("all").style.display = "none";
+    document.getElementById("easy").style.display = "none";
+    document.getElementById("medium").style.display = "none";
+    document.getElementById("hard").style.display = "none";
+    document.getElementById("hard-img").style.width = "60%";
+    document.getElementById("hard-img").style.float = "left"
+    document.getElementById("hard-img").style.padding = "0px 0px 0px 20px"
+    document.getElementById("img-select").style.padding = "5px 0px"
+
+    const showHardCharacterCards = ordersAbc.filterDifficultyMaior(objects, 8);
+    const showHardCharacters = showHardCharacterCards.slice(offset, offset + limit);
+    showCharacters(showHardCharacters)
 })

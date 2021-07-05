@@ -290,8 +290,7 @@ button{
     width: 18%;
     height: 305px;
     cursor: pointer;
-    perspective: 6000px;    
-    transition: 1s;
+    perspective: 6000px;
 }
 .cards:hover{
     transition: 0.8s;

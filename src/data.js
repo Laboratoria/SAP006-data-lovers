@@ -1,11 +1,24 @@
-export const orderAZ = (data) => {
-  const resultsAZ = data.sort((a, z) => a.name < z.name ? 1 : -1)
+const ordersAbc = {
+orderAZ: function orderAZ(data){
+  const resultsAZ = data.sort((a, z) => a.name > z.name ? 1 : -1)
   return resultsAZ;
-};
-export const orderZA = (data) => {
-  const resultsZA = data.sort((a, z) => a.name > z.name ? 1 : -1)
+},
+orderZA: function orderZA(data){
+  const resultsZA = data.sort((a, z) => a.name < z.name ? 1 : -1)
   return resultsZA
-};
+},
+filterDifficultyMenor: function filterDifficulty(champions, difficulty){
+  const charactersFilter = champions.filter(function(champion){
+      return champion.info.difficulty <= difficulty;
+  })
+      return charactersFilter
+},
+filterDifficultyMaior: function filterDifficulty(champions, difficulty){
+  const charactersFilter = champions.filter(function(champion){
+      return champion.info.difficulty >= difficulty;
+  })
+      return charactersFilter
+}
+}
 
-export default orderAZ
-export default orderZA
+export default ordersAbc
