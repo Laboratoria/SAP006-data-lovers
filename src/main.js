@@ -6,9 +6,8 @@ const elements = data.data;
 let objects = Object.values(elements);
 
 const index = document.getElementById("index");
+const header = document.querySelector("header")
 
-const header = document.createElement("header");
-index.appendChild(header);
 const nav = document.createElement("nav");
 header.appendChild(nav);
 const ul = document.createElement("ul");
@@ -27,15 +26,34 @@ a.appendChild(imgLogo);
 const menu = document.createElement("section");
 menu.setAttribute("id", "menu");
 index.appendChild(menu);
+const divMenu = document.createElement("div");
+divMenu.setAttribute("id", "div-menu");
+menu.appendChild(divMenu)
+const divGo = document.createElement("div");
+divGo.setAttribute("id", "div-go");
+divMenu.appendChild(divGo)
+const pMenu = document.createElement("p");
+pMenu.setAttribute("id", "p-menu");
+pMenu.innerHTML = `BUSQUE<br> POR UM CAMPEÃO`
+divGo.appendChild(pMenu)
+const buttonMenu = document.createElement("button");
+buttonMenu.setAttribute("id", "button-menu");
+buttonMenu.innerHTML = `<a href="#root" id="a-menu">CAMPEÕES</a>`
+divGo.appendChild(buttonMenu);
+const divImgMenu = document.createElement("div");
+divImgMenu.setAttribute("id", "div-img-menu");
+divGo.appendChild(divImgMenu)
+const imgMenu = document.createElement("img");
+imgMenu.setAttribute("id", "menu-img-character")
+imgMenu.setAttribute("src", "img/character.png")
+divImgMenu.appendChild(imgMenu)
 
 const filters = document.createElement("section");
 filters.setAttribute("id", "filters");
 index.appendChild(filters);
-
 const divFilters = document.createElement("div");
 divFilters.setAttribute("id", "div-filters");
 filters.appendChild(divFilters);
-
 const imgSearch = document.createElement("img");
 imgSearch.setAttribute("src", "img/search.png");
 imgSearch.setAttribute("id", "img-search");
@@ -50,26 +68,32 @@ divCategories.setAttribute("id", "categories");
 divFilters.appendChild(divCategories);
 const imgController = document.createElement("img");
 imgController.setAttribute("class", "icons");
+imgController.setAttribute("id", "controller");
 imgController.setAttribute("src", "img/controller.png");
 divCategories.appendChild(imgController);
 const imgSlayer = document.createElement("img");
 imgSlayer.setAttribute("class", "icons");
+imgSlayer.setAttribute("id", "slayer");
 imgSlayer.setAttribute("src", "img/slayer.png");
 divCategories.appendChild(imgSlayer);
 const imgTank = document.createElement("img");
 imgTank.setAttribute("class", "icons");
+imgTank.setAttribute("id", "tank");
 imgTank.setAttribute("src", "img/tank.png");
 divCategories.appendChild(imgTank);
 const imgMarksman = document.createElement("img");
 imgMarksman.setAttribute("class", "icons");
+imgMarksman.setAttribute("id", "marksman");
 imgMarksman.setAttribute("src", "img/marksman.png");
 divCategories.appendChild(imgMarksman);
 const imgMage = document.createElement("img");
 imgMage.setAttribute("class", "icons");
+imgMage.setAttribute("id", "mage");
 imgMage.setAttribute("src", "img/mage.png");
 divCategories.appendChild(imgMage);
 const imgFighter = document.createElement("img");
 imgFighter.setAttribute("class", "icons");
+imgFighter.setAttribute("id", "fighter");
 imgFighter.setAttribute("src", "img/fighter.png");
 divCategories.appendChild(imgFighter);
 
@@ -192,26 +216,32 @@ divImgResponsive.setAttribute("id", "div-img-responsive");
 index.appendChild(divImgResponsive);
 const imgController1 = document.createElement("img");
 imgController1.setAttribute("class", "icons-responsivo");
+imgController1.setAttribute("id", "controller1");
 imgController1.setAttribute("src", "img/controller.png");
 divImgResponsive.appendChild(imgController1);
 const imgSlayer1 = document.createElement("img");
 imgSlayer1.setAttribute("class", "icons-responsivo");
+imgSlayer1.setAttribute("id", "slayer1");
 imgSlayer1.setAttribute("src", "img/slayer.png");
 divImgResponsive.appendChild(imgSlayer1);
 const imgTank1 = document.createElement("img");
 imgTank1.setAttribute("class", "icons-responsivo");
+imgTank1.setAttribute("id", "tank1");
 imgTank1.setAttribute("src", "img/tank.png");
 divImgResponsive.appendChild(imgTank1);
 const imgMarksman1 = document.createElement("img");
 imgMarksman1.setAttribute("class", "icons-responsivo");
+imgMarksman1.setAttribute("id", "marksman1");
 imgMarksman1.setAttribute("src", "img/marksman.png");
 divImgResponsive.appendChild(imgMarksman1);
 const imgMage1 = document.createElement("img");
 imgMage1.setAttribute("class", "icons-responsivo");
+imgMage1.setAttribute("id", "mage1");
 imgMage1.setAttribute("src", "img/mage.png");
 divImgResponsive.appendChild(imgMage1);
 const imgFighter1 = document.createElement("img");
 imgFighter1.setAttribute("class", "icons-responsivo");
+imgFighter1.setAttribute("id", "fighter1");
 imgFighter1.setAttribute("src", "img/fighter.png");
 divImgResponsive.appendChild(imgFighter1)
 
