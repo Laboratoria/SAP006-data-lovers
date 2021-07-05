@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(17, 41, 63);
+}
+
+@font-face {
+    font-family: "RickM";
+    src: url("../get-schwifty/get_schwifty.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.links {
+    display: grid;
+    position: relative;
+    top: 30px;   
+    
+}
+
+.sobre-serie{
+    font-family: 'Amatic SC', cursive;
+    font-size: 20pt;
+    text-decoration: none;
+    color: #88D962;
+    margin-left: 20px;
+}
+
+.text-inicial{
+    text-align: center;
+    font-family: "RickM", Times, serif; ;
+    font-size: 30pt;
+    color: #88D962;
+}
+
+.seta{
+    padding-top: 40px;
+    margin: auto;
+}
+
+
+.paginaInicial{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    max-height: 700px;
+    width: auto;
+    height: auto;
+}

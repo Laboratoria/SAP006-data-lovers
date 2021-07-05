@@ -1,11 +1,12 @@
 
 import data from './data/rickandmorty/rickandmorty.js';
 
+// Filtros
 export const getStatus = (statusSelected) => {
-  
+
   let getJson = data.results;
   getJson = getJson.filter(character => character.status === statusSelected);
-  return getJson; 
+  return getJson;
 }
 
 export const getSpecies = (specieSelected) => {
@@ -16,16 +17,18 @@ export const getSpecies = (specieSelected) => {
 
 }
 
-export const getOrder= () =>{
+// Ordenação
+
+export const getOrder = () => {
 
   let showOrder = data.results
-  showOrder = showOrder.sort(function(a,z){
-    if(a.name < z.name) {
+  showOrder = showOrder.sort(function (a, z) {
+    if (a.name < z.name) {
       return -1;
     }
-    if(a.name > z.name) {
+    if (a.name > z.name) {
       return 1;
-    }return 0;
+    } return 0;
   })
   return showOrder
 }
@@ -33,13 +36,36 @@ export const getOrder= () =>{
 export const getDisorder = () => {
 
   let showDisorder = data.results
-  showDisorder = showDisorder.sort(function(a,z){
-    if(a.name < z.name) {
+  showDisorder = showDisorder.sort(function (a, z) {
+    if (a.name < z.name) {
       return 1;
     }
-    if(a.name > z.name) {
+    if (a.name > z.name) {
       return -1;
-    }return 0;
+    } return 0;
   })
-  return showDisorder
+  return showDisorder;
 }
+
+// Cálculo agregado
+
+export const calcule = {
+  character: (data) => {
+     data.results.filter(results => id !== "").lenght
+  },
+
+  status: (data, pushStatus) => {
+    let total = [];
+    let averageStatus = [];
+
+    for (let status of data.results){
+      if (status.status == pushStatus)
+      total.push(status.status)
+      average = ((total.lenght / data.results.lenght) * 100).toFixed(2)
+    }
+    return averageStatus;
+  }
+}
+
+
+
