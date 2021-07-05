@@ -1,17 +1,17 @@
-@font-face{
-font-family: 'Ghibli';
-src: url('./fonts/Ghibli.otf') format(otf),
-url('./fonts/Ghibli_Bold.otf') format(otf);
+      
+*{
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+font-family: 'Vollkorn', serif;
 }
-        
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Ghibli';}
     
     
 body{
 font-size: 12px;
 background-color: #38527B;
-animation: banner 40s infinite;
-animation-direction: alternate;
+/* animation: banner 40s infinite;
+animation-direction: alternate; */
 }
 
 .menu{
@@ -19,14 +19,19 @@ list-style: none;
 float: left;
 background-color: #38527B;
 width: 100%;
+height: 12px;
 position: fixed;
-overflow: hidden;
+font-weight: bolder;
+z-index: 9900;
+font-size: 13px;
+/* overflow: hidden; */
 }
 
 .menu li{
 position: relative;
 float: left;
-margin-right: 50px;
+margin: 0;
+
 }
 
 .menu li a{
@@ -42,21 +47,84 @@ float: left;
 background: #008891;
 color: #E7E7DE;
 font-weight: bolder;
+border: transparent;
 text-shadow: 0px 0px 5px #fff;
 }
 
-.container{
+
+.menu li ul{
+position:absolute;
+top:25px;
+left:0;
+background-color:#38527B;
+display:none;
+z-index: 9900;
+}
+
+.menu li:hover ul, .menu li.over ul{
+display:block;
+z-index: 9900;
+}
+        
+.menu li ul li{
+border:1px solid #fff;
+display:block;
+width:150px;
+z-index: 9900;
+} 
+
+
+.cardsContainer{    
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-evenly;
-padding: 0px 50px 12px; 
+justify-content: center;
+align-items: center;
+padding: 5% 1%; 
 }
 
-.cartaoFilme{
-position: relatuve;
-width: 280px;
-height: 400px;
-margin: 30px;
-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+.filmCard{
+/* position: relative; */
+width: 290px;
+height: 410px;
+margin: 20px;
+box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
+perspective: 1000px;
+border-radius: 10px;
+}
+
+.flipper{
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: transform 0.8s;
+position: relative;
+border-radius: 10px;
+}
+
+.filmCard:hover .flipper{
+transform: rotateY(180deg);
+}
+
+.frontCard, .backCard{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 10px;
+}
+
+.backCard{
+transform: rotateY(180deg);
+padding: 10%;
+background-color: #213b64;
+border-radius: 10px;
+color: white
+}
+
+.filmPoster{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+text-align: justify;
 }

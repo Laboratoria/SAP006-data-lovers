@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Studio Ghibli</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cards.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +16,14 @@
   </head>
 
   <body>
-    <script src="main.js" type="module"></script>
+    <script src="menu-characters.js" type="module"> 
+    </script>
 
     <header>
       <nav>
         <ul class="menu">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./menu-films.html"id="animation" >Filmes</a></li>
+          <li><a href="./menu-films.html"id="animation" >Filmes</a>
             <ul>
               <li><a href="#">Ordenar: A - Z</a></li>
               <li><a href="#">Ordenar: Z - A</a></li>
@@ -31,13 +32,17 @@
             <ul>
               <li><a href="#">Ordenar: A - Z</a></li>
               <li><a href="#">Ordenar: Z - A</a></li>
-              <li><a href="#">Design</a></li>
             </ul>
           <li><a href="#">Diretores</a></li>
           <li><a href="#">Sobre</a></li>
         </ul>
       </nav>
     </header>
+
+    <main>
+      <section class="cardsContainer" id="boxCharacaterCards"> </section>
+      <!-- <div class="card"> -->
+    </main>
 
   </body>
 

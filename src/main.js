@@ -8,19 +8,50 @@ console.log(showFilms(data.films))
 
 const printCardsFilms = (listaFilmes) => {
     listaFilmes.forEach(film => {
-        const cardElements = document.getElementById("card");
-        cardElements.innerHTML += `<div class="cartaoFilme">
-            <h2 class="title"> ${film.title} </h2>
-            <img class="poster" src= ${film.poster}>
-            </div>`
+        const filmCardsElements = document.getElementById("boxFilmCards");
+        filmCardsElements.innerHTML += `
+        <div class="filmCard">
+            <div class="flipper">
+                <div class="frontCard"> 
+                    <img class="filmPoster" src= ${film.poster}>
+                </div>
+                <div class="backCard">
+                    <h3 class="filmTitle"> ${film.title}</h3> 
+                    <br>
+                    <p> <b>Diretor:</b> ${film.director} </p>
+                    <p> <b>Produtor:</b> ${film.producer} </p>
+                    <p> <b>Ano de Lançamento:</b> ${film.release_date} </p>
+                    <p><b> Sinopse</b>: ${film.description} </p>                
+                </div>
+            </div>
+        </div>`
     })
 }
 
-    const botaoFilmes = document.getElementById("animation")
-
-    botaoFilmes.addEventListener("click", () => {
-        const listaFilmes = showFilms(data.ghibli)
-        printCardsFilms(listaFilmes)
+const printCardsCharacters = (characterList) => {
+    characterList.forEach(character => {
+        const characterCardsElements = document.getElementById("boxCharacaterCards");
+        characterCardsElements.innerHTML += `
+        <div class="filmCard">
+            <div class="flipper">
+                <div class="frontCard"> 
+                    <img class="peopleImg" src= ${character.img}>
+                </div>
+                <div class="backCard">
+                    <h2 class="peopleName"> ${character.name}</h2> 
+                </div>
+            </div>
+        </div>`
     })
+}
+
+
+// const botaoFilmes = document.getElementById("animation")
+
+// botaoFilmes.addEventListener("click", () => {
+//     const listaFilmes =  showFilms(data.ghibli)
+//     printCardsFilms(listaFilmes)
+// })
 
 printCardsFilms(data.films)
+printCardsCharacters(data.people)
