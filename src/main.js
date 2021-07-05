@@ -108,7 +108,7 @@ const displayPokesGeneration = (pokemonData) => {
          <img class="pictures" src=" ${elem.img}"></img>
        </div>
 
-       <div class="name-geracao">>${elem.generation.num}'
+       <div class="name-geracao">${elem.generation.num}
 
 
        </div> 
