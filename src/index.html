@@ -8,66 +8,77 @@
   <body>
     <header>
       <div class="logo">
-        <img src="./assets/img.poke/logo3.png" alt="" />
+        <img src="./assets/img.poke/logo.png" alt="" />
       </div>
       <div class="cabeçalho"></div>
     </header>
 
     <nav class="menunavegação">
       <li>
-        <a>Home</a>
+        <a class="home"> Home</a>
       </li>
 
       <li>
-        <a>Pokémons</a>
+        <a class="pokemons"> Pokémons</a>
       </li>
 
       <li>
-        <a>Dicas</a>
+        <a class="dicas"> Dicas</a>
       </li>
     </nav>
     <div class="column">
-      <!-- <img src="./assets/img.poke/pngegg.png" />-->
+      <!--<img src="./assets/img.poke/pngegg.png" />-->
     </div>
 
     <main>
-      <!--
-      <select name="select" id="type" class="filtroTipos">
-        <option value="filtrar" selected>Tipos</option>
-        <option value="grass">Planta</option>
-        <option value="fire">Fogo</option>
-        <option value="water">Água</option>
-        <option value="poison">Venenoso</option>
-        <option value="bug">Inseto</option>
-        <option value="eletric">Elétrico</option>
-        <option value="ground">Terra</option>
-        <option value="fighting">Lutador</option>
-        <option value="psychic">Psíquico</option>
-        <option value="normal">Normal</option>
-        <option value="rock">Pedra</option>
-        <option value="flying">Voador</option>
-        <option value="ghost">Fantasma</option>
-        <option value="ice">Gelo</option>
-        <option value="dragon">Dragão</option>
-        <option value="steel">Metálico</option>
-        <option value="dark">Noturno</option>
-        <option value="fairy">Fada</option>
-      </select>-->
+      <section>
+        <!-- filtro de seleção de tipos -->
+        <select name="select" id="type" class="filtroTipos">
+          <option value="filtrar" selected>Tipos</option>
+          <option value="grass">Planta</option>
+          <option value="fire">Fogo</option>
+          <option value="water">Água</option>
+          <option value="poison">Venenoso</option>
+          <option value="bug">Inseto</option>
+          <option value="eletric">Elétrico</option>
+          <option value="ground">Terra</option>
+          <option value="fighting">Lutador</option>
+          <option value="psychic">Psíquico</option>
+          <option value="normal">Normal</option>
+          <option value="rock">Pedra</option>
+          <option value="flying">Voador</option>
+          <option value="ghost">Fantasma</option>
+          <option value="ice">Gelo</option>
+          <option value="dragon">Dragão</option>
+          <option value="steel">Metálico</option>
+          <option value="dark">Noturno</option>
+          <option value="fairy">Fada</option>
+        </select>
 
-      <input
-        type="pokemonsearch"
-        name="pokemonsearch"
-        id="pokemonsearch"
-        placeholder="Digite o nome do Pokémon"
-      />
-      <input
-        type="button"
-        id="btnFiltrar"
-        type="submit"
-        value="Filtrar"
-        class="botaoFiltrar"
-      />
-      <div class="content" id="cards"></div>
+        <!-- Pesquisa de Pokémon por nome -->
+        <input
+          type="pokemonsearch"
+          name="pokemonsearch"
+          id="pokemonsearch"
+          class="pokemonsearch"
+          placeholder="Digite o nome do Pokémon"
+        />
+
+        <input
+          type="button"
+          id="btnFiltrar"
+          type="submit"
+          value="Filtrar"
+          class="botaoFiltrar"
+        />
+      </section>
+      <br />
+      <br />
+      <nav>
+        <div class="container-pokedex">
+          <ul class="pokedex" id="cards"></ul>
+        </div>
+      </nav>
     </main>
 
     <!-- <footer>&copy Giuliana e Liziane</footer> -->
