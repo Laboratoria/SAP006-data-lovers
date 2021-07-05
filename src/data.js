@@ -1,20 +1,18 @@
-// Função de filtro com base no genero, especie, status, ordem - utilizando filter()
-
-//FUNÇÃO DE FILTRAGEM GÊNERO
-export const  filtroGenero = (data, condition) => {
-  const resultadoGenero = data.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
+//FUNÇÃO DE FILTRAGEM GÊNERO - filter()
+export const  filtroGenero = (dataBase, condition) => {
+  const resultadoGenero = dataBase.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
   return resultadoGenero;
 };
 
-//FUNÇÃO DE FILTRAGEM ESPÉCIE
-export const  filtroEspecie = (data, condition) => {
-  const resultadoEspecie = data.filter((personagem) => personagem.species.toLowerCase() === condition.toLowerCase());
+//FUNÇÃO DE FILTRAGEM ESPÉCIE - filter()
+export const  filtroEspecie = (dataBase, condition) => {
+  const resultadoEspecie = dataBase.filter((personagem) => personagem.species.toLowerCase() === condition.toLowerCase());
   return resultadoEspecie;
 };
 
-//FUNÇÃO DE FILTRAGEM STATUS
-export const  filtroStatus = (data, condition) => {
-  const resultadoStatus = data.filter((personagem) => personagem.status.toLowerCase() === condition.toLowerCase());
+//FUNÇÃO DE FILTRAGEM STATUS - filter()
+export const  filtroStatus = (dataBase, condition) => {
+  const resultadoStatus = dataBase.filter((personagem) => personagem.status.toLowerCase() === condition.toLowerCase());
   return resultadoStatus;
 };
 
@@ -27,19 +25,21 @@ export const ordemAlfabetica = (data, order) => {
   } return data
 };
 
-export const calculoDePorcentagem = (total, portion) => {
+// Função de busca por nome - filter()
+export const  buscarNome = (data, condition) => {
+  const resultadoLocalizacao = data.filter((personagem) => personagem.name.toLowerCase().includes(condition.toLowerCase()))
+  return resultadoLocalizacao;
+};
+
+//Calculo de porcentagem por categoria 
+export const calcularPorcentagem = (total, portion) => {
   const porcentagem = Math.round((portion * 100) / total);
   return porcentagem;
- }; 
+}; 
 
 
 
 
-
-//--------------------------------------------------------------------------------------------------------------------------------
-//(data.length / database.length) * 100 - calculo de % de um grupo de elementos
-//hora de exibir na tela, colocar a %
-//quantidade de personagem que vai filtrar / por quantidade total de personagens do filtro = % da quantidade *100
 
 //--------------------------------------------------------------------------------------------------------------------------------
 /*O coração deste projeto é a manipulação de dados através de arrays e objetos.
