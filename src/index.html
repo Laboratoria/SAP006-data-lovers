@@ -11,22 +11,39 @@
   <container id="telaPrincipal">
   
     <div class="line">
-      <div class="icone_pokemon">
-        
-        <img src="./data/assets/logo.png" alt="">
+      <div class="perfil">
+        <img id="perfil" src=https://8bitocrafts.files.wordpress.com/2013/03/pokemon-red-sprite2.jpg>
+      </div>
+      
         <ul>
           <li class="info_icon"><i data-feather="info"></i>
           
         </li>
         </ul>
-      </div>
+      
       <div class="seletores">
- 
-        <button class="seletor" type="submit" id="maxcp">Ordenar por Numero</button>
+        <select class="seletor" id="tipoPokemon">
+          <option value="fire">fire</option>
+          <option value="water">water</option>
+          <option value="normal">normal</option>
+          <option value="grass">grass</option>
+          <option value="ground">ground</option>
+          <option value="dragon">dragon</option>
+          <option value="dark">dark</option>
+          <option value="steel">steel</option>
+          <option value="flying">flying</option>
+          <option value="electric">electric</option>
+          <option value="ice">ice</option>
+          <option value="rock">rock</option>
+          <option value="poison">poison</option>
+          <option value="bug">bug</option>
+        </select>
+        <button class="seletor" type="submit" id="num">Ordem numérica</button>
         
-        <button class="seletor" type="submit" id="name">Ordenar por Nome</button>
+        <button class="seletor" type="submit" id="name">Ordem alfabética</button>
        
-       
+        <button class="seletor" type="submit" id="maxcp">Ordenar pelo CP</button>
+        
       
       </div>
     </div>
@@ -64,12 +81,10 @@
 
   
 </container>
-
 <div id="cards-sem-carosel">
 
 
 </div>
-
 
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
