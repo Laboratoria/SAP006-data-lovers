@@ -11,23 +11,20 @@ function listingCards(itens) {
 
   for (let champion in itens) {
     const info = dataLol[champion];
-
-    let imageCard = document.createElement("img");
-    imageCard.src = info.splash;
-
-    let textCard = document.createElement("h3"); // textCard.class = "t"
-    textCard.textContent = `${champion}`;
-
+    
     const card = document.createElement("li");
-    card.appendChild(imageCard);
-    card.appendChild(textCard);
-    cardPack.appendChild(card);
+    card.innerHTML = `
+      <img src="${info.splash}" alt="Imagem do Campeão"/>
+      <h3>${info.id}</h3>
+       `       
+   cardPack.appendChild(card); 
 
-    // POP-UP //
+      // POP-UP //
     const popup = document.querySelector(".popup-wrapper");
     // CONTEUDO DO POP-UP //
     const popUpContent = document.querySelector(".popup-content");
     // const splash = info.splash;
+    
 
     card.addEventListener("click", () => {
       popup.style.display = "block";
@@ -41,14 +38,14 @@ function listingCards(itens) {
         <h3 class="champion-title">${info.title}</h3>
         <div class="champion-data">
           <div class="champion-info">
-            <p>Ataque: ${info.info.attack}
+            <p>Ataque: ${info.info.attack} | 
 
-            Defesa: ${info.info.defense}
+            Defesa: ${info.info.defense} | 
 
-            Magia: ${info.info.magic}
+            Magia: ${info.info.magic} | 
 
             Dificuldade: ${info.info.difficulty}
-
+            
             </p>
           </div>
       
@@ -63,8 +60,7 @@ function listingCards(itens) {
       const classNameOfClickedElement = event.target.classList[0];
       const classNames = ["popup-close", "popup-wrapper"];
       const shoudlClosePopUp = classNames.some(
-        (classNames) => classNames === classNameOfClickedElement
-      );
+        (classNames) => classNames === classNameOfClickedElement);
       if (shoudlClosePopUp) {
         popup.style.display = "none";
       }
