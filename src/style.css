@@ -15,33 +15,76 @@ body {
   color: #ffffff;
   font-weight: 500;
   position: absolute;
-  display: flex;
 }
-
-/** Acrescentei position absolute e display flex (pra alinhar e diminuir o tamanho), z index = 0 **/
-
-.header-img {
-  position: absolute;
+.popup-wrapper{
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 0;
-  margin-left: auto;
+  height: 100%;
+  display: none;
 }
-
-.container {
-  background-color: rgba(23, 24, 32, 0.8);
-  margin: auto;
+.popup{
+  text-align: center;
+  width: 60%;
+  min-width: 300px;
+  margin: 10% auto;
+  height: 100vh;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+.popup-wrapper{
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.popup{
+  text-align: center;
+  width: 60%;
+  min-width: 300px;
+  margin: 10% auto;
+  padding: 20px;
+  background: #171820;
+  position: relative;
+  color: #FFF;
+}
+.popup-close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
   padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 70%;
-  /* min-width: 300px;
-  min-height: 300px; */
-  border-radius: 5px;
-  justify-content: center;
-  margin-top: 250px;
+  background-color: #FFC700;
+  color: #171820;
+  font-weight: 700;
+  border-radius: 50%;
+}
+.header-img{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
+    margin-left: auto;
+}
+.container{
+    background-color: rgba(23, 24, 32, 0.8);
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    max-width: 70%;
+    min-height: 300px;
+    border-radius: 5px;
+    justify-content: center;
+    margin-top: 250px;
 }
 
 .container h1 {
@@ -50,24 +93,24 @@ body {
   margin-bottom: 3rem;
 }
 
-/*********** PARTE DO CARD NA TELA *********/
-
-.cards {
-  display: flex;
-  align-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 40px;
-  margin-left: auto;
-  list-style: none;
+/*** PARTE DOS CARDS ***/
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px; 
+    margin-left: auto;
+    list-style: none;
 }
 
 .cards li {
-  /* display: inline-block; */
+ /* flex: 0 0 18%;*/
+  display: inline-block;
   position: relative;
   overflow: hidden;
-  width: 280px;
-  height: 360px;
-  margin: 10px 5px;
+  width: 240px;
+  height: 320px;
+  margin: 15px;
   background: #232323;
   border-radius: 10px;
   box-shadow: 5px 5px rgba(13, 14, 13, 0.445);
@@ -101,6 +144,14 @@ body {
     flex-direction: column;
     
   } */
+.cards img{ 
+    transform: translateX(-230px);
+    width: 490px;
+    height: 320px;
+    position: absolute;
+    overflow: hidden;
+    object-fit: cover;
+}   
 
   .cards img{
     transform: translateX(-200px);
@@ -130,6 +181,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   z-index: 0;
+  position: relative;
 }
 
 /********** PARTE DA BUSCA **********/
@@ -156,8 +208,8 @@ body {
   color: #ffffff;
   display: block;
   text-decoration: none;
-  margin-left: 20px;
-  padding: auto;
+  margin-left: 10px; 
+  padding: 10px 10px 15px 10px;
 }
 
 .nav li a:hover {
@@ -170,9 +222,13 @@ body {
 
 .categorias {
   display: flex;
-  justify-content: space-between;
-  margin-right: auto;
-  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  
 }
 /********** PARTE DO DROPDOWN DE DIFICULDADE **********/
 
