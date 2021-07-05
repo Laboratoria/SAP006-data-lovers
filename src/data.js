@@ -1,6 +1,11 @@
-export const allFilters = (data) => {
-    const resultadoAZ = data.sort((a, z) => a.name > z.name ? 1 : -1)
-    return resultadoAZ;
-  };
+export const orderAZ = (data) => {
+  const resultsAZ = data.sort((a, z) => a.name < z.name ? 1 : -1)
+  return resultsAZ;
+};
+export const orderZA = (data) => {
+  const resultsZA = data.sort((a, z) => a.name > z.name ? 1 : -1)
+  return resultsZA
+};
 
-export default allFilters
+export default orderAZ
+export default orderZA
