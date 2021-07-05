@@ -11,11 +11,21 @@ function showingCards(itens) {
     for (const film of itens) {
         const title = film.title;
         const poster = film.poster;
+        const backDirector = film.director;
+        const backYear = film.release_date;
+        const backRt = film.rt_score;
         const elementTitle = `
     <div id="divCard" class="film">
-        <div>
+        <div class="innerCard">
+        <div class="frontCard">
             <img src="${poster}"/>
             <p class="title">${title}</p>
+        </div>
+        <div class="backCard">
+            <p class="backText">Release Year: ${backYear}</p>
+            <p class="backText">Director: ${backDirector}</p>
+            <p class="backText">Rating Score: ${backRt}</p>
+        </div>
         </div>
     </div>`;
         // console.log(elementTitle);
