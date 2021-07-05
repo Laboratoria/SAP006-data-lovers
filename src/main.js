@@ -6,9 +6,8 @@ const elements = data.data;
 let objects = Object.values(elements);
 
 const index = document.getElementById("index");
+const header = document.querySelector("header")
 
-const header = document.createElement("header");
-index.appendChild(header);
 const nav = document.createElement("nav");
 header.appendChild(nav);
 const ul = document.createElement("ul");
@@ -27,15 +26,34 @@ a.appendChild(imgLogo);
 const menu = document.createElement("section");
 menu.setAttribute("id", "menu");
 index.appendChild(menu);
+const divMenu = document.createElement("div");
+divMenu.setAttribute("id", "div-menu");
+menu.appendChild(divMenu)
+const divGo = document.createElement("div");
+divGo.setAttribute("id", "div-go");
+divMenu.appendChild(divGo)
+const pMenu = document.createElement("p");
+pMenu.setAttribute("id", "p-menu");
+pMenu.innerHTML = `BUSQUE<br> POR UM CAMPEÃO`
+divGo.appendChild(pMenu)
+const buttonMenu = document.createElement("button");
+buttonMenu.setAttribute("id", "button-menu");
+buttonMenu.innerHTML = `<a href="#root" id="a-menu">CAMPEÕES</a>`
+divGo.appendChild(buttonMenu);
+const divImgMenu = document.createElement("div");
+divImgMenu.setAttribute("id", "div-img-menu");
+divGo.appendChild(divImgMenu)
+const imgMenu = document.createElement("img");
+imgMenu.setAttribute("id", "menu-img-character")
+imgMenu.setAttribute("src", "img/character.png")
+divImgMenu.appendChild(imgMenu)
 
 const filters = document.createElement("section");
 filters.setAttribute("id", "filters");
 index.appendChild(filters);
-
 const divFilters = document.createElement("div");
 divFilters.setAttribute("id", "div-filters");
 filters.appendChild(divFilters);
-
 const imgSearch = document.createElement("img");
 imgSearch.setAttribute("src", "img/search.png");
 imgSearch.setAttribute("id", "img-search");

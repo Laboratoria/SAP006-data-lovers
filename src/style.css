@@ -29,12 +29,78 @@ nav ul li{
 #index{
     background-image: url(img/background1.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
 }
-#menu{
+#div-menu{
     background-image: url(img/background.jpg);
     background-size: 100%;
-    height: 500px;
     background-repeat: no-repeat;
+    height: 550px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+#div-go{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 60px 0px;
+    height: 60%;
+    width: 30%;
+    padding: 60px;
+    background-color: rgba(0, 0, 0, 0.671);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50% );
+}
+#p-menu{
+    align-items: center;
+    text-align: center;
+    font-family: "Friz Quadrata";
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0px 0px 30px 30px;
+    color: #f7f7f7fd;
+    font-style: italic;
+    z-index: 1;
+    transition: 1s;
+}
+#button-menu{
+    margin: 0px 30px 0px 30px;
+    font-family: Nova Flat;
+    font-weight: unset;
+    cursor: pointer;
+    padding: 5px;
+    background-image: url(img/background.jpg);
+    text-shadow: 0 0 3px #fafafab4;
+    box-shadow: 0 0 8px 0 #000000fd;
+    border: 1px solid white;
+    z-index: 1;
+    transition: 1s;
+}
+#button-menu:hover{
+    text-shadow: 0 0 5px #8d8d8d4d;
+    background: #1e2328 linear-gradient(to bottom, #1e2328, #433d2b);
+    box-shadow: inset 0 0 2px #000000;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
+    transition: 1s;
+}
+#a-menu{
+    font-size: 20px;
+    color: #d6d6d6fd;
+    text-decoration: none;
+}
+#a-menu:hover{
+    color: #c8aa6d;
+}
+#div-img-menu{
+    position: absolute;
+}
+#menu-img-character{
+    width: 100%;
+    z-index: 0;
 }
 #div-filters{
     margin: 50px 0px 0px 0px;
@@ -162,7 +228,7 @@ nav ul li{
     border: 1px solid #8d7a41;
 }
 .order{
-    padding: 3px 0px 3px 5px;
+    padding: 3px;
     cursor: pointer;
     background: #1e2328;
     width: 70%;
@@ -219,6 +285,7 @@ button{
     height: 305px;
     cursor: pointer;
     perspective: 6000px;    
+    transition: 1s;
 }
 .cards:hover{
     transition: 0.8s;

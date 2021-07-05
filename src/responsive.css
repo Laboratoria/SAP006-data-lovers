@@ -1,4 +1,4 @@
-@media (max-width: 1000px){
+@media (min-width: 300px) and (max-width: 1200px) {
 header{
     width: 100%;
     height: 8%;
@@ -11,17 +11,36 @@ header{
     padding: 10px 0px;
     width: 30%;
 }
-#menu{
+#div-menu{
     background-image: url(img/background.jpg);
-    background-size: 250%;
+    background-size: 350%;
     background-position: center;
     height: 1400px;
     background-repeat: no-repeat;
+}
+#div-go{
+    margin: 300px 0px;
+    height: 80vw;
+    width: 85%;
+    justify-content: center;
+    padding: 60px;
+}
+#p-menu{
+    font-size: 65px;
+    margin: 0px 30px 0px 140px;
+}
+#button-menu{
+    margin: 0px 110px 0px 0px;
+    padding: 15px;
+}
+#a-menu{
+    font-size: 45px;
 }
 #div-filters{
     display: flex;
     flex-direction: row;
     padding: 0px 50px 0px 0px;
+    margin: 0px;
     height: 150px;
 }
 #img-search{
@@ -42,7 +61,7 @@ header{
 }
 #difficulties{
     font-size: 24px;
-    padding: 5px 5px;
+    padding: 5px;
     width: 130%;
     height: 100%;
     margin: 0px 0px 0px 20px;
@@ -71,13 +90,13 @@ header{
 }
 .order{
     margin: 0px 50px;
-    padding: 3px 0px 3px 5px;
+    padding: 2px;
     width: 90%;
     font-size: 20px;
 }
 .orders{
     margin: 0px 50px;
-    width: 90%;
+    width: 92%;
     padding: 3px;
     font-size: 20px;
 }
@@ -85,10 +104,19 @@ header{
     margin: 30px 50px;
     width: 6.9%;
 }
+#div-img-responsive{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #16171a;
+}
 .icons-responsivo{
     display: flex;
-    width: 100%;
-    margin: 50px;
+    width: 10%;
+    padding: 10px;
 }
 .container{
     padding: 70px 0px 0px 0px;
@@ -135,19 +163,6 @@ h4{
 #paginated{
     font-size: 40px;
     padding: 40px 0px 0px 0px;
-}
-#div-img-responsive{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: #16171a;
-    padding-bottom: 30px;
-}
-.icons-responsivo{
-    width: 8%;
-    margin: 0px 35px;
-    padding: 0px 7px;
-
 }
 footer{
     border-image:none;
