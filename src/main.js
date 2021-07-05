@@ -12,9 +12,11 @@ function showingCards(itens) {
         const title = film.title;
         const poster = film.poster;
         const elementTitle = `
-    <div class="film"></div>
-        <img src="${poster}" />
-        <p class="title">${title}</p>
+    <div id="divCard" class="film">
+        <div>
+            <img src="${poster}"/>
+            <p class="title">${title}</p>
+        </div>
     </div>`;
         // console.log(elementTitle);
         cards.innerHTML += elementTitle;
@@ -32,6 +34,24 @@ director.addEventListener("change", (event) => {
     //cards.innerHTML = "";
 });
 
+releaseDate.addEventListener("change", (event) => {
+    const selectedDate = event.target.value;
+    const filtered = filters(films, "release_date", selectedDate);
+    showingCards(filtered);
+
+    //console.log(selectedDirector);
+    //cards.innerHTML = "";
+});
+
+//REVER: (mesma lógica para os personagens)
+terrain.addEventListener("change", (event) => {
+    const selectedTerrain = event.target.value;
+    const filtered = filters(films, "locations(terrain)", selectedTerrain);
+    showingCards(filtered);
+
+    //console.log(selectedDirector);
+    //cards.innerHTML = "";
+});
 
 //
 /*
