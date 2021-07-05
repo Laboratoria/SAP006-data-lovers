@@ -1,7 +1,13 @@
 
+
+
+
+
+
+
 const filtrarPelaGeracao = (data, valor) => {
   const filtrarPokemonPelaGeracao = data.filter(
-    pokemon => pokemon.generation.num === valor,
+    pokemon => pokemon.generation.name === valor,
 
   );
 

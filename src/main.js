@@ -1,8 +1,8 @@
 import data from './data/pokemon/pokemon.js';
 
-import { 
-  filtrarPelaGeracao, 
-  ordenarPorNum, 
+import {
+  filtrarPelaGeracao,
+  ordenarPorNum,
   ordenarPorNome
   /*, sortData, filterType*/
 } from './data.js';
@@ -18,14 +18,14 @@ import {
 //console.log(ordenarPorNum);
 
 
- const pokemonList = data.pokemon.slice(0,4);
+const pokemonList = data.pokemon.slice(0, 4);
 
- const displayPokes = (pokemonData) => {
-   
- const pokeCard = document.getElementById('cards-sem-carosel');
- 
- pokemonData.forEach((elem) => {
-   pokeCard.innerHTML += `
+const displayPokes = (pokemonData) => {
+
+  const pokeCard = document.getElementById('cards-sem-carosel');
+
+  pokemonData.forEach((elem) => {
+    pokeCard.innerHTML += `
     
    
    <div id="card" class="card">
@@ -48,22 +48,18 @@ import {
      </div>
    </div>
 `;
- });
+  });
 
 
- };
- 
-
- displayPokes(pokemonList);
+};
 
 
-
+displayPokes(pokemonList);
 
 
 
 
 
- 
 let ordernarPorNumeros;
 const ordenar = document.getElementById("maxcp");
 ordenar.addEventListener('click', () => {
@@ -97,32 +93,35 @@ ordenarNomes.addEventListener('click', () => {
 
 
 
-const pokemonListGeneration = data.pokemon; 
-const displayPokesGeneration = (pokemonData) => { 
 
-  
-const pokeCardGeneration = document.getElementById('slider');
 
-pokemonData.forEach((elem) => {
- pokeCardGeneration.innerHTML += `
+const pokemonListGeneration = data.pokemon;
+const displayPokesGeneration = (pokemonData) => {
+
+
+  const pokeCardGeneration = document.getElementById('slider');
+
+  pokemonData.forEach((elem) => {
+    pokeCardGeneration.innerHTML += `
   
        <div>
          <img class="pictures" src=" ${elem.img}"></img>
        </div>
       
        
-       <div class="name-geracao">${elem.generation.num}
-
-
-       </div> 
+ 
     
      
        
 `;
-});
+  });
 
 
 };
+//      <div class="name-geracao">${elem.generation.num}
+
+
+//</div> 
 
 
 displayPokesGeneration(pokemonListGeneration);
@@ -134,6 +133,7 @@ ordenarGeracao.addEventListener('change', () => {
   const getpokes = document.getElementById('slider');
   getpokes.innerHTML = '';
   ordernarPorGeracao = ordenarGeracao.value;
+
 
   displayPokesGeneration(filtrarPelaGeracao(pokemonListGeneration, ordernarPorGeracao));
 
@@ -192,14 +192,14 @@ const sliderEl = document.getElementById('slider')
 
 
 function onNextClick() {
-  
-    const imgWidth = sliderEl.offsetWidth;
-    sliderEl.scrollLeft += imgWidth;
+
+  const imgWidth = sliderEl.offsetWidth;
+  sliderEl.scrollLeft += imgWidth;
 }
 
 function onPreviousClick() {
-    const imgWidth = sliderEl.offsetWidth;
-    sliderEl.scrollLeft -= imgWidth;
+  const imgWidth = sliderEl.offsetWidth;
+  sliderEl.scrollLeft -= imgWidth;
 }
 
 
