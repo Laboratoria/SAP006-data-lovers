@@ -1,11 +1,12 @@
 import data from './data/pokemon/pokemon.js';
 
 import { 
-  filtrarPelaGeração, 
+  filtrarPelaGeracao, 
   ordenarPorNum, 
   ordenarPorNome
   /*, sortData, filterType*/
 } from './data.js';
+
 
 
 //import pokemon from './data/pokemon/pokemon.js';
@@ -92,30 +93,31 @@ ordenarNomes.addEventListener('click', () => {
 
 
 
+
+
+
+
 const pokemonListGeneration = data.pokemon; 
 const displayPokesGeneration = (pokemonData) => { 
 
   
-const pokeCardGeneration = document.getElementById('carousel');
+const pokeCardGeneration = document.getElementById('slider');
 
 pokemonData.forEach((elem) => {
  pokeCardGeneration.innerHTML += `
   
-       <div class="backgroundImg">
+       <div>
          <img class="pictures" src=" ${elem.img}"></img>
        </div>
-       </div>
-       <div class="infCardAbout">${elem.generation.num}
-       <div class="name" id="names">${elem.generation.name}
+      
        
-       </div> 
+       <div class="name-geracao">${elem.generation.num}
+
 
        </div> 
     
      
-       </div>
-    </div>
-  </div>
+       
 `;
 });
 
@@ -127,17 +129,15 @@ displayPokesGeneration(pokemonListGeneration);
 
 
 let ordernarPorGeracao;
-const ordenarGeracao = document.getElementById("ordem_geracao");
+const ordenarGeracao = document.getElementById('ordemGeracao');
 ordenarGeracao.addEventListener('change', () => {
-  const getpokess = document.getElementById('carousel');
-  getpokess.innerHTML = '';
+  const getpokes = document.getElementById('slider');
+  getpokes.innerHTML = '';
   ordernarPorGeracao = ordenarGeracao.value;
 
-  displayPokesGeneration(filtrarPelaGeração(pokemonListGeneration, ordernarPorGeracao));
+  displayPokesGeneration(filtrarPelaGeracao(pokemonListGeneration, ordernarPorGeracao));
 
 });
-
-
 
 
 
@@ -183,138 +183,25 @@ getJson()
 */
 
 
-/*
-class MeuCarousel {
-  constructor(config) {
-    this.config = config;
-    this.init();
-  }
-  init() {
 
-
-    const carousel = document.querySelector("[data-target='" + this.config.selector + "']");
-    const card = carousel.querySelector("[data-target='card']");
-    const leftButton = document.querySelector("[data-action='slideLeft']");
-    const rightButton = document.querySelector("[data-action='slideRight']");
-    let interval = '';
-    let activePage = 1;
-    let timeToNext = this.config.timePerPage;
-    let stopSlide = false;
-
-
-    const carouselWidth = carousel.offsetWidth;
-    const cardStyle = card.currentStyle || window.getComputedStyle(card)
-    const cardMarginRight = this.config.spaceBetween;
-
-    const cardSize = this.config.slidesPerView > 1 ? (carouselWidth / this.config.slidesPerView) - cardMarginRight : (carouselWidth / this.config.slidesPerView);
-    const allItens = carousel.querySelectorAll("[data-target='card']");
-    allItens.forEach((item) => {
-      item.style.width = `${card}px`;
-
-
-      if (this.config.slidesPerView > 1) {
-        item.style.marginRight = `${cardMarginRight/2}px`;
-        item.style.marginLeft = `${cardMarginRight/2}px`
-      }
-
-
-    })
-
-    const cardCount = carousel.querySelectorAll("[data-target='card']").length;
-    const totalPage = Math.ceil(cardCount / this.config.slidesPerView);
-
-    let offset = 0;
-    const maxX = -((cardCount / totalPage) * carouselWidth +
-      (cardMarginRight * (cardCount / totalPage)) -
-      carouselWidth - cardMarginRight);
-
-    let prev = () => {
-      if (offset !== 0 && offset !== 20 && activePage > 1 && stopSlide == false) {
-        activePage -= 1;
-        offset += (carouselWidth + cardMarginRight) - 20;
-        carousel.removeAttribute('style');
-        carousel.style.transform = `translateX(${offset}px)`;
-      }
-    }
-
-    let next = () => {
-      if ((offset !== maxX && activePage < totalPage && stopSlide == false)) {
-        activePage += 1;
-        offset -= (carouselWidth + cardMarginRight) - 20;
-        carousel.style.transition = 'all 1s ease';
-        carousel.style.transform = `translateX(${offset}px)`;
-
-
-      } else if ((this.config.slidesPerView == 1 && activePage < totalPage && stopSlide == false)) {
-        activePage += 1;
-        offset -= carouselWidth;
-        carousel.style.transform = `translateX(${offset}px)`;
-      } else if (activePage == totalPage && stopSlide == false) {
-        clearInterval(interval);
-        timeToNext = (this.config.timePerPage / 2);
-        infinite();
-
-        carousel.querySelectorAll("[data-target='card']").forEach((item, index) => {
-
-          if (index < this.config.slidesPerView) {
-            carousel.append(item);
-          }
-
-
-        })
-        prev();
-
-
-
-      }
-    }
-
-    carousel.addEventListener("mouseout", () => {
-      stopSlide = false;
-    })
-
-
-
-    rightButton.addEventListener('click', () => {
-      activePage = true
-
-    })
-
-
-    leftButton.addEventListener('click', () => {
-      activePage = false
-
-    })
+const nextEl = document.getElementById('next');
+const previousEl = document.getElementById('previous');
+const sliderEl = document.getElementById('slider')
 
 
 
 
-
-    let infinite = () => {
-      if (this.config.loop) {
-        interval = setInterval(() => {
-          next();
-        }, timeToNext);
-      }
-
-    }
-
-    infinite();
-
-
-  }
+function onNextClick() {
+  
+    const imgWidth = sliderEl.offsetWidth;
+    sliderEl.scrollLeft += imgWidth;
 }
 
-let teste = new MeuCarousel({
-  selector: 'carousel',
-  slidesPerView: 4,
-  spaceBetween: 20,
-  //loop: true,
-  timePerPage: 2000,
-  stopOnMouseHover: true
-})
-
-*/
+function onPreviousClick() {
+    const imgWidth = sliderEl.offsetWidth;
+    sliderEl.scrollLeft -= imgWidth;
+}
 
 
-
+nextEl.addEventListener('click', onNextClick);
+previousEl.addEventListener('click', onPreviousClick);

@@ -1,50 +1,41 @@
-//import pokemon from "./data/pokemon/pokemon"
-//import data from './data/pokemon/pokemon.js';
 
-
-
-
-
-
-const filtrarPelaGeração = (data, valor) => {
+const filtrarPelaGeracao = (data, valor) => {
   const filtrarPokemonPelaGeracao = data.filter(
-    pokemon => pokemon.generation.name === valor,
+    pokemon => pokemon.generation.num === valor,
 
   );
+
   return filtrarPokemonPelaGeracao;
 };
+
 
 
 const ordenarPorNum = (data, valor) => {
   if (valor === '0-9') {
     //sort
 
-    data.sort((a,b) => {
+    data.sort((a, b) => {
       if (a.num > b.num) {
         return 1;
+      } else if (a.num < b.num) {
+        return -1;
+      } else if (a.num === b.num) {
+        return 0;
       }
-     else if (a.num < b.num){
-      return -1;
-    }
-    else if (a.num ===b.num){
-      return 0;
-    }
-  })
+    })
 
-} else {
-  data.sort((a, b) => {
-    if (a.num < b.num) {
-      return 1;
-    }
-  else if (a.num > b.num){
-    return -1;
+  } else {
+    data.sort((a, b) => {
+      if (a.num < b.num) {
+        return 1;
+      } else if (a.num > b.num) {
+        return -1;
 
+      } else if (a.num === b.num) {
+        return 0;
+      }
+    })
   }
-  else if (a.num === b.num){
-    return 0;
-  }
-})
-}
 };
 
 
@@ -54,7 +45,7 @@ const ordenarPorNome = (data, valor) => {
   } else {
     data.sort((a, b) => b.name.localeCompare(a.name));
   }
- 
+
 };
 
 
@@ -93,9 +84,9 @@ filterType(pokemonList, "fairy")*/
 
 
 export {
-  filtrarPelaGeração,
-   ordenarPorNum,
-   //sortData, 
-   //filterType
-   ordenarPorNome
+  filtrarPelaGeracao,
+  ordenarPorNum,
+  //sortData, 
+  //filterType
+  ordenarPorNome,
 };

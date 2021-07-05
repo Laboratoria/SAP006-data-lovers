@@ -55,28 +55,6 @@
   overflow: hidden;
 }
 
-.button-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin-top: -30px;
-}
-
-.carousel {
-  background-color: transparent;
-  display: flex;
-  left: -100%;
-  list-style: none;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  margin-top: 25px;
-  transform: translateX(100%);
-}
-
 .pictures {
   width: 100px;
   height: 100px;
@@ -93,6 +71,8 @@
     #fff 100%
   );
 }
+
+
 
 .card {
   --color1: rgb(0, 231, 255);
@@ -126,77 +106,6 @@
   text-align: right;
 }
 
-/*.img {
-  display: flex;
-  position: absolute;
-  margin-inline: auto;
-  background-color: rgb(230, 33, 33);
-  width: 240px;
-  height: 170px;
-  box-shadow: 3px 3px 10px #000;
-  border: 5px yellow outset;
-  margin-top: 20px;
-  margin-left: 8px;
-}*/
-
-/*.descricao {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 250px;
-  padding: 2px;
-  margin-inline: auto;
-  background: linear-gradient(to right, goldenrod, yellow, goldenrod);
-  font-size: 10px;
-  font-style: italic;
-  font-weight: 600;
-  text-align: center;
-  margin-top: 220px;
-}*/
-
-/*.infos {
-  margin-inline: auto;
-  margin-top: 5px;
-  width: 250px;
-  height: 90px;
-  border: 1px black solid;
-}
-
-h3 {
-  margin-left: 12px;
-  font-size: 10px;
-}
-
-.infos ul li {
-  font-size: 12px;
-  justify-content: space-between;
-  display: inline-block;
-  list-style: none;
-}
-
-.weaknesses {
-  margin-left: 120px;
-}
-
-.lateral {
-  display: flex;
-  display: flex;
-  width: 15px;
-
-  background-color: rgba(0, 0, 0, 0.3);
-}*/
-
-/*.card-container {
-  display: flex;
-}*/
-
-/*.backgroundImg {
-  width: 20px;
-  height: 20px;
-  background-image: linear-gradient(right to left, rgb(9, 9, 90), rgb(75, 75, 163));
-}*/
-
-
 #telaPrincipal {
   flex-direction: row;
   display: flex;
@@ -211,12 +120,21 @@ h3 {
   display: flex;
   position: absolute;
   margin-top: calc(50% - 20vh);
+  cursor: pointer;
 }
 
-ul {
+ul  {
   margin-inline: auto;
   list-style: none;
   padding: 20px;
+}
+
+.menu li a[href$="contatos.html"] {
+  max-width:60px;
+  max-height:25px;
+  width: auto;
+  height: auto;
+  content: url(https://icons.iconarchive.com/icons/icons8/ios7/128/Very-Basic-Info-icon.png);
 }
 
 .seletores {
@@ -248,6 +166,70 @@ ul {
   margin-left: 450px;
 }
 
-.picture {
-  background-color: #c52018;
+#ordemGeracao {
+  width: 50px;
+  height: 80px;
+}
+
+.container-carousel {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel-img {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 50px;
+  object-fit: cover;
+}
+
+#previous,
+#next {
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: calc(8% - 25px);
+  left: -10px;
+}
+
+#next {
+  left: unset;
+  right: 30px;
+}
+
+#ordemGeracao {
+  width: 100px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.name-geracao {
+  font-size: 15px;
+  display: flex;
+  background-color: #da7590;
+  margin-top: 102px;
+  width: 100px;
+  height: 40px;
+  margin-left: -80px;
+  padding-left: 10px;
+  border: #000000 solid 1px;
+  border-radius: 10px;
 }
