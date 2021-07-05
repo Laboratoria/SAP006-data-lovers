@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="style.css" />
+
+    
+  </head>
+
+  <body>
+
+    <header class="header">
+    
+      <figure class= "imagens">
+        <img class = "giphy-portal" src = "https://media.giphy.com/media/da0NgyClHpA4jqUoav/giphy.gif"> 
+        <img class = "nome"  src="https://www.freepnglogos.com/uploads/rick-and-morty-png/list-rick-and-morty-episodes-wikipedia-24.png">
+         
+
+      </figure> 
+         
+    </header>
+
+    <main>
+
+      <div class = "orientacao">
+        <form id="form" class="search-characters">
+          <input class= "input" type="text" id="characters" placeholder="Pesquise por personagem">
+          <button class= "button-search" id="button-search">Buscar personagem</button>
+        </form>
+      </div>
+        <section class="search-filters">
+
+          <div class = "remove">
+
+            <button id="ordenar" class="botao">Ordenar A-Z</button>
+            <button id="desordenar" class="botao">Ordenar Z-A</button>
+
+            <select id="status" name="status" class="botao">
+
+              <option class="botao" value="Status">Status</option>
+              <option class="botao" value="Alive">Alive</option>
+              <option class="botao" value="Dead">Dead</option>
+              <option class="botao" value="unknown">Unknown</option>
+
+            </select>
+
+          
+            <select id="especie" name="especie" class="botao">
+
+              <option class="botao" value="especieOption">Especie</option>
+              <option class="botao" value="Human">Human</option>
+              <option class="botao" value="Humanoid">Humanoid</option>
+              <option class="botao" value="Alien">Alien</option>
+              <option class="botao" value="Animal">animal</option>
+              <option class="botao" value="Poopybutthole">Poopybutthole</option>
+              <option class="botao" value="Mytholog">Mytholog</option>
+              <option class="botao" value="Vampire">Vampire</option>
+              <option class="botao" value="Robot">Robot</option>
+              <option class="botao" value="Cronenberg">Cronenberg</option>
+              <option class="botao" value="Disease">Disease</option>
+              <option class="botao" value="Parasite">Parasite</option>
+
+            </select>
+          </div>
+      
+        </section>
+      
+
+
+      <br><div id="get-cards"></div>
+
+    </main>
+
+    <footer>
+      <p>
+        @Bruna Calixto e Carmen Gozza- 2021
+      </p>
+    </footer>
+
+    <script src="main.js" type="module"></script>
+    <script src="./data.js" type="module"></script>
+
+  </body>
+
+</html>

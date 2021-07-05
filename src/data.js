@@ -1,8 +1,7 @@
-
 import data from './data/rickandmorty/rickandmorty.js';
 
 export const getStatus = (statusSelected) => {
-  
+
   let getJson = data.results;
   getJson = getJson.filter(character => character.status === statusSelected);
   return getJson; 

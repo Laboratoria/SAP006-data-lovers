@@ -1,63 +1,34 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  
-    <header>
-      <div class="links">
-        <a href="./index.html">HOME</a>
-        <a href="https://pt.wikipedia.org/wiki/Rick_and_Morty" target="_blank">SOBRE A SÉRIE</a>
-      </div>
-    </header>
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="style1.css" />
+
+    
   </head>
+
   <body>
 
+    <header class="topo">
+      
+      <nav class="links">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+        <a class = "sobre-serie" href="https://pt.wikipedia.org/wiki/Rick_and_Morty" target="_blank">SOBRE A SÉRIE</a>
+        <a class="text-inicial">Clique no portal, para saber mais sobre a melhor serie da galaxia</a>
+        <a class = "seta"><img  src= "https://www.imagensanimadas.com/data/media/111/seta-imagem-animada-0423.gif"></a>
+      </nav>
+      
+    </header>
+      
     <main>
 
-      <section>
+      <a class = "paginaInicial" href= "indexcards.html" ><img class="img" src= "https://freepngimg.com/thumb/portal/88214-sanchez-morty-gourd-smith-citrullus-portal-rick.png"></a>
 
-        <input  id="characters" type="text" class = "botao">
-        <button id = "ordenar" class = "botao">Ordenar A-Z</button>
-        <button id = "desordenar" class = "botao">Ordenar Z-A</button>
-
-      </section>
-     
-
-      <select   id= "status" name="status" class = "status">
-
-        <option id = "statusOption" class = "status" value="Status">Status</option>
-        <option id = "alive" class = "alive" value="Alive">Alive</option>
-        <option id = "dead" value="Dead">Dead</option>
-        <option id = "unknow" value="unknown">Unknown</option>
-
-      </select>
-     
-
-      <select id = "especie" name="especie" class = "species">
-
-        <option value="especieOption">Especie</option>
-        <option value="Human">Human</option>
-        <option value="Humanoid">Humanoid</option>
-        <option value="Alien">Alien</option>
-        <option value="Animal">animal</option>
-        
-      </select>
-
-      </section>
-
-      
-      <div id="get-cards" ></div>
-   
-    <footer>
-      <p>
-        @Bruna Calixto e Carmen Gozza- 2021
-      </p>
-    </footer>
-
-    <script src="main.js" type="module"></script>
-    <script src="./data.js" type="module"></script>
+    </main>
 
   </body>
+
 </html>

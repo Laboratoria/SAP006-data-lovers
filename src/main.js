@@ -21,6 +21,20 @@ function showCards(data) {
 }
 showCards(data.results);
 
+const btnSearch = document.getElementById("button-search");
+
+function searchCharacter(e) {
+    e.preventDefault()
+
+    let searchTerm = document.getElementById("characters").value;
+    console.log(searchTerm);
+    let object = data.results;
+    object = object.filter(character => character.name === searchTerm);
+    showCards(object);
+}
+
+btnSearch.addEventListener('click', searchCharacter);
+
 
 const status = document.getElementById("status");
 const species= document.getElementById("especie");
@@ -54,4 +68,5 @@ function getDisorderData() {
     showCards(getDisorder(disorder.value));
 }
 disorder.addEventListener("click", () => {getDisorderData()} );
+
 
