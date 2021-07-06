@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
 * {
     background: black;
+    color: white;
+    font-family: 'Gelasio', serif;
 }
 
 .flexBox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -21,19 +24,44 @@ ul {
     display: inline;
 }
 
-/*
-.barrinha{
-	width: 100%;
-	height: 25px;
-	color: white;
-	margin: -35px;
+form {
+    border: 2px solid red;
+    padding: 5px;
+}
 
-	background-color: #19251C;
-	filter: blur(4px);
-}*/
+select {
+    padding: 5px;
+}
+
+label {
+    padding-left: 8px;
+}
 
 .movies {
-    height: 900px;
-    border: 2px solid red;
+    border: 2px solid rgb(53, 53, 53);
     margin-top: 15px;
+    padding-left: 5px;
+    flex-direction: row;
+}
+
+.cards {
+    margin-top: 5px;
+    border: 2px solid grey;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    margin-top: -12px;
+}
+
+nav{
+    width: 100%;
+    height: 40px;
+    margin-top: -7px;
+    background-color: rgb(13, 30, 12);
 }
