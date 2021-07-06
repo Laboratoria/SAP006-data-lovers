@@ -1,8 +1,8 @@
-* body {
+ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #cce0e2;
+    background-color: #e7e7dd;
 }
 .menu ul {
     /*background-color: #a0a2b0;#c1cfda;*/
@@ -14,11 +14,139 @@
 }
 .menu ul li {
    display: inline;
-   margin-left: 20px;
+   margin-left: 40px;
+   color: #56658c;
 }
 .menu ul li a:hover {
-    color: black;
+    color:  #41a8bc;
 }
 .menu ul li a {
     text-decoration: none; /*Tirar o sublinhado da referência*/
+}
+.title-info{
+    display: flex;
+    height: 140px;
+    background-color: #b6d168;
+}
+.title{
+    font-size: 60px;
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.info{
+    font-size: 16px;
+    margin-left: 320px;
+    width: 150px;
+}
+
+/*Carrosel*/
+.photos{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 3%;
+    overflow: hidden;
+  
+ }
+ .slides{
+    width: 500%;/*Pq são 4 fotos, se for 9 é 1000%*/
+    height: 500px;
+    display: flex;
+ }
+ .slides input{
+    display: none;
+ }
+ .slide{
+    width: 20%;
+    transition: 2s;
+ }
+ .slide img{
+    width: 800px;
+    height: 450px;
+ }
+ /*CSS para navegação manual*/
+  
+ .navigation-manual{
+    position: absolute;
+    width: 750px;
+    margin-top: -90px;
+    display: flex;
+    justify-content: center;
+ }
+  
+ .manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+ }
+  
+ .manual-btn:not(:last-child){
+    margin-right: 30px;
+ }
+ .manual-btn:hover{
+    background: white;
+ }
+ #radio1:checked ~ .first{
+    margin-left: 0;
+ }
+ #radio2:checked ~ .first{
+    margin-left: -20%;
+ }
+ #radio3:checked ~ .first{
+    margin-left: -40%;
+ }
+ #radio4:checked ~ .first{
+    margin-left: -60%;
+ }
+ #radio5:checked ~ .first{
+    margin-left: -80%;
+ }
+ #radio6:checked ~ .first{
+   margin-left: -100%;
+}
+ 
+ .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 750px;
+    justify-content: center;
+    margin-top: 410px;
+ }
+ .navigation-auto div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+   
+ }
+  
+ .navigation-auto div:not(:last-child){
+    margin-right: 30px;
+ }
+.photos{
+    display: flex;
+}
+.paragrafo1{
+    padding: 15px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 22px;
+    margin-top: 0;
+}
+.testando{
+   background-color: #e7e7dd;
+   margin-left: 20px;
+   border-radius: 10px;
+   height: 450px;
+}
+.info img{
+   width: 150px;
+   height: 150px;
 }

@@ -19,7 +19,7 @@ function showCharacters(a) {
         <div class="flip-card-inner">
          <div class="flip-card-front">
           <p class="title-of-film"><strong>${item.name}</strong></p>
-          <img src="${item.img}"class="poster-card"><p><br></p>
+          <img src="${item.img}"class="poster-card" id="img-character"><p><br></p>
          </div>
         <div class="flip-card-back">
           <p class="title-of-film"><strong>Nome: ${item.name}</strong></p>

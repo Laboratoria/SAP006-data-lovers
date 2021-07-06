@@ -1,30 +1,38 @@
-* body {
+ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #cce0e2;
+    background-color: #e7e7dd;
 }
 /*Menu navegação*/
+.characters-img{
+  margin-top: -250px;
+  text-align: center;
+}
+
 .menu ul {
     /*background-color: #a0a2b0;#c1cfda;*/
-    background-image: url(https://d17lbu6bbzbdc8.cloudfront.net/wp-content/uploads/2020/01/10220507/studio_ghibli.jpg);
-   
+   background-color: #e7e7dd;
     list-style: none; /*tira os marcadores*/
     padding: 15px 8%;
     text-align: left;
+    height: 230px;
+    color: #56658c;
     margin-top: 0px;
-    height: 200px;
-    color: blueviolet;
 }
+
 .menu ul li {
    display: inline;
-   margin-left: 20px;
+   margin-right: 20px;
 }
 .menu ul li a:hover {
-    color: white;
+    color: #41a8bc;
 }
 .menu ul li a {
     text-decoration: none; /*Tirar o sublinhado da referência*/
+}
+.character-img{
+  text-align: center;
 }
 section{
     margin: auto;
@@ -36,13 +44,14 @@ section{
   flex-flow: row wrap;
   justify-content: center;
 }
-.poster-cards{
-    width: 80%;
+.poster-cards, .poster-people{
     margin-top: 30px;
-    margin-left: 14%;
+    margin-left: 35px;
 }
 .poster-card{
     width: 220px;
+    height: 300px;
+    object-fit: cover;
 }
 
 /*flipcards*/
@@ -53,12 +62,13 @@ section{
 .info1, .info2{
 text-align: left;
 margin-left: 15%;
+color: #e7e7dd;
 }
 
 .flip-card {
-    background-color: #cce0e2;
+    background-color: #e7e7dd;
     width: 280px;
-    height: 400px;
+    height: 380px;
     perspective: 1000px;
     margin-top: 30px;
     margin-left: 35px;
@@ -87,14 +97,16 @@ margin-left: 15%;
   }
   
   .flip-card-front {
-    background-color: #a0b8a4;
-    color: black;
+    background-color:#56658c;
+    color:#e7e7dd;
+    border-radius: 5%;
   }
 
   .flip-card-back {
-    background-color: #a0b8a4;
-    color:black;
+    background-color: #56658c;
+    color:#e7e7dd;
     transform: rotateY(180deg);
+    border-radius: 5%;
   }
 
   .select-bar{
@@ -102,9 +114,9 @@ margin-left: 15%;
   }
 /*Arrumando botões e seletores*/
 .button {
-  background-color:#a0b8a4;
+  background-color: #56658c;
+  color: #e7e7dd;
   border: none;
-  color:blueviolet;
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
@@ -112,17 +124,21 @@ margin-left: 15%;
   font-size: 16px;
   margin-left: 10px;
   height: 38px;
+  cursor: pointer;
+  border-radius: 5%;
 }
 
 select {
   height: 20px;
   font-size: 16px;
-  color:blueviolet;
-  background-color:#a0b8a4;
+  cursor: pointer;
+  color: #e7e7dd;
+  background-color: #56658c;
   height: 38px;
   margin-left: 10px;
   text-align: center;
+  border-radius: 5%;
 }
 .title-of-film, .info1, .info2{
-  color:blueviolet;
+  color: #e7e7dd;
 }

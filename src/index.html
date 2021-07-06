@@ -8,16 +8,68 @@
 </head>
 
 <body>
-  <div id="root"></div>
-  <header>
-    <nav class="menu" id="menu">
+<div class="title-info">
+  <div class="info">
+    <img src="./imgs/totoro1.png"> 
+      </div>
+  <div class="title">
+    STUDIO GHIBLI
+  </div>
+  
+</div>
+<section class="photos">
+  <div class="slider">
+    <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio5">
+        <input type="radio" name="radio-btn" id="radio6">
+
+        <div class="slide first"><img src="./imgs/1.jpg"></div>
+        <div class="slide"><img src="./imgs/2.jpg"></div>
+        <div class="slide"><img src="./imgs/3.jpg"></div>
+        <div class="slide"><img src="./imgs/4.jpg"></div>
+        <div class="slide"><img src="./imgs/5.jpg"></div>
+        <div class="slide"><img src="./imgs/6.jpg"></div>
+
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+            <div class="auto-btn5"></div>
+            <div class="auto-btn6"></div>
+        </div>
+    </div>
+    <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+        <label for="radio5" class="manual-btn"></label>
+        <label for="radio6" class="manual-btn"></label>
+    </div>
+</div>
+<div class="testando">
+  
+    <p class="paragrafo1"> Studio Ghibli is a Japanese animation </br>film studio headquartered in Koganei, Tokyo. </br>
+      It's best known for its animated feature films, </br>and has also produced several short films and </br>television commercials.
+       The studio's mascot </br>and most recognizable symbol is the character </br>Totoro, a giant cat-like spiritfrom the studio's </br>1988 film
+       My Neighbor Totoro. </p>
+    
+      <nav class="menu" id="menu">
       <ul>
-        <li><a href="index.html"><strong>HOME</strong></a></li>
-        <li><a href="filmes.html"><strong>FILMS</strong></a></li>
-        <li><a href="personagens.html"><strong>CHARACTERS</strong></a></li>
-      </ul>
-    </nav>
-  </header>
+      <li><a href="filmes.html"><strong>SEE FILMS</strong></a></li>
+      <li><a href="personagens.html"><strong>SEE CHARACTERS</strong></a></li>
+    </ul>
+  </nav>
+ 
+    
+</div>
+
+</section>
   <script src="main.js" type="module"></script>
 
 </body>

@@ -1,33 +1,29 @@
 
 export const filterDirectorSelected = (animations, valueSelected) =>
-animations.filter(item => item.director === valueSelected);
+  animations.filter(item => item.director === valueSelected);
 
-export const releaseYear = (animations) =>  
-animations.sort((a, b) => (a.release_date > b.release_date ? 1 : -1)); //ordem de lançamento.
+export const releaseYear = (animations) =>
+  animations.sort((a, b) => (a.release_date > b.release_date ? 1 : -1)); //ordem de lançamento.
 /*Obs: Filmes por data de lançamento
 const releaseYear = animations.sort((a, b) => {
     if (a.release_date > b.release_date) {
         return 1;
     } return -1;
 });*/
+export const rattingScore = (animations) => animations.sort((a, b) => Number(a.rt_score) < Number(b.rt_score) ? 1 : -1); //por avaliação.
 
-// seleciona por avaliação.
-export const rattingScore = (animations) => 
-animations.sort((a, b) => (a.rt_score < b.rt_score? 1 : -1));
-
-//seleciona por ordem alfabetica
-export const order = (characters) => 
-characters.sort((a, b)=> (a.name > b.name ? 1 : -1));
+export const order = (characters) =>
+  characters.sort((a, b) => (a.name > b.name ? 1 : -1));
 
 //export const avaliacao = films.filter(films => (films.rt_score > 70));
 
 //seleciona/filtra por espécies
 export const filterSpeciesSelected = (characters, valueSelected) =>
-characters.filter(item => item.specie === valueSelected);
+  characters.filter(item => item.specie === valueSelected);
 
 //seleciona/filtra por genero
 export const filterGender = (characters, valueSelected) =>
-characters.filter(item => item.gender === valueSelected);
+  characters.filter(item => item.gender === valueSelected);
 
 //seleciona por idade
 export const filterAge = (characters, gender) =>
@@ -114,11 +110,11 @@ export const filtraScore = () => {
 };
  */
 
-export function ordenaFilmes(a, b){
+export function ordenaFilmes(a, b) {
 
-  const releaseYear = (animations) => animations.sort((a.release_date > b.release_date) ? 1 : -1); 
+  const releaseYear = (animations) => animations.sort((a.release_date > b.release_date) ? 1 : -1);
   //ordena por ano de lançamento.
-  
+
   //(animations.sort((a,b)=>(a.rt_score > b.rt_score? 1:-1)))
 
   return releaseYear
@@ -135,7 +131,7 @@ const crescentAlphabet = animations.sort((a, b) => {
 
 //export function filterDirectorSelected(animations, valueSelected) {
 //animations.filter(animations => animations.director === valueSelected);
-//} 
+//}
 //Perguntar pq quando tento function retorna "animations is not interable"
 
 /*function showFemale () {
@@ -172,7 +168,7 @@ const crescentAlphabet = animations.sort((a, b) => {
 //console.log(azName);
 
 (Para tentar depois)
-export const characters = data.films.people 
+export const characters = data.films.people
 //Ordem alfabética Z-A (personagens)
 //const zaName = azName.reverse();
 
