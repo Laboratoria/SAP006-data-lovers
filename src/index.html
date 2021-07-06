@@ -1,11 +1,13 @@
-
 <!DOCTYPE html>
 <html>
   <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   </head>
 
   <body>
@@ -22,15 +24,16 @@
 
       <div class="texto">
 
-        <h2>TITULO</h2>
+        <h2>Hello, stranger</h2>
 
-        <P>O que é o Lorem Ipsum? O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.</P>
+        <P>Seja bem-vinde, ao nosso planeta!</P>
 
-        <p>O que é o Lorem Ipsum?
- O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.</p>
+        <p>O nosso site foi criado para você que quer descobrir um pouco mais sobre os personagens de Rick and Morty, incluindo seus mundos, suas realidades paralelas ou multiversos!</p>
+        
+        <p>Temos várias opções de filtros para você encontrar o personagem que procura! Temos uma enorme lista de personagens, vamos descobrir esses universos?!</p>
       </div>
 
-      <div>
+    <!--  <div>
         <nav>
           <ul>
             <li><a href=""><img class="img-menu img-1" src="imagens/minimalista-rick.jpg"></a></li>
@@ -39,61 +42,56 @@
             <li><a href=""><img class="img-menu img-4" src="imagens/minimalista-mortyy.jpg"></a></li>
           </ul>
         </nav>
-      </div>
+      </div>-->
+
+      <p class="text-intro">Escolha as opções que deseja filtrar</p>
+
+      <p class="text-intro">Status</p>
 
       <select id="caracter-status">
-        <option id="nada-status"></option>
-        <option id="vivo">Dead</option>
-        <option id="morto">Alive</option>
-        <option id="unknown">Unknown</option>
+        <option id="vazio">Escolha uma opção</option>
+        <option id="vivo" value="Alive">Alive</option>
+        <option id="morto" value="Dead">Dead</option>
+        <option id="unknown" value="unknown">Unknown</option>
       </select>
+
+      <p class="text-intro">Espécie</p>
 
       <select id="caracter-species">
-        <option id="nada-status" value="Nada"></option>
-        <option id="human" value="Human">Female</option>
-        <option id="alien" value="Alien">Male</option>
+        <option id="vazio">Escolha uma opção</option>
+        <option id="human" value="Human">Human</option>
+        <option id="alien" value="Alien">Alien</option>
         <option id="humanoid" value="Humanoid">Humanoid</option>
-        <option id="unknown" value="Unknow">Unknown</option>
+        <option id="unknown" value="unknown">Unknown</option>
       </select>
 
-      <select id="caracter-filter">
-        <option id="nada-filter"></option>
-        <option id="self-aware">Self-aware arm</option>  
+      <p class="text-intro">Gênero</p>
+
+      <select id="caracter-gender">
+        <option id="vazio">Escolha uma opção</option>
+        <option id="Male" value="Male">Male</option>
+        <option id="Female" value="Female">Female</option>
+        <option id="Unknown" value="unknown">Unknown</option>
+        <option id="Genderless" value="Genderless">Genderless</option>
+      </select>
+    
+      <p class="text-intro" >Ordenar</p>
+
+      <select id="ordenar">
+        <option id="vazio">Escolha uma opção</option>
+        <option id="az" value="az">A-Z</option>
+        <option id="za" value="za">Z-A</option>
       </select>
       
       <button id="buscar">
-        <span class="material-icons">Filtrar</span>        
+      Filtrar     
       </button>
 
-      <div id="linha-vertical"></div>
-      <div id="linha-horizontal"></div>
 
-      <div id="cards">
-         
-        <div id="container-card">
-           
-          <img src="" id="foto-card"></img>
-        
-        </div>
-
-        <div>
-
-          <span id="type">
-            <h3></h3>
-          </span>
-              
-          <span id="species">
-            <p></p>
-          </span>
-
-          <span id="status">
-            <p></p>
-          </span>
-
-        </div>
+      <section class="result-card" id="resultado">
       
-      </div>
-
+      </section> 
+       
     </main>
     
     <footer>
@@ -102,3 +100,4 @@
     <script src="main.js" type="module"></script>
   </body>
 </html>
+  
