@@ -3,7 +3,7 @@
 
 //import { dataghibli } from './data.js';
 
-import { ordemAlfabetica } from './data.js';
+import { ordemAlfabetica, pesquisaName } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
 
@@ -13,7 +13,7 @@ const films = data.films
 
 const listaImpressa = document.getElementById("listaImpressa")
 
-const showFilmes = (filmList) => { 
+const showFilme = (filmList) => {
   listaImpressa.innerHTML = ""
   filmList.forEach(film => {
     listaImpressa.innerHTML += `  
@@ -30,7 +30,7 @@ const showFilmes = (filmList) => {
   })
 
 }
-showFilmes(films)
+showFilme(films)
 
 
 //Importar Personagem //
@@ -42,7 +42,7 @@ const showPeople = (peopleList, film) => {
       `
     <li class="cardPersonagem">
           <img class="card-poster" src=" ${people.img}">
-          <p class="card-personagens"> Personagem: ${people.name}</p>
+          <p class="card-personagens"> ${people.name} - Personagem</p>
           <p class="card-filme"> Filme: ${film} </p>
           <p class="card-gênero"> Genero: ${people.gender}</p>
           <p class="card-idade"> Idade: ${people.age}</p>
@@ -63,7 +63,9 @@ for (let film of films) {
 const ordenar = document.querySelector(".order");
 function ordemFilme(event) {
   const order = ordemAlfabetica(data.films, event.target.value)
-  console.log(order)
-  showFilmes(order);
+  //console.log(order)
+  showFilme(order);
 }
 ordenar.addEventListener("change", ordemFilme);
+
+
