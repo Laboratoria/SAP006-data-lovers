@@ -4,6 +4,7 @@ html, body{
     background-color: #362C33;
     box-sizing: border-box;
     height: 100vh;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -127,13 +128,11 @@ img {
 
 h3 {
     font-size: 20px;
-    font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
 
 #character_name, #character_status, #character_gender, #episodes, p {
     font-size: 18px;
-    font-family: "Poppins", sans-serif;
     font-weight: 400;
     margin: 0;
     text-align: center;
@@ -146,7 +145,6 @@ p {
 
 #episodes {
     margin-top: 10px;
-    font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
 
@@ -161,6 +159,27 @@ p {
     background-color: #E3DDE0;
 }
 
+.totalCharacter, .numberOfCharacters {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.numberOfCharacters {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.genderAverage{
+    margin-top: 4px;
+    font-size: 18px;
+    text-align: -moz-left;
+    margin-left: 110px;
+}
+
+span {
+    font-weight: 600;
+}
+
 @media (max-width:901px) {
     .static, .cards_container {
         flex: 100%;
@@ -169,6 +188,22 @@ p {
         flex-direction: column;
         max-width: 280px;
         min-width: 280px;
+    }
+
+    .static {
+        height: 230px;
+    }
+
+    .genderAverage{
+        text-align: center;
+        margin: 0;
+        margin-top: 12px;
+        font-size: 20px;
+    }
+
+    .totalCharacter {
+        margin-top: 36px;
+        font-size: 20px;
     }
 
     .character_info{
