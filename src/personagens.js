@@ -1,8 +1,9 @@
-
-import { filterSpeciesSelected, filterGender, order } from './data.js';
+import { filterSpeciesSelected, filterGender, order} from './data.js';
 import data from './data/ghibli/ghibli.js';
-const characters = data.films.reduce(function (chars, film) {
 
+//const animations = data.films
+const characters = data.films.reduce(function(chars, film){ 
+            
     // [...chars, ...film.people]
     return chars.concat(film.people)
 
@@ -25,6 +26,8 @@ function showCharacters(a) {
           <p class="info"><strong>Idade: ${item.age}</p></strong>
           <p><strong>Gênero: ${item.gender}</p></strong>
           <p><strong>Espécie: ${item.specie}</p></strong>
+          <p><strong> Hair color: ${item.hair_color}</p></strong>
+          <p><strong> Eye color: ${item.eye_color}</p></strong>
           </div>
           </div>
         </div> `
@@ -32,23 +35,24 @@ function showCharacters(a) {
     document.getElementById("poster-people").innerHTML = people;
 };
 
-showCharacters(characters)
+//showCharacters(characters)
 
-function filterSpecies() {
+//selecionando especies
+function filterSpecies(){
     const valueSelected = selectSpecies.value
     const selectedSpecies = filterSpeciesSelected(characters, valueSelected);
     showCharacters(selectedSpecies);
 }
 
-const femaleCharacters = () => {
 
+//seleciona personagens por genero
+const selectGender = (evento) => {
+    evento.preventDefault();
 
+   const valueSelected = selectedGender.value
+   const gender = filterGender(characters, valueSelected);
+   showCharacters(gender);
 }
-
-const maleCharacters = () => {
-
-}
-
 
 const orderAZ = () => {
 
@@ -59,13 +63,11 @@ const orderAZ = () => {
 
 const ordenaAZ = document.querySelector('[data-az-order]')
 const ordenaZA = document.querySelector('[data-za-order]');
-const personagensFem = document.querySelector('[data-female-character]');
-const personagensMasc = document.querySelector('[data-male-character]');
+const selectedGender = document.getElementById('select-gender');
 const selectSpecies = document.getElementById("specie");
 
 
 ordenaAZ.addEventListener('cllick', orderAZ);
 ordenaZA.addEventListener('click', orderZA);
-personagensFem.addEventListener('click', femaleCharacters);
-personagensMasc.addEventListener('click', maleCharacters);
+selectedGender.addEventListener('click', selectGender);
 selectSpecies.addEventListener('click', filterSpecies(specie));
