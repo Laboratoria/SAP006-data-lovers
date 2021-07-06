@@ -1,4 +1,4 @@
-import { filters, ordenarAZ, ordenarZA } from './data.js';
+import { filters, ordenarAZ } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
@@ -65,14 +65,10 @@ terrain.addEventListener("change", (event) => {
 
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
-    if (a.title > z.title) {
-        const filterAZ = ordenarAZ(films, "title", selectedSort);
-        showingCards(filterAZ);
-    } else if {
-        const filterZA = ordenarZA(films, "title", selectedSort);
-        showingCards(filterZA);
-    }   
-});
+    const filterAZ = ordenarAZ(films, selectedSort);
+    showingCards(filterAZ);
+}   
+);
 
 
 // films.map(function(filmeAtual, indice, array) {
