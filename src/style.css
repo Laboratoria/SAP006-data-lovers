@@ -148,7 +148,7 @@ p {
     font-weight: 600;
 }
 
-.static {
+.stats {
     margin: 18px;
     position: relative;
     flex: 1;
@@ -181,7 +181,7 @@ span {
 }
 
 @media (max-width:901px) {
-    .static, .cards_container {
+    .stats, .cards_container {
         flex: 100%;
         height: 490px;
         display: flex;
@@ -190,7 +190,7 @@ span {
         min-width: 280px;
     }
 
-    .static {
+    .stats {
         height: 230px;
     }
 

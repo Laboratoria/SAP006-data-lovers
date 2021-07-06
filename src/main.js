@@ -117,7 +117,6 @@ function clearFilters(e) {
 //Cálculos estatísticos:
 
 const totalCharacters = computeStats.characters(data.results);
-console.log(totalCharacters)
 
 const printTotalCharacters = document.getElementById("totalCharacters");
 printTotalCharacters.innerHTML = `<p class="totalCharacter">O total de personagens da série é:</p>
