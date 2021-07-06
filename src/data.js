@@ -52,6 +52,6 @@ Recomendamos que este arquivo contenha toda a funcionalidade que corresponda a o
 - [ ]  `computeStats(data)`: essa função nos permite fazer cálculos estatísticos básicos para serem exibidos de acordo com o que os dados permitem.
 Estes nomes de funções e parâmetros são somente referência, o que vocês decidirem utilizar vai depender da sua implementação.
 
-Estas funções devem ser *[puras](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)* e independentes do DOM. 
-Estas funções serão depois usadas a partir do arquivo `src/main.js`, ao carregar a página e a cada vez que o usuário interagir com a interface 
+Estas funções devem ser*[puras](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)*e independentes do DOM. 
+Estas funções serão depois usadas a partir do arquivo`src/main.js`, ao carregar a página e a cada vez que o usuário interagir com a interface 
 (cliques, seleções, filtros, ordenação, etc).*/
