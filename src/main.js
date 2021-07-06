@@ -2,7 +2,7 @@ import { computeStats, filterData, sortData } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const cards = document.querySelector(".cards");
-const staticCards = data.results.map(({ name, status, gender, image, episode}) =>
+const staticCards = data.results.map(({ name, status, gender, image, episode }) =>
   `<div class="cards_container">
         <div class="character_img">
           <img src="${image}">
@@ -13,7 +13,7 @@ const staticCards = data.results.map(({ name, status, gender, image, episode}) =
           </span>
           <span id="character_status">${status} - ${gender}</span>
           <span id="episodes">Episodes</span>
-            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g,' '))}</p>
+            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g, ' '))}</p>
          </div>
      </div>`).join("");
 
@@ -33,7 +33,7 @@ const filtrar = function (e) {
   const genderFilter = document.getElementById("gender-filter");
   const genderOptions = genderFilter.options[genderFilter.selectedIndex].value;
 
-  const filterValue = filterData(data, statusOptions, genderOptions);
+  const filterValue = filterData(data.results, statusOptions, genderOptions);
 
   const printCards = filterValue.map(({ name, status, gender, image, episode }) =>
     `<div class="cards_container">
@@ -46,7 +46,7 @@ const filtrar = function (e) {
           </span>
           <span id="character_status">${status} - ${gender}</span>
           <span id="episodes">Episodes</span>
-            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g,' '))}</p>
+            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g, ' '))}</p>
          </div>
      </div>`).join("");
 
@@ -55,12 +55,12 @@ const filtrar = function (e) {
 }
 
 // Função ordenar:
-const sort = function(e) {
-    e.preventDefault();
-    
-    const sortCards = sortData(data);
+const sort = function (e) {
+  e.preventDefault();
 
-    const sortedCards = sortCards.map(({ name, status, gender, image, episode }) =>
+  const sortCards = sortData(data.results);
+
+  const sortedCards = sortCards.map(({ name, status, gender, image, episode }) =>
     `<div class="cards_container">
         <div class="character_img">
           <img src="${image}">
@@ -71,13 +71,13 @@ const sort = function(e) {
           </span>
           <span id="character_status">${status} - ${gender}</span>
           <span id="episodes">Episodes</span>
-            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g,' '))}</p>
+            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g, ' '))}</p>
          </div>
      </div>`).join("");
 
   cards.innerHTML = "";
   cards.innerHTML += sortedCards;
-    
+
 }
 const btnSort = document.getElementById("sort-btn");
 btnSort.addEventListener("click", sort);
@@ -88,10 +88,10 @@ btnSort.addEventListener("click", sort);
 const btnClear = document.getElementById("btn-clearFilters");
 btnClear.addEventListener("click", clearFilters);
 
- function clearFilters(e){
-    e.preventDefault()
-    const cards = document.querySelector(".cards");
-    const originalCards = data.results.map(({ name, status, gender, image, episode}) =>
+function clearFilters(e) {
+  e.preventDefault()
+  const cards = document.querySelector(".cards");
+  const originalCards = data.results.map(({ name, status, gender, image, episode }) =>
     `<div class="cards_container">
         <div class="character_img">
           <img src="${image}">
@@ -102,35 +102,45 @@ btnClear.addEventListener("click", clearFilters);
           </span>
           <span id="character_status">${status} - ${gender}</span>
           <span id="episodes">Episodes</span>
-            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g,' '))}</p>
+            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g, ' '))}</p>
          </div>
      </div>`).join("");
 
-cards.innerHTML = "";     
-cards.innerHTML += originalCards;
-const statusFilter = document.getElementById("status-filter");
-statusFilter.options[statusFilter.selectedIndex = 0];
-const genderFilter = document.getElementById("gender-filter");
-genderFilter.options[genderFilter.selectedIndex = 0];
+  cards.innerHTML = "";
+  cards.innerHTML += originalCards;
+  const statusFilter = document.getElementById("status-filter");
+  statusFilter.options[statusFilter.selectedIndex = 0];
+  const genderFilter = document.getElementById("gender-filter");
+  genderFilter.options[genderFilter.selectedIndex = 0];
 }
 
 //Cálculos estatísticos:
 
-const totalCharacters = sortData(data).length;
+const totalCharacters = computeStats.characters(data.results);
+console.log(totalCharacters)
 
 const printTotalCharacters = document.getElementById("totalCharacters");
 printTotalCharacters.innerHTML = `<p class="totalCharacter">O total de personagens da série é:</p>
-                                  <p class="totalCharacter">${totalCharacters}</p>`
+                                  <p class="numberOfCharacters">${totalCharacters}</p>`
 
 
-const maleAverage = computeStats.gender(data, "Male")+ "%";
-const femaleAverage = computeStats.gender(data, "Female")+ "%";
-const genderlessAverage = computeStats.gender(data, "Genderless")+ "%";
-const unknownAverage = computeStats.gender(data, "unknown")+ "%";
+const maleAverage = computeStats.gender(data.results, "Male") + "%";
+const femaleAverage = computeStats.gender(data.results, "Female") + "%";
+const genderlessAverage = computeStats.gender(data.results, "Genderless") + "%";
+const unknownAverage = computeStats.gender(data.results, "unknown") + "%";
 
 const printGenderAverage = document.getElementById("genderAverage");
-printGenderAverage.innerHTML = `<p class="genderAverage">Média de gêneros: </p>
-                              <p class="genderAverage">Masculinos: ${maleAverage}</p>
-                              <p class="genderAverage">Femininos: ${femaleAverage}</p>
-                              <p class="genderAverage">Desconhecidos: ${unknownAverage}</p>
-                              <p class="genderAverage">Sem gênero: ${genderlessAverage}</p>`
+printGenderAverage.innerHTML = `<p class="genderAverage">Média de gêneros:
+                                  </p>
+                                <p class="genderAverage">Masculinos:
+                                  <span>${maleAverage}</span>
+                                  </p>
+                                <p class="genderAverage">Femininos:
+                                  <span>${femaleAverage}</span>
+                                  </p>
+                                <p class="genderAverage">Desconhecidos:
+                                  <span>${unknownAverage}</span>
+                                  </p>
+                                <p class="genderAverage">Sem gênero:
+                                  <span>${genderlessAverage}</span>
+                                 </p>`
