@@ -35,14 +35,14 @@ const selecaoEspecie = document.querySelector("#selecao-especies");
 const selecaoStatus = document.querySelector("#selecao-status");
 const selecaoOrdem = document.querySelector("#selecao-ordem");
 
-const buscaNomePersonagem = document.getElementById("text-search")
-const texto = document.getElementById("porcentagem-filtro")
+const buscaNomePersonagem = document.getElementById("text-search");
+const texto = document.getElementById("porcentagem-filtro");
 
 
 //Função exibir calculo de porcentagem
 function mostrarPorcentagem(data) {
   texto.innerHTML = `Essa categoria representa ${data}`
-}
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
 function imprimirFiltroGenero(e) {
@@ -50,7 +50,7 @@ function imprimirFiltroGenero(e) {
   const porcentagemText = `${calcularPorcentagem(data.results.length, resultadoGenero.length)}% dos personagens`
   mostrarPorcentagem(porcentagemText)
   return infoCardsTela(resultadoGenero);
-  }
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
 function imprimirFiltroEspecie(e) {
@@ -58,7 +58,7 @@ function imprimirFiltroEspecie(e) {
   const porcentagemTextEspecie = `${calcularPorcentagem(data.results.length, resultadoEspecie.length)}% dos personagens`
   mostrarPorcentagem(porcentagemTextEspecie)
   return infoCardsTela(resultadoEspecie);
-  }
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
 function imprimirFiltroStatus(e) {
@@ -66,19 +66,19 @@ function imprimirFiltroStatus(e) {
   const porcentagemStatus = `${calcularPorcentagem(data.results.length, resultadoStatus.length)}% dos personagens`
   mostrarPorcentagem(porcentagemStatus)
   return infoCardsTela(resultadoStatus);
-  }
+};
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
 function imprimirFiltroOrdem(e) {
   const order = ordemAlfabetica(data.results, e.target.value)
   return infoCardsTela(order);
-  }
+};
 
 //Buscar nomes SEARCH
 function buscarNomePersonagens(e) {
   const nomePersonagens = buscarNome(data.results, e.target.value)
   return infoCardsTela(nomePersonagens)
-}
+};
 
 //Adição de Eventos
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
