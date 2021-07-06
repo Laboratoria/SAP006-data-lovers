@@ -1,8 +1,8 @@
 
-import { filterSpeciesSelected, filterGender, order} from './data.js';
+import { filterSpeciesSelected, filterGender, order } from './data.js';
 import data from './data/ghibli/ghibli.js';
-const characters = data.films.reduce(function(chars, film){ 
-            
+const characters = data.films.reduce(function (chars, film) {
+
     // [...chars, ...film.people]
     return chars.concat(film.people)
 
@@ -18,7 +18,7 @@ function showCharacters(a) {
         <div class="flip-card-inner">
          <div class="flip-card-front">
           <p class="title-of-film"><strong>${item.name}</strong></p>
-          <img src="${item.img}"class="poster-card"><p><br></p>
+          <img src="${item.img}"class="poster-card" id="img-character"><p><br></p>
          </div>
         <div class="flip-card-back">
           <p class="title-of-film"><strong>Nome:${item.name}</strong></p>
@@ -34,18 +34,18 @@ function showCharacters(a) {
 
 showCharacters(characters)
 
-function filterSpecies(){
+function filterSpecies() {
     const valueSelected = selectSpecies.value
-    const selectedSpecies= filterSpeciesSelected(characters,valueSelected);
+    const selectedSpecies = filterSpeciesSelected(characters, valueSelected);
     showCharacters(selectedSpecies);
 }
 
 const femaleCharacters = () => {
 
-    
+
 }
 
-const maleCharacters = () =>{
+const maleCharacters = () => {
 
 }
 
