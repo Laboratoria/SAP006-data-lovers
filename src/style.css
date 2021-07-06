@@ -30,3 +30,51 @@
   text-align: center;
 
 }
+.select-status{
+  background-color: #96d7ed;
+  margin-top: 100px;
+  margin-left: 430px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.select-gender{
+  background-color: #96d7ed;
+  margin-top: 200px;
+  margin-left: 430px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.select-species{
+  background-color: #96d7ed;
+  margin-top: 100px;
+  margin-left: 430px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+
+
+#calculo-por-escolha { 
+  color: white;
+  display: none;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  margin: 2% 30% 2% 30%;
+  background-color: transparent;
+  border: 5px solid  rgba(115, 187, 86, 0.801);
+  border-radius: 9px;
+} 
+
+.listagem {
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  width: 80%;
+}
+
