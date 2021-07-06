@@ -84,7 +84,7 @@ export default {
         {
           "id": "fcb4a2ac-5e41-4d54-9bba-33068db083ca",
           "name": "Louis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/80/Louis.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/15/327932.jpg",
           "gender": "Male",
           "age": "30",
           "eye_color": "Dark brown",
@@ -286,7 +286,7 @@ export default {
         {
           "id": "591524bc-04fe-4e60-8d61-2425e42ffb2a",
           "name": "Chu Totoro",
-          "img": "https://www.ghibli.jp/gallery/thumb-totoro019.png",
+          "img": "https://i.pinimg.com/564x/33/a7/89/33a7890e95c4267bbde24ca04ce10ae5.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -564,7 +564,7 @@ export default {
         {
           "id": "3f78eba1-f9b0-489b-8686-f4508cdf049d",
           "name": "Toshio",
-          "img": "http://static.wikia.nocookie.net/studio-ghibli/images/2/23/Toshio.png",
+          "img": "https://myanimelist.net/images/characters/5/337318.webp",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -615,7 +615,7 @@ export default {
           "id": "c8f02850-0c1f-499c-8b5e-d8ad16f3ecc4",
           "name": "Yaeko Okajima",
           "gender": "Female",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/03/Yaeko.png",
+          "img": "https://cdn.myanimelist.net/images/characters/2/218427.jpg",
           "age": "16",
           "eye_color": "Black",
           "hair_color": "Grey",
@@ -624,7 +624,7 @@ export default {
         {
           "id": "6e960787-5a47-4178-a040-1ef5bf5e4a6c",
           "name": "Tani Tsuneko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5a/Tani.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/13/346679.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -700,7 +700,7 @@ export default {
         {
           "id": "eff43a47-e59c-41bd-bcc6-b1827d63bed5",
           "name": "Donald Curtis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/3c/Curtis.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/7/69488.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Brown",
@@ -710,7 +710,7 @@ export default {
         {
           "id": "4a2e2cee-08ca-4d44-9564-2b3e5421bafb",
           "name": "Fio Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/16/Fio_%282%29.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/4/69490.jpg",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -895,7 +895,7 @@ export default {
         {
           "id": "42a69bf6-b5e8-42b1-b05a-12c3d05e7c1e",
           "name": "Shizuku Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/db/Shizuku_Tsukishima.gif",
+          "img": "https://cdn.myanimelist.net/images/characters/7/316107.jpg",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -905,7 +905,7 @@ export default {
         {
           "id": "fc196c4f-0201-4ed2-9add-c6403f7c4d32",
           "name": "Baron Humbert von Gikkingen",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/73/Baron.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/9/173317.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Green",
@@ -915,7 +915,7 @@ export default {
         {
           "id": "079db09e-0441-442b-8c17-af5cac8321c4",
           "name": "Seiji Amasawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/ca/Seiji.png",
+          "img": "https://cdn.myanimelist.net/images/characters/13/62747.jpg",
           "gender": "Male",
           "age": "15",
           "eye_color": "Black",
@@ -925,7 +925,7 @@ export default {
         {
           "id": "494bba43-9f61-4383-a597-5bae6ab26222",
           "name": "Yuko Harada",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/Yuko.png",
+          "img": "https://cdn.myanimelist.net/images/characters/8/316214.jpg",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -945,7 +945,7 @@ export default {
         {
           "id": "182c1f2a-e1e0-4035-b87a-754d58ed6e2d",
           "name": "Seiya Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/fb/Seiya_%281%29.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/8/253323.jpg",
           "gender": "Male",
           "age": "40",
           "eye_color": "Black",
@@ -955,7 +955,7 @@ export default {
         {
           "id": "d92e61f3-f525-4740-9f06-c9e7b19c3d11",
           "name": "Asako Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/14/Asako_Tsukishima.png",
+          "img": "https://cdn.myanimelist.net/images/characters/16/352114.jpg",
           "gender": "Female",
           "age": "39",
           "eye_color": "Black",
@@ -975,7 +975,7 @@ export default {
         {
           "id": "e40b4241-612b-402f-8e6c-067c44e9c618",
           "name": "Shiho Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8c/Shiho.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/3/316208.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Black",
@@ -1376,7 +1376,7 @@ export default {
         {
           "id": "3042818d-a8bb-4cba-8180-c19249822d57",
           "name": "Cat King",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/37/Cat_King.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/16/398374.jpg",
           "gender": "Male",
           "age": "87",
           "eye_color": "Emerald",
@@ -1396,7 +1396,7 @@ export default {
         {
           "id": "a3d8e70f-46a0-4e5a-b850-db01620d6b92",
           "name": "Haru Yoshioka",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5c/Haru_Yoshioka_human.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/14/76675.jpg",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -1426,7 +1426,7 @@ export default {
         {
           "id": "5b2a28f6-91d4-4382-aedc-b27094e763b0",
           "name": "Prince Lune",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d4/Prince_lune.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/16/11634.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Dark brown",
@@ -1892,7 +1892,7 @@ export default {
         {
           "id": "89026b3a-abc4-4053-ab1a-c6d2eea68faa",
           "name": "Karigurashi/Arrietty",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/6f/Arrietty.png",
+          "img": "https://cdn.myanimelist.net/images/characters/14/97356.webp",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -2303,7 +2303,7 @@ export default {
         },
         {
           "id": "be634b4e-c333-4225-a5f0-2a0aa33d6453",
-          "name": "Ōna",
+          "name": "Ona",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/cb/Ouna.jpg",
           "gender": "Female",
           "age": "Elder",

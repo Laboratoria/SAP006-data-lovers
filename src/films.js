@@ -1,4 +1,4 @@
-import { filterDirectorSelected, releaseYear, rattingScore} from './data.js';
+import { filterDirectorSelected, releaseYear, rattingScore } from './data.js';
 import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const animations = data.films
@@ -14,9 +14,9 @@ function showPosterFilms(animations) {
           <img src="${item.poster}"class="poster-card"><p><br></p>
          </div>
         <div class="flip-card-back">
-          <p class="info1"><strong>Diretor: ${item.director}</p></strong>
-          <p class="info2"><strong>Lançamento: ${item.release_date}</p></strong>
-          <p class="info2"><strong>Avaliação: ${item.rt_score}</p></strong>
+          <p class="info1"><strong>Director: ${item.director}</p></strong>
+          <p class="info2"><strong>Release year: ${item.release_date}</p></strong>
+          <p class="info2"><strong>Rating score: ${item.rt_score}</p></strong>
           </div>
           </div>
         </div> `
@@ -24,43 +24,43 @@ function showPosterFilms(animations) {
     document.getElementById("poster-cards").innerHTML = photo;
 }
 showPosterFilms(animations);
-  
-const melhoresFilmes = document.querySelector('[data-best-score]');
-const filmesAntigos = document.querySelector('[data-film-olders]');
-const filmesNovos = document.querySelector('[data-films-newest]');
-const selectDirector = document.getElementById("director");
 
-function filterDirector(){
+function filterDirector() {
     const valueSelected = selectDirector.value
-    const selectedMovies = filterDirectorSelected(animations,valueSelected);
+    const selectedMovies = filterDirectorSelected(animations, valueSelected);
     showPosterFilms(selectedMovies);
 }
 
 const oldestFilms = (evento) => {
 
     evento.preventDefault();
-        const valueSelected = filmesAntigos.value;
-        const filmesVelhosSelecionados = releaseYear(animations, valueSelected);
-        showPosterFilms(filmesVelhosSelecionados);
+    const valueSelected = oldest.value;
+    const oldestSelected = releaseYear(animations, valueSelected);
+    showPosterFilms(oldestSelected);
 };
 
 const newestFilms = (evento) => {
 
     evento.preventDefault();
-        const valueSelected = filmesNovos.value;
-        const filmesNovosSelecionados = releaseYear(animations,valueSelected).reverse();
-        showPosterFilms(filmesNovosSelecionados);
+    const valueSelected = newest.value;
+    const newestSelected = releaseYear(animations, valueSelected).reverse();
+    showPosterFilms(newestSelected);
 };
 
 const bestScore = (evento) => {
 
     evento.preventDefault();
-    const valueSelected = melhoresFilmes.value;
-    const melhoresFilmesSelecionados = rattingScore(animations, valueSelected);
-    showPosterFilms(melhoresFilmesSelecionados);
+    const valueSelected = bestFilms.value;
+    const bestMoviesSelected = rattingScore(animations, valueSelected);
+    showPosterFilms(bestMoviesSelected);
 };
 
-melhoresFilmes.addEventListener('click', bestScore);
-filmesAntigos.addEventListener('click', oldestFilms);
-filmesNovos.addEventListener('click', newestFilms);
+const bestFilms = document.querySelector('[data-best-score]');
+const oldest = document.querySelector('[data-film-olders]');
+const newest = document.querySelector('[data-films-newest]');
+const selectDirector = document.getElementById("director");
+
+bestFilms.addEventListener('click', bestScore);
+oldest.addEventListener('click', oldestFilms);
+newest.addEventListener('click', newestFilms);
 selectDirector.addEventListener("click", filterDirector);

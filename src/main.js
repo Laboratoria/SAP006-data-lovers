@@ -9,6 +9,15 @@ const characters = data.films.reduce(function(chars, film){
 
 }, [])
 
+var counter = 1;
+       setInterval(function(){
+           document.getElementById('radio' + counter).checked = true;
+           counter++;
+           if(counter >6){
+               counter = 1;
+           }
+       },4500);
+
 //console.log(characters)
 const alphabeticOrderAz = document.querySelector('[data-az-order]');
 const alphabeticOrderZa = document.querySelector('[data-za-order]');
