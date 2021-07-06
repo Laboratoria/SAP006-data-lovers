@@ -166,7 +166,7 @@ option{
     flex-direction: column;
     border-radius: 10px;
     background-color: #FFF874;
-    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
   
 /*Estilização das informações dos personagens*/
