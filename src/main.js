@@ -1,93 +1,77 @@
-import {filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica, buscarNome, calcularPorcentagem} from './data.js';
+import {filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica, calculoDePorcentagem} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
  
+
 
 //FUNÇÃO DE IMPRIMIR AS INFORMAÇÕES NA TELA
 function infoCardsTela (data) {
   document.getElementById('info-cards').innerHTML = data.map((item) => `
-  <div class="cards">
-    <div class="front-img">
-      <img class="card-img" src="${item.image}">
-    </div>
-
-      <div class="front-text">
-        <ul class="front-text-card">
-          <li><strong>Nome:</strong>${item.name}</li>
-          <li><strong>Gênero:</strong>${item.gender}</li>      
-          <li><strong>Status:</strong>${item.status}</li>
-          <li><strong>Espécie:</strong>${item.species}</li>
-          <li><strong>Origem:</strong>${item.origin.name}</li>
-          <li><strong>Localização:</strong>${item.location.name}</li>
-            <h4> Aparece em: </h4>
-            <p>${item.episode.length} episódios</p>
-        </ul>
-      </div> 
-
+  <div>
+    <div class="card-img">
+      <img src="${item.image}">
+    </div> 
+      <ul class="info-cards">
+        <li><strong>Nome:</strong>${item.name}</li>
+        <li><strong>Gênero:</strong>${item.gender}</li>      
+        <li><strong>Status:</strong>${item.status}</li>
+        <li><strong>Espécie:</strong>${item.species}</li>
+        <li><strong>Origem:</strong>${item.origin.name}</li>
+        <li><strong>Localização:</strong>${item.location.name}</li>
+      </ul>
   </div>
-`).join('')
+`)
 }
 infoCardsTela(data.results);
 
 
-const selecaoGenero = document.querySelector("#selecao-genero");
-const selecaoEspecie = document.querySelector("#selecao-especies");
-const selecaoStatus = document.querySelector("#selecao-status");
-const selecaoOrdem = document.querySelector("#selecao-ordem");
-
-const buscaNomePersonagem = document.getElementById("text-search")
-const botaoBusca = document.getElementById("botao-buscar")
-const texto = document.getElementById("porcentagem-filtro")
-
-
-//Função exibir calculo de porcentagem
-function mostrarPorcentagem(data) {
-  texto.innerHTML = `A porcentagem dessa categoria é de ${data}`
-}
-
 //FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
+const selecaoGenero = document.querySelector(".selecao-genero");
 function imprimirFiltroGenero(e) {
-  const resultadoGenero = filtroGenero(data.results, e.target.value)
-  const porcentagemText = `${calcularPorcentagem(data.results.length, resultadoGenero.length)}%`
-  mostrarPorcentagem(porcentagemText)
-  return infoCardsTela(resultadoGenero);
+  return infoCardsTela(filtroGenero(data.results, e.target.value));
   }
+selecaoGenero.addEventListener("change", imprimirFiltroGenero);
+
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ESPÉCIE
+const selecaoEspecie = document.querySelector(".selecao-especies");
 function imprimirFiltroEspecie(e) {
-  const resultadoEspecie = filtroEspecie(data.results, e.target.value)
-  const porcentagemTextEspecie = `${calcularPorcentagem(data.results.length, resultadoEspecie.length)}%`
-  mostrarPorcentagem(porcentagemTextEspecie)
-  return infoCardsTela(resultadoEspecie);
+  return infoCardsTela(filtroEspecie(data.results, e.target.value));
   }
+selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
+
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE STATUS
+const selecaoStatus = document.querySelector(".selecao-status");
 function imprimirFiltroStatus(e) {
-  const resultadoStatus = filtroStatus(data.results, e.target.value)
-  const porcentagemStatus = `${calcularPorcentagem(data.results.length, resultadoStatus.length)}%`
-  mostrarPorcentagem(porcentagemStatus)
-  return infoCardsTela(resultadoStatus);
+  return infoCardsTela(filtroStatus(data.results, e.target.value));
   }
+selecaoStatus.addEventListener("change", imprimirFiltroStatus);
+
 
 //FUNÇÃO PARA FAZER A FILTRAGEM DE ORDEM
+const selecaoOrdem = document.querySelector(".selecao-ordem");
 function imprimirFiltroOrdem(e) {
   const order = ordemAlfabetica(data.results, e.target.value)
   return infoCardsTela(order);
   }
-
-//Buscar nomes SEARCH
-function buscarNomePersonagens(e) {
-  const nomePersonagens = buscarNome(data.results, e.target.value)
-  return infoCardsTela(nomePersonagens)
-}
-
-//Adição de Eventos
-selecaoGenero.addEventListener("change", imprimirFiltroGenero);
-selecaoGenero.addEventListener("change", imprimirFiltroGenero);
-selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
-selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
-buscaNomePersonagem.addEventListener("change", buscarNomePersonagens);
-botaoBusca.addEventListener("click", buscarNomePersonagens);
+
+// const calcularPorcentagem = document.querySelector(".calculo-agregado");
+// function calculoGenero(e) {
+//   const estatistica = calculoDePorcentagem(data.results, e.target.value)
+//   return calculo(estatistica);
+//   }
+// calcularPorcentagem.addEventListener("change", calculoGenero);
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,3 +94,12 @@ function infoCardsTela (data) {                                         //funç�
 `)                                                                        
 }                                                   
 infoCardsTela(data.results); */                                           //imprimir na tela as informações
+
+//--------------------------------------------------------------------------------------------------------------------------------
+//console.log(data.results)
+
+//--------------------------------------------------------------------------------------------------------------------------------
+/*Recomendamos que utilize `src/main.js` para todos os códigos que tenham a ver com a exibição dos dados na tela.**
+Com isto nos referimos basicamente à interação com o DOM. Operações como criação de nós, registro de manejadores de eventos 
+(*event listeners* ou *event handlers*) e etc.
+Esta não é a única forma de dividir seu código. Pode utilizar mais arquivos e pastas, sempre e quando a estrutura estiver clara para suas colegas*/
