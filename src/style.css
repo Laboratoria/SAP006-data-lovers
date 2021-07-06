@@ -10,11 +10,10 @@ nav {
   width: 100%;
   height: 12.8%;
   background: #b1c5ed;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  z-index: 1;
 }
 nav ul {
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
   margin-top: auto;
@@ -92,75 +91,6 @@ footer hr {
   margin-top: 50px;
   font-size: 24px;
 }
-/* page characters */
-.selections{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 30px;
-  margin: 0 150px 0 150px;
-  position: relative;
-  bottom: 90px;
-}
-.order{
-  display: flex;
-  align-items: center;
-}
-.filter{
-  display: flex;
-  align-items: center;
-}
-.selections img {
-  width: 25px;
-  height: 25px;
-  padding-right: 5px;
-}
-.selections select {
-  border: none;
-  border-radius: 10px;
-  text-align: center;
-  text-align-last: center;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-} 
-.allChars{
- padding: 30px 0px 0px 100px;
-}
-.cardsCharacters{
-  display: flex;
-  flex-flow: row wrap;
-  perspective: 1000px;
-  position: absolute;
-  height:100%;
-}
-.cards{
-  display: flex;
-  justify-items: center;
-  justify-content: center;
-  margin: 15px 15px;
-  width: 217px;
-  height: 290px;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-  position: relative  
-}
-.cardFront, .cardBack {
-  width: 100%;
-  height: 100%;
-  border: solid 5px #000;
-  background-color: #b1c5ed;
-  text-align: center;
-  backface-visibility: hidden;
-  position: absolute; 
-}
-.cardBack{
-  transform: rotateY(180deg);
-}
-.cardsCharacters .cards:hover{
-  transform: rotateY(180deg);
-}
-
 /*page transition - fadeIn */
 @-webkit-keyframes fadeIn {
   0% {

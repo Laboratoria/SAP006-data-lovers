@@ -8,6 +8,7 @@
     />
     <title>The Studio Ghibli Collection - Personagens</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pagechars.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap"
@@ -36,13 +37,12 @@
           <option value="sorter" selected>Ordenar</option>
           <option value="A-Z">A-Z</option>
           <option value="Z-A">Z-A</option>
-          <option value="age">Idade (crescente)</option>
         </select>
       </div>
       <div class="filter">
         <img src="img/icon-filter.svg" alt="Filter" />
         <select name="select" id="filter">
-          <option value="Filters" selected>Filtros</option>
+          <option value="Filters" selected>Filtrar</option>
           <option value="Male">Homem</option>
           <option value="Female">Mulher</option>
           <option value="Arch-mage/Human">Arquimago</option>
@@ -66,8 +66,7 @@
       </div>
     </section>
     </header>
-    <section class="allChars">
-      <div id="cardsCharacters" class="cardsCharacters"></div>
+      <section id="cardsCharacters" class="cardsCharacters"></section>
     </section>
     <div id="root"></div>
     <script src="main.js" type="module"></script>

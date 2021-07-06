@@ -1,0 +1,27 @@
+.cardAbout {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  background: #b1c5ed;
+  border: solid 2px #9eb8eb;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  width: 50%;
+  height: 50%;
+  margin: 60px auto;
+  padding: 50px;
+}
+.filmTitle {
+  margin-bottom: 700px;
+}
+.cardAbout img {
+  width: 50%;
+  height: 50%;
+}
+.charInfos {
+  text-align: center;
+  font-size: 20px;
+  margin: auto;
+  padding-left: 50px;
+}
