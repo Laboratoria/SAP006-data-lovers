@@ -1,4 +1,4 @@
-import { filterData } from "./data.js";
+import { filterData, sortMovies } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -54,11 +54,10 @@ function displayCardsChar(character) {
 }
 
 function printMovies() {
-  return displayCards(movies);
+  return displayCards(sortMovies(movies, selectMovies.value));
 }
 function printCharacter() {
-  return displayCardsChar(filterData(getPeople(), "gender", selectCharacter.value)
-  );
+  return displayCardsChar(filterData(getPeople(), "gender", selectCharacter.value));
 }
 
 function printSpecie() {
