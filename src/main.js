@@ -1,4 +1,4 @@
-import { computeStats, filterData, sortData } from "./data.js";
+import { computeStats, filterData, sortData, searchName } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const cards = document.querySelector(".cards");
@@ -21,10 +21,10 @@ cards.innerHTML += staticCards;
 
 // Função filtrar:    
 const btn = document.getElementById("btn");
-btn.addEventListener("click", (e) => filtrar(e));
+btn.addEventListener("click", (e) => filter(e));
 
 
-const filtrar = function (e) {
+const filter = function (e) {
   e.preventDefault();
 
   const statusFilter = document.getElementById("status-filter");
@@ -143,3 +143,33 @@ printGenderAverage.innerHTML = `<p class="genderAverage">Média de gêneros:
                                 <p class="genderAverage">Sem gênero:
                                   <span>${genderlessAverage}</span>
                                  </p>`
+
+
+
+// Pesquisar por nome do personagem:
+
+const searchInput = document.getElementById("search");
+
+function searchByName (e){
+  const charactersByName = searchName(data.results, e.target.value);
+  const printSearchResults = charactersByName.map(({ name, status, gender, image, episode }) =>
+    `<div class="cards_container">
+        <div class="character_img">
+          <img src="${image}">
+        </div>
+         <div class="character_info">
+          <span id="character_name">
+            <h3>${name}</h3>
+          </span>
+          <span id="character_status">${status} - ${gender}</span>
+          <span id="episodes">Episodes</span>
+            <p>${episode.map((i) => i.replaceAll(/[^0-9]/g, ' '))}</p>
+         </div>
+     </div>`).join("");
+
+  cards.innerHTML = "";
+  cards.innerHTML += printSearchResults;
+  
+}
+
+searchInput.addEventListener("keyup", searchByName);
