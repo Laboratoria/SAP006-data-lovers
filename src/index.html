@@ -23,7 +23,8 @@
         </ul>
       
       <div class="seletores">
-        <select class="seletor" id="tipoPokemon">
+        <select class="seletor" id="tipoPokemon" autocomplete="off">
+          <option value="">Filtrar por tipo</option>
           <option value="fire">fire</option>
           <option value="water">water</option>
           <option value="normal">normal</option>
@@ -42,8 +43,13 @@
         <button class="seletor" type="submit" id="num">Ordem numérica</button>
         
         <button class="seletor" type="submit" id="name">Ordem alfabética</button>
-       
-        <button class="seletor" type="submit" id="maxcp">Ordenar pelo CP</button>
+
+        <select class="seletor" type="submit" id="maxcp" autocomplete="off">
+          <option value="">Ordenar pelo CP</option>
+          <option value="crescent">Crescente</option>
+          <option value="decrescent">Decrescente</option>
+        </select>
+
         
       
       </div>
@@ -98,13 +104,10 @@
 
 </div>
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 00a97fd4dba89203c45bb71891784b9477618e81
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
       feather.replace()

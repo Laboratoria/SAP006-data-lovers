@@ -5,10 +5,11 @@ import {
   filtrarPelaGeracao,
   ordenarPorNum,
   ordenarPorNome,
-  filterType
+  filterType,
+  sortCp
 } from './data.js';
 
- const pokemonList = data.pokemon.slice(0, 50);
+ const pokemonList = data.pokemon.slice(0, 10);
  let pokeCard = document.getElementById('cards-sem-carosel');
  
  const displayPokes = (pokemonData) => {
@@ -77,16 +78,16 @@ filtrar.addEventListener('change', () => {
 
 });
 
-/*let arrayCp = []
+let ordenarMaxCp;
 const ordenarPorCP = document.getElementById("maxcp");
-
-ordenarPorCP.addEventListener('click', () => {
+ordenarPorCP.addEventListener('change', () => {
   const orderpokes = document.getElementById('cards-sem-carosel')
   orderpokes.innerHTML = '';
   ordenarMaxCp = ordenarPorCP.value;
+
   sortCp(pokemonList, ordenarMaxCp)
   displayPokes(pokemonList)
-})*/
+})
  
 let ordernarPorNumeros;
 const ordenar = document.getElementById("num");

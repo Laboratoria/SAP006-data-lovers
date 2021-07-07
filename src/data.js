@@ -52,27 +52,20 @@ const ordenarPorNome = (data, valor) => {
 };
 
 
+const sortCp = (data, order) => {
+  if (order === "decrescent") {
+    data.sort((a, b) => {
+      return b["stats"]["max-cp"] - a["stats"]["max-cp"];
+    })
 
-
-
-let pokemonList = data.pokemon
-let maxCp = []
-
-const sortCp = (data, valor) => {
-  maxCp.forEach((elem) => {
-    maxCp.push(data[i]["stats"]["max-cp"])
-    maxCp.sort(numericOrder)
-    console.log(maxCp.reverse())
-  }) 
+  } else if (order === "crescent") {
+      data.sort((a, b) => {
+        return a["stats"]["max-cp"] - b["stats"]["max-cp"];
+      })
+    }
     
-  
-  
 }
-/*sortCp(pokemonList)*/
 
-function numericOrder(a, b){
-  return a - b
-}
 
 
 const filterType = (data, valor) => {
@@ -86,7 +79,7 @@ const filterType = (data, valor) => {
 export {
   filtrarPelaGeracao,
   ordenarPorNum,
-  //sortData, 
+  sortCp, 
   filterType,
   ordenarPorNome,
 };

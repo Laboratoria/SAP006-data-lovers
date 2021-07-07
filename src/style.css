@@ -279,11 +279,10 @@ ul  {
 
 .seletor {
   border-radius: 5px;
-  background-color: #f1eded ;
   cursor: pointer;
   margin: 10px;
   display: flex;
-  border: 2px solid black;
+  border: 2px solid white;
   width: 100px;
   height: 80px;
 }
@@ -294,7 +293,7 @@ ul  {
   grid-template-rows: 280px 280px 280px 280px;
   grid-column-gap: 150px;
   grid-row-gap: 150px;
-  margin-top: -600px;
+  margin-top: -500px;
   margin-left: 300px;
 }
 
