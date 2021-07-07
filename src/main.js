@@ -2,6 +2,7 @@ import { getPeople, filtered, ordered } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 const films = data.films;
 const people = getPeople(films);
+let filteredChar = people;
 
 function showChars(chars) {
   document.getElementById("cardsCharacters").innerHTML = chars
@@ -25,13 +26,14 @@ showChars(people);
 
 function filterCharacter(f) {
   const value = f.target.value;
-  if (value === "Male" || value === "Female") {
-    showChars(filtered(people, "gender", value));
-  } else if (value === "Filters") {
-    showChars(people);
+  if (value === "Filters") {
+    filteredChar = people;
+  } else if (value === "Male" || value === "Female") {
+    filteredChar = filtered(people, "gender", value);
   } else {
-    showChars(filtered(people, "specie", value));
+    filteredChar = filtered(people, "specie", value);
   }
+  showChars(filteredChar);
 }
 document.getElementById("filter").addEventListener("change", filterCharacter);
 
@@ -40,7 +42,8 @@ function orderCharacter(o) {
   if (value === "sorter") {
     showChars(people);
   } else {
-    showChars(ordered(people, value));
+    showChars(ordered(filteredChar, value));
   }
 }
+
 document.getElementById("order").addEventListener("change", orderCharacter);

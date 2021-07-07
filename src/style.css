@@ -5,22 +5,23 @@ body {
   padding: 0;
 }
 nav {
-  position: fixed;
+  display: flex;
+  flex-flow: row wrap;
+  position: sticky;
   top: 0;
   width: 100%;
-  height: 12.8%;
   background: #b1c5ed;
-  z-index: 1;
 }
 nav ul {
-  position: fixed;
   display: flex;
   align-items: center;
-  margin-top: auto;
+  flex-wrap: wrap;
+  width: 100%;
   overflow: hidden;
+  margin: 0;
+  list-style: none
 }
 nav ul li {
-  display: inline-block;
   font-size: 18px;
 }
 nav ul li a {
@@ -30,12 +31,9 @@ nav ul li a {
 }
 nav ul li a:hover {
   background: #97b4ee;
-  color: #f2f2f2;
-  box-shadow: inset 3px 2px 3px rgb(190, 203, 247),
-    3px 2px 3px rgb(190, 203, 247);
-}
-h1 {
-  padding-top: 90px;
+  color: #ffffff;
+  box-shadow: inset 3px 2px 3px rgb(139, 171, 240),
+    3px 2px 3px rgb(139, 171, 240);
 }
 h1,
 h2 {
@@ -46,51 +44,47 @@ h2 {
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.numbers {
+.number{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
   font-size: 48px;
-  margin: 0 8%;
+}
+.divisor{
+  margin: 150px 0 0 0;
+  padding: 0;
 }
 .box {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 100px;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border: solid #000;
-  margin: 2% 4%;
   border-radius: 500px;
   border-width: 15px;
 }
 hr {
-  margin-top: 2%;
   background: rgba(2, 2, 2, 0.281);
   border: none;
 }
 footer {
-  margin-top: 30px;
-  text-align: center;
-}
-footer hr {
-  position: absolute;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 90px;
 }
 .totoroInitial {
-  width: 580px;
-  padding-left: 150px;
+  width: 40%;
 }
-.made {
-  margin-top: 50px;
+footer p {
+  text-align: center;
   font-size: 24px;
-}
+} 
 /*page transition - fadeIn */
 @-webkit-keyframes fadeIn {
   0% {

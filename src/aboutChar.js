@@ -6,11 +6,11 @@ const people = getPeople(films);
 let params = new URLSearchParams(window.location.search.substring(1));
 const myChar = params.get("char");
 
-let char = people.find((char) => char.id === myChar);
+let chars = people.find((char) => char.id === myChar);
+
 function aboutChar(people) {
-  document.getElementById("cardAbout").innerHTML = `<img src="${
-    people.img
-  }" class="cardCharImg" alt="Imagem da personagem">
+  document.getElementById("cardAbout").innerHTML = 
+  `<img src=${people.img} class="cardCharImg" alt="Imagem da personagem">
     <div class="charInfos">
     <h3>${people.name.toUpperCase()}</h3>
     <p>Gênero: ${people.gender}</p>
@@ -20,4 +20,4 @@ function aboutChar(people) {
     <p>Cor do cabelo: ${people.hair_color}</p>
     </div>`;
 }
-aboutChar(char);
+aboutChar(chars);
