@@ -197,10 +197,13 @@ option{
 }
 
 
-@media(min-width: 660px) and (max-width: 880px){
+/*RESPONSIVO PARA CELULARES*/
+@media (max-width: 450px){
+    
+
+
+
+
 
 }
 
-@media(min-width: 330px) and (max-width: 660px){
-
-}
