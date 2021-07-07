@@ -8,25 +8,22 @@
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--referência para-->
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-
   </head>
 
     <body>
       <header>
         <section id="logo">
           <img class="logo-rick" src="img/rick and morty.png" alt="Logo cabeçalho" title="Rick and Morty">
-          <img class="logo-familia" src="img/familia.png" alt="Logo cabeçalho" title="Summer, Beth and Jerry Smith">
           <img class="logo-nome"src="img/logo.png" alt="Logo cabeçalho" title="Tudo Tranquileba?"> <!--logo no cabeçalho-->
+          <img class="logo-familia" src="img/familia.png" alt="Logo cabeçalho" title="Summer, Beth and Jerry Smith">
+
         </section>
       </header>
 
         <div id="container-search">
-          <input class="pesquisar" id="text-search" type="search" placeholder="Search..."> <!--campo para pesquisas-->
+          <input class="pesquisar" id="text-search" type="search" placeholder="Buscar Nome..."> <!--campo para pesquisas-->
         </div>
-        <div>
-          <!--<img class="fundo-direita" src="img/direita.png">--><!--imagem fundo Morty-->
-          <!--<img class="fundo-esquerda" src="img/esquerda.png">--><!--imagem fundo Rick-->
-        </div>
+        
         <div id="container-principal">
           <section>
             <select class="menus">
@@ -39,32 +36,39 @@
 
             <select class="menus" id="selecao-genero"> <!--SELECT faz a opção de botão de menu, classe para-->
               <option value="">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
-              <option value="male">&#128102;&#127995;Masculino</option>
-              <option value="female">&#128103;&#127997;Feminino</option>
-              <option value="unknown">&#128100;Indefinido</option>
+              <option value="male">&#128102;&#127995; Masculino</option>
+              <option value="female">&#128103;&#127997; Feminino</option>
+              <option value="unknown">&#128100; Indefinido</option>
             </select>
           
             <select class="menus" id="selecao-especies">
               <option value="">Espécie</option>
-              <option value="alien">&#128125;Alien</option>
-              <option value="animal">&#128054;Animal</option>
-              <option value="human">&#129491;&#127996;Humano</option>
-              <option value="humanoid">&#129302;Humanóide</option>
-              <option value="mytholog">&#127993;Mytholog</option>
-              <option value="unknown">&#128100;Indefinido</option>
+              <option value="alien">&#128125; Alien</option>
+              <option value="animal">&#128054; Animal</option>
+              <option value="cronenberg">&#128121; Cronenberg</option>
+              <option value="disease">&#129298; Doença</option>
+              <option value="human">&#129491;&#127996; Humano</option>
+              <option value="humanoid">&#129503; Humanóide</option>
+              <option value="mytholog">&#127993; Mytholog</option>
+              <option value="parasite">&#128027; Parasita</option>
+              <option value="poopybutthole">&#128169; Poopybutthole</option>
+              <option value="robot">&#129302; Robô</option>
+              <option value="vampire">&#129499; Vampiro</option>
+              <option value="unknown">&#128100; Indefinido</option>
             </select>
+
 
             <select class="menus" id="selecao-status">
               <option value="">Status</option>
-              <option value="alive">&#128147;Vivo</option>
-              <option value="dead">&#128128;Morto</option>
-              <option value="unknown">&#128100;Indefinido</option>
+              <option value="alive">&#128147; Vivo</option>
+              <option value="dead">&#128128; Morto</option>
+              <option value="unknown">&#128100; Indefinido</option>
             </select>
 
             <select class="menus" id="selecao-ordem">
               <option value="">Ordem</option>
-              <option value="AZ">&#8635;A-Z</option>
-              <option value="ZA">&#8634;Z-A</option>      
+              <option value="AZ">&#8635; A-Z</option>
+              <option value="ZA">&#8634; Z-A</option>      
             </select>
               <button class="menus" onClick="window.location.reload();">Limpar Filtros</button>
           </div>         

@@ -10,13 +10,18 @@ body {
     background-color: #051521; 
 }
 
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 /*Estilização do Logo do rick and morty*/
 .logo-rick{
-    position: absolute;
     padding-top: 5px;
     height: 250px;
     width: 240px;
-    margin-left: 150px;
     flex-wrap: wrap;
     justify-items: left;
 }
@@ -27,9 +32,8 @@ body {
     height: 200px;
     width: 900px;
     margin: auto;
-    padding-left: 300px;
-    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .logo-familia{
@@ -37,7 +41,6 @@ body {
     padding-top: 20px;
     height: 230px;
     width: 230px;
-    margin-right: 150px;
     flex-wrap: wrap;
     justify-items: right;
 }
@@ -83,7 +86,7 @@ body {
     text-align: center;
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
-    font-size: 20px;
+    font-size: 25px;
     box-shadow: 0 0 8px 0 rgba(69, 255, 23, 0.589);   
 }
 
@@ -101,8 +104,11 @@ option{
     text-align: center;
     color: #FFEBCD;
     font-family: monospace;
-    font-size: 17px;
-    border-radius: 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 8px 0 rgba(7, 157, 238, 0.817);   
+    width: 60%;
+    margin: 0 auto;
 }
 
 /*Estilização do container dos CARDS*/
@@ -130,45 +136,45 @@ option{
   
 /*Estilização do "container" da imagem dos personagens*/
 .front-img {
-    padding-left: 20px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
  
 /*Estilização da imagem dos personagens*/
 .card-img{
     margin: auto;
     position: relative;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 25px;
     transition: transform 0.8s;
     transform-style: preserve-3d;
     box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5);
+    cursor: pointer;
 }
 
 /*Estilização do "container" das informações dos personagens*/
 .front-text{
-    width: 200px;
+    width: 230px;
     height: 200px;
-    margin: 20px;
+    margin: 20px auto;
     padding: 5px;
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     border-radius: 10px;
     background-color: #FFF874;
-    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5)
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
   
 /*Estilização das informações dos personagens*/
 .front-text-card{
-    margin-left: 10px;
+    margin: 5px;
     text-align: left;
     list-style: none;
-    font-size: 13px;
+    font-size: 15px;
     font-family: monospace ;
     flex-wrap: wrap;
 }
@@ -190,31 +196,11 @@ option{
     flex-wrap: wrap;
 }
 
-/*imagem de fundo do morty*/
-/*.fundo-direita{
-    position: absolute;
-    opacity: 40%;
-    float:right;
-    display: block;
-}*/
-
-/*imagem de fundo do rick*/
-/*.fundo-esquerda{
-    position: absolute;
-    opacity: 40%;
-    float:left;
-    display: block;
-}*/
-
 
 @media(min-width: 660px) and (max-width: 880px){
-
-
 
 }
 
 @media(min-width: 330px) and (max-width: 660px){
-
-
 
 }
