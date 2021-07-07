@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <title>Rick and Morty</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-  <body> 
+<body>
+
+  <div id="root">
+
     <div id="topoPagina">
       <input type="submit" value="botao1">
       <input id="pesquisa" type="text" name="pesquisar">
@@ -27,6 +30,7 @@
     </nav>
 
     <div id="filters">
+
       <select name="filtro1" id="filtro1">
         <option>FILTRO</option>
         <option value="reality">Realidade originária</option>
@@ -56,7 +60,12 @@
 
     </div>
 
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <section id="cardContainer"></section>
+
+  </div>
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
