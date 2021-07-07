@@ -39,6 +39,14 @@ function getPeople() {
   return people;
 }
 
+function getMovieScores(){
+  let scores = []
+  for(let film of movies){
+    scores.push(film.rt_score)
+  }
+  return scores
+}
+
 function displayCardsChar(character) {
   document.querySelector(".container").innerHTML = character.map((char) => `
     <div class="card">
@@ -57,9 +65,22 @@ function displayPercentage(data, dataValue){
   computeStats.innerHTML = `A porcentagem de personagens deste genero é ${results}%`   
 }
 
+function displayMovieScores(){  
+  computeStats.innerHTML = `A média das notas é ${getMovieScores().reduce((accumulator, currentValue) => {
+    return Number(accumulator) + Number(currentValue) / 20
+  },0)}.`
+  
+}
+
 function printMovies() {
+  if(selectMovies.value === "score"){
+    displayMovieScores()
+  }else {
+    computeStats.innerHTML = ""
+  }
   return displayCards(sortMovies(movies, selectMovies.value));
 }
+
 function printCharacter() {
   const filterResult = (filterData(getPeople(), "gender", selectCharacter.value));
   displayPercentage (getPeople(), filterResult)
