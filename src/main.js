@@ -13,9 +13,8 @@ function mostrarCartoes(itens) {
   //   if (mostrarCartoes === []) {
   //     return alert('Filtro não encontrado')
   //   }
-  const cartoes = itens.map(({ status, species, type, origin, image, name }) =>
-        ` <section class="result-card" id="resultado">
-        <div class="flip">
+  const cartoes = itens.map(({ status, species, type, origin, image, name, gender }) =>
+        `<div class="flip">
           <div class="card">
             <div class="front-card">
               <div><img  class="image" src="${image}" alt="personagens Rick and Morty"></div>
@@ -23,18 +22,24 @@ function mostrarCartoes(itens) {
             </div>
 
             <div class="back-card">
-              <h3 class="text-back-card">Status</h3>
-              <p class="legend">${status}</p>
+              <div class="text-back-card>
+                
+                <h3 class="back-title>Origin</h3>
+                <p class="legend">${origin.name}</p>
 
-              <h3 class="text-back-card">Gênero</h3>
-              <p class="legend">${type}</p>
+                <h3 class="back-title">Status</h3>
+                <p class="legend">${status}</p>
 
-              <h3 class="text-back-card">Espécie</h3> 
-              <p class="legend">${species}</p> 
+                <h3 class="back-title">Gênero</h3>
+                <p class="legend">${gender}</p>
+
+                <h3 class="back-title">Espécie</h3> 
+                <p class="legend">${species}</p> 
+              
+              </div> 
             </div>
           </div>
-        </div>
-      </section> `
+        </div>`
     )
     .join("");
 
