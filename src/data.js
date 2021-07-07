@@ -27,6 +27,10 @@ export const sortMovies = (data, condition) => data.sort((a,b) => {
   }
 })
 
+export const computeStatsGender = (data, dataValue) => {
+  return Math.round((dataValue * 100)/data)
+}
+
 
 //ordenar alfabetico 
 
