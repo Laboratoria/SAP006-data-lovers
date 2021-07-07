@@ -1,4 +1,4 @@
-import { filterData, sortMovies } from "./data.js";
+import { filterData, sortMovies , computeStatsGender } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -7,6 +7,7 @@ const selectCharacter = document.querySelector(".select-character");
 const selectSpecie = document.querySelector(".select-specie");
 const selectProducer = document.querySelector(".select-producer");
 const selectDirector = document.querySelector(".select-director");
+const computeStats = document.querySelector(".compute-stats");
 
 function displayCards(movies) {
   document.querySelector(".container").innerHTML = movies.map((film) => `     
@@ -27,8 +28,6 @@ function displayCards(movies) {
     </div>  
     `).join("");
 }
-
-
 
 function getPeople() {
   let people = [];
@@ -53,11 +52,18 @@ function displayCardsChar(character) {
     `).join("");
 }
 
+function displayPercentage(data, dataValue){
+  const results = computeStatsGender(data.length, dataValue.length);
+  computeStats.innerHTML = `A porcentagem de personagens deste genero é ${results}%`   
+}
+
 function printMovies() {
   return displayCards(sortMovies(movies, selectMovies.value));
 }
 function printCharacter() {
-  return displayCardsChar(filterData(getPeople(), "gender", selectCharacter.value));
+  const filterResult = (filterData(getPeople(), "gender", selectCharacter.value));
+  displayPercentage (getPeople(), filterResult)
+  return displayCardsChar(filterResult)
 }
 
 function printSpecie() {
