@@ -38,7 +38,6 @@ input, select, button {
     font-size: 16px;
 }
 
-
 input, #sort-btn{
     grid-row: 1;
 }
@@ -178,6 +177,12 @@ p {
 
 span {
     font-weight: 600;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 @media (max-width:901px) {

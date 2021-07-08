@@ -73,16 +73,21 @@ describe("filterData", () => {
   });
 
   it("should return the gender and status of the character", () => {
-    expect(filterData(mockData, "Alive", "Male").length).toEqual(1);
+    const genderAndStatusExpected = filterData(mockData, "Alive", "Male").length;
+    const genderAndStatusResults = 1;
+    expect(genderAndStatusExpected).toEqual(genderAndStatusResults);
   });
 
   it("should return all characters that is Alive", () => {
-    expect(filterData(mockData, "Alive", "").length).toEqual(3);
-
+    const statusExpected = filterData(mockData, "Alive", "").length;
+    const statusResults = 3;
+    expect(statusExpected).toEqual(statusResults);
   });
 
   it("should return all characters that is Male", () => {
-    expect(filterData(mockData, "", "Male").length).toEqual(1);
+    const genderExpected = filterData(mockData, "", "Male").length;
+    const genderResults = 1
+    expect(genderExpected).toEqual(genderResults);
   });
 });
 
@@ -93,8 +98,9 @@ describe("sortData", () => {
   });
 
   it("should return main characters", () => {
-    sortData(mockData);
-    expect(mockData[0]).toEqual({
+    const filterExpected = sortData(mockData);
+    const orderExpected = filterExpected[0];
+    const orderResults = {
       "id": 1,
       "name": "Rick Sanchez",
       "status": "Alive",
@@ -132,7 +138,8 @@ describe("sortData", () => {
         "https://rickandmortyapi.com/api/episode/30",
         "https://rickandmortyapi.com/api/episode/31"
       ]
-    });
+    }
+    expect(orderExpected).toEqual(orderResults);
   });
 });
 
@@ -142,11 +149,15 @@ describe("computeStats", () => {
   });
 
   it("compute.characters should return total characters", () => {
-    expect(computeStats.characters(mockData)).toEqual(3);
+    const totalCharactersExpected = computeStats.characters(mockData);
+    const totalCharactersResults = 3;
+    expect(totalCharactersExpected).toEqual(totalCharactersResults);
   });
 
   it("compute.gender should return gender average", () => {
-    expect(computeStats.gender(mockData, "Female")).toEqual(33.33);
+    const genderAverageExpected = computeStats.gender(mockData, "Male");
+    const genderAverageResults = 33.33;
+    expect(genderAverageExpected).toEqual(genderAverageResults);
   });
 });
 
@@ -155,7 +166,8 @@ describe("searchName", () => {
     expect(typeof searchName).toBe("function");
   });
   it("shoul return characters by name", () => {
-    expect(searchName(mockData, "butt")).toEqual([
+    const nameExpected = searchName(mockData, "butt");
+    const nameResults = [
       {
         "id": 153, 
         "name": "Hamster In Butt", 
@@ -164,6 +176,6 @@ describe("searchName", () => {
         "episode": ["https://rickandmortyapi.com/api/episode/8", 
         "https://rickandmortyapi.com/api/episode/19"]
       }]
-     )
+    expect(nameExpected).toEqual(nameResults);
   });
 })
