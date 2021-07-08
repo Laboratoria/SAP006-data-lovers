@@ -3,13 +3,15 @@
 
 //import { dataghibli } from './data.js';
 
-import { ordemAlfabetica, pesquisaName } from './data.js';
+import { ordemAlfabetica, getPeople } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
 
 // Importar Filmes//
 
 const films = data.films
+const people = getPeople (films)
+
 
 const listaImpressa = document.getElementById("listaImpressa")
 
@@ -36,36 +38,82 @@ showFilme(films)
 //Importar Personagem //
 
 const listaPersonagem = document.getElementById("listaPersonagem")
-const showPeople = (peopleList, film) => {
+const showPeople = (peopleList) => {
+  listaPersonagem.innerHTML = ""
   peopleList.forEach(people => {
     listaPersonagem.innerHTML +=
       `
     <li class="cardPersonagem">
           <img class="card-poster" src=" ${people.img}">
-          <p class="card-personagens"> ${people.name} - Personagem</p>
-          <p class="card-filme"> Filme: ${film} </p>
+          <p class="card-personagens">${people.name}</p>
           <p class="card-gênero"> Genero: ${people.gender}</p>
           <p class="card-idade"> Idade: ${people.age}</p>
           <p class="card-specie"> Espécie: ${people.specie}</p>
+         
     </li> 
   `
   })
 }
 
-for (let film of films) {
-  let peopleList = film.people
-  showPeople(peopleList, film.title)
-}
+showPeople (people)
+
+
 
 //ORDENAR //
-
 
 const ordenar = document.querySelector(".order");
 function ordemFilme(event) {
   const order = ordemAlfabetica(data.films, event.target.value)
-  //console.log(order)
   showFilme(order);
 }
 ordenar.addEventListener("change", ordemFilme);
+
+
+//FILTRO FILME_PERSONAGEM//
+
+const filtrarMenu = document.getElementById("filterMenu")
+filtrarMenu.addEventListener("change", function (event) {
+  let filmeMenu = event.target.value
+  if (filmeMenu == "Filmes") {
+    listaPersonagem.innerHTML = ""
+    showFilme (films)
+  }
+  else if (filmeMenu == "Personagem"){
+    listaImpressa.innerHTML = ""
+    showPeople (people)
+  }
+  else {
+    listaImpressa.innerHTML = ""
+    listaPersonagem.innerHTML = ""
+    showFilme (films)
+    showPeople (people)
+  }
+})
+
+//FILTRO DIRETOR//
+const filterFilm = document.getElementById("select_id")
+filterFilm.addEventListener("change", function (event) {
+  let director = event.target.value
+  let filteres = films.filter(film => film.director == director);
+  showFilme(filteres)
+})
+
+
+
+//SEARCH//
+const buscarFilme = document.getElementById("txtBusca");
+let charList = [];
+
+buscarFilme.addEventListener("change", (event) => {
+  const nomeFilme = event.target.value.toUpperCase();
+  console.log(nomeFilme);
+  const filterchar = charList.filter((films) => {
+    return (
+      films.title.includes(nomeFilme) ||
+      films.people.includes(nomeFilme)
+    );
+  });
+  showFilme(filterchar);
+});
 
 
