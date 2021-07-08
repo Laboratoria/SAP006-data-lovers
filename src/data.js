@@ -9,7 +9,7 @@ export const anotherExample = () => {
 };*/
 
 
-
+//ORDENAR//
 export const ordemAlfabetica = (data, order) => {
   if (order === "crescente") {
     return data.sort((a, z) => a.title > z.title ? 1 : -1)
@@ -17,6 +17,16 @@ export const ordemAlfabetica = (data, order) => {
     return data.sort((a, z) => a.title > z.title ? -1 : 1)
   } return data
 };
+
+//FILTRO//
+
+export const getPeople = films => {
+  let people = []
+  for (let film of films) {
+    people = people.concat (film.people)  //concat cria um novo array unindo todos os elementos que foram passados como parâmetro, na ordem dada, para cada argumento e seus elementos (se o elemento passado for um array). //
+  }
+  return people
+}
 
 
 
