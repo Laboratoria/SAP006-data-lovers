@@ -199,7 +199,9 @@ option{
 
 /*RESPONSIVO PARA CELULARES*/
 @media (max-width: 450px){
-    
+    section img .logo-rick{
+        display: none;
+    }
 
 
 
