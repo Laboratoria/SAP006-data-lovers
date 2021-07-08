@@ -1,12 +1,147 @@
-img {
-    width: 250px;
-    height: 250px;
-}
- 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /*box-sizing: border-box;*/
+    }
+    
+    body {
+    background: #dba3b0;
+    background-image: url(Fundopage1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    
+    .navbar-container{
+    background-color: rgb(24, 23, 23);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+    }
+    
+    h1{
+    font: normal 50px sans-serif;
+    text-align: center;
+    color: #dba3b0;
+    }
+    
+    a{
+    color: #dba3b0; 
+    } 
 
-.container {
-    border: solid 1px black;
-    width: 300px;
-    height: 100%;
-    display: flexbox;
-}
+    .Menu{
+        color: black;
+        display: flex;
+        margin-left: 10px;
+        }
+        
+        .listaImpressa{
+        text-align: center;
+        display: inline-block;
+        /*max-height: 70vh;*/
+        margin-left: 10%;
+        margin-top: 24px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        overflow: auto;
+        /*grid-template-columns: repeat(auto-fit, minmax(300px,1fr));*/
+        }
+        
+        .cardGhibli{
+        list-style: none;
+        padding: 40px;
+        color: #222;
+        border-radius: 20px;
+        background: rgba(19, 18, 21, 0.747);
+        width: 13vw;
+        height: 70vh;
+        margin: 10px;
+        padding: 1%;
+        flex-direction: column;
+        display: flex;
+        }
+        
+        .card-poster{
+        border-radius: 20px;
+        justify-content: center;
+        } 
+
+        .card-titulo{
+            color: #dba3b0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-size: 95%;
+            margin-top: 20px;
+            }
+            
+            .card-lançamento{
+            color: #dba3b0;
+            font-size: 60%;
+            }
+            
+            .card-descrição{
+            color: #dba3b0;
+            font-size: 68%;
+            margin-top: 10px;
+            }
+            
+            .card-diretor{
+            color: #dba3b0;
+            font-size: 60%;
+            margin-top: 10px;
+            }
+            .card-producer{
+            color: #dba3b0;
+            font-size: 60%;
+            }
+            .card-avaliação{
+            color: #dba3b0;
+            font-size: 60%;
+            } 
+            /*Personagens*/
+
+.listaPersonagem{
+    text-align: center;
+    display: inline-block;
+    /*max-height: 70vh;*/
+    margin-left: 10%;
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: auto;
+    }
+    
+    .cardPersonagem{
+    list-style: none;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(19, 18, 21, 0.747);
+    width: 13vw;
+    height: 70vh;
+    margin: 10px;
+    padding: 1%;
+    flex-direction: column;
+    display: flex;
+    color: #dba3b0;
+    font-size: 80%;
+    margin-top: 10px;
+    }
+    .card-personagens{
+    color: #dba3b0;
+    font-size: 60%;
+    font-size: 165%;
+    margin-top: 50px;
+    }
+    
+    footer{
+    color: black;
+    text-align: center;
+    margin-top: 25px;
+    } 
