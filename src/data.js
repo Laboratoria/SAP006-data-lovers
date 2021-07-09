@@ -8,6 +8,13 @@ export const anotherExample = () => {
   return 'OMG';
 };*/
 
+//SEARCH//
+
+export const buscarName = (data, condition) => {
+  const resultadoBusca = data.filter(n => n.title.toLowerCase().includes(condition.toLowerCase()));
+  return resultadoBusca;
+};
+
 
 //ORDENAR//
 export const ordemAlfabetica = (data, order) => {
@@ -23,10 +30,13 @@ export const ordemAlfabetica = (data, order) => {
 export const getPeople = films => {
   let people = []
   for (let film of films) {
-    people = people.concat (film.people)  //concat cria um novo array unindo todos os elementos que foram passados como parâmetro, na ordem dada, para cada argumento e seus elementos (se o elemento passado for um array). //
+    const chars = film.people.map (function (char){
+      char.movie = film.title
+     return char
+    })
+    people = people.concat(film.people)  //concat cria um novo array unindo todos os elementos que foram passados como parâmetro, na ordem dada, para cada argumento e seus elementos (se o elemento passado for um array). //
   }
   return people
 }
-
 
 
