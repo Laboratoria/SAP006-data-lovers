@@ -1,14 +1,9 @@
 export const filterData = (data, statusParameter, genderParameter) => {
-  const bothFiltersIsEmpty = statusParameter === "" && genderParameter === "";
   const bothFiltersAreChosen = statusParameter !== "" && genderParameter !== "";
   const genderParameterIsNotEmpty = genderParameter !== "";
-  const statusParameterIsNotEmpty = statusParameter !== "";
+  const statusParameterIsNotEmpty = statusParameter !== "" ;
 
   let filterResults = "";
-
-  if (bothFiltersIsEmpty) {
-    throw TypeError(alert("Valores dos filtros vazio"));
-  }
 
   if (bothFiltersAreChosen) {
     filterResults = data.filter(results => results.status === statusParameter && results.gender === genderParameter);
