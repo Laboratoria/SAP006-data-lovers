@@ -1,3 +1,4 @@
+
 //////////////////FUNÇÃO DE FILTRAGEM GÊNERO - filter()
 export const  filtroGenero = (data, condition) => {
   const resultadoGenero = data.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());
@@ -37,3 +38,6 @@ export const calcularPorcentagem = (total, portion) => {
   return porcentagem;
 };
 
+// Estas funções devem ser*[puras](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)*e independentes do DOM. 
+// Estas funções serão depois usadas a partir do arquivo`src/main.js`, ao carregar a página e a cada vez que o usuário interagir com a interface 
+// (cliques, seleções, filtros, ordenação, etc).*/
