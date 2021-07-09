@@ -32,7 +32,7 @@
 
     <main>
       <section>
-        <!-- filtro de seleção de tipos -->
+        <!-- Pesquisa de Pokémons por tipo -->
         <select name="select" id="type" class="filtroTipos">
           <option value="filtrar" selected>Tipos</option>
           <option value="grass">Planta</option>
@@ -55,6 +55,7 @@
           <option value="fairy">Fada</option>
         </select>
 
+        <div class="result"></div>
         <!-- Pesquisa de Pokémon por nome -->
         <input
           type="pokemonsearch"
@@ -72,8 +73,26 @@
           class="botaoFiltrar"
         />
       </section>
+      <br>
+      <br>
+      <br>
+      <select id="order">
+        <option value=""> Ordenar por </option>
+        <option value="MaxCPMinCP"> CP ↑ </option>
+        <option value="MinCPMaxCP"> CP ↓ </option>
+        <br>
+        <br>
+        <br>
+        <br>
+
+      </select>
+      <div id="resultcalc"> </div>
+
+      </section>
+
       <br />
       <br />
+      <!-- ------------Cards----------- -->
       <nav>
         <div class="container-pokedex">
           <ul class="pokedex" id="cards"></ul>
