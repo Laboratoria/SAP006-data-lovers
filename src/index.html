@@ -23,17 +23,12 @@
 
         <div id="container-search">
           <input class="pesquisar" id="text-search" type="search" placeholder="Buscar Nome..."> <!--campo para pesquisas-->
+          <button class="curiosidades"><a href="https://blog.saraiva.com.br/rick-and-morty/" target="blank">Curiosidades</a></button>
         </div>
         
         <div id="container-principal">
           <section>
-            <select class="menus">
-              <option value="">Curiosidades</option>
-              <option value="https://blog.saraiva.com.br/rick-and-morty/">Saraiva</option>
-              <option value="https://shmakov.github.io/Rick-and-Morty-Characters/">Aparição por Episódio</option>
-              <option value="https://super.abril.com.br/mundo-estranho/17-detalhes-fantasticos-que-te-farao-amar-rick-e-morty-ainda-mais/">Super Interessante</option>
-              <option value="https://play.google.com/store/apps/details?id=com.turner.pocketmorties&hl=pt_BR&gl=US">Morty Pocket Jogo</option>
-            </select>
+            
 
             <select class="menus" id="selecao-genero"> <!--SELECT faz a opção de botão de menu, classe para-->
               <option value="">Gênero</option> <!--OPTION é usado para criar um "menu" que representa um item, no caso o GÊNERO-->
@@ -71,7 +66,7 @@
               <option value="AZ">&#8635; A-Z</option>
               <option value="ZA">&#8634; Z-A</option>      
             </select>
-              <button class="menus" onClick="window.location.reload();">Limpar Filtros</button>
+              <button id="media-limpar" class="menus" onClick="window.location.reload();">Limpar Filtros</button>
           </div>         
             <p class="calculo" id="porcentagem-filtro"></p> <!--Onde será exibido o calculo de porcentagem-->
         </section>
