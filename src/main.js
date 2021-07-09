@@ -9,7 +9,16 @@ const selectProducer = document.querySelector(".select-producer");
 const selectDirector = document.querySelector(".select-director");
 const computeStats = document.querySelector(".compute-stats");
 
+function resetCards(){
+  selectMovies.value = ""
+  selectCharacter.value = ""
+  selectSpecie.value = ""
+  selectProducer.value = ""
+  selectDirector.value = ""  
+}
+
 function displayCards(movies) {
+  resetCards()
   document.querySelector(".container").innerHTML = movies.map((film) => `     
     <div class="card">
         <div class="img" style="background-image: url(${film.poster})">
@@ -31,12 +40,12 @@ function displayCards(movies) {
 
 function getPeople() {
   let people = [];
-  for (let film of movies) {
+  for (let film of movies) {    
     for (let char of film.people) {
-      people.push(char);
-    }
+     people.push(char)
+   }
   }
-  return people;
+    return people;
 }
 
 function getMovieScores(){
@@ -48,6 +57,7 @@ function getMovieScores(){
 }
 
 function displayCardsChar(character) {
+  resetCards()
   document.querySelector(".container").innerHTML = character.map((char) => `
     <div class="card">
         <div class="img" style="background-image: url(${char.img})">               
@@ -61,8 +71,8 @@ function displayCardsChar(character) {
 }
 
 function displayPercentage(data, dataValue){
-  const results = computeStatsGender(data.length, dataValue.length);
-  computeStats.innerHTML = `A porcentagem de personagens deste genero é ${results}%`   
+  const results = computeStatsGender(data, dataValue);
+  computeStats.innerHTML = `A porcentagem de personagens desta seleção é ${results}%`   
 }
 
 function displayMovieScores(){  
@@ -83,19 +93,23 @@ function printMovies() {
 
 function printCharacter() {
   const filterResult = (filterData(getPeople(), "gender", selectCharacter.value));
-  displayPercentage (getPeople(), filterResult)
+  displayPercentage(getPeople(), filterResult)
   return displayCardsChar(filterResult)
 }
 
 function printSpecie() {
-  return displayCardsChar(filterData(getPeople(), "specie", selectSpecie.value));
+  const filterResult = (filterData(getPeople(), "specie", selectSpecie.value))
+  displayPercentage(getPeople(), filterResult)
+  return displayCardsChar(filterResult)
 }
 
 function printDirector() {
+  computeStats.innerHTML = ""
   return displayCards(filterData(movies, "director", selectDirector.value));
 }
 
 function printProducer() {
+  computeStats.innerHTML = ""
   return displayCards(filterData(movies, "producer", selectProducer.value));
 }
 

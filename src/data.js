@@ -17,7 +17,6 @@ export const sortMovies = (data, condition) => data.sort((a,b) => {
       return 1
     }
   }
-
   if (condition === "score"){
     return b.rt_score - a.rt_score 
   }
@@ -28,7 +27,7 @@ export const sortMovies = (data, condition) => data.sort((a,b) => {
 })
 
 export const computeStatsGender = (data, dataValue) => {
-  return Math.round((dataValue * 100)/data)
+  return ((dataValue.length * 100) / data.length).toFixed(2)
 }
 
 
