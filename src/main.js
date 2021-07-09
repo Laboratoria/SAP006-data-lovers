@@ -1,8 +1,7 @@
-import { filters, ordenarAZ } from './data.js';
+import { filters, sortAtoZ} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
-//console.log(films);
 
 const cards = document.querySelector(".mainCards");
 
@@ -28,7 +27,6 @@ function showingCards(itens) {
         </div>
         </div>
     </div>`;
-        // console.log(elementTitle);
         cards.innerHTML += elementTitle;
     }
 }
@@ -39,18 +37,12 @@ director.addEventListener("change", (event) => {
     const selectedDirector = event.target.value;
     const filtered = filters(films, "director", selectedDirector);
     showingCards(filtered);
-
-    //console.log(selectedDirector);
-    //cards.innerHTML = "";
 });
 
 releaseDate.addEventListener("change", (event) => {
     const selectedDate = event.target.value;
     const filtered = filters(films, "release_date", selectedDate);
     showingCards(filtered);
-
-    //console.log(selectedDirector);
-    //cards.innerHTML = "";
 });
 
 //REVER: (mesma lógica para os personagens)
@@ -58,9 +50,6 @@ terrain.addEventListener("change", (event) => {
     const selectedTerrain = event.target.value;
     const filtered = filters(films, "locations(terrain)", selectedTerrain);
     showingCards(filtered);
-
-    //console.log(selectedDirector);
-    //cards.innerHTML = "";
 });
 
 sortAZ.addEventListener("change", (event) => {
@@ -69,15 +58,3 @@ sortAZ.addEventListener("change", (event) => {
     showingCards(filterAZ);
 }   
 );
-
-
-// films.map(function(filmeAtual, indice, array) {
-//     console.log("filmeAtual:", filmeAtual)
-//     console.log("indice:", indice)
-//     console.log("array:", array)
-// })
-
-// for (let i = 0; i < films.length; i++) {
-//     const element = films[i];
-//     console.log(i, element)
-// };

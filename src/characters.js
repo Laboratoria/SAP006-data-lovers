@@ -1,42 +1,61 @@
-import { } from './data';
+import { filters, sortChar } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-const films = data.films
-// console.log(films)
+const char = data.films;
+//console.log(char);
 
-const cards = document.querySelector(".mainCards");
+const peopleList = [];
+for (let i = 0; i < char.length; i++) {
+    for (let j = 0; j < char[i].people.length; j++) {
+        peopleList.push(char[i].people[j]);
+    }
+};
 
-// for (let i = 0; i < films.length; i++) {
-//     const element = films[i];
-//     console.log(i, element)
-// }
+const charsCards = document.getElementById("characterCards");
 
-
-for (const film of films) {
-    const title = film.title
-    const poster = film.poster
-    // const elementTitleAntigo = "<p>" + title + "</p>"
-    const elementTitle = `
-    <div class="film">
-        <img src="${poster}" />
-        <p class="title">${title}</p>
-    </div>
-    `
-    // console.log(elementTitle);
-    cards.innerHTML += elementTitle
+function showingCards(itens) {
+    charsCards.innerHTML = "";
+    for (const people of itens) {
+        const name = people.name;
+        const photo = people.img;
+        const backAge = people.age;
+        const backGender = people.gender;
+        const backSpecie = people.specie;
+        const elementTitle = `
+    <div id="divCard" class="film">
+        <div class="innerCard">
+        <div class="frontCard">
+            <img src="${photo}"/>
+            <p class="title">${name}</p>
+        </div>
+        <div class="backCard">
+            <p class="backText">Age:  ${backAge}</p>
+            <p class="backText">Gender: ${backGender}</p>
+            <p class="backText">Specie: ${backSpecie}</p>
+        </div>
+        </div>
+    </div>`;
+        charsCards.innerHTML += elementTitle;
+    }
 }
- 
 
-films.map(function(filmeAtual, indice, array) {
-    // console.log("filmeAtual:", filmeAtual)
-    // console.log("indice:", indice)
-    // console.log("array:", array)
-})
+showingCards(peopleList);
 
+gender.addEventListener("change", (event) => {
+    const selectedGender = event.target.value;
+    const filtered = filters(peopleList, "gender", selectedGender);
+    showingCards(filtered);
+});
 
-const selectDirector = document.getElementById("director");
-selectDirector.addEventListener("change", (event) => {
-    const selectedDirector = event.target.value
-    console.log(selectedDirector)
-    cards.innerHTML = ""
-})
+specie.addEventListener("change", (event) => {
+    const selectedSpecie = event.target.value;
+    const filtered = filters(peopleList, "specie", selectedSpecie);
+    showingCards(filtered);
+});
+
+sortAZ.addEventListener("change", (event) => {
+    const selectedSort = event.target.value;
+    const filterAZ = sortChar(peopleList, selectedSort);
+    showingCards(filterAZ);
+}
+);
