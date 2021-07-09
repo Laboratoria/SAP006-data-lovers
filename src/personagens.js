@@ -22,10 +22,10 @@ function showCharacters(a) {
           <img src="${item.img}"class="poster-card" id="img-character"><p><br></p>
          </div>
         <div class="flip-card-back">
-          <p class="title-of-film"><strong>Nome: ${item.name}</strong></p>
-          <p class="info"><strong>Idade: ${item.age}</p></strong>
-          <p><strong>Gênero: ${item.gender}</p></strong>
-          <p><strong>Espécie: ${item.specie}</p></strong>
+          <p class="title-of-film"><strong>Name: ${item.name}</strong></p>
+          <p class="info"><strong>Age: ${item.age}</p></strong>
+          <p><strong> Gender: ${item.gender}</p></strong>
+          <p><strong>Specie: ${item.specie}</p></strong>
           <p><strong> Hair color: ${item.hair_color}</p></strong>
           <p><strong> Eye color: ${item.eye_color}</p></strong>
           </div>
@@ -40,7 +40,7 @@ showCharacters(characters)
 //seleciona por especies
 const filterSpecies = (evento) => {
     evento.preventDefault();
-
+    
     const valueSelected = selectSpecies.value;
     const selectedSpecies= filterSpeciesSelected(characters,valueSelected);
     showCharacters(selectedSpecies);
@@ -69,8 +69,8 @@ const orderAZ = (evento) => {
 
     const valueSelected = organizedAZ.value;
     const charactersAZ = order(characters, valueSelected);
-    
-    showCharacters(charactersAZ)
+
+    showCharacters(charactersAZ);
     
 };
 
@@ -93,7 +93,8 @@ const printCuriosity = (a) => {
 };
 
 
-const organizedAZ = document.querySelector('[data-az-order]')
+
+const organizedAZ = document.querySelector('[data-az-order]');
 const organizedZA = document.querySelector('[data-za-order]');
 const selectedGender = document.getElementById('select-gender');
 const selectSpecies = document.getElementById('select-species');
@@ -103,4 +104,3 @@ organizedAZ.addEventListener('click', orderAZ);
 organizedZA.addEventListener('click', orderZA);
 selectedGender.addEventListener('change', selectGender);
 selectSpecies.addEventListener('change', filterSpecies);
-
