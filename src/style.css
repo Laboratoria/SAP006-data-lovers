@@ -198,12 +198,57 @@ option{
 
 
 /*RESPONSIVO PARA CELULARES*/
-@media (max-width: 450px){
-    section img .logo-rick{
+@media (max-width: 480px){
+    
+    .logo-rick, .logo-familia {
         display: none;
     }
 
+    .logo-nome{
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    
+    #container-search{
+        margin-left: auto;
+        align-items: center;
+    }
+ 
+    .pesquisar{
+        font-size: 30px;
+        width: 600px;
+    }
 
+    .container-card{
+        position: center;
+        align-items: center;
+    }
+
+    .cards{
+        width: 600px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .front-img {
+        padding-left: 32%;
+        
+    }
+    
+    .card-img{
+        margin-top: 4%;
+        width: 370px;
+        height: 370px; 
+    }
+
+    .front-text{
+        width: 230px;
+        height: 200px;
+        margin: 98% auto;
+    }
 
 
 
