@@ -53,7 +53,7 @@
   
  }
  .slides{
-    width: 500%;/*Pq são 4 fotos, se for 9 é 1000%*/
+    width: 500%;
     height: 500px;
     display: flex;
  }

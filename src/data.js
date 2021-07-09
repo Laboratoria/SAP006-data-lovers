@@ -1,27 +1,27 @@
 
 //filtra diretor
-export const filterDirectorSelected = (animations, valueSelected) =>
-  animations.filter(item => item.director === valueSelected);
+export const filterDirectorSelected = (animations, valueSelected) => animations.filter(item => item.director === valueSelected);
 
 //ordem de lançamento
-export const releaseYear = (animations) =>
-  animations.sort((a, b) => (a.release_date > b.release_date ? 1 : -1)); 
+export const releaseYear = (animations) => animations.sort((a, b) => (a.release_date > b.release_date ? 1 : -1)); 
 
-//ordena por avvaliação
-export const rattingScore = (animations) => animations.sort((a, b) => Number(a.rt_score) < Number(b.rt_score) ? 1 : -1); 
+export const decrescentReleaseYear = (animations) => (releaseYear(animations).reverse());
+
+//ordena por avaliação
+export const rattingScore = (animations) => animations.sort((a, b) => (Number(a.rt_score)) < (Number(b.rt_score)) ? 1 : -1); 
+
 
 //ordena por letras
-export const order = (characters) =>
-  characters.sort((a, b) => (a.name > b.name ? 1 : -1));
+export const order = (characters) => characters.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+export const decrescentAlphabeticOrder = (characters) => (order(characters).reverse());
 
 
-//seleciona/filtra por espécies
-export const filterSpeciesSelected = (characters, valueSelected) =>
-  characters.filter(item => item.specie === valueSelected);
+export const filterSpeciesSelected = (characters, valueSelected) => characters.filter(item => item.specie === valueSelected);
 
-//seleciona/filtra por genero
-export const filterGender = (characters, valueSelected) =>
-  characters.filter(item => item.gender === valueSelected);
+export const filterGender = (characters, valueSelected) => characters.filter(item => item.gender === valueSelected);
+
+export const filterAge = (characters, gender) => characters.filter(item => item.age == gender);
 
 
 //calcula idade média

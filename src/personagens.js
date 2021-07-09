@@ -1,4 +1,4 @@
-import { filterSpeciesSelected, filterGender, order, averageAge} from './data.js';
+import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const animations = data.films
@@ -33,7 +33,7 @@ function showCharacters(a) {
         </div> `
     }
     document.getElementById("poster-people").innerHTML = people;
-};
+}
 
 showCharacters(characters)
 
@@ -78,11 +78,10 @@ const orderZA = (evento) => {
     evento.preventDefault();
 
     const valueSelected = organizedZA.value;
-    const charactersZA = order(characters, valueSelected).reverse();
+    const charactersZA = decrescentAlphabeticOrder(characters, valueSelected);
     showCharacters(charactersZA);
 
 };
-
 
 const printCuriosity = (a) => {
     
