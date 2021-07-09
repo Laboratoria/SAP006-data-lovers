@@ -1,167 +1,124 @@
-import { filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica, buscarNome, calcularPorcentagem} from '../src/data.js';
+import { filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica} from '../src/data.js';
+
+////////////////////// TESTES DOS TESTES 01 /////////////////////////
+const mockPersonagens = [
+   {
+      "name": "Bearded Lady",
+      "status": "Dead",
+      "species": "Alien",
+      "gender": "Female",
+    },
+    {
+      "name": "Boobloosian",
+      "status": "Dead",
+      "species": "Alien",
+      "gender": "unknown",
+    },
+    {
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+    },
+    {
+      "name": "Morty Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+    }
+];
 
 
-// /////////////////////TESTE PARA FILTRAR GENERO
-// describe('filtroGenero', () => {
-//   const resultadoGenero =
-//   [{ gender: "Male"},
-//   { gender: "Female"},
-//   { gender: "unknown"}
-//   ];
-  
-//   it("deverá ser 'a function'", () => {
-//     expect(typeof filtroGenero).toBe('function');
-//   });
-
-//   it('returns ``', () => {
-//     expect((resultadoGenero, [{"gender": "Male"}, {"gender": "Female"}, {"gender": "unknown"}])).toEqual([
-//       { gender: "Male"},
-//       { gender: "Female"},
-//       { gender: "unknown"}
-//     ]);
-//   });
-// });
-
-// /////////////////////TESTE PARA FILTRAR ESPÉCIE
-// describe('filtroEspecie', () => {
-//   const resultadoEspecie =
-//   [{ species: "Alien"},
-//   { species: "Human"},
-//   { species: "unknown"}
-//   ];
-  
-//   it("deverá ser 'a function'", () => {
-//     expect(typeof filtroEspecie).toBe('function');
-//   });
-
-//   it('returns ``', () => {
-//     expect((resultadoEspecie, [{"species": "Alien"}, {"species": "Human"}, {"species": "unknown"}])).toEqual([
-//       { species: "Alien"},
-//       { species: "Human"},
-//       { species: "unknown"}
-//     ]);
-//   });
-// });
-
-// /////////////////////TESTE PARA FILTRAR STATUS
-// describe('filtroStatus', () => {
-//   const resultadoStatus =
-//   [{ status: "Alive"},
-//   { status: "Dead"},
-//   { status: "unknown"}
-//   ];
-  
-//   it("deverá ser 'a function'", () => {
-//     expect(typeof filtroStatus).toBe('function');
-//   });
-
-//   it('returns ``', () => {
-//     expect((resultadoStatus, [{"status": "Alive"}, {"status": "Dead"}, {"status": "unknown"}])).toEqual([
-//       { status: "Alive"},
-//       { status: "Dead"},
-//       { status: "unknown"}
-//     ]);
-//   });
-// });
-
-// /////////////////////TESTE PARA FILTRAR EM ORDEM ALFABÉTICA CRESCENTE
-// describe('ordemAlfabetica', () => {
-//   const order =
-//   [{ name: "Morty"},
-//   { name: "Rick"},
-//   { name: "Summer"}
-//   ];
-  
-//   it("deverá ser 'a function'", () => {
-//     expect(typeof ordemAlfabetica).toBe('function');
-//   });
-
-//   it('returns ``', () => {
-//     expect((order, [{"name": "Morty"}, {"name": "Rick"}, {"name": "Summer"}])).toEqual([
-//       { name: "Morty"},
-//       { name: "Rick"},
-//       { name: "Summer"}
-//     ]);
-//   });
-// });
+const mockNames = [
+  {"name": "Bearded Lady"},
+  {"name": "Boobloosian"},
+  {"name": "Morty Smith"},
+  {"name": "Rick Sanchez"},
+]
 
 
 
-
-/////////////////////TESTE PARA FILTRAR GENERO
-/*describe('filtroGenero deve ser uma function', () => {
-  it("deverá ser 'a function'", () => {
-    expect(typeof data.filtroGenero).toBe('function');
+/////////////////////TESTE PARA FILTRAR O GENERO
+  describe('filtroGenero', () => {
+    it('Deverá ser uma função', () => {
+    expect(typeof filtroGenero).toBe('function');
   });
 
-  it('returns `filter`', () => {
-    const resultadoGenero = filtroGenero("", "male", "female", "unknown");
-    console.log(resultadoGenero)
-    expect(filtroGenero("resultadoGenero")).toBe("male","female");
+  it('Deverá filtrar pelo gênero Male', () => {
+    const genderMale = "Male"
+    const expected = filtroGenero(mockPersonagens, genderMale)
+    expect (expected.length).toEqual(2)
+    expect (expected[0].gender).toEqual(genderMale)
+    expect (expected[1].gender).toEqual(genderMale)
   });
 });
 
-/////////////////////TESTE PARA FILTRAR ESPÉCIE
+
+/////////////////////TESTE PARA FILTRAR A ESPÉCIE 
 describe('filtroEspecie', () => {
-  it('is a function', () => {
-    expect(typeof filtroEspecie).toBe('function');
-  });
+  it('Deverá ser uma função', () => {
+  expect(typeof filtroEspecie).toBe('function');
+});
 
-  it('returns `filter species`', () => {
-    const resultadoEspecie = filtroEspecie("","Alien","Human","Parasite");
-    console.log(resultadoEspecie)
-    //expect(filtroEspecie("resultadoEspecie")).toBe("Alien","Human","Parasite");
+it('Deverá filtrar pela espécie Alien', () => {
+  const specieAlien = "Alien"
+  const expected = filtroEspecie(mockPersonagens, specieAlien)
+  expect (expected.length).toEqual(2)
+  expect (expected[0].species).toEqual(specieAlien)
+  expect (expected[1].species).toEqual(specieAlien)
   });
 });
 
-/////////////////////TESTE PARA FILTRAR STATUS
+
+/////////////////////TESTE PARA FILTRAR O STATUS 
 describe('filtroStatus', () => {
-  it('is a function', () => {
-    expect(typeof filtroStatus).toBe('function');
+  it('Deverá ser uma função', () => {
+  expect(typeof filtroStatus).toBe('function');
+});
+
+it('Deverá filtrar pelo status Alive', () => {
+  const statusAlive = "Alive"
+  const expected = filtroStatus(mockPersonagens, statusAlive)
+  expect (expected.length).toEqual(2)
+  expect (expected[0].status).toEqual(statusAlive)
+  expect (expected[1].status).toEqual(statusAlive)
   });
 
-  it('returns `filter status`', () => {
-    const resultadoStatus = filtroStatus("","Alive", "Dead", "unknown");
-    console.log(resultadoStatus)
-    //expect(filtroStatus("resultadoStatus")).toBe("Alive", "Dead", "unknown");
+it('Deverá filtrar pelo status Dead', () => {
+  const statusDead = "Dead"
+  const expected = filtroStatus(mockPersonagens, statusDead)
+  expect (expected.length).toEqual(2)
+  expect (expected[0].status).toEqual(statusDead)
+  expect (expected[1].status).toEqual(statusDead)
   });
 });
 
-/////////////////////TESTE PARA FILTRAR EM ORDEM ALFABÉTICA
+
+/////////////////////TESTE PARA ORDENAÇÃO ALFABÉTICA CRESCENTE
 describe('ordemAlfabetica', () => {
-  it('is a function', () => {
-    expect(typeof ordemAlfabetica).toBe('function');
-  });
+  it('Deverá ser uma função', () => {
+  expect(typeof ordemAlfabetica).toBe('function');
+});
 
-  it('returns `ordem alfabética`', () => {
-    const order = ordemAlfabetica("","AZ", "ZA");
-    console.log(order)
-    //expect(ordemAlfabetica("order")).toBe("AZ","ZA");
+  it('should return the array in alphabetic order"', () => {
+    expect(ordemAlfabetica(mockNames, "AZ")).toStrictEqual(mockNames);
+  });
+  it('should return the array in reverse alphabetic order"', () => {
+    expect(ordemAlfabetica(mockNames, "ZA")).toStrictEqual(mockNames.reverse());
   });
 });
 
-/////////////////////TESTE PARA BUSCAR POR NOME
-describe('buscarNome', () => {
-  it('is a function', () => {
-    expect(typeof buscarNome).toBe('function');
-  });
 
-  it('returns `buscar nome`', () => {
-    const nomePersonagens = buscarNome("","Rick","Morty");
-    console.log(nomePersonagens)
-    //expect(buscarNome("nomePersonagens")).toBe("Rick","Morty");
-  });
-});
+/////////////////////TESTE PARA CALCULAR A PORCENTAGEM
+// describe('calcularPorcentagem', () => {
+//   it('Deverá ser uma função', () => {
+//   expect(typeof calcularPorcentagem).toBe('function');
+// });
 
-/////////////////////TESTE PARA CALCULAR PORCENTAGEM
-describe('calcularPorcentagem', () => {
-  it('is a function', () => {
-    expect(typeof calcularPorcentagem).toBe('function');
-  });
-
-  it('returns `calculo porcentagem`', () => {
-    const texto = calcularPorcentagem("");
-    console.log(texto)
-    //expect(calcularPorcentagem("texto")).toBe("");
-  });
-});*/
+// it('Deverá retornar 50% de Male', () => {
+//   const resultadoPersonagens = ((mockPersonagens.length * 100) /)
+//   const expected = calcularPorcentagem(mockPersonagens, resultadoPersonagens)
+//   expect (expected.length).toEqual(50)
+ 
+//   });
+// });

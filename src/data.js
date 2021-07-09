@@ -1,3 +1,4 @@
+
 //////////////////FUNÇÃO DE FILTRAGEM GÊNERO - filter()
 export const  filtroGenero = (data, condition) => {
   const resultadoGenero = data.filter((personagem) => personagem.gender.toLowerCase() === condition.toLowerCase());

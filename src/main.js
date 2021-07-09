@@ -38,6 +38,7 @@ const selecaoOrdem = document.querySelector("#selecao-ordem");
 //////////////////TODOS OS GET ELEMENT BY ID JUNTOS
 const buscaNomePersonagem = document.getElementById("text-search");
 const texto = document.getElementById("porcentagem-filtro");
+const botaoLimpar = document.getElementById("media-limpar")
 
 
 //////////////////FUNÇÃO PARA EXIBIR O CÁLCULO DE PORCENTAGEM
@@ -81,6 +82,11 @@ function buscarNomePersonagens(e) {
   return infoCardsTela(nomePersonagens);
 }
 
+function limparFiltros(){
+window.location.reload();
+}
+
+
 //////////////////ADIÇÃO DE EVENTOS
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
@@ -88,3 +94,4 @@ selecaoEspecie.addEventListener("change", imprimirFiltroEspecie);
 selecaoStatus.addEventListener("change", imprimirFiltroStatus);
 selecaoOrdem.addEventListener("change", imprimirFiltroOrdem);
 buscaNomePersonagem.addEventListener("keyup", buscarNomePersonagens);
+botaoLimpar.addEventListener("click", limparFiltros)
