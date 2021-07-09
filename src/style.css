@@ -67,17 +67,25 @@ body {
 }
 
 .curiosidades{
-    background-color: #97ce4c;
+    background-color: #084D6E;
     border-radius: 50px;
     padding: 15px;    
-    margin-bottom: auto;
-    text-align: left;
+    margin-left: 2%;
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
-    box-shadow: 0 0 8px 0 rgba(69, 255, 23, 0.589);
+    box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
 }
 
+#media-limpar{
+    background-color: #084D6E;
+    box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
+    color: white;
+}
+
+a{
+    color: white;
+}
 
 /*Estilização do container onde ficam os menus*/
 #container-principal section{
@@ -210,8 +218,8 @@ option{
 }
 
 
-/*RESPONSIVO PARA CELULARES*/
-@media (max-width: 460px){
+/*RESPONSIVO PARA TABLETS*/
+@media screen and (min-width:481px) and (max-width:770px){
     
     .logo-rick, .logo-familia {
         display: none;
@@ -241,6 +249,83 @@ option{
     }
 
     #media-limpar{
+        margin-left: 1%;
+        background-color: #084D6E;
+        box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
+        color: white;
+    }
+
+    .pesquisar{
+        font-size: 30px;
+        width: 600px;
+    }
+
+    .container-card{
+        position: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .cards{
+        width: 40%;
+        height: 450px;
+        justify-content: center;
+        display: block;
+    }
+    
+   .card-img{
+        margin: 5% 15%;
+        width: 70%;
+        height: 70%;
+        display: block;
+    }
+
+    .front-text{
+        margin-top: 1%;
+        width: 90%;
+        height: 40%;
+    }
+
+    .front-text-card{
+        margin: 1%;
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+
+/*RESPONSIVO PARA CELULARES*/
+@media screen and (max-width: 480px){
+    
+    .logo-rick, .logo-familia {
+        display: none;
+    }
+
+    .logo-nome{
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #container-search{
+        margin-left: auto;
+        align-items: center;
+    }
+ 
+    .curiosidades{
+        margin-top: 7%;
+        background-color: #084D6E;
+        box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
+    }
+
+    a {
+        color: white;
+    }
+
+    #media-limpar{
+        margin-left: 3%;
         background-color: #084D6E;
         box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
         color: white;
@@ -285,4 +370,3 @@ option{
     }
 
 }
-
