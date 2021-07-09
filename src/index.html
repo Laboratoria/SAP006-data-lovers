@@ -14,7 +14,8 @@
     <!--<h1>STUDIO GHIBLI</h1>-->
     <img id="headerImg" src="./header cover.png" alt="header">
   </header>
-  <menu id="menu">
+
+  <menu>
     <h3>
       HOME
       INFOS
@@ -22,65 +23,91 @@
     </h3>
   </menu>
 
-  <div class="filters" id="filterSort">
-    <select class="select" id="sortAZ">
-      <option selected disabled value="">Sort by</option>
-      <option value="A-Z">A-Z</option>
-      <option value="Z-A">Z-A</option>
-    </select>
-  </div>
+  <div class="filterSearch">
+    <div class="filters" id="filterSort">
+      <select class="select" id="sortAZ">
+        <option selected disabled value="">Sort by</option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A">Z-A</option>
+      </select>
+    </div>
 
-  <div class="filters" id="filterDate">
-    <select class="select" id="releaseDate">
-      <option selected disabled value="">Release Date</option>
-      <option value="1986">1986</option>
-      <option value="1988">1988</option>
-      <option value="1989">1989</option>
-      <option value="1991">1991</option>
-      <option value="1992">1992</option>
-      <option value="1994">1994</option>
-      <option value="1995">1995</option>
-      <option value="1997">1997</option>
-      <option value="1999">1999</option>
-      <option value="2001">2001</option>
-      <option value="2002">2002</option>
-      <option value="2004">2004</option>
-      <option value="2006">2006</option>
-      <option value="2008">2008</option>
-      <option value="2010">2010</option>
-      <option value="2011">2011</option>
-      <option value="2013">2013</option>
-      <option value="2014">2014</option>
-    </select>
-  </div>
+    <div class="filters" id="filterDate">
+      <select class="select" id="releaseDate">
+        <option selected disabled value="">Release Date</option>
+        <option value="1986">1986</option>
+        <option value="1988">1988</option>
+        <option value="1989">1989</option>
+        <option value="1991">1991</option>
+        <option value="1992">1992</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1997">1997</option>
+        <option value="1999">1999</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2004">2004</option>
+        <option value="2006">2006</option>
+        <option value="2008">2008</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+      </select>
+    </div>
 
-  <div class="filters" id="filterDirector">
-    <select class="select" id="director">
-      <option selected disabled value="">Director</option>
-      <option value="Gorō Miyazaki">Gorō Miyazaki</option>
-      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-      <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
-      <option value="Hiroyuki Morita">Hiroyuki Morita</option>
-      <option value="Isao Takahata">Isao Takahata</option>
-      <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
-    </select>
-  </div>
+    <div class="filters" id="filterDirector">
+      <select class="select" id="director">
+        <option selected disabled value="">Director</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+      </select>
+    </div>
 
-  <div class="filters" id="filterTerrain">
-    <select class="select" id="terrain">
-      <option selected disabled value="">Terrain</option>
-      <option value="City">City</option>
-      <option value="Earthsea">Earthsea</option>
-      <option value="Forest">Forest</option>
-      <option value="Hill">Hill</option>
-      <option value="Marsh">Marsh</option>
-      <option value="Mountain">Mountain</option>
-      <option value="Ocean">Ocean</option>
-      <option value="Plain">Plain</option>
-      <option value="River">River</option>
-      <option value="TODO">TODO</option>
-      <option value="[]">--Undefined--</option>
-    </select>
+    <div class="filters" id="filterRating">
+      <select class="select" id="rating">
+        <option selected disabled value="">Rating score</option>
+        <option value="41">41</option>
+        <option value="75">75</option>
+        <option value="78">78</option>
+        <option value="83">83</option>
+        <option value="87">87</option>
+        <option value="89">89</option>
+        <option value="91">91</option>
+        <option value="92">92</option>
+        <option value="93">93</option>
+        <option value="94">94</option>
+        <option value="95">95</option>
+        <option value="96">96</option>
+        <option value="97">97</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+
+    <div class="filters" id="filterTerrain">
+      <select class="select" id="terrain">
+        <option selected disabled value="">Terrain</option>
+        <option value="City">City</option>
+        <option value="Earthsea">Earthsea</option>
+        <option value="Forest">Forest</option>
+        <option value="Hill">Hill</option>
+        <option value="Marsh">Marsh</option>
+        <option value="Mountain">Mountain</option>
+        <option value="Ocean">Ocean</option>
+        <option value="Plain">Plain</option>
+        <option value="River">River</option>
+        <option value="TODO">TODO</option>
+      </select>
+    </div>
+
+    <div>
+      <input type="search" name="searchFilm" id="searchFilm" placeholder="Search...">
+      <button id="btnFilm" class="search">Search</button>
+    </div>
   </div>
 
   <nav class="principal">

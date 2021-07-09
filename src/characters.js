@@ -1,4 +1,4 @@
-import { } from './data';
+import { filters } from './data';
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films
@@ -40,3 +40,4 @@ selectDirector.addEventListener("change", (event) => {
     console.log(selectedDirector)
     cards.innerHTML = ""
 })
+

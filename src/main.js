@@ -1,8 +1,7 @@
-import { filters, ordenarAZ } from './data.js';
+import { filters, sortAtoZ, terreno } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
-//console.log(films);
 
 const cards = document.querySelector(".mainCards");
 
@@ -35,15 +34,13 @@ function showingCards(itens) {
 
 showingCards(films);
 
-director.addEventListener("change", (event) => {
-    const selectedDirector = event.target.value;
-    const filtered = filters(films, "director", selectedDirector);
-    showingCards(filtered);
-
-    //console.log(selectedDirector);
-    //cards.innerHTML = "";
+sortAZ.addEventListener("change", (event) => {
+    const selectedSort = event.target.value;
+    const filterAZ = sortAtoZ(films, selectedSort);
+    showingCards(filterAZ);
 });
 
+// fazer cálculo agregado:
 releaseDate.addEventListener("change", (event) => {
     const selectedDate = event.target.value;
     const filtered = filters(films, "release_date", selectedDate);
@@ -53,31 +50,31 @@ releaseDate.addEventListener("change", (event) => {
     //cards.innerHTML = "";
 });
 
-//REVER: (mesma lógica para os personagens)
-terrain.addEventListener("change", (event) => {
-    const selectedTerrain = event.target.value;
-    const filtered = filters(films, "locations(terrain)", selectedTerrain);
+director.addEventListener("change", (event) => {
+    const selectedDirector = event.target.value;
+    const filtered = filters(films, "director", selectedDirector);
     showingCards(filtered);
 
     //console.log(selectedDirector);
     //cards.innerHTML = "";
 });
 
-sortAZ.addEventListener("change", (event) => {
-    const selectedSort = event.target.value;
-    const filterAZ = ordenarAZ(films, selectedSort);
-    showingCards(filterAZ);
-}   
-);
+// fazer cálculo agregado:
+rating.addEventListener("change", (event) => {
+    const selectedRating = event.target.value;
+    const filtered = filters(films, "rt_score", selectedRating);
+    showingCards(filtered);
+});
 
+terrain.addEventListener("change", (event) => {
+    const selectedTerrain = event.target.value;
+    const filtered = terreno(films, selectedTerrain);
 
-// films.map(function(filmeAtual, indice, array) {
-//     console.log("filmeAtual:", filmeAtual)
-//     console.log("indice:", indice)
-//     console.log("array:", array)
-// })
+    showingCards(filtered);
+});
 
-// for (let i = 0; i < films.length; i++) {
-//     const element = films[i];
-//     console.log(i, element)
-// };
+const inputSearch = document.getElementById("btnFilm");
+inputSearch.onclick = function (){
+    let searchFilm = document.getElementById("searchFilm").value;
+    document.getElementById("searchFilm").value = 
+}
