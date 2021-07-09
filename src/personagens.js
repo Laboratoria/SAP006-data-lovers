@@ -1,4 +1,4 @@
-import { filterSpeciesSelected, filterGender, order, filterAge} from './data.js';
+import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const animations = data.films
@@ -33,9 +33,9 @@ function showCharacters(a) {
         </div> `
     }
     document.getElementById("poster-people").innerHTML = people;
-};
+}
 
-//showCharacters(characters)
+showCharacters(characters)
 
 //seleciona por especies
 const filterSpecies = (evento) => {
@@ -54,10 +54,12 @@ const selectGender = (evento) => {
    const valueSelected = selectedGender.value;
    const gender = filterGender(characters, valueSelected);
 
-   const teste = data.films[8].age;
-   console.log(teste)
-   
+   const selectAges = averageAge(gender)
+
+   printCuriosity(selectAges);
+
    showCharacters(gender);
+
 };
 
 
@@ -76,24 +78,19 @@ const orderZA = (evento) => {
     evento.preventDefault();
 
     const valueSelected = organizedZA.value;
-    const charactersZA = order(characters, valueSelected).reverse();
+    const charactersZA = decrescentAlphabeticOrder(characters, valueSelected);
     showCharacters(charactersZA);
 
 };
 
-const averageAge = (valueGender) =>{
-    //characters.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial]));
-
-    //const totalAge = characters.reduce((acc, item))
-}
-
-const printCuriosity = () => {
+const printCuriosity = (a) => {
     
-    const conteudo = `<p class="content"> Did you know?  <br/><br/>${averageAge()} </p>`;
+    const conteudo = `
+        <p class="content-average"><strong> A média de idade : ${a} </p></strong>`
     
-
+    document.getElementById("curiosities").innerHTML = conteudo;
+    
 };
-
 
 
 const organizedAZ = document.querySelector('[data-az-order]')
@@ -104,5 +101,6 @@ const selectSpecies = document.getElementById('select-species');
 
 organizedAZ.addEventListener('click', orderAZ);
 organizedZA.addEventListener('click', orderZA);
-selectedGender.addEventListener('click', selectGender);
-selectSpecies.addEventListener('click', filterSpecies);
+selectedGender.addEventListener('change', selectGender);
+selectSpecies.addEventListener('change', filterSpecies);
+

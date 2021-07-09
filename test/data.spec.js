@@ -1,6 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
-
-
+/*
 describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
@@ -9,15 +7,200 @@ describe('example', () => {
   it('returns `example`', () => {
     expect(example()).toBe('example');
   });
-});
+}); */
 
+import { releaseYear, decrescentReleaseYear, filterDirectorSelected, rattingScore, order, decrescentAlphabeticOrder, filterGender, filterSpeciesSelected} from "../src/data";
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+const charactersTest = [
+  {
+    "name": "San",
+    "gender": "Female",
+    "age": "16",
+    "specie": "Human"
+  },
+  {
+    "name": "Jiji",
+    "gender": "Male",
+    "age": "13",
+    "specie": "Cat"
+  },
+  {
+    "name": "Totoro",
+    "gender": "Male",
+    "age": "1300",
+    "specie": "Totoro"
+  },
+  {
+    "name": "Moro",
+    "gender": "Female",
+    "age": "300",
+    "specie": "Wolf"
+  },
+  {
+    "name": "Yuko Harada",
+    "gender": "Female",
+    "age": "14",
+    "specie": "Human"
+  },
+]
+
+const filmsTest = [
+  {
+    "title": "Castle in the Sky",
+    "director": "Hayao Miyazaki",
+    "release_date": "1986",
+    "rt_score": "95",
+  },
+  {
+    "title": "Princess Mononoke",
+    "director": "Hayao Miyazaki",
+    "release_date": "1997",
+    "rt_score": "92",
+  },
+  {
+    "title": "Only Yesterday",
+    "director": "Isao Takahata",
+    "release_date": "1991",
+    "rt_score": "100",
+  },
+  {
+    "title": "The Secret World of Arrietty",
+    "director": "Hiromasa Yonebayashi",
+    "release_date": "2010",
+    "rt_score": "95",
+  },
+  {
+    "title": "Grave of the Fireflies",
+    "director": "Isao Takahata",
+    "release_date": "1988",
+    "rt_score": "97",
+  },
+]
+
+//Tests films
+describe('releaseYear()', () => {
+
+  it('should be a function', () => {
+    expect(typeof releaseYear).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('should return movies by release date', () => {
+    expect(releaseYear(filmsTest)).toEqual([
+      { "title": "Castle in the Sky", "director": "Hayao Miyazaki", "release_date": "1986", "rt_score": "95", },
+      { "title": "Grave of the Fireflies", "director": "Isao Takahata", "release_date": "1988", "rt_score": "97", },
+      { "title": "Only Yesterday", "director": "Isao Takahata", "release_date": "1991", "rt_score": "100", },
+      { "title": "Princess Mononoke", "director": "Hayao Miyazaki", "release_date": "1997", "rt_score": "92", },
+      { "title": "The Secret World of Arrietty", "director": "Hiromasa Yonebayashi", "release_date": "2010", "rt_score": "95", }]);
   });
+})
+
+/*describe('decrescentReleaseYear()', () => {
+
+  it('should be a function', () => {
+    expect(typeof decrescentReleaseYear).toBe('function');
+  })
+
+  it('should return movies by release date', () => {
+    expect(decrescentReleaseYear(filmsTest)).toEqual([
+    { "title": "The Secret World of Arrietty", "director": "Hiromasa Yonebayashi", "release_date": "2010", "rt_score": "95" },
+    { "title": "Princess Mononoke", "director": "Hayao Miyazaki", "release_date": "1997", "rt_score": "92" },
+    { "title": "Only Yesterday", "director": "Isao Takahata", "release_date": "1991", "rt_score": "100" },
+    { "title": "Grave of the Fireflies", "director": "Isao Takahata", "release_date": "1988", "rt_score": "97" },
+    { "title": "Castle in the Sky", "director": "Hayao Miyazaki", "release_date": "1986", "rt_score": "95" }]);
 });
+  })*/
+
+describe('should return movies by descrescent release date', () => {
+  expect(decrescentReleaseYear(filmsTest)).toEqual([
+    { "title": "The Secret World of Arrietty", "director": "Hiromasa Yonebayashi", "release_date": "2010", "rt_score": "95" },
+    { "title": "Princess Mononoke", "director": "Hayao Miyazaki", "release_date": "1997", "rt_score": "92" },
+    { "title": "Only Yesterday", "director": "Isao Takahata", "release_date": "1991", "rt_score": "100" },
+    { "title": "Grave of the Fireflies", "director": "Isao Takahata", "release_date": "1988", "rt_score": "97" },
+    { "title": "Castle in the Sky", "director": "Hayao Miyazaki", "release_date": "1986", "rt_score": "95" }]);
+})
+
+describe('rattingScore()', () => {
+
+  it('should be a function', () => {
+    expect(typeof rattingScore).toBe('function');
+  });
+
+  it('should be return movies by decrescent ratting score', () => {
+    expect(rattingScore(filmsTest)).toEqual([
+      { "title": "Only Yesterday", "director": "Isao Takahata", "release_date": "1991", "rt_score": "100" },
+      { "title": "Grave of the Fireflies", "director": "Isao Takahata", "release_date": "1988", "rt_score": "97" },
+      { "title": "Castle in the Sky", "director": "Hayao Miyazaki", "release_date": "1986", "rt_score": "95" },
+      { "title": "The Secret World of Arrietty", "director": "Hiromasa Yonebayashi", "release_date": "2010", "rt_score": "95" },
+      { "title": "Princess Mononoke", "director": "Hayao Miyazaki", "release_date": "1997", "rt_score": "92" }]);
+  });
+})
+
+
+describe('filterDirectorSelected()', () => {
+
+  it('should be a function', () => {
+    expect(typeof filterDirectorSelected).toBe('function');
+  });
+
+  it('should return movies by director', () => {
+    expect(filterDirectorSelected(filmsTest, "Hiromasa Yonebayashi")).toStrictEqual([
+      { "title": "The Secret World of Arrietty", "director": "Hiromasa Yonebayashi", "release_date": "2010", "rt_score": "95" }]);
+  });
+})
+
+
+//Tests characters
+
+describe('order()', () => {
+
+  const charactersName = [{ "name": "Aiko" }, { "name": "Totoro" }, { "name": "Eboshi" }];
+
+  it('should be a function', () => {
+    expect(typeof order).toBe('function');
+  })
+
+  it('should return characters in alphabetic order', () => {
+    expect(order(charactersName)).toEqual([{ "name": "Aiko" }, { "name": "Eboshi" }, { "name": "Totoro" }]);
+  });
+})
+
+
+describe('decrescentAlphabeticOrder', () => {
+
+  const charactersName = [{ "name": "Aiko" }, { "name": "Eboshi" }, { "name": "Totoro" }];
+
+  it('should be a function', () => {
+    expect(typeof decrescentAlphabeticOrder).toBe('function');
+  });
+
+  it('should return characters in decrescent alphabetic order', () => {
+    expect(decrescentAlphabeticOrder(charactersName)).toEqual([{ "name": "Totoro" }, { "name": "Eboshi" }, { "name": "Aiko" }]);
+  });
+})
+
+
+describe('filterGender()', () => {
+
+  it('should be a function', () => {
+    expect(typeof filterGender).toBe('function');
+  });
+
+  it('should return characters by selected gender', () => {
+    expect(filterGender(charactersTest, "Male")).toStrictEqual([
+      { "name": "Jiji", "gender": "Male", "age": "13", "specie": "Cat" },
+      { "name": "Totoro", "gender": "Male", "age": "1300", "specie": "Totoro" }]);
+  });
+})
+
+describe('filterSpeciesSelected()', () => {
+
+  it('should be a function', () => {
+    expect(typeof filterSpeciesSelected).toBe('function');
+  });
+
+  it('should return characters by selected specie', () => {
+    expect(filterSpeciesSelected(charactersTest, "Human")).toStrictEqual([
+      { "name": "San", "gender": "Female", "age": "16", "specie": "Human" },
+      { "name": "Yuko Harada", "gender": "Female", "age": "14", "specie": "Human" }]);
+  });
+})
