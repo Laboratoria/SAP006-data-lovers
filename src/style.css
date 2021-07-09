@@ -109,7 +109,6 @@ option{
     box-shadow: 0 0 8px 0 rgba(7, 157, 238, 0.817);   
     width: 60%;
     margin: 0 auto;
-
 }
 
 /*Estilização do container dos CARDS*/
@@ -140,7 +139,6 @@ option{
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
  
 /*Estilização da imagem dos personagens*/
@@ -168,7 +166,7 @@ option{
     flex-direction: column;
     border-radius: 10px;
     background-color: #FFF874;
-    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.5);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
   
 /*Estilização das informações dos personagens*/
@@ -199,32 +197,17 @@ option{
 }
 
 
-
-/*imagem de fundo do morty*/
-/*.fundo-direita{
-    position: absolute;
-    opacity: 40%;
-    float:right;
-    display: block;
-}*/
-
-/*imagem de fundo do rick*/
-/*.fundo-esquerda{
-    position: absolute;
-    opacity: 40%;
-    float:left;
-    display: block;
-}*/
-
-
-@media(min-width: 660px) and (max-width: 880px){
-
-
+/* @media(min-width: 660px) and (max-width: 880px){
 
 }
 
 @media(min-width: 330px) and (max-width: 660px){
 
+} */
 
-
+@media(max-width: 450px) {
+    #logo{
+        display: block;
+    }
+    
 }
