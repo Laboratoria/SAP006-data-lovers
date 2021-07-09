@@ -68,10 +68,6 @@ describe("filterData", () => {
     expect(typeof filterData).toBe('function');
   });
 
-  it("should throw TypeError when invoked with wrong argument types", () => {
-    expect(() => filterData("")).toThrow(TypeError);
-  });
-
   it("should return the gender and status of the character", () => {
     const genderAndStatusExpected = filterData(mockData, "Alive", "Male").length;
     const genderAndStatusResults = 1;

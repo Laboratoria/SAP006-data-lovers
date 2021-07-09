@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RICK E MORTY</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RICK E MORTY</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <header>
+      <h1>RICK E MORTY</h1>
+      <form class="menu-filter">
+        <input type="search" placeholder="Pesquisar" id="search" />
+        <button id="sort-btn" class="sort">Personagens Principais</button>
+        <select name="filter" id="status-filter">
+          <option class="status" value="" selected disabled;>STATUS</option>
+          <option value="Alive">Alive</option>
+          <option value="Dead">Dead</option>
+          <option value="unknown">Unknown</option>
+        </select>
+        <select name="filter" id="gender-filter">
+          <option class="gender" value="" selected disabled;>GÊNERO</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="unknown">Unknown</option>
+          <option value="Genderless">Genderless</option>
+        </select>
+        <button id="btn-clearFilters" type="submit">LIMPAR</button>
+      </form>
+    </header>
+    <main>
+      <div class="container">
+        <div class="statistic">
+          <div class="stats" id="totalCharacters"></div>
+          <div class="stats" id="genderAverage"></div>
+        </div>
 
-<body>
-  <header>
-    <h1>RICK E MORTY</h1>
-    <form class="menu-filter">
-      <input type="search" placeholder="Pesquisar" id="search">
-      <button id="sort-btn" class="sort">Personagens Principais</button>
-      <select name="filter" id="status-filter">
-        <option class="status" value="" selected disabled;>STATUS</option>
-        <option value="Alive">Alive</option>
-        <option value="Dead">Dead</option>
-        <option value="unknown">Unknown</option>
-      </select>
-      <select name="filter" id="gender-filter">
-        <option class="gender" value="" selected disabled;>GÊNERO</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="unknown">Unknown</option>
-        <option value="Genderless">Genderless</option>
-      </select>
-      <button id="btn" class="filter" type="submit">FILTRAR</button>
-      <button id="btn-clearFilters" type="submit">LIMPAR</button>      
-    </form>
-  </header>
-  <main>
-    <div class="container">
-      <div class="statistic">
-        <div class="stats" id="totalCharacters"></div>
-        <div class="stats" id="genderAverage"></div>
+        <section class="cards"></section>
+        <script src="main.js" type="module"></script>
       </div>
-
-      <section class="cards">
-    </section>
-    <script src="main.js" type="module"></script>
-    </div>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>
