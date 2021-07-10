@@ -1,8 +1,6 @@
 import { showFilms, showDirectors } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-console.log(showFilms(data.films))
-
 //função para criar cards dos filmes
 //const listaFilmes = showFilms(data.ghibli)
 
@@ -28,6 +26,7 @@ const printCardsFilms = (listaFilmes) => {
     })
 }
 
+<<<<<<< HEAD
 console.log(showDirectors(data.director))
 
 const printCardsDirectors = (directorList) => {
@@ -49,6 +48,13 @@ const printCardsDirectors = (directorList) => {
 
 
 /*const printCardsCharacters = (characterList) => {
+=======
+printCardsFilms(data.films) 
+
+
+
+/* const printCardsCharacters = (characterList) => {
+>>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
     characterList.forEach(character => {
         const characterCardsElements = document.getElementById("boxCharacaterCards");
         characterCardsElements.innerHTML += `
@@ -73,6 +79,11 @@ const printCardsDirectors = (directorList) => {
 //     printCardsFilms(listaFilmes)
 // })
 
+<<<<<<< HEAD
 printCardsFilms(data.films)
 printCardsCharacters(data.people)
+=======
+*/
+
+>>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 
