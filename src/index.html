@@ -3,60 +3,71 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>cards and stuff</title>
+  <link rel="stylesheet" href="/SAP006-data-lovers/src/style.css" />
+
 </head>
 
 <body>
-  <div class="container container__main">
-    <main>
-      <div class="container container__nav">
-        <nav class="buttonsBar" id="nave">
-          <a class="buttonsBarItem" href="" id="homeButton">Home</a>
-          <a class="buttonsBarItem" href="" id="seasonsButton">Seasons</a>
-          <a class="buttonsBarItem" href="" id="episodesButton">Episodes</a>
-          <a class="buttonsBarItem" href="" id="charactersButton">Characters</a>
-        </nav>
+  <main class="container container__main">
+    <div class="buttonsBar">
+      <nav class=" buttonsBar nav__buttonsBar" id="topBar">
+        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="homeButton">home</a>
+        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="seasonsButton">seasons</a>
+        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="episodesButton">episodes</a>
+        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="charactersButton">characters</a>
+      </nav>
+    </div>
+
+    <header>
+      <h1 class="header__title">Rick and Morty card library</h1>
+    </header>
+
+
+    <div class="container container__filterBar">
+      <div class="filterBar">
+        <select class="filterBar filterBar__item" name="alphabeticalFilter" id="alphabeticalFilter">
+          <option selected disabled>select search option</option>
+          <option class="filterBar__item select__alphabet" value="aToZ">A - Z</option>
+          <option class="filterBar__item select__alphabet" value="zToA">Z - A</option>
+          <option class="filterBar__item select__alphabet" value="name">name</option>
+        </select>
+
+        <select class="filterBar filterBar__item" name="statusFilter" id="statusFilter">
+          <option selected disabled>select status</option>
+          <option class="filterBar__item select__status" value="dead">dead</option>
+          <option class="filterBar__item select__status" value="alive">alive</option>
+          <option class="filterBar__item select__status" value="unknown">unknown</option>
+        </select>
+
+        <select class="filterBar filterBar__item" name="genderFilter" id="genderFilter">
+          <option selected disabled>select gender</option>
+          <option class="filterBar__item select__gender" value="gemale">female</option>
+          <option class="filterBar__item select__gender" value="male">male</option>
+          <option class="filterBar__item select__gender" value="genderless">genderless</option>
+        </select>
 
       </div>
 
-      <header> Rick and Morty library
-      </header>
+      </div class="filterBar__buttonsBar">
+        <a class="filterBar__buttonsBar filterBar__buttonsBar__item" href="" id="sortButton">filter</a>
+        <a class="filterBar__buttonsBar filterBar__buttonsBar__item" href="" id="clearButton">clear</a>
+      </div>
 
+    </div>
 
-      <div class="filterBar">
+    <div class="container">
+      <div class="container container__cards" id="cardContainer"></div>
+    </div>
 
-        <select class="filter" name="filtro1" id="filterAlphabetical">
-          <option>select A - Z</option>
-          <option value="alphabeticalOrder">A - Z</option>
-          <option value="alphabeticalOrderReverse">Z - A</option>
-        </select>
+  </main>
 
-        <select class="filter" name="filtro2" id="filterStatus">
-          <option>select status</option>
-          <option value="statusDead">dead</option>
-          <option value="statusAlive">alive</option>
-        </select>
-
-        <select name="filtro3" id="filterGender">
-          <option>select gender</option>
-
-          <option value="genderFemale">female</option>
-          <option value="genderMale">male</option>
-        </select>
-
-        <div class="container container__cards">
-          <ul class="cards"></ul>
-        </div>
-    </main>
-  </div>
   <footer>
     <nav class="socialMedia">
       <ul class="socialMedia__list">
         <li class="socialMedia__list__item">
           <a href="#">
-            <img src="/src/images/github.png" alt="github" />
+            <img src="/src/images/github.png" alt="github"/>
           </a>
         </li>
       </ul>
