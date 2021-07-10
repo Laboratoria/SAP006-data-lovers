@@ -1,4 +1,4 @@
-import { showFilms } from './data.js';
+import { showFilms, showDirectors } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 console.log(showFilms(data.films))
@@ -28,7 +28,27 @@ const printCardsFilms = (listaFilmes) => {
     })
 }
 
-const printCardsCharacters = (characterList) => {
+console.log(showDirectors(data.director))
+
+const printCardsDirectors = (directorList) => {
+    directorList.forEach(director => {
+        const directorsCardsElements = document.getElementById("boxDirectorsCards");
+        directorsCardsElements.innerHTML += `
+        <div class="filmCard">
+            <div class="flipper">
+                <div class="frontCard"> 
+                    <img class="directorImg" src= ${director.img}>
+                </div>
+                <div class="backCard">
+                    <h2 class="directorName"> ${director.name}</h2> 
+                </div>
+            </div>
+        </div>`
+    })
+}
+
+
+/*const printCardsCharacters = (characterList) => {
     characterList.forEach(character => {
         const characterCardsElements = document.getElementById("boxCharacaterCards");
         characterCardsElements.innerHTML += `
@@ -43,7 +63,7 @@ const printCardsCharacters = (characterList) => {
             </div>
         </div>`
     })
-}
+}*/
 
 
 // const botaoFilmes = document.getElementById("animation")
@@ -55,3 +75,4 @@ const printCardsCharacters = (characterList) => {
 
 printCardsFilms(data.films)
 printCardsCharacters(data.people)
+
