@@ -1,0 +1,39 @@
+
+    body{
+    background-image: url("logotipo-studio-ghibli.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:lightsteelblue;
+    position:fixed;
+    
+    }
+
+
+    
+
+    .sub-title{
+    text-align:center;
+    color:mediumblue;
+    font-size:xx-large;
+    margin-top:100%;
+    position:relative
+
+    
+    
+
+ } 
+    .btn{
+    padding:2%;
+    margin: 4%;
+    display:inline;
+    justify-content: center;
+    border:2% black;
+    background-color: violet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 2%;
+    position:relative;
+
+    }
+
+    
