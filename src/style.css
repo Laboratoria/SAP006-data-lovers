@@ -1,50 +1,50 @@
             
 *{
-margin: 0;
-padding: 0; 
-box-sizing: border-box; 
-font-family: 'Vollkorn', serif;
-font-weight: bold;
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Vollkorn', serif;
+    font-weight: bold;
 }
 
 
 body{
-font-size: 12px;
-background-color: #38527B;
-animation: banner 40s infinite;
-animation-direction: alternate;
+    font-size: 12px;
+    background-color: #38527B;
+    animation: banner 40s infinite;
+    animation-direction: alternate;
 }
 
 @keyframes banner {
-0%, 20% {
-background-image: url(./images/Castle_InTheSky.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-}
+    0%, 20% {
+    background-image: url(./images/Castle_InTheSky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 
-25%, 40% {
-background-image: url(./images/Kikis_Delivery.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-}
+    25%, 40% {
+    background-image: url(./images/Kikis_Delivery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 
-45%, 60% {
-background-image: url(./images/Neighbor_Totoro.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-}
+    45%, 60% {
+    background-image: url(./images/Neighbor_Totoro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 
-65%, 80% {
-background-image: url(./images/Memorias-de-Ontem.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-}
+    65%, 80% {
+    background-image: url(./images/Memorias-de-Ontem.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 
-85%, 100% {
-background-image: url(./images/chihiro.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-}
+    85%, 100% {
+    background-image: url(./images/chihiro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 }
 
 
@@ -59,66 +59,64 @@ background-size: cover;
     z-index: 9900;
     font-size: 15px;
     overflow: visible;
-    }
+}
     
-    .menu li{
+.menu li{
     position: relative;
     float: left;
     padding: 0% 2%;
-    }
+}
     
-    .menu li a{
+.menu li a{
     color: #E7E7DE; 
     text-decoration: none; 
     padding: 5px 10px; 
     display: block;
     line-height: 2.5;
     float: left;
-    }
+}
     
-    .menu li a:hover{
+.menu li a:hover{
     background: #008891;
     text-shadow: 0px 0px 2px whitesmoke;
-    }
+}
     
-    .menu li ul{
+.menu li ul{
     position:absolute;
     top:35px;
     background: #38527B;
     display:none;
     z-index: 9900;
     border:transparent
-    }
+}
     
-    .menu li:hover ul, .menu li.over ul{
+.menu li:hover ul, .menu li.over ul{
     display:block;
-    }
+}
     
-    .menu li ul li{
+.menu li ul li{
     border: transparent;
     display:block;
     width:130px;
-    } 
+} 
     
-
-
 /* .menu li ul{
-position:absolute;
-top:25px;
-left:0;
-background-color:rgb(221, 190, 190);
-display:none;
-z-index: 9900;
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:rgb(221, 190, 190);
+    display:none;
+    z-index: 9900;
 }
 
 .menu li:hover ul, .menu li.over ul{
-display:block;
-z-index: 9900;
+    display:block;
+    z-index: 9900;
 }
 
 .menu li ul li{
-border:1px solid #fff;
-display:block;
-width:150px;
-z-index: 9900;
+    border:1px solid #fff;
+    display:block;
+    width:150px;
+    z-index: 9900;
 } */

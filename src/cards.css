@@ -1,4 +1,3 @@
-      
 *{
     margin: 0; 
     padding: 0; 
@@ -12,7 +11,11 @@ body{
     background-color: #38527B;
     /* animation: banner 40s infinite;
     animation-direction: alternate; */
+<<<<<<< HEAD
+}
+=======
     }
+>>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 
 .menu{
     list-style: none;
@@ -25,13 +28,13 @@ body{
     z-index: 9900;
     font-size: 15px;
     overflow: visible;
-    }
+}
     
 .menu li{
     position: relative;
     float: left;
     padding: 0% 2%;
-    }
+}
     
 .menu li a{
     color: #E7E7DE; 
@@ -40,31 +43,31 @@ body{
     display: block;
     line-height: 2.5;
     float: left;
-    }
+}
     
 .menu li a:hover{
     background: #008891;
     text-shadow: 0px 0px 2px whitesmoke;
-    }
+}
     
-    .menu li ul{
+.menu li ul{
     position:absolute;
     top:35px;
     background: #38527B;
     display:none;
     z-index: 9900;
     border:transparent
-    }
+}
     
-    .menu li:hover ul, .menu li.over ul{
+.menu li:hover ul, .menu li.over ul{
     display:block;
-    }
+}
     
-    .menu li ul li{
+.menu li ul li{
     border: transparent;
     display:block;
     width:130px;
-    } 
+} 
 
 
 .cardsContainer{    
@@ -84,6 +87,8 @@ body{
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
     perspective: 1000px;
     border-radius: 10px;
+<<<<<<< HEAD
+=======
 }
 
 .characterCard{
@@ -94,6 +99,7 @@ body{
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
     perspective: 1000px;
     border-radius: 10px;
+>>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 }
 
 .flipper{
@@ -107,9 +113,12 @@ body{
 
 .filmCard:hover .flipper{
     transform: rotateY(180deg);
+<<<<<<< HEAD
+=======
 }
 .characterCard:hover .flipper{
     transform: rotateY(180deg);
+>>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 }
 
 .frontCard, .backCard{
@@ -130,6 +139,11 @@ body{
 
 .filmPoster{
     width: 100%;
+<<<<<<< HEAD
+    height: 100%;
+    border-radius: 10px;
+    text-align: justify;
+=======
     height: 100%; 
     border-radius: 10px;
     text-align: justify;
@@ -143,4 +157,5 @@ body{
     border-radius: 10px;
     text-align: justify;
     background-image: cover; 
+>>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 }
