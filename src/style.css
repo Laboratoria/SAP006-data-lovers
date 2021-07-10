@@ -1,64 +1,271 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-body {}
+/** 
+SIDEBAR POSSÍVEL
 
-.container {}
-.container__nav {}
-.buttonsBar {
-background-color: #000;
-position: fixed;
-top: 0;
-width: 100%;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #000;
+  transition: all .5s ease;
 }
-nav {
-    text-align: center;
-    height: 30px;
+
+.sidebar header {
+  font-size: 28px;
+  color: #ffffff;
+  line-height: 70px;
+  text-align: center;
+  background: #000;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
 }
-.buttonsBarItem {
-    color: #000;
-    background-color: #97CE4C;
-    border-radius: 30%;
-    padding: 0px 10px;
-    margin: 10px 40px;
+
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: #ffffff;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
 }
+
+a.active,
+a:hover {
+  border-left: 5px solid #593632;
+  color: #b93632;
+}
+
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#check {
+  display: none
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 99px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 28px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked~.sidebar {
+  left: 0;
+}
+
+#check:checked~label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media(max-width: 860px) {
+  sidebar {
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+
+  header,
+  #btn,
+  #cancel {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+      height: 60px;
+  }
+  .sidebar a i{
+      margin-left: -10px;
+  }
+  a:hover {
+      width: 200px;
+      background: inherit;
+  }
+  .sidebar a:hover span{
+      opacity: 1;
+      visibility: visible;
+  }
+}
+
+**/
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+}
+
+main {
+  background-color: #dcfab2;
+}
+main .container__main {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+div {}
+div .container .container__nav{
+    background-color: black;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+div .buttonsBar {
+  padding: 2rem 5rem 1rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  background-color: black;
+  height: 50px;
+  max-width: 100%;
+}
+
+nav .nav__buttonsBar, .filterBar__buttonsBar{ 
+  text-align: center; 
+  align-items: center;
+  padding: 10px 0 10px 0;
+  
+  }
+nav .nav__buttonsBar__item, .filterBar__buttonsBar {
+  border: 1px solid #97CE4C;
+  padding: 3px 40px 3px 40px;
+  border-radius: 99px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background-color: #97CE4C;
+  max-width: 90px;
+  max-height: 25px;
+  display: inline-block;
+  text-align: center;  
+}
+#topBar{}
+
 header {
-    border: 1px solid ;
-    height: 150px;
-    background-image: url(cropped-header1.png);
-    background-size: cover;
-    text-align: center;
+  display: block;
+  text-align: center;
+  padding: 5em 5em 5em 5em;
+  font-size: 2em;
 }
-.filterBar {
-    border: 1px solid black;
-    text-align: center;
+h1 {
+  text-align: center;
+  min-height: 50px;
+  max-height: 60px;
+  min-width: 34px;
+  max-width: 850px;
 }
 
-.filter {
-    border: 1px solid #97CE4C;
-    text-align: center;
-    border-radius: 30%;
-}
-.container__cards {}
-.cards {}
+div .container__filterBar{}
 
-footer {
-    background-color: #eba900;
-    padding: 30px;
+div .filterBar {
+  padding: 2rem 5rem 1rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 33px;
+  max-width: 100%;
+  /*background-color: black;*/
+  color:#ffffff;
 }
-.socialMedia {}
 
-.socialMedia__list {
-    text-align: center;
+select {
+  border-radius: 99px;
+  border-color: #97CE4C;
+  background-color: #97CE4C;
+  color: #ffffff;
+  font-weight: bold;
+  max-height: 33px;
+  max-width: 56px;
 }
-.socialMedia__list__item {
-    display: inline-block;
-    margin: 0 5px;
-}
-.socialMedia__list__ a {}
 
+/* teste de id
+#alphabeticalFilter {
+  background-color: white;
+  color: black; */
+}
+select .filterBar__item .select__alphabet{}
+select .filterBar__item .select__status{}
+select .filterBar__item .select__gender{}
+
+div .filterBar__buttonsBar{}
+.filterBar__buttonsBar{}
+.filterBar__buttonsBar__item{}
+.filterBar__buttonsBar__item a{}
+
+.container__cards{}
+
+footer{}
+.socialMedia{}
+.socialMedia__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.7em;
+}
+.socialMedia__list__item{
+  display: block;
+  margin: 0 5px;
+}
+.socialMedia__list__item a{}
 .socialMedia__list__item img {
-    width: 100%;
-    max-width: 20px;
+  width: 100%;
+  max-width: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
