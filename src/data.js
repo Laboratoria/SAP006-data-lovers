@@ -7,17 +7,13 @@
 // };
 
 
- export function showFilms(film) {
+export function showFilms(film) {
    film.map((name) => console.log(name.title))
-  }
+ };
 
-  export function showCharacters(character) {
-    character.map((name) => console.log(name.people))
-   }
-   
-// export function showCharacters(film) {
-// film.map((name) => console.log(name.title))
-// }
+ 
+
+
 
 // filterData(data, condition): esta função receberia os dados e nos retornaria os que cumprem com a condição.
 

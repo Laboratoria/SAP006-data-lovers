@@ -1,18 +1,18 @@
       
 *{
-margin: 0; 
-padding: 0; 
-box-sizing: border-box; 
-font-family: 'Vollkorn', serif;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Vollkorn', serif;
 }
     
     
 body{
-font-size: 12px;
-background-color: #38527B;
-/* animation: banner 40s infinite;
-animation-direction: alternate; */
-}
+    font-size: 12px;
+    background-color: #38527B;
+    /* animation: banner 40s infinite;
+    animation-direction: alternate; */
+    }
 
 .menu{
     list-style: none;
@@ -27,13 +27,13 @@ animation-direction: alternate; */
     overflow: visible;
     }
     
-    .menu li{
+.menu li{
     position: relative;
     float: left;
     padding: 0% 2%;
     }
     
-    .menu li a{
+.menu li a{
     color: #E7E7DE; 
     text-decoration: none; 
     padding: 5px 10px; 
@@ -42,7 +42,7 @@ animation-direction: alternate; */
     float: left;
     }
     
-    .menu li a:hover{
+.menu li a:hover{
     background: #008891;
     text-shadow: 0px 0px 2px whitesmoke;
     }
@@ -68,56 +68,79 @@ animation-direction: alternate; */
 
 
 .cardsContainer{    
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-padding: 5% 1%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 1%; 
 }
 
 .filmCard{
-/* position: relative; */
-width: 290px;
-height: 410px;
-margin: 20px;
-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
-perspective: 1000px;
-border-radius: 10px;
+    /* position: relative; */
+    width: 290px;
+    height: 410px;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
+    perspective: 1000px;
+    border-radius: 10px;
+}
+
+.characterCard{
+    /* position: relative; */
+    width: 140px;
+    height: 165px;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
+    perspective: 1000px;
+    border-radius: 10px;
 }
 
 .flipper{
-width: 100%;
-height: 100%;
-transform-style: preserve-3d;
-transition: transform 0.8s;
-position: relative;
-border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    position: relative;
+    border-radius: 10px;
 }
 
 .filmCard:hover .flipper{
-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.characterCard:hover .flipper{
+    transform: rotateY(180deg);
 }
 
 .frontCard, .backCard{
-position: absolute;
-width: 100%;
-height: 100%;
-backface-visibility: hidden;
-border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
 }
 
 .backCard{
-transform: rotateY(180deg);
-padding: 10%;
-background-color: #213b64;
-border-radius: 10px;
-color: white
+    transform: rotateY(180deg);
+    padding: 10%;
+    background-color: #213b64;
+    border-radius: 10px;
+    color: white
 }
 
 .filmPoster{
-width: 100%;
-height: 100%;
-border-radius: 10px;
-text-align: justify;
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    text-align: justify;
+    background-image: cover;
+
+}
+
+.characterPoster{
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    text-align: justify;
+    background-image: cover; 
 }
