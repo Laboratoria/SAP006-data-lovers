@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder, averageAge, filterElement} from './data.js';
+=======
+import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder, averageAge} from './data.js';
+>>>>>>> 3d30e46238d91916866025e57ed50489d1939079
 import data from './data/ghibli/ghibli.js';
 
 //const animations = data.films
@@ -56,7 +60,7 @@ const selectGender = (evento) => {
 
    const selectAges = averageAge(gender)
 
-   printCuriosity(selectAges);
+   printCuriosity(selectAges, valueSelected);
 
    showCharacters(gender);
 
@@ -83,10 +87,11 @@ const orderZA = (evento) => {
 
 };
 
-const printCuriosity = (a) => {
+// apresenta o calculo agregado
+const printCuriosity = (a, value) => {
     
     const conteudo = `
-        <p class="content-average"><strong> A média de idade : ${a} </p></strong>`
+        <p class="content-average"><strong> The average age of ${value} characters is ${a} years old </p></strong>`
     
     document.getElementById("curiosities").innerHTML = conteudo;
     
