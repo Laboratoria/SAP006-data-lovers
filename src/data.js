@@ -23,6 +23,9 @@ export const filterGender = (characters, valueSelected) => characters.filter(ite
 
 export const filterAge = (characters, gender) => characters.filter(item => item.age == gender);
 
+export const filterElement = (characters, valueSelected) => characters.filter(item => item.name.toUpperCase().includes(valueSelected.toUpperCase()))
+
+export const filterMovie = (animations, valueSelected) => animations.filter(item => item.title.toUpperCase().includes(valueSelected.toUpperCase()))
 
 //calcula idade média
 export const averageAge = (chars) => {
@@ -42,7 +45,5 @@ export const averageAge = (chars) => {
 
   return mediaAge
 };
-
-
 
 

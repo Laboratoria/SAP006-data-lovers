@@ -1,4 +1,4 @@
-import { filterDirectorSelected, releaseYear, decrescentReleaseYear, rattingScore } from './data.js';
+import { filterDirectorSelected, releaseYear, decrescentReleaseYear, rattingScore, filterMovie } from './data.js';
 import { } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const animations = data.films
@@ -55,12 +55,23 @@ const bestScore = (evento) => {
     showPosterFilms(bestMoviesSelected);
 };
 
+const filterByMovie = () => {
+    const valueSelected = searchMovie.value
+    const movieSelected = filterMovie(animations, valueSelected);
+    showPosterFilms(movieSelected)
+}
+
 const bestFilms = document.querySelector('[data-best-score]');
 const oldest = document.querySelector('[data-film-olders]');
 const newest = document.querySelector('[data-films-newest]');
 const selectDirector = document.getElementById("director");
+const searchMovie = document.getElementById("film-search")
 
 bestFilms.addEventListener('click', bestScore);
 oldest.addEventListener('click', oldestFilms);
 newest.addEventListener('click', newestFilms);
 selectDirector.addEventListener("change", filterDirector);
+searchMovie.addEventListener('keypress', filterByMovie);
+
+
+
