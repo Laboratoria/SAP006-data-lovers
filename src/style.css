@@ -131,6 +131,7 @@ color: #e7e7dd;
 select {
   height: 20px;
   font-size: 16px;
+  text-align: center;
   cursor: pointer;
   color: #e7e7dd;
   background-color: #56658c;
@@ -139,6 +140,48 @@ select {
   text-align: center;
   border-radius: 5%;
 }
+.search-field{
+  margin-left: 10px;
+  background-color: #56658c;
+  color: #e7e7dd;
+  width: 225px;
+  
+}
+.input{
+  background-color: transparent;
+  height: 20px;
+  width: 180px;
+  font-size: 16px;
+  height: 32px;
+  border: none;
+  color: #e7e7dd;
+
+}
+::-webkit-input-placeholder {
+  color: #e7e7dd;
+}
+
+.container button{
+  background: transparent;
+  color: #e7e7dd;
+  border: none;
+  font-size: 20px;
+}
 .title-of-film, .info1, .info2{
   color: #e7e7dd;
+}
+
+.search-char, .search-film{
+  margin-left: 10px;
+  height: 38px;
+}
+.search-char input, .search-film input{
+  background: #56658c;
+  border:none;
+  border-radius: 5%;
+  height: 38px;
+  font-size: 16px;
+  color:#e7e7dd;
+  padding: 10px;
+  width: 195px;
 }

@@ -1,4 +1,4 @@
-import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder} from './data.js';
+import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder, averageAge, filterElement} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 //const animations = data.films
@@ -18,16 +18,16 @@ function showCharacters(a) {
         <div class="flip-card">
         <div class="flip-card-inner">
          <div class="flip-card-front">
-          <p class="title-of-film"><strong>${item.name}</strong></p>
+          <p><strong>${item.name}</strong></p>
           <img src="${item.img}"class="poster-card" id="img-character"><p><br></p>
          </div>
         <div class="flip-card-back">
-          <p class="title-of-film"><strong>Name: ${item.name}</strong></p>
-          <p class="info"><strong>Age: ${item.age}</p></strong>
-          <p><strong> Gender: ${item.gender}</p></strong>
-          <p><strong>Specie: ${item.specie}</p></strong>
-          <p><strong> Hair color: ${item.hair_color}</p></strong>
-          <p><strong> Eye color: ${item.eye_color}</p></strong>
+          <p class="info1"><strong>Name: ${item.name}</strong></p>
+          <p class="info2"><strong>Age: ${item.age}</p></strong>
+          <p class="info2"><strong> Gender: ${item.gender}</p></strong>
+          <p class="info2"><strong>Specie: ${item.specie}</p></strong>
+          <p class="info2"><strong> Hair color: ${item.hair_color}</p></strong>
+          <p class="info2"><strong> Eye color: ${item.eye_color}</p></strong>
           </div>
           </div>
         </div> `
@@ -92,15 +92,23 @@ const printCuriosity = (a) => {
     
 };
 
-
+const filterByName = () => {
+    const valueSelected = searchName.value
+    const charSelected = filterElement(characters, valueSelected);
+    showCharacters(charSelected)
+}
 
 const organizedAZ = document.querySelector('[data-az-order]');
 const organizedZA = document.querySelector('[data-za-order]');
 const selectedGender = document.getElementById('select-gender');
 const selectSpecies = document.getElementById('select-species');
+const searchName = document.getElementById('txt-search')
 
 
 organizedAZ.addEventListener('click', orderAZ);
 organizedZA.addEventListener('click', orderZA);
 selectedGender.addEventListener('change', selectGender);
 selectSpecies.addEventListener('change', filterSpecies);
+searchName.addEventListener('keypress', filterByName);
+
+

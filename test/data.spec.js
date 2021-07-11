@@ -1,15 +1,5 @@
-/*
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-}); */
-
-import { releaseYear, decrescentReleaseYear, filterDirectorSelected, rattingScore, order, decrescentAlphabeticOrder, filterGender, filterSpeciesSelected} from "../src/data";
+import { releaseYear, decrescentReleaseYear, filterDirectorSelected, rattingScore, order, decrescentAlphabeticOrder, filterGender, filterSpeciesSelected, averageAge, filterElement, filterMovie} from "../src/data";
 
 const charactersTest = [
   {
@@ -186,7 +176,7 @@ describe('filterGender()', () => {
   });
 
   it('should return characters by selected gender', () => {
-    expect(filterGender(charactersTest, "Male")).toStrictEqual([
+    expect(filterGender(charactersTest, "Male")).toEqual([
       { "name": "Jiji", "gender": "Male", "age": "13", "specie": "Cat" },
       { "name": "Totoro", "gender": "Male", "age": "1300", "specie": "Totoro" }]);
   });
@@ -199,8 +189,42 @@ describe('filterSpeciesSelected()', () => {
   });
 
   it('should return characters by selected specie', () => {
-    expect(filterSpeciesSelected(charactersTest, "Human")).toStrictEqual([
+    expect(filterSpeciesSelected(charactersTest, "Human")).toEqual([
       { "name": "San", "gender": "Female", "age": "16", "specie": "Human" },
       { "name": "Yuko Harada", "gender": "Female", "age": "14", "specie": "Human" }]);
   });
+})
+
+describe('averageAge', () => {
+
+  it('should be a function', () => {
+    expect(typeof averageAge).toBe('function')
+  });
+
+  it('should return media average age of characters', () => {
+    expect(averageAge(charactersTest)).toEqual(329);
+  })
+})
+
+describe('filterElement()', () => {
+  
+  it('should be a function', () => {
+    expect(typeof filterElement).toBe('function')
+  });
+
+  it('should return character by search', () => {
+    expect(filterElement(charactersTest, "San")).toEqual([{ "name": "San", "gender": "Female", "age": "16", "specie": "Human"}]);
+  });
+})
+
+describe('filterMovie()', () => {
+
+  it('should be a function', () => {
+    expect(typeof filterMovie).toBe('function')
+  });
+
+  it('should return movie by search', () => {
+    expect(filterMovie(filmsTest, "Only yesterday")).toEqual([{"title": "Only Yesterday", "director": "Isao Takahata", "release_date": "1991", "rt_score": "100"}]);
+  });
+
 })
