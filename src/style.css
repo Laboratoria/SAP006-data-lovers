@@ -6,24 +6,44 @@
 }
 /*Menu navegação*/
 .characters-img{
-  margin-top: -250px;
+  
   text-align: center;
+  justify-content: center;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
+.menu{
+  margin: 10px;
+  display: flex;
+  align-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .menu ul {
-    /*background-color: #a0a2b0;#c1cfda;*/
-   background-color: #e7e7dd;
-    list-style: none; /*tira os marcadores*/
-    padding: 15px 8%;
-    text-align: left;
-    height: 230px;
-    color: #56658c;
-    margin-top: 0px;
+  /*background-color: #a0a2b0;#c1cfda;*/
+  background-color: #e7e7dd;
+  list-style: none; /*tira os marcadores*/
+  padding: 20px;
+  text-align: center;
+  color: #56658c;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .menu ul li {
    display: inline;
-   margin-right: 20px;
+   margin: 10px;
 }
 .menu ul li a:hover {
     color: #41a8bc;
@@ -31,9 +51,21 @@
 .menu ul li a {
     text-decoration: none; /*Tirar o sublinhado da referência*/
 }
-.character-img{
+.menu-select{
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+}
+
+.print-curious{
+  display: flex;
+  margin: 10px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
+
 section{
     margin: auto;
     text-align: center;
@@ -43,10 +75,14 @@ section{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin: 20px;
 }
 .poster-cards, .poster-people{
-    margin-top: 30px;
-    margin-left: 35px;
+ 
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .poster-card{
     width: 220px;
@@ -70,9 +106,10 @@ color: #e7e7dd;
     width: 280px;
     height: 380px;
     perspective: 1000px;
-    margin-top: 30px;
-    margin-left: 35px;
     float: left;
+    margin: 15px;
+    display: flex;
+
   }
   
   .flip-card-inner {
@@ -142,3 +179,36 @@ select {
 .title-of-film, .info1, .info2{
   color: #e7e7dd;
 }
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+  
+}
+
+.container img {
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+

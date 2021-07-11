@@ -32,7 +32,6 @@ export const averageAge = (chars) => {
   const soma = chars.reduce(function(ages, char){
     const item = Number(char.age)
     const ehNumber = !isNaN(item)
-    console.log(ages)
     if (ehNumber){
       return ages + item
     } 
