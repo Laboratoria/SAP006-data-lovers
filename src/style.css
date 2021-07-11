@@ -171,15 +171,15 @@ nav .nav__buttonsBar, .filterBar__buttonsBar{
   padding: 10px 0 10px 0;
   
   }
-nav .nav__buttonsBar__item, .filterBar__buttonsBar {
+nav .nav__buttonsBar__item  {
   border: 1px solid #97CE4C;
-  padding: 3px 40px 3px 40px;
+  padding: 2px 2px 2px 2px;
   border-radius: 99px;
   font-size: 20px;
   font-weight: bold;
   color: black;
   background-color: #97CE4C;
-  max-width: 90px;
+  width: 200px;
   max-height: 25px;
   display: inline-block;
   text-align: center;  
@@ -203,8 +203,9 @@ h1 {
 div .container__filterBar{}
 
 div .filterBar {
-  padding: 2rem 5rem 1rem 5rem;
+  padding: 2rem 5rem 2rem 5rem;
   display: flex;
+  margin: 10px;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -213,8 +214,8 @@ div .filterBar {
   /*background-color: black;*/
   color:#ffffff;
 }
-
 select {
+  padding: 2rem 5rem 5rem 5rem;
   border-radius: 99px;
   border-color: #97CE4C;
   background-color: #97CE4C;
@@ -227,30 +228,46 @@ select {
 /* teste de id
 #alphabeticalFilter {
   background-color: white;
-  color: black; */
-}
+  color: black; 
+}*/
 select .filterBar__item .select__alphabet{}
 select .filterBar__item .select__status{}
 select .filterBar__item .select__gender{}
 
 div .filterBar__buttonsBar{}
 .filterBar__buttonsBar{}
-.filterBar__buttonsBar__item{}
+.filterBar__buttonsBar__item {
+  border: 1px solid #97CE4C;
+  padding: 2px 2px 2px 2px;
+  border-radius: 99px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px;
+  color: black;
+  background-color: #97CE4C;
+  width: 100px;
+  max-height: 25px;
+  display: inline-block;
+  text-align: right; 
+}
 .filterBar__buttonsBar__item a{}
 
 .container__cards{}
 
-footer{}
+footer{
+  padding: 2rem 5rem 1rem 5rem;
+  background-color: #97CE4C;
+}
 .socialMedia{}
 .socialMedia__list{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0.7em;
 }
 .socialMedia__list__item{
   display: block;
   margin: 0 5px;
+
 }
 .socialMedia__list__item a{}
 .socialMedia__list__item img {

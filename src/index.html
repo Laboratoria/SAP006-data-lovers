@@ -5,17 +5,17 @@
   <meta charset="utf-8">
   <title>cards and stuff</title>
   <link rel="stylesheet" href="/SAP006-data-lovers/src/style.css" />
-
+  <link rel="shortcut icon" type="imagex/png" href="/SAP006-data-lovers/src/images/icons8-morty-smith-100.png">
 </head>
 
 <body>
   <main class="container container__main">
     <div class="buttonsBar">
       <nav class=" buttonsBar nav__buttonsBar" id="topBar">
-        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="homeButton">home</a>
-        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="seasonsButton">seasons</a>
-        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="episodesButton">episodes</a>
-        <a class="nav__buttonsBar nav__buttonsBar__item buttonsBar__item" href="" id="charactersButton">characters</a>
+        <a class="nav__buttonsBar__item buttonsBar__item" href="" id="homeButton">home</a>
+        <a class="nav__buttonsBar__item buttonsBar__item" href="" id="seasonsButton">seasons</a>
+        <a class="nav__buttonsBar__item buttonsBar__item" href="" id="episodesButton">episodes</a>
+        <a class="nav__buttonsBar__item buttonsBar__item" href="" id="charactersButton">characters</a>
       </nav>
     </div>
 
@@ -26,32 +26,31 @@
 
     <div class="container container__filterBar">
       <div class="filterBar">
-        <select class="filterBar filterBar__item" name="alphabeticalFilter" id="alphabeticalFilter">
+        <select class="filterBar" name="alphabeticalFilter" id="alphabeticalFilter">
           <option selected disabled>select search option</option>
           <option class="filterBar__item select__alphabet" value="aToZ">A - Z</option>
           <option class="filterBar__item select__alphabet" value="zToA">Z - A</option>
           <option class="filterBar__item select__alphabet" value="name">name</option>
         </select>
 
-        <select class="filterBar filterBar__item" name="statusFilter" id="statusFilter">
-          <option selected disabled>select status</option>
+        <select class="filterBar" name="statusFilter" id="statusFilter">
+          <option class="filterBar__item select__gender" value="none" selected disabled>select status</option>
           <option class="filterBar__item select__status" value="dead">dead</option>
           <option class="filterBar__item select__status" value="alive">alive</option>
           <option class="filterBar__item select__status" value="unknown">unknown</option>
         </select>
 
-        <select class="filterBar filterBar__item" name="genderFilter" id="genderFilter">
-          <option selected disabled>select gender</option>
-          <option class="filterBar__item select__gender" value="gemale">female</option>
+        <select class="filterBar" name="genderFilter" id="genderFilter">
+          <option class="filterBar__item select__gender" value="none" selected disabled>select gender</option>
+          <option class="filterBar__item select__gender" value="female">female</option>
           <option class="filterBar__item select__gender" value="male">male</option>
           <option class="filterBar__item select__gender" value="genderless">genderless</option>
         </select>
 
-      </div>
-
-      </div class="filterBar__buttonsBar">
-        <a class="filterBar__buttonsBar filterBar__buttonsBar__item" href="" id="sortButton">filter</a>
-        <a class="filterBar__buttonsBar filterBar__buttonsBar__item" href="" id="clearButton">clear</a>
+        <nav class="filterBar__buttonsBar">
+          <a class="filterBar__buttonsBar__item" href="" id="sortButton">filter</a>
+          <a class="filterBar__buttonsBar__item" href="" id="clearButton">clear</a>
+        </nav>
       </div>
 
     </div>
@@ -67,7 +66,7 @@
       <ul class="socialMedia__list">
         <li class="socialMedia__list__item">
           <a href="#">
-            <img src="/src/images/github.png" alt="github"/>
+            <img src="/SAP006-data-lovers/src/images/github.png" alt="github" />
           </a>
         </li>
       </ul>
