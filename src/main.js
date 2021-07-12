@@ -44,6 +44,7 @@ const botaoLimpar = document.getElementById("media-limpar")
 //////////////////FUNÇÃO PARA EXIBIR O CÁLCULO DE PORCENTAGEM
 function mostrarPorcentagem(data) {
   texto.innerHTML = `Essa categoria representa ${data}`
+  texto.style.display = 'inline-block'
 }
 
 //////////////////FUNÇÃO PARA FAZER A FILTRAGEM DE GÊNERO
@@ -85,7 +86,6 @@ function buscarNomePersonagens(e) {
 function limparFiltros(){
 window.location.reload();
 }
-
 
 //////////////////ADIÇÃO DE EVENTOS
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
