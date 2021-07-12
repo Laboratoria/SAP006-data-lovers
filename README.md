@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="img/logo.png" alt="Logo cabecalho" title="Tudo Tranquileba?">
+    <img src="https://ik.imagekit.io/llneva6qvex/logo_oHecd9wR7.png">
 </h1>
 
 <h1 align="center">👴🏼🌍🛸👦🏻</h1>
