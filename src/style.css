@@ -318,8 +318,3 @@ footer{
   display: flex;
   justify-content: center;
 }
-
-.todos {
-  text-shadow: 2px 2px 5px #ffc700;
-  text-transform: uppercase;
-}
