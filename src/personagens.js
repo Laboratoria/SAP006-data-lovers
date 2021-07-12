@@ -1,15 +1,16 @@
-<<<<<<< HEAD
 import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder, averageAge, filterElement} from './data.js';
-=======
-import { filterSpeciesSelected, filterGender, order, decrescentAlphabeticOrder, averageAge} from './data.js';
->>>>>>> 3d30e46238d91916866025e57ed50489d1939079
 import data from './data/ghibli/ghibli.js';
 
-//const animations = data.films
-const characters = data.films.reduce(function(chars, film){ 
-            
+const animations = data.films
+const characters = animations.reduce(function(chars, film){ 
+     const people = film.people.map(function(char){
+         char.title = film.title
+
+         return char 
+     }) ;
+
     // [...chars, ...film.people]
-    return chars.concat(film.people)
+    return chars.concat(people)
 
 }, [])
 
@@ -26,7 +27,8 @@ function showCharacters(a) {
           <img src="${item.img}"class="poster-card" id="img-character"><p><br></p>
          </div>
         <div class="flip-card-back">
-          <p class="info1"><strong>Name: ${item.name}</strong></p>
+          <p class="title-of-chars"><strong> ${item.name}</strong></p>
+          <p class="info2"><strong>Film: ${item.title}</p></strong>
           <p class="info2"><strong>Age: ${item.age}</p></strong>
           <p class="info2"><strong> Gender: ${item.gender}</p></strong>
           <p class="info2"><strong>Specie: ${item.specie}</p></strong>
@@ -57,10 +59,11 @@ const selectGender = (evento) => {
 
    const valueSelected = selectedGender.value;
    const gender = filterGender(characters, valueSelected);
+   const totalGender = gender.length;
 
    const selectAges = averageAge(gender)
 
-   printCuriosity(selectAges, valueSelected);
+   printCuriosity(selectAges, valueSelected, totalGender);
 
    showCharacters(gender);
 
@@ -88,10 +91,16 @@ const orderZA = (evento) => {
 };
 
 // apresenta o calculo agregado
-const printCuriosity = (a, value) => {
+const printCuriosity = (a, value, total) => {
     
+    const totalChars = characters.length
     const conteudo = `
-        <p class="content-average"><strong> The average age of ${value} characters is ${a} years old </p></strong>`
+        <div class="content-average" >
+         <p><strong> Studio Ghibli has ${totalChars} characters and ${total} of them are ${value}.</p>
+         <p><strong> The average age of ${value} characters is ${a} years old.</p></strong>
+         </div>`
+
+        
     
     document.getElementById("curiosities").innerHTML = conteudo;
     
