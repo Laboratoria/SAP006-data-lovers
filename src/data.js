@@ -10,6 +10,10 @@ export const filterNames = (Array, searchName) => {
   }
 };
 
+export const filterByTag = function (array, botaoClicado){
+  const championTags = array.filter(champion => champion.tags[0] == botaoClicado || champion.tags[1] === botaoClicado);
+  return championTags;
+};
 
 
 export const difficultyOrder = (Array, chosendifficulty) => {
@@ -35,4 +39,3 @@ export const difficultyOrder = (Array, chosendifficulty) => {
 
 export const anotherExample = () => {
   return 'OMG';
-};

@@ -2,6 +2,7 @@ import data from "./data/lol/lol.js";
 import { filterNames } from "./data.js";
 import { difficultyOrder } from "./data.js";
 
+import { filterByTag } from "./data.js";
 
 // Campeão aparece na tela
 let dataLol = Object.values(data.data1);
@@ -13,8 +14,8 @@ function listingCards(itens) {
   cardPack.innerHTML = "";
 
   for (let champion in itens) {
-    const info = itens[champion]; //veja que aqui eu alterei o caminho para acessar a propriedade
-        
+    const info = itens[champion];
+    
     const card = document.createElement("li");
     card.innerHTML = `
       <img src="${info.splash}" alt="Imagem do Campeão"/>
@@ -25,9 +26,7 @@ function listingCards(itens) {
       // POP-UP //
     const popup = document.querySelector(".popup-wrapper");
     // CONTEUDO DO POP-UP //
-    const popUpContent = document.querySelector(".popup-content");
-    // const splash = info.splash;
-    
+    const popUpContent = document.querySelector(".popup-content");    
 
     card.addEventListener("click", () => {
       popup.style.display = "block";
@@ -50,9 +49,14 @@ function listingCards(itens) {
             Dificuldade: ${info.info.difficulty}
             
             </p>
+          
+
           </div>
       
         <div class="introduction">${info.blurb}</div>
+        <div class="champion-info">
+        ${info.tags[0]}, ${info.tags[1]}
+      </div>
       </div>
       `;
     });
@@ -68,7 +72,7 @@ function listingCards(itens) {
         popup.style.display = "none";
       }
     });
-  }
+  } 
 }
 
 //FILTRAR POR NOME 
@@ -81,6 +85,19 @@ searchName.addEventListener('input', event => {
   listingCards(dataFilterName)
 })
 
+//POR CATEGORIA
+const filterButton = document.querySelector(".categorias");
+filterButton.addEventListener('click', (event) => {
+  const botaoClicado = event.target.textContent;
+  
+  if (botaoClicado == "Todos") {
+    listingCards(dataLol)
+  } else {
+    const filtered = filterByTag(dataLol, botaoClicado);
+    listingCards(filtered);
+    }
+}); 
+
 
 //FILTRAR POR  DIFICULDADE
 /*const categories = document.querySelector(".categorias")
@@ -88,16 +105,6 @@ categories.addEventListener("click", (event) => {
   const chosendifficulty = event.target.textContent   
   console.log (chosendifficulty)
 })*/
-
-
-
-
-
-
-
-
-
-
 
 
 
