@@ -22,15 +22,16 @@ nav{
 }
 
 .menu{
-  margin: 10px;
+  margin: 5px;
   display: flex;
   align-content: space-around;
   flex-direction: column;
   justify-content: flex-start;
+  height: 110px;
 }
+
 .menu ul {
   /*background-color: #a0a2b0;#c1cfda;*/
-  background-color: #e7e7dd;
   list-style: none; /*tira os marcadores*/
   padding: 20px;
   text-align: center;
@@ -39,6 +40,7 @@ nav{
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+
 }
 
 .menu ul li {
@@ -222,25 +224,21 @@ select {
   padding: 10px;
   width: 195px;
 }
-/* Large desktop */
-@media (min-width: 1200px) { 
 
+
+footer{
+  background: #56658c;
+  color: #e7e7dd9d;
+  text-align: center;
+  line-height: 1.5;
+  height: 10vh;
+  padding: 1em;
 }
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
-
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
-
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-
-  
+footer a{
+  text-decoration: none;
+  color: #e7e7dd;
+  margin-top: 20px;
 }
 
 .container img {
