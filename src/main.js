@@ -1,4 +1,4 @@
-import { filterData, orderAz , computeStatsGender, avarageScore } from "./data.js";
+import { filterData, orderAz, sortMovies, computeStatsGender, avarageScore } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -98,7 +98,7 @@ function printMovies() {
   }else {
     computeStats.innerHTML = ""
   }
-  return displayCards(orderAz(movies, selectMovies.value));
+  return displayCards(sortMovies(movies, selectMovies.value));
 }
 
 function printCharacter() {
