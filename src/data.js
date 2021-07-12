@@ -1,13 +1,12 @@
-export const example = () => {
-    return 'example';
-  };
-  // export const filtro = () => {
-//   };
 
-// personagens.sort(function (a, b) {
-	
-// 	return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
- 
-// });
-
-
+export const personagensFiltrados = personagens.filter(function (personagem) {
+    if (
+      personagem.status === filtroStatus ||
+      personagem.species === filtroSpecies ||
+      personagem.gender === filtoGender 
+    ) {
+      return personagem;
+    }
+  });
+  mostrarCartoes(personagensFiltrados);
+};

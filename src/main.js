@@ -24,7 +24,7 @@ function mostrarCartoes(itens) {
             <div class="back-card">
               <div class="text-back-card>
                 
-                <h3 class="back-title>Origin</h3>
+                <h3 class="legend">Origin</h3>
                 <p class="legend">${origin.name}</p>
 
                 <h3 class="back-title">Status</h3>
@@ -75,5 +75,7 @@ const filtrar = function (k) {
   });
   mostrarCartoes(personagensFiltrados);
 };
-
-personagensFiltrados.slice([0[9]]);
+ordenaraz.sort(function(a,b){
+  return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+  mostrarCartoes(ordenaraz);
+  });
