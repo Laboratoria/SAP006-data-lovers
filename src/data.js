@@ -1,5 +1,3 @@
-import pokemon from './data/pokemon/pokemon.js';
-import data from './data/pokemon/pokemon.js';
 
 
 const filtrarPelaGeracao = (data, valor) => {
@@ -10,6 +8,9 @@ const filtrarPelaGeracao = (data, valor) => {
 
   return filtrarPokemonPelaGeracao;
 };
+
+
+
 
 
 
@@ -74,6 +75,12 @@ const filterType = (data, valor) => {
   
 };
 
+const typeStats = (data, type) => {
+  const percentType = data.filter(pokemon => 
+  pokemon.type.includes(type))
+  return Math.round((percentType.length/data.length * 100))
+}
+
 
 
 export {
@@ -82,5 +89,6 @@ export {
   sortCp, 
   filterType,
   ordenarPorNome,
+  typeStats
 };
 

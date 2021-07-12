@@ -1,23 +1,30 @@
-import { example, anotherExample } from '../src/data.js';
+import data from '../src/data/pokemon/pokemon.js';
+
+import {
+  filtrarPelaGeracao,
+  sortCp,
+  filterType
+} from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+describe('filtrarPelaGeracao', () => {  
+    it('Pokemons da Primeira Geração Kanto', () => {
+        expect(filtrarPelaGeracao(data.pokemon, 'kanto')).toHaveLength(151);
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+    });
+
 });
 
+describe('sortCp', () => {
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+  it('should be a function', () => {
+    expect(typeof sortCp).toBe('function');
+  })
+});
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+describe('filterType', () => {
+
+  it('should be a function', () => {
+    expect(typeof filterType).toBe('function');
+  })
 });

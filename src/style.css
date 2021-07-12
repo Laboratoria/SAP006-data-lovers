@@ -7,14 +7,30 @@
   font-family: "Roboto", sans-serif;
 }
 
+
 .line {
   background-color: #c52018;
-  height: 100vh;
+  position: relative;
+  height: 10000px;
   display: flex;
   width: 150px;
   border-right: 20px solid #292929;
+  
 }
 
+
+#telaPrincipal {
+  background-color: yellow;
+  width: 100px;
+  height: 10000px;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
 
 .circle {
   display: flex;
@@ -22,7 +38,8 @@
   height: 80px;
   border-radius: 50%;
   background-color: #292929;
-  margin-left: 90px;
+  margin-left: 100px;
+  margin-bottom: 9200px;
   position: absolute;
 }
 
@@ -38,20 +55,21 @@
 .border {
   margin-inline: auto;
   margin-top: 6px;
-  background-color: rgb(233, 233, 233);
+  background-color: whitesmoke;
   width: 48px;
   height: 48px;
   border: 4px solid #292929;
   border-radius: 50%;
 }
 
+
 .wrap {
   margin: 0 auto;
   /*/ background-color: aqua;/*/
-  margin-left: 200px;
-  margin-bottom: 500px;
+  margin-left: 160px;
+  margin-bottom: 9700px;
   height: 180px;
-  width: 80%;
+  width: 1450px;
   position: absolute;
   overflow: hidden;
 }
@@ -98,7 +116,7 @@
   flex-shrink: 0;
 }
 
-.gridContainerUp{
+.gridContainerUp {
   display: grid;
   grid-template-columns: 50% 30% 20%;
   grid-template-rows: 32px 2px 140px 15px;
@@ -107,7 +125,7 @@
   border-radius: 5px;
 }
 
-.title{
+.title {
   grid-row: 1;
   grid-column: 1;
   padding: 10px;
@@ -116,7 +134,7 @@
   font-weight: bolder;
 }
 
-.number{
+.number {
   grid-row: 1;
   grid-column: 2;
   padding: 10px;
@@ -124,8 +142,8 @@
   text-align: right;
   font-weight: bold;
 }
-  
-.sideInfo{
+
+.sideInfo {
   grid-row: 1;
   grid-column: 3;
   padding: 2px;
@@ -136,13 +154,13 @@
   font-weight: bolder;
 }
 
-.upLine{
+.upLine {
   grid-row: 2;
   grid-column: 1 / span 3;
-  border-top: 1px solid black
+  border-top: 1px solid black;
 }
 
-.backgroundImg{
+.backgroundImg {
   grid-row: 3;
   grid-column: 1 / 3;
   display: flex;
@@ -152,7 +170,7 @@
   height: 140px;
 }
 
-.downInfo{
+.downInfo {
   display: grid;
   grid-row: 4;
   grid-column: 1 / span 3;
@@ -165,7 +183,8 @@
   font-weight: bold;
 }
 
-.weight, .height{
+.weight,
+.height {
   grid-row: 4;
   display: inline;
   font-size: 10px;
@@ -173,7 +192,7 @@
   align-self: center;
 }
 
-.gridContainerDown{
+.gridContainerDown {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 85px 1px 95px;
@@ -182,7 +201,7 @@
   border-radius: 5px;
 }
 
-.downLine{
+.downLine {
   grid-row: 2;
   grid-column: 1 / span 3;
   border-top: 1px solid black;
@@ -190,81 +209,72 @@
   margin-right: 8px;
 }
 
-.attacks, .type, .weak, .resistant{
+.attacks,
+.type,
+.weak,
+.resistant {
   font-size: 9.5px;
   text-align: center;
   font-style: oblique;
 }
 
-.attackList, .typeList, .weakList, .resistList{
+.attackList,
+.typeList,
+.weakList,
+.resistList {
   font-size: 11.5px;
   text-align: center;
   font-weight: bolder;
   padding: 7px;
 }
 
-.attackList{
+.attackList {
   grid-row: 1;
   grid-column: 1;
 }
 
-.typeList{
+.typeList {
   grid-row: 1;
   grid-column: 2;
 }
 
-.weakList{
+.weakList {
   grid-row: 3;
   grid-column: 1;
 }
 
-.resistList{
+.resistList {
   grid-row: 3;
   grid-column: 2;
 }
 
 button {
-   width: 50px;
- }
-
-#telaPrincipal{
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-flow: nowrap;
-    justify-content: space-between;
-    align-items: center;
+  width: 50px;
 }
+
+
 
 .info_icon {
-  /*size: 25px;*/
   display: flex;
   position: absolute;
-  margin-top: calc(50% - 20vh);
   cursor: pointer;
+  margin-left: -80px;
 }
 
-ul  {
+ul {
   margin-inline: auto;
   list-style: none;
   padding: 20px;
 }
 
-#perfil{
-  margin-top: 100px;
+#perfil {
+  margin-top: 150px;
   width: 100px;
   height: 100px;
   margin-left: 10px;
   border-radius: 50px;
 }
 
-.menu li a[href$="contatos.html"] {
-  max-width:60px;
-  max-height:25px;
-  width: auto;
-  height: auto;
-  content: url(https://icons.iconarchive.com/icons/icons8/ios7/128/Very-Basic-Info-icon.png);
-}
 
 .seletores {
   width: 40px;
@@ -293,7 +303,7 @@ ul  {
   grid-template-rows: 280px 280px 280px 280px;
   grid-column-gap: 150px;
   grid-row-gap: 150px;
-  margin-top: -500px;
+  margin-top: -9700px;
   margin-left: 300px;
 }
 
@@ -303,12 +313,16 @@ ul  {
 }
 
 .container-carousel {
+
+ 
   width: 100%;
   height: 80vh;
   position: relative;
+  overflow: visible;
 }
 
 .slider {
+  padding-left: 40px;
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -347,6 +361,7 @@ ul  {
 }
 
 #ordemGeracao {
+  
   width: 150px;
   height: 30px;
   margin-bottom: 20px;
@@ -363,4 +378,193 @@ ul  {
   margin-left: -80px;
   padding-left: 40px;
   color: transparent;
+}
+
+
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slider {
+    margin-inline: auto;
+    width: 100%;
+    margin-left: 80px;
+
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .container-carousel {
+    margin-left: 10px;
+  
+
+  
+  }
+
+  #ordemGeracao {
+    margin-bottom: 500px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+
+  .wrap {
+    
+    margin-bottom: 1640px;
+    
+  }
+
+  .line {
+   
+    height: 2000px;
+  
+  }
+
+  #cards-sem-carosel {
+    display: grid;
+    grid-template-columns: 180px 180px 180px;
+    grid-template-rows: 280px 280px 280px 280px;
+    grid-column-gap: 150px;
+    grid-row-gap: 150px;
+    margin-top: -1700px;
+    margin-left: 400px;
+  }
+  .circle {
+    display: flex;
+   opacity: 0;
+  }
+
+  
+
+}
+
+
+@media only screen and (min-width: 360px){
+
+  #cards-sem-carosel{
+    grid-template-columns: 210px;
+    grid-template-rows: 320px 320px 320px;
+    margin-top: -9850px;
+    margin-left: 100px;
+    grid-row-gap: 20px;
+  }
+
+  .card{
+    width: 230px;
+    height: 320px;
+  }
+
+  .gridContainerUp{
+    grid-template-rows: 20px 1px 110px 10px;
+  }
+
+  .gridContainerDown{
+    grid-template-rows: 75px 1px 82px;
+  }
+
+  .title{
+    padding: 3px;
+    font-size: 12px;
+  }
+
+  .number{
+    padding: 3px;
+    font-size: 10px;
+  }
+
+  .sideInfo{
+    padding: 0px;
+    font-size: 8px;
+  }
+
+  .backgroundImg{
+    width: 210px;
+    height: 120px;
+  }
+
+  .attackList, .typeList, .weakList, .resistList{
+    font-size: 9.5px;
+    padding: 5px;
+  }
+
+  .attacks, .type, .weak, .resistant{
+    font-size: 8px;
+  }
+
+  .line{
+    width: 100px;
+    border-right: 10px solid black;
+  }
+
+  #perfil{
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+  }
+ 
+  .seletores{
+    width: 100px;
+    margin-top: 400px;
+  }
+
+  .seletor{
+    width: 70px;
+    padding: 2px;
+    font-size: 14px;
+  }
+
+  .info_icon{
+    margin-left: -75px;
+  }
+
+  a{
+    margin-top: -18px;
+  }
+
+  .wrap{
+    height: 90px;
+    width: 245px;
+    margin-top: -180px;
+    margin-left: 110px;
+  }
+
+  #ordemGeracao{
+    width: 100px;
+    height: 20px;
+    font-size: 8px;
+  }
+
+  .container-carousel{
+    height: 80px;
+  }
+
+  #previous, #next{
+    width: 30px;
+    height: 20px;
+  }
+
+  .slider{
+    height: 60px;
+  }
+
+  .pictures{
+    width: 50px;
+    height: 50px;
+  }
+
+  .name-geracao{
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 440px){
+  #cards-sem-carosel{
+    grid-template-columns: 210px 210px;
+    margin-top: -9850px;
+    margin-left: 100px;
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
+  }
 }

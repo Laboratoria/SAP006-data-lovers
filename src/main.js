@@ -6,15 +6,19 @@ import {
   ordenarPorNum,
   ordenarPorNome,
   filterType,
-  sortCp
+  sortCp,
+  typeStats
 } from './data.js';
+
+
+
 
  const pokemonList = data.pokemon.slice(0, 10);
  let pokeCard = document.getElementById('cards-sem-carosel');
  
  const displayPokes = (pokemonData) => {
  
- pokemonData.forEach((elem) => {
+ pokemonData.map((elem) => {
   
   let props = elem["special-attack"]
   
@@ -172,3 +176,64 @@ function onPreviousClick() {
 
 nextEl.addEventListener('click', onNextClick);
 previousEl.addEventListener('click', onPreviousClick);
+
+
+
+
+
+
+
+
+
+
+ const estatisticas = data.pokemon;
+
+
+
+  let baseAttack = estatisticas.map(baseAttack => baseAttack.stats['base-attack']);
+  let minAttack = baseAttack.reduce((a, b) => Math.min(a, b));
+  let maxAttack = baseAttack.reduce((a, b) => Math.max(a, b));
+  //let somAttack = baseAttack.reduce((a, b) => a + b);
+ // let mediaAttack = parseInt(somAttack / baseAttack.length);
+  const table = document.getElementById("table");
+
+
+ 
+  
+
+  
+
+  table.innerHTML = ` 
+  <table class=" box-alignment text-color table" >
+  <tr>
+    <th></th>
+    <th>Attack</th>
+    <th>Defense</th>
+    
+  </tr>
+  <tr>
+    <th>Minimo</th>
+    <th class="color-table-info">${minAttack}</th>
+    
+    
+  </tr>
+  <tr>
+  <th>Maximo</th>
+
+    <th class="color-table-info">${maxAttack}</th>
+    
+  </tr>
+  <tr>
+    
+</table>  
+
+  `
+
+let calcType;
+const typeCalc = document.getElementById("tipoPokemon")
+  typeCalc.addEventListener('change', () => {
+    const filterpokes = document.getElementById('typeStats');
+    calcType = typeCalc.value;
+    filterpokes.innerHTML = `${typeStats(pokemonList, calcType)}% dos Pokemons são do tipo selecionado`;
+  
+  })
