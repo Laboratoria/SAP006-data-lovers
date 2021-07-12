@@ -11,7 +11,7 @@
 .line {
   background-color: #c52018;
   position: relative;
-  height: 10000px;
+  height: 100%;
   display: flex;
   width: 150px;
   border-right: 20px solid #292929;
@@ -402,6 +402,7 @@ ul {
 
   .container-carousel {
     margin-left: 10px;
+    z-index: 1;
  
   
 
@@ -420,6 +421,7 @@ ul {
   .wrap {
     
     margin-bottom: 9440px;
+    z-index: 2;
     
   }
 
