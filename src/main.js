@@ -76,7 +76,7 @@ const filterButton = document.querySelector(".categorias");
 filterButton.addEventListener('click', (event) => {
   const botaoClicado = event.target.textContent;
   
-  if (botaoClicado == "All") {
+  if (botaoClicado == "Todos") {
     listingCards(dataLol)
   } else {
     const filtered = filterByTag(dataLol, botaoClicado);
