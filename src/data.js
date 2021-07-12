@@ -1,70 +1,81 @@
 import data from './data/rickandmorty/rickandmorty.js';
 
-// Filtros
-export const getStatus = (statusSelected) => {
 
-  let getJson = data.results;
-  getJson = getJson.filter(character => character.status === statusSelected);
+export const getStatus = (data, statusSelected) => {
+
+  const getJson = data.filter(character => character.status === statusSelected);
   return getJson;
+   
 }
 
-export const getSpecies = (specieSelected) => {
+export const getSpecies = (data, specieSelected) => {
 
-  let getJson = data.results;
-  getJson = getJson.filter(character => character.species === specieSelected)
+  const getJson = data.filter(character => character.species === specieSelected)
   return getJson
 
 }
 
-// Ordenação
+export const getOrder= (data) =>{
 
-export const getOrder = () => {
-
-  let showOrder = data.results
-  showOrder = showOrder.sort(function (a, z) {
-    if (a.name < z.name) {
+  let showOrder = data.sort(function(a,z){
+    if(a.name < z.name) {
       return -1;
     }
-    if (a.name > z.name) {
+    if(a.name > z.name) {
       return 1;
-    } return 0;
+    }return 0;
   })
   return showOrder
+  
 }
 
-export const getDisorder = () => {
+export const getDisorder = (data) => {
 
-  let showDisorder = data.results
-  showDisorder = showDisorder.sort(function (a, z) {
-    if (a.name < z.name) {
+ 
+  let showDisorder = data.sort(function(a,z){
+    if(a.name < z.name) {
       return 1;
     }
-    if (a.name > z.name) {
+    if(a.name > z.name) {
       return -1;
-    } return 0;
+    }return 0;
   })
-  return showDisorder;
+  return showDisorder
 }
 
-// Cálculo agregado
+export const getCharacter = (data, NameSearch) => {  
+  
 
-export const calcule = {
-  character: (data) => {
-     data.results.filter(results => id !== "").lenght
-  },
+  let object = data.filter(character => character.name.toLocaleLowerCase().includes(NameSearch.toLocaleLowerCase()));
+  return object
+  
+}
 
-  status: (data, pushStatus) => {
-    let total = [];
-    let averageStatus = [];
+export const calculeStats = (data, statusStats) => {
 
-    for (let status of data.results){
-      if (status.status == pushStatus)
-      total.push(status.status)
-      average = ((total.lenght / data.results.lenght) * 100).toFixed(2)
+  let total = [];
+  let percent = 0;
+
+  for (let status of data) {
+    if (status.status == statusStats) {
+      total.push(status.status);
+      percent = Number(((total.length / data.length) * 100).toFixed(2))
     }
-    return averageStatus;
   }
+  return percent;
 }
 
 
+export const calculeSpecies = (data, statusSpecies) => {
 
+  let total = [];
+  let percent = [];
+
+  for (let species of data) {
+    if (species.species == statusSpecies) {
+      total.push(species.species);
+      percent = Number(((total.length / data.length) * 100).toFixed(2))
+    }
+  }
+  return percent;
+}

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(17, 41, 63);
+}
+
+/*------------------------------------------------------RESPONSIVIDADE----------------------------------------------------------------*/
+
+/* Desktop*/
+@media (min-width: 1024px)  {
+    .nome{
+        width: 70vh;
+        height: 80vh;
+        margin-left: 55vh;
+    }
+    
+    .giphy-portal{
+        margin-top: 18vh;
+        margin-left: 10vh;
+        margin-right: 17vh;
+        width: 60vh;
+        height: 40vh;
+    }
+    
+    .imagens{
+        justify-content: center;
+        display: flex;
+    }
+    .botao{
+        width:10vh;
+        height: 3vh;
+    }
+
+    .info-cards {
+        width: 46vh;
+        height: 55vh;
+    }
+
+    .list {
+        font-size: 1.2rem;
+        padding: 1%;
+        margin-left: 0.5vh;
+        list-style-type: none;
+        font-family: 'Amatic SC', cursive;
+        text-align: left;
+    }
+
+    footer {
+        width: 100%;
+        height: 8vh;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nome{
+        width: 55vh;
+        height: 70vh;
+        margin-left: auto;
+    }
+    
+    .giphy-portal{
+        display: none;
+        margin-top: auto;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+    }
+    
+    .imagens{
+        display: none;
+        justify-content: center;
+    }
+    .botao{
+        width:10vh;
+        height: 3vh;
+    }
+
+    .info-cards {
+        width: 38vh;
+        height: 48vh;
+    }
+
+    .list {
+        font-size: 1.8rem;
+        margin-left: 2vh;
+        padding: 1%;
+        list-style-type: none;
+        font-family: 'Amatic SC', cursive;
+        text-align: left;
+    }
+
+    footer {
+        width: 100%;
+        height: 8vh;
+    }
+}
+
+/*Smartphone*/
+@media (min-width: 360px) and (max-width: 812px) {
+    .nome {
+        width: 55vh;
+        height: 50vh;
+        margin-left: auto;
+    }
+
+    .giphy-portal{
+        display: none;
+        margin-top: auto;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+    }
+    
+    .imagens{
+        display: none;
+        justify-content: center;
+    }
+
+    .botao{
+        width:10vh;
+        height: 3vh;
+    }
+
+    .info-cards {
+        width: 41vh;
+        height: 48vh;
+    }
+    
+    .list {
+        font-size: 1.8rem;
+        padding: 1%;
+        list-style-type: none;
+        font-family: 'Amatic SC', cursive;
+        text-align: left;
+    }
+
+    footer {
+        width: 100%;
+        height: 5vh;
+    }
+}
+
+/*------------------------------------------------------FIM DA RESPONSIVIDADE----------------------------------------------------------------*/
+
+.imagens{   
+    display: flex;
+    margin:auto;
+    width:60vh;
+    padding: 5vh;
+}
+
+h1 {
+    font-family: "RickM", Times, serif;
+    font-size: 20vh;
+}
+
+.search-filters {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.orientacao {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.input{
+    margin: 3vh;
+    background-color: white;
+    height: 8vh;
+    width: 37vh;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.4rem;
+    text-align: left;
+    border-radius: 10px 10px;
+}
+
+
+.botao {
+    background-color: #04ADBF;
+    margin: 2vh;
+    border-style: solid;
+    border-color: #F2EE06;
+    border-width: 2px;
+    border-radius: 3px 3px 3px;
+    width:22vh; 
+    height: 8vh;
+    color:#F2EE06;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.0rem;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+}
+
+#showStats {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 4vh;
+    font-weight: bolder;
+    text-decoration: underline black;
+}
+
+#get-cards {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+.info-cards {
+    margin: 3vh;
+    background-color: #9ABF4B;
+    border-style: solid;
+    border-radius: 9px;
+    border-color: #9ddb17; 
+    font-weight: bold;
+    box-shadow: 10px 10px 10px #81b316cb;
+}
+
+.card-front img {
+    padding: 5%;
+    width: 30vh;
+    border-radius: 50% 50%;
+    margin-left: 4vh;
+}
+
+.list li {
+    padding: 0.3vh;
+}
+
+#name {
+    color: darkblue;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #F27F3D;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #11283b;
+    text-align: center;
+    font-weight: bolder;
+}
+
+footer p {
+    padding: 2.5vh;
+}
