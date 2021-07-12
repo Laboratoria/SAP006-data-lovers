@@ -11,6 +11,9 @@ const filtrarPelaGeracao = (data, valor) => {
 
 
 
+
+
+
 const ordenarPorNum = (data, valor) => {
   if (valor === '0-9') {
     //sort
@@ -71,6 +74,8 @@ const filterType = (data, valor) => {
     return arrayType 
   
 };
+
+
 
 
 
