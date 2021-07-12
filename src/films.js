@@ -10,10 +10,11 @@ function showPosterFilms(animations) {
         <div class="flip-card">
         <div class="flip-card-inner">
          <div class="flip-card-front">
-          <p class="title-of-film"><strong>${item.title}</strong></p>
+          <p class="title-of-film-front"><strong>${item.title}</strong></p>
           <img src="${item.poster}"class="poster-card"><p><br></p>
          </div>
         <div class="flip-card-back">
+          <p class="title-of-film"><strong>${item.title}</strong></p>
           <p class="info1"><strong>Director: ${item.director}</p></strong>
           <p class="info2"><strong>Release year: ${item.release_date}</p></strong>
           <p class="info2"><strong>Rating score: ${item.rt_score}</p></strong>

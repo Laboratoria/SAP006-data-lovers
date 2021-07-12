@@ -4,25 +4,29 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #e7e7dd;
 }
+header{
+  margin: 0px;
+  
+}
+
 /*Menu navegação*/
 .characters-img{
   
   text-align: center;
   justify-content: center;
-  margin: 15px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  margin: 5px;
 }
 nav{
   display: flex;
   justify-content: center;
-  margin: 10px;
+  margin: 0px;
 }
 
 .menu{
-  margin: 10px;
+  margin: 5px;
   display: flex;
   align-content: space-around;
   flex-direction: column;
@@ -30,15 +34,16 @@ nav{
 }
 .menu ul {
   /*background-color: #a0a2b0;#c1cfda;*/
-  background-color: #e7e7dd;
+  
   list-style: none; /*tira os marcadores*/
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   color: #56658c;
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  margin: 5px;
 }
 
 .menu ul li {
@@ -55,6 +60,7 @@ nav{
   display: flex;
   align-items: center;
   align-content: space-around;
+  margin: 5px;
 }
 
 .print-curious{
@@ -64,6 +70,7 @@ nav{
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 20px;
 }
 
 section{
@@ -71,15 +78,17 @@ section{
     text-align: center;
 }
 .open-menu{
-  position:relative;
   display: flex;
-  flex-flow: row wrap;
+  width: 100%;
   justify-content: center;
-  margin: 20px;
+  margin: 0px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 .poster-cards, .poster-people{
  
-  margin: 10px;
+  margin-left: 5%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -91,15 +100,26 @@ section{
 }
 
 /*flipcards*/
-.info1{
-  margin-top: 50px;
+
+.title-of-film-front{
+  color: #e7e7dd;
+  font-size: 18px;
+  margin: 15px;
+}
+.title-of-film, .title-of-chars{
+  color: #e7e7dd;
+  font-size: 18px;
+  margin: 35px;
+  padding: 5px;
 }
 
+
 .info1, .info2{
-text-align: left;
-margin-left: 15%;
-color: #e7e7dd;
-}
+  text-align: center;
+  font-size: 16px;
+  margin: 15px;
+} 
+
 
 .flip-card {
     background-color: #e7e7dd;
@@ -154,7 +174,6 @@ color: #e7e7dd;
   background-color: #56658c;
   color: #e7e7dd;
   border: none;
-  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -204,14 +223,11 @@ select {
   border: none;
   font-size: 20px;
 }
-.title-of-film, .info1, .info2{
-  color: #e7e7dd;
-}
 
 .search-char, .search-film{
-  margin-left: 10px;
-  height: 38px;
+ margin: 5px;
 }
+
 .search-char input, .search-film input{
   background: #56658c;
   border:none;
