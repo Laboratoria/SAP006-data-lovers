@@ -37,7 +37,6 @@ const mockNames = [
 ]
 
 
-
 /////////////////////TESTE PARA FILTRAR O GENERO
   describe('filtroGenero', () => {
     it('Deverá ser uma função', () => {
@@ -94,16 +93,16 @@ it('Deverá filtrar pelo status Dead', () => {
 });
 
 
-/////////////////////TESTE PARA ORDENAÇÃO ALFABÉTICA CRESCENTE
+/////////////////////TESTE PARA ORDENAÇÃO ALFABÉTICA
 describe('ordemAlfabetica', () => {
   it('Deverá ser uma função', () => {
   expect(typeof ordemAlfabetica).toBe('function');
 });
 
-  it('should return the array in alphabetic order"', () => {
+  it('Deverá retornar em ordem A-Z', () => {
     expect(ordemAlfabetica(mockNames, "AZ")).toStrictEqual(mockNames);
   });
-  it('should return the array in reverse alphabetic order"', () => {
+  it('Deverá retornar em ordem Z-A', () => {
     expect(ordemAlfabetica(mockNames, "ZA")).toStrictEqual(mockNames.reverse());
   });
 });
