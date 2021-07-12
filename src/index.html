@@ -10,11 +10,13 @@
   </head>
 
   <body>
+
     <header class="header-img">
       <img
         src="./img/lol-header-img.png"
         alt="Campeã do jogo League of Legends"
       />
+
     </header>
 
     <main class="container">
@@ -24,23 +26,28 @@
           name="search"
           class="search"
           id="search"
-          placeholder="BUSCAR"
+          placeholder="Pesquisa por nome..."
         />
 
         <ul class="categorias">
-          <li><a href="#">TODOS</a></li>
-          <li><a href="#">ASSASSINOS</a></li>
-          <li><a href="#">SUPORTE</a></li>
-          <li><a href="#">MAGOS</a></li>
-          <li><a href="#">ATIRADORES</a></li>
-          <li><a href="#">TANQUE</a></li>
-          <li><a href="#">LUTADORES</a></li>
+          <li class="assassin"><a href="#">Assassin</a></li>
+          <li class="support"><a href="#">Support</a></li>
+          <li class="mage"><a href="#">Mage</a></li>
+          <li class="todos"><a href="#">All</a></li>
+          <li class="marksman"><a href="#">Marksman</a></li>
+          <li class="tank"><a href="#">Tank</a></li>
+          <li class="fighter"><a href="#">Fighter</a></li>
         </ul>
 
-        <div class="dropdown">
-          <select name="dificuldade" class="dropbtn"></select>
-          <div class="dropdown-content">FÁCIL</div>
-        </div>
+        <form>
+          <select class="dropbtn">
+              <option value="" disabled selected hidden>Filtrar por dificuldade...</option>
+              <option value="0" class="dropdown-content">No filter...</option>
+              <option value="1" class="dropdown-content">Easy</option>
+              <option value="2" class="dropdown-content">Medium</option>
+              <option value="3" class="dropdown-content">Hard</option>
+          </select>
+          </form>
       </header>
 
       <ul class="cards"></ul>
@@ -53,7 +60,12 @@
       </div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p class="authors">
+      Desenvolvido por Jennifer Pessoa & Camila Conte |
+      Laboratória - 07/2021
+      </p>
+    </footer>
 
     <script src="main.js" type="module"></script>
   </body>

@@ -1,7 +1,8 @@
 import data from "./data/lol/lol.js";
+import { filterByTag } from "./data.js";
 
 // Campeão aparece na tela
-let dataLol = data.data1;
+let dataLol = Object.values(data.data1);
 
 listingCards(dataLol);
 
@@ -10,7 +11,7 @@ function listingCards(itens) {
   cardPack.innerHTML = "";
 
   for (let champion in itens) {
-    const info = dataLol[champion];
+    const info = itens[champion];
     
     const card = document.createElement("li");
     card.innerHTML = `
@@ -22,9 +23,7 @@ function listingCards(itens) {
       // POP-UP //
     const popup = document.querySelector(".popup-wrapper");
     // CONTEUDO DO POP-UP //
-    const popUpContent = document.querySelector(".popup-content");
-    // const splash = info.splash;
-    
+    const popUpContent = document.querySelector(".popup-content");    
 
     card.addEventListener("click", () => {
       popup.style.display = "block";
@@ -47,9 +46,14 @@ function listingCards(itens) {
             Dificuldade: ${info.info.difficulty}
             
             </p>
+          
+
           </div>
       
         <div class="introduction">${info.blurb}</div>
+        <div class="champion-info">
+        ${info.tags[0]}, ${info.tags[1]}
+      </div>
       </div>
       `;
     });
@@ -65,20 +69,18 @@ function listingCards(itens) {
         popup.style.display = "none";
       }
     });
-  }
+  } 
 }
 
-// // INFORMAÇÕES DENTRO DO POP-UP //
+const filterButton = document.querySelector(".categorias");
+filterButton.addEventListener('click', (event) => {
+  const botaoClicado = event.target.textContent;
+  
+  if (botaoClicado == "All") {
+    listingCards(dataLol)
+  } else {
+    const filtered = filterByTag(dataLol, botaoClicado);
+    listingCards(filtered);
+    }
+}); 
 
-// const popUpContent = document.getElementsByClassName("popup-content");
-
-//   function showChampionInfo () {
-//     popUpContent.innerHTML += `
-//     <img src="${info.splash}">
-//     <h2 class="champion-name">${info.id}</h2>
-//     <h3 class="champion-title">${info.title}</h3>
-//     <p class="champion-data">${info.info}</p>
-//     <div class="introduction">${info.blurb}</div>
-//     <div class"tags">${info.tags}</div>
-//     `
-//   } console.log(showChampionInfo);

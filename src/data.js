@@ -1,14 +1,4 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const teste = () => {
- 
-};
-
-
-export const anotherExample = () => {
-  return 'OMG';
+export const filterByTag = function (array, botaoClicado){
+  const championTags = array.filter(champion => champion.tags[0] == botaoClicado || champion.tags[1] === botaoClicado);
+  return championTags;
 };
