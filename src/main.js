@@ -1,13 +1,16 @@
-import { filterData, sortMovies , computeStatsGender, avarageScore } from "./data.js";
+import { filterData, orderAz , computeStatsGender, avarageScore } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
+let orderMovies = movies
+
 const selectMovies = document.querySelector(".select-films");
 const selectCharacter = document.querySelector(".select-character");
 const selectSpecie = document.querySelector(".select-specie");
 const selectProducer = document.querySelector(".select-producer");
 const selectDirector = document.querySelector(".select-director");
 const computeStats = document.querySelector(".compute-stats");
+const buttonAz = document.querySelector("#buttonAz")
 
 function resetCards(){
   selectMovies.value = ""
@@ -18,7 +21,7 @@ function resetCards(){
 }
 
 function displayCards(movies) {
-  resetCards()
+  
   document.querySelector(".container").innerHTML = movies.map((film) => `     
     <div class="card">
         <div class="img" style="background-image: url(${film.poster})">
@@ -48,6 +51,9 @@ function getPeople() {
     return people;
 }
 
+let orderCharacters = getPeople()
+
+
 function getMovieScores(){
   let scores = []
   for(let film of movies){
@@ -56,10 +62,8 @@ function getMovieScores(){
   return scores
 }
 
-console.log(getMovieScores())
-
 function displayCardsChar(character) {
-  resetCards()
+  
   document.querySelector(".container").innerHTML = character.map((char) => `
     <div class="card">
         <div class="img" style="background-image: url(${char.img})">               
@@ -70,6 +74,14 @@ function displayCardsChar(character) {
         </div>
   </div>      
     `).join("");
+}
+
+const sortAz = () => {
+  if(selectDirector.value != "" || selectMovies.value != "" || selectProducer.value != ""){
+      return displayCards(orderAz(orderMovies, "title"))
+  }else if(selectSpecie.value != "" || selectCharacter.value != "") {
+      return displayCardsChar(orderAz(orderCharacters, "name"))
+  }
 }
 
 function displayPercentage(data, dataValue){  
@@ -86,29 +98,37 @@ function printMovies() {
   }else {
     computeStats.innerHTML = ""
   }
-  return displayCards(sortMovies(movies, selectMovies.value));
+  return displayCards(orderAz(movies, selectMovies.value));
 }
 
 function printCharacter() {
   const filterResult = (filterData(getPeople(), "gender", selectCharacter.value));
   displayPercentage(getPeople(), filterResult)
+  orderCharacters = filterResult
   return displayCardsChar(filterResult)
 }
 
 function printSpecie() {
   const filterResult = (filterData(getPeople(), "specie", selectSpecie.value))
   displayPercentage(getPeople(), filterResult)
+  orderCharacters = filterResult
   return displayCardsChar(filterResult)
 }
 
 function printDirector() {
   computeStats.innerHTML = ""
-  return displayCards(filterData(movies, "director", selectDirector.value));
+  const filterResult = filterData(movies, "director", selectDirector.value)
+  orderMovies = filterResult
+  //resetCards()
+  return displayCards(filterResult);
 }
 
 function printProducer() {
   computeStats.innerHTML = ""
-  return displayCards(filterData(movies, "producer", selectProducer.value));
+  const filterResult = filterData(movies, "producer", selectProducer.value)
+  orderMovies = filterResult
+  //resetCards()
+  return displayCards(filterResult);
 }
 
 selectMovies.addEventListener("change", printMovies);
@@ -116,3 +136,4 @@ selectCharacter.addEventListener("change", printCharacter);
 selectDirector.addEventListener("change", printDirector);
 selectProducer.addEventListener("change", printProducer);
 selectSpecie.addEventListener("change", printSpecie);
+buttonAz.addEventListener("click", sortAz)

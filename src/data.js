@@ -5,10 +5,10 @@ export const filterData = (data, type, condition) => data.filter((element) => {
   return element[type] === condition;
 });
 
-export const sortMovies = (data, condition) => data.sort((a,b) => {
-  const x = a.title.toUpperCase();
-  const y = b.title.toUpperCase();
-  if(condition === "alphabetic"){
+export const orderAz = (data, type) => 
+  data.sort((a,b) => {
+  const x = a[type].toUpperCase();
+  const y = b[type].toUpperCase();  
     if(x === y){
       return 0
     } else if (x < y){
@@ -16,7 +16,8 @@ export const sortMovies = (data, condition) => data.sort((a,b) => {
     } else {
       return 1
     }
-  }
+})
+  /*
   if (condition === "score"){
     return b.rt_score - a.rt_score 
   }
@@ -25,6 +26,7 @@ export const sortMovies = (data, condition) => data.sort((a,b) => {
     return b.release_date - a.release_date 
   }
 })
+*/
 
 export const computeStatsGender = (data, dataValue) => {
   return ((dataValue.length * 100) / data.length).toFixed(2)
