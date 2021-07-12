@@ -39,13 +39,13 @@ A série estreou em 2 de dezembro de 2013 e acompanha as perigosas aventuras do 
 ## 💺 3. EXPERIÊNCIA DOS USUÁRIOS
 Utilizamos o **FORMS** para criar um formulário onde questionamos seus hábitos, o quanto se consideravam fãs da série e quais informações gostariam de acessar.
 
-<img src="https://media.giphy.com/media/0RqzPU7aT3kLHpR0jr/giphy.gif">
+![História de Usuário](https://media.giphy.com/media/KmahuKxqc51wQK4i80/giphy.gif)
 
 ### Hábitos dos usuários:
-<img src="https://ik.imagekit.io/llneva6qvex/habitos_forms_jZ0JEod9PC.png">
+<img src="https://ik.imagekit.io/llneva6qvex/habitos_forms_T2S2kadZ6D.png">
 
 ### Fãs da série:
-<img src="https://ik.imagekit.io/llneva6qvex/fãs_forms_UNK48hbeF.png">
+<img src="https://ik.imagekit.io/llneva6qvex/fãs_forms_3ickWD-uH.png">
 
 ### Informações que gostariam de visualizar no site:
  - _Origem;_
@@ -73,22 +73,22 @@ Utilizamos o **FORMS** para criar um formulário onde questionamos seus hábitos
 As cores do layout foram baseados nas cores da série e dos personagens principais (Rick and Morty).
 Para a apresentação das imagens e informações, optamos por utilizar os Cards, facilitando a leitura e visualização.
 
-<img src="https://ik.imagekit.io/llneva6qvex/paleta_de_cores_c34vVFODtt.png">
+<img src="https://ik.imagekit.io/llneva6qvex/paleta_de_cores_y8HcEoZdk.png">
 
 ## 🎯 Protótipos:
 Os protótipos foram pensandos para facilitar a navegação e em trazer uma resposta rápida na busca por informações, já que o usuário poderá assistir a série e buscar por informações simultâneamente.
 
 ### Protótipo em baixa fidelidade para Desktop:
-<img src="https://ik.imagekit.io/llneva6qvex/Sem_título_o3HFyPejj.png">
+<img src="https://ik.imagekit.io/llneva6qvex/prototipo_papel_UUS_Wt8nsO.jpeg">
 
 ### Protótipo em baixa fidelidade para Celular:
-<img src="https://ik.imagekit.io/llneva6qvex/prototipo_papel_celular_EU0B-z7-Oz.jpeg">
+<img src="https://ik.imagekit.io/llneva6qvex/prototipo_papel_celular_xBGgvg4WMA.jpeg">
 
 ### Protótipo em alta fidelidade para Desktop:
-<img src="https://ik.imagekit.io/llneva6qvex/prototipo_alta_fidelidade_site_com_menu_NFgeP657X_.png">
+<img src="https://ik.imagekit.io/llneva6qvex/prototipo_alta_fidelidade_desktop_yftB4XFXny.png">
 
 ### Protótipo em alta fidelidade para Celular:
-<img src="https://ik.imagekit.io/llneva6qvex/prototipo_alta_fidelidade_celular_Ln_NLiW2t.png">
+<img src="https://ik.imagekit.io/llneva6qvex/prototipo_alta_fidelidade_celular_f_zp5KjiJ.png">
 
 
 ## 📚 5. OBJETIVOS DE APRENDIZAGEM
@@ -147,12 +147,12 @@ npm run deploy.
 ### 🚦 TESTES UNITÁRIOS
 Os testes unitários foram desenvolvidos para fazer com que o projeto rode adequadamente, caso mudem alguma funcionalidade, os testes não irão rodar.
 
-<img src="https://ik.imagekit.io/llneva6qvex/testes_unitarios_piOhLCfIAf.png">
+<img src="https://ik.imagekit.io/llneva6qvex/testes_unitarios_v2u2TzKPMo.png">
 
 ### 🚦 TESTES DE USABILIDADE
 Para os testes de usabilidade, desenvolvemos um **FORMS**, fazendo com que os usuários naveguem em nossa página e nos deem um feedback para melhorias e correções:
 
-![Teste usabilidade](https://media.giphy.com/media/KmahuKxqc51wQK4i80/giphy.gif)
+![Teste usabilidade](https://media.giphy.com/media/0RqzPU7aT3kLHpR0jr/giphy.gif)
 
 Como retorno, nossos usuários:
 - _55% acessou pelo celular;_
