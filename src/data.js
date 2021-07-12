@@ -25,4 +25,13 @@ function terrainFilter(films) {
 
 export const terreno = (array) => 
   array.filter(terrainFilter);
+}; 
+
+export const sortChar = (data, order) => {
+  if (order === "A-Z") {
+    return data.sort((a, z) => a.name > z.name ? 1 : -1);
+  } else if (order === "Z-A") {
+    return data.sort((a, z) => a.name > z.name ? -1 : 1);
+  }
+}; 
 

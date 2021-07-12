@@ -40,12 +40,12 @@ function showingCards(itens) {
             </div>
         </div>
     </div>`;
-        // console.log(elementTitle);
         cards.innerHTML += elementTitle;
     }
 }
 
 showingCards(films);
+
 
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
@@ -58,18 +58,12 @@ releaseDate.addEventListener("change", (event) => {
     const selectedDate = event.target.value;
     const filtered = filters(films, "release_date", selectedDate);
     showingCards(filtered);
-
-    //console.log(selectedDirector);
-    //cards.innerHTML = "";
 });
 
 director.addEventListener("change", (event) => {
     const selectedDirector = event.target.value;
     const filtered = filters(films, "director", selectedDirector);
     showingCards(filtered);
-
-    //console.log(selectedDirector);
-    //cards.innerHTML = "";
 });
 
 // fazer cálculo agregado:

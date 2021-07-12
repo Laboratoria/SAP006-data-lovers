@@ -11,8 +11,71 @@
 <body>
     <div id="root"></div>
     <header>
-        <h1>STUDIO GHIBLI</h1>
+        <!--<h1>STUDIO GHIBLI</h1>-->
+        <img id="headerImg" src="./header cover.png" alt="header">
     </header>
+    <menu id="menu">
+        <h3>
+            <a href="index.html">HOME</a>
+            INFOS
+            ABOUT US
+        </h3>
+    </menu>
+
+    <div class="filters" id="filterSort">
+        <select class="select" id="sortAZ">
+            <option selected disabled value="">Sort by</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+        </select>
+    </div>
+
+    <div class="filters" id="filterGender">
+        <select class="select" id="gender">
+            <option selected disabled value="">Gender</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="NA">NA</option>
+            <option value="Unknown (Possible Male)">Unknown</option>
+        </select>
+    </div>
+
+    <div class="filters" id="filterSpecie">
+        <select class="select" id="specie">
+            <option selected disabled value="">Specie</option>
+            <option value="Arch-mage/Human">Arch-mage/Human</option>
+            <option value="Bird">Bird</option>
+            <option value="Borrower">Borrower</option>
+            <option value="Cat">Cat</option>
+            <option value="Deity, Dragon">Deity, Dragon</option>
+            <option value="Deity">Deity</option>
+            <option value="Demon">Demon</option>
+            <option value="Dog">Dog</option>
+            <option value="Fish/Human">Fish/Human</option>
+            <option value="Human">Human</option>
+            <option value="Human/Scarecrow">Human/Scarecrow</option>
+            <option value="Raccoon Dog">Raccoon Dog</option>
+            <option value="Red elk">Red elk</option>
+            <option value="Spirit of The White Fox">Spirit of The White Fox</option>
+            <option value="Spirit">Spirit</option>
+            <option value="Totoro">Totoro</option>
+            <option value="unknown">Unknown</option>
+            <option value="Witch">Witch</option>
+            <option value="Witch/Human">Witch/Human</option>
+            <option value="Wizard">Wizard</option>
+            <option value="Wolf">Wolf</option>
+
+        </select>
+    </div>
+
+    <div>
+        <input class="filters" placeholder="Character's Name">
+    </div>
+
+    <main id="characterCards" class="mainCards">
+    </main>
+
     <script src="characters.js" type="module"></script>
 </body>
+
 </html>
