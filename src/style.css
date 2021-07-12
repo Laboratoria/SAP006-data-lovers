@@ -8,6 +8,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+main {
+  margin: 15px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -16,16 +20,21 @@ header {
 h1 {
   font-size: 50px;
   color: white;
-  margin-left: 40px;
+  margin-left: 30px;
   margin-right: 60px;
 }
 
 .menu-filter {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  width: 40%;
-  margin-right: -10px;
+  display: flex;
   align-content: center;
+  align-items: center;
+  position: relative;
+  right: 56px;
+}
+
+option {
+  color: #221C20;
+  font-size: 18px;
 }
 
 input,
@@ -39,52 +48,70 @@ button {
   font-size: 16px;
 }
 
+input {
+  position: relative;
+  right: 20px;
+  font-size: 18px;
+}
+
 input,
 #sort-btn {
-  grid-row: 1;
+  border-radius: 20px;
+  width: 150px;
+  height: 45px;
+  background: #221C20;
+  border: 1px solid #87f583;
+  color: white;
 }
 
 #sort-btn {
-  grid-column: 3;
   position: relative;
-  right: 43px;
+  right: 23px;
+  background: #87f583;
+  color: black;
+  border: none;
 }
 
 select,
 button {
   width: 91px;
   height: 25px;
-  background: #87f583;
+  background: transparent;
+  color: #e3dde0;
+  cursor: pointer;
 }
 
-input,
-#sort-btn {
-  width: 130px;
-  height: 40px;
-  background: #51fb4b;
+select:hover {
+  border-bottom: 5px double #87f583;
+  height: 45px;
+  width: 100px;
+  transition: 0.5s;
+
 }
 
-#sort-btn:hover,
-button:hover {
+#btn-clearFilters:hover, #sort-btn:hover {
   background: #05f2af;
-}
-
-main {
-  margin: 15px;
-}
-
-select,
-#btn-clearFilters {
-  grid-row: 2;
+  border: 1px solid #05f2af;
+  transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 #btn-clearFilters {
-  grid-row: 2;
+  border-radius: 20px;
+  color: #221C20;
+  background: #87f583;
+  border: 1px solid #87f583;
 }
 
 .status,
 .gender {
   display: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .container,
@@ -189,11 +216,6 @@ span {
   font-weight: 600;
 }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-  appearance: none;
-}
 
 @media (max-width: 901px) {
   .stats,
@@ -207,19 +229,17 @@ span {
   }
 
   .stats {
-    height: 230px;
+    height: 200px;
   }
 
-  .genderAverage {
+  .genderAverage, .totalCharacter, p {
     text-align: center;
-    margin: 0;
-    margin-top: 12px;
-    font-size: 20px;
+    margin: 8px 0;
+    font-size: 16px;
   }
 
   .totalCharacter {
-    margin-top: 36px;
-    font-size: 20px;
+    margin-top: 50px;
   }
 
   .character_info {
@@ -242,7 +262,7 @@ span {
     font-size: 70px;
     width: 100%;
     text-align: center;
-    margin-top: 50px;
+    margin: 30px 0;
   }
 
   .menu-filter {
@@ -253,6 +273,7 @@ span {
     justify-content: center;
     align-items: center;
     margin: 0;
+    right: 0;
   }
 
   #search,
@@ -260,11 +281,14 @@ span {
   #gender-filter,
   button {
     margin-bottom: 0;
+    height: 40px;
+    border-radius: 20px;
+    height: 45px;
+    width: 150px;
 
   }
 
   input {
-    width: 130px;
     position: relative;
     left: 5px;
   }
@@ -281,7 +305,18 @@ span {
 
 @media (max-width: 299px) {
   h1 {
-    font-size: 40px;
+    margin: 30px 0;
+    font-size:50px;
+  }
+
+  .genderAverage, .totalCharacter {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .totalCharacter {
+    margin-top: 50px;
   }
 
   #sort-btn, input {
@@ -291,9 +326,14 @@ span {
     margin: 10px;
   }
 
+  input {
+    width: 150px;
+  }
+
   .menu-filter {
     width: 100%;
     display: flex;
     flex-direction: column;
+    right: 0;
   }
 }

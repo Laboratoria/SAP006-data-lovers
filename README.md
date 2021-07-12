@@ -86,6 +86,7 @@ História 3: O usuário poderá pesquisar os personagens pelo nome.
 ## Testes de usabilidade:
 
 De acordo com os resultados dos testes de usabilidade, tiramos o botão de filtrar e, agora, o conteúdo é filtrado assim que o usuário clica na opção desejada de filtro.
+E também diferenciamos os seletores de filtro dos outros botões a fim de deixar a experiência do usuário mais intuitiva.
 
 ## Tecnologias
 
