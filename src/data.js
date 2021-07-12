@@ -11,8 +11,31 @@ export function showFilms(film) {
   film.map((name) => console.log(name.title))
 };
 
-
-
+export const sortData = (data, sortBy, sortOrder) => {
+  const compare = (a, b) => {
+    if(typeof a[sortBy] !== "number") {
+      if(a[sortBy] < b[sortBy]) { 
+      return -1
+  } else {
+    return 0;
+    }
+  } else {
+    return a[sortBy] - b[sortBy];
+    }
+  }
+    if(sortOrder === "asc"){
+    data.sort(compare);
+    return data;
+  
+  } else {
+    data.sort(compare);
+    data.reverse();
+    return data;
+   } 
+  
+  };
+  
+ 
 
 
 // filterData(data, condition): esta função receberia os dados e nos retornaria os que cumprem com a condição.

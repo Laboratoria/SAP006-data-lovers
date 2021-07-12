@@ -1,11 +1,13 @@
-import { showFilms } from './data.js';
+import { showFilms, sortData } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-//função para criar cards dos filmes
-//const listaFilmes = showFilms(data.ghibli)
+
+const clean = () => {
+    boxFilmCards.innerHTML = "";
+  }
 
 const printCardsFilms = (listaFilmes) => {
-    listaFilmes.forEach(film => {
+    listaFilmes.forEach(film => { 
         const filmCardsElements = document.getElementById("boxFilmCards");
         filmCardsElements.innerHTML += `
         <div class="filmCard">
@@ -29,32 +31,16 @@ const printCardsFilms = (listaFilmes) => {
 printCardsFilms(data.films) 
 
 
+btnFilmsAZ.addEventListener("click",() => {
+    clean()
+    const filmsOrder = sortData (data.films, ["title"], "asc")
+    printCardsFilms(filmsOrder)
+})
 
-/* const printCardsCharacters = (characterList) => {
-    characterList.forEach(character => {
-        const characterCardsElements = document.getElementById("boxCharacaterCards");
-        characterCardsElements.innerHTML += `
-        <div class="filmCard">
-            <div class="flipper">
-                <div class="frontCard"> 
-                    <img class="peopleImg" src= ${character.img}>
-                </div>
-                <div class="backCard">
-                    <h2 class="peopleName"> ${character.name}</h2> 
-                </div>
-            </div>
-        </div>`
-    })
-}
-
-
-// const botaoFilmes = document.getElementById("animation")
-
-// botaoFilmes.addEventListener("click", () => {
-//     const listaFilmes =  showFilms(data.ghibli)
-//     printCardsFilms(listaFilmes)
-// })
-
-*/
+btnFilmsZA.addEventListener("click",() => {
+    clean()
+    const filmsOrder = sortData (data.films, ["title"], "desc")
+    printCardsFilms(filmsOrder)
+})
 
 
