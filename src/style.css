@@ -111,7 +111,7 @@
     z-index: 9900;
     }
     
-    .menu li:hover ul, .menu li.over ul{
+.menu li:hover ul, .menu li.over ul{
     display:block;
     z-index: 9900;
     }

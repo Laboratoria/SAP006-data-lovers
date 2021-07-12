@@ -84,7 +84,7 @@ export default {
         {
           "id": "fcb4a2ac-5e41-4d54-9bba-33068db083ca",
           "name": "Louis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/80/Louis.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg",
           "gender": "Male",
           "age": "30",
           "eye_color": "Dark brown",
@@ -94,7 +94,7 @@ export default {
         {
           "id": "2cb76c15-772a-4cb3-9919-3652f56611d0",
           "name": "Charles",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg",
+          "img": "https://cdn-eu.anidb.net/images/main/75845.jpg",
           "gender": "Male",
           "age": "Unspecified/Adult",
           "eye_color": "Dark brown",
@@ -286,7 +286,7 @@ export default {
         {
           "id": "591524bc-04fe-4e60-8d61-2425e42ffb2a",
           "name": "Chu Totoro",
-          "img": "https://www.ghibli.jp/gallery/thumb-totoro019.png",
+          "img": "https://static.myfigurecollection.net/pics/encyclopedia/7092.jpg?rev=0",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://i.pinimg.com/736x/24/79/58/247958e5b3a798fa95bdc50535ae1aa2.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -564,7 +564,7 @@ export default {
         {
           "id": "3f78eba1-f9b0-489b-8686-f4508cdf049d",
           "name": "Toshio",
-          "img": "http://static.wikia.nocookie.net/studio-ghibli/images/2/23/Toshio.png",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5d/Toshio.jpg/revision/latest/scale-to-width-down/350?cb=20210306111538",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -615,7 +615,7 @@ export default {
           "id": "c8f02850-0c1f-499c-8b5e-d8ad16f3ecc4",
           "name": "Yaeko Okajima",
           "gender": "Female",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/03/Yaeko.png",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a8/Yaeko_Okajima.jpg/revision/latest/scale-to-width-down/350?cb=20210306111327",
           "age": "16",
           "eye_color": "Black",
           "hair_color": "Grey",
@@ -624,7 +624,7 @@ export default {
         {
           "id": "6e960787-5a47-4178-a040-1ef5bf5e4a6c",
           "name": "Tani Tsuneko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5a/Tani.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/21/Tani_Tsuneko.jpg/revision/latest/scale-to-width-down/350?cb=20210306111240",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -700,7 +700,7 @@ export default {
         {
           "id": "eff43a47-e59c-41bd-bcc6-b1827d63bed5",
           "name": "Donald Curtis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/3c/Curtis.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/61/Donald_Curtis.jpg/revision/latest/top-crop/width/360/height/450?cb=20210311172933",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Brown",
@@ -739,16 +739,6 @@ export default {
         },
         {
           "id": "a63c25f4-41a4-4f78-933f-3c14e2903a8f",
-          "name": "Capo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/98/Aiuto_Gang_boss.jpg",
-          "gender": "Male",
-          "age": "Adult",
-          "eye_color": "Black",
-          "hair_color": "Bald",
-          "specie": "Human"
-        },
-        {
-          "id": "1f24edca-65cf-4268-afe8-61e2c2afa5af",
           "name": "Capo",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/98/Aiuto_Gang_boss.jpg",
           "gender": "Male",
