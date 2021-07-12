@@ -80,7 +80,7 @@ body {
     margin-left: 2%;
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
-    font-size: 20px;
+    font-size: 28px;
     box-shadow: 0 0 8px 0 rgb(11 222 250 / 63%);
     width: 150px;
     align-self: center;
@@ -257,7 +257,7 @@ option{
         margin-top: 7%;
         background-color: #084D6E;
         box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
-        font-size: 30px;
+        font-size: 28px;
     }
 
     a {
@@ -334,7 +334,7 @@ option{
         margin-top: 7%;
         background-color: #084D6E;
         box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);  
-        font-size: 30px; 
+        font-size: 28px; 
     }
 
     a {
