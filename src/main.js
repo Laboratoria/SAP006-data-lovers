@@ -22,10 +22,11 @@ const printPokemons = (pokemonsList) => {
           ? `<p> Não tem </p>`
           : `<p>  ${pokemon.evolution["next-evolution"]?.[0].name} </p>`
       } </p>
-      <p>Chance de Aparecer: ${pokemon["spawn-chance"] === null
-      ? `<p> -- </p>`
-      : `<p>  ${pokemon["spawn-chance"]}% </p>`
-    }
+      <p>Chance de Aparecer: ${
+        pokemon["spawn-chance"] === null
+          ? `<p> -- </p>`
+          : `<p>  ${pokemon["spawn-chance"]}% </p>`
+      }
       <p>Força: ${pokemon.stats["max-cp"]}CP </p>
       <p class="card-subtitle2" id="card-subtitle2">${typesPokemons.join(
         " | "
@@ -39,8 +40,6 @@ const printPokemons = (pokemonsList) => {
 
 const pokemonsList = showPokemons(data.pokemon);
 printPokemons(pokemonsList);
-
-
 
 // Filtrar Pokémons por nome atráves do input text e botão filtrar
 const btnSearchPokemon = document.getElementById("btnFiltrar");
@@ -87,8 +86,8 @@ orderByCP.addEventListener("change", pokemonsByCP);
 
 //Limpar filtros
 const clearSearch = () => {
-document.getElementById("pokemonsearch").value = "";
-document.getElementById("order").value = "";
-document.getElementById("type").value = "";
-document.getElementById("resultcalc").value= "";
-}
+  document.getElementById("pokemonsearch").value = "";
+  document.getElementById("order").value = "";
+  document.getElementById("type").value = "";
+  document.getElementById("resultcalc").value = "";
+};
