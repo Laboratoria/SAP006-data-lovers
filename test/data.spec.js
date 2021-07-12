@@ -1,7 +1,6 @@
 
 import { getStatus, getSpecies, getOrder, getDisorder, getCharacter, calculeStats, calculeSpecies } from '../src/data.js';
 
-
 const mockArray = [ {
 
   "name": "Rick Sanchez",
