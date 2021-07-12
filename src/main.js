@@ -1,4 +1,4 @@
-import { filterData, sortMovies , computeStatsGender } from "./data.js";
+import { filterData, sortMovies , computeStatsGender, avarageScore } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -56,6 +56,8 @@ function getMovieScores(){
   return scores
 }
 
+console.log(getMovieScores())
+
 function displayCardsChar(character) {
   resetCards()
   document.querySelector(".container").innerHTML = character.map((char) => `
@@ -70,16 +72,12 @@ function displayCardsChar(character) {
     `).join("");
 }
 
-function displayPercentage(data, dataValue){
-  const results = computeStatsGender(data, dataValue);
-  computeStats.innerHTML = `A porcentagem de personagens desta seleção é ${results}%`   
+function displayPercentage(data, dataValue){  
+  computeStats.innerHTML = `A porcentagem de personagens desta seleção é ${computeStatsGender(data, dataValue)}%`   
 }
 
-function displayMovieScores(){  
-  computeStats.innerHTML = `A média das notas é ${getMovieScores().reduce((accumulator, currentValue) => {
-    return Number(accumulator) + Number(currentValue) / 20
-  },0)}.`
-  
+function displayMovieScores(){   
+  computeStats.innerHTML = `A média das notas é ${avarageScore(getMovieScores())}.`
 }
 
 function printMovies() {

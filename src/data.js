@@ -30,6 +30,11 @@ export const computeStatsGender = (data, dataValue) => {
   return ((dataValue.length * 100) / data.length).toFixed(2)
 }
 
+export const avarageScore = (data) => 
+  data.reduce((accumulator, currentValue) => {
+    return Number(accumulator) + Number(currentValue) / 20
+  },0);
+
 
 //ordenar alfabetico 
 
