@@ -23,6 +23,32 @@ exibitionFilms(films)
 
 
 
+//Personagens//
+
+const listCharacter = document.getElementById("Characters")
+const exibitionCharacters = (characters,films)=>{
+     CharactersList.forEach(characters => {
+     listCharacters.innerHTML +=
+
+     `<li class= "cardCharacter">
+     <img src=$(characters.img) class="card-img" alt="ImagemPersonagem" >
+     <p class="card-name"> Character: ${people.name}</p>
+     <p class="card-film"> Film: ${film} </p>
+     <p class="card-gender"> Gender: ${character.gender}</p>
+     <p class="card-age"> Age: ${character.age} </p>
+     <p class="card-specie"> Specie: ${character.specie}</p>
+</li>`}
+
+     )
+}
+
+for(let film of films) {
+     let listCharacter = film.character
+     exibitionCharacters(characters , films)
+
+}
+
+
 
 
 
