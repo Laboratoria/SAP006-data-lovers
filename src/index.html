@@ -11,16 +11,18 @@
 <body>
   <div id="root"></div>
   <header>
-    <!--<h1>STUDIO GHIBLI</h1>-->
-    <img id="headerImg" src="./header cover.png" alt="header">
+    <!-- <img id="headerImg" src="./header cover.png" alt="header"> --->
+    <div id="cat">CAT</div>
+    <!-- <div id="phrase">A catalog of the Ghibli World</div> -->
   </header>
 
   <menu>
-    <h3>
-      HOME
-      INFOS
-      ABOUT US
-    </h3>
+    <ul id="menuBar">
+      <li><a class="active" href="index.html">HOME</a></li>
+      <li><a href="characters.html">CHARACTERS</a></li>
+      <li><a href="#infos">INFOS</a></li>
+      <li><a id="right" href="#aboutUs">ABOUT US</a></li>
+    </ul>
   </menu>
 
   <div class="filterSearch">
@@ -31,6 +33,15 @@
         <option value="Z-A">Z-A</option>
       </select>
     </div>
+
+    <!-- <div class="filterTest" id="dropdownSort">
+      <button class="dropbtn">Sort by</button>
+      <div class="dropdownContent">
+        <p disabled value="">Sort by</p>
+        <p value="A-Z">A-Z</p>
+        <p value="Z-A">Z-A</p>
+      </div>
+    </div> -->
 
     <div class="filters" id="filterDate">
       <select class="select" id="releaseDate">
@@ -104,19 +115,19 @@
       </select>
     </div>
 
-    <div>
-      <input type="search" name="searchFilm" id="searchFilm" placeholder="Search...">
-      <button id="btnFilm" class="search">Search</button>
+    <div class="filters" id="searchWrapper">
+      <input type="search" name="searchFilm" id="searchBar" placeholder="Search...">
+      <!-- <button id="btnFilm" class="search">Search</button> -->
     </div>
   </div>
 
-  <nav class="principal">
+  <!-- <nav class="principal">
     <ul>
       <li>
         <a href="characters.html">Characters</a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
 
   <main id="cards" class="mainCards">
 
