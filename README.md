@@ -44,6 +44,10 @@ Protótipo de alta fidelidade:
 
 ![Wireframe final](img/wireframe-final.png)
 
+Versão final
+
+![Versão final](img/wireframe.png)
+
 ## Histórias de usuário
 
 Backlog: O usuário está assistindo a série e gostaria de saber mais sobre os personagens, em qual episódio o personagem aparece, para escolher um ep. para assistir.
@@ -93,5 +97,4 @@ E também diferenciamos os seletores de filtro dos outros botões a fim de deixa
 - Javascript
 - CSS3
 - HTML5
-- Json
 - Jest
