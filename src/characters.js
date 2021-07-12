@@ -47,6 +47,7 @@ gender.addEventListener("change", (event) => {
     showingCards(filtered);
 });
 
+
 specie.addEventListener("change", (event) => {
     const selectedSpecie = event.target.value;
     const filtered = filters(peopleList, "specie", selectedSpecie);
@@ -59,3 +60,4 @@ sortAZ.addEventListener("change", (event) => {
     showingCards(filterAZ);
 }
 );
+
