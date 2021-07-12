@@ -7,6 +7,10 @@
 
 body {
     background-color: rgb(17, 41, 63);
+    
+}
+@media  (min-width: 300px){
+    
 }
 
 @font-face {

@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Rick and Morty</title>
-  <link rel="stylesheet" href="./stylecards.css">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="stylecards.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    
+  </head>
 
+  <body>
 
-</head>
+    <header class="header">
+    
+      <figure class= "imagens">
+        
+        <img class = "nome"  src = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/62823684-0d6e-4108-8d60-aa5003885cb0/ddx53ki-24fbcff9-0c52-4360-9116-567768a5af0e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYyODIzNjg0LTBkNmUtNDEwOC04ZDYwLWFhNTAwMzg4NWNiMFwvZGR4NTNraS0yNGZiY2ZmOS0wYzUyLTQzNjAtOTExNi01Njc3NjhhNWFmMGUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6uNOGEztbQqWD72w_D4wFUVJMVzRTrJBHm0sZe58cDI">
+        <img class = "giphy-portal" src = "https://media.giphy.com/media/da0NgyClHpA4jqUoav/giphy.gif">
+         
 
-<body>
+      </figure> 
+         
+    </header>
 
-  <header class="header">
+    <main>
 
-    <figure class="imagens">
-      <img class="nome" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/62823684-0d6e-4108-8d60-aa5003885cb0/ddx53ki-24fbcff9-0c52-4360-9116-567768a5af0e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYyODIzNjg0LTBkNmUtNDEwOC04ZDYwLWFhNTAwMzg4NWNiMFwvZGR4NTNraS0yNGZiY2ZmOS0wYzUyLTQzNjAtOTExNi01Njc3NjhhNWFmMGUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6uNOGEztbQqWD72w_D4wFUVJMVzRTrJBHm0sZe58cDI">
-      <img class="giphy-portal" src="https://media.giphy.com/media/da0NgyClHpA4jqUoav/giphy.gif">
-
-    </figure>
-
-  </header>
-
-  <main>
-
-    <div class="orientacao">
-
-      <input class="input" type="text" id="characters" placeholder="Pesquise por personagem">
-
-    </div>
-    <section class="search-filters">
-
-      <div class="remove">
+      <div class = "orientacao">
+        
+        <input class= "input" type="text" id="characters" placeholder="Pesquise por personagem">
+        
+      </div>
+      <section class="search-filters">
 
         <button id="ordenar" class="botao">Ordenar A-Z</button>
         <button id="desordenar" class="botao">Ordenar Z-A</button>
 
         <select id="status" name="status" class="botao">
 
-          <option class="botao" value="Status">Status</option>
-          <option class="botao" value="Alive">Alive</option>
-          <option class="botao" value="Dead">Dead</option>
-          <option class="botao" value="unknown">Unknown</option>
+            <option class="botao" value="Status">Status</option>
+            <option class="botao" value="Alive">Alive</option>
+            <option class="botao" value="Dead">Dead</option>
+            <option class="botao" value="unknown">Unknown</option>
 
         </select>
 
-
+          
         <select id="especie" name="especie" class="botao">
 
-          <option class="botao" value="especieOption">Espécie</option>
-          <option class="botao" value="Human">Human</option>
-          <option class="botao" value="Humanoid">Humanoid</option>
-          <option class="botao" value="Alien">Alien</option>
-          <option class="botao" value="Animal">animal</option>
-          <option class="botao" value="Poopybutthole">Poopybutthole</option>
-          <option class="botao" value="Mytholog">Mytholog</option>
-          <option class="botao" value="Vampire">Vampire</option>
-          <option class="botao" value="Robot">Robot</option>
-          <option class="botao" value="Cronenberg">Cronenberg</option>
-          <option class="botao" value="Disease">Disease</option>
-          <option class="botao" value="Parasite">Parasite</option>
-
+            <option class="botao" value="especieOption">Espécie</option>
+            <option class="botao" value="Human">Human</option>
+            <option class="botao" value="Humanoid">Humanoid</option>
+            <option class="botao" value="Alien">Alien</option>
+            <option class="botao" value="Animal">animal</option>
+            <option class="botao" value="Poopybutthole">Poopybutthole</option>
+            <option class="botao" value="Mytholog">Mytholog</option>
+            <option class="botao" value="Vampire">Vampire</option>
+            <option class="botao" value="Robot">Robot</option>
+            <option class="botao" value="Cronenberg">Cronenberg</option>
+            <option class="botao" value="Disease">Disease</option>
+            <option class="botao" value="Parasite">Parasite</option>
+              
         </select>
-      </div>
-
-    </section>
-
-    <div id="showStats"></div>
+          
+        <button class="botao" id="home">HOME</button>
+      
+      </section>
+      
+      <div id="showStats"></div>
+      
 
     <br>
     <div id="get-cards"></div>

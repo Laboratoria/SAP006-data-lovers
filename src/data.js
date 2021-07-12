@@ -1,5 +1,3 @@
-import data from './data/rickandmorty/rickandmorty.js';
-
 
 export const getStatus = (data, statusSelected) => {
 

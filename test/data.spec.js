@@ -1,5 +1,5 @@
-import { getStatus, getSpecies, getOrder, getDisorder, getCharacter, calculeStats, calculeSpecies } from '../src/data.js';
 
+import { getStatus, getSpecies, getOrder, getDisorder, getCharacter, calculeStats, calculeSpecies } from '../src/data.js';
 
 const mockArray = [ {
 
@@ -129,4 +129,4 @@ describe('function calculeSpecies', () => {
     const expected = calculeSpecies(mockArray, 'Human')
     expect(expected).toEqual(50)
   });
-});
+}); 
