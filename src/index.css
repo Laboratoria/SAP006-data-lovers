@@ -3,7 +3,9 @@
     padding: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #e7e7dd;
+    height: 100%;
 }
+
 .menu ul {
     /*background-color: #a0a2b0;#c1cfda;*/
     list-style: none; /*tira os marcadores*/
@@ -25,7 +27,7 @@
 }
 .title-info{
     display: flex;
-    height: 140px;
+    height: 120px;
     background-color: #b6d168;
     padding: 20px;
     align-items: center;
@@ -47,7 +49,7 @@
 }
 .slider {
     width: 800px;
-    height: 500px;
+    height: 450px;
     border-radius: 3%;
     overflow: hidden;
   
@@ -67,15 +69,17 @@
  .slide img{
     width: 800px;
     height: 450px;
+    margin-bottom: 20px;
  }
  /*CSS para navegação manual*/
   
  .navigation-manual{
     position: absolute;
-    width: 750px;
+    width: 300px;
     margin-top: -90px;
     display: flex;
     justify-content: center;
+   
  }
   
  .manual-btn{
@@ -114,9 +118,10 @@
  .navigation-auto{
     position: absolute;
     display: flex;
-    width: 750px;
-    justify-content: center;
+    width: 300px;
     margin-top: 410px;
+    justify-content: center;
+ 
  }
  .navigation-auto div{
     border: 2px solid white;
@@ -131,14 +136,15 @@
  }
 .photos{
     display: flex;
-    margin: 50px;
+    margin-top: 20px;
 }
 .paragrafo1{
     padding: 15px;
-    font-size: 20px;
     line-height: 1.5;
     text-align: justify;
     font-size: 22px;
+    margin-top: -10px;
+    word-break: break-word;
 }
 
 .text-container{
@@ -146,17 +152,14 @@
 
 }
 .nav-menu{
-   display: flex;
-   margin: 20px;
-   flex-direction: row;
-   justify-content: center;
-   margin-left: 600px;
-
+   width: 430px;
+   text-align: center;
 }
 
 .initial-button{
    align-items: center;
-   width: 25%;
+   margin: 10px;
+   width: 180px;
 	padding: 15px 0;
 	background: rgb(228, 191, 122);
 	color: white;
@@ -179,6 +182,8 @@
    margin-left: 20px;
    border-radius: 10px;
    height: 450px;
+   width: 463px;
+   margin-bottom: 20px;
 }
 
 
@@ -186,34 +191,63 @@
    width: 150px;
    height: 150px;
 }
-/*footer*/
-.info-footer{
+
+footer{
+   background: #b6d168;;
+   color: rgba(0, 0, 0, 0.795);
+   padding: 1em;
    text-align: center;
-   font-size: 16px;
-   height: 80px;
-   background-color: #b6d168;
-   color: #56658c;
-   
+   line-height: 1.5;
+   height: 10vh;
 }
-.info-footer a{
+
+footer a{
    text-decoration: none;
-   color:black;
-
+   color: #56658c;
+   margin-top: 20px;
 }
-/* Landscape phones and down */
-@media (max-width: 480px) {
-
-   
+footer a:hover{
+   color:#4fadbf;
 }
 
 
-/* Large desktop */
-@media (min-width: 1200px) { 
+@media (min-width:320px) and (max-width:1000px){
+ footer{
+    display: none;
+ }
+   .slider{
+      width: 100%;
+      margin: auto;
+      margin-top: 2%;
+      height: 550px;
+   }
+  .slider img{
+     height: 550px;
+     width: 960px;
+  }
+   .photos{
+      flex-direction: column;
+      margin:2%; 
+   }
 
-}
-
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
+   .testando{
+      width: 100%;
+      margin: auto;
+      margin-top: 10%;
+   }
+   .paragrafo1{
+      font-size: 35px;
+   }
+   .nav-menu{
+      margin: auto;
+   }
+   .navigation-auto{
+      margin-top: 470px;
+      margin-left: 35%;
+   }
+   .navigation-manual{
+      margin-top: -30px;
+      margin-left: 35%;
+   }
 
 }
