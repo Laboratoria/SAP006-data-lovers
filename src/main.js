@@ -1,4 +1,7 @@
 import data from "./data/lol/lol.js";
+import { filterNames } from "./data.js";
+import { difficultyOrder } from "./data.js";
+
 import { filterByTag } from "./data.js";
 
 // Campeão aparece na tela
@@ -18,7 +21,7 @@ function listingCards(itens) {
       <img src="${info.splash}" alt="Imagem do Campeão"/>
       <h3>${info.id}</h3>
        `       
-   cardPack.appendChild(card); 
+    cardPack.appendChild(card); 
 
       // POP-UP //
     const popup = document.querySelector(".popup-wrapper");
@@ -72,6 +75,17 @@ function listingCards(itens) {
   } 
 }
 
+//FILTRAR POR NOME 
+let searchName = document.querySelector(".search")
+
+searchName.addEventListener('input', event => {
+  searchName = event.target.value.trim().toUpperCase()
+  let dataFilterName = filterNames(dataLol, searchName)
+  console.log(dataFilterName)
+  listingCards(dataFilterName)
+})
+
+//POR CATEGORIA
 const filterButton = document.querySelector(".categorias");
 filterButton.addEventListener('click', (event) => {
   const botaoClicado = event.target.textContent;
@@ -83,4 +97,15 @@ filterButton.addEventListener('click', (event) => {
     listingCards(filtered);
     }
 }); 
+
+
+//FILTRAR POR  DIFICULDADE
+/*const categories = document.querySelector(".categorias")
+categories.addEventListener("click", (event) => {
+  const chosendifficulty = event.target.textContent   
+  console.log (chosendifficulty)
+})*/
+
+
+
 
