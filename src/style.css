@@ -46,35 +46,41 @@ body {
 }
 
 /*estilização do campo de pesquisas*/
-#container-search{
+#container-search {
     position: relative;
     margin-top: 40px;
-    margin-left: 1000px;
+    margin-right: 1000px;
     display: flex;
-    align-items: right;
+    align-items: left;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
 }
 
-.pesquisar{
+.pesquisar {
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
     width: 400px;
     background-color: #FFEBCD;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 0 0 8px 0 rgba(227, 240, 54, 0.5);
+    box-shadow: 0 0 8px 0 rgb(227 240 54 / 50%);
+    align-self: center;
 }
 
-.curiosidades{
+.curiosidades {
     background-color: #084D6E;
     border-radius: 50px;
-    padding: 15px;    
+    padding: 15px;
     margin-left: 2%;
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
-    box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
+    box-shadow: 0 0 8px 0 rgb(11 222 250 / 63%);
+    width: 150px;
+    align-self: center;
+    margin-top: 2%;
 }
 
 #media-limpar{
@@ -130,6 +136,8 @@ option{
     box-shadow: 0 0 8px 0 rgba(7, 157, 238, 0.817);   
     width: 60%;
     margin: 0 auto;
+    padding: 10px;
+    display: none;
 }
 
 /*Estilização do container dos CARDS*/
@@ -289,7 +297,7 @@ option{
     .front-text-card{
         margin: 1%;
         text-align: center;
-        font-size: 13px;
+        font-size: 115%;
     }
 }
 
@@ -359,21 +367,14 @@ option{
     .front-text{
         margin-top: 2%;
         width: 90%;
-        height: 32%;
+        height: 40%;
     }
 
     .front-text-card{
         margin: 1%;
         text-align: center;
-        font-size: 16px;
+        font-size: 126%;
 
     }
 
-} 
-
-@media(max-width: 450px) {
-    #logo{
-        display: block;
-    }
-    
 }

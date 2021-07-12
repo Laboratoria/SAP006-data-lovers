@@ -15,15 +15,15 @@ export const  filtroEspecie = (data, condition) => {
 export const  filtroStatus = (data, condition) => {
   const resultadoStatus = data.filter((personagem) => personagem.status.toLowerCase() === condition.toLowerCase());
   return resultadoStatus;
-};
+};  
 
 //////////////////ORDENAÇÃO ALFABÉTICA UTILIZANDO SORT
 export const ordemAlfabetica = (data, order) => {
   if (order === "AZ") {
     return data.sort((a, z) => a.name > z.name ? 1 : -1)
-  } else if (order === "ZA") {
+  } else {
     return data.sort((a, z) => a.name > z.name ? -1 : 1)
-  } return data
+  } 
 };
 
 //////////////////FUNÇÃO DE BUSCA POR NOME- FILTER()
