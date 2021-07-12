@@ -39,7 +39,6 @@ function printCardsGeneric(filterChosen) {
   cards.innerHTML += genericCards;
 }
 
-//Cálculos estatísticos:
 
 const totalCharacters = computeStats.characters(data.results);
 
@@ -65,8 +64,6 @@ printGenderAverage.innerHTML = `<p class="genderAverage">Média de gêneros:</p>
                                   <span>${genderlessAverage}</span>
                                 </p>`;
 
-// Função filtrar:
-
 function filter(e) {
   e.preventDefault();
   const statusOptions = statusFilter.options[statusFilter.selectedIndex].value;
@@ -77,16 +74,12 @@ function filter(e) {
 statusFilter.addEventListener("click", filter);
 genderFilter.addEventListener("click", filter);
 
-// Função ordenar:
-
 function sort(e) {
   e.preventDefault();
   const sortCards = sortData(data.results);
   printCardsGeneric(sortCards);
 }
 btnSort.addEventListener("click", sort);
-
-//Botão limpar:
 
 function clearFilters(e) {
   e.preventDefault();
@@ -95,8 +88,6 @@ function clearFilters(e) {
   genderFilter.options[(genderFilter.selectedIndex = 0)];
 }
 btnClear.addEventListener("click", clearFilters);
-
-// Pesquisar por nome do personagem:
 
 function searchByName(e) {
   const charactersByName = searchName(data.results, e.target.value);
