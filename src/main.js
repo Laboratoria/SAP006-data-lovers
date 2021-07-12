@@ -94,7 +94,7 @@ ordenarPorCP.addEventListener('change', () => {
  
 let ordernarPorNumeros;
 const ordenar = document.getElementById("num");
-ordenar.addEventListener('click', () => {
+ordenar.addEventListener('change', () => {
   const getpokes = document.getElementById('cards-sem-carosel');
   getpokes.innerHTML = '';
   ordernarPorNumeros = ordenar.value;
@@ -104,9 +104,10 @@ ordenar.addEventListener('click', () => {
 
 });
 
+
 let ordenarPorNomes;
 const ordenarNomes = document.getElementById("name");
-ordenarNomes.addEventListener('click', () => {
+ordenarNomes.addEventListener('change', () => {
   const getpokes = document.getElementById('cards-sem-carosel');
   getpokes.innerHTML = '';
   ordenarPorNomes = ordenarNomes.value;
