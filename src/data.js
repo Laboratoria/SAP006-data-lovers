@@ -17,7 +17,8 @@ export const orderAz = (data, type) =>
       return 1
     }
 })
-  /*
+export const sortMovies = (data, condition) => 
+  data.sort((a,b) => {
   if (condition === "score"){
     return b.rt_score - a.rt_score 
   }
@@ -26,7 +27,6 @@ export const orderAz = (data, type) =>
     return b.release_date - a.release_date 
   }
 })
-*/
 
 export const computeStatsGender = (data, dataValue) => {
   return ((dataValue.length * 100) / data.length).toFixed(2)
