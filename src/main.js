@@ -44,7 +44,7 @@ const exibitionCharacters = (characters,films)=>{
 
 for(let film of films) {
      let listCharacter = film.character
-     exibitionCharacters(characters , films)
+     exibitionCharacters(characters , film.title)
 
 }
 
