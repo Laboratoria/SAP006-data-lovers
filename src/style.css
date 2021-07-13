@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+@font-face {
+  font-family: Pixels;
+  src: url(./assets/LLPIXEL3.ttf);
+}
 
-/*@font-face {
-  font-family: 'Kongtext';
-  src: URL('kongtext.ttf');
-}*/
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  font-family: "Roboto", "Rockwell", sans-serif;
+  font-family: "Roboto", "Pixel", sans-serif;
+}
+
+option:nth-child(odd) {
+  background: #c52018;
+}
+option:nth-child(even) {
+  background: #fff200;
 }
 
 .line {
@@ -17,22 +24,26 @@
   position: relative;
   height: 100%;
   display: flex;
-  width: 150px;
+  width: 250px;
   border-right: 20px solid #292929;
-  
+  z-index: 1;
 }
 
 #telaPrincipal {
- 
   width: 100px;
   height: 10000px;
   display: flex;
+  position: relative;
   flex-wrap: nowrap;
   flex-flow: nowrap;
   justify-content: space-between;
   align-items: center;
-  z-index: -1;
-  
+}
+.cards_text {
+  width: 6664px;
+  height: 665px;
+  position: absolute;
+  z-index: 3;
 }
 
 .circle {
@@ -41,9 +52,10 @@
   height: 80px;
   border-radius: 50%;
   background-color: #292929;
-  margin-left: 100px;
-  margin-bottom: 9200px;
+  margin-left: 170px;
+  margin-bottom: 8700px;
   position: absolute;
+  z-index: 2;
 }
 
 .white-circle {
@@ -68,7 +80,8 @@
 .wrap {
   margin: 0 auto;
   /*/ background-color: aqua;/*/
-  margin-left: 160px;
+  margin-left: 240px;
+  margin-top: 15px;
   height: 180px;
   width: 1450px;
   position: absolute;
@@ -91,6 +104,21 @@
     #fff 46%,
     #fff 100%
   );
+}
+
+.textbox {
+  display: flex;
+  width: 1500px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  margin-top: -80px;
+  margin-left: -80px;
+}
+
+.textbox p {
+  font-size: 30px;
+  font-family: Pixels;
 }
 
 .card {
@@ -116,6 +144,18 @@
   display: inline-block;
   margin-left: 20px;
   flex-shrink: 0;
+}
+
+.text, .typeStats{
+  color: white;
+  font-family: "Pixels";
+  text-align: center;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.typeStats{
+  margin-top: 400px;
 }
 
 .gridContainerUp {
@@ -250,17 +290,6 @@
   grid-column: 2;
 }
 
-button {
-  width: 50px;
-}
-
-.info_icon {
-  display: flex;
-  position: absolute;
-  cursor: pointer;
-  margin-left: -80px;
-}
-
 ul {
   margin-inline: auto;
   list-style: none;
@@ -268,31 +297,33 @@ ul {
 }
 
 #perfil {
-  margin-top: 150px;
+  margin-top: 10px;
   width: 100px;
   height: 100px;
-  margin-left: 10px;
+  margin-left: 60px;
   border-radius: 50px;
 }
 
 .seletores {
-  width: 40px;
-  height: 40px;
+  width: 160px;
+  height: 160px;
   display: flex;
   position: absolute;
   margin-inline: auto;
   justify-content: space-evenly;
   flex-direction: column;
-  margin-top: 600px;
+  margin-top: 300px;
+  margin-left: 15px;
 }
 
 .seletor {
   border-radius: 5px;
   cursor: pointer;
+  padding: 10px;
   margin: 10px;
   display: flex;
   border: 2px solid white;
-  width: 100px;
+  width: 160px;
   height: 80px;
 }
 
@@ -303,7 +334,8 @@ ul {
   grid-column-gap: 150px;
   grid-row-gap: 150px;
   margin-top: -9700px;
-  margin-left: 300px;
+  margin-left: 500px;
+  z-index: 2;
 }
 
 #ordemGeracao {
@@ -378,16 +410,13 @@ ul {
   color: transparent;
 }
 
-.text{
-  font-family: 'Rockwell';
-  font-weight: bolder;
-}
-
-.textbox{
-  width: 200px;
-  height: 50px;
-  background-color: #d12547;
-
+.info_icon {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  margin-top: 850px;
+  margin-left: -80px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -400,14 +429,10 @@ ul {
     position: absolute;
     overflow: hidden;
   }
-  
+
   .container-carousel {
     margin-left: 10px;
     z-index: 1;
- 
-  
-
-  
   }
 
   #ordemGeracao {
@@ -421,7 +446,6 @@ ul {
   .wrap {
     margin-bottom: 9440px;
     z-index: 2;
-    
   }
 
   .line {
@@ -441,9 +465,8 @@ ul {
   }
 }
 
-@media (min-width: 440px) and (max-width: 768px){
-
-  #cards-sem-carosel{
+@media (min-width: 440px) and (max-width: 768px) {
+  #cards-sem-carosel {
     grid-template-columns: 210px 210px;
     margin-top: -9850px;
     margin-left: 100px;
@@ -451,120 +474,126 @@ ul {
     grid-column-gap: 50px;
   }
 
-  .wrap{
+  .wrap {
     width: 500px;
     height: 90px;
     margin-top: -180px;
     margin-left: 110px;
   }
 
-  .circle{
+  .circle {
     display: none;
   }
 
-  .card{
+  .card {
     width: 230px;
     height: 320px;
   }
 
-  .gridContainerUp{
+  .gridContainerUp {
     grid-template-rows: 20px 1px 110px 10px;
   }
 
-  .gridContainerDown{
+  .gridContainerDown {
     grid-template-rows: 75px 1px 82px;
   }
 
-  .title{
+  .title {
     padding: 3px;
     font-size: 12px;
   }
 
-  .number{
+  .number {
     padding: 3px;
     font-size: 10px;
   }
 
-  .sideInfo{
+  .sideInfo {
     padding: 0px;
     font-size: 8px;
   }
 
-  .backgroundImg{
+  .backgroundImg {
     width: 210px;
     height: 120px;
   }
 
-  .attackList, .typeList, .weakList, .resistList{
+  .attackList,
+  .typeList,
+  .weakList,
+  .resistList {
     font-size: 9.5px;
     padding: 5px;
   }
 
-  .attacks, .type, .weak, .resistant{
+  .attacks,
+  .type,
+  .weak,
+  .resistant {
     font-size: 8px;
   }
 
-  .line{
+  .line {
     width: 100px;
     border-right: 10px solid black;
   }
 
-  #perfil{
+  #perfil {
     margin-top: 30px;
     width: 70px;
     height: 70px;
   }
- 
-  .seletores{
+
+  .seletores {
     width: 100px;
     margin-top: 400px;
   }
 
-  .seletor{
+  .seletor {
     width: 70px;
     padding: 2px;
     font-size: 14px;
   }
 
-  .info_icon{
+  .info_icon {
     margin-left: -75px;
   }
 
-  a{
+  a {
     margin-top: -18px;
   }
 
-  #ordemGeracao{
+  #ordemGeracao {
     width: 100px;
     height: 20px;
     font-size: 8px;
   }
 
-  .container-carousel{
+  .container-carousel {
     height: 80px;
   }
 
-  #previous, #next{
+  #previous,
+  #next {
     height: 20px;
   }
 
-  .slider{
+  .slider {
     height: 60px;
   }
 
-  .pictures{
+  .pictures {
     width: 50px;
     height: 50px;
   }
 
-  .name-geracao{
+  .name-geracao {
     padding-left: 20px;
   }
 }
 
-@media (min-width: 360px) and (max-width: 439px){
-
-  #cards-sem-carosel{
+@media (min-width: 360px) and (max-width: 439px) {
+  #cards-sem-carosel {
     grid-template-columns: 210px;
     grid-template-rows: 320px 320px 320px;
     margin-top: -9850px;
@@ -572,114 +601,120 @@ ul {
     grid-row-gap: 20px;
   }
 
-  .circle{
+  .circle {
     display: none;
   }
 
-  .card{
+  .card {
     width: 230px;
     height: 320px;
   }
 
-  .gridContainerUp{
+  .gridContainerUp {
     grid-template-rows: 20px 1px 110px 10px;
   }
 
-  .gridContainerDown{
+  .gridContainerDown {
     grid-template-rows: 75px 1px 82px;
   }
 
-  .title{
+  .title {
     padding: 3px;
     font-size: 12px;
   }
 
-  .number{
+  .number {
     padding: 3px;
     font-size: 10px;
   }
 
-  .sideInfo{
+  .sideInfo {
     padding: 0px;
     font-size: 8px;
   }
 
-  .backgroundImg{
+  .backgroundImg {
     width: 210px;
     height: 120px;
   }
 
-  .attackList, .typeList, .weakList, .resistList{
+  .attackList,
+  .typeList,
+  .weakList,
+  .resistList {
     font-size: 9.5px;
     padding: 5px;
   }
 
-  .attacks, .type, .weak, .resistant{
+  .attacks,
+  .type,
+  .weak,
+  .resistant {
     font-size: 8px;
   }
 
-  .line{
+  .line {
     width: 100px;
     border-right: 10px solid black;
   }
 
-  #perfil{
+  #perfil {
     margin-top: 30px;
     width: 70px;
     height: 70px;
   }
- 
-  .seletores{
+
+  .seletores {
     width: 100px;
     margin-top: 400px;
   }
 
-  .seletor{
+  .seletor {
     width: 70px;
     padding: 2px;
     font-size: 14px;
   }
 
-  .info_icon{
+  .info_icon {
     margin-left: -75px;
   }
 
-  a{
+  a {
     margin-top: -18px;
   }
 
-  .wrap{
+  .wrap {
     height: 90px;
     width: 245px;
     margin-top: -180px;
     margin-left: 110px;
   }
 
-  #ordemGeracao{
+  #ordemGeracao {
     width: 100px;
     height: 20px;
     font-size: 8px;
   }
 
-  .container-carousel{
+  .container-carousel {
     height: 80px;
   }
 
-  #previous, #next{
+  #previous,
+  #next {
     height: 20px;
   }
 
-  .slider{
+  .slider {
     height: 60px;
   }
 
-  .pictures{
+  .pictures {
     width: 50px;
     height: 50px;
   }
 
-  .name-geracao{
+  .name-geracao {
     padding-left: 20px;
   }
 }
-
