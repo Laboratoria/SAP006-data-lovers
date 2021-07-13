@@ -73,8 +73,8 @@ body{
 
 }
 
-#buscar{
-width: 200px;
+.btn{
+width: 250px;
 padding: 15px 0;
 background: #9CFE4D;
 color: black;
@@ -87,7 +87,7 @@ cursor: pointer;
 }
 
 select {
-    width: 200px;
+    width: 250px;
     height: 50px;
     border-radius: 12px;
     margin: 15px;

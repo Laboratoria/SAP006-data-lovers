@@ -1,10 +1,13 @@
+import { filtrarPersonagens, ordemAZ, ordemZA } from './data.js';
+
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const personagens = data.results;
-
+const ordemPersonagem = data.results.name
 
 const botao = document.getElementById("buscar");
 botao.addEventListener("click", (e) => filtrar(e));
+
 
 function mostrarCartoes(itens) {
   const cards = document.querySelector("#resultado");
@@ -44,17 +47,27 @@ const filtrar = function (k) {
 
   const filtroStatus = document.getElementById("caracter-status").value;
   const filtroSpecies = document.getElementById("caracter-species").value;
-  const filtoGender = document.getElementById("caracter-gender").value;
-  const ordenaraz = document.getElementById("ordenar").value;
+  const filtroGender = document.getElementById("caracter-gender").value;
   
-  const personagensFiltrados = personagens.filter(function (personagem) {
-    if (
-      personagem.status === filtroStatus ||
-      personagem.species === filtroSpecies ||
-      personagem.gender === filtoGender 
-    ) {
-      return personagem;
-    }
-  });
-  mostrarCartoes(personagensFiltrados);
+  const personagensFiltrados = filtrarPersonagens(personagens, filtroStatus, filtroSpecies, filtroGender)
+
+  mostrarCartoes(personagensFiltrados.slice(0,50));
 };
+
+
+function ordenarA(e){
+  e.preventDefault();
+  const filtroAZ = ordemAZ(data.results);
+
+  mostrarCartoes(filtroAZ);
+  
+}
+document.getElementById("btn-desordenar").addEventListener("click", ordenarA);
+
+function ordenarZ(e) {
+  e.preventDefault();
+  const filtroZA= ordemZA(data.results);
+
+  mostrarCartoes(filtroZA);
+}
+document.getElementById("btn-ordenar").addEventListener("click", ordenarZ);
