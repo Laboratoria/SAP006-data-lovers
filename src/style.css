@@ -31,6 +31,59 @@ div#cat {
     font-weight: lighter;
 }
 
+@media screen and (max-width: 800px) {
+    header {
+        background-image: url(https://64.media.tumblr.com/6d3eaa0491f4df8a821030bb46cefb73/1e4ee33c2f6e4ef6-8a/s1280x1920/43fd6c81251950d0840a624e4712ba1638a2b74a.gifv);
+        background-color: #187894;
+        background-position: 100% 75%;
+        background-repeat: no-repeat;
+        background-size: 89%;
+        height: 150px;
+    }
+
+    div#cat {
+        position:absolute;
+        z-index: 2;
+        margin: 0;
+        right: 3px;
+        bottom: 88vh;
+        transform: rotate(-20deg);
+        font-size: 20px;
+    }
+
+    ul#menuBar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #222;
+        width: 100%;
+        display: inline-flex;
+        justify-content: flex-start;
+        height: 30px;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }    
+
+    .filterSearch {
+        align-content: center;
+        justify-content: flex-start;
+        display: flex;
+        position: unset;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        top: 0;
+        margin: 0px 5px 2px 5px;
+        overflow: hidden;
+        z-index: 1;
+        background-color: #0a0a0a;
+    }
+
+}    
+
 /* div#phrase {
     font-family: 'Uchen', serif;
     color: #ffff;
@@ -47,18 +100,6 @@ body {
     /* background-color: #007799; */
     margin: 0;
 }
-
-/* @media screen and (min-width: 800px) {
-    header {
-        display: flex;
-        width: 100%;
-        max-height: max-content;
-    }
-
-    img#headerImg {
-        width: 100%;
-    }
-} */
 
 h3{
     color: white;
@@ -207,7 +248,7 @@ select:hover {
 }
 
 #searchWrapper::after {
-    content: '🔍';
+    content: '🔎';
     position: absolute;
     top: 16px;
     right: 15px;
@@ -297,6 +338,89 @@ img {
     left: 0;
 }
 
+button#moreInfo {
+    border-radius: 15px;
+    height: 30px;
+    font-size: 15px;
+    box-shadow: #ddd;
+    border: 2px solid rgba(96, 97, 94, 0.842);
+    transition: all .15s linear 0s;
+    font-family: arial;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+}
+
+#moreInfo:hover {
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 rgba(15, 14, 14, 0.815);
+}
+        
+#moreInfo::after {
+    top: 1px;
+    left: -2px;
+    width: angle-o;
+    height: angle-o;
+}
+        
+#moreInfo::before {
+    bottom: -2px;
+    right: 1px;
+    width: angle-o;
+    height: angle-o;
+}
+
+#moreInfo::after {
+    transition: all .15s linear 0s;
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -4px;
+    width: angle;
+    height: angle;
+    background-color: rgba(15, 14, 14, 0.815);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+      
+#moreInfo::before {
+    transition: all .15s linear 0s;
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 2px;
+    width: angle;
+    height: angle;
+    background-color: rgba(15, 14, 14, 0.815);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+    
+
+/* .synopsisCard {
+    background-color: #eaeaea;
+    transform: rotateY(180deg);
+    color:rgba(108, 110, 105, 0.842);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: max-content;
+    height: 330px;
+    background-color: rgba(80, 79, 79, 0.98);
+    border: 2px solid rgba(108, 110, 105, 0.842);
+    border-radius: 20px;
+    padding: 20px 20px 30px 20px;
+    top: 0;
+    left: 0;
+}
+
+.synopsisCard:hover .innerCard {
+    transform: rotateY(180deg);
+} */
+
 
 @media screen and (min-width: 800px) {
     #divCard {
@@ -306,7 +430,6 @@ img {
 }
 
 p {
-    /* background-color: rgba(245, 241, 241, 0.39); */
     width: 200px;
     color: #ffff;
     font-weight: 600;

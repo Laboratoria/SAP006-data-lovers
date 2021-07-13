@@ -25,7 +25,6 @@ function terrainFilter(films) {
 
 export const terreno = (array) =>
   array.filter(terrainFilter);
-;
 
 export const sortChar = (data, order) => {
   if (order === "A-Z") {

@@ -19,11 +19,11 @@ const cards = document.querySelector(".mainCards");
 function showingCards(itens) {
     cards.innerHTML = "";
     for (const film of itens) {
-        const title = film.title;
         const poster = film.poster;
-        const backDirector = film.director;
+        const title = film.title;
         const backYear = film.release_date;
-        const backRt = film.rt_score;
+        const backDirector = film.director;
+        const backRt = film.rt_score;               
         const elementTitle = `
     <div id="divCard" class="film">
         <div class="innerCard">
@@ -34,9 +34,12 @@ function showingCards(itens) {
                 </div>
             </div>
             <div class="backCard">
-                <p class="backText">Release Year: ${backYear}</p>
-                <p class="backText">Director: ${backDirector}</p>
-                <p class="backText">Rating Score: ${backRt}</p>
+                <p class="backText"><i class="material-icons">event</i> Release Year: ${backYear}</p>
+                <p class="backText"><i class="material-icons">face</i> Director: ${backDirector}</p>
+                <p class="backText"><i class="material-icons">star_rate</i> Rating Score: ${backRt}</p>
+                <div id="popupDiv">
+                    <button onclick="createPopup()" class="backText" id="moreInfo">CLICK FOR MORE</button>
+                </div>
             </div>
         </div>
     </div>`;
@@ -46,6 +49,21 @@ function showingCards(itens) {
 
 showingCards(films);
 
+function createPopup(itens) {
+    for (const film of itens) {
+    const textDescription = film.description; 
+    let btnInfo = document.createElement("div");
+    let contentInfo = document.createElement("p")
+    contentInfo += textDescription;
+    btnInfo.innerHTML = textDescription;
+    document.getElementById("popupDiv").appendChild(contentInfo);
+    }
+    showingCards();
+} 
+
+clickSynopsis.addEventListener("click-on", (event) => {
+    const popupSynopsis = document.createElement("div")
+})
 
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
