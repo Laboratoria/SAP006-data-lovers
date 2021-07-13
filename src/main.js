@@ -1,8 +1,7 @@
-// import { filtro } from './data.js';
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const personagens = data.results;
-// console.log(data.results[0]);
+
 
 const botao = document.getElementById("buscar");
 botao.addEventListener("click", (e) => filtrar(e));
@@ -10,9 +9,7 @@ botao.addEventListener("click", (e) => filtrar(e));
 function mostrarCartoes(itens) {
   const cards = document.querySelector("#resultado");
   cards.innerHTML = "";
-  //   if (mostrarCartoes === []) {
-  //     return alert('Filtro não encontrado')
-  //   }
+  
   const cartoes = itens.map(({ status, species, type, origin, image, name, gender }) =>
         `<div class="flip">
           <div class="card">
@@ -20,19 +17,15 @@ function mostrarCartoes(itens) {
               <div><img  class="image" src="${image}" alt="personagens Rick and Morty"></div>
               <h3 class="text">${name}</h3>
             </div>
-
             <div class="back-card">
               <div class="text-back-card>
                 
-                <h3 class="legend">Origin</h3>
+                <h3 class="back-title">Origem</h3>
                 <p class="legend">${origin.name}</p>
-
                 <h3 class="back-title">Status</h3>
                 <p class="legend">${status}</p>
-
                 <h3 class="back-title">Gênero</h3>
                 <p class="legend">${gender}</p>
-
                 <h3 class="back-title">Espécie</h3> 
                 <p class="legend">${species}</p> 
               
@@ -49,21 +42,11 @@ function mostrarCartoes(itens) {
 const filtrar = function (k) {
   k.preventDefault();
 
-  //   console.log('clicou')
-
   const filtroStatus = document.getElementById("caracter-status").value;
   const filtroSpecies = document.getElementById("caracter-species").value;
   const filtoGender = document.getElementById("caracter-gender").value;
   const ordenaraz = document.getElementById("ordenar").value;
   
-//   const ordem = function(a,b){
-//     ordenaraz.sort(function (a, b) {
-//         return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
-     
-//      });
-//     console.log(ordenaraz)
-//   }
-
   const personagensFiltrados = personagens.filter(function (personagem) {
     if (
       personagem.status === filtroStatus ||
@@ -75,7 +58,3 @@ const filtrar = function (k) {
   });
   mostrarCartoes(personagensFiltrados);
 };
-ordenaraz.sort(function(a,b){
-  return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-  mostrarCartoes(ordenaraz);
-  });
