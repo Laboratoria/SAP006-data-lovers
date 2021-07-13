@@ -42,10 +42,10 @@ option:nth-child(even) {
 .cards_text {
   display: flex;
   margin-inline: auto;
-  margin-left: 100px;
+  margin-left: 200px;
   height: 665px;
   position: absolute;
-  z-index: 3;
+ 
 }
 
 .circle {
@@ -82,7 +82,7 @@ option:nth-child(even) {
 .wrap {
   margin: 0 auto;
   /*/ background-color: aqua;/*/
-  margin-left: 340px;
+  margin-left: 440px;
   margin-top: 15px;
   height: 180px;
   width: 1450px;
@@ -115,7 +115,7 @@ option:nth-child(even) {
   position: absolute;
   z-index: 2;
   margin-top: -80px;
-  margin-left: -80px;
+  margin-left: -100px;
 }
 
 .textbox p {
@@ -426,19 +426,11 @@ ul {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .wrap {
-    margin: 0 auto;
-    margin-left: 160px;
-    margin-bottom: 1900px;
-    height: 180px;
-    width: 1450px;
-    position: absolute;
-    overflow: hidden;
-  }
+
 
   .container-carousel {
     margin-left: 10px;
-    z-index: 1;
+    
   }
 
   #ordemGeracao {
@@ -450,24 +442,23 @@ ul {
   }
 
   .wrap {
+    margin-left: 400px;
     margin-bottom: 9440px;
-    z-index: 2;
+  
   }
 
-  .line {
-    z-index: 1;
-  }
-
-  #cards-sem-carosel {
-    z-index: 1;
-  }
-
-  #telaPrincipal {
-    z-index: -1;
-  }
+ 
   .circle {
     display: flex;
     opacity: 0;
+  }
+  .cards_text {
+    display: flex;
+    margin-inline: auto;
+    margin-left: 100px;
+    height: 665px;
+    position: absolute;
+   
   }
 }
 
