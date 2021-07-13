@@ -18,74 +18,82 @@
                     <li><a href="index.html"><strong>HOME</strong></a></li>
                     <li><a href="filmes.html"><strong>FILMS</strong></a></li>
                     <li><a href="personagens.html"><strong>CHARACTERS</strong></a></li>
-                </ul> 
+                </ul>
             </nav>
         </div>
-        
+
     </header>
-    
+
     <div class="characters-img">
         <img src="./imgs/characters2.png">
     </div>
-    <form class="open-menu">
+    <section class="main-container">
 
-        <div class="menu-select">
-            
-            <button class="button" data-az-order>Order by A-Z</button>
-            <button class="button" data-za-order>Order by Z-A</button>
-           <!-- <button class="button" data-films-vehicles>Veículos</button>-->
-        </div>
+        <form class="open-menu">
 
-        <div class="menu-select">
-            <select id="select-gender">
-                <option value="gender" selected disabled> Gender </option>
-                <option value="Female"> Female </option>
-                <option value="Male"> Male </option>
-            </select>
-        </div>
+            <div class="menu-select">
 
-        <div class="menu-select">
-        <!--select name="select-specie" id="specie" class="button" data-film-specie>-->
-               <select id="select-species"> 
-                <option value="specie" selected disabled> Species </option>
-                <option value="Human"> Human </option>
-                <option value="Totoro"> Totoro </option>
-                <option value="Cat"> Cat </option>
-                <option value="Witch"> Witch </option>
-                <option value="Raccoon Dog"> Racoon dog </option>
-                <option value="Red elk"> Red Elk </option>
-                <option value="Spirit"> Spirit </option>
-                <option value="Wolf"> Wolf </option>
-                <option value="Deity, Dragon"> Dragon </option>
-                <option value="Spirit of The White Fox"> Spirit of The White Fox </option>
-                <option value="Bird"> Bird </option>
-                <option value="Wizard"> Wizard </option>
-                <option value="Witch/Human"> Wicth/Human</option>
-                <option value="Demon"> Demon </option>
-                <option value="Human/Scarecrow">Human/Scarecrow</option>
-                <option value="Arch-mage/Human"> Arch-mage </option>
-                <option value="Fish/Human">Fish/Human</option>
-                <option value="Deity">Deity</option>
-                <option value="Borrower">Borrower</option>
+                <button class="button" data-az-order>Order by A-Z</button>
+                <button class="button" data-za-order>Order by Z-A</button>
+                <!-- <button class="button" data-films-vehicles>Veículos</button>-->
+            </div>
+
+            <div class="menu-select">
+                <select id="select-gender">
+                    <option value="gender" selected disabled> Gender </option>
+                    <option value="Female"> Female </option>
+                    <option value="Male"> Male </option>
                 </select>
-        </div>
-        <div class="search-char">
-        <input type="search" id="txt-search" placeholder="Search by name">
-        </div>
-        
-    </form>
+            </div>
 
-    <main> 
-        <div class="print-curious" id="curiosities">
+            <div class="menu-select">
+                <!--select name="select-specie" id="specie" class="button" data-film-specie>-->
+                <select id="select-species">
+                    <option value="specie" selected disabled> Species </option>
+                    <option value="Human"> Human </option>
+                    <option value="Totoro"> Totoro </option>
+                    <option value="Cat"> Cat </option>
+                    <option value="Witch"> Witch </option>
+                    <option value="Raccoon Dog"> Racoon dog </option>
+                    <option value="Red elk"> Red Elk </option>
+                    <option value="Spirit"> Spirit </option>
+                    <option value="Wolf"> Wolf </option>
+                    <option value="Deity, Dragon"> Dragon </option>
+                    <option value="Spirit of The White Fox"> Spirit of The White Fox </option>
+                    <option value="Bird"> Bird </option>
+                    <option value="Wizard"> Wizard </option>
+                    <option value="Witch/Human"> Wicth/Human</option>
+                    <option value="Demon"> Demon </option>
+                    <option value="Human/Scarecrow">Human/Scarecrow</option>
+                    <option value="Arch-mage/Human"> Arch-mage </option>
+                    <option value="Fish/Human">Fish/Human</option>
+                    <option value="Deity">Deity</option>
+                    <option value="Borrower">Borrower</option>
+                </select>
+            </div>
 
-        </div>
-        
-        <div class="poster-people" id="poster-people">
+            <div class="search-char">
+                <input type="search" id="txt-search" placeholder="Search by name">
+            </div>
 
-        </div>
-        
-    </main>
-   
+        </form>
+
+        <main>
+
+            <div class="print-curious" id="curiosities"></div>
+            <div class="poster-people" id="poster-people"> </div>
+
+        </main>
+
+        <footer class="footer">
+            <p> Desenvolvido por <a href="https://github.com/caroAlvim" target="_blank">Carolina Alvim</a> e
+                <a href="https://github.com/ledi-mach" target="_blank">Lediane Machado</a> <br>
+                SAP006 - LABORATORIA
+            </p>
+        </footer>
+
+    </section>
+
     <script src="personagens.js" type="module"></script>
 </body>
 

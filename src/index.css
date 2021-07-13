@@ -7,24 +7,27 @@
 }
 
 .menu ul {
-    /*background-color: #a0a2b0;#c1cfda;*/
-    list-style: none; /*tira os marcadores*/
+    list-style: none; 
     padding: 15px 8%;
     text-align: left;
     margin-top: 0px;
     height: 200px;
 }
+
 .menu ul li {
    display: inline;
    margin: 10px;
    color: #56658c;
 }
+
 .menu ul li a:hover {
     color:  #41a8bc;
 }
+
 .menu ul li a {
-    text-decoration: none; /*Tirar o sublinhado da referência*/
+    text-decoration: none; 
 }
+
 .title-info{
     display: flex;
     height: 120px;
@@ -33,53 +36,59 @@
     align-items: center;
     justify-content: center;
 }
+
 .title{
     font-size: 60px;
     margin: 30px;
 }
+
 .info{
     font-size: 16px;
     width: 150px;
 }
 
-/*Carrosel*/
+/*Slider*/
 .photos{
     margin-top: 20px;
     margin-left: 20px;
 }
+
 .slider {
     width: 800px;
     height: 450px;
     border-radius: 3%;
     overflow: hidden;
-  
  }
+
  .slides{
     width: 500%;
     height: 500px;
     display: flex;
  }
+
  .slides input{
     display: none;
  }
+
  .slide{
     width: 20%;
     transition: 2s;
  }
+
  .slide img{
     width: 800px;
     height: 450px;
     margin-bottom: 20px;
  }
+
  /*CSS para navegação manual*/
   
  .navigation-manual{
     position: absolute;
-    width: 300px;
+    width: 60%;
     margin-top: -90px;
     display: flex;
     justify-content: center;
-   
  }
   
  .manual-btn{
@@ -93,24 +102,31 @@
  .manual-btn:not(:last-child){
     margin-right: 30px;
  }
+
  .manual-btn:hover{
     background: white;
  }
+
  #radio1:checked ~ .first{
     margin-left: 0;
  }
+
  #radio2:checked ~ .first{
     margin-left: -20%;
  }
+
  #radio3:checked ~ .first{
     margin-left: -40%;
  }
+
  #radio4:checked ~ .first{
     margin-left: -60%;
  }
+
  #radio5:checked ~ .first{
     margin-left: -80%;
  }
+
  #radio6:checked ~ .first{
    margin-left: -100%;
 }
@@ -118,26 +134,27 @@
  .navigation-auto{
     position: absolute;
     display: flex;
-    width: 300px;
+    width: 60%;
     margin-top: 410px;
     justify-content: center;
- 
  }
+
  .navigation-auto div{
     border: 2px solid white;
     padding: 5px;
     border-radius: 10px;
-    transition: 1s;
-   
+    transition: 1s; 
  }
   
  .navigation-auto div:not(:last-child){
     margin-right: 30px;
  }
+
 .photos{
     display: flex;
     margin-top: 20px;
 }
+
 .paragrafo1{
     padding: 15px;
     line-height: 1.5;
@@ -149,8 +166,8 @@
 
 .text-container{
    margin: auto;
-
 }
+
 .nav-menu{
    width: 430px;
    text-align: center;
@@ -177,7 +194,7 @@
     transform: scale(1.05);
 }
 
-.testando{
+.info-by-side{
    background-color: #e7e7dd;
    margin-left: 20px;
    border-radius: 10px;
@@ -185,7 +202,6 @@
    width: 463px;
    margin-bottom: 20px;
 }
-
 
 .info img{
    width: 150px;
@@ -212,13 +228,16 @@ footer a:hover{
 
 
 @media (min-width:320px) and (max-width:1000px){
+.title-info{
+   height: 15vh;
+}
  footer{
     display: none;
  }
    .slider{
       width: 100%;
       margin: auto;
-      margin-top: 2%;
+      margin-top: 5%;
       height: 550px;
    }
   .slider img{
@@ -230,7 +249,7 @@ footer a:hover{
       margin:2%; 
    }
 
-   .testando{
+   .info-by-side{
       width: 100%;
       margin: auto;
       margin-top: 10%;
@@ -243,11 +262,11 @@ footer a:hover{
    }
    .navigation-auto{
       margin-top: 470px;
-      margin-left: 35%;
+      margin-left: 20%;
    }
    .navigation-manual{
       margin-top: -30px;
-      margin-left: 35%;
+      margin-left: 20%;
    }
 
 }

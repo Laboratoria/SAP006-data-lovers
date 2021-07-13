@@ -17,52 +17,49 @@
             <li><a href="personagens.html"><strong>CHARACTERS</strong></a></li>
         </ul>
     </nav>
+
     <div class="characters-img">
         <img src="./imgs/characters2.png">
     </div>
 
-    <form class="open-menu">
-        <div class="menu-select">
-            <button class="button" data-best-score>Best films</button>
-            <button class="button" data-films-newest>Newest films</button>
-            <button class="button" data-film-olders>Oldest films</button>
-        </div>
-        <div class="menu-select">
-            <select id="director">
-                <!--name="select-director" id="director" class="director"></select>-->
-                <option value="director" selected disabled> Director </option>
-                <option value="Hayao Miyazaki"> Hayao Miyazaki </option>
-                <option value="Isao Takahata"> Isao Takahata </option>
-                <option value="Yoshifumi Kondō"> Yoshifumi Kondō </option>
-                <option value="Hiroyuki Morita"> Hiroyuki Morita </option>
-                <option value="Gorō Miyazaki"> Gorō Miyazaki </option>
-                <option value="Hiromasa Yonebayashi"> Hiromasa Yonebayashi </option>
-            </select>
-        </div>
-        <div class="search-film">
-            <input type="search" id="film-search" placeholder="Search by title">
+    <section class="main-container">
+
+        <form class="open-menu">
+
+            <div class="menu-select">
+                <button class="button" data-best-score>Best films</button>
+                <button class="button" data-films-newest>Newest films</button>
+                <button class="button" data-film-olders>Oldest films</button>
             </div>
 
-<<<<<<< HEAD
-=======
+            <div class="menu-select">
+                <select id="director">
+                    <option value="director" selected disabled> Director </option>
+                    <option value="Hayao Miyazaki"> Hayao Miyazaki </option>
+                    <option value="Isao Takahata"> Isao Takahata </option>
+                    <option value="Yoshifumi Kondō"> Yoshifumi Kondō </option>
+                    <option value="Hiroyuki Morita"> Hiroyuki Morita </option>
+                    <option value="Gorō Miyazaki"> Gorō Miyazaki </option>
+                    <option value="Hiromasa Yonebayashi"> Hiromasa Yonebayashi </option>
+                </select>
+            </div>
+
+            <div class="search-film">
+                <input type="search" id="film-search" placeholder="Search by title">
+            </div>
+
         </form>
 
->>>>>>> 36fe99abadddb21843d05ad13dd59232433bd36d
-    <main class="poster-cards" id="poster-cards"></main>
+        <main class="poster-cards" id="poster-cards"> </main>
 
-</section>
-
-    <footer class="footer"> 
-
-            <p>
-                Desenvolvido por <a href="https://github.com/caroAlvim" target="_blank">Carolina Alvim</a> e
+        <footer class="footer">
+            <p> Desenvolvido por <a href="https://github.com/caroAlvim" target="_blank">Carolina Alvim</a> e
                 <a href="https://github.com/ledi-mach" target="_blank">Lediane Machado</a> <br>
-                SAP006 - LABORATORIA</p>
+                SAP006 - LABORATORIA
+            </p>
+        </footer>
 
-     </footer>
-       
-       
-
+    </section>
     <script src="films.js" type="module"></script>
 </body>
 
