@@ -1,4 +1,4 @@
-import { filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica} from '../src/data.js';
+import { filtroGenero, filtroEspecie, filtroStatus, ordemAlfabetica, calcularPorcentagem, buscarNome} from '../src/data.js';
 
 ////////////////////// TESTES DOS TESTES 01 /////////////////////////
 const mockPersonagens = [
@@ -31,11 +31,10 @@ const mockPersonagens = [
 
 const mockNames = [
   {"name": "Bearded Lady"},
-  {"name": "Boobloosian"},
-  {"name": "Morty Smith"},
   {"name": "Rick Sanchez"},
+  {"name": "Morty Smith"},
+  {"name": "Boobloosian"},
 ]
-
 
 
 /////////////////////TESTE PARA FILTRAR O GENERO
@@ -94,31 +93,44 @@ it('Deverá filtrar pelo status Dead', () => {
 });
 
 
-/////////////////////TESTE PARA ORDENAÇÃO ALFABÉTICA CRESCENTE
+/////////////////////TESTE PARA ORDENAÇÃO ALFABÉTICA
 describe('ordemAlfabetica', () => {
   it('Deverá ser uma função', () => {
   expect(typeof ordemAlfabetica).toBe('function');
 });
 
-  it('should return the array in alphabetic order"', () => {
+  it('Deverá retornar em ordem A-Z', () => {
     expect(ordemAlfabetica(mockNames, "AZ")).toStrictEqual(mockNames);
   });
-  it('should return the array in reverse alphabetic order"', () => {
+  it('Deverá retornar em ordem Z-A', () => {
     expect(ordemAlfabetica(mockNames, "ZA")).toStrictEqual(mockNames.reverse());
   });
 });
 
 
 /////////////////////TESTE PARA CALCULAR A PORCENTAGEM
-// describe('calcularPorcentagem', () => {
-//   it('Deverá ser uma função', () => {
-//   expect(typeof calcularPorcentagem).toBe('function');
-// });
+describe('calcularPorcentagem', () => {
+  it('Deverá ser uma função', () => {
+  expect(typeof calcularPorcentagem).toBe('function');
+});
 
-// it('Deverá retornar 50% de Male', () => {
-//   const resultadoPersonagens = ((mockPersonagens.length * 100) /)
-//   const expected = calcularPorcentagem(mockPersonagens, resultadoPersonagens)
-//   expect (expected.length).toEqual(50)
- 
-//   });
-// });
+it('Deverá retornar 50% de personagens masculinos', () => {
+  const expected = calcularPorcentagem(mockPersonagens.length, 2)
+  expect (expected).toEqual(50)
+  });
+});
+
+/////////////////////////TESTE PARA CAMPO DE BUSCA NOME
+describe('buscarNome', () => {
+  it('Deverá ser uma função', () => {
+    expect(typeof buscarNome).toBe('function');
+  });
+  it('Deveverá buscar por um nome', () => {
+    const expected = buscarNome(mockNames, 'banana')
+    expect (expected).toEqual([])
+  });
+  it('Deveverá buscar por um nome', () => {
+    const expected = buscarNome(mockNames, 'Rick')
+    expect (expected).toEqual([{"name": "Rick Sanchez"}])
+  });
+});
