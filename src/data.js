@@ -75,7 +75,11 @@ const filterType = (data, valor) => {
   
 };
 
-
+const typeStats = (data, type) => {
+  const percentType = data.filter(pokemon => 
+  pokemon.type.includes(type))
+  return Math.round((percentType.length/data.length * 100))
+}
 
 
 
@@ -85,5 +89,6 @@ export {
   sortCp, 
   filterType,
   ordenarPorNome,
+  typeStats
 };
 

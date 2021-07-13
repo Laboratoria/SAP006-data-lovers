@@ -3,6 +3,7 @@ import data from '../src/data/pokemon/pokemon.js';
 import {
   filterType,
   filtrarPelaGeracao,
+  sortCp,
   ordenarPorNome,
   ordenarPorNum,
 
@@ -93,25 +94,30 @@ describe('ordenar Numeros', () => {
 
 
 describe('filtrarPelaGeracao', () => {  
-    it('Pokemons da Primeira Geração', () => {
-        expect(filtrarPelaGeracao(data.pokemon, 'kanto')).toHaveLength(151);
+  it('Pokemons da Primeira Geração', () => {
+    expect(filtrarPelaGeracao(data.pokemon, 'kanto')).toHaveLength(151);
 
-    });
+  });
 
-});
-
-
-
-
-describe('filtrarPelaGeracao', () => {
   it('Pokemons da Segunda Geração', () => {
     expect(filtrarPelaGeracao(data.pokemon, 'johto')).toHaveLength(100);
   })
+});
 
+describe('sortCp', () => {
+
+  it('should be a function', () => {
+    expect(typeof sortCp).toBe('function');
+  })
 });
 
 
+
 describe('filterType', () => {
+  it('should be a function', () => {
+    expect(typeof filterType).toBe('function');
+  })
+
   it("Espera-se por pokemon do tipo", () =>{
     expect(filterType(data.pokemon, 'water')).toHaveLength(50);
   });
