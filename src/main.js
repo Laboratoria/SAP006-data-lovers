@@ -178,14 +178,20 @@ function onPreviousClick() {
 nextEl.addEventListener('click', onNextClick);
 previousEl.addEventListener('click', onPreviousClick);
 
+let calcType;
+const typeCalc = document.getElementById("tipoPokemon")
+  typeCalc.addEventListener('change', () => {
+    const filterpokes = document.getElementById('typeStats');
+    calcType = typeCalc.value;
+    filterpokes.innerHTML = `${typeStats(pokemonList, calcType)}% dos Pokemons são do tipo selecionado`;
+  
+  })
 
 
 
 
 
-
-
-
+/*
 
  const estatisticas = data.pokemon;
 
@@ -229,12 +235,5 @@ previousEl.addEventListener('click', onPreviousClick);
 </table>  
 
   `
+*/
 
-let calcType;
-const typeCalc = document.getElementById("tipoPokemon")
-  typeCalc.addEventListener('change', () => {
-    const filterpokes = document.getElementById('typeStats');
-    calcType = typeCalc.value;
-    filterpokes.innerHTML = `${typeStats(pokemonList, calcType)}% dos Pokemons são do tipo selecionado`;
-  
-  })

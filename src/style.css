@@ -15,7 +15,7 @@
 .line {
   background-color: #c52018;
   position: relative;
-  height: 10000px;
+  height: 100%;
   display: flex;
   width: 150px;
   border-right: 20px solid #292929;
@@ -23,7 +23,7 @@
 }
 
 #telaPrincipal {
-  background-color: yellow;
+ 
   width: 100px;
   height: 10000px;
   display: flex;
@@ -69,11 +69,11 @@
   margin: 0 auto;
   /*/ background-color: aqua;/*/
   margin-left: 160px;
-  margin-bottom: 9700px;
   height: 180px;
   width: 1450px;
   position: absolute;
   overflow: hidden;
+  z-index: 1;
 }
 
 .pictures {
@@ -316,6 +316,7 @@ ul {
   height: 80vh;
   position: relative;
   overflow: visible;
+  z-index: 2;
 }
 
 .slider {
@@ -326,6 +327,7 @@ ul {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
+  z-index: 2;
 }
 
 .carousel-img {
@@ -392,7 +394,7 @@ ul {
   .wrap {
     margin: 0 auto;
     margin-left: 160px;
-    margin-bottom: 1700px;
+    margin-bottom: 1900px;
     height: 180px;
     width: 1450px;
     position: absolute;
@@ -401,6 +403,11 @@ ul {
   
   .container-carousel {
     margin-left: 10px;
+    z-index: 1;
+ 
+  
+
+  
   }
 
   #ordemGeracao {
@@ -413,6 +420,8 @@ ul {
 
   .wrap {
     margin-bottom: 9440px;
+    z-index: 2;
+    
   }
 
   .line {
