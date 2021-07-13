@@ -1,26 +1,24 @@
-import { filters, sortChar } from './data.js';
+import { filters, sortChar, characters } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-const char = data.films;
-//console.log(char);
+const film = data.films;
+//const movieTitle = char.title;
+//console.log (movieTitle);
 
-const peopleList = [];
-for (let i = 0; i < char.length; i++) {
-    for (let j = 0; j < char[i].people.length; j++) {
-        peopleList.push(char[i].people[j]);
-    }
-};
+const chars = characters (film);
+
 
 const charsCards = document.getElementById("characterCards");
 
 function showingCards(itens) {
     charsCards.innerHTML = "";
-    for (const people of itens) {
+        for (const people of itens) {
         const name = people.name;
         const photo = people.img;
         const backAge = people.age;
         const backGender = people.gender;
         const backSpecie = people.specie;
+        const backMovie = people.movie;
         const elementTitle = `
     <div id="divCard" class="film">
         <div class="innerCard">
@@ -29,7 +27,8 @@ function showingCards(itens) {
             <p class="title">${name}</p>
         </div>
         <div class="backCard">
-            <p class="backText">Age:  ${backAge}</p>
+            <p class="backMovie">Movie: ${backMovie}</p>
+            <p class="backText">Age: ${backAge}</p>
             <p class="backText">Gender: ${backGender}</p>
             <p class="backText">Specie: ${backSpecie}</p>
         </div>
@@ -39,7 +38,7 @@ function showingCards(itens) {
     }
 }
 
-showingCards(peopleList);
+showingCards(chars);
 
 gender.addEventListener("change", (event) => {
     const selectedGender = event.target.value;
@@ -61,3 +60,14 @@ sortAZ.addEventListener("change", (event) => {
 }
 );
 
+const inputSearch = document.getElementById("searchBar");
+inputSearch.addEventListener("keyup", (e) => {
+    const searchString = e.target.value;
+    const searchedFilms = peopleList.filter((people) => {
+        return (
+            people.name.toLowerCase().includes(searchString) ||
+            people.name.toUpperCase().includes(searchString)
+        );
+    });
+    showingCards(searchedFilms);
+});

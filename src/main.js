@@ -1,10 +1,10 @@
 import { filters, sortAtoZ, terreno } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-window.onscroll = function() {stickyFilter()};
+window.onscroll = function () { stickyFilter() };
 let filterBar = document.getElementsByClassName("filterSearch");
 let sticky = filterBar.offsetTop;
-function stickyFilter () {
+function stickyFilter() {
     if (window.pageYOffset >= sticky) {
         filterBar.classList.add("sticky")
     } else {
