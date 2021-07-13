@@ -13,6 +13,37 @@ const printPokemons = (pokemonsList) => {
   cardsElement.innerHTML = "";
   const cardPokemons = pokemonsList.map((pokemon) => {
     const typesPokemons = pokemon.type;
+    let nextEvolutionName = "Não tem";
+
+    if ("next-evolution" in pokemon.evolution) {
+      nextEvolutionName = pokemon.evolution["next-evolution"][0].name;
+    }
+
+    return `<li class="cards ${typesPokemons[0]}">
+      <img class="card-image" alt="${pokemon.name}" src="${pokemon.img}"/>
+      <h2 class="card-title"> ${pokemon.num} ${pokemon.name}</h2>
+      <span class="card-subtitle">
+      <p>Evolução: ${nextEvolutionName} </p>
+      <p>Chance de Aparecer: ${
+        pokemon["spawn-chance"] === null
+          ? `<p> -- </p>`
+          : `<p> ${pokemon["spawn-chance"]}% </p>`
+      }
+      <p>Força: ${pokemon.stats["max-cp"]}CP </p>
+      <p class="card-subtitle2" id="card-subtitle2">${typesPokemons.join(
+        " | "
+      )}</p>
+      </span>
+      </li>
+      `;
+  });
+  cardsElement.innerHTML = cardPokemons.join("");
+};
+/*const printPokemons = (pokemonsList) => {
+  const cardsElement = document.getElementById("cards");
+  cardsElement.innerHTML = "";
+  const cardPokemons = pokemonsList.map((pokemon) => {
+    const typesPokemons = pokemon.type;
     return `<li class="cards ${typesPokemons[0]}">
       <img class="card-image" alt="${pokemon.name}" src="${pokemon.img}"/>
       <h2 class="card-title"> ${pokemon.num} ${pokemon.name}</h2>
@@ -37,7 +68,7 @@ const printPokemons = (pokemonsList) => {
   });
   cardsElement.innerHTML = cardPokemons.join("");
 };
-
+*/
 const pokemonsList = showPokemons(data.pokemon);
 printPokemons(pokemonsList);
 
@@ -71,7 +102,7 @@ function calcPercent() {
   let result = percentType(data.pokemon, calcType);
   document.getElementById(
     "resultcalc"
-  ).innerText += `Este tipo de Pokémon representa ${result}% do total`;
+  ).innerText = `Este tipo de Pokémon representa ${result}% do total`;
 }
 
 // Ordenar Pokémons por CP
@@ -88,6 +119,5 @@ orderByCP.addEventListener("change", pokemonsByCP);
 const clearSearch = () => {
   document.getElementById("pokemonsearch").value = "";
   document.getElementById("order").value = "";
-  document.getElementById("type").value = "";
-  document.getElementById("resultcalc").value = "";
+  document.getElementById("resultcalc").innerText = "";
 };
