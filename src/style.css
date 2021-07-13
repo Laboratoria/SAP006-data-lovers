@@ -287,7 +287,6 @@ img {
 .film {
     background-color: transparent;
     width: 230px;
-    height: 310px;
     perspective: 1000px;
     margin: 40px;
 }
