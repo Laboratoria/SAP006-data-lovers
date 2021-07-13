@@ -1,11 +1,13 @@
-import {showFilms} from './data.js';
+import { showFilms, sortData } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-//função para criar cards dos filmes
-//const listaFilmes = showFilms(data.ghibli)
+
+const clean = () => {
+    boxFilmCards.innerHTML = "";
+  }
 
 const printCardsFilms = (listaFilmes) => {
-    listaFilmes.forEach(film => {
+    listaFilmes.forEach(film => { 
         const filmCardsElements = document.getElementById("boxFilmCards");
         filmCardsElements.innerHTML += `
         <div class="filmCard">
@@ -25,5 +27,20 @@ const printCardsFilms = (listaFilmes) => {
         </div>`
     })
 }
+
 printCardsFilms(data.films) 
+
+
+btnFilmsAZ.addEventListener("click",() => {
+    clean()
+    const filmsOrder = sortData (data.films, ["title"], "asc")
+    printCardsFilms(filmsOrder)
+})
+
+btnFilmsZA.addEventListener("click",() => {
+    clean()
+    const filmsOrder = sortData (data.films, ["title"], "desc")
+    printCardsFilms(filmsOrder)
+})
+
 

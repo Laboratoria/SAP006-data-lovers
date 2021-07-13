@@ -3,21 +3,24 @@ import data from './data/ghibli/ghibli.js';
 
 
 const movies = data.films
+console.log(movies)
 
-function getPeople() {
-    let people = [];
-    for (let film of movies){
-        for (let char of film.people)
-        people.push(char)
-    }
-    return people
-}
+//const btnFilms = getElementById("btnFilmsAZ") 
 
-const clean = () => {
-    boxCharacaterCards.innerHTML = "";
-  }
+//btnFilmsAZ.addEventListener("click", (event) => {
+    //event.preventDefault();
+    //console.log(btnFilms.value)
+    //sortData
+    //const orderFilmsAZ = sortData (movies, title )
+//}
+//) 
 
-  const printCardsCharacters = (listaPersonagens) => {
+const filmsOrder = sortData (movies, title, "asc")
+console.log(filmsOrder)
+
+
+
+const printCardsCharacters = (listaPersonagens) => {
     listaPersonagens.map(people => {
         const characterCardsElements = document.getElementById("boxCharacaterCards");
         characterCardsElements.innerHTML += `
@@ -38,34 +41,6 @@ const clean = () => {
 }
 
 printCardsCharacters(getPeople())
-
-btnCharactersAZ.addEventListener("click",() => {
-    clean()
-    const CharacterOrder = sortData (getPeople(), ["name"], "asc")
-    printCardsCharacters(CharacterOrder)
-})
-
-btnCharactersZA.addEventListener("click",() => {
-    clean()
-    const CharacterOrder = sortData (getPeople(), ["name"], "desc")
-    printCardsCharacters(CharacterOrder)
-})
-
-
-
-/*const orderCharactersAZ = document.getElementById("btnCharactersAZ")
-
-orderCharactersAZ.addEventListener("click", (event) => {
-    const valorBtn = event.target.value
-    console.log(valorBtn)
-    const charactersList =  sortData()
-    console.log(charactersList)
-})*/
-
-
-
-
-
 
 
 
