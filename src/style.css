@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: Pixels;
-  src: url(./assets/PixelDart.ttf);
+  src: url(./assets/LLPIXEL3.ttf);
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  font-family: "Roboto", "Rockwell", sans-serif;
+  font-family: "Roboto", "Pixel", sans-serif;
 }
 
 option:nth-child(odd) {
@@ -105,18 +105,19 @@ option:nth-child(even) {
     #fff 100%
   );
 }
+
 .textbox {
   display: flex;
   width: 1500px;
   height: 50px;
-
   position: absolute;
   z-index: 2;
   margin-top: -80px;
   margin-left: -80px;
 }
+
 .textbox p {
-  font-size: 40px;
+  font-size: 30px;
   font-family: Pixels;
 }
 
@@ -143,6 +144,18 @@ option:nth-child(even) {
   display: inline-block;
   margin-left: 20px;
   flex-shrink: 0;
+}
+
+.text, .typeStats{
+  color: white;
+  font-family: "Pixels";
+  text-align: center;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.typeStats{
+  margin-top: 400px;
 }
 
 .gridContainerUp {
@@ -293,7 +306,7 @@ ul {
 
 .seletores {
   width: 160px;
-  height: 40px;
+  height: 160px;
   display: flex;
   position: absolute;
   margin-inline: auto;
@@ -395,11 +408,6 @@ ul {
   margin-left: -80px;
   padding-left: 40px;
   color: transparent;
-}
-
-.text {
-  font-family: "Rockwell";
-  font-weight: bolder;
 }
 
 .info_icon {
