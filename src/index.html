@@ -3,34 +3,47 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Poke Lovers</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="shortcut icon" href="https://www.pikpng.com/pngl/m/135-1358145_pokeball-pixel-art-pokeball-hd-png-download.png">
 </head>
 
 <body>
-  <container id="telaPrincipal">
-    
-  
-    <div class="line">
+
+  <div class="wrap">
+
+    <select id="ordemGeracao" autocomplete="off">
+      <option value="all">Selecione a geração</option>
+      <option value="kanto">I</option>
+      <option value="johto">II</option>
+    </select>
+
+    <div class="container-carousel">
+      <span id="previous"><i data-feather="chevron-left"></i></span>
+      <span id="next"><i data-feather="chevron-right"></i></span>
+      <div id="slider" class="slider"></div>
+    </div>
+
+  </div>
+
+  <nav id="telaPrincipal">
+
+    <nav class="line">
+
       <div class="perfil">
         <img id="perfil" src="https://8bitocrafts.files.wordpress.com/2013/03/pokemon-red-sprite2.jpg">
         <p class="text">Bem-vindo treinador pokemon!</p>
-        <p class="text" id="functionTitle">Aqui você encontra as principais informações dos pokemons do mundo de Pokemon GO!</p>
+        <div class="typeStats" id="typeStats">Selecione um tipo de Pokemon!</div>
       </div>
+
       <nav>
         <ul>
-          <li class="info_icon"><a href="contatos.html"><i data-feather="info"></i></a></i>
-           
-          </li>
-        
+          <li class="info_icon"><a href="contatos.html"><i data-feather="info"></i></a></li>
         </ul>
-
-
-
       </nav>
-      
-      
+
       <div class="seletores">
+
         <select class="seletor" id="tipoPokemon" autocomplete="off">
           <option value="">Filtrar por tipo</option>
           <option value="fire">fire</option>
@@ -49,30 +62,17 @@
           <option value="bug">bug</option>
         </select>
 
-
-        <select class="seletor" name="" id="name">
+        <select class="seletor" name="" id="name" autocomplete="off">
           <option value="all">Ordenar por Nome</option>
           <option value="A-Z">A-Z</option>
           <option value="Z-A">Z-A</option>
-
-
-
         </select>
 
-
-        <select class="seletor" name="" id="num">
+        <select class="seletor" name="" id="num" autocomplete="off">
           <option value="all">Ordenar por Número</option>
-          <option value="0-50">Crescente</option>
-          <option value="50-0">Decrescente</option>
-
-
-
+          <option value="crescente">Crescente</option>
+          <option value="decrescent">Decrescente</option>
         </select>
-
-
-        <button class="seletor" type="submit" id="num">Ordem numérica</button>
-        
-       
 
         <select class="seletor" type="submit" id="maxcp" autocomplete="off">
           <option value="">Ordenar pelo CP</option>
@@ -80,73 +80,36 @@
           <option value="decrescent">Decrescente</option>
         </select>
 
-        <div class="typeStats" id="typeStats"></div> 
         
-      
+
       </div>
-    </div>
+
+    </nav>
+
     <div class="circle">
       <div class="white-circle">
         <div class="border"></div>
       </div>
     </div>
 
-    
+  </nav>
 
+  <main class="cards_text">
 
- 
-  <div class="wrap">
-
-    
-    <select id="ordemGeracao"> 
-      
-    
-      <option value="all">Selecione a geração</option>
-       <option value="kanto">I</option>
-       <option value="johto">II</option>
-
-   
-  </select>
-    <div class="container-carousel">
-     
-      <span id="previous"><i data-feather="chevron-left"></i></span>
-      <span id="next"><i data-feather="chevron-right"></i></span>
-      <div id="slider" class="slider">
-        <div class="name-geracao"></div>
-    
+    <div id="cards-sem-carosel">
+      <div class="textbox" id="textbox">
+        <p id="textCenter">Aqui você encontra as principais informações dos pokemons do mundo de Pokemon GO!</p>
       </div>
-      
-    
     </div>
-   
 
-
-
-
-
-  </div>
- 
-
-  
-</container>
-<div id="cards-sem-carosel">
-
-
-</div>
-
-<div class="table" id="table">
-
-</div>
-
-
-
-
+  </main>
 
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
-      feather.replace()
+    feather.replace()
   </script>
   <script src="main.js" type="module"></script>
+
 </body>
 
 </html>

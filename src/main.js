@@ -13,26 +13,26 @@ import {
 
 
 
- const pokemonList = data.pokemon.slice(0, 10);
- let pokeCard = document.getElementById('cards-sem-carosel');
- 
- const displayPokes = (pokemonData) => {
- 
- pokemonData.map((elem) => {
-  
-  let props = elem["special-attack"]
-  
-  let attName = props.map(function(specialAttack){
-   return specialAttack["name"]
-     
-  })
+const pokemonList = data.pokemon.slice(0, 10);
+let pokeCard = document.getElementById('cards-sem-carosel');
 
-  let attType = props.map(function(typeAttack){
-    return typeAttack["type"]
+const displayPokes = (pokemonData) => {
 
-  })
-  
-      pokeCard.innerHTML += `<div class="card" id="card">
+  pokemonData.map((elem) => {
+
+    let props = elem["special-attack"]
+
+    let attName = props.map(function (specialAttack) {
+      return specialAttack["name"]
+
+    })
+
+    let attType = props.map(function (typeAttack) {
+      return typeAttack["type"]
+
+    })
+
+    pokeCard.innerHTML += `<div class="card" id="card">
         <div class="gridContainerUp" id="gridContainerUp"> 
           <div class="title"> ${elem.name.toUpperCase()}</div>
           <div class="number">#${elem.num}</div>
@@ -66,10 +66,10 @@ import {
       </div>
     </div>
 `;
-});
+  });
 };
 displayPokes(pokemonList);
-  
+
 
 let selecionarPorTipo;
 const filtrar = document.getElementById("tipoPokemon");
@@ -77,7 +77,7 @@ filtrar.addEventListener('change', () => {
   const getpokes = document.getElementById('cards-sem-carosel');
   getpokes.innerHTML = '';
   selecionarPorTipo = filtrar.value;
-  
+
   displayPokes(filterType(pokemonList, selecionarPorTipo));
 
 });
@@ -92,7 +92,7 @@ ordenarPorCP.addEventListener('change', () => {
   sortCp(pokemonList, ordenarMaxCp)
   displayPokes(pokemonList)
 })
- 
+
 let ordernarPorNumeros;
 const ordenar = document.getElementById("num");
 ordenar.addEventListener('change', () => {
@@ -136,7 +136,7 @@ const displayPokesGeneration = (pokemonData) => {
 
        </div> 
       `;
-});
+  });
 
 
 };
@@ -178,14 +178,17 @@ function onPreviousClick() {
 nextEl.addEventListener('click', onNextClick);
 previousEl.addEventListener('click', onPreviousClick);
 
+let calcType;
+const typeCalc = document.getElementById("tipoPokemon")
+typeCalc.addEventListener('change', () => {
+  const filterpokes = document.getElementById('typeStats');
+  calcType = typeCalc.value;
+  filterpokes.innerHTML = `${typeStats(pokemonList, calcType)}% dos Pokemons são do tipo selecionado`;
+
+})
 
 
-
-
-
-
-
-
+/*
 
  const estatisticas = data.pokemon;
 
@@ -229,12 +232,4 @@ previousEl.addEventListener('click', onPreviousClick);
 </table>  
 
   `
-
-let calcType;
-const typeCalc = document.getElementById("tipoPokemon")
-  typeCalc.addEventListener('change', () => {
-    const filterpokes = document.getElementById('typeStats');
-    calcType = typeCalc.value;
-    filterpokes.innerHTML = `${typeStats(pokemonList, calcType)}% dos Pokemons são do tipo selecionado`;
-  
-  })
+*/
