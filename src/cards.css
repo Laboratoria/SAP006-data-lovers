@@ -11,11 +11,7 @@ body{
     background-color: #38527B;
     /* animation: banner 40s infinite;
     animation-direction: alternate; */
-<<<<<<< HEAD
-}
-=======
     }
->>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 
 .menu{
     list-style: none;
@@ -87,8 +83,6 @@ body{
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
     perspective: 1000px;
     border-radius: 10px;
-<<<<<<< HEAD
-=======
 }
 
 .characterCard{
@@ -99,7 +93,6 @@ body{
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.541);
     perspective: 1000px;
     border-radius: 10px;
->>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 }
 
 .flipper{
@@ -113,12 +106,9 @@ body{
 
 .filmCard:hover .flipper{
     transform: rotateY(180deg);
-<<<<<<< HEAD
-=======
 }
 .characterCard:hover .flipper{
     transform: rotateY(180deg);
->>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 }
 
 .frontCard, .backCard{
@@ -139,11 +129,6 @@ body{
 
 .filmPoster{
     width: 100%;
-<<<<<<< HEAD
-    height: 100%;
-    border-radius: 10px;
-    text-align: justify;
-=======
     height: 100%; 
     border-radius: 10px;
     text-align: justify;
@@ -157,5 +142,4 @@ body{
     border-radius: 10px;
     text-align: justify;
     background-image: cover; 
->>>>>>> 9a0c346ad8c8fdf75426f57c511ace716d40ac50
 }
