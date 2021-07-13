@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+
+/*@font-face {
+  font-family: 'Kongtext';
+  src: URL('kongtext.ttf');
+}*/
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Rockwell", sans-serif;
 }
-
 
 .line {
   background-color: #c52018;
@@ -17,7 +21,6 @@
   border-right: 20px solid #292929;
   
 }
-
 
 #telaPrincipal {
   background-color: yellow;
@@ -61,7 +64,6 @@
   border: 4px solid #292929;
   border-radius: 50%;
 }
-
 
 .wrap {
   margin: 0 auto;
@@ -114,7 +116,6 @@
   display: inline-block;
   margin-left: 20px;
   flex-shrink: 0;
-  
 }
 
 .gridContainerUp {
@@ -253,8 +254,6 @@ button {
   width: 50px;
 }
 
-
-
 .info_icon {
   display: flex;
   position: absolute;
@@ -275,7 +274,6 @@ ul {
   margin-left: 10px;
   border-radius: 50px;
 }
-
 
 .seletores {
   width: 40px;
@@ -314,8 +312,6 @@ ul {
 }
 
 .container-carousel {
-
- 
   width: 100%;
   height: 80vh;
   position: relative;
@@ -362,7 +358,6 @@ ul {
 }
 
 #ordemGeracao {
-  
   width: 150px;
   height: 30px;
   margin-bottom: 20px;
@@ -381,14 +376,21 @@ ul {
   color: transparent;
 }
 
+.text{
+  font-family: 'Rockwell';
+  font-weight: bolder;
+}
 
+.textbox{
+  width: 200px;
+  height: 50px;
+  background-color: #d12547;
 
+}
 
-/* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1024px) {
   .wrap {
     margin: 0 auto;
-   
     margin-left: 160px;
     margin-bottom: 1700px;
     height: 180px;
@@ -397,19 +399,11 @@ ul {
     overflow: hidden;
   }
   
-
-  
-
   .container-carousel {
     margin-left: 10px;
- 
-  
-
-  
   }
 
   #ordemGeracao {
-
     margin-bottom: 500px;
     width: 150px;
     height: 30px;
@@ -418,15 +412,11 @@ ul {
   }
 
   .wrap {
-    
     margin-bottom: 9440px;
-    
   }
 
   .line {
     z-index: 1;
-
-  
   }
 
   #cards-sem-carosel {
@@ -434,21 +424,136 @@ ul {
   }
 
   #telaPrincipal {
-
     z-index: -1;
-    
   }
   .circle {
     display: flex;
-   opacity: 0;
+    opacity: 0;
   }
-
-  
-
 }
 
+@media (min-width: 440px) and (max-width: 768px){
 
-@media only screen and (min-width: 360px){
+  #cards-sem-carosel{
+    grid-template-columns: 210px 210px;
+    margin-top: -9850px;
+    margin-left: 100px;
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
+  }
+
+  .wrap{
+    width: 500px;
+    height: 90px;
+    margin-top: -180px;
+    margin-left: 110px;
+  }
+
+  .circle{
+    display: none;
+  }
+
+  .card{
+    width: 230px;
+    height: 320px;
+  }
+
+  .gridContainerUp{
+    grid-template-rows: 20px 1px 110px 10px;
+  }
+
+  .gridContainerDown{
+    grid-template-rows: 75px 1px 82px;
+  }
+
+  .title{
+    padding: 3px;
+    font-size: 12px;
+  }
+
+  .number{
+    padding: 3px;
+    font-size: 10px;
+  }
+
+  .sideInfo{
+    padding: 0px;
+    font-size: 8px;
+  }
+
+  .backgroundImg{
+    width: 210px;
+    height: 120px;
+  }
+
+  .attackList, .typeList, .weakList, .resistList{
+    font-size: 9.5px;
+    padding: 5px;
+  }
+
+  .attacks, .type, .weak, .resistant{
+    font-size: 8px;
+  }
+
+  .line{
+    width: 100px;
+    border-right: 10px solid black;
+  }
+
+  #perfil{
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+  }
+ 
+  .seletores{
+    width: 100px;
+    margin-top: 400px;
+  }
+
+  .seletor{
+    width: 70px;
+    padding: 2px;
+    font-size: 14px;
+  }
+
+  .info_icon{
+    margin-left: -75px;
+  }
+
+  a{
+    margin-top: -18px;
+  }
+
+  #ordemGeracao{
+    width: 100px;
+    height: 20px;
+    font-size: 8px;
+  }
+
+  .container-carousel{
+    height: 80px;
+  }
+
+  #previous, #next{
+    height: 20px;
+  }
+
+  .slider{
+    height: 60px;
+  }
+
+  .pictures{
+    width: 50px;
+    height: 50px;
+  }
+
+  .name-geracao{
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 439px){
 
   #cards-sem-carosel{
     grid-template-columns: 210px;
@@ -456,6 +561,10 @@ ul {
     margin-top: -9850px;
     margin-left: 100px;
     grid-row-gap: 20px;
+  }
+
+  .circle{
+    display: none;
   }
 
   .card{
@@ -548,7 +657,6 @@ ul {
   }
 
   #previous, #next{
-    width: 30px;
     height: 20px;
   }
 
@@ -566,12 +674,3 @@ ul {
   }
 }
 
-@media only screen and (min-width: 440px){
-  #cards-sem-carosel{
-    grid-template-columns: 210px 210px;
-    margin-top: -9850px;
-    margin-left: 100px;
-    grid-row-gap: 20px;
-    grid-column-gap: 50px;
-  }
-}
