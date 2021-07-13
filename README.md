@@ -97,4 +97,5 @@ E também diferenciamos os seletores de filtro dos outros botões a fim de deixa
 - Javascript
 - CSS3
 - HTML5
+- Json
 - Jest
