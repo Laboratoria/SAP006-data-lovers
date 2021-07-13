@@ -1,8 +1,5 @@
 import { computeStats, filterData, sortData, searchName } from "./data.js";
-
-const answer = await fetch("./data/rickandmorty/rickandmorty.json");
-const info = await answer.json();
-const data = await info;
+import data from "./data/rickandmorty/rickandmorty.js"
 
 const cards = document.querySelector(".cards");
 let genericCards = "";
