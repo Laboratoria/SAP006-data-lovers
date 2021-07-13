@@ -124,7 +124,7 @@ ul#menuBar {
     background-color: #222;
     width: 100%;
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     height: 50px;
     align-content: center;
     flex-direction: row;
@@ -152,10 +152,10 @@ a:hover {
     color: #eaeaea;
 }
 
-a.active {
+/*a.active {
     background-color: #ddd;
     color: black;
-}
+}*/
 
 @media screen and (max-width: 600px) {
     ul#menuBar {
@@ -194,7 +194,7 @@ a.active {
 
 .filterSearch {
     align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -477,3 +477,14 @@ p {
 .dropdownContent p:hover {background-color: #ddd;}
 .filterTest:hover .dropdownContent {display:list-item;}
 .filterTest:hover .dropbtn {background-color: #3e8e41;} */
+
+
+@media screen and (max-width: 800px) {
+    header {
+        display: flex;
+        width: 100%;
+        max-height: max-content;
+    }
+
+
+}

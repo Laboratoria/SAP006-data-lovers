@@ -23,8 +23,8 @@ function terrainFilter(films) {
   return temIsso;
 }
 
-export const terreno = (array) => 
-  array.filter(terrainFilter); 
+export const terreno = (array) =>
+  array.filter(terrainFilter);
 
 export const sortChar = (data, order) => {
   if (order === "A-Z") {
@@ -32,5 +32,16 @@ export const sortChar = (data, order) => {
   } else if (order === "Z-A") {
     return data.sort((a, z) => a.name > z.name ? -1 : 1);
   }
-}; 
+};
 
+export const characters = (films) => {
+  const peopleList = [];
+  for (let i = 0; i < films.length; i++) {
+    for (let j = 0; j < films[i].people.length; j++) {
+      const char = films[i].people[j]
+      char.movie = films[i].title;
+      peopleList.push(char);
+    }
+  };
+  return peopleList;
+};
