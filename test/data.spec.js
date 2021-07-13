@@ -94,7 +94,7 @@ it('Deverá filtrar pelo status Dead', () => {
 });
 
 
-/////////////////////TESTE PARA ORDENAÇÃO ALFABÉTICA CRESCENTE
+/////////////////////TESTE PARA ORDENAÇÃO ALFABÉTICA CRESCENTE/DECRESCENTE
 describe('ordemAlfabetica', () => {
   it('Deverá ser uma função', () => {
   expect(typeof ordemAlfabetica).toBe('function');
