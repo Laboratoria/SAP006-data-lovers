@@ -45,3 +45,7 @@ export const characters = (films) => {
   };
   return peopleList;
 };
+
+// export computeStats = (data) => {
+
+// }

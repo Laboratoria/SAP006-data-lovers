@@ -37,9 +37,9 @@ function showingCards(itens) {
                 <p class="backText"><i class="material-icons">event</i> Release Year: ${backYear}</p>
                 <p class="backText"><i class="material-icons">face</i> Director: ${backDirector}</p>
                 <p class="backText"><i class="material-icons">star_rate</i> Rating Score: ${backRt}</p>
-                <div id="popupDiv">
+               <!--- <div id="popupDiv">
                     <button onclick="createPopup()" class="backText" id="moreInfo">CLICK FOR MORE</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>`;
@@ -49,21 +49,21 @@ function showingCards(itens) {
 
 showingCards(films);
 
-function createPopup(itens) {
-    for (const film of itens) {
-    const textDescription = film.description; 
-    let btnInfo = document.createElement("div");
-    let contentInfo = document.createElement("p")
-    contentInfo += textDescription;
-    btnInfo.innerHTML = textDescription;
-    document.getElementById("popupDiv").appendChild(contentInfo);
-    }
-    showingCards();
-} 
+// function createPopup(itens) {
+//     for (const film of itens) {
+//     const textDescription = film.description; 
+//     let btnInfo = document.createElement("div");
+//     let contentInfo = document.createElement("p")
+//     contentInfo += textDescription;
+//     btnInfo.innerHTML = textDescription;
+//     document.getElementById("popupDiv").appendChild(contentInfo);
+//     }
+//     showingCards();
+// } 
 
-clickSynopsis.addEventListener("click-on", (event) => {
-    const popupSynopsis = document.createElement("div")
-})
+// clickSynopsis.addEventListener("click-on", (event) => {
+//     const popupSynopsis = document.createElement("div")
+// })
 
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
