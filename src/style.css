@@ -40,7 +40,9 @@ option:nth-child(even) {
   align-items: center;
 }
 .cards_text {
-  width: 6664px;
+  display: flex;
+  margin-inline: auto;
+  margin-left: 100px;
   height: 665px;
   position: absolute;
   z-index: 3;
@@ -80,7 +82,7 @@ option:nth-child(even) {
 .wrap {
   margin: 0 auto;
   /*/ background-color: aqua;/*/
-  margin-left: 240px;
+  margin-left: 340px;
   margin-top: 15px;
   height: 180px;
   width: 1450px;
@@ -328,6 +330,7 @@ ul {
 }
 
 #cards-sem-carosel {
+  
   display: grid;
   grid-template-columns: 180px 180px 180px;
   grid-template-rows: 280px 280px 280px 280px;
@@ -335,7 +338,10 @@ ul {
   grid-row-gap: 150px;
   margin-top: -9700px;
   margin-left: 500px;
-  z-index: 2;
+  width: 500px;
+  height: 500px;
+  margin-right: 0;
+
 }
 
 #ordemGeracao {
