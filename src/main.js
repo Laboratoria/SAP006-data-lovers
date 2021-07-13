@@ -183,8 +183,7 @@ previousEl.addEventListener('click', onPreviousClick);
 
 
 
-
-
+/*
 
  const estatisticas = data.pokemon;
 
@@ -229,5 +228,5 @@ previousEl.addEventListener('click', onPreviousClick);
 
   `
 
-
+*/
 
