@@ -29,8 +29,8 @@ function showingCards(itens) {
         <div class="innerCard">
             <div class="frontCard">
                 <div class="testeCard">
-                <img alt="Film poster" src="${poster}"/>
-                <p class="title">${title}</p>
+                    <img alt="Film poster" src="${poster}"/>
+                    <p class="title">${title}</p>
                 </div>
             </div>
             <div class="backCard">
@@ -61,9 +61,9 @@ function createPopup(itens) {
     showingCards();
 } 
 
-clickSynopsis.addEventListener("click-on", (event) => {
-    const popupSynopsis = document.createElement("div")
-})
+//clickSynopsis.addEventListener("click-on", (event) => {
+    //const popupSynopsis = document.createElement("div")
+//})
 
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
