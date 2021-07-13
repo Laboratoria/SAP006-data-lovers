@@ -12,16 +12,16 @@ const selectDirector = document.querySelector(".select-director");
 const computeStats = document.querySelector(".compute-stats");
 const buttonAz = document.querySelector("#buttonAz")
 
-function resetCards(){
+/*function resetCards(){
   selectMovies.value = ""
   selectCharacter.value = ""
   selectSpecie.value = ""
   selectProducer.value = ""
   selectDirector.value = ""  
 }
-
+*/
 function displayCards(movies) {
-  
+
   document.querySelector(".container").innerHTML = movies.map((film) => `     
     <div class="card">
         <div class="img" style="background-image: url(${film.poster})">
@@ -43,27 +43,27 @@ function displayCards(movies) {
 
 function getPeople() {
   let people = [];
-  for (let film of movies) {    
+  for (let film of movies) {
     for (let char of film.people) {
-     people.push(char)
-   }
+      people.push(char)
+    }
   }
-    return people;
+  return people;
 }
 
 let orderCharacters = getPeople()
 
 
-function getMovieScores(){
+function getMovieScores() {
   let scores = []
-  for(let film of movies){
+  for (let film of movies) {
     scores.push(film.rt_score)
   }
   return scores
 }
 
 function displayCardsChar(character) {
-  
+
   document.querySelector(".container").innerHTML = character.map((char) => `
     <div class="card">
         <div class="img" style="background-image: url(${char.img})">               
@@ -77,27 +77,30 @@ function displayCardsChar(character) {
 }
 
 const sortAz = () => {
-  if(selectDirector.value != "" || selectMovies.value != "" || selectProducer.value != ""){
-      return displayCards(orderAz(orderMovies, "title"))
-  }else if(selectSpecie.value != "" || selectCharacter.value != "") {
-      return displayCardsChar(orderAz(orderCharacters, "name"))
+  if (selectDirector.value != "" || selectMovies.value != "" || selectProducer.value != "") {
+    return displayCards(orderAz(orderMovies, "title"))
+  } else if (selectSpecie.value != "" || selectCharacter.value != "") {
+    return displayCardsChar(orderAz(orderCharacters, "name"))
   }
 }
+/* 
+return displayCards(movies)
+*/
 
-function displayPercentage(data, dataValue){  
-  computeStats.innerHTML = `A porcentagem de personagens desta seleção é ${computeStatsGender(data, dataValue)}%`   
+function displayPercentage(data, dataValue) {
+  computeStats.innerHTML = `A porcentagem de personagens desta seleção é ${computeStatsGender(data, dataValue)}%`
 }
 
-function displayMovieScores(){   
+function displayMovieScores() {
   computeStats.innerHTML = `A média das notas é ${avarageScore(getMovieScores())}.`
 }
 
 function printMovies() {
-  if(selectMovies.value === "score"){
+  if (selectMovies.value === "rt_score") {
     displayMovieScores()
-  }else {
+  } else {
     computeStats.innerHTML = ""
-  }
+  }                                     
   return displayCards(sortMovies(movies, selectMovies.value));
 }
 
