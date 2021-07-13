@@ -17,12 +17,24 @@ ul {
 a {
   text-decoration: none;
 }
-/*
+
 header .logo {
-  max-width: 200px;
-}*/
+  position: absolute;
+  left: 30px;
+  max-width: 504px;
+  max-height: 161px;
+  width: 100%;
+  height: 100%
+  object-fit: fill;
+}
+/*padding-right: 3rem;*/
 
 .image {
+  max-width: 142px;
+  max-height: 842px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
   float: left;
   justify-items: left;
 }
@@ -53,6 +65,7 @@ body p {
 }
 
 .title {
+  top: 2rem;
   font: 3rem;
   font-family: font-pokemonsolid;
   color: #34495e;
@@ -89,10 +102,10 @@ body p {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-/*
+
 .section {
   padding: calc(5rem + var(--header-height)) 0;
-}*/
+}
 
 .grid {
   display: grid;
@@ -237,10 +250,11 @@ footer {
 }
 
 footer .logo-alt {
-  position: relative;
-  padding: 1rem;
-  display: flex;
-  justify-content: left;
+  max-width: 237px;
+  max-height: 67px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 footer .social a {
@@ -262,12 +276,12 @@ footer .social a:hover {
 
 @media (min-width: 767px) {
   .logo {
-    position: absolute;
-    max-width: 30px;
-    max-height: 10px;
-    left: 20px;
-    top: 10px;
-    display: block;
+
+    max-width: 504px;
+    max-height: 161px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
   }
 }
 @media (min-width: 992px) {
