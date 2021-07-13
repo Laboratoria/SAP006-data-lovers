@@ -3,15 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
 
 header {
-    /* align-content: center; */
     background-image: url(https://64.media.tumblr.com/6d3eaa0491f4df8a821030bb46cefb73/1e4ee33c2f6e4ef6-8a/s1280x1920/43fd6c81251950d0840a624e4712ba1638a2b74a.gifv);
-    /* background-image: url(/src/header\ cover.png);
-    height: 300px
-    background-color: #0a0a0a;    
-    */
     background-color: #187894;
-    /* background-color: #187894; for howl
-     */
     background-position: 50% 79%;
     background-repeat: no-repeat;
     background-size: 45%;
@@ -254,6 +247,19 @@ select:hover {
     right: 15px;
 }
 
+.charsCount {
+    align-self: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 30px 20%;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px;
+}
+
 .mainCards {
     display: inline-flex;
     justify-content: space-evenly;
@@ -262,7 +268,6 @@ select:hover {
     align-items: center;
     box-sizing: border-box;
     object-fit: cover;
-    /* border-radius: 10px; */
     width: clamp(200px, 100%, 3000px);
 }
 
@@ -338,7 +343,7 @@ img {
 }
 
 button#moreInfo {
-    border-radius: 15px;
+    border-radius: 10px;
     height: 30px;
     font-size: 15px;
     box-shadow: #ddd;
