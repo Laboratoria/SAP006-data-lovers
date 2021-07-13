@@ -1,5 +1,8 @@
 import { computeStats, filterData, sortData, searchName } from "./data.js";
-import data from "./data/rickandmorty/rickandmorty.js";
+
+const answer = await fetch("./data/rickandmorty/rickandmorty.json");
+const info = await answer.json();
+const data = await info;
 
 const cards = document.querySelector(".cards");
 let genericCards = "";
@@ -28,7 +31,7 @@ function printCardsGeneric(filterChosen) {
             <h3>${name}</h3>
            </span>
            <span id="character_status">${status} - ${gender}</span>
-           <span id="episodes">Episodes</span>
+           <span id="episodes">Episódios</span>
              <p>${episode.map((i) => i.replaceAll(/[^0-9]/g, " "))}</p>
           </div>
       </div>`
