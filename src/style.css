@@ -63,8 +63,8 @@ body {
 /*Estilização do campo de pesquisar*/
 .pesquisar {
     font-family: 'Amatic SC', cursive;
-    font-size: 20px;
-    width: 400px;
+    font-size: 40px;
+    width: 600px;
     background-color: #FFEBCD;
     border-radius: 20px;
     padding: 10px;
@@ -72,31 +72,16 @@ body {
     align-self: center;
 }
 
-/*Estilização do botão de curiosidades*/
-.curiosidades {
-    background-color: #084D6E;
-    border-radius: 50px;
-    padding: 15px;
-    margin-left: 2%;
-    box-sizing: border-box;
-    font-family: 'Amatic SC', cursive;
-    font-size: 28px;
-    box-shadow: 0 0 8px 0 rgb(11 222 250 / 63%);
-    width: 150px;
-    align-self: center;
-    margin-top: 2%;
-}
 
 /*Estilização do botão de limpar*/
 #media-limpar{
     background-color: #084D6E;
-    box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
+    box-shadow: 0 0 4px 0 rgba(11, 222, 250, 0.63);   
     color: white;
-}
-
-/*Estilização na cor dos links*/
-a{
-    color: white;
+    width: 20%;
+    align-self: center;
+    margin-top: 25px;
+    font-size: 30px;
 }
 
 /*Estilização do container onde ficam os menus*/
@@ -108,6 +93,7 @@ a{
     align-items: center;
     justify-content: space-evenly;
     align-content: center;
+    margin-top: 5px;
 }
 
 /*Estilização dos botões de filtro*/
@@ -253,16 +239,6 @@ option{
         align-items: center;
     }
  
-    .curiosidades{
-        margin-top: 7%;
-        background-color: #084D6E;
-        box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
-        font-size: 28px;
-    }
-
-    a {
-        color: white;
-    }
 
     #media-limpar{
         margin-left: 1%;
@@ -326,31 +302,37 @@ option{
     }
     
     #container-search{
+        margin-top: 2%;
         margin-left: auto;
         align-items: center;
     }
- 
-    .curiosidades{
-        margin-top: 7%;
-        background-color: #084D6E;
-        box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);  
-        font-size: 28px; 
-    }
-
-    a {
-        color: white;
-    }
 
     #media-limpar{
-        margin-left: 3%;
+        margin-top: 5%;
         background-color: #084D6E;
         box-shadow: 0 0 8px 0 rgba(11, 222, 250, 0.63);   
         color: white;
+        font-size: 20px;
+        width: 50%;
+    }
+
+    #container-principal section {
+        font-size: 25px;
+    }
+
+    .menus {
+        padding: 7px;
+        flex-wrap: wrap;
     }
 
     .pesquisar{
-        font-size: 30px;
-        width: 350px;
+        font-size: 25px;
+        width: 300px;
+    }
+
+    .calculo{
+        font-size: 20px; 
+        width: 100%;        
     }
 
     .container-card{
@@ -367,16 +349,18 @@ option{
     }
     
    .card-img{
-        margin: 5% 4%;
-        width: 90%;
-        height: 55%;
+        margin: 5% 8%;
+        width: 80%;
+        height: 65%;
         display: block;
     }
 
     .front-text{
         margin-top: 2%;
-        width: 90%;
-        height: 40%;
+        width: 80%;
+        height: 50%;
+        
+        
     }
 
     .front-text-card{
@@ -384,4 +368,6 @@ option{
         text-align: center;
         font-size: 126%;
     }
+
+
 } 

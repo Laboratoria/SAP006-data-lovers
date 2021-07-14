@@ -15,7 +15,7 @@ export const  filtroEspecie = (data, condition) => {
 export const  filtroStatus = (data, condition) => {
   const resultadoStatus = data.filter((personagem) => personagem.status.toLowerCase() === condition.toLowerCase());
   return resultadoStatus;
-};  
+};
 
 //////////////////ORDENAÇÃO ALFABÉTICA UTILIZANDO SORT
 export const ordemAlfabetica = (data, order) => {
@@ -25,6 +25,7 @@ export const ordemAlfabetica = (data, order) => {
     return data.sort((a, z) => a.name > z.name ? -1 : 1)
   } 
 };
+
 
 //////////////////FUNÇÃO DE BUSCA POR NOME- FILTER()
 export const  buscarNome = (data, condition) => {
