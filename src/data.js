@@ -38,7 +38,3 @@ export const calcularPorcentagem = (total, portion) => {
   const porcentagem = Math.round((portion * 100) / total);
   return porcentagem;
 };
-
-// Estas funções devem ser*[puras](https://imasters.com.br/desenvolvimento/serie-js-e-vida-pure-functions-funcoes-puras)*e independentes do DOM. 
-// Estas funções serão depois usadas a partir do arquivo`src/main.js`, ao carregar a página e a cada vez que o usuário interagir com a interface 
-// (cliques, seleções, filtros, ordenação, etc).*/

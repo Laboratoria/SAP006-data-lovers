@@ -87,7 +87,6 @@ function limparFiltros(){
 window.location.reload();
 }
 
-
 //////////////////ADIÇÃO DE EVENTOS
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
 selecaoGenero.addEventListener("change", imprimirFiltroGenero);
