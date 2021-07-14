@@ -6,7 +6,7 @@
 <h2 align="center">RICK AND MORTY</h2>
 <h3 align="center">Para acessar o projeto, clique <a href="https://biancacristinaalves.github.io/SAP006-data-lovers/" target="_blank" style="color:#97CE4C" title="Clique aqui!">Aqui 🚀.</a></h3>
 
-![Início](https://media.giphy.com/media/DM4i2ZOLrf2nXQkPR2/giphy.gif)
+![Início](https://media.giphy.com/media/pWvTnP291rcybYITHv/giphy.gif)
 
 ## 📑 Índice
 - [1. Sobre o Projeto](#1-sobre)
