@@ -1,4 +1,4 @@
-import { filtrarPersonagens, ordemAZ, ordemZA } from './data.js';
+import { filtrarPersonagens, ordemAZ, ordemZA, buscarPorLetra } from './data.js';
 
 import data from "./data/rickandmorty/rickandmorty.js";
 
@@ -7,6 +7,9 @@ const ordemPersonagem = data.results.name
 
 const botao = document.getElementById("buscar");
 botao.addEventListener("click", (e) => filtrar(e));
+
+const procura = document.getElementById("input-procurar")
+
 
 
 function mostrarCartoes(itens) {
@@ -61,7 +64,7 @@ function ordenarA(e){
 
   mostrarCartoes(filtroAZ);
   
-}
+};
 document.getElementById("btn-desordenar").addEventListener("click", ordenarA);
 
 function ordenarZ(e) {
@@ -69,5 +72,15 @@ function ordenarZ(e) {
   const filtroZA= ordemZA(data.results);
 
   mostrarCartoes(filtroZA);
-}
+};
 document.getElementById("btn-ordenar").addEventListener("click", ordenarZ);
+
+function search(e){
+  e.preventDefault();
+
+  const pesquisaNome = procura.value;
+  const filtroNome = (buscarPorLetra(data.results, pesquisaNome));
+
+  mostrarCartoes(filtroNome);
+};
+document.getElementById("btn-procurar").addEventListener("click", search);

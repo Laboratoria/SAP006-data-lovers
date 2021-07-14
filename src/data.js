@@ -11,3 +11,7 @@ export const filtrarPersonagens = (personagens, filtroStatus, filtroSpecies, fil
 export const ordemAZ = (data) => data.sort((a, b) => (a.name < b.name) ? - 1 : 1);
 
 export const ordemZA = (data) => data.sort((a, b) => (a.name > b.name) ? - 1 : 1);
+
+export const buscarPorLetra = (data, name) => {
+  return data.filter(results => results.name.toUpperCase().includes(name.toUpperCase()));
+}
