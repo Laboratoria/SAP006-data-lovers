@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  margin: 0;
 }
 @font-face {
   font-family: Lato;
@@ -53,7 +54,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin: 30px; 
-  margin-left: auto;
   list-style: none;
 }
 
@@ -64,6 +64,8 @@ body {
   overflow: hidden;
   max-width: 260px;
   width: 20%;
+  max-width: 260px;
+  min-width: 200px;
   height: 320px; 
   margin: 15px;
   background: #232323;
@@ -94,6 +96,11 @@ body {
   .container{
     max-width: 100%;
   }
+
+  .cards li {
+    min-width: 150px;
+    max-height: 170px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -107,9 +114,9 @@ body {
   }
 
   .cards li{
-    transform: scale(0.8, 0.8);
-    margin: 0;
-    padding: 0;
+    /* transform: scale(0.8, 0.8); */
+    /* margin: 0;
+    padding: 0; */
   }
 
   .cards h3{
