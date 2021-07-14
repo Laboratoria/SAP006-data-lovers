@@ -1,12 +1,3 @@
-// estas funciones son de ejemplo
-
-/*export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};*/
 
 //SEARCH//
 
@@ -38,5 +29,3 @@ export const getPeople = films => {
   }
   return people
 }
-
-
