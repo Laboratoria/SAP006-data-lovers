@@ -11,7 +11,7 @@ body {
 }
 
 /*Container de Logo*/
-#logo {
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ body {
 }
 
 /*estilização do campo de pesquisas*/
-#container-search {
+.container-search {
     position: relative;
     margin-top: 40px;
     margin-right: 1000px;
@@ -63,7 +63,7 @@ body {
 /*Estilização do campo de pesquisar*/
 .pesquisar {
     font-family: 'Amatic SC', cursive;
-    font-size: 40px;
+    font-size: 30px;
     width: 600px;
     background-color: #FFEBCD;
     border-radius: 20px;
@@ -81,11 +81,11 @@ body {
     width: 20%;
     align-self: center;
     margin-top: 25px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /*Estilização do container onde ficam os menus*/
-#container-principal section{
+.container-principal section{
     position: relative;
     margin-top: 30px;
     display: flex;
