@@ -88,7 +88,7 @@ Os protótipos foram pensandos para facilitar a navegação e em trazer uma resp
 <img src="https://ik.imagekit.io/llneva6qvex/prototipo_alta_fidelidade_desktop_yftB4XFXny.png">
 
 ### Protótipo em alta fidelidade para Celular:
-<img src="https://ik.imagekit.io/llneva6qvex/prototipo_alta_fidelidade_celular_f_zp5KjiJ.png">
+<img src="https://ik.imagekit.io/llneva6qvex/alta_fidelidade_celular_C9meD96Gk.PNG">
 
 
 ## 📚 5. OBJETIVOS DE APRENDIZAGEM
@@ -155,11 +155,11 @@ Para os testes de usabilidade, desenvolvemos um **FORMS**, fazendo com que os us
 ![Teste usabilidade](https://media.giphy.com/media/0RqzPU7aT3kLHpR0jr/giphy.gif)
 
 Como retorno, nossos usuários:
-- _55% acessou pelo celular;_
-- _100% acharam que o layout trouxe familiaridade com o tema;_
-- _100% acharam que o site não demorou para carregar;_
-- _95% acharam que foi simples navegar pelos filtros e 5% acharam que os filtros poderiam ser integrados;_
-- _100% não tiveram problemas em encontrar/ler as informações na tela._
+- [x] _55% acessou pelo celular;_
+- [x] _100% acharam que o layout trouxe familiaridade com o tema;_
+- [x] _100% acharam que o site não demorou para carregar;_
+- [x] _95% acharam que foi simples navegar pelos filtros e 5% acharam que os filtros poderiam ser integrados;_
+- [x] _100% não tiveram problemas em encontrar/ler as informações na tela._
 
 
 ## 🚧 8. MELHORIAS FUTURAS:
