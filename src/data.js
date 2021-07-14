@@ -10,8 +10,8 @@ export const filterNames = (Array, searchName) => {
   }
 };
 
-export const filterByTag = function (array, botaoClicado){
-  const championTags = array.filter(champion => champion.tags[0] == botaoClicado || champion.tags[1] === botaoClicado);
+export const filterByTag = function (array, string){ //mudei para string assim, poderíamos usar  qualquer variável como argumento
+  const championTags = array.filter(champion => champion.tags[0] == string || champion.tags[1] === string);
   return championTags;
 };
 
@@ -37,5 +37,5 @@ export const difficultyOrder = (Array, chosendifficulty) => {
 };
 
 
-export const anotherExample = () => {
-  return 'OMG';
+/*export const anotherExample = () => {
+  return 'OMG';*/
