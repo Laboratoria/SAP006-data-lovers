@@ -16,9 +16,37 @@ export const filterByTag = function (array, string){ //mudei para string assim, 
 };
 
 
-export const difficultyOrder = (array, chosendifficulty) => {
-  let order = array.sort((a, b) => (a.info.difficulty - b.info.difficulty));
+export const difficultyOrder = (array, chosendifficulty) => {  
+  let dataLol2 = array.slice(0, array.length)
+  let order = dataLol2.sort((a, b) => (a.info.difficulty - b.info.difficulty));
+  let filteredNames = []
 
+  switch (chosendifficulty){
+    case '1':
+      return array
+      break
+
+    case '2':
+      filteredNames = order.filter(champion => champion.info.difficulty <= 4);
+      return filteredNames;
+      break
+    
+    case '3':
+      filteredNames = order.filter(champion => champion.info.difficulty > 4 && champion.info.difficulty <= 7)
+      return filteredNames;
+      break
+      
+    case '4': 
+      filteredNames = order.filter(champion => champion.info.difficulty > 7);
+      return filteredNames;
+        break
+      
+      default: 
+        window.alert(`Sorry, chose your champion.`)      
+  }
+};
+
+/*
   if (chosendifficulty === '2') {
     let filteredNames = order.filter(champion => champion.info.difficulty <= 4);
     return filteredNames;
@@ -30,5 +58,4 @@ export const difficultyOrder = (array, chosendifficulty) => {
   } else if (chosendifficulty === '4')  {
     let filteredNames = order.filter(champion => champion.info.difficulty > 7);
     return filteredNames;
-  }
-};
+  }*/

@@ -5,7 +5,6 @@ import { filterNames,
 
 // Campeão aparece na tela
 let dataLol = Object.values(data.data1);
-let novoArray = Object.values(data.data1);
 
 listingCards(dataLol);
 
@@ -60,9 +59,6 @@ function listingCards(itens) {
 
         </div>
       `;
-
-      /*const habChampion = Object.values(info.info) 
-      console.log(habChampion)*/
 
       //RELAÇÃO COM O HTML
       const grafic = document.querySelector("#barchart_material")
@@ -154,7 +150,7 @@ filterButton.addEventListener('click', (event) => {
   } else {
     const filtered = filterByTag(dataLol, botaoClicado);
     listingCards(filtered);
-  }
+    }
 });
 
 //FILTRAR POR  DIFICULDADE
@@ -163,10 +159,7 @@ const categories = document.querySelector(".dropbtn")
 categories.addEventListener("change", (event) => {
   const chosendifficulty = event.target.value;
 
-  if (chosendifficulty === '1') {
-    listingCards(novoArray);
-  } else {
-    const sortByDif = difficultyOrder(dataLol, chosendifficulty);
-    listingCards(sortByDif); 
-  }
+  const sortByDif = difficultyOrder(dataLol, chosendifficulty);
+  listingCards(sortByDif); 
+  
 });
