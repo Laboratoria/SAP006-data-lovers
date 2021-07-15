@@ -42,27 +42,25 @@ function printCardsGeneric(filterChosen) {
 
 const totalCharacters = computeStats.characters(data.results);
 
-printTotalCharacters.innerHTML = `<p class="totalCharacter">O total de personagens da série é:</p>
-                                  <p class="numberOfCharacters">${totalCharacters}</p>`;
+printTotalCharacters.innerHTML =
+  `<p class="text">O total de personagens da série é:
+    <span class="numberOfCharacters">${totalCharacters}</span>
+   </p>`;
 
 const maleAverage = computeStats.gender(data.results, "Male") + "%";
 const femaleAverage = computeStats.gender(data.results, "Female") + "%";
 const genderlessAverage = computeStats.gender(data.results, "Genderless") + "%";
 const unknownAverage = computeStats.gender(data.results, "unknown") + "%";
 
-printGenderAverage.innerHTML = `<p class="genderAverage">Média de gêneros:</p>
-                                <p class="genderAverage">Masculinos:
-                                  <span>${maleAverage}</span>
-                                </p>
-                                <p class="genderAverage">Femininos:
-                                  <span>${femaleAverage}</span>
-                                </p>
-                                <p class="genderAverage">Desconhecidos:
-                                  <span>${unknownAverage}</span>
-                                </p>
-                                <p class="genderAverage">Sem gênero:
-                                  <span>${genderlessAverage}</span>
-                                </p>`;
+printGenderAverage.innerHTML =
+  `
+      <p class="text">&emsp;<span>Médias:</span>&emsp;
+      Masculinos: <span>${maleAverage}</span> &emsp;| &emsp;  
+      Femininos: <span>${femaleAverage}</span> &emsp;| &emsp;
+      Desconhecidos: <span>${unknownAverage}</span>&emsp; | &emsp;
+      Sem gênero: <span>${genderlessAverage}</span> &emsp;
+      </p>
+  `;
 
 function filter(e) {
   e.preventDefault();

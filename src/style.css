@@ -13,23 +13,24 @@ main {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
+  
 
 h1 {
   font-size: 50px;
   color: white;
-  margin-left: 30px;
-  margin-right: 60px;
+  text-align: center;
+  margin: 0 0 40px 0;
 }
 
 .menu-filter {
   display: flex;
   align-content: center;
   align-items: center;
-  position: relative;
-  right: 56px;
+  justify-content: space-evenly;
 }
 
 option {
@@ -74,7 +75,7 @@ input,
 
 select,
 button {
-  width: 91px;
+  width: 150px;
   height: 25px;
   background: transparent;
   color: #e3dde0;
@@ -84,11 +85,12 @@ button {
 select:hover {
   border-bottom: 5px double #87f583;
   height: 45px;
-  width: 100px;
   transition: 0.5s;
 
 }
-
+#btn-clearFilters {
+  width: 100px;
+}
 #btn-clearFilters:hover, #sort-btn:hover {
   background: #05f2af;
   border: 1px solid #05f2af;
@@ -134,7 +136,7 @@ select:hover {
   max-width: 480px;
   max-height: 100%;
   border-radius: 10px;
-  background-color: #e3dde0;
+  background-color: #E3DDE0;
 }
 
 img,
@@ -143,7 +145,7 @@ img,
   max-width: 100%;
   border-radius: 10px;
   height: 245px;
-  width: -moz-fit-content;
+  width: auto;
 }
 
 img {
@@ -186,34 +188,24 @@ p {
 .stats {
   margin: 18px;
   position: relative;
-  flex: 1;
-  height: 160px;
-  min-width: 400px;
-  max-width: 400px;
-  border-radius: 5px;
-  background-color: #e3dde0;
-}
-
-.totalCharacter,
-.numberOfCharacters {
-  margin-top: 25px;
-  font-size: 18px;
-}
-
-.numberOfCharacters {
-  font-weight: 600;
-  font-size: 25px;
-}
-
-.genderAverage {
-  margin-top: 4px;
-  font-size: 18px;
-  text-align: left;
-  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
 }
 
 span {
   font-weight: 600;
+}
+
+#totalCharacters, #genderAverage{
+  border-radius: 20px;
+  background: #221C20;
+  border: 1px solid;
+  margin: 5px;
+  padding: 5px;
+}
+
+.text {
+  color: #e3dde0;
 }
 
 
@@ -313,6 +305,10 @@ span {
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
+    flex-direction: column;
+  }
+  .text {
+    align-content: center;
   }
 
   .totalCharacter {
