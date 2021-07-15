@@ -24,7 +24,7 @@ header .logo {
   max-width: 504px;
   max-height: 161px;
   width: 100%;
-  height: 100%
+  height: 100%;
   object-fit: fill;
 }
 /*padding-right: 3rem;*/
@@ -51,8 +51,10 @@ header .logo {
 }
 
 .imageditto {
-  float: center;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* ===== BASE ===== */
@@ -65,7 +67,7 @@ body p {
 }
 
 .title {
-  top: 2rem;
+  top: 1rem;
   font: 3rem;
   font-family: font-pokemonsolid;
   color: #34495e;
@@ -194,6 +196,213 @@ nav.show ul.grid {
   gap: 1rem;
 }
 
+#container-principal section {
+  top: 12rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+/*z-index: -1;*/
+
+.filtroTipos {
+  padding: 10px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #577590;
+  color: #fde57a;
+  font: 700 1rem var(--title-font);
+  text-align: center;
+}
+
+.resultcalc {
+  text-align: center;
+  font-size: 20px;
+  width: 60%;
+  margin: 0 auto;
+  color: #2c3e50;
+  font: 700 1rem var(--title-font);
+}
+
+.orderCP {
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #577590;
+  color: #fde57a;
+  font: 700 1rem var(--title-font);
+  align-content: center;
+  text-align: center;
+}
+
+.pokemonsearch {
+  border-radius: 10px;
+  background-color: #577590;
+  color: #fde57a;
+  font-size: 20px;
+  text-align: center;
+  width: 400px;
+  height: 60px;
+  padding: 10px;
+  align-content: center;
+}
+
+.pokemonsearch::placeholder {
+  color: #fde57a;
+}
+
+.botaoFiltrar {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #577590;
+  color: #fde57a;
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  align-content: center;
+  font: 700 1rem var(--title-font);
+}
+
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  padding-inline-start: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cards {
+  width: 280px;
+  margin-top: 1rem;
+  list-style: none;
+  color: var(--base-color);
+  text-align: center;
+  border-radius: 40px;
+  position: relative;
+  z-index: -1;
+}
+
+.steel {
+  background-color: #f4f4f4;
+}
+
+.fire {
+  background-color: #ffdac1;
+}
+
+.grass {
+  background-color: #b5ead7;
+}
+
+.electric {
+  background-color: #fff2a7;
+}
+
+.water,
+.ice {
+  background-color: #def3fd;
+}
+
+.ground {
+  background-color: #f4d5c0;
+}
+
+.rock {
+  background-color: #b2bec3;
+}
+
+.fairy {
+  background-color: #fecfd9;
+}
+
+.poison {
+  background-color: #c7ceea;
+}
+
+.bug {
+  background-color: #e2f0cb;
+}
+
+.dragon {
+  background-color: #97b3e6;
+}
+
+.psychic {
+  background-color: #a0e0ca;
+}
+
+.flying {
+  background-color: #f5f5f5;
+}
+
+.fighting {
+  background-color: #e6e0d4;
+}
+
+.normal {
+  background-color: #f0f8ff;
+}
+
+.ghost {
+  background-color: #d4f0f0;
+}
+
+.dark {
+  background-color: #bdc3c7;
+}
+
+.cards:hover {
+  animation: bounce 0.3s linear;
+}
+
+.card-title {
+  font-family: font-pokemonsolid;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+}
+
+.card-subtitle {
+  text-transform: capitalize;
+  color: var(--base-color);
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: var(--title-font);
+}
+
+.card-subtitle2 {
+  color: var(--base-color);
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-family: font-pokemonsolid;
+}
+
+.card-subtitle2:hover {
+  color: #577590;
+}
+
+.card-image {
+  height: 160px;
+  position: relative;
+  z-index: 2;
+}
+
 /* ===== TOGGLE MENU ===== */
 .toggle {
   color: #f15f3e;
@@ -247,9 +456,11 @@ footer {
   height: auto;
   background: #f15f3e;
   font: 400 1rem "Poppins";
+  color: #fde57a;
 }
 
 footer .logo-alt {
+  margin: 1rem 1rem 1.5rem 1.5rem;
   max-width: 237px;
   max-height: 67px;
   width: 100%;
@@ -258,6 +469,7 @@ footer .logo-alt {
 }
 
 footer .social a {
+  margin-top: 1.5rem;
   margin-right: 0.5rem;
   transition: 0.3s;
   display: inline-block;
@@ -272,24 +484,222 @@ footer .social a:hover {
   transform: translateY(-8px);
 }
 
+footer .social a.developedBy {
+  font-size: 1rem;
+}
+
 /* ===== MEDIA QUERIES =====*/
-
-@media (min-width: 767px) {
-  .logo {
-
-    max-width: 504px;
-    max-height: 161px;
+@media (max-width: 480px) {
+  header .logo {
+    top: 1.5rem;
+    left: 2rem;
+    max-width: 300px;
+    max-height: 96px;
     width: 100%;
-    height: 100%;
     object-fit: fill;
   }
-}
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
+
+  .title {
+    font: 0.3rem;
+    font-family: font-pokemonsolid;
+    color: #34495e;
+    font-weight: lighter;
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  .secondtitle {
+    font: 0.3rem;
+    font-family: font-pokemonsolid;
+    color: #16a085;
+    font-weight: lighter;
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  #home .text span {
+    font-family: font-pokemonsolid;
+    color: #34495e;
+    font-weight: lighter;
+  }
+
+  #home .text p {
+    font: 400 1rem "Poppins";
+    width: 90%;
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  #home .text p.sinopse {
+    width: 90%;
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .imagepassport {
+    display: none;
+  }
+
+  .imageserie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-alt {
+    display: none;
+  }
+
+  .section {
+    padding: calc(5rem + var(--header-height)) 0;
+  }
+
+  footer .social a {
+    margin-left: 1rem;
+    display: inline-block;
+    color: #fde57a;
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  footer .social a.developedBy {
+    font-size: 1rem;
   }
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #header {
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: #577590;
+  }
+
+  header .logo {
+    top: 1.5rem;
+    left: 12rem;
+    max-width: 300px;
+    max-height: 96px;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  .title {
+    font: 0.3rem;
+    font-family: font-pokemonsolid;
+    color: #34495e;
+    font-weight: lighter;
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  .secondtitle {
+    font: 0.3rem;
+    font-family: font-pokemonsolid;
+    color: #16a085;
+    font-weight: lighter;
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  #home .text span {
+    font-family: font-pokemonsolid;
+    color: #34495e;
+    font-weight: lighter;
+  }
+
+  #home .text p {
+    font: 400 1rem "Poppins";
+    width: 90%;
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  #home .text p.sinopse {
+    width: 90%;
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .imagepassport {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imageserie {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-alt {
+    display: none;
+  }
+
+  .section {
+    padding: calc(5rem + var(--header-height)) 0;
+  }
+
+  footer .social a.developedBy {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768) and (max-width: 992px) {
+  header .logo {
+    display: none;
+  }
+
+  .title {
+    font: 0.3rem;
+    font-family: font-pokemonsolid;
+    color: red;
+    /* color: #34495e; */
+    font-weight: lighter;
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  .secondtitle {
+    font: 0.3rem;
+    font-family: font-pokemonsolid;
+    color: #16a085;
+    font-weight: lighter;
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  footer .social a.developedBy {
+    font-size: 1rem;
+  }
+}
+
+/*320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+*/
 
 @media (min-width: 1023px) {
 }
@@ -323,7 +733,7 @@ footer .social a:hover {
   }
 
   nav .icon-menu {
-    display: none; /*desaparece da página*/
+    display: none;
   }
 
   .pages {
