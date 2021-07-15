@@ -1,26 +1,17 @@
 import {filterByName, filterByType, percentType, orderCP} from "../src/data.js";
 
-/*const typePoke = [
+const typePoke = [
   {"name": "bulbasaur",
-  "num": "001",
-  "img": "https://www.serebii.net/pokemongo/pokemon/001.png",
   "type": ["grass", "poison"],
-  "spawn-chance": "0.69",
   "max-cp": "1115",
 },
 
 {"name": "charmeleon",
- "num": "005",
-  "img": "https://www.serebii.net/pokemongo/pokemon/005.png",
   "type": "fire",
-  "spawn-chance": "0.012",
   "max-cp": "1653",},
 
 {"name": "pikachu",
- "num": "025",
-  "img": "https://www.serebii.net/pokemongo/pokemon/025.png",
   "type": "electric",
-  "spawn-chance": "0.21",
   "max-cp": "938",}
 
 ];
@@ -29,35 +20,78 @@ const namePoke = [
   {"name": "charmeleon"},
   {"name": "pikachu"},
 
-];*/
+];
+
+/*Deverá filtrar por nome e é uma função. Se o usuário escrever qq coisa sem ser o nome do pokemon, 
+nao vai mostrar cards e nem dar erro na tela*/
 
 describe('filterByName', () => {
   it('filterByName is a function', () => {
-    expect(typeof filterByName).toBe('function');
+   expect(typeof filterByName).toBe('function');
+  });
+
+  it ('You should filter by name', () => {
+    const expected = filterByName(namePoke, 'bumba')
+    expect (expected).toEqual([])
+  });
+
+  it ('You should filter by name', () => {
+    const expected = filterByName(namePoke, 'bulbasaur')
+    expect (expected).toEqual([{"name": "bulbasaur"}])
   });
 });
 
+//Deverá filtrar por tipo e é uma função
 
 describe('filterByType', () => {
-  it('filterByType is a function', () => {
+  it('filterByType it should be a function', () => {
     expect(typeof filterByType).toBe('function');
   });
+
+  it ('You should filter by type', () => {
+    const type = 'fire'
+    const expected = filterByType(typePoke, type)
+    expect (expected.length).toEqual(1)
+    expect (expected[0].type).toEqual(type)
+  });
 });
 
+//Deverá calcular a porcentagem total de cada tipo e é uma função
 describe('percentType', () => {
-  it('percentType is a function', () => {
+  it('percentType it should be a function', () => {
     expect(typeof percentType).toBe('function');
   });
-});
-
-describe('orderCP', () => {
-  it('orderCP is a function', () => {
-    expect(typeof orderCP).toBe('function');
+  it('You should calculate the per', () => {
+    expect(percentType(typePoke,'fire')).toBe(33);
+  });
+  it('You should calculate the per', () => {
+    expect(percentType(typePoke,'electric')).toBe(33);
   });
 });
 
-//É necessário que todas sejam uma função
-//Deverá filtrar por nome
-//Deverá filtrar por tipo
-//Deverá calcular a porcentagem total de cada tipo
-//Deverá ordenar por CP
+//Deverá ordenar por CP crescente e decrescente e é uma função
+
+describe('orderCP', () => {
+  it('orderCP it should be a function', () => {
+    expect(typeof orderCP).toBe('function');
+  });
+  it('It should show in order of CP growing', () => {
+    expect(orderCP(typePoke, "max-cp")).toStrictEqual(typePoke);
+  });
+  it('YShould show in order of decreasing CP', () => {
+    expect(orderCP(typePoke, "max-cp")).toStrictEqual(typePoke.reverse());
+  });
+
+  it('It should show in order of CP growing', () => {
+    expect(orderCP(typePoke, "min-cp")).toStrictEqual(typePoke);
+  });
+  it('YShould show in order of decreasing CP', () => {
+    expect(orderCP(typePoke, "min-cp")).toStrictEqual(typePoke.reverse());
+  });
+});
+
+
+
+
+
+
