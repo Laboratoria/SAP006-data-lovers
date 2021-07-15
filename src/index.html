@@ -16,7 +16,9 @@
 
   <body>
     <header>
-      <h1>RICK E MORTY</h1>
+      <h1>
+        <img src="./img/iconTitle.png" alt="Rick and Morty">
+      </h1>
       <form class="menu-filter">
         <input type="search" placeholder="Pesquisar" id="search" />
         <button id="sort-btn" class="sort">Personagens Principais</button>
@@ -31,17 +33,18 @@
           <option value="Male">MASCULINO</option>
           <option value="Female">FEMININO</option>
           <option value="unknown">DESCONHECIDO</option>
-          <option value="Genderless">INEXISTENTE</option>
+          <option value="Genderless">SEM GÊNERO</option>
         </select>
         <button id="btn-clearFilters" type="submit">LIMPAR</button>
       </form>
     </header>
     <main>
       <div class="container">
-        <div class="statistic">
-          <div class="stats" id="totalCharacters"></div>
-          <div class="stats" id="genderAverage"></div>
-        </div>
+       <section class="stats">
+        <div id="totalCharacters"></div>
+        <div id="genderAverage"></div>
+       </section>
+      
 
         <section class="cards"></section>
         <script src="main.js" type="module"></script>
