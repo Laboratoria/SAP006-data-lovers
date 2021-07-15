@@ -49,33 +49,12 @@ function showingCards(itens) {
 
 showingCards(films);
 
-// function createPopup(itens) {
-//     for (const film of itens) {
-//     const textDescription = film.description; 
-//     let btnInfo = document.createElement("div");
-//     let contentInfo = document.createElement("p")
-//     contentInfo += textDescription;
-//     btnInfo.innerHTML = textDescription;
-//     document.getElementById("popupDiv").appendChild(contentInfo);
-//     }
-//     showingCards();
-// } 
-
-// clickSynopsis.addEventListener("click-on", (event) => {
-//     const popupSynopsis = document.createElement("div")
-// })
-
-//clickSynopsis.addEventListener("click-on", (event) => {
-    //const popupSynopsis = document.createElement("div")
-//})
-
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
     const filterAZ = sortAtoZ(films, selectedSort);
     showingCards(filterAZ);
 });
 
-// fazer cálculo agregado:
 releaseDate.addEventListener("change", (event) => {
     const selectedDate = event.target.value;
     const filtered = filters(films, "release_date", selectedDate);
@@ -88,7 +67,6 @@ director.addEventListener("change", (event) => {
     showingCards(filtered);
 });
 
-// fazer cálculo agregado:
 rating.addEventListener("change", (event) => {
     const selectedRating = event.target.value;
     const filtered = filters(films, "rt_score", selectedRating);
@@ -98,7 +76,6 @@ rating.addEventListener("change", (event) => {
 terrain.addEventListener("change", (event) => {
     const selectedTerrain = event.target.value;
     const filtered = terreno(films, selectedTerrain);
-
     showingCards(filtered);
 });
 

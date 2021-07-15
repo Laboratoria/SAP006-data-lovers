@@ -1,12 +1,9 @@
-import { filters, sortChar, characters } from './data.js';
+import { filters, sortChar, characters, computeStats } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const film = data.films;
-//const movieTitle = char.title;
-//console.log (movieTitle);
 
 const chars = characters(film);
-
 
 const charsCards = document.getElementById("characterCards");
 
@@ -43,25 +40,49 @@ function showingCards(itens) {
 
 showingCards(chars);
 
+document.getElementById("countDiv").innerHTML = "There is a total of " + chars.length + " characters";
+
 gender.addEventListener("change", (event) => {
     const selectedGender = event.target.value;
-    const filtered = filters(chars, "gender", selectedGender);
-    showingCards(filtered);
-});
+    if (selectedGender === "") {
+        document.getElementById("countDiv").innerHTML = "There is a total of " + chars.length + " characters";
+        showingCards(chars);
+    } else {
+        const filtered = filters(chars, "gender", selectedGender);
+        showingCards(filtered);
 
+        if (computeStats(filtered, selectedGender) <= 1) {
+            document.getElementById("countDiv").innerHTML = "There is " + computeStats(filtered, selectedGender) + " " + selectedGender.toLowerCase() + " character of a total of " + chars.length + "characters";
+        } else {
+            document.getElementById("countDiv").innerHTML = "There are " + computeStats(filtered, selectedGender) + " " + selectedGender.toLowerCase() + " characters of a total of " + chars.length + "characters";
+        }
+    }
+});
 
 specie.addEventListener("change", (event) => {
     const selectedSpecie = event.target.value;
-    const filtered = filters(chars, "specie", selectedSpecie);
-    showingCards(filtered);
+    if (selectedSpecie === "") {
+        document.getElementById("countDiv").innerHTML = "There is a total of " + chars.length + " characters";
+        showingCards(chars);
+    } else {
+        const filtered = filters(chars, "specie", selectedSpecie);
+        showingCards(filtered);
+        
+        if (computeStats(filtered, selectedSpecie) <= 1) {
+            document.getElementById("countDiv").innerHTML = "There is " + computeStats(filtered, selectedSpecie) + " " + selectedSpecie.toLowerCase() + " character of a total of " + chars.length + "characters";
+        } else {
+            document.getElementById("countDiv").innerHTML = "There are " + computeStats(filtered, selectedSpecie) + " " + selectedSpecie.toLowerCase() + " characters of a total of " + chars.length + "characters";
+        }
+        // document.getElementById("countDiv").innerHTML = "There is/are " + computeStats(filtered, selectedSpecie) + " " + selectedSpecie.toLowerCase() + " character(s) of a total of " + chars.length;
+    }
+
 });
 
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
     const filterAZ = sortChar(chars, selectedSort);
     showingCards(filterAZ);
-}
-);
+});
 
 const inputSearch = document.getElementById("searchBar");
 inputSearch.addEventListener("keyup", (e) => {

@@ -42,10 +42,12 @@ export const characters = (films) => {
       char.movie = films[i].title;
       peopleList.push(char);
     }
-  };
+  }
   return peopleList;
 };
 
-// export computeStats = (data) => {
+export const computeStats = (chars) => {
+  const total = chars.length;
+  return total;
+};
 
-// }
