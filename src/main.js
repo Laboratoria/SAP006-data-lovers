@@ -1,14 +1,13 @@
 import { computeStats, filterData, sortData, searchName } from "./data.js";
-//import data from "./data/rickandmorty/rickandmorty.js"
 
 fetch("./data/rickandmorty/rickandmorty.json")
   .then(answer => answer.json())
   .then(info => {
     let finalData = info
-    setData(finalData)
+    mainFunction(finalData)
   })
 
-function setData(finalData) {
+function mainFunction(finalData) {
   let data = finalData;
 
   const cards = document.querySelector(".cards");
@@ -64,11 +63,11 @@ printTotalCharacters.innerHTML =
 
 printGenderAverage.innerHTML =
   `
-      <p class="text">&emsp;<span>Médias:</span>&emsp;
-      Masculinos: <span>${maleAverage}</span> &emsp;| &emsp;  
-      Femininos: <span>${femaleAverage}</span> &emsp;| &emsp;
-      Desconhecidos: <span>${unknownAverage}</span>&emsp; | &emsp;
-      Sem gênero: <span>${genderlessAverage}</span> &emsp;
+      <p class="text">&ensp;<span>Médias:</span>&ensp;
+      Masculinos: <span>${maleAverage}</span> &ensp;| &ensp;  
+      Femininos: <span>${femaleAverage}</span> &ensp;| &ensp;
+      Desconhecidos: <span>${unknownAverage}</span>&ensp; | &ensp;
+      Sem gênero: <span>${genderlessAverage}</span> &ensp;
       </p>
   `;
 

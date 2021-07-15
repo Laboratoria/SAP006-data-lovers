@@ -33,16 +33,16 @@ export const computeStats = {
 
   gender: (data, genderParameter) => {
 
-    let total = [];
-    let average = [];
-    for (let gender of data) {
-      if (gender.gender == genderParameter) {
-        total.push(gender.gender);
-        average = Number(((total.length / data.length) * 100).toFixed(2))
+    const totalByGender = data.reduce(function(total, personagem){
+      if (personagem.gender === genderParameter){
+        return total + 1;
       }
-    }
+      return total;
+    }, 0)
+    const average = Number(((totalByGender / data.length) * 100).toFixed(2))
     return average;
-  }
+  },
+
 };
 
 export const searchName = (data, condition) => {
