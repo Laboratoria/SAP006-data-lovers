@@ -19,6 +19,10 @@ export const filterData = (data, statusParameter, genderParameter) => {
     filterResults = data.filter(results => results.status === statusParameter);
     return filterResults;
   }
+
+  else{
+    return false
+  }
 };
 
 export const sortData = (data) => data.sort((a, b) => b.episode.length - a.episode.length);

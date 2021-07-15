@@ -85,6 +85,12 @@ describe("filterData", () => {
     const genderResults = 1
     expect(genderExpected).toEqual(genderResults);
   });
+
+  it("should return false", () => {
+    const genderExpected = filterData(mockData, "", "");
+    const genderResults = false
+    expect(genderExpected).toEqual(genderResults);
+  });
 });
 
 
