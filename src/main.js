@@ -79,25 +79,24 @@ const pokemonsName = document.getElementById("pokemonsearch");
 btnSearchPokemon.addEventListener("click", () => {
   const searchPokemonByName = filterByName(data.pokemon, pokemonsName.value);
   printPokemons(searchPokemonByName);
-  clearSearch();
+  document.getElementById("pokemonsearch").value = "";
 });
 
 // Filtrar Pokémons por tipo através do select
-let AllPokemons = data.pokemon;
+let filteredPokemons = data.pokemon;
 const filterTypes = document.getElementById("type");
 
 filterTypes.addEventListener("change", () => {
   if (filterTypes.value !== "") {
-    AllPokemons = filterByType(data.pokemon, filterTypes.value);
-  } else {
-    AllPokemons = data.pokemon;
+    filteredPokemons = filterByType(data.pokemon, filterTypes.value);
   }
-  printPokemons(AllPokemons);
+  printPokemons(filteredPokemons);
   calcPercent();
 });
 
 // Printar porcentagem por tipo, conforme seleção no filtro
 function calcPercent() {
+  document.getElementById("resultcalc").innerText = "";
   const calcType = filterTypes.value;
   let result = percentType(data.pokemon, calcType);
   document.getElementById(
@@ -114,10 +113,10 @@ function pokemonsByCP(event) {
 }
 
 orderByCP.addEventListener("change", pokemonsByCP);
-
+/*
 //Limpar filtros
 const clearSearch = () => {
   document.getElementById("pokemonsearch").value = "";
   document.getElementById("order").value = "";
-  document.getElementById("resultcalc").innerText = "";
 };
+*/

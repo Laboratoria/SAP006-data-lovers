@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="assets/icons/style.css" />
     <link
       rel="shortcut icon"
-      href="https://image.flaticon.com/icons/png/512/188/188942.png"
+      href="https://image.flaticon.com/icons/png/512/188/188939.png"
       type="image/x-icon"
     />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="pokemons.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,12 +26,11 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header id="header">
+      <img src="./assets/img/logo.png" alt="Logo PokeSource" class="logo" />
       <nav class="container">
-        <div class="logo">
-          <img src="./assets/img/logo.png" alt="Logo PokeSource" />
-        </div>
         <!-- MENU -->
         <div class="menu">
           <ul class="grid">
@@ -87,31 +86,31 @@
             value="Filtrar"
             class="botaoFiltrar"
           />
-        </section>
 
-        <select id="order" class="orderCP">
-          <option value="">Ordenar por</option>
-          <option value="MaxCPMinCP">CP &#9650;</option>
-          <option value="MinCPMaxCP">CP &#9660;</option>
-        </select>
-        <div id="resultcalc" class="resultcalc"></div>
+          <select id="order" class="orderCP">
+            <option value="">Ordenar por</option>
+            <option value="MaxCPMinCP">CP &#9650;</option>
+            <option value="MinCPMaxCP">CP &#9660;</option>
+          </select>
+          <div id="resultcalc" class="resultcalc"></div>
+        </section>
       </div>
 
       <!-- ------------Cards----------- -->
       <nav>
-        <div class="container-pokedex">
+        <div id="container-pokedex">
           <ul class="pokedex" id="cards"></ul>
         </div>
       </nav>
     </main>
 
-    <footer class="section">
+    <footer>
       <img
         src="./assets/img/logo-alt.png"
         alt="Logo PokeSource"
         class="logo-alt"
       />
-      <div class="container">
+      <div class="container grid">
         <div class="social">
           <a
             href="https://www.pokemon.com/br/"
@@ -135,17 +134,23 @@
             class="icon-instagram"
           >
           </a>
-          <a href="#"> | Developed by <strong>WOMEN</strong> 👩🏽‍🎨 | </a>
-          <a href="https://github.com/">🢒 Giuliana</a>
+          <a class="developedBy"> | Developed by <strong>WOMEN</strong> 👩🏽‍🎨 |</a>
+          🢒 Giuliana
+          <a href="https://github.com/Giuthamie" target="_blank"
+          i
+          class="icon-github"> <img src="./assets/icons/github.png"/></a>
           <a
-            href="https://br.linkedin.com/"
+            href="https://www.linkedin.com/in/giuliana-thami%C3%AA/"
             target="_blank"
             i
             class="icon-linkedin"
           ></a>
-          <a href="https://github.com/">🢒 Liziane</a>
+          🢒 Liziane
+          <a href="https://github.com/lizianegarcia" target="_blank"
+          i
+          class="icon-github"> <img src="./assets/icons/github.png"/> </a>
           <a
-            href="https://br.linkedin.com/"
+            href="https://www.linkedin.com/in/liziane-garcia-da-rosa-44ba8832/"
             target="_blank"
             i
             class="icon-linkedin"
