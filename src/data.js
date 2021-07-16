@@ -12,5 +12,7 @@ export const ordered = (arr, order) => {
   }
 };
 
-//  O primeiro, data, nos entrega os dados. O segundo, sortBy, diz respeito a qual das informações quer usar
-//  para ordenar. O terceiro, sortOrder, indica se quer ordenar de maneira crescente ou decrescente.
+// export const calcGender = (gender, total) => {
+//   return gender * 100 / total
+// };
+

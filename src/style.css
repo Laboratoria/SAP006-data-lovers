@@ -7,10 +7,11 @@ body {
 nav {
   display: flex;
   flex-flow: row wrap;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   background: #b1c5ed;
+  z-index: 1;
 }
 nav ul {
   display: flex;
@@ -19,7 +20,7 @@ nav ul {
   width: 100%;
   overflow: hidden;
   margin: 0;
-  list-style: none
+  list-style: none;
 }
 nav ul li {
   font-size: 18px;
@@ -39,12 +40,13 @@ h1,
 h2 {
   text-align: center;
   font-size: 64px;
+  text-shadow: 0.1em 0.1em 0.2em rgb(32, 32, 32);
 }
 .chihiroInitial {
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.number{
+.number {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -52,7 +54,7 @@ h2 {
   text-align: center;
   font-size: 48px;
 }
-.divisor{
+.divisor {
   margin: 150px 0 0 0;
   padding: 0;
 }
@@ -72,7 +74,7 @@ hr {
   border: none;
 }
 footer {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   justify-items: center;
@@ -84,7 +86,7 @@ footer {
 footer p {
   text-align: center;
   font-size: 24px;
-} 
+}
 /*page transition - fadeIn */
 @-webkit-keyframes fadeIn {
   0% {
@@ -123,4 +125,22 @@ footer p {
   -moz-animation: fadeIn 2s ease-in;
   -o-animation: fadeIn 2s ease-in;
   animation: fadeIn 2s ease-in;
+}
+
+@media (max-width: 800px) {
+  hr{
+    display: none;
+  }
+  nav ul li {
+    padding: 15px;
+  }
+  .chihiroInitial {
+    display: none;
+  }
+  h1 {
+    padding-top: 220px;
+  }
+  nav ul li a {
+    padding: 10px 30px;
+  }
 }

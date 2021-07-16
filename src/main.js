@@ -1,5 +1,5 @@
-import { getPeople, filtered, ordered } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
+import { getPeople, filtered, ordered } from "./data.js";
 const films = data.films;
 const people = getPeople(films);
 let filteredChar = people;
@@ -8,9 +8,9 @@ function showChars(chars) {
   document.getElementById("cardsCharacters").innerHTML = chars
     .map(
       (char) =>
-        `<a class="cards" id="cards" href="./aboutCharacters?char=${char.id}" target="_blank">
+    `<a href="./aboutCharacters.html?char=${char.id}" class="cards" target="_blank">
      <div class="cardFront"> 
-     <img src="${char.img}" class="cardCharImg" alt="Imagem da personagem">
+      <img src="${char.img}" class="cardCharImg" alt="Imagem da personagem">
      </div>
      <div class="cardBack">
       <h3>${char.name}</h3>
@@ -47,3 +47,4 @@ function orderCharacter(o) {
 }
 
 document.getElementById("order").addEventListener("change", orderCharacter);
+
