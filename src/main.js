@@ -1,4 +1,4 @@
-import { filters, sortAtoZ, terreno } from './data.js';
+import { filters, sortAtoZ, terrainArray } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 window.onscroll = function () { stickyFilter() };
@@ -49,33 +49,38 @@ function showingCards(itens) {
 
 showingCards(films);
 
+const sortAZ = document.getElementById("sortAZ");
 sortAZ.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
     const filterAZ = sortAtoZ(films, selectedSort);
     showingCards(filterAZ);
 });
 
+const releaseDate = document.getElementById("releaseDate");
 releaseDate.addEventListener("change", (event) => {
     const selectedDate = event.target.value;
     const filtered = filters(films, "release_date", selectedDate);
     showingCards(filtered);
 });
 
+const director = document.getElementById("director");
 director.addEventListener("change", (event) => {
     const selectedDirector = event.target.value;
     const filtered = filters(films, "director", selectedDirector);
     showingCards(filtered);
 });
 
+const rating = document.getElementById("rating");
 rating.addEventListener("change", (event) => {
     const selectedRating = event.target.value;
     const filtered = filters(films, "rt_score", selectedRating);
     showingCards(filtered);
 });
 
+const terrain = document.getElementById("terrain");
 terrain.addEventListener("change", (event) => {
     const selectedTerrain = event.target.value;
-    const filtered = terreno(films, selectedTerrain);
+    const filtered = terrainArray(films, selectedTerrain);
     showingCards(filtered);
 });
 

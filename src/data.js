@@ -1,6 +1,3 @@
-import data from "./data/ghibli/ghibli.js";
-const films = data.films;
-
 export const filters = (array, key, condition) =>
   array.filter((item) => item[key] === condition);
 
@@ -13,17 +10,17 @@ export const sortAtoZ = (data, order) => {
 };
 
 function terrainFilter(films) {
-  let terrenoEscolhido = document.getElementById("terrain").value;
-  let temIsso = false;
+  let chosenTerrain = document.getElementById("terrain").value;
+  let hasChosen = false;
   for (let i = 0; i < films.locations.length; i++) {
-    if (films.locations[i].terrain === terrenoEscolhido) {
-      temIsso = true;
+    if (films.locations[i].terrain === chosenTerrain) {
+      hasChosen = true;
     }
   }
-  return temIsso;
+  return hasChosen;
 }
 
-export const terreno = (array) =>
+export const terrainArray = (array) =>
   array.filter(terrainFilter);
 
 export const sortChar = (data, order) => {
@@ -43,6 +40,7 @@ export const characters = (films) => {
       peopleList.push(char);
     }
   }
+  // console.log(peopleList);
   return peopleList;
 };
 
