@@ -496,6 +496,12 @@ p {
         width: 100%;
         max-height: max-content;
     }
-
-
 }
+
+/* .aboutUs {
+    display: inline-block;
+    background-color: transparent;
+    width: 230px;
+    perspective: 1000px;
+    margin: 40px;
+} */
