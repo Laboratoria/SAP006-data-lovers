@@ -1,10 +1,12 @@
 
 export const getStatus = (data, statusSelected) => {
-
+                                                  
   const getJson = data.filter(character => character.status === statusSelected);
-  return getJson;
+  return getJson;                                                   
+  
    
 }
+
 
 export const getSpecies = (data, specieSelected) => {
 
@@ -13,19 +15,21 @@ export const getSpecies = (data, specieSelected) => {
 
 }
 
-export const getOrder= (data) =>{
 
+export const getOrder= (data) =>{
+  
   let showOrder = data.sort(function(a,z){
     if(a.name < z.name) {
       return -1;
     }
     if(a.name > z.name) {
       return 1;
-    }return 0;
+    }
   })
   return showOrder
   
 }
+
 
 export const getDisorder = (data) => {
 
@@ -36,7 +40,7 @@ export const getDisorder = (data) => {
     }
     if(a.name > z.name) {
       return -1;
-    }return 0;
+    }
   })
   return showDisorder
 }
