@@ -7,10 +7,34 @@
 
 body {
     background-color: rgb(17, 41, 63);
-    
 }
-@media  (min-width: 300px){
-    
+
+@media (min-width: 992px)  {
+    .text-inicial {
+        font-size: 30pt;
+    }
+} 
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .text-inicial{
+        font-size: 2.0rem;
+    }
+
+    .img {
+        max-width: 120vh;
+        max-height: 120vh;
+    }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+    .text-inicial {
+       font-size: 1.8rem;
+    }
+
+    .img {
+        max-width: 90vh;
+        max-height: 90vh;
+    }
 }
 
 @font-face {
@@ -27,7 +51,7 @@ body {
     
 }
 
-.sobre-serie{
+.sobre-serie {
     font-family: 'Amatic SC', cursive;
     font-size: 20pt;
     text-decoration: none;
@@ -37,10 +61,9 @@ body {
     margin-bottom: 10vh;
 }
 
-.text-inicial{
+.text-inicial {
     text-align: center;
     font-family: "RickM", Times, serif; ;
-    font-size: 30pt;
     color: #88D962;
 }
 
@@ -59,8 +82,6 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 700px;
-    max-height: 700px;
     width: auto;
     height: auto;
 }

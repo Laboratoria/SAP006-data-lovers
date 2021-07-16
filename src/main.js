@@ -8,20 +8,22 @@ import data from './data/rickandmorty/rickandmorty.js';
 function showCards(data) {
     document.getElementById('get-cards').innerHTML = data.map((item) => `
     <div class="info-cards">
-        <div class="card-front">
+        <div class="front">
           <img src="${item.image}">
+          <li id="name">${item.name}</li>
         </div>
-        <div class="card-back">
+        <div class="back">
+        <img src="${item.image}">
           <ul class="list">
-            <li id="name">Nome:${item.name}</li>
-            <li class= "list-item"> Status:${item.status}</li>
+            <li id="name-back">Nome:${item.name}</li>
+            <li class= "list-item">Status:${item.status}</li>
             <li class= "list-item">Espécie:${item.species}</li>
             <li class= "list-item">Origem:${item.origin.name}</li>
           </ul>
         </div>
     </div>
         
-        `)
+        `).join("");
 }
 
 showCards(data.results);
@@ -54,9 +56,10 @@ function calculoAgregadoStatus() {
 
 function getStatusData() {
                      
-    showCards(getStatus(data.results, status.value));
-    
-}
+ showCards(getStatus(data.results, status.value));
+
+}    
+
 status.addEventListener("change", () => {getStatusData(), calculoAgregadoStatus()} );
 
 function calculoAgregadoSpecies() {
@@ -89,8 +92,7 @@ disorder.addEventListener("click", () => {getDisorderData()} );
  
 function clear(){
     
-    showStats.innerHTML = "";
-    showCards(data.results)
+    document.location.reload()
 }
 
 homeButton.addEventListener("click", clear);
