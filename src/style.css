@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(17, 41, 63);
+}
+
+@media (min-width: 992px)  {
+    .text-inicial {
+        font-size: 30pt;
+    }
+} 
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .text-inicial{
+        font-size: 2.0rem;
+    }
+
+    .img {
+        max-width: 120vh;
+        max-height: 120vh;
+    }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+    .text-inicial {
+       font-size: 1.8rem;
+    }
+
+    .img {
+        max-width: 90vh;
+        max-height: 90vh;
+    }
+}
+
+@font-face {
+    font-family: "RickM";
+    src: url("../get-schwifty/get_schwifty.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.links {
+    display: grid;
+    position: relative;
+    top: 30px;   
+    
+}
+
+.sobre-serie {
+    font-family: 'Amatic SC', cursive;
+    font-size: 20pt;
+    text-decoration: none;
+    color: #88D962;
+    margin-left: 20px;
+    font-weight: bolder;
+    margin-bottom: 10vh;
+}
+
+.text-inicial {
+    text-align: center;
+    font-family: "RickM", Times, serif; ;
+    color: #88D962;
+}
+
+.seta{
+    padding-top: 40px;
+    margin: auto;
+}
+
+
+.paginaInicial{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
