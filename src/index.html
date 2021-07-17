@@ -1,42 +1,64 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Studio Ghibli</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8">
+  <title>Studio Ghibli</title>
+  <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;800&display=swap');
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;800&display=swap');
+  </style>
 
-  </head>
+</head>
 
-  <body>
-    <script src="main.js" type="module"></script>
-    <script src="menu-films.js" type="module"></script>
-    <header>
-      <nav>
-        <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./menu-films.html"id="animation" >Filmes</a>
-            <ul>
-              <li><a href="#" id="btnFilmsAZ" value="asc">Ordenar: A - Z</a></li>
-              <li><a href="#" id="btnFilmsZA" value="desc">Ordenar: Z - A</a></li>
-            </ul>
-          <li><a href="./menu-characters.html">Personagens</a>
-            <ul>
-              <li><a href="#">Ordenar: A - Z</a></li>
-              <li><a href="#">Ordenar: Z - A</a></li>
-            </ul>
-          <li><a href="./menu-about.html">Sobre</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
 
-  </body>
+  
+
+  <header>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="./index.html" id="btnHome">Home</a></li>
+        <li><a href="#" id="btnFilms">Films</a>
+          <ul>
+            <li><a href="#" id="btnFilmsAZ" value="asc">A - Z</a></li>
+            <li><a href="#" id="btnFilmsZA" value="desc">Z - A</a></li>
+          </ul>
+        <li><a href="#" id="btnCharacters">Characters</a>
+          <ul>
+            <li><a href="#" id="btnCharactersAZ" value="asc"> A - Z</a></li>
+            <li><a href="#" id="btnCharactersZA" value="desc"> Z - A</a></li>
+          </ul>
+        <li><a href="#" id="btn-about">About</a></li>
+        <!-- <li> -->
+        <li><a class="btn-search" id="btnSearchMenu"> <img src="./images/lupa01.png" height="30" width="30"></a></li>
+      <!-- </ul>
+      </li> -->
+      </ul>
+    </nav>
+
+  </header>
+  <!-- <div class="banner-images" id="bannerImages">   </div> -->
+  <main>
+    <section class="cardsContainer" id="boxCards"> </section>
+    
+    <div id="modalArea" class="modal">
+      <div class="modal-content" id="modalContent">
+        <span class="closeModal">&times;</span>
+        <textarea class="modal-textarea" id="modal-textarea"type="search" placeholder="search here per director"></textarea> 
+        <img class="modal-search" id="btnModalSearch" src="./images/lupa01.png" height="45" width="45">
+      </div>
+  </main>
+
+  <footer> 
+  </footer>
+  
+  <script src="main.js" type="module"></script>
+</body>
 
 </html>
