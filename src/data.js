@@ -4,7 +4,7 @@ export const getPeople = (films) =>
 export const filtered = (arr, key, value) =>
   arr.filter((item) => item[key] === value);
 
-export const ordered = (arr, order) => {
+export const orderChar = (arr, order) => {
   if (order === "A-Z") {
     return arr.sort((a, z) => (a.name > z.name ? 1 : -1));
   } else if (order === "Z-A") {
@@ -12,7 +12,12 @@ export const ordered = (arr, order) => {
   }
 };
 
-// export const calcGender = (gender, total) => {
-//   return gender * 100 / total
-// };
+export const orderAni = (arr, order) => {
+  if (order === "A-Z"){
+      return arr.sort((a, z) => (a.title > z.title ? 1 : -1));
+  }else if (order === "Z-A") {
+      return arr.sort((a, z) => (a.title > z.title ? -1 : 1));
+  }};
 
+// export const calcGender = (gender, total) => {
+//   return gender * 100 / total }

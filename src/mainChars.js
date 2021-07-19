@@ -1,5 +1,5 @@
 import data from "./data/ghibli/ghibli.js";
-import { getPeople, filtered, ordered } from "./data.js";
+import { getPeople, filtered, orderChar } from "./data.js";
 const films = data.films;
 const people = getPeople(films);
 let filteredChar = people;
@@ -51,7 +51,7 @@ function orderCharacter(o) {
   if (value === "sorter") {
     showChars(people);
   } else {
-    showChars(ordered(filteredChar, value));
+    showChars(orderChar(filteredChar, value));
   }
 }
 
