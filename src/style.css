@@ -123,10 +123,10 @@ option{
     text-align: center;
     color: #FFEBCD;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 30px;
     box-shadow: 0 0 8px 0 rgba(7, 157, 238, 0.817);   
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     padding: 10px;
     display: none;
@@ -220,7 +220,7 @@ option{
 
 
 /*RESPONSIVO PARA TABLETS*/
-@media screen and (min-width:481px) and (max-width:770px){
+@media screen and (min-width:481px) and (max-width:1000px){
     
     .logo-rick, .logo-familia {
         display: none;
