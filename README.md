@@ -1,5 +1,5 @@
 # THE STUDIO GHIBLI COLLECTION
-The Studio Ghibli Collection é um catálogo de filmes e personagens de todas as animações do Studio Ghibli. 
+The Studio Ghibli Collection é um catálogo de filmes e personagens do Studio Ghibli. 
 
 ## Studio Ghibli
 Studio Ghibli é um estúdio japonês de animação, muito
@@ -10,13 +10,13 @@ várias nomeações e prêmios. De todo esse fandom há um grupo que deseja
 interagir e ver as informações das animações e seus personagens.
 
 ## ACESSO
-[Clique aqui para acessar o projeto final](link do deploy)
+[Site- projeto final](link do deploy)
 
 # ÍNDICE
-1. [CONTRIBUIÇÕES](#CONTRIBUIÇÕES)
-2. [USUÁRIOS](#USUÁRIOS)
-3. [PROTÓTIPO](#PROTÓTIPO)
-4. [OBJETIVOS DE APRENDIZAGEM](#OBJETIVOSDEAPRENDIZAGEM)
+1. [CONTRIBUIÇÕES](#contribuiçoes)
+2. [USUÁRIOS](#usuarios)
+3. [PROTÓTIPO](#prototipo)
+4. [OBJETIVOS DE APRENDIZAGEM](#objetivos-de-aprendizagem)
 
 # 1. CONTRIBUIÇÕES
 O projeto foi criado por Juliana Monteiro e Mariana Marcondes. 
@@ -34,7 +34,7 @@ Quando procuram pelos personagens desejam filtrar pelo gêneros e espécies, con
 Além disso, ao achar o filme ou personagem que procuram desejam saber quais as características. Do filme acessam a descrição, data de lançamento, score, diretores e produtores; Dos personagens acham idade, cor de cabelo e dos olhos, gênero e espécie. 
  
 # 3. PROTÓTIPO
-[Acesse o protótipo FIGMA](https://www.figma.com/file/b6xHNBIhvOnxoEDV33lGMf/Projeto-Ghibli?node-id=0%3A817)
+[Protótipo - FIGMA](https://www.figma.com/file/b6xHNBIhvOnxoEDV33lGMf/Projeto-Ghibli?node-id=0%3A817)
 
 # 4. OBJETIVOS DE APRENDIZAGEM
 Neste projeto, o objetivo principal é aprender a desenhar e construir uma interface web onde se possa visualizar e manipular dados, entendendo o que o usuário necessita.
