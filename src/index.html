@@ -5,42 +5,117 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" /> 
+  <link rel="icon" type="image/png" href="/favicon-32x32.png">
 </head>
 
 <body>
   <header>
     <div id="root">
       <div class="logo"></div>
-      <p class="paragrafo">AQUI VOCÊ CONSEGUE SEPARAR AS CARACTERISTICAS DOS PERSONAGENS RICK AND MORTY POR
-        TEMPORADAS. </p>
+      <p class="paragrafo">AQUI VOCÊ CONSEGUE SEPARAR AS CARACTERISTICAS DOS PERSONAGENS DA SÉRIE RICK AND MORTY.</p>
+      
+          <div class="organiza-icon">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <a href="https://www.instagram.com/rickandmorty/"target="_blank" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/rickandmorty/"target="_blank" class="fa fa-twitter"></a>
+            <a href="https://github.com/Magnadutra/"target="_blank" class="fa fa-github"></a> 
+            <a href="https://github.com/thaianecristine/"target="_blank" class="fa fa-github"></a>
+          </div>
     </div>
   </header>
 
-  <!-- <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Temporada 1</a></li>
-                            <li><a href="#">Temporada 2</a></li>
-                            <li><a href="#">Temporada 3</a></li>
-                        </ul>
-                    </nav>-->
 
-  <!-- <main>
-        <article>
-            <p class="paragrafo">AQUI VOCÊ CONSEGUE SEPARAR AS CARACTERISTICAS DOS PERSONAGENS RICK AND MORTY POR
-                TEMPORADAS. </p>
-        </article>
+  <div class="img-fundo">
 
-    </main> -->
+    <div class="organiza-selects">
 
-  <!-- E aqui está o nosso rodapé principal que é usado em todas as páginas do nosso site
+      <section>
+      
+          <select class="filter-gender" id="gender">
+            <option class="select-gender" value="gender" selected disabled>Gênero</option>
+            <option class="filter-gender" value="all-gender">Todos</option>
+            <option class="filter-gender" value="Female">Feminino</option>
+            <option class="filter-gender" value="Male">Masculino</option>
+            <option class="filter-gender" value="unknown">Desconhecido</option>
+          </select>
+  
+          <select class="filter-species" id="species">
+            <option class="filter-species" value="species" selected disabled>Espécie</option>
+            <option class="filter-species" value="all-species">Todos</option>
+            <option class="filter-species" value="Human">Humano</option>
+            <option class="filter-species" value="Alien">Alien</option>
+            <option class="filter-species" value="Humanoid">Humanoide</option>
+            <option class="filter-species" value="Poopybutthole">Poopybutthole</option>
+            <option class="filter-species" value="Mytholog">Mitológico</option>
+            <option class="filter-species" value="Vampire">Vampiro</option>
+            <option class="filter-species" value="Robot">Robô</option>
+            <option class="filter-species" value="Cronenberg">Cronenberg</option>
+            <option class="filter-species" value="Disease">Doença</option>
+            <option class="filter-species" value="Parasite">Parasita</option>
+            <option class="filter-species" value="unknown">Desconhecido</option>
+          </select>
+          
+          <select class="filter-status" id="status">
+            <option class="filter-status" value="status" selected disabled>Status</option>
+            <option class="filter-status" value="all-status">Todos</option>
+            <option class="filter-status" value="Alive">Vivo</option>
+            <option class="filter-status" value="Dead">Morto</option>
+            <option class="filter-status" value="unknown">Desconhecido</option>
+          </select>
+      
+      
+          <select class="filter-order" id="order">
+            <option class="filter-order" value="order" selected disabled>Ordem</option>
+            <option class="filter-order" value="az">A - Z</option>
+            <option class="filter-order" value="za">Z - A</option>
+          </select>
 
-<footer>
-    <p>redes sociais IMAGEM</p>
-</footer>-->
+      </section>
+    </div>
+
+    
+    <main class="base-cards" id="personagens"> 
+      <div class="calculo" id="calculo-por-escolha"></div>
+
+      <!-- <div class="organiza-cards">
+        <div class="formatacao-card">
+      
+          <div class="card-frente">
+            <img src="${personagem.image}">
+            <p class="title">${personagem.name}</p>
+          </div>
+      
+          <div class="card-verso"> 
+            <ul>
+              <li>Gênero: ${personagem.gender}</li>  (LISTAS)
+              <li>Espécie: ${personagem.species}</li>
+              <li>Status: ${personagem.status}</li>
+              <li>Origem: ${personagem.origin.name}</li>
+            </ul>
+          </div>
+      
+        </div>
+      </div> -->
+
+    </main>
 
 
-  <script src="main.js" type="module"></script>
+    <!-- E aqui está o nosso rodapé principal que é usado em todas as páginas do nosso site -->
+
+    <footer>
+      <div> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<a href="#" class="fa fa-instagram"></a>
+<!-- <a href="#" class="fa fa-twitter"></a> -->
+
+
+      </div>
+  </footer> 
+
+    <script src="main.js" type="module"></script>
+
 </body>
 
 </html>

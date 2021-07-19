@@ -1,21 +1,62 @@
 * {
-  padding: 0px;
-  /*/ tirar espaçamento padrão que já vem /*/
+  padding: 0px; /*/ tirar espaçamento padrão que já vem /*/
   margin: 0px;
   box-sizing: border-box;
 }
 
+/* Inicio Barra Lateral */
 #root {
-  /*/responsivo/*/
   background-color: #dbbe32;
   position: fixed;
-  width: 400px;
+  width: 27%;
   height: 100%;
   padding-top: 20px;
+ 
+  
+
+} 
+
+.fa {
+padding: 9px;
+font-size: 30px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+    margin: 51px 3px;
+border-radius: 50%;
 }
 
+.fa-instagram {
+background:#000;
+color: white;
+}
+.fa:hover {
+opacity: 0.7;
+}
+
+.fa-twitter {
+background: black;
+color:white;
+}
+.fa-twitter:before {
+content: black;
+}
+
+a.fa.fa-github {
+background: #000;
+color: #fff;
+}
+
+
+.fa-github:before {
+content: #000;
+}
+
+
+
+
 .logo {
-  background-image: url(logo.png);
+  background-image: url("logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 260px;
@@ -25,8 +66,307 @@
 }
 
 .paragrafo {
-  margin-top: 250px;
+  margin-top: 170px;
   padding: 0px 50px;
   text-align: center;
+}
+.organiza-icon{
+margin: 100px auto;
+box-sizing: border-box;
+display: table;
+/* background-color: rgb(155, 139, 139); */
+}
 
+
+/* FIM Barra Lateral */
+
+
+/* Cor ou imagem fundo */
+.img-fundo {
+/* background-size: 100%; */
+  background-color: rgb(219 190 50);
+  width: 71.4%;
+  margin-left: 395px;
+}
+
+
+/* Inicio Selects */
+
+.organiza-selects {
+  /* background: black; */
+  width: 10%;
+  padding-top: 145px;
+  position: fixed;
+  height: 100%;
+}
+
+
+.filter-status,
+.filter-gender,
+.filter-species,
+.filter-order {
+  background-color: #96d7ed;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 20px 10px;
+  width: 90%;
+}
+
+
+/* Inicio cards */
+
+/*espaço fundo dos cards*/
+.base-cards {
+  width: 80%;
+  margin-left: 18%;
+}
+
+/* flip do card - funciona com o hover (passar o mouse no objeto)*/
+.organiza-cards:hover .formatacao-card {
+  transform: rotateY(180deg);
+}
+
+/*container - para ajustar o tamanho entre todos os cards*/
+.organiza-cards {
+  background-color: transparent;
+  padding: 15px;
+  display: inline-block;
+  width: 40%;
+  height: 360px;
+  text-align: center;
+  margin: 15px 30px;
+}
+
+/*formatar o tamanho do card*/
+.formatacao-card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  justify-content: space-evenly;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*imagem e titulo do card*/
+.card-frente {
+  background-color: #96d7ed;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.95);
+  box-shadow: 0 0 6px 0px rgb(37 37 37);
+  /* background-image: url("https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg"); */
+}
+
+/*tamanho da imagem do card*/
+.card-frente img {
+  width: 100%;
+}
+
+/*flip retorno mais informações dos personagens*/
+.card-verso {
+  transform: rotateY(180deg);
+  background-color: #2e7d32;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  padding-top: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Fim cards */
+
+body{
+background-color: #000; 
+} 
+
+
+
+
+
+/* RESPONSIVIDADE  */
+
+@media only screen and (max-width: 1000px) {
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+ #root {
+   /* background-color: #3251db; */
+   width: 100%;
+   height: auto;
+   padding-top: 20px;
+   position: unset;
+ }
+ .organiza-icon {
+   margin: auto;
+ }
+ .logo {
+   background-image: url("logo.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   width: 260px;
+   height: 100px;
+   margin: 0 auto;
+   background-position: 0px 20px;
+ }
+
+.paragrafo {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.organiza-selects {
+/* background: black; */
+width: 100%;
+height: auto;
+padding-top: 5px;
+position: unset;
+}
+
+.filter-status,
+.filter-gender,
+.filter-species,
+.filter-order {
+background-color: #96d7ed;
+border: 1px solid #ccc;
+padding: 11px;
+border-radius: 20px;
+margin: 20px 14px;
+width: 14%;
+}
+.img-fundo {
+  background-color: #dbbe32;
+  width: 100%;
+  margin-left: 0px;
+}
+.base-cards {
+ width: 100%;
+ margin-left: 0;
+}
+
+.card-frente, .card-verso{
+ height: unset;
+}
+
+p.title {
+ height: 80px;
+ font-size: 1.8em;
+}
+
+.organiza-cards{
+ height: 440px;
+}
+
+.card-verso {
+ height: 440px;
+ font-size: 1.8em;
+}
+.filter-status,
+.filter-gender,
+.filter-species,
+.filter-order {
+ width: 20%;
+     font-size: 1.3em;
+}
+
+
+}  
+
+@media only screen and (max-width: 800px) {
+ .filter-status,
+ .filter-gender,
+ .filter-species,
+ .filter-order {
+   width: 20%;
+   
+ }
+
+
+}
+
+
+@media only screen and (max-width: 750px) {
+
+ .organiza-cards {
+   height: 320px;
+ }
+
+ .card-verso {
+   height: 320px;
+ }
+ 
+
+}
+
+@media only screen and (max-width: 650px) {
+
+.organiza-cards {
+  height: 580px;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+   .card-verso {
+     height: 580px;
+   }
+
+.filter-status,
+.filter-gender,
+.filter-species,
+.filter-order {
+  width: 19%;
+  font-size: 0.89em;
+}
+}
+@media only screen and (max-width: 520px) {
+.filter-status,
+.filter-gender,
+.filter-species,
+.filter-order {
+width: 16%;
+font-size: 0.70em;
+}
+}
+
+@media only screen and (max-width: 440px) {
+
+.filter-status,
+.filter-gender,
+.filter-species,
+.filter-order {
+  width: 15%;
+  font-size: 0.49em;
+}
+ .organiza-cards,
+ .card-verso {
+       height: 440px;
+ }
+}
+@media only screen and (max-width:390px) {
+.filter-status,
+.filter-gender,
+.filter-species,
+.filter-order {
+ width: 40%;
+}
 }
