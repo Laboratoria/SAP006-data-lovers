@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personagens - Studio Ghibli - A sensibilidade em forma de anime!</title>
+  <link rel="stylesheet" href="./characters.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="title-container">
+      <img class="logo" src="./img/Logo.png" alt="logo Ghibli">
+      <h1 class ="subtitle">A sensibilidade em forma de anime!</h1>
+    </div>
+
+    <nav class="navbar">
+      <ul class="list">
+              <li><a class="links" href="./index.html">Inicio</a></li>
+              <li><a class="links" href="./Sobre.html">Sobre</a></li>
+              <li><a class="links" href="./personagens.html">Personagens</a></li>
+              <li><a class="links" href="./Frases.html">Frases Marcantes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="characters-page">
+      <h2 class="page-title">Personagens</h2>
+      <div class="filter-div">
+        <label for="filter-btn" class="filter-label">FILTRAR</label>
+        <button class="button-menu" id="filter-btn"></button>
+
+      </div>
+
+
+      <form class="filter" id="filter">
+        <label for="filter-gender" class="label">Gênero</label>
+        <select class="dropdown-menu" name="filter-choice" id="filter-gender">
+          <option value="All">Todos</option>
+          <option value="Female">Feminino</option>
+          <option value="Male">Masculino</option>
+
+        </select>
+
+      </form>
+
+    
+    </main>
+
+
+      <div id="root">
+      <div id="cards" class=ghibli></div>
+        <section class="filmsList" id="Films"></section>
+          <section class = "charactersList" id="Characters"></section>
+        </div>
+        <script src="Personagens.js" type="module"></script>
+
+
+      <footer class="footer">
+        <p>Feito por <a href="https://github.com/bea-ferraz" target="_blank">Beatriz</a> e <a
+        href="https://github.com/Julieteandrade" target="_blank">Juliete</a>
+     </footer>
+  </body>
+</html>
+
