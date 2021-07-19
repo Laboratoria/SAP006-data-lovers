@@ -1,23 +1,43 @@
-import { example, anotherExample } from '../src/data.js';
+import { mockPersonagens, Beth, Morty, Rick, Summer } from '../src/api.js';
+import { ordemAZ, ordemZA, buscarPorLetra, filtrarPersonagens } from '../src/data.js'
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('Função busca personagens por ordem de A a Z', () => {
+  it('should be a function', () => {
+    expect(typeof ordemAZ).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('Retorna nome dos personagens com a ordenação A-Z', () => {
+    expect(ordemAZ(mockPersonagens)).toEqual([Beth, Morty, Rick, Summer]);
+  });
+});
+
+describe('Função busca personagens por ordem de Z a A', () => {
+  it('should be a function', () => {
+    expect(typeof ordemZA).toBe('function');
+  });
+
+  it('Retorna nome dos personagens com a ordenação Z-A', () => {
+    expect(ordemZA(mockPersonagens)).toEqual([Summer, Rick, Morty, Beth]);
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe('Filtrar personagens por nome', () => {
+  it('should be a function', () => {
+    expect(typeof buscarPorLetra).toBe('function')
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('Retorna os perosnagens buscados', () => {
+    expect(buscarPorLetra(mockPersonagens, "rick")).toEqual([Rick]);
+  })
+});
+
+describe('Filtrar personagens por Status', () => {
+  it('should be a function', () => {
+    expect(typeof filtrarPersonagens).toBe('function')
   });
+
+  it('Retorna os personagens filtrados por status', () => {
+    expect(filtrarPersonagens(mockPersonagens, 'Female')).toEqual([Beth, Summer]);
+  })
 });
