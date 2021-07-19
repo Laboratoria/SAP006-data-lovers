@@ -4,6 +4,15 @@ const films = data.films;
 const people = getPeople(films);
 let filteredChar = people;
 
+// var counter = 1;
+//        setInterval(function(){
+//            document.getElementById('radio' + counter).checked = true;
+//            counter++;
+//            if(counter >6){
+//                counter = 1;
+//            }
+//        },2500);
+
 function showChars(chars) {
   document.getElementById("cardsCharacters").innerHTML = chars
     .map(

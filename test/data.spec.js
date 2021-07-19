@@ -1,6 +1,6 @@
 import {filtered, ordered} from "../src/data.js" 
 // import {sumTotalChars, calcGender} from "../src/sum.js"
-// sumTotalMovies, toBe; toEqual / toDeeplyEqual; toContain
+// sumTotalMovies
 const charsTest = [
       {
         "name": "Pazu",
