@@ -160,7 +160,7 @@ categories.addEventListener("change", (event) => {
 })
 
 function iniciaModal(modalID) {
-  //if (localStorage.closeModal !== modalID) {
+  if (localStorage.closeModal !== modalID) {
     const modal = document.getElementById(modalID)
     if (modal) {
       modal.classList.add("mostrar")
@@ -172,7 +172,7 @@ function iniciaModal(modalID) {
         }
       })
     }
- // }
+  }
 }
 
 const openInfo = document.querySelector(".header-img")
