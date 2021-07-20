@@ -1,0 +1,159 @@
+body,
+h1,
+p,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Yomogi", cursive;
+  background: #3b0273;
+}
+
+.introducao {
+  max-width: 100%;
+  display: block;
+  background: url("../img/intro.png") no-repeat center;
+  background-size: cover;
+  padding-top: 40px;
+}
+.introducao h1 {
+  max-width: 100%;
+  display: block;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 48px;
+  color: #97ce4c;
+  text-align: center;
+  text-shadow: 10px 10px 10px #a6eee6ff;
+  text-transform: uppercase;
+}
+.introducao p {
+  display: inline-block;
+  text-align: center;
+  color: #d9d382;
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 21px;
+}
+.quote-externo p:before,
+.quote-externo p:after {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 3px;
+  background: #d9d382;
+  margin: 14px auto 10px auto;
+}
+
+input::placeholder {
+  /*para mudar a fonte de dentro da caixa de pesquisa*/
+  color: #d9d382;
+  font-size: 14px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+.cards {
+  padding: 60px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container-card {
+  width: 39%;
+  margin-bottom: 1%;
+  background: #97ce4c;
+  border-radius: 20px;
+  box-shadow: 20px 20px 40px #a6eee6ff;
+  display: flex;
+  max-width: 1680px;
+  min-width: 375px;
+}
+.imagem img {
+  border-radius: 30px;
+  padding: 20px;
+  height: 200px;
+}
+.cards .info {
+  text-align: center;
+  color: #24325fff;
+  margin: 10px;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+@media (max-width: 1440px){
+  #filtro ul {
+    display: flex;
+    /*margin-left: 360px;*/
+    margin: 0 auto;
+    width: 300px;
+  }
+  #filtro ul li {
+    display: block;
+    margin: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .estilo {
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 5px 5px;
+    color: #d9d382;
+    background: rgb(206, 28, 206);
+    cursor: pointer;
+  }
+  #filtro_ordenar{
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #search_personagens {
+    align-content: 1000px;
+    display: auto;
+    margin: auto;
+    width: auto;
+    justify-content: space-evenly;
+    font-size: center;
+    font-weight: bold;
+    border-radius: 5px 5px;
+    border: 2px solid #d9d382;
+    background: rgb(206, 28, 206);
+    cursor: pointer;
+    /*display: inline-block;*/
+  }
+  #btn-pesquisar {
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px 5px;
+    border: 2px solid #d9d382;
+    background: rgb(206, 28, 206);
+    cursor: pointer;
+  }
+  
+}
+
+@media (max-width: 299px){
+  #filtro ul {
+    display: block;
+  }
+  #filtro ul li {
+    display: block;
+    text-align: center;
+  }
+  #filtro_ordenar{
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
