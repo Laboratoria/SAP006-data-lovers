@@ -1,18 +1,14 @@
 # League Of Legends - Chose Your Champion
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
-
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-
-<img src="exemplo-image.png" alt="exemplo imagem">
+![GitHub repo size](https://img.shields.io/github/repo-size/caxconteREADME-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/caxconte/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/caxconte/README-template?style=for-the-badge)
 
 > Na aplicação Chose Your Champion, você pode analisar dados como: ataque, defesa, magia e dificuldade de cada campeão do jogo League of Legends, tornando mais fácil a escolha do campeão ideal pra sua jogabilidade.
 
 ### Ajustes e melhorias
 
-Esse projeto foi criado durante o bootcamp da Laboratória, com foco em manipulaçã de dados estruturados (arrays e objetos) e métodos de javascript (filter, map, reduce etc).
+Esse projeto foi criado durante o bootcamp da Laboratória, com foco em manipulação de dados estruturados (arrays e objetos) e métodos de javascript (filter, map, reduce etc).
 
 - [ ] Tradução dos textos para diversos idiomas
 - [ ] Implementação de guia de jogabilidade
@@ -27,7 +23,87 @@ Esse projeto foi criado durante o bootcamp da Laboratória, com foco em manipula
 - [Google Charts](https://developers.google.com/chart/)
 - [Figma](https://figma.com/)
 
-## 1. Usando Chose Your Champion
+## 1. Usuários
+
+#### - Quem são os usuários principais do produto?
+  Jogadores e futuros jogadores de League of Legends que desejam aprofundar e entender melhor os campeões.
+
+#### - Quais são os objetivos dos usuários com relação ao produto?
+  Definir quais campeões eles se identificam mais pra poder jogar.
+
+#### - Quais são os dados mais relevantes que querem ver na interface e por quê?
+  Cards com foto dos campeões e dados como categoria (assassino, tanque, suporte etc) e dados de HP, força etc.
+
+#### - Quando utilizam ou utilizariam o produto?
+  Quando desejarem escolher o melhor campeão pra jogar.
+
+
+## 2. Histórias do Usuário
+
+#### **1ª História do Usuário**
+
+Eu, como visitante, quero visualizar todos os campeões do LOL em cards e ao clicar em um card, quero ser direcionado a uma página/pop-up com as informações do campeão específico.
+
+**Critérios de Aceitação**
+- Visualizar os campeões em cards
+- Ao clicar no card receber as informações completas do campeão selecionado
+- Botão de voltar/fechar pop-up
+
+**Definição de Pronto**
+- Fez a página de acordo com o protótipo
+- O código ta no repositório (com branches, commits etc)
+- Tem testes e passa nos testes com 70% de aprovação no minimo
+- Testes de usuário
+
+    ![Separação de Pequenas Tarefas]("./src/img/1ahistoria.jpeg")
+
+#### **2ª História do Usuário**
+
+Depois de receber as informações do campeão selecionado, quero buscar um campeão por nome e filtrar por categoria
+
+**Critérios de Aceitação**
+- Buscar por nome (drop down)
+- Filtro por categoria (botões do nav)
+
+**Definição de Pronto**
+- Fez a página de acordo com o protótipo
+- O código ta no repositório (com branches, commits etc)
+- Tem testes e passa nos testes com 70% de aprovação no minimo
+- Testes de usuário
+
+    ![Separação de Pequenas Tarefas]("./src/img/2ahistoria.jpeg")
+
+####  **3ª História do Usuário**
+
+Quero ordenar por dificuldade e fazer um calculo agregado
+
+**Critérios de Aceitação**
+- Filtro de ordenação por dificuldade
+- Campo pra calculo agregado?
+
+**Definição de Pronto**
+- Fez a página de acordo com o protótipo
+- O código ta no repositório (com branches, commits etc)
+- Tem testes e passa nos testes com 70% de aprovação no minimo
+- Testes de usuário
+
+![Separação de Pequenas Tarefas]("./src/img/3ahistoria.jpeg")
+
+
+## 3. Protótipos de Baixa Fidelidade
+![Landing Page Baixa Fidelidade]("./src/img/landing-page-low-fidelity.jpeg")
+![Pop-Up Baixa Fidelidade]("./src/img/popup-low-fidelity.jpeg)
+
+## 4. Protótipos de Alta Qualidade
+![Landing Page Alta Fidelidade]("./src/img/desktop-prototype.png/)
+![Pop-Up Alta Fidelidade](./src/img/popup-preview.jpeg)
+![Mobile Landing Page Alta Fidelidade]("./src/img/mobile-prototype.png")
+
+## 5. Problemas Detectados nos Testes de Usabilidade
+
+
+
+## 6. Usando Chose Your Champion
 
 Para usar Chose Your Champion, siga estas etapas:
 
@@ -38,7 +114,7 @@ Para usar Chose Your Champion, siga estas etapas:
 ```
 
 
-## 2. Contribuindo para Chose Your Champion
+## 7. Contribuindo para Chose Your Champion
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 Para contribuir com Chose Your Champion, siga estas etapas:
 
@@ -50,7 +126,7 @@ Para contribuir com Chose Your Champion, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## 3. Colaboradores
+## 8. Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
@@ -74,86 +150,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
-## 4. Usuários
-
-#### - Quem são os usuários principais do produto?
-  Jogadores e futuros jogadores de League of Legends que desejam aprofundar e entender melhor os campeões.
-
-#### - Quais são os objetivos dos usuários com relação ao produto?
-  Definir quais campeões eles se identificam mais pra poder jogar.
-
-#### - Quais são os dados mais relevantes que querem ver na interface e por quê?
-  Cards com foto dos campeões e dados como categoria (assassino, tanque, suporte etc) e dados de HP, força etc.
-
-#### - Quando utilizam ou utilizariam o produto?
-  Quando desejarem escolher o melhor campeão pra jogar.
-
-
-## 5. Histórias do Usuário
-
-#### **1ª História do Usuário**
-
-Eu, como visitante, quero visualizar todos os campeões do LOL em cards e ao clicar em um card, quero ser direcionado a uma página/pop-up com as informações do campeão específico.
-
-**Critérios de Aceitação**
-- Visualizar os campeões em cards
-- Ao clicar no card receber as informações completas do campeão selecionado
-- Botão de voltar/fechar pop-up
-
-**Definição de Pronto**
-- Fez a página de acordo com o protótipo
-- O código ta no repositório (com branches, commits etc)
-- Tem testes e passa nos testes com 70% de aprovação no minimo
-- Testes de usuário
-
-    ![Separação de Pequenas Tarefas](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4eb3db39-64bb-41e3-984d-4b1868bb8791/WhatsApp_Image_2021-06-23_at_15.06.07.jpeg)
-
-#### **2ª História do Usuário**
-
-Depois de receber as informações do campeão selecionado, quero buscar um campeão por nome e filtrar por categoria
-
-**Critérios de Aceitação**
-- Buscar por nome (drop down)
-- Filtro por categoria (botões do nav)
-
-**Definição de Pronto**
-- Fez a página de acordo com o protótipo
-- O código ta no repositório (com branches, commits etc)
-- Tem testes e passa nos testes com 70% de aprovação no minimo
-- Testes de usuário
-
-    ![Separação de Pequenas Tarefas](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87f163be-81a2-4148-98b2-62910c95ad78/WhatsApp_Image_2021-06-23_at_15.06.06.jpeg)
-
-####  **3ª História do Usuário**
-
-Quero ordenar por dificuldade e fazer um calculo agregado
-
-**Critérios de Aceitação**
-- Filtro de ordenação por dificuldade
-- Campo pra calculo agregado?
-
-**Definição de Pronto**
-- Fez a página de acordo com o protótipo
-- O código ta no repositório (com branches, commits etc)
-- Tem testes e passa nos testes com 70% de aprovação no minimo
-- Testes de usuário
-
-![Separação de Pequenas Tarefas](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a9663d4b-aaeb-4100-8440-b97054c77d14/WhatsApp_Image_2021-06-23_at_15.06.07(1).jpeg)
-
-
-## 6. Protótipos de Baixa Fidelidade
-![Landing Page Baixa Fidelidade]("./src/img/landing-page-low-fidelity.jpeg")
-![Pop-Up Baixa Fidelidade]("./src/img/popup-low-fidelity.jpeg)
-
-## 7. Protótipos de Alta Qualidade
-![Landing Page Alta Fidelidade]("./src/img/desktop-prototype.png/)
-![Pop-Up Alta Fidelidade](./src/img/popup-preview.jpeg)
-![Mobile Landing Page Alta Fidelidade]("./src/img/mobile-prototype.png")
-
-## 8. Problemas Detectados nos Testes de Usabilidade
-
-
 
 ## 9. Checklist
 
