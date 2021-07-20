@@ -18,6 +18,7 @@ function listingCards(itens) {
 
       <h3>${info.id}</h3>
       <img src="${info.splash}" alt="Imagem do Campeão"/>
+
        `
     cardPack.appendChild(card)
 

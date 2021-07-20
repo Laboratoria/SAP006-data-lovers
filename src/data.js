@@ -25,7 +25,7 @@ export const difficultyOrder = (array, chosendifficulty) => {
       return order.filter(champion => champion.info.difficulty > 7)
            
     default: 
-    window.alert(`Sorry, chose your champion.`)      
+    return array
   }
 }
 

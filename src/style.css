@@ -42,7 +42,7 @@ body {
 }
 
 .container{
-  background-color: rgba(23, 24, 32, 0.8);
+  background-color: rgba(23, 24, 32, 0.705);
   margin: 0 auto;
   padding: 10px;
   display: flex;
@@ -53,7 +53,7 @@ body {
   border-radius: 5px;
   justify-content: center;
   margin-top: 10%;
-  z-index: 2;
+  z-index: 0;
 }
 
 .container h1 {
@@ -69,7 +69,6 @@ body {
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
-  position: relative;
 }
 
 .cards li {
@@ -93,17 +92,15 @@ body {
   height: 360px;
   overflow: hidden;
   object-fit: cover;
-
 }
 
 .cards h3 {
   text-transform: uppercase;
-  margin: 20px;
-  font-size: 20px;
+  font-size: 1.2rem;
+  height: 20px;
+  margin: 8px;
   text-shadow: 3px 3px rgba(14, 14, 13, 0.445);
   text-align: start;
-  z-index: 1;
-  position: absolute;
 }
 
 /*********** PARTE DO POP UP *************/
@@ -200,7 +197,6 @@ body {
   -webkit-mask-image: linear-gradient(to top, transparent 0%, #fff 50%);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  z-index: 3;
 }
 
 .champion-data{
@@ -343,6 +339,8 @@ body {
 
   .cards h3{
     font-size: 1rem;
+    height: 10px;
+    margin-top: 5px;
   }
 
   .header-img img {
@@ -354,5 +352,6 @@ body {
     min-width: 200px; /*150px; */
     max-height: 130px; /* 170px */
     margin: 5px;
+    z-index: 0;
   }
 }

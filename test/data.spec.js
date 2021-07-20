@@ -1,6 +1,6 @@
 import { filterNames, filterByTag, difficultyOrder, mediaInfo } from '../src/data.js';
 
-//MOOC
+
 const dataLol = [
   {
     id: "Aatrox",
@@ -64,8 +64,6 @@ const dataLol = [
   }
 ]
 
-const alert = window.alert(`Sorry, chose your champion.`) 
-
 const order = [
 {id: 'Aatrox', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: [ 'Fighter', 'Tank' ]},
 {id: 'Ahri', name: 'Ahri', title: 'the Nine-Tailed Fox', info: { attack: 3, defense: 4, magic: 8, difficulty: 5 }, tags: [ 'Mage', 'Assassin' ]},
@@ -92,6 +90,7 @@ describe('filterNames', () => {
  })
 })
 
+
 describe('filterByTag', () => {
   it('filterByTag should be a function', () => {
     expect(typeof filterByTag).toBe('function')
@@ -102,6 +101,7 @@ describe('filterByTag', () => {
       { id: "Vayne", name: "Vayne", title: "the Night Hunter", info: { attack: 10, defense: 1, magic: 1, difficulty: 8 }, tags: ["Marksman", "Assassin"] }])
   })
 });
+
 
 describe('difficultyOrder', () => {
   it('difficultyOrder should be a function', () => {
@@ -131,8 +131,8 @@ describe('difficultyOrder', () => {
   })
 
    
-  it('Should return an alert', () => {
-    expect(difficultyOrder(dataLol, '20')).toEqual(alert)
+  it('Should return an array', () => {
+    expect(difficultyOrder(dataLol, '20')).toEqual(dataLol)
   })
 
 })

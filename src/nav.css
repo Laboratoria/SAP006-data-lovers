@@ -18,7 +18,7 @@
   border-top: rgba(23, 24, 32, 0.8);
   box-sizing: initial;
   transition: 0.5s;
-  z-index: 0;
+  z-index: 1;
 }
 
 /********* PARTE DAS CATEGORIAS *********/
@@ -31,6 +31,7 @@
   padding: 0;
   gap: .5rem;
   margin-right: 10px;
+  z-index: 80000000;
 }
 
 .menu li a {
@@ -39,6 +40,7 @@
   color: #ffffff;
   text-decoration: none;
   padding: 0.5rem;
+  
 }
 
 
@@ -97,24 +99,27 @@
     transition: .6s;
     visibility: hidden;
     overflow-y: hidden;
+    z-index: 80000000;
   }
 
   .menu li a {
     padding: 1rem 0;
     margin: 0 1rem;
     color: #171820;
+    z-index: 80000000;
   }
 
   .menu li:hover, .menu li a:hover {
     color: #ffc700;
     background-color: #171820;
-    
+    z-index: 80000000;
   }
 
   .navbar.active .menu{
     height: 100vh;
     visibility: visible;
     overflow-y: auto;
+    z-index: 80000000;
   }
 
   .navbar.active .hamburguer {

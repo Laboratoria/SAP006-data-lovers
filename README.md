@@ -143,8 +143,8 @@ Quero ordenar por dificuldade e fazer um calculo agregado
 
 
 ## 6. Protótipos de Baixa Fidelidade
-![Landing Page Baixa Fidelidade]()
-![Pop-Up Baixa Fidelidade]()
+![Landing Page Baixa Fidelidade]("./src/img/landing-page-low-fidelity.jpeg")
+![Pop-Up Baixa Fidelidade]("./src/img/popup-low-fidelity.jpeg)
 
 ## 7. Protótipos de Alta Qualidade
 ![Landing Page Alta Fidelidade]("./src/img/desktop-prototype.png/)
