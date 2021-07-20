@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="I=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>League of Legends - Find Your Champion</title>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="I=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>League of Legends - Find Your Champion</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="nav.css" />
@@ -78,20 +83,55 @@
 
     </main>
 
-    <footer>
-      <p class="authors">
+  <footer>
+    <p class="authors">
       Desenvolvido por Jennifer Pessoa and Camila Conte |
       Laboratória - 07/2021
-      </p>
-    </footer>
-    
-    <script src="main.js" type="module"></script>
-    <script src="nav.js" type="module"></script>
-   
-    </body>
+    </p>
+  </footer>
+
+  <div id="modal-informacao" class="modal-container">
+    <div class="modal">
+      <div class="popup-content">
+
+        <div id="close" class="popup-close"> x </div>
+
+        <div class="champion-data">
+
+          <figure class="logo-pop-up">
+            <img src="./img/logo-pop-up.png" alt="Logo de League of Legends" />
+          </figure>
+
+          <h2 class="champion-name">Chose your Champion</h2>
+
+          <h4 class="introduction"> A escolha de seu personagem de League of Legends pode ser fácil, além de mais
+            informativa e
+            divertida: </h4>
+
+          <p class="introduction"> Com "Chose your Champion", você pode avaliar as informações individuais de cada
+            Champion, checar as suas habilidades
+            comparadas à média das habilidades de sua classe, além de selecionar os campões por classe e nível de
+            dificuldade! </p>
+
+          <p class="introduction"> Se jogue conosco nesta aventura! </p>
+
+          <p class="introduction"> Para entender um pouco mais sobre o jogo, você pode entrar
+            <a href="https://pt.wikipedia.org/wiki/League_of_Legends" target="_blank">neste link.</a>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js" type="module"></script>
+  <script src="nav.js" type="module"></script>
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['bar'] });
+  </script>
+</body>
+
 </html>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      // google.charts.setOnLoadCallback(drawChart);  
-</script>

@@ -80,7 +80,7 @@ const tagAssassin = [
   {id: "Vayne", name: "Vayne", title: "the Night Hunter", info: {attack: 10, defense: 1, magic: 1, difficulty: 8}, tags: ["Marksman", "Assassin"]},
 ]
 
-//teste da busca por nome 
+
 describe('filterNames', () => {
   it('filterNames should be a function', () => {
     expect(typeof filterNames).toBe('function')
@@ -92,7 +92,6 @@ describe('filterNames', () => {
  })
 })
 
-//teste do filtro por categoria 
 describe('filterByTag', () => {
   it('filterByTag should be a function', () => {
     expect(typeof filterByTag).toBe('function')
@@ -104,7 +103,6 @@ describe('filterByTag', () => {
   })
 });
 
-//teste de filtro e ordenação pela dificuldade 
 describe('difficultyOrder', () => {
   it('difficultyOrder should be a function', () => {
     expect(typeof difficultyOrder).toBe('function')
