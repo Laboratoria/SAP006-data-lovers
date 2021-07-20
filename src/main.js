@@ -172,7 +172,7 @@ function iniciaModal(modalID) {
         }
       })
     }
-  //}
+ // }
 }
 
 const openInfo = document.querySelector(".header-img")
