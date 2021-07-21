@@ -4,8 +4,7 @@
     box-sizing: border-box;
     font-family: 'Vollkorn', serif;
 }
-    
-    
+     
 body{
     font-size: 12px;
     background-color: #38527B;
@@ -44,7 +43,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     }   
-} 
+}
 
 
 
@@ -188,7 +187,7 @@ label[for="bt_menu"]{
 }
   
 .modal-content{
-    background-color: rgba(245, 239, 239, 0.4);
+    background-color: rgba(245, 239, 239, 0.39);
     margin: 20% auto; 
     padding: 40px;
     border: 1px solid #ffff;
@@ -196,6 +195,7 @@ label[for="bt_menu"]{
     resize: none;
     border:transparent;
 }
+
 .modal-textarea{
     font-size: 45px;
     font-weight: bolder;
@@ -206,6 +206,7 @@ label[for="bt_menu"]{
     width: 85%;
     flex-wrap: nowrap;
 }
+
 .modal-search{
     margin: 2%;
 }

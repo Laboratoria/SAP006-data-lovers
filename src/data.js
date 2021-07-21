@@ -22,8 +22,18 @@ export const sortData = (data, sortBy, sortOrder) => {
   
 };
 
-
 export const filterData = (data, getDirector) => {
-   let filterDirector = data.filter(name => name.director.toLowerCase().includes(getDirector.toLowerCase()))
+   const filterDirector = data.filter(name => name.director.toLowerCase().includes(getDirector.toLowerCase()))
    return filterDirector
+};
+
+export const agruparScore = function agruparPor(objetoArray, propriedade) {
+  return objetoArray.reduce(function (acc, obj) {
+    let key = obj[propriedade];
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(obj);
+    return acc;
+  }, {});
 };
