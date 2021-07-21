@@ -1,9 +1,9 @@
-import { sortData, filterData } from './data.js';
+import {sortData, filterData} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const clean = () => {
     boxCards.innerHTML = "";
-    modalArea.innerHTML = "";
+    modalContent.innerHTML;
 }
 
 const movies = data.films

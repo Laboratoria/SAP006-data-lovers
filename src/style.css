@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-family: 'Vollkorn', serif;
 }
      
@@ -11,7 +11,8 @@ body{
     animation: banner 40s infinite;
     animation-direction: alternate;
 }
-  
+
+    
 @keyframes banner{
     0%, 20%{
     background-image: url(./images/Neighbor_Totoro.jpg);
@@ -44,69 +45,134 @@ body{
     }   
 }
 
+
+
 .menu{
-    list-style: none;
-    background-color: #38527B;
-    width: 100%;
+    width:100%;
     height: 60px;
-    position: fixed;
+    background-color: #38527B;
+    font-family:'Vollkorn', serif;
     font-weight: bold;
-    z-index: 1;
+
+    position: fixed;
     font-size: 18px;
     overflow: visible;
-    display: flex;
+    z-index: 4;
+    /*display: flex; */
 }
-        
-.menu li{
+
+.menu ul{
+    list-style:none;
     position: relative;
+}
+
+.menu ul li{
+    width: 150px;
     float: left;
-    padding: 0% 3%;
-    margin-left: auto;
 }
-        
-.menu li a{
-    color: #E7E7DE; 
-    text-decoration: none; 
-    padding: 8px 15px; 
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 2.5;
-}
-        
-.menu li a:hover{
-    background: #008891;
-    text-shadow: 0px 0px 2px whitesmoke;
-}
-        
-.menu li ul{
-    position: absolute;
-    top: 35px;
-    background: #38527B;
-    display: none;
-    z-index: 9900;
-    border: transparent
-}
-        
-.menu li:hover ul, .menu li.over ul{
+
+.menu a{
+    padding: 15px;
     display: block;
-    width: 100%;
+    text-decoration:none;
+    text-align: center;
+    background-color: #38527B;
+    color: #fff;
 }
-        
-.menu li ul li{
-    border: transparent;
-    display: block;
-    width: 130px;
-} 
+
+.menu ul ul{
+    position:absolute;
+    visibility: hidden;
+}
+
+.menu ul li:hover ul{
+    visibility: visible;
+}
+
+.menu a:hover{
+    background-color: #008891;
+    color: #555;
+}
+
+.menu ul ul li{
+    float: none;
+    border-bottom:solid 1px #ccc;
+}
+
+.menu ul ul li a {
+    background-color: #069;
+}
 
 .btn-search{
     background-color: transparent;
-    display: flex;
-    align-items: flex-end;
-    margin: 10%;
-    font-size: 20px;
+    padding: 0%;
+    /* margin: 10%;
+    font-size: 20px; */
 }
+
+label[for="bt_menu"]{
+    padding: 5px;
+    background-color:#069;
+    color: #fff;
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 60px;
+    z-index: 5;
+    float: left;
+    /* overflow: visible; */
+    position: fixed;
+
+}
+
+#bt_menu{
+    display: none;
+} 
+
+ /* label[for="bt_menu"]{
+    display: none;
+} */
+
+
+@media (max-width: 800px){
+    label [for="bt_menu"]{
+        display:block;
+        z-index: 5;
+    }
+
+    #bt_menu:checked ~ .menu {
+        margin-left: 0;
+    }
+
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+        overflow: visible;
+        position: fixed;
+        z-index: 4;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: none;
+    }
     
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+} 
+
 .modal{
     display: none; 
     position: fixed;
@@ -256,3 +322,61 @@ p{
     text-align: justify;
     background-image: cover; 
 }
+
+
+
+/* 
+.menu{
+    list-style: none;
+    background-color: #38527B;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 18px;
+    overflow: visible;
+    display: flex;
+}
+
+.menu li{
+    position: relative;
+    float: left;
+    padding: 0% 3%;
+    margin-left: auto;
+}
+        
+.menu li a{
+    color: #E7E7DE; 
+    text-decoration: none; 
+    padding: 8px 15px; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.5;
+}
+        
+.menu li a:hover{
+    background: #008891;
+    text-shadow: 0px 0px 2px whitesmoke;
+}
+        
+.menu li ul{
+    position: absolute;
+    top: 35px;
+    background: #38527B;
+    display: none;
+    z-index: 9900;
+    border: transparent
+}
+        
+.menu li:hover ul, .menu li.over ul{
+    display: block;
+    width: 100%;
+}
+        
+.menu li ul li{
+    border: transparent;
+    display: block;
+    width: 130px;
+}  */
