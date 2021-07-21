@@ -4,24 +4,14 @@
     box-sizing: border-box; 
     font-family: 'Vollkorn', serif;
 }
-    
-    
+     
 body{
     font-size: 12px;
     background-color: #38527B;
     animation: banner 40s infinite;
     animation-direction: alternate;
 }
-
-/* .banner-images{
-    animation: banner 40s infinite;
-    animation-direction: alternate;
-    height: 1000px;
-    width: 100%;
-    display: block;
-    z-index: 0;
-} */
-    
+  
 @keyframes banner{
     0%, 20%{
     background-image: url(./images/Neighbor_Totoro.jpg);
@@ -52,7 +42,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     }   
-} 
+}
 
 .menu{
     list-style: none;
@@ -116,7 +106,7 @@ body{
     margin: 10%;
     font-size: 20px;
 }
-
+    
 .modal{
     display: none; 
     position: fixed;
@@ -131,7 +121,7 @@ body{
 }
   
 .modal-content{
-    background-color: rgba(245, 239, 239, 0.4);
+    background-color: rgba(245, 239, 239, 0.39);
     margin: 20% auto; 
     padding: 40px;
     border: 1px solid #ffff;
@@ -139,6 +129,7 @@ body{
     resize: none;
     border:transparent;
 }
+
 .modal-textarea{
     font-size: 45px;
     font-weight: bolder;
@@ -149,6 +140,7 @@ body{
     width: 85%;
     flex-wrap: nowrap;
 }
+
 .modal-search{
     margin: 2%;
 }
