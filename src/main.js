@@ -1,11 +1,10 @@
-//import allFilters from './data.js';
 import {sortData, filterData} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
 const clean = () => {
     boxCards.innerHTML = "";
-    modalArea.innerHTML = "";
+    modalContent.innerHTML;
 }
 
 
@@ -22,12 +21,10 @@ function getPeople() {
      return people
 }
 
-//CARDS
 
 const printCardsFilms = (listaFilmes) => {
     clean()
-    // const background = document.getElementById("bannerImages")
-    // background.style.display = "none"
+
     listaFilmes.forEach(film => {
         const filmCardsElements = document.getElementById("boxCards")
         filmCardsElements.innerHTML += `
@@ -53,12 +50,9 @@ const printCardsFilms = (listaFilmes) => {
     })
 }
 
-//printCardsFilms(data.films) 
 
 const printCardsCharacters = (listaPersonagens) => {
     clean()
-    // const background = document.getElementById("bannerImages")
-    // background.style.display = "none"
     listaPersonagens.map(people => {
         const characterCardsElements = document.getElementById("boxCards")
         characterCardsElements.innerHTML += `
@@ -81,9 +75,6 @@ const printCardsCharacters = (listaPersonagens) => {
     })
 }
 
-//printCardsCharacters(getPeople())
-
-//BOTÔES MENU
 
 btnFilms.addEventListener("click", () => {
     printCardsFilms(movies)
@@ -122,26 +113,21 @@ btnCharactersZA.addEventListener("click", () => {
 
 btnModalSearch.addEventListener("click", () =>{
     const stringSearch = document.getElementById("modal-textarea").value.toLowerCase();
-    //console.log(stringSearch)
     clean()
     const busca = filterData(movies, stringSearch)
-    //console.log(busca)
     printCardsFilms(busca)
 })
 
-
-// MODAL BOX 
 
 const modal = document.getElementById("modalArea");
 const btnSearchMenu = document.getElementById("btnSearchMenu");
 const closeModal = document.getElementsByClassName("closeModal")[0];
 
-// When the user clicks on the button, open the modal
 btnSearchMenu.onclick = function() {
+    clean()
    modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
 closeModal.onclick = function() {
   modal.style.display = "none";
 }
@@ -150,51 +136,10 @@ btnModalSearch.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
    if (event.target == modal) {
      modal.style.display = "none";
    }
 }
-
-
-// const stringSearch = document.getElementById("modal-textarea").value;
-
-// const searchData = movies.filter(filtrar => (filtrar.director === "Hayao Miyazaki"));
-// console.log(searchData)
-
-
-// const searchData = movies.map(filme => {
-//     for (let m in filme) {
-//         //console.log(typeOf filme[m])
-//         //console.log(Array.isArray(filme[m]))
-//             if(filme[m] === stringSearch){
-//                 return console.log(filme)
-//             }
-//     }
-// })
-
-// //searchData()
-
-// const filtro = "eu"
-
-    // const w = x.map(filme => {
-    //   for (let m in filme) {
-    //     console.log(typeof filme[m])
-    //     console.log(Array.isArray(filme[m]))
-    //     // if (filme[m] === filtro){
-    //     //   return filme
-    //     // }
-    //   }
-    // })
-
-
-
-// const nome = "Pazu"
-// for (let movie in movies)
-
-// const x = movies.map( movie => movie.people)
-// const w = [...x]
-// console.log(w)
 
 
