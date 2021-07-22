@@ -83,6 +83,7 @@ function buscarNomePersonagens(e) {
   return infoCardsTela(nomePersonagens);
 }
 
+//////////////////BOTÃO DE LIMPAR OS FILTROS (RECARREGAR A PÁGINA)
 function limparFiltros(){
 window.location.reload();
 }

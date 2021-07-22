@@ -37,6 +37,7 @@ const mockNames = [
 ]
 
 
+
 /////////////////////TESTE PARA FILTRAR O GENERO
   describe('filtroGenero', () => {
     it('Deverá ser uma função', () => {
@@ -60,11 +61,12 @@ describe('filtroEspecie', () => {
 });
 
 it('Deverá filtrar pela espécie Alien', () => {
-  const specieAlien = "Alien"
-  const expected = filtroEspecie(mockPersonagens, specieAlien)
+  const specieAlienType = "Alien"
+  const expected = filtroEspecie(mockPersonagens, specieAlienType)
+  const specieArrayAlien = (expected[0].species)
   expect (expected.length).toEqual(2)
-  expect (expected[0].species).toEqual(specieAlien)
-  expect (expected[1].species).toEqual(specieAlien)
+  expect (specieArrayAlien).toEqual(specieAlienType)
+  expect (expected[1].species).toEqual(specieAlienType)
   });
 });
 
@@ -104,6 +106,18 @@ describe('ordemAlfabetica', () => {
   });
   it('Deverá retornar em ordem Z-A', () => {
     expect(ordemAlfabetica(mockNames, "ZA")).toStrictEqual(mockNames.reverse());
+  });
+
+  describe('quando o mock tiver a ordem invertida', () => {
+    const mockNamesZA = [
+      {"name": "Rick Sanchez"},
+      {"name": "Morty Smith"},
+      {"name": "Boobloosian"},
+      {"name": "Bearded Lady"},
+    ]
+    it('Deverá retornar em ordem Z-A', () => {
+    expect(ordemAlfabetica(mockNamesZA, "ZA")).toStrictEqual(mockNamesZA.reverse());
+    });
   });
 });
 
