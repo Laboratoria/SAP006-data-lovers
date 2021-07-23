@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+      name="viewport"
+    />
+    <title>The Studio Ghibli Collection - Home</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="fade">
+    <nav>
+      <ul>
+        <li>
+          <a href="https://studioghibli.com.br/" target="_blank"
+            ><img
+              class="imageIcon"
+              src="img/link-ghibli.png"
+              alt="Studio Ghibli - link"
+          /></a>
+        </li>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./animacao.html">ANIMAÇÕES</a></li>
+        <li><a href="./characters.html">PERSONAGENS</a></li>
+      </ul>
+    </nav>
+    <header>
+      <img class="chihiroInitial" src="img/chihiro-initial.png" alt="Chihiro" />
+      <h1>The Studio Ghibli Collection</h1>
+    </header>
+    <main>
+      <section class="number">
+        <div class="numberMovies">
+          <p>Animações</p>
+          <div id="boxMovies" class="box"></div>
+        </div>
+        <hr class="divisor" width="3" size="250" />
+        <div class="numberChars">
+          <p>Personagens</p>
+          <div class="genders" id="genders"></div>
+          <div id="boxChars" class="box"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img class="totoroInitial" src="img/totoro-initial.png" alt="Totoro" />
+      <hr width="100%" size="7" />
+      <p>Feito por Juliana Monteiro e Mariana Marcondes</p>
+    </footer>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <script src="sum.js" type="module"></script>
   </body>
 </html>
