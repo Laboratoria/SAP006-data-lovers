@@ -15,11 +15,7 @@ export const order = (films) => {
 
 export const decreasingOrder = (films) => (order(films).reverse());
 
-export const filterByDirector = (films,director) =>{
-    console.log(films)
-    console.log(director)
-}
-
+export const DirectorSelected = (films, valueSelected) => films.filter(item => item.director === valueSelected);
 
 
 

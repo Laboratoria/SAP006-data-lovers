@@ -1,14 +1,14 @@
-import {order,decreasingOrder,filterByDirector} from './data.js';
+import { order, decreasingOrder, DirectorSelected } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-//const films=data.films
-const listFilms = document.getElementById("Films")
-const clean=() =>{
-     listFilms.innerHTML="";
-}
- const films = data.films
 
-let exibitionFilms = (films) => {
+const listFilms = document.getElementById("Films")
+const clean = () => {
+     listFilms.innerHTML = "";
+}
+const films = data.films
+
+const exibitionFilms = (films) => {
      clean()
      films.forEach(film => {
           listFilms.innerHTML +=
@@ -63,34 +63,25 @@ exibitionFilms(films)
 // }
 
 const orderAZ = (evento) => {
-      evento.preventDefault();
-     
-     
-     
-     
-     
-     const filmsAZ = order(films);
-     
-     
-     exibitionFilms(filmsAZ);
+     evento.preventDefault();
+const filmsAZ = order(films);
+exibitionFilms(filmsAZ);
 
 };
 
 const orderZA = (evento) => {
-      evento.preventDefault();
-
-     
-     
-     
-     const filmsZA = decreasingOrder(films);
-     
-     
-     exibitionFilms(filmsZA);
+     evento.preventDefault();
+ const filmsZA = decreasingOrder(films);
+exibitionFilms(filmsZA);
 
 };
-const changeDirector= (evento) => {
-     const selectedDirector=evento.target.value
-     filterByDirector(films,selectedDirector)
+
+
+
+function filterDirector() {
+     const valueSelected = selectDirector.value
+     const selectedFilms = DirectorSelected(films, valueSelected);
+     exibitionFilms(selectedFilms);
 }
 const sortByAZ = document.querySelector('[data-az-order]');
 const sortByZA = document.querySelector('[data-za-order]');
@@ -99,7 +90,6 @@ sortByAZ.addEventListener('click', orderAZ);
 
 sortByZA.addEventListener('click', orderZA);
 
+const selectDirector = document.getElementById("director");
 
-const filterDirector= document.getElementById("director");
-filterDirector.addEventListener("change",changeDirector)
-
+selectDirector.addEventListener("change", filterDirector);
