@@ -46,8 +46,8 @@
 
         <button class="button" data-az-order>Ordernar de A-Z</button>
         <button class="button" data-za-order>Ordernar de Z-A</button>
-        <select class="Filmes">
-          <option value="none" selected="Filmes" id="director">
+        <select class="Filmes" id="director">
+          <option value="none" selected>
             Diretor
           </option>
           <option value="Hayao Miyasaki">Hayao Miyasaki</option>
@@ -57,12 +57,12 @@
           <option value="Gorō Miyazaki"> Gorō Miyazaki </option>
           <option value="Hiromasa Yonebayashi"> Hiromasa Yonebayashi </option>
 
-          <div class="search-film">
-            <input type="search" id="film-search" placeholder="Search by title">
-        </div>
+          
 
         </select>
-
+        <div class="search-film">
+          <input type="search" id="film-search" placeholder="Search by title">
+      </div>
         <select class="Personagem">
           <option value="none" selected="Gênero" id="Gênero">
             Gênero
@@ -79,7 +79,7 @@
             <section class="filmsList" id="Films">
 
             </section>
-            <div id="cards" class=ghibli>
+            <div id="cardsCharacteres" class=ghibli>
               <section class="charactersList" id="Characters"></section>
             </div>
             <script src="main.js" type="module"></script>

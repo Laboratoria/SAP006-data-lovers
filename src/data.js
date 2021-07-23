@@ -13,9 +13,12 @@ export const order = (films) => {
 };
 
 
+export const decreasingOrder = (films) => (order(films).reverse());
 
-
-
+export const filterByDirector = (films,director) =>{
+    console.log(films)
+    console.log(director)
+}
 
 
 

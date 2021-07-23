@@ -1,16 +1,22 @@
-import {order} from './data.js';
+import {order,decreasingOrder,filterByDirector} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-const films = data.films
+//const films=data.films
 const listFilms = document.getElementById("Films")
-let exibitionFilms = (cards) => {
-     cards.forEach(film => {
+const clean=() =>{
+     listFilms.innerHTML="";
+}
+ const films = data.films
+
+let exibitionFilms = (films) => {
+     clean()
+     films.forEach(film => {
           listFilms.innerHTML +=
 
                `<li class= "exibitionFilms">
     <img class="card-poster" src="${film.poster}">
     <p class= "card-titulo"> title:${film.title}</p>
-    <p class= "card-descrição"> description:${film.description}</p> n  nM
+    <p class= "card-descrição"> description:${film.description}</p> 
     <p class= "card-diretor"> director:${film.director}</p>
     <p class= "card-produtor"> producer:${film.producer}</p>
     <p class= "card-date"> release date:${film.release_date}</p>
@@ -52,35 +58,48 @@ exibitionFilms(films)
 
 //Ordenar AZ-ZA
 
-
+// const clean= ()=>{
+//      cards.innerHTML="";
+// }
 
 const orderAZ = (evento) => {
-     evento.preventDefault();
-
-     const valueSelected = sortByAZ.value;
-     console.log(films)
+      evento.preventDefault();
+     
+     
+     
+     
+     
      const filmsAZ = order(films);
-     console.log(filmsAZ)
+     
+     
      exibitionFilms(filmsAZ);
 
 };
 
 const orderZA = (evento) => {
-     evento.preventDefault();
+      evento.preventDefault();
 
-     const valueSelected = sortByZA.value;
      
-     const filmsZA = order(films);
+     
+     
+     const filmsZA = decreasingOrder(films);
+     
      
      exibitionFilms(filmsZA);
 
 };
+const changeDirector= (evento) => {
+     const selectedDirector=evento.target.value
+     filterByDirector(films,selectedDirector)
+}
 const sortByAZ = document.querySelector('[data-az-order]');
 const sortByZA = document.querySelector('[data-za-order]');
 
 sortByAZ.addEventListener('click', orderAZ);
+
 sortByZA.addEventListener('click', orderZA);
 
 
-
+const filterDirector= document.getElementById("director");
+filterDirector.addEventListener("change",changeDirector)
 
