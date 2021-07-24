@@ -1,4 +1,4 @@
-import {sortData} from '../src/data.js';
+import {sortData, filterData, calculateAvgScore} from '../src/data.js';
 
 
 const mockArrayFilms = [
@@ -46,18 +46,47 @@ describe('function sortData', () => {
   });
 
   it('returns `os filmes ordenados de A - Z`', () => {
-    const expected = sortData(mockArrayFilms, ["title"], "asc")
-    expect(expected[0].title).toBe('Castle in the Sky');
+    const result = sortData(mockArrayFilms, ["title"], "asc")
+    const expected = 'Castle in the Sky'
+    expect(result[0].title).toBe(expected);
+  });
+
+  it('returns `os filmes ordenados de Z - A`', () => {
+    const result = sortData(mockArrayFilms, ["title"], "desc")
+    const expected = 'Whisper of the Heart'
+    expect(result[0].title).toBe(expected);
+  });
+
+  it('returns `os filmes ordenados de Z - A`', () => {
+    const result = sortData(mockArrayFilms, ["title"], "desc")
+    const expected = 'My Neighbor Totoro'
+    expect(result[1].title).toBe(expected);
   });
 });
 
 
-/*describe('anotherExample', () => {
+describe('function filterData', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof filterData).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `os filmes dirigidos por diretor`', () => {
+    const result = filterData(mockArrayFilms, "Hayao Miyazaki")
+    const expected = "Hayao Miyazaki"
+    expect(result[0].director).toBe(expected);
   });
-});*/
+});
+
+describe('function calculateAvgScore', () => {
+  it('is a function', () => {
+    expect(typeof calculateAvgScore).toBe('function');
+  });
+
+  it('returns `valor da media das avalições dos filmes `', () => {
+    const result = calculateAvgScore(mockArrayFilms)
+    const expected = "94.00"
+    expect(result).toBe(expected);
+  });
+});
+
+
