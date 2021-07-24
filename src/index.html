@@ -1,12 +1,58 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Ghibli</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;800&display=swap');
+  </style>
+</head>
+<body>
+
+<header>
+  <input type="checkbox" id="bt_menu" />
+  <label for="bt_menu">&#9776;</label>
+  <nav class="menu">
+    <ul>   
+        <li><a href="./index.html" id="btnHome">Home</a></li>
+        <li><a href="#" id="btnFilms">Films</a>
+          <ul>
+            <li><a href="#" id="btnFilmsAZ" value="asc">A - Z</a></li>
+            <li><a href="#" id="btnFilmsZA" value="desc">Z - A</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="btnCharacters">Characters</a>
+          <ul>
+            <li><a href="#" id="btnCharactersAZ" value="asc"> A - Z</a></li>
+            <li><a href="#" id="btnCharactersZA" value="desc"> Z - A</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="btnAbout">About</a></li>
+        <li><a class="btn-search" id="btnSearchMenu"> <img src="./images/lupa01.png" height="20" width="20"></a></li> 
+      </ul>
+    </nav>
+ </header>
+  <!-- <div class="banner-images" id="bannerImages">   </div> -->
+  <main>
+    <div id="modalArea" class="modal">
+      <div class="modal-content" id="modalContent">
+        <span class="closeModal">&times;</span>
+        <textarea class="modal-textarea" id="modal-textarea" placeholder="search here per director"></textarea>
+        <img class="modal-search" id="btnModalSearch" src="./images/lupa01.png" height="45" width="45">
+      </div>
+    </div>
+    <section class="keyframesContainer" id="keyframesContainer">
+      <section class="searchResultContainer" id="searchResultContainer"> </section>
+        <section class="cardsContainer" id="boxCards"> </section>
+    </section>
+  </main>
+  <!-- <footer>
+  </footer> -->
+  <script src="main.js" type="module"></script>
+</body>
 </html>
