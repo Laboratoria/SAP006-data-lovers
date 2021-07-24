@@ -23,8 +23,8 @@ export const DirectorSelected = (films, valueSelected) => films.filter(item => i
 
 
 //Ordenação AZ-ZA dos Personagens
-export const alphabeticOrderCharacters = (characters) => {
-    const result = characters.sort(function (a,b) {
+export const alphabeticOrderCharacters = (people) => {
+    const result = people.sort(function (a,b) {
         if (a.name > b.name) {
             return 1;
         }
@@ -36,7 +36,7 @@ export const alphabeticOrderCharacters = (characters) => {
     return result
 };
 
-export const decreasingOrderCharacters = (characters) => (order(characters).reverse());
+export const decreasingOrderCharacters = (people) => (order(people).reverse());
 
 
 

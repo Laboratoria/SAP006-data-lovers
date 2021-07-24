@@ -33,30 +33,30 @@ exibitionFilms(films)
 
 // Personagens//
 
-// const charactersList = document.getElementById("Characters")
-// const exibitionPeople = (cards) => {
-//      cards.forEach(people => {
-//           charactersList.innerHTML +=
+const charactersList = document.getElementById("Characters")
+const exibitionPeople = (people) => {
+     people.forEach(people => {
+          charactersList.innerHTML +=
 
-//                `<li class="cardCharacter">
-//      <img src=${people.img} class="card-img" alt=ImagemDoPersonagem">
-//      <p class="card-name"> Character:${people.name}<p>
-//      <p class="card-gender"> Gender:${people.gender}</p>
-//      <p class="card-age"> Age:${people.age}</p>
-//      <p class="card-specie"> Specie:${people.specie}</p>
-//      </li>`}
+               `<li class="cardCharacter">
+     <img src=${people.img} class="card-img" alt=ImagemDoPersonagem">
+     <p class="card-name"> Character:${people.name}<p>
+     <p class="card-gender"> Gender:${people.gender}</p>
+     <p class="card-age"> Age:${people.age}</p>
+     <p class="card-specie"> Specie:${people.specie}</p>
+     </li>`}
 
-//      )
-// }
+     )
+}
 
-// for (let film of films) {
-//      let charactersList = film.people
-//      exibitionPeople(charactersList, film.title)
-//}
-
-
+for (let film of films) {
+     let charactersList = film.people
+     exibitionPeople(charactersList, film.title)
+}
 
 
+
+//ordenar filmes de AZ-ZA
 
 const orderAZ = (evento) => {
      evento.preventDefault();
@@ -94,3 +94,29 @@ const selectDirector = document.getElementById("director");
 
 selectDirector.addEventListener("change", filterDirector);
 
+
+
+//ordenar personagens de AZ-ZA
+
+const orderAZCharacters = (evento) => {
+     evento.preventDefault();
+const charactersAZ = alphabeticOrderCharacters(people);
+
+exibitionFilms(charactersAZ);
+
+};
+
+const orderZACharacters = (evento) => {
+     evento.preventDefault();
+ const charactersZA = decreasingOrderCharacters(people);
+ 
+exibitionFilms(charactersZA);
+
+};
+
+const charactersByAZ = document.querySelector('[data-az-order]');
+const charactersByZA = document.querySelector('[data-za-order]');
+
+charactersByAZ.addEventListener('click', orderAZCharacters);
+
+charactersByZA.addEventListener('click', orderZACharacters);
