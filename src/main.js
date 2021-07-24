@@ -1,4 +1,4 @@
-import { order, decreasingOrder, DirectorSelected } from './data.js';
+import { order, decreasingOrder, DirectorSelected , alphabeticOrderCharacters , decreasingOrderCharacters } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -52,15 +52,11 @@ exibitionFilms(films)
 // for (let film of films) {
 //      let charactersList = film.people
 //      exibitionPeople(charactersList, film.title)
+//}
 
-// }
 
 
-//Ordenar AZ-ZA
 
-// const clean= ()=>{
-//      cards.innerHTML="";
-// }
 
 const orderAZ = (evento) => {
      evento.preventDefault();
@@ -83,6 +79,8 @@ function filterDirector() {
      const selectedFilms = DirectorSelected(films, valueSelected);
      exibitionFilms(selectedFilms);
 }
+
+
 const sortByAZ = document.querySelector('[data-az-order]');
 const sortByZA = document.querySelector('[data-za-order]');
 
@@ -90,6 +88,9 @@ sortByAZ.addEventListener('click', orderAZ);
 
 sortByZA.addEventListener('click', orderZA);
 
+
+
 const selectDirector = document.getElementById("director");
 
 selectDirector.addEventListener("change", filterDirector);
+
