@@ -1,4 +1,4 @@
-import {order, decreasingOrder, DirectorSelected , orderCharacters , decreasingOrderCharacters ,filterByGender} from './data.js';
+import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters, filterByGender } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -34,9 +34,11 @@ exibitionFilms(films)
 // Personagens//
 
 const charactersList = document.getElementById("Characters")
-
+const cleanChars = () => {
+     charactersList.innerHTML = "";
+}
 const exibitionPeople = (people) => {
-
+     cleanChars()
      people.forEach(people => {
           charactersList.innerHTML +=
 
@@ -62,15 +64,15 @@ for (let film of films) {
 
 const orderAZ = (evento) => {
      evento.preventDefault();
-const filmsAZ = order(films);
-exibitionFilms(filmsAZ);
+     const filmsAZ = order(films);
+     exibitionFilms(filmsAZ);
 
 };
 
 const orderZA = (evento) => {
      evento.preventDefault();
- const filmsZA = decreasingOrder(films);
-exibitionFilms(filmsZA);
+     const filmsZA = decreasingOrder(films);
+     exibitionFilms(filmsZA);
 
 };
 
@@ -102,25 +104,42 @@ selectDirector.addEventListener("change", filterDirector);
 
 const orderAZCharacters = (evento) => {
      evento.preventDefault();
-     // const valueSelected = charactersOrganizedByAZ.value;
-const charactersAZ = orderCharacters(characters);
+     const valueSelected = charactersOrganizedByAZ.value;
+     // const characters = [{"name":"pazu","age":"20"}, {"name":"chihiro","age":"12"},{"name":"totoro","age":"200"}]
+     const people=myFilterPeople();
+     
+     const charactersAZ = orderCharacters(people);
+ console.log(charactersAZ)
+      exibitionPeople(charactersAZ,valueSelected);
+}
 
-exibitionPeople(charactersAZ);
+ const myFilterPeople = () => {
+     const arrayOfAllPeople = [];
+     for(let film of data.films){
+         for(let people of film.people) {
+             arrayOfAllPeople.push(people);
+         }
+     }
+ 
+ 
+     return arrayOfAllPeople
+ }
+  
 
-};
+
 
 const orderZACharacters = (evento) => {
      evento.preventDefault();
-     // const valueSelected = charactersOrganizedByZA.value;
- const charactersZA = decreasingOrderCharacters(characters);
- 
-exibitionPeople(charactersZA);
+      const valueSelected = charactersOrganizedByZA.value;
+     const charactersZA = decreasingOrderCharacters(people);
+clean()
+     exibitionPeople(charactersZA,valueSelected);
 
 };
 
 
 const charactersOrganizedByAZ = document.querySelector('[data-az-order-characters]');
-const charactersOrganizedByZA= document.querySelector('[data-za-order-characters]');
+const charactersOrganizedByZA = document.querySelector('[data-za-order-characters]');
 
 charactersOrganizedByAZ.addEventListener('click', orderAZCharacters);
 
@@ -128,14 +147,18 @@ charactersOrganizedByZA.addEventListener('click', orderZACharacters);
 
 
 
-//Filtrar personagem por gênero
+
+
+
+
+// Filtrar personagem por gênero
 const selectGender = (evento) => {
      evento.preventDefault();
- 
-    const valueSelected = genderSelected.value;
-    const charactersGender = filterByGender(characters, valueSelected);
-    const resultByGender = charactersGender.length;
-    exibitionPeople(charactersGender,resultByGender);
+
+     const valueSelected = genderSelected.value;
+     const charactersGender = filterByGender(characters, valueSelected);
+     const resultByGender = charactersGender.length;
+     exibitionPeople(charactersGender,resultByGender);
 
 };
 
