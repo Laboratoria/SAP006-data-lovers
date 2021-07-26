@@ -1,4 +1,4 @@
-import { order, decreasingOrder, DirectorSelected , alphabeticOrderCharacters , decreasingOrderCharacters } from './data.js';
+import {order, decreasingOrder, DirectorSelected , orderCharacters , decreasingOrderCharacters ,filterByGender} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -34,7 +34,9 @@ exibitionFilms(films)
 // Personagens//
 
 const charactersList = document.getElementById("Characters")
+
 const exibitionPeople = (people) => {
+
      people.forEach(people => {
           charactersList.innerHTML +=
 
@@ -56,7 +58,7 @@ for (let film of films) {
 
 
 
-//ordenar filmes de AZ-ZA
+//Ordenar filmes de AZ-ZA
 
 const orderAZ = (evento) => {
      evento.preventDefault();
@@ -88,7 +90,7 @@ sortByAZ.addEventListener('click', orderAZ);
 
 sortByZA.addEventListener('click', orderZA);
 
-
+//Filtro Diretor
 
 const selectDirector = document.getElementById("director");
 
@@ -96,27 +98,80 @@ selectDirector.addEventListener("change", filterDirector);
 
 
 
-//ordenar personagens de AZ-ZA
+//Ordenar personagens de AZ-ZA
 
 const orderAZCharacters = (evento) => {
      evento.preventDefault();
-const charactersAZ = alphabeticOrderCharacters(people);
+     // const valueSelected = charactersOrganizedByAZ.value;
+const charactersAZ = orderCharacters(characters);
 
-exibitionFilms(charactersAZ);
+exibitionPeople(charactersAZ);
 
 };
 
 const orderZACharacters = (evento) => {
      evento.preventDefault();
- const charactersZA = decreasingOrderCharacters(people);
+     // const valueSelected = charactersOrganizedByZA.value;
+ const charactersZA = decreasingOrderCharacters(characters);
  
-exibitionFilms(charactersZA);
+exibitionPeople(charactersZA);
 
 };
 
-const charactersByAZ = document.querySelector('[data-az-order]');
-const charactersByZA = document.querySelector('[data-za-order]');
 
-charactersByAZ.addEventListener('click', orderAZCharacters);
+const charactersOrganizedByAZ = document.querySelector('[data-az-order-characters]');
+const charactersOrganizedByZA= document.querySelector('[data-za-order-characters]');
 
-charactersByZA.addEventListener('click', orderZACharacters);
+charactersOrganizedByAZ.addEventListener('click', orderAZCharacters);
+
+charactersOrganizedByZA.addEventListener('click', orderZACharacters);
+
+
+
+//Filtrar personagem por gênero
+const selectGender = (evento) => {
+     evento.preventDefault();
+ 
+    const valueSelected = genderSelected.value;
+    const charactersGender = filterByGender(characters, valueSelected);
+    const resultByGender = charactersGender.length;
+    exibitionPeople(charactersGender,resultByGender);
+
+};
+
+
+
+const genderSelected = document.getElementById("gender");
+
+genderSelected.addEventListener("change", selectGender);
+
+
+
+
+
+
+
+
+
+
+
+// Filtro Filmes ou Personagens
+
+// const selectOption = document.getElementById("Films or Characters")
+// selectOption.addEventListener("change", function (event) {
+//   let optionFilm = event.target.value
+//   if (optionFilm === "Films") {
+//     listFilms.innerHTML = ""
+//     exibitionFilme(films)
+//   }
+//   else if (optionFilm === "Characters") {
+//     charactersList.innerHTML = ""
+//     exibitionPeople(people)
+//   }
+//   else {
+//     listFilms.innerHTML = ""
+//     charactersList.innerHTML = ""
+//     exibitionFilms(films)
+//     exibitionPeople(charactersList,film.title)
+//   }
+// })

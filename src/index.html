@@ -42,15 +42,10 @@
 
 
         <section class="Menu"></section>
-        <select class="Filmes e Personagens" id="Films or Characters">
-        <option value="none" selected>
-          Escolha uma opção
-        <option value="Filmes">Filmes</option>
-        <option value="Personagens">Personagens</option>
-      </select>
+        
       
-        <button class="button" data-az-order>Ordernar de A-Z</button>
-        <button class="button" data-za-order>Ordernar de Z-A</button>
+        <button class="button" data-az-order>Ordernar filmes de A-Z</button>
+        <button class="button" data-za-order>Ordernar filmes de Z-A</button>
 
         <select class="Filmes" id="director">
           <option value="none" selected>
@@ -63,17 +58,16 @@
           <option value="Gorō Miyazaki"> Gorō Miyazaki </option>
           <option value="Hiromasa Yonebayashi"> Hiromasa Yonebayashi </option>
         </select>
-        <div class="search-film">
-          <input type="search" id="film-search" placeholder="Search by title">
-        </div>
-        <select class="Personagem">
-          <option value="none" selected="Gênero" id="Gênero">
+        
+        <select class="Personagem" id="gender">
+          <option value="none" selected>
             Gênero
-          <option value="Feminino">Feminino</option>
-          <option value="Masculino">Masculino</option>
+          <option value="Female">Feminino</option>
+          <option value="Male">Masculino</option>
         </select>
 
-
+       <button class="button characters" data-az-order-characters>Ordenar personagens de A-Z</button>
+       <button class="button characters" data-za-order-characters>Ordenar personagens de Z-A</button>
 
         <body>
           <div id="root">
