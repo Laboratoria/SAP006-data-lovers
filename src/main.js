@@ -60,7 +60,7 @@ for (let film of films) {
 
 
 
-//Ordenar filmes de AZ-ZA
+// Ordenar filmes de AZ-ZA
 
 const orderAZ = (evento) => {
      evento.preventDefault();
@@ -92,7 +92,7 @@ sortByAZ.addEventListener('click', orderAZ);
 
 sortByZA.addEventListener('click', orderZA);
 
-//Filtro Diretor
+// Filtro Diretor
 
 const selectDirector = document.getElementById("director");
 
@@ -105,8 +105,7 @@ selectDirector.addEventListener("change", filterDirector);
 const orderAZCharacters = (evento) => {
      evento.preventDefault();
      const valueSelected = charactersOrganizedByAZ.value;
-     // const characters = [{"name":"pazu","age":"20"}, {"name":"chihiro","age":"12"},{"name":"totoro","age":"200"}]
-     const people=myFilterPeople();
+      const people=myFilterPeople();
      
      const charactersAZ = orderCharacters(people);
  console.log(charactersAZ)
@@ -131,8 +130,9 @@ const orderAZCharacters = (evento) => {
 const orderZACharacters = (evento) => {
      evento.preventDefault();
       const valueSelected = charactersOrganizedByZA.value;
+      const people=myFilterPeople();
      const charactersZA = decreasingOrderCharacters(people);
-clean()
+
      exibitionPeople(charactersZA,valueSelected);
 
 };
@@ -156,9 +156,10 @@ const selectGender = (evento) => {
      evento.preventDefault();
 
      const valueSelected = genderSelected.value;
-     const charactersGender = filterByGender(characters, valueSelected);
+     const people=myFilterPeople();
+     const charactersGender = filterByGender(people, valueSelected);
      const resultByGender = charactersGender.length;
-     exibitionPeople(charactersGender,resultByGender);
+     exibitionPeople(charactersGender);
 
 };
 
@@ -178,23 +179,3 @@ genderSelected.addEventListener("change", selectGender);
 
 
 
-// Filtro Filmes ou Personagens
-
-// const selectOption = document.getElementById("Films or Characters")
-// selectOption.addEventListener("change", function (event) {
-//   let optionFilm = event.target.value
-//   if (optionFilm === "Films") {
-//     listFilms.innerHTML = ""
-//     exibitionFilme(films)
-//   }
-//   else if (optionFilm === "Characters") {
-//     charactersList.innerHTML = ""
-//     exibitionPeople(people)
-//   }
-//   else {
-//     listFilms.innerHTML = ""
-//     charactersList.innerHTML = ""
-//     exibitionFilms(films)
-//     exibitionPeople(charactersList,film.title)
-//   }
-// })

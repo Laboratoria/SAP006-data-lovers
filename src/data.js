@@ -22,7 +22,7 @@ export const DirectorSelected = (films, valueSelected) => films.filter(item => i
 
 
 
-//Ordenação AZ-ZA dos Personagens
+// Ordenação AZ-ZA dos Personagens
 export const orderCharacters = (people) => {
     const result = people.sort(function (a, b) {
         if (a.name > b.name) {
@@ -40,30 +40,6 @@ export const decreasingOrderCharacters = (people) => (orderCharacters(people).re
 
 
 //Filtrar por gênero
-export const filterByGender = (characters, valueSelected) => characters.filter(item => item.gender === valueSelected);
-
-
-
-
-
-
-
-
-// export const getPeople = films => {
-//     let people = []
-//     for (let film of films) {
-//       const chars = film.people.map (function (char){
-//         char.movie = film.title
-//        return char
-//       })
-//       people = people.concat(chars)   
-//     }
-//     return people
-//   }
-
-
-
-
-
+export const filterByGender = (people, valueSelected) => people.filter(item => item.gender === valueSelected);
 
 
