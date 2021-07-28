@@ -1,4 +1,4 @@
-import {order, decreasingOrder, DirectorSelected , orderCharacters , decreasingOrderCharacters ,filterByGender} from './data.js';
+import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters, filterByGender } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -34,9 +34,11 @@ exibitionFilms(films)
 // Personagens//
 
 const charactersList = document.getElementById("Characters")
-
+const cleanChars = () => {
+     charactersList.innerHTML = "";
+}
 const exibitionPeople = (people) => {
-
+     cleanChars()
      people.forEach(people => {
           charactersList.innerHTML +=
 
@@ -58,19 +60,19 @@ for (let film of films) {
 
 
 
-//Ordenar filmes de AZ-ZA
+// Ordenar filmes de AZ-ZA
 
 const orderAZ = (evento) => {
      evento.preventDefault();
-const filmsAZ = order(films);
-exibitionFilms(filmsAZ);
+     const filmsAZ = order(films);
+     exibitionFilms(filmsAZ);
 
 };
 
 const orderZA = (evento) => {
      evento.preventDefault();
- const filmsZA = decreasingOrder(films);
-exibitionFilms(filmsZA);
+     const filmsZA = decreasingOrder(films);
+     exibitionFilms(filmsZA);
 
 };
 
@@ -90,7 +92,7 @@ sortByAZ.addEventListener('click', orderAZ);
 
 sortByZA.addEventListener('click', orderZA);
 
-//Filtro Diretor
+// Filtro Diretor
 
 const selectDirector = document.getElementById("director");
 
@@ -102,25 +104,42 @@ selectDirector.addEventListener("change", filterDirector);
 
 const orderAZCharacters = (evento) => {
      evento.preventDefault();
-     // const valueSelected = charactersOrganizedByAZ.value;
-const charactersAZ = orderCharacters(characters);
+     const valueSelected = charactersOrganizedByAZ.value;
+      const people=myFilterPeople();
+     
+     const charactersAZ = orderCharacters(people);
+ console.log(charactersAZ)
+      exibitionPeople(charactersAZ,valueSelected);
+}
 
-exibitionPeople(charactersAZ);
+ const myFilterPeople = () => {
+     const arrayOfAllPeople = [];
+     for(let film of data.films){
+         for(let people of film.people) {
+             arrayOfAllPeople.push(people);
+         }
+     }
+ 
+ 
+     return arrayOfAllPeople
+ }
+  
 
-};
+
 
 const orderZACharacters = (evento) => {
      evento.preventDefault();
-     // const valueSelected = charactersOrganizedByZA.value;
- const charactersZA = decreasingOrderCharacters(characters);
- 
-exibitionPeople(charactersZA);
+      const valueSelected = charactersOrganizedByZA.value;
+      const people=myFilterPeople();
+     const charactersZA = decreasingOrderCharacters(people);
+
+     exibitionPeople(charactersZA,valueSelected);
 
 };
 
 
 const charactersOrganizedByAZ = document.querySelector('[data-az-order-characters]');
-const charactersOrganizedByZA= document.querySelector('[data-za-order-characters]');
+const charactersOrganizedByZA = document.querySelector('[data-za-order-characters]');
 
 charactersOrganizedByAZ.addEventListener('click', orderAZCharacters);
 
@@ -128,14 +147,19 @@ charactersOrganizedByZA.addEventListener('click', orderZACharacters);
 
 
 
-//Filtrar personagem por gênero
+
+
+
+
+// Filtrar personagem por gênero
 const selectGender = (evento) => {
      evento.preventDefault();
- 
-    const valueSelected = genderSelected.value;
-    const charactersGender = filterByGender(characters, valueSelected);
-    const resultByGender = charactersGender.length;
-    exibitionPeople(charactersGender,resultByGender);
+
+     const valueSelected = genderSelected.value;
+     const people=myFilterPeople();
+     const charactersGender = filterByGender(people, valueSelected);
+     const resultByGender = charactersGender.length;
+     exibitionPeople(charactersGender);
 
 };
 
@@ -155,23 +179,3 @@ genderSelected.addEventListener("change", selectGender);
 
 
 
-// Filtro Filmes ou Personagens
-
-// const selectOption = document.getElementById("Films or Characters")
-// selectOption.addEventListener("change", function (event) {
-//   let optionFilm = event.target.value
-//   if (optionFilm === "Films") {
-//     listFilms.innerHTML = ""
-//     exibitionFilme(films)
-//   }
-//   else if (optionFilm === "Characters") {
-//     charactersList.innerHTML = ""
-//     exibitionPeople(people)
-//   }
-//   else {
-//     listFilms.innerHTML = ""
-//     charactersList.innerHTML = ""
-//     exibitionFilms(films)
-//     exibitionPeople(charactersList,film.title)
-//   }
-// })
