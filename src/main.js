@@ -1,4 +1,4 @@
-import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters, filterByGender } from './data.js';
+import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,filterByGender,computeStatsGender} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -105,35 +105,35 @@ selectDirector.addEventListener("change", filterDirector);
 const orderAZCharacters = (evento) => {
      evento.preventDefault();
      const valueSelected = charactersOrganizedByAZ.value;
-      const people=myFilterPeople();
-     
+     const people = myFilterPeople();
+
      const charactersAZ = orderCharacters(people);
- console.log(charactersAZ)
-      exibitionPeople(charactersAZ,valueSelected);
+     
+     exibitionPeople(charactersAZ, valueSelected);
 }
 
- const myFilterPeople = () => {
+const myFilterPeople = () => {
      const arrayOfAllPeople = [];
-     for(let film of data.films){
-         for(let people of film.people) {
-             arrayOfAllPeople.push(people);
-         }
+     for (let film of data.films) {
+          for (let people of film.people) {
+               arrayOfAllPeople.push(people);
+          }
      }
- 
- 
+
+
      return arrayOfAllPeople
- }
-  
+}
+
 
 
 
 const orderZACharacters = (evento) => {
      evento.preventDefault();
-      const valueSelected = charactersOrganizedByZA.value;
-      const people=myFilterPeople();
+     const valueSelected = charactersOrganizedByZA.value;
+     const people = myFilterPeople();
      const charactersZA = decreasingOrderCharacters(people);
 
-     exibitionPeople(charactersZA,valueSelected);
+     exibitionPeople(charactersZA, valueSelected);
 
 };
 
@@ -148,22 +148,28 @@ charactersOrganizedByZA.addEventListener('click', orderZACharacters);
 
 
 
-
-
-
+   
 // Filtrar personagem por gênero
+
 const selectGender = (evento) => {
      evento.preventDefault();
 
      const valueSelected = genderSelected.value;
-     const people=myFilterPeople();
+     const people = myFilterPeople();
      const charactersGender = filterByGender(people, valueSelected);
-     const resultByGender = charactersGender.length;
+     const totalGender = gender.length;
+     const selectAges = averageAge(gender)
+
+     printCuriosity(selectAges, valueSelected, totalGender);
+  
+     showCharacters(gender);
+  
+
+  
+
      exibitionPeople(charactersGender);
 
 };
-
-
 
 const genderSelected = document.getElementById("gender");
 
@@ -171,11 +177,9 @@ genderSelected.addEventListener("change", selectGender);
 
 
 
+const people = myFilterPeople();
+
+computeStatsGender(people,"Male")
 
 
-
-
-
-
-
-
+ 
