@@ -43,3 +43,6 @@ export const decreasingOrderCharacters = (people) => (orderCharacters(people).re
 export const filterByGender = (people, valueSelected) => people.filter(item => item.gender === valueSelected);
 
 
+export const computeStatsGender = (data,selectedGender) => data.reduce((initialValor,finalValor)=>
+ console.log(initialValor+finalValor==selectedGender),0)
+
