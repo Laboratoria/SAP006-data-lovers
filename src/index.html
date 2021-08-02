@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+      <meta charset="utf-8">
+      <title>Studio Gibli Lovers</title>
+      <meta name="viewport" content="GFwidth=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
+
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <nav>
+              <input type="checkbox" id="check">
+              <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+              </label>
+              <label class="logo">STUDIO GHIBLI</label>
+              <ul>
+                  <li><a class="links" href="./index.html">Inicio</a></li>
+                  <li><a class="links" href="./Sobre.html">Sobre</a></li>
+                  <li><a class="links" href="./personagens.html">Personagens</a></li>
+                  <li><a class="links" href="./Frases.html">Frases Marcantes</a></li>
+              </ul>
+      </nav>
+     </header>
+      
+     <main class="index-page">
+      <section class="sections">
+        <p>Gosto de pensar que os filmes do Studio Ghibli são divertidos, mas que também carregam valores do fundo da alma humana. Esses valores enraizados nos seres humanos são o elemento mais importante de nossas histórias. Nossos filmes são criados para entreter nosso público, mas sempre tivemos essa filosofia em nossos corações até hoje.-TOSHIO SUZUKI</p>
+        <p>Além disso, seria difícil enumerar todos os paradigmas da animação tradicional que suas obras romperam. Os
+          filmes são únicos em sua abordagem, os temas são reflexivos, sensíveis e às vezes mais
+          complexos do que muitos de seus colegas de animação. As narrativas traçam uma linha muito sutil entre o bem e o
+          mau e masculino e feminino, por exemplo.</p>
+          <p>Os filmes do Studio Ghibli não mostram personagens comuns e estereotipados do cinema hollywoodiano. Não existe alguém que é classificado apenas como vilão ou um que seja apenas bonzinho. Todos os personagens tem suas motivações próprias e podemos entender o que os leva a tomar suas decisões.</p>
+        <p>Poucas animações abordam temas tão profundos e humanos como o Studio Ghibli. Os filmes são divertidos, mas
+          também carregam valores do fundo da alma humana. Esses valores enraizados nos seres humanos são o elemento mais
+          importante das histórias.</p>
+        <p>Os filmes do Studio Ghibli tem uma espécie de gênero próprio. Embora tenham um tom totalmente diferente e
+          possam variar de um conto de fadas infantil a uma história angustiante de guerra, todos eles têm semelhanças. As
+          ações dos personagens, seus sentimentos e vínculos com os outros e com o ambiente, é retratado com tanta
+          naturalidade que é fácil se ver inserido naqueles universos.</p>
+      </section>
+
+
+        <section class="Menu"></section>
+
+
+        <button class="button" data-az-order>Ordernar filmes de A-Z</button>
+        <button class="button" data-za-order>Ordernar filmes de Z-A</button>
+
+        <select class="Filmes" id="director">
+          <option value="none" selected>
+            Diretor
+          </option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+          <option value="Yoshifumi Kondō"> Yoshifumi Kondō </option>
+          <option value="Hiroyuki Morita"> Hiroyuki Morita </option>
+          <option value="Gorō Miyazaki"> Gorō Miyazaki </option>
+          <option value="Hiromasa Yonebayashi"> Hiromasa Yonebayashi </option>
+        </select>
+
+        <button class="button characters" data-az-order-characters>Ordenar personagens de A-Z</button>
+        <button class="button characters" data-za-order-characters>Ordenar personagens de Z-A</button>
+
+        <select class="charactersGender" id="gender">
+          <option value="none" selected>
+            Gênero
+          <option value="Female">Feminino</option>
+          <option value="Male">Masculino</option>
+          <option value="NA">Não informado</option>
+
+
+          </select>
+          <section class="calculation">
+            <div class="percentage" id="calcGender"></div>
+          </section>
+
+        <body>
+          <div id="root">
+            <div id="cards" class=ghibli></div>
+
+            <section class="filmsList" id="Films">
+
+            </section>
+
+            <div id="cardsCharacteres" class=ghibli>
+              <section class="charactersList" id="Characters"></section>
+            </div>
+            <script src="main.js" type="module"></script>
+        </body>
+        
+
+        <footer class="footer">
+          <p>Feito por <a href="https://github.com/bea-ferraz" target="_blank">Beatriz</a> e <a
+              href="https://github.com/Julieteandrade" target="_blank">Juliete</a>
+        </footer>
+      
 </html>
+
