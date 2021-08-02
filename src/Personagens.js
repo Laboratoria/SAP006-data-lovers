@@ -3,8 +3,8 @@ import data from "./data/ghibli/ghibli.js";
 //Personagens
 
 const charactersList = document.getElementById("Characters")
-const exibitionPeople = (cards) => {
-  cards.forEach(people => {
+const exibitionPeople = (cardsPersonagens) => {
+  cardsPersonagens.forEach(people => {
         charactersList.innerHTML +=
 
      `<li class="cardCharacter">
@@ -18,7 +18,6 @@ const exibitionPeople = (cards) => {
      )
 }
 
-//for(let film of films){
-   //  let charactersList = film.people
-   //  exibitionPeople(charactersList , film.title)
-//}
+for(let film of films){
+     let charactersList = film.people
+    exibitionPeople(charactersList , film.title)

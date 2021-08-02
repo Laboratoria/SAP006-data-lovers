@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <title>Studio Gibli Lovers</title>
       <meta name="viewport" content="GFwidth=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="Sobre.css">
+      <link rel="stylesheet" type="text/css" href="index.css">
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
@@ -22,8 +22,6 @@
                   <li><a class="links" href="./Frases.html">Frases Marcantes</a></li>
               </ul>
       </nav>
-      <img class="logo" src="./img/Logo.png" alt="logo Ghibli">
-      <h1 class ="subtitle">A sensibilidade em forma de anime!</h1>
      </header>
       
      <main class="index-page">
@@ -43,48 +41,53 @@
           naturalidade que é fácil se ver inserido naqueles universos.</p>
       </section>
 
+      <section class="Menu"></section>
+      <select class="Filmes e Personagens" id="Films or Characters">
+      <option value="none" selected>
+        Escolha uma opção
+      <option value="Filmes">Filmes</option>
+      <option value="Personagens">Personagens</option>
+    </select>
+    
+      <button class="button" data-az-order>Ordernar de A-Z</button>
+      <button class="button" data-za-order>Ordernar de Z-A</button>
 
-<body>
-  <div class="container">
-
-    <article class="card">
-      <div class="flip">
-        <section class="front-card">
-          <img src="https://vidafullstack.com.br/wp-content/uploads/2020/01/front-1-card.jpg" alt="Goblin Guide">
-        </section>
-
-        <section class="back-card">
-          <img src="https://vidafullstack.com.br/wp-content/uploads/2020/01/back-card.jpg" alt="Back Card">
-        </section>
+      <select class="Filmes" id="director">
+        <option value="none" selected> Diretor
+        </option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō"> Yoshifumi Kondō </option>
+        <option value="Hiroyuki Morita"> Hiroyuki Morita </option>
+        <option value="Gorō Miyazaki"> Gorō Miyazaki </option>
+        <option value="Hiromasa Yonebayashi"> Hiromasa Yonebayashi </option>
+      </select>
+      <div class="search-film">
+        <input type="search" id="film-search" placeholder="Search by title">
       </div>
-    </article>
+      <select class="Personagem">
+        <option value="none" selected="Gênero" id="Gênero">
+          Gênero
+        <option value="Feminino">Feminino</option>
+        <option value="Masculino">Masculino</option>
+      </select>
 
-    <article class="card">
-      <div class="flip">
-        <section class="front-card">
-          <img src="https://vidafullstack.com.br/wp-content/uploads/2020/01/front-2-card.jpg" alt="Arid Mesa">
+
+
+      <div id="root">
+        <div id="cards" class=ghibli></div>
+
+        <section class="filmsList" id="Films">
+
         </section>
+        <div id="cardsCharacteres" class=ghibli>
+          <section class="charactersList" id="Characters"></section>
+        </div>
+        <script src="main.js" type="module"></script>
 
-        <section class="back-card">
-          <img src="https://vidafullstack.com.br/wp-content/uploads/2020/01/back-card.jpg" alt="Back Card">
-        </section>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="flip">
-        <section class="front-card">
-          <img src="https://vidafullstack.com.br/wp-content/uploads/2020/01/front-3-card.jpg" alt="Path to Exile">
-        </section>
-
-        <section class="back-card">
-          <img src="https://vidafullstack.com.br/wp-content/uploads/2020/01/back-card.jpg" alt="Back Card">
-        </section>
-      </div>
-    </article>
-
-  </div>
-
-</body>
-
+    <footer class="footer">
+      <p>Feito por <a href="https://github.com/bea-ferraz" target="_blank">Beatriz</a> e 
+      <a href="https://github.com/Julieteandrade" target="_blank">Juliete</a>
+    </footer>
+  </body>
 </html>
