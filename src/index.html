@@ -63,13 +63,20 @@
         <button class="button characters" data-az-order-characters>Ordenar personagens de A-Z</button>
         <button class="button characters" data-za-order-characters>Ordenar personagens de Z-A</button>
 
-        <select class="Personagem" id="gender">
+        <select class="charactersGender" id="gender">
           <option value="none" selected>
             Gênero
           <option value="Female">Feminino</option>
           <option value="Male">Masculino</option>
           <option value="NA">Não informado</option>
+
+
           </select>
+          <section class="calculation">
+            <div class="percentage" id="calcGender"></div>
+          </section>
+          <section id="results" class="results"></section>
+          
 
         <body>
           <div id="root">
@@ -86,12 +93,7 @@
             </div>
             <script src="main.js" type="module"></script>
         </body>
-        <main>
-
-          <div class="print-info" id="information"></div>
-          <div class="poster-character" id="poster-character"> </div>
-
-      </main>
+        
 
         <footer class="footer">
           <p>Feito por <a href="https://github.com/bea-ferraz" target="_blank">Beatriz</a> e <a

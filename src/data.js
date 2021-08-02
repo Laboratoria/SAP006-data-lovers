@@ -40,9 +40,45 @@ export const decreasingOrderCharacters = (people) => (orderCharacters(people).re
 
 
 //Filtrar por gênero
-export const filterByGender = (people, valueSelected) => people.filter(item => item.gender === valueSelected);
 
 
-export const computeStatsGender = (data,selectedGender) => data.reduce((initialValor,finalValor)=>
- console.log(initialValor+finalValor==selectedGender),0)
+
+
+
+export const filterBy = (arr, key, value) =>
+  arr.filter((item) => item[key] === value);
+
+  export const filterOthers = (arr, key, value) =>
+   arr.filter((item) => item[key] !== value);
+
+
+export const computeGender = (gender, people) => {
+    return Math.round((gender.length / people.length) * 100);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

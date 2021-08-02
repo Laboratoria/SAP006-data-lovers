@@ -1,4 +1,4 @@
-import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,filterByGender,computeStatsGender} from './data.js';
+import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,computeGender,filterBy,filterOthers} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -147,39 +147,53 @@ charactersOrganizedByZA.addEventListener('click', orderZACharacters);
 
 
 
+const calculation = document.getElementById("calcGender")
+
+
+
+function filterCharacter(f) {
+     charactersList.innerHTML = ""
+     const calculos = document.getElementById("calcGender")
+     const value = f.target.value;
+     const people = myFilterPeople();
+
+     if (value === "Male" || value === "Female"|| value === "NA") {
+       const filter = filterBy(people, "gender", value);
+       exibitionPeople(filter);
+       calculos.innerHTML = `A porcentagem de personagens desta categoria é ${computeGender(filter, people)} %`
+     } else if (value === "Filters") {
+       calculos.innerHTML = ""
+       exibitionPeople(people);
+       calculos.innerHTML = `Todos os personagens`
+     } else {
+       calculos.innerHTML = ""
+       const filter = filterOthers(people, "specie","Human");
+       exibitionPeople(filter);
+       calculos.innerHTML = `A porcentagem de personagens desta categoria é ${computeGender(filter, people)} %`
+     }
+   }
+   document.getElementById("gender").addEventListener("change", filterCharacter);
+   
 
    
-// Filtrar personagem por gênero
-
-const selectGender = (evento) => {
-     evento.preventDefault();
-
-     const valueSelected = genderSelected.value;
-     const people = myFilterPeople();
-     const charactersGender = filterByGender(people, valueSelected);
-     const totalGender = gender.length;
-     const selectAges = averageAge(gender)
-
-     printCuriosity(selectAges, valueSelected, totalGender);
-  
-     showCharacters(gender);
-  
-
-  
-
-     exibitionPeople(charactersGender);
-
-};
-
-const genderSelected = document.getElementById("gender");
-
-genderSelected.addEventListener("change", selectGender);
 
 
 
-const people = myFilterPeople();
 
-computeStatsGender(people,"Male")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
