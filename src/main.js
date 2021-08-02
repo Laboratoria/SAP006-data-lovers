@@ -147,7 +147,6 @@ charactersOrganizedByZA.addEventListener('click', orderZACharacters);
 
 
 
-const calculation = document.getElementById("calcGender")
 
 
 
