@@ -48,9 +48,6 @@ export const decreasingOrderCharacters = (people) => (orderCharacters(people).re
 export const filterBy = (arr, key, value) =>
   arr.filter((item) => item[key] === value);
 
-  export const filterOthers = (arr, key, value) =>
-   arr.filter((item) => item[key] !== value);
-
 
 export const computeGender = (gender, people) => {
     return Math.round((gender.length / people.length) * 100);
