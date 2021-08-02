@@ -1,4 +1,4 @@
-import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,computeGender,filterBy,filterOthers} from './data.js';
+import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,computeGender,filterBy} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -167,9 +167,6 @@ function filterCharacter(f) {
        calculos.innerHTML = `Todos os personagens`
      } else {
        calculos.innerHTML = ""
-       const filter = filterOthers(people, "specie","Human");
-       exibitionPeople(filter);
-       calculos.innerHTML = `A porcentagem de personagens desta categoria é ${computeGender(filter, people)} %`
      }
    }
    document.getElementById("gender").addEventListener("change", filterCharacter);
