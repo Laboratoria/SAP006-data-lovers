@@ -1,4 +1,5 @@
-import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters, computeGender,filterBy} from './data.js';
+
+import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,computeGender,filterBy} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -165,20 +166,11 @@ function filterCharacter(f) {
           exibitionPeople(people);
           calculos.innerHTML = `Todos os personagens`
      } else {
-          calculos.innerHTML = ""
-
+       
+ calculos.innerHTML = ""
      }
 }
 document.getElementById("gender").addEventListener("change", filterCharacter);
-
-
-
-
-
-
-
-
-
 
 
 
