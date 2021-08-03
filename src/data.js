@@ -1,14 +1,3 @@
-// estas funciones son de ejemplo
-
-//export const example = () => { // return 'example';
-// };
-
-//export const anotherExample = () => { // return 'OMG';
-// };
-
-//ordenação AZ - ZA dos Filmes
-
-//ordenação AZ - ZA dos Filmes
 export const order = (films) => {
     const result = films.sort(function (a, b) {
         if (a.title > b.title) {
@@ -27,12 +16,12 @@ export const decreasingOrder = (films) => (order(films).reverse());
 
 
 
-// Filtrar por diretor
+
 export const DirectorSelected = (films, valueSelected) => films.filter(item => item.director === valueSelected);
 
 
 
-// Ordenação AZ-ZA dos Personagens
+
 export const orderCharacters = (people) => {
     const result = people.sort(function (a, b) {
         if (a.name > b.name) {
@@ -49,9 +38,17 @@ export const orderCharacters = (people) => {
 export const decreasingOrderCharacters = (people) => (orderCharacters(people).reverse());
 
 
-//Filtrar por gênero
-export const filterByGender = (people, valueSelected) => people.filter(item => item.gender === valueSelected);
 
 
-export const computeStatsGender = (data,selectedGender) => data.reduce((initialValor,finalValor)=>
- console.log(initialValor+finalValor==selectedGender),0)
+
+
+
+
+export const filterBy = (arr, key, value) =>
+    arr.filter((item) => item[key] === value);
+
+
+
+export const computeGender = (gender, people) => {
+    return Math.round((gender.length / people.length) * 100);
+}
