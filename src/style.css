@@ -1,4 +1,4 @@
-
+/*MENU*/
 * {
 	padding: 0;
 	margin: 0;
@@ -92,4 +92,179 @@ a.active, a:hover {
 	#check:checked ~ ul {
 		left: 0;
 	}
+}
+/*CARDS/
+
+}
+ .listaImpressa{
+    text-align: center;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.cardGhibli{
+	list-style: none;
+	padding: 40px;
+	color: #222;
+    border-radius: 20px;
+    background: rgba(19, 18, 21, 0.747);
+    width: 13vw;
+    height: 300px;
+    margin: 10px;
+    padding: 1%;
+    flex-direction: column;
+    display: flex;
+    perspective: 1000px;
+}
+
+.card-titulo{
+    color: #02010ce8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 100%;
+    margin-top: 10px;
+}
+
+.card-lançamento{
+    color: #000000;
+    font-size: 60%;
+}
+
+.card-descrição{
+    color: #000000;
+    font-size: 68%;
+    margin-top: 8px;
+}
+
+.card-diretor{
+    color: #000000;
+    font-size: 60%;
+    margin-top: 10px;
+}
+.card-producer{
+    color: #000000;
+    font-size: 60%;
+}
+.card-avaliação{
+    color: #130206;
+    font-size: 60%;
+}
+
+/*PERSONAGENS/
+
+.listaPersonagem{
+    text-align: center;
+    display: inline-block;
+    margin-left: 10%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.cardPersonagem{
+	list-style: none;
+	padding: 40px;
+    border-radius: 20px;
+    background: rgba(19, 18, 21, 0.747);
+    width: 13vw;
+    height: 300px;
+    margin: 10px;
+    padding: 1%;
+    flex-direction: column;
+    display: flex;
+    color: #000000;
+    font-size: 80%;
+    margin-top: 20px;
+    perspective: 1000px;
+}
+.card-personagens{
+    color: #000000;
+    font-size: 60%;
+    font-size: 165%;
+    margin-top: 50px;
+}
+
+/*FLIP FILMES/
+.cardGhibli .flip{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.cardGhibli:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.front-card, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari /
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back-card{
+    transform: rotateY(180deg);
+}
+
+.front-card img, .back-card{
+    width: 13vw;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,  0.3);
+    box-shadow: inset 0 0 1em rgb(0, 208, 255), 0 0 1em rgb(250, 123, 225);
+}
+
+.card-poster, .card-img{
+    border-radius: 20px;
+    justify-content: center;
+    object-fit: fill;   /*ajuste do tamanho das imagens/
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+/*FLIP PERSONAGENS/
+
+.cardPersonagem .flipPersonagens{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+    
+.cardPersonagem:hover .flipPersonagens{
+    transform: rotateY(180deg);
+}
+    
+.front-personagens, .back-personagens{
+    position:absolute;
+    backface-visibility:hidden;
+    -webkit-backface-visibility: hidden; /* Safari/
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+    
+.back-personagens{
+    transform: rotateY(180deg);
+}
+    
+.front-personagens img, .back-personagens{
+    width: 13vw;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,  0.3);
+    box-shadow: inset 0 0 1em rgb(0, 208, 255), 0 0 1em rgb(250, 123, 225);
+}
+/*/
+footer{
+    color: black;
+    font-weight:bolder;
+    text-align: center;
+    margin-top: 25px;
+    margin-block-end: 25px;
 }
