@@ -1,4 +1,4 @@
-/export const order = (films) => {
+export const order = (films) => {
     const result = films.sort(function (a, b) {
         if (a.title > b.title) {
             return 1;
@@ -52,29 +52,3 @@ export const filterBy = (arr, key, value) =>
 export const computeGender = (gender, people) => {
     return Math.round((gender.length / people.length) * 100);
 }
-
-
-
-export const filterBy = (arr, key, value) =>
-    arr.filter((item) => item[key] === value);
-
- main
-
-export const computeGender = (gender, people) => {
-    return Math.round((gender.length / people.length) * 100);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
