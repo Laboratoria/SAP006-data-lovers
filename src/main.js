@@ -1,5 +1,4 @@
-
-import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,computeGender,filterBy} from './data.js';
+import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters, computeGender, filterBy } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 
@@ -32,7 +31,7 @@ exibitionFilms(films)
 
 
 
-// Personagens//
+
 
 const charactersList = document.getElementById("Characters")
 const cleanChars = () => {
@@ -61,7 +60,7 @@ for (let film of films) {
 
 
 
-// Ordenar filmes de AZ-ZA
+
 
 const orderAZ = (evento) => {
      evento.preventDefault();
@@ -93,7 +92,7 @@ sortByAZ.addEventListener('click', orderAZ);
 
 sortByZA.addEventListener('click', orderZA);
 
-// Filtro Diretor
+
 
 const selectDirector = document.getElementById("director");
 
@@ -101,7 +100,7 @@ selectDirector.addEventListener("change", filterDirector);
 
 
 
-//Ordenar personagens de AZ-ZA
+
 
 const orderAZCharacters = (evento) => {
      evento.preventDefault();
@@ -166,22 +165,8 @@ function filterCharacter(f) {
           exibitionPeople(people);
           calculos.innerHTML = `Todos os personagens`
      } else {
-       
- calculos.innerHTML = ""
+          calculos.innerHTML = ""
+
      }
 }
 document.getElementById("gender").addEventListener("change", filterCharacter);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
