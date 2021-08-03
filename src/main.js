@@ -1,3 +1,4 @@
+
 import { order, decreasingOrder, DirectorSelected, orderCharacters, decreasingOrderCharacters,computeGender,filterBy} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
@@ -108,7 +109,7 @@ const orderAZCharacters = (evento) => {
      const people = myFilterPeople();
 
      const charactersAZ = orderCharacters(people);
-     
+
      exibitionPeople(charactersAZ, valueSelected);
 }
 
@@ -147,7 +148,6 @@ charactersOrganizedByZA.addEventListener('click', orderZACharacters);
 
 
 
-const calculation = document.getElementById("calcGender")
 
 
 
@@ -157,22 +157,20 @@ function filterCharacter(f) {
      const value = f.target.value;
      const people = myFilterPeople();
 
-     if (value === "Male" || value === "Female"|| value === "NA") {
-       const filter = filterBy(people, "gender", value);
-       exibitionPeople(filter);
-       calculos.innerHTML = `A porcentagem de personagens desta categoria é ${computeGender(filter, people)} %`
+     if (value === "Male" || value === "Female" || value === "NA") {
+          const filter = filterBy(people, "gender", value);
+          exibitionPeople(filter);
+          calculos.innerHTML = `A porcentagem de personagens desta categoria é ${computeGender(filter, people)} %`
      } else if (value === "Filters") {
-       calculos.innerHTML = ""
-       exibitionPeople(people);
-       calculos.innerHTML = `Todos os personagens`
+          calculos.innerHTML = ""
+          exibitionPeople(people);
+          calculos.innerHTML = `Todos os personagens`
      } else {
-       calculos.innerHTML = ""
+       
+ calculos.innerHTML = ""
      }
-   }
-   document.getElementById("gender").addEventListener("change", filterCharacter);
-   
-
-   
+}
+document.getElementById("gender").addEventListener("change", filterCharacter);
 
 
 
@@ -187,10 +185,3 @@ function filterCharacter(f) {
 
 
 
-
-
-
-
-
-
- 
