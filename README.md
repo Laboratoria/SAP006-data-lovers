@@ -36,7 +36,6 @@ para nosso usuário poder conhecê-los e saber quantas e quais são as criaçõe
 - Cada animação tem seus personagens e para nossos usuários é importante saber quantos e quais são
 - Os personagens têm características únicas que o usuário deseja conhecer, como nome, idade, sexo, espécie, etc.
 
-![História de Usuário 1]
 
 ## 3. Desenvolvimento da Interface
 
