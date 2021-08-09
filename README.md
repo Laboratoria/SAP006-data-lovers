@@ -66,33 +66,6 @@ A imagem a seguir, do filme A Viagem de Chihiro, foi usada como inspiração par
 
 O layout da pagina é responsivo e focado em legibilidade com design minimalista e otimizado para dispositivos móveis.
 
-## 4. Testes de usabilidade
-
-  Nos testes de usabilidade, fizemos a observação de pessoas de nosso público alvo consumindo a aplicação e detectamos quais mudanças seriam necessárias para melhoria da experiência do usuário. Além disso recebemos o feedback e sugestões desses participantes do que atendia às suas necessidades e do que precisava ser melhorado.
-
-  Alguns dos pontos analisados foram os seguintes:
-  - O acesso às páginas é fácil e intuitivo?
-  - Os filtros e ferramentas de cada página são de fácil acesso e utilização?
-  - As informações sobre cada filmes são claras, de fácil leitura e suficientes? O que achou das dimensões de cada tópico e informações?
-  - Os filtros de filmes correspondem às necessidades?
-  - Os cards de personagens são de utilização fácil e intuitiva? As informações estão claras?
-  - O tamanho dos cards atende às suas expectativas? Você colocaria mais ou menos cards dispostos na mesma linha?
-  - Os dados do estúdio são úteis pra você? Eles estão claros? Existem outros dados que você tenha interesse em fazer?
-
-Algumas das soluções implementadas para solucionar os problemas detectados nos testes de usabilidade:
-
-### Tratar erro de carregamento de imagens
-
-Fizemos a substituição dinâmica das imagens que não carregavam por uma imagem padrão para informar ao usuário que elas estão indisponíveis, não comprometendo o layout das páginas de filmes e personagens. Utilizamos métodos de requisição HTTP para verificar os erros e substituir as imagens.
-### Tradução de conteúdos para o português
-
-Na utilização da página filmes, os usuários questionaram a disponibilização de informações importantes, como as sinopses dos filmes, somente na língua inglesa, o que poderia prejudicar o entendimento de seu conteúdo. 
-
-Como alternativa, implementamos a ferramenta de tradução da página para português ou inglês, com a ferramenta Google Translate.
-
-### Abrir poster dos filmes para mobile
-
- Nos testes em dispositivos mobile, os usuários intuitivamente clicavam no poster dos filmes com a intenção de ampliá-los, já que seu tamanho era reduzido. Por isso, possibilitamos que essas imagens fossem aumentadas com o clique, para serem visualizadas melhor.
 
 ### Ampliação do nicho de usuários
 
