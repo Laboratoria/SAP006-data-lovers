@@ -46,9 +46,9 @@ Após a primeira análise dos dados disponíveis, percebemos que o site contaria
 
 Posteriormente foi decidido dividir os conteúdos em páginas diferentes. Por esse motivo o layout mudou no protótipo de alta fidelidade:
 
-![Protótipo de Alta Fidelidade - Header]
+![Protótipo de Alta Fidelidade]
 
-Analisando os dados e pensando em abordar a Representatividade Feminina sempre retratada pelo Studio Ghibli em seus filmes, pensamos em trazer os dados para expor esse tema. Em um segundo momento através dos testes de usabilidade, foi constatado pelos usuários que os dados disponíveis não eram relevantes para esse tema específico. Por este motivo optamos por modificar o título do filme no decorrer do projeto.
+Analisando os dados e pensando em abordar a sensibilidade e humanismo sempre retratada pelo Studio Ghibli em seus filmes, pensamos em trazer os dados para expor esse tema. Em um segundo momento através dos testes de usabilidade, foi constatado pelos usuários que os dados disponíveis não eram relevantes para esse tema específico.
 
 A página de filmes contém informações e detalhes sobre cada animação:
 
