@@ -1,13 +1,12 @@
 # Studio Ghibli - A SENSIBILIDADE EM FORMA DE ANIME
 
-O objetivo deste projeto é construir uma página web para visualizar um conjunto de dados que se adapte às necessidades do usuário. Essa página possibilita tanto visualizar como filtrar, ordenar os dados e mostrar informações relevantes através de cálculos agregados e gŕaficos.
+O objetivo deste projeto é construir uma página web para visualizar um conjunto de dados que se adapte às necessidades do usuário. Essa página possibilita tanto visualizar como filtrar, ordenar os dados e mostrar informações relevantes através de cálculos agregados.
 ## Índice
 
 - [1. Introdução ao Projeto](#1-introdução-ao-projeto)
 - [2. Histórias de Usuários](#2-histórias-de-usuários)
 - [3. Desenvolvimento da Interface](#3-desenvolvimento-da-interface)
-- [4. Testes de Usabilidade](#4-testes-de-usabilidade)
-- [5. Conteúdos implementados no projeto](#5-conteúdos-implementados-no-projeto)
+- [4. Conteúdos implementados no projeto](#5-conteúdos-implementados-no-projeto)
 
 ---
 ## 1. Introdução ao Projeto
@@ -59,7 +58,7 @@ A página de filmes contém informações e detalhes sobre cada animação:
 O layout da pagina é responsivo e focado em legibilidade com design minimalista e otimizado para dispositivos móveis.
 
 
-##  5. Conteúdos implementados no projeto
+##  4. Conteúdos implementados no projeto
 
 Para construir a interface desta aplicação, em que é possível visualizar e manipular dados, os conhecimentos abordados foram:
 
