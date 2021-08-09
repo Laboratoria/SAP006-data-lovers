@@ -1,4 +1,4 @@
-# Studio Ghibli - Quebrando paradigmas
+# Studio Ghibli - A SENSIBILIDADE EM FORMA DE ANIME
 
 O objetivo deste projeto é construir uma página web para visualizar um conjunto de dados que se adapte às necessidades do usuário. Essa página possibilita tanto visualizar como filtrar, ordenar os dados e mostrar informações relevantes através de cálculos agregados e gŕaficos.
 ## Índice
