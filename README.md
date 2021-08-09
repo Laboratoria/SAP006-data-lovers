@@ -55,21 +55,9 @@ A página de filmes contém informações e detalhes sobre cada animação:
 
 ![Protótipo de Alta Fidelidade - Filmes]
 
-A paleta de cores utilizada priorizou as cores verde e roxo, com ilustrações de personagens dos filmes.
-
-![Paleta de Cores]
-
-A imagem a seguir, do filme A Viagem de Chihiro, foi usada como inspiração para a escolha das cores:
-
-![Imagem que Inspirou a Escolha]
-
 
 O layout da pagina é responsivo e focado em legibilidade com design minimalista e otimizado para dispositivos móveis.
 
-
-### Ampliação do nicho de usuários
-
-A princípio, a aplicação seria direcionada ao público feminino, tendo em vista que os filmes do estúdio abordam temas relevantes para o gênero e grande parte dos fãs são mulheres. Porém, com o feedback dos usuários, identificamos que não era interessante restringir desse modo o público-alvo, já que não era justificável pelos dados e informações que estavamos disponibilizando no site, uma vez que eles poderiam ser de interesse de fãs do gênero masculino ou feminino.
 
 ##  5. Conteúdos implementados no projeto
 
